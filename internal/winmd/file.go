@@ -2,7 +2,6 @@
 package winmd
 
 import (
-	"encoding/binary"
 	"fmt"
 	"io"
 )
@@ -17,7 +16,7 @@ func Load(r io.ReadSeeker) (*File, error) {
 
 	// Read MZ header.
 	mz := mz{}
-	if err := binary.Read(r, binary.LittleEndian, &mz); err != nil {
+	if err := read(r, &mz); err != nil {
 		return nil, fmt.Errorf("reading MZ header: %w", err)
 	}
 	if mz.Signature != mzsig {
@@ -29,7 +28,7 @@ func Load(r io.ReadSeeker) (*File, error) {
 	if _, err := r.Seek(int64(mz.PeOffset), io.SeekStart); err != nil {
 		return nil, fmt.Errorf("seeking to PE header at 0x%08x: %w", mz.PeOffset, err)
 	}
-	if err := binary.Read(r, binary.LittleEndian, &pe); err != nil {
+	if err := read(r, &pe); err != nil {
 		return nil, fmt.Errorf("reading PE header: %w", err)
 	}
 	if pe.Signature != pesig {
@@ -40,7 +39,9 @@ func Load(r io.ReadSeeker) (*File, error) {
 	}
 	sections := make([]section, pe.NumSection)
 	for i := 0; i < int(pe.NumSection); i++ {
-		binary.Read(r, binary.LittleEndian, &sections[i])
+		if err := read(r, &sections[i]); err != nil {
+			return nil, err
+		}
 	}
 
 	// Read COM data directory.
@@ -49,7 +50,7 @@ func Load(r io.ReadSeeker) (*File, error) {
 	if _, err := r.Seek(netdiroff, io.SeekStart); err != nil {
 		return nil, fmt.Errorf("seeking to .NET data directory at 0x%08x: %w", netdiroff, err)
 	}
-	if err := binary.Read(r, binary.LittleEndian, &netdir); err != nil {
+	if err := read(r, &netdir); err != nil {
 		return nil, fmt.Errorf("reading .NET data directory: %w", err)
 	}
 
@@ -62,9 +63,43 @@ func Load(r io.ReadSeeker) (*File, error) {
 	if _, err := r.Seek(int64(corheadoff), io.SeekStart); err != nil {
 		return nil, fmt.Errorf("seeking to COR header at 0x%08x: %w", corheadoff, err)
 	}
-	if err := binary.Read(r, binary.LittleEndian, &corhead); err != nil {
+	if err := read(r, &corhead); err != nil {
 		return nil, fmt.Errorf("reading COR header: %w", err)
 	}
+
+	// Read metadata header.
+	metahead := metahead{}
+	metaheadoff, err := rva2off(sections, corhead.Metadata.RVA)
+	if err != nil {
+		return nil, fmt.Errorf("finding metadata header offset: %w", err)
+	}
+	if _, err := r.Seek(int64(metaheadoff), io.SeekStart); err != nil {
+		return nil, fmt.Errorf("seeking to metadata header at 0x%08x: %w", metaheadoff, err)
+	}
+	if err := read(r, &metahead); err != nil {
+		return nil, fmt.Errorf("reading metadata header: %w", err)
+	}
+
+	// Stream entries
+	tablesoff := int64(0)
+	stringsoff := int64(0)
+	blobsoff := int64(0)
+	for i := 0; i < int(metahead.NumberOfStreams); i++ {
+		streamentry := streamentry{}
+		if err := read(r, &streamentry); err != nil {
+			return nil, err
+		}
+		switch string(streamentry.Name) {
+		case "#~":
+			tablesoff = int64(metaheadoff + streamentry.Offset)
+		case "#Strings":
+			stringsoff = int64(metaheadoff + streamentry.Offset)
+		case "#Blob":
+			blobsoff = int64(metaheadoff + streamentry.Offset)
+		}
+	}
+
+	_, _, _ = tablesoff, stringsoff, blobsoff
 
 	return f, nil
 }
@@ -130,4 +165,20 @@ type corhead struct {
 	VTableFixups           datadir
 	ExportAddressTableJmps datadir
 	ManagedNativeHeader    datadir
+}
+
+type metahead struct {
+	Signature       uint32
+	MajorVersion    uint16
+	MinorVersion    uint16
+	Reserved        uint32
+	Version         pstr32
+	Flags           uint16
+	NumberOfStreams uint16
+}
+
+type streamentry struct {
+	Offset uint32
+	Size   uint32
+	Name   padstr
 }
