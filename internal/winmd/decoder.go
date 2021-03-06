@@ -1,6 +1,7 @@
 package winmd
 
 import (
+	"context"
 	"encoding/binary"
 	"io"
 	"reflect"
@@ -13,12 +14,12 @@ type decoder struct {
 	r io.Reader
 }
 type unpacker interface {
-	unpack(io.Reader) error
+	unpack(context.Context, io.Reader) error
 }
 type pstr32 string
 type padstr string
 
-func (s *pstr32) unpack(r io.Reader) error {
+func (s *pstr32) unpack(ctx context.Context, r io.Reader) error {
 	l, err := readuint32(r)
 	if err != nil {
 		return err
@@ -29,7 +30,7 @@ func (s *pstr32) unpack(r io.Reader) error {
 	return err
 }
 
-func (s *padstr) unpack(r io.Reader) error {
+func (s *padstr) unpack(ctx context.Context, r io.Reader) error {
 	b := []byte{}
 	for {
 		b = append(b, 0, 0, 0, 0)
@@ -117,34 +118,109 @@ func readint64(r io.Reader) (int64, error) {
 	}
 	return int64(x), nil
 }
-func readvalue(r io.Reader, v reflect.Value) error {
+func readvalue(ctx context.Context, r io.Reader, v reflect.Value) error {
 	if s, ok := v.Interface().(unpacker); ok {
-		return s.unpack(r)
+		return s.unpack(ctx, r)
 	}
 	if v.CanAddr() {
 		if s, ok := v.Addr().Interface().(unpacker); ok {
-			return s.unpack(r)
+			return s.unpack(ctx, r)
 		}
 	}
 	if v.Kind() == reflect.Ptr {
 		v = v.Elem()
 	}
+
+	// slice fast paths
+	if v.CanInterface() && v.Kind() == reflect.Slice {
+		switch data := v.Interface().(type) {
+		case []int8:
+			b := make([]byte, len(data))
+			if _, err := r.Read(b); err != nil {
+				return nil
+			}
+			for i, n := range b {
+				data[i] = int8(n)
+			}
+			return nil
+		case []uint8:
+			if _, err := r.Read(data); err != nil {
+				return nil
+			}
+			return nil
+		case []int16:
+			b := make([]byte, len(data)*2)
+			if _, err := r.Read(b); err != nil {
+				return nil
+			}
+			for i := range data {
+				data[i] = int16(binary.LittleEndian.Uint16(b[2*i:]))
+			}
+			return nil
+		case []uint16:
+			b := make([]byte, len(data)*2)
+			if _, err := r.Read(b); err != nil {
+				return nil
+			}
+			for i := range data {
+				data[i] = binary.LittleEndian.Uint16(b[2*i:])
+			}
+			return nil
+		case []int32:
+			b := make([]byte, len(data)*4)
+			if _, err := r.Read(b); err != nil {
+				return nil
+			}
+			for i := range data {
+				data[i] = int32(binary.LittleEndian.Uint32(b[4*i:]))
+			}
+			return nil
+		case []uint32:
+			b := make([]byte, len(data)*4)
+			if _, err := r.Read(b); err != nil {
+				return nil
+			}
+			for i := range data {
+				data[i] = binary.LittleEndian.Uint32(b[4*i:])
+			}
+			return nil
+		case []int64:
+			b := make([]byte, len(data)*8)
+			if _, err := r.Read(b); err != nil {
+				return nil
+			}
+			for i := range data {
+				data[i] = int64(binary.LittleEndian.Uint64(b[8*i:]))
+			}
+			return nil
+		case []uint64:
+			b := make([]byte, len(data)*8)
+			if _, err := r.Read(b); err != nil {
+				return nil
+			}
+			for i := range data {
+				data[i] = binary.LittleEndian.Uint64(b[8*i:])
+			}
+			return nil
+		}
+	}
+
 	switch v.Kind() {
 	case reflect.Array:
 		for i, l := 0, v.Len(); i < l; i++ {
-			if err := readvalue(r, v.Index(i)); err != nil {
+			if err := readvalue(ctx, r, v.Index(i)); err != nil {
 				return err
 			}
 		}
 	case reflect.Struct:
 		for i, l := 0, v.NumField(); i < l; i++ {
-			if err := readvalue(r, v.Field(i)); err != nil {
+			if err := readvalue(ctx, r, v.Field(i)); err != nil {
 				return err
 			}
 		}
 	case reflect.Slice:
 		for i, l := 0, v.Len(); i < l; i++ {
-			if err := readvalue(r, v.Index(i)); err != nil {
+			if err := readvalue(ctx, r, v.Index(i)); err != nil {
 				return err
 			}
 		}
@@ -206,6 +282,6 @@ func readvalue(r io.Reader, v reflect.Value) error {
 	return nil
 }
 
-func read(r io.Reader, data interface{}) error {
-	return readvalue(r, reflect.ValueOf(data))
+func read(ctx context.Context, r io.Reader, data interface{}) error {
+	return readvalue(ctx, r, reflect.ValueOf(data))
 }
