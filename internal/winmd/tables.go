@@ -18,7 +18,7 @@ type TypeRef struct {
 
 // TypeDef is a row in the type def table.
 type TypeDef struct {
-	Flags      uint32
+	Flags      TypeFlags
 	Name       IndexedString
 	Namespace  IndexedString
 	Extends    TypeDefOrRefIndex
@@ -28,7 +28,7 @@ type TypeDef struct {
 
 // Field is a row in the field table.
 type Field struct {
-	Flags     uint16
+	Flags     FieldFlags
 	Name      IndexedString
 	Signature IndexedBlob
 }
@@ -37,7 +37,7 @@ type Field struct {
 type MethodDef struct {
 	RVA       uint32
 	ImplFlags uint16
-	Flags     uint16
+	Flags     MethodFlags
 	Name      IndexedString
 	Signature IndexedBlob
 	ParamList ParamIndex
@@ -45,7 +45,7 @@ type MethodDef struct {
 
 // Param is a row in the param table.
 type Param struct {
-	Flags    uint16
+	Flags    ParamFlags
 	Sequence uint16
 	Name     IndexedString
 }

@@ -9,16 +9,22 @@ import (
 	"github.com/go-win/go-windows/internal/winmd"
 )
 
+func gen(file *winmd.File) error {
+	return nil
+}
+
 func main() {
 	flag.Parse()
-
 	for _, arg := range flag.Args() {
 		f, err := os.Open(arg)
 		if err != nil {
 			log.Fatalln(err)
 		}
-		_, err = winmd.Load(f)
+		w, err := winmd.Load(f)
 		if err != nil {
+			log.Fatalln(err)
+		}
+		if err := gen(w); err != nil {
 			log.Fatalln(err)
 		}
 	}
