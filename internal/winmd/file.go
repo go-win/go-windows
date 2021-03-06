@@ -4,6 +4,7 @@
 package winmd
 
 import (
+	"bufio"
 	"context"
 	"fmt"
 	"io"
@@ -366,8 +367,9 @@ func Load(r io.ReadSeeker) (*File, error) {
 	f.MethodSpec = make([]MethodSpec, rows.methodspec)
 	f.GenericParamConstraint = make([]GenericParamConstraint, rows.genericparamconstraint)
 
-	// Read tables.
-	if err := read(ctx, r, f); err != nil {
+	// Read tables. Using a buffered reader improves performance significantly
+	// (~4x in my testing.)
+	if err := read(ctx, bufio.NewReader(r), f); err != nil {
 		return nil, err
 	}
 

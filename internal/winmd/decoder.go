@@ -8,6 +8,17 @@ import (
 	"sync"
 )
 
+// This is a small encoding/binary-like binary data parser. It is not
+// particularly fast, but it gives us nice features such as the unpacker
+// interface. Unlike most encoding/binary alike packages, we also can get
+// contextual information, which is how we deal with the CLR metadata having
+// dynamically sized indices.
+//
+// One reason this library is slow is because it does not have a separate path
+// for determining the amount of data to read; data is read on-the-fly.
+//
+// As such, it would be wise to use a large buffer when using this.
+
 var structSize sync.Map
 
 type decoder struct {
