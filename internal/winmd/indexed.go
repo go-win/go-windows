@@ -43,10 +43,10 @@ func (index *FieldIndex) unpack(ctx context.Context, r io.Reader) error {
 
 // Lookup performs a lookup for this index against assembly f.
 func (index FieldIndex) Lookup(f *File) *Field {
-	if int(index) >= len(f.Field) {
+	if index == 0 || int(index-1) >= len(f.Field) {
 		return nil
 	}
-	return &f.Field[index]
+	return &f.Field[index-1]
 }
 
 // MethodDefIndex is an index into the methoddef table.
@@ -61,10 +61,10 @@ func (index *MethodDefIndex) unpack(ctx context.Context, r io.Reader) error {
 
 // Lookup performs a lookup for this index against assembly f.
 func (index MethodDefIndex) Lookup(f *File) *MethodDef {
-	if int(index) >= len(f.MethodDef) {
+	if index == 0 || int(index-1) >= len(f.MethodDef) {
 		return nil
 	}
-	return &f.MethodDef[index]
+	return &f.MethodDef[index-1]
 }
 
 // TypeDefIndex is an index into the typedef table.
@@ -79,10 +79,10 @@ func (index *TypeDefIndex) unpack(ctx context.Context, r io.Reader) error {
 
 // Lookup performs a lookup for this index against assembly f.
 func (index TypeDefIndex) Lookup(f *File) *TypeDef {
-	if int(index) >= len(f.TypeDef) {
+	if index == 0 || int(index-1) >= len(f.TypeDef) {
 		return nil
 	}
-	return &f.TypeDef[index]
+	return &f.TypeDef[index-1]
 }
 
 // ParamIndex is an index into the param table.
@@ -97,10 +97,10 @@ func (index *ParamIndex) unpack(ctx context.Context, r io.Reader) error {
 
 // Lookup performs a lookup for this index against assembly f.
 func (index ParamIndex) Lookup(f *File) *Param {
-	if int(index) >= len(f.Param) {
+	if index == 0 || int(index-1) >= len(f.Param) {
 		return nil
 	}
-	return &f.Param[index]
+	return &f.Param[index-1]
 }
 
 // EventIndex is an index into the param table.
@@ -115,10 +115,10 @@ func (index *EventIndex) unpack(ctx context.Context, r io.Reader) error {
 
 // Lookup performs a lookup for this index against assembly f.
 func (index EventIndex) Lookup(f *File) *Event {
-	if int(index) >= len(f.Event) {
+	if index == 0 || int(index-1) >= len(f.Event) {
 		return nil
 	}
-	return &f.Event[index]
+	return &f.Event[index-1]
 }
 
 // PropertyIndex is an index into the param table.
@@ -133,10 +133,10 @@ func (index *PropertyIndex) unpack(ctx context.Context, r io.Reader) error {
 
 // Lookup performs a lookup for this index against assembly f.
 func (index PropertyIndex) Lookup(f *File) *Property {
-	if int(index) >= len(f.Property) {
+	if index == 0 || int(index-1) >= len(f.Property) {
 		return nil
 	}
-	return &f.Property[index]
+	return &f.Property[index-1]
 }
 
 // ModuleRefIndex is an index into the param table.
@@ -151,10 +151,10 @@ func (index *ModuleRefIndex) unpack(ctx context.Context, r io.Reader) error {
 
 // Lookup performs a lookup for this index against assembly f.
 func (index ModuleRefIndex) Lookup(f *File) *ModuleRef {
-	if int(index) >= len(f.ModuleRef) {
+	if index == 0 || int(index-1) >= len(f.ModuleRef) {
 		return nil
 	}
-	return &f.ModuleRef[index]
+	return &f.ModuleRef[index-1]
 }
 
 // AssemblyRefIndex is an index into the param table.
@@ -169,10 +169,10 @@ func (index *AssemblyRefIndex) unpack(ctx context.Context, r io.Reader) error {
 
 // Lookup performs a lookup for this index against assembly f.
 func (index AssemblyRefIndex) Lookup(f *File) *AssemblyRef {
-	if int(index) >= len(f.AssemblyRef) {
+	if index == 0 || int(index-1) >= len(f.AssemblyRef) {
 		return nil
 	}
-	return &f.AssemblyRef[index]
+	return &f.AssemblyRef[index-1]
 }
 
 // GenericParamIndex is an index into the generic param table.
@@ -187,10 +187,10 @@ func (index *GenericParamIndex) unpack(ctx context.Context, r io.Reader) error {
 
 // Lookup performs a lookup for this index against assembly f.
 func (index GenericParamIndex) Lookup(f *File) *GenericParam {
-	if int(index) >= len(f.GenericParam) {
+	if index == 0 || int(index-1) >= len(f.GenericParam) {
 		return nil
 	}
-	return &f.GenericParam[index]
+	return &f.GenericParam[index-1]
 }
 
 //
@@ -211,22 +211,26 @@ func (index *TypeDefOrRefIndex) unpack(ctx context.Context, r io.Reader) error {
 func (index TypeDefOrRefIndex) Lookup(f *File) interface{} {
 	table := index & 0b11
 	row := index >> 2
+	if row == 0 {
+		return nil
+	}
+	row--
 	switch table {
 	case 0:
 		if int(row) >= len(f.TypeDef) {
 			return nil
 		}
-		return &f.TypeDef[index]
+		return &f.TypeDef[row]
 	case 1:
 		if int(row) >= len(f.TypeRef) {
 			return nil
 		}
-		return &f.TypeRef[index]
+		return &f.TypeRef[row]
 	case 2:
 		if int(row) >= len(f.TypeSpec) {
 			return nil
 		}
-		return &f.TypeSpec[index]
+		return &f.TypeSpec[row]
 	default:
 		panic("invalid table in composite index")
 	}
@@ -246,22 +250,26 @@ func (index *HasConstantIndex) unpack(ctx context.Context, r io.Reader) error {
 func (index HasConstantIndex) Lookup(f *File) interface{} {
 	table := index & 0b11
 	row := index >> 2
+	if row == 0 {
+		return nil
+	}
+	row--
 	switch table {
 	case 0:
 		if int(row) >= len(f.Field) {
 			return nil
 		}
-		return &f.Field[index]
+		return &f.Field[row]
 	case 1:
 		if int(row) >= len(f.Param) {
 			return nil
 		}
-		return &f.Param[index]
+		return &f.Param[row]
 	case 2:
 		if int(row) >= len(f.Property) {
 			return nil
 		}
-		return &f.Property[index]
+		return &f.Property[row]
 	default:
 		panic("invalid table in composite index")
 	}
@@ -281,112 +289,116 @@ func (index *HasCustomAttributeIndex) unpack(ctx context.Context, r io.Reader) e
 func (index HasCustomAttributeIndex) Lookup(f *File) interface{} {
 	table := index & 0b11111
 	row := index >> 5
+	if row == 0 {
+		return nil
+	}
+	row--
 	switch table {
 	case 0:
 		if int(row) >= len(f.MethodDef) {
 			return nil
 		}
-		return &f.MethodDef[index]
+		return &f.MethodDef[row]
 	case 1:
 		if int(row) >= len(f.Field) {
 			return nil
 		}
-		return &f.Field[index]
+		return &f.Field[row]
 	case 2:
 		if int(row) >= len(f.TypeRef) {
 			return nil
 		}
-		return &f.TypeRef[index]
+		return &f.TypeRef[row]
 	case 3:
 		if int(row) >= len(f.TypeDef) {
 			return nil
 		}
-		return &f.TypeDef[index]
+		return &f.TypeDef[row]
 	case 4:
 		if int(row) >= len(f.Param) {
 			return nil
 		}
-		return &f.Param[index]
+		return &f.Param[row]
 	case 5:
 		if int(row) >= len(f.InterfaceImpl) {
 			return nil
 		}
-		return &f.InterfaceImpl[index]
+		return &f.InterfaceImpl[row]
 	case 6:
 		if int(row) >= len(f.MemberRef) {
 			return nil
 		}
-		return &f.MemberRef[index]
+		return &f.MemberRef[row]
 	case 7:
 		if int(row) >= len(f.Module) {
 			return nil
 		}
-		return &f.Module[index]
+		return &f.Module[row]
 	case 8:
 		if int(row) >= len(f.Property) {
 			return nil
 		}
-		return &f.Property[index]
+		return &f.Property[row]
 	case 9:
 		if int(row) >= len(f.Event) {
 			return nil
 		}
-		return &f.Event[index]
+		return &f.Event[row]
 	case 10:
 		if int(row) >= len(f.StandaloneSig) {
 			return nil
 		}
-		return &f.StandaloneSig[index]
+		return &f.StandaloneSig[row]
 	case 11:
 		if int(row) >= len(f.ModuleRef) {
 			return nil
 		}
-		return &f.ModuleRef[index]
+		return &f.ModuleRef[row]
 	case 12:
 		if int(row) >= len(f.TypeSpec) {
 			return nil
 		}
-		return &f.TypeSpec[index]
+		return &f.TypeSpec[row]
 	case 13:
 		if int(row) >= len(f.Assembly) {
 			return nil
 		}
-		return &f.Assembly[index]
+		return &f.Assembly[row]
 	case 14:
 		if int(row) >= len(f.AssemblyRef) {
 			return nil
 		}
-		return &f.AssemblyRef[index]
+		return &f.AssemblyRef[row]
 	case 15:
 		if int(row) >= len(f.File) {
 			return nil
 		}
-		return &f.File[index]
+		return &f.File[row]
 	case 16:
 		if int(row) >= len(f.ExportedType) {
 			return nil
 		}
-		return &f.ExportedType[index]
+		return &f.ExportedType[row]
 	case 17:
 		if int(row) >= len(f.ManifestResource) {
 			return nil
 		}
-		return &f.ManifestResource[index]
+		return &f.ManifestResource[row]
 	case 18:
 		if int(row) >= len(f.GenericParam) {
 			return nil
 		}
-		return &f.GenericParam[index]
+		return &f.GenericParam[row]
 	case 19:
 		if int(row) >= len(f.GenericParamConstraint) {
 			return nil
 		}
-		return &f.GenericParamConstraint[index]
+		return &f.GenericParamConstraint[row]
 	case 20:
 		if int(row) >= len(f.MethodSpec) {
 			return nil
 		}
-		return &f.MethodSpec[index]
+		return &f.MethodSpec[row]
 	default:
 		panic("invalid table in composite index")
 	}
@@ -406,17 +418,21 @@ func (index *HasFieldMarshalIndex) unpack(ctx context.Context, r io.Reader) erro
 func (index HasFieldMarshalIndex) Lookup(f *File) interface{} {
 	table := index & 0b1
 	row := index >> 1
+	if row == 0 {
+		return nil
+	}
+	row--
 	switch table {
 	case 0:
 		if int(row) >= len(f.Field) {
 			return nil
 		}
-		return &f.Field[index]
+		return &f.Field[row]
 	case 1:
 		if int(row) >= len(f.Param) {
 			return nil
 		}
-		return &f.Param[index]
+		return &f.Param[row]
 	default:
 		panic("invalid table in composite index")
 	}
@@ -436,22 +452,26 @@ func (index *HasDeclSecurityIndex) unpack(ctx context.Context, r io.Reader) erro
 func (index HasDeclSecurityIndex) Lookup(f *File) interface{} {
 	table := index & 0b11
 	row := index >> 2
+	if row == 0 {
+		return nil
+	}
+	row--
 	switch table {
 	case 0:
 		if int(row) >= len(f.TypeDef) {
 			return nil
 		}
-		return &f.TypeDef[index]
+		return &f.TypeDef[row]
 	case 1:
 		if int(row) >= len(f.MethodDef) {
 			return nil
 		}
-		return &f.MethodDef[index]
+		return &f.MethodDef[row]
 	case 2:
 		if int(row) >= len(f.Assembly) {
 			return nil
 		}
-		return &f.Assembly[index]
+		return &f.Assembly[row]
 	default:
 		panic("invalid table in composite index")
 	}
@@ -471,32 +491,36 @@ func (index *MemberRefParentIndex) unpack(ctx context.Context, r io.Reader) erro
 func (index MemberRefParentIndex) Lookup(f *File) interface{} {
 	table := index & 0b111
 	row := index >> 3
+	if row == 0 {
+		return nil
+	}
+	row--
 	switch table {
 	case 0:
 		if int(row) >= len(f.TypeDef) {
 			return nil
 		}
-		return &f.TypeDef[index]
+		return &f.TypeDef[row]
 	case 1:
 		if int(row) >= len(f.TypeRef) {
 			return nil
 		}
-		return &f.TypeRef[index]
+		return &f.TypeRef[row]
 	case 2:
 		if int(row) >= len(f.ModuleRef) {
 			return nil
 		}
-		return &f.ModuleRef[index]
+		return &f.ModuleRef[row]
 	case 3:
 		if int(row) >= len(f.MethodDef) {
 			return nil
 		}
-		return &f.MethodDef[index]
+		return &f.MethodDef[row]
 	case 4:
 		if int(row) >= len(f.TypeSpec) {
 			return nil
 		}
-		return &f.TypeSpec[index]
+		return &f.TypeSpec[row]
 	default:
 		panic("invalid table in composite index")
 	}
@@ -516,17 +540,21 @@ func (index *HasSemanticsIndex) unpack(ctx context.Context, r io.Reader) error {
 func (index HasSemanticsIndex) Lookup(f *File) interface{} {
 	table := index & 0b1
 	row := index >> 1
+	if row == 0 {
+		return nil
+	}
+	row--
 	switch table {
 	case 0:
 		if int(row) >= len(f.Event) {
 			return nil
 		}
-		return &f.Event[index]
+		return &f.Event[row]
 	case 1:
 		if int(row) >= len(f.Property) {
 			return nil
 		}
-		return &f.Property[index]
+		return &f.Property[row]
 	default:
 		panic("invalid table in composite index")
 	}
@@ -546,17 +574,21 @@ func (index *MethodDefOrRefIndex) unpack(ctx context.Context, r io.Reader) error
 func (index MethodDefOrRefIndex) Lookup(f *File) interface{} {
 	table := index & 0b1
 	row := index >> 1
+	if row == 0 {
+		return nil
+	}
+	row--
 	switch table {
 	case 0:
 		if int(row) >= len(f.MethodDef) {
 			return nil
 		}
-		return &f.MethodDef[index]
+		return &f.MethodDef[row]
 	case 1:
 		if int(row) >= len(f.MemberRef) {
 			return nil
 		}
-		return &f.MemberRef[index]
+		return &f.MemberRef[row]
 	default:
 		panic("invalid table in composite index")
 	}
@@ -576,17 +608,21 @@ func (index *MemberForwardedIndex) unpack(ctx context.Context, r io.Reader) erro
 func (index MemberForwardedIndex) Lookup(f *File) interface{} {
 	table := index & 0b1
 	row := index >> 1
+	if row == 0 {
+		return nil
+	}
+	row--
 	switch table {
 	case 0:
 		if int(row) >= len(f.Field) {
 			return nil
 		}
-		return &f.Field[index]
+		return &f.Field[row]
 	case 1:
 		if int(row) >= len(f.MethodDef) {
 			return nil
 		}
-		return &f.MethodDef[index]
+		return &f.MethodDef[row]
 	default:
 		panic("invalid table in composite index")
 	}
@@ -606,22 +642,26 @@ func (index *ImplementationIndex) unpack(ctx context.Context, r io.Reader) error
 func (index ImplementationIndex) Lookup(f *File) interface{} {
 	table := index & 0b11
 	row := index >> 2
+	if row == 0 {
+		return nil
+	}
+	row--
 	switch table {
 	case 0:
 		if int(row) >= len(f.File) {
 			return nil
 		}
-		return &f.File[index]
+		return &f.File[row]
 	case 1:
 		if int(row) >= len(f.AssemblyRef) {
 			return nil
 		}
-		return &f.AssemblyRef[index]
+		return &f.AssemblyRef[row]
 	case 2:
 		if int(row) >= len(f.ExportedType) {
 			return nil
 		}
-		return &f.ExportedType[index]
+		return &f.ExportedType[row]
 	default:
 		panic("invalid table in composite index")
 	}
@@ -641,17 +681,21 @@ func (index *CustomAttributeTypeIndex) unpack(ctx context.Context, r io.Reader) 
 func (index CustomAttributeTypeIndex) Lookup(f *File) interface{} {
 	table := index & 0b111
 	row := index >> 3
+	if row == 0 {
+		return nil
+	}
+	row--
 	switch table {
 	case 0:
 		if int(row) >= len(f.MethodDef) {
 			return nil
 		}
-		return &f.MethodDef[index]
+		return &f.MethodDef[row]
 	case 1:
 		if int(row) >= len(f.MemberRef) {
 			return nil
 		}
-		return &f.MemberRef[index]
+		return &f.MemberRef[row]
 	default:
 		panic("invalid table in composite index")
 	}
@@ -671,27 +715,31 @@ func (index *ResolutionScopeIndex) unpack(ctx context.Context, r io.Reader) erro
 func (index ResolutionScopeIndex) Lookup(f *File) interface{} {
 	table := index & 0b11
 	row := index >> 2
+	if row == 0 {
+		return nil
+	}
+	row--
 	switch table {
 	case 0:
 		if int(row) >= len(f.Module) {
 			return nil
 		}
-		return &f.Module[index]
+		return &f.Module[row]
 	case 1:
 		if int(row) >= len(f.ModuleRef) {
 			return nil
 		}
-		return &f.ModuleRef[index]
+		return &f.ModuleRef[row]
 	case 2:
 		if int(row) >= len(f.AssemblyRef) {
 			return nil
 		}
-		return &f.AssemblyRef[index]
+		return &f.AssemblyRef[row]
 	case 3:
 		if int(row) >= len(f.TypeRef) {
 			return nil
 		}
-		return &f.TypeRef[index]
+		return &f.TypeRef[row]
 	default:
 		panic("invalid table in composite index")
 	}
@@ -711,17 +759,21 @@ func (index *TypeOrMethodDefIndex) unpack(ctx context.Context, r io.Reader) erro
 func (index TypeOrMethodDefIndex) Lookup(f *File) interface{} {
 	table := index & 0b1
 	row := index >> 1
+	if row == 0 {
+		return nil
+	}
+	row--
 	switch table {
 	case 0:
 		if int(row) >= len(f.TypeDef) {
 			return nil
 		}
-		return &f.TypeDef[index]
+		return &f.TypeDef[row]
 	case 1:
 		if int(row) >= len(f.MethodDef) {
 			return nil
 		}
-		return &f.MethodDef[index]
+		return &f.MethodDef[row]
 	default:
 		panic("invalid table in composite index")
 	}
