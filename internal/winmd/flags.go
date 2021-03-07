@@ -37,7 +37,7 @@ func (f ParamFlags) Input() bool {
 	return f&0x0001 != 0
 }
 
-// Output returns true if the parameter is an output ([Output]) parameter.
+// Output returns true if the parameter is an output ([Out]) parameter.
 func (f ParamFlags) Output() bool {
 	return f&0x0002 != 0
 }
