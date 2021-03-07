@@ -44,7 +44,7 @@ type File struct {
 	AssemblyRef            []AssemblyRef
 	AssemblyRefProcessor   []AssemblyRefProcessor
 	AssemblyRefOS          []AssemblyRefOS
-	FileRow                []FileRow
+	File                   []FileRow
 	ExportedType           []ExportedType
 	ManifestResource       []ManifestResource
 	NestedClass            []NestedClass
@@ -359,7 +359,7 @@ func Load(r io.ReadSeeker) (*File, error) {
 	f.AssemblyRef = make([]AssemblyRef, rows.assemblyref)
 	f.AssemblyRefProcessor = make([]AssemblyRefProcessor, rows.assemblyrefprocessor)
 	f.AssemblyRefOS = make([]AssemblyRefOS, rows.assemblyrefos)
-	f.FileRow = make([]FileRow, rows.file)
+	f.File = make([]FileRow, rows.file)
 	f.ExportedType = make([]ExportedType, rows.exportedtype)
 	f.ManifestResource = make([]ManifestResource, rows.manifestresource)
 	f.NestedClass = make([]NestedClass, rows.nestedclass)
