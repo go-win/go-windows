@@ -7,8 +7,7 @@ package webdav
 type AUTHNEXTSTEP int32
 
 const (
-	DefaultBehavior = 0
-	RetryRequest = 1
-	CancelRequest = 2
+	DefaultBehavior AUTHNEXTSTEP = 0
+	RetryRequest    AUTHNEXTSTEP = 1
+	CancelRequest   AUTHNEXTSTEP = 2
 )
-

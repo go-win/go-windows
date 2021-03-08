@@ -7,57 +7,56 @@ package policy
 type GPO_LINK int32
 
 const (
-	GPLinkUnknown = 0
-	GPLinkMachine = 1
-	GPLinkSite = 2
-	GPLinkDomain = 3
-	GPLinkOrganizationalUnit = 4
+	GPLinkUnknown            GPO_LINK = 0
+	GPLinkMachine            GPO_LINK = 1
+	GPLinkSite               GPO_LINK = 2
+	GPLinkDomain             GPO_LINK = 3
+	GPLinkOrganizationalUnit GPO_LINK = 4
 )
 
 type SETTINGSTATUS int32
 
 const (
-	RSOPUnspecified = 0
-	RSOPApplied = 1
-	RSOPIgnored = 2
-	RSOPFailed = 3
-	RSOPSubsettingFailed = 4
+	RSOPUnspecified      SETTINGSTATUS = 0
+	RSOPApplied          SETTINGSTATUS = 1
+	RSOPIgnored          SETTINGSTATUS = 2
+	RSOPFailed           SETTINGSTATUS = 3
+	RSOPSubsettingFailed SETTINGSTATUS = 4
 )
 
 type INSTALLSPECTYPE int32
 
 const (
-	APPNAME = 1
-	FILEEXT = 2
-	PROGID = 3
-	COMCLASS = 4
+	APPNAME  INSTALLSPECTYPE = 1
+	FILEEXT  INSTALLSPECTYPE = 2
+	PROGID   INSTALLSPECTYPE = 3
+	COMCLASS INSTALLSPECTYPE = 4
 )
 
 type APPSTATE int32
 
 const (
-	ABSENT = 0
-	ASSIGNED = 1
-	PUBLISHED = 2
+	ABSENT    APPSTATE = 0
+	ASSIGNED  APPSTATE = 1
+	PUBLISHED APPSTATE = 2
 )
 
 type GROUP_POLICY_OBJECT_TYPE int32
 
 const (
-	GPOTypeLocal = 0
-	GPOTypeRemote = 1
-	GPOTypeDS = 2
-	GPOTypeLocalUser = 3
-	GPOTypeLocalGroup = 4
+	GPOTypeLocal      GROUP_POLICY_OBJECT_TYPE = 0
+	GPOTypeRemote     GROUP_POLICY_OBJECT_TYPE = 1
+	GPOTypeDS         GROUP_POLICY_OBJECT_TYPE = 2
+	GPOTypeLocalUser  GROUP_POLICY_OBJECT_TYPE = 3
+	GPOTypeLocalGroup GROUP_POLICY_OBJECT_TYPE = 4
 )
 
 type GROUP_POLICY_HINT_TYPE int32
 
 const (
-	GPHintUnknown = 0
-	GPHintMachine = 1
-	GPHintSite = 2
-	GPHintDomain = 3
-	GPHintOrganizationalUnit = 4
+	GPHintUnknown            GROUP_POLICY_HINT_TYPE = 0
+	GPHintMachine            GROUP_POLICY_HINT_TYPE = 1
+	GPHintSite               GROUP_POLICY_HINT_TYPE = 2
+	GPHintDomain             GROUP_POLICY_HINT_TYPE = 3
+	GPHintOrganizationalUnit GROUP_POLICY_HINT_TYPE = 4
 )
-

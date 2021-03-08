@@ -7,26 +7,25 @@ package windowsnetworkvirtualization
 type WNV_NOTIFICATION_TYPE int32
 
 const (
-	WnvPolicyMismatchType = 0
-	WnvRedirectType = 1
-	WnvObjectChangeType = 2
-	WnvNotificationTypeMax = 3
+	WnvPolicyMismatchType  WNV_NOTIFICATION_TYPE = 0
+	WnvRedirectType        WNV_NOTIFICATION_TYPE = 1
+	WnvObjectChangeType    WNV_NOTIFICATION_TYPE = 2
+	WnvNotificationTypeMax WNV_NOTIFICATION_TYPE = 3
 )
 
 type WNV_OBJECT_TYPE int32
 
 const (
-	WnvProviderAddressType = 0
-	WnvCustomerAddressType = 1
-	WnvObjectTypeMax = 2
+	WnvProviderAddressType WNV_OBJECT_TYPE = 0
+	WnvCustomerAddressType WNV_OBJECT_TYPE = 1
+	WnvObjectTypeMax       WNV_OBJECT_TYPE = 2
 )
 
 type WNV_CA_NOTIFICATION_TYPE int32
 
 const (
-	WnvCustomerAddressAdded = 0
-	WnvCustomerAddressDeleted = 1
-	WnvCustomerAddressMoved = 2
-	WnvCustomerAddressMax = 3
+	WnvCustomerAddressAdded   WNV_CA_NOTIFICATION_TYPE = 0
+	WnvCustomerAddressDeleted WNV_CA_NOTIFICATION_TYPE = 1
+	WnvCustomerAddressMoved   WNV_CA_NOTIFICATION_TYPE = 2
+	WnvCustomerAddressMax     WNV_CA_NOTIFICATION_TYPE = 3
 )
-

@@ -7,3431 +7,3430 @@ package systemservices
 type ConsoleMode int32
 
 const (
-	ENABLE_ECHO_INPUT = 4
-	ENABLE_INSERT_MODE = 32
-	ENABLE_LINE_INPUT = 2
-	ENABLE_MOUSE_INPUT = 16
-	ENABLE_PROCESSED_INPUT = 1
-	ENABLE_QUICK_EDIT_MODE = 64
-	ENABLE_WINDOW_INPUT = 8
-	ENABLE_VIRTUAL_TERMINAL_INPUT = 512
-	ENABLE_PROCESSED_OUTPUT = 1
-	ENABLE_WRAP_AT_EOL_OUTPUT = 2
-	ENABLE_VIRTUAL_TERMINAL_PROCESSING = 4
-	DISABLE_NEWLINE_AUTO_RETURN = 8
-	ENABLE_LVB_GRID_WORLDWIDE = 16
+	ENABLE_ECHO_INPUT                  ConsoleMode = 4
+	ENABLE_INSERT_MODE                 ConsoleMode = 32
+	ENABLE_LINE_INPUT                  ConsoleMode = 2
+	ENABLE_MOUSE_INPUT                 ConsoleMode = 16
+	ENABLE_PROCESSED_INPUT             ConsoleMode = 1
+	ENABLE_QUICK_EDIT_MODE             ConsoleMode = 64
+	ENABLE_WINDOW_INPUT                ConsoleMode = 8
+	ENABLE_VIRTUAL_TERMINAL_INPUT      ConsoleMode = 512
+	ENABLE_PROCESSED_OUTPUT            ConsoleMode = 1
+	ENABLE_WRAP_AT_EOL_OUTPUT          ConsoleMode = 2
+	ENABLE_VIRTUAL_TERMINAL_PROCESSING ConsoleMode = 4
+	DISABLE_NEWLINE_AUTO_RETURN        ConsoleMode = 8
+	ENABLE_LVB_GRID_WORLDWIDE          ConsoleMode = 16
 )
 
 type PAGE_TYPE uint32
 
 const (
-	PAGE_NOACCESS = 1
-	PAGE_READONLY = 2
-	PAGE_READWRITE = 4
-	PAGE_WRITECOPY = 8
-	PAGE_EXECUTE = 16
-	PAGE_EXECUTE_READ = 32
-	PAGE_EXECUTE_READWRITE = 64
-	PAGE_EXECUTE_WRITECOPY = 128
-	PAGE_GUARD = 256
-	PAGE_NOCACHE = 512
-	PAGE_WRITECOMBINE = 1024
-	PAGE_TARGETS_INVALID = 1073741824
-	PAGE_TARGETS_NO_UPDATE = 1073741824
+	PAGE_NOACCESS          PAGE_TYPE = 1
+	PAGE_READONLY          PAGE_TYPE = 2
+	PAGE_READWRITE         PAGE_TYPE = 4
+	PAGE_WRITECOPY         PAGE_TYPE = 8
+	PAGE_EXECUTE           PAGE_TYPE = 16
+	PAGE_EXECUTE_READ      PAGE_TYPE = 32
+	PAGE_EXECUTE_READWRITE PAGE_TYPE = 64
+	PAGE_EXECUTE_WRITECOPY PAGE_TYPE = 128
+	PAGE_GUARD             PAGE_TYPE = 256
+	PAGE_NOCACHE           PAGE_TYPE = 512
+	PAGE_WRITECOMBINE      PAGE_TYPE = 1024
+	PAGE_TARGETS_INVALID   PAGE_TYPE = 1073741824
+	PAGE_TARGETS_NO_UPDATE PAGE_TYPE = 1073741824
 )
 
 type PROCESS_ACCESS_RIGHTS uint32
 
 const (
-	PROCESS_TERMINATE = 1
-	PROCESS_CREATE_THREAD = 2
-	PROCESS_SET_SESSIONID = 4
-	PROCESS_VM_OPERATION = 8
-	PROCESS_VM_READ = 16
-	PROCESS_VM_WRITE = 32
-	PROCESS_DUP_HANDLE = 64
-	PROCESS_CREATE_PROCESS = 128
-	PROCESS_SET_QUOTA = 256
-	PROCESS_SET_INFORMATION = 512
-	PROCESS_QUERY_INFORMATION = 1024
-	PROCESS_SUSPEND_RESUME = 2048
-	PROCESS_QUERY_LIMITED_INFORMATION = 4096
-	PROCESS_SET_LIMITED_INFORMATION = 8192
-	PROCESS_ALL_ACCESS = 2097151
-	DELETE = 65536
-	READ_CONTROL = 131072
-	WRITE_DAC = 262144
-	WRITE_OWNER = 524288
-	SYNCHRONIZE = 1048576
-	STANDARD_RIGHTS_REQUIRED = 983040
+	PROCESS_TERMINATE                 PROCESS_ACCESS_RIGHTS = 1
+	PROCESS_CREATE_THREAD             PROCESS_ACCESS_RIGHTS = 2
+	PROCESS_SET_SESSIONID             PROCESS_ACCESS_RIGHTS = 4
+	PROCESS_VM_OPERATION              PROCESS_ACCESS_RIGHTS = 8
+	PROCESS_VM_READ                   PROCESS_ACCESS_RIGHTS = 16
+	PROCESS_VM_WRITE                  PROCESS_ACCESS_RIGHTS = 32
+	PROCESS_DUP_HANDLE                PROCESS_ACCESS_RIGHTS = 64
+	PROCESS_CREATE_PROCESS            PROCESS_ACCESS_RIGHTS = 128
+	PROCESS_SET_QUOTA                 PROCESS_ACCESS_RIGHTS = 256
+	PROCESS_SET_INFORMATION           PROCESS_ACCESS_RIGHTS = 512
+	PROCESS_QUERY_INFORMATION         PROCESS_ACCESS_RIGHTS = 1024
+	PROCESS_SUSPEND_RESUME            PROCESS_ACCESS_RIGHTS = 2048
+	PROCESS_QUERY_LIMITED_INFORMATION PROCESS_ACCESS_RIGHTS = 4096
+	PROCESS_SET_LIMITED_INFORMATION   PROCESS_ACCESS_RIGHTS = 8192
+	PROCESS_ALL_ACCESS                PROCESS_ACCESS_RIGHTS = 2097151
+	DELETE                            PROCESS_ACCESS_RIGHTS = 65536
+	READ_CONTROL                      PROCESS_ACCESS_RIGHTS = 131072
+	WRITE_DAC                         PROCESS_ACCESS_RIGHTS = 262144
+	WRITE_OWNER                       PROCESS_ACCESS_RIGHTS = 524288
+	SYNCHRONIZE                       PROCESS_ACCESS_RIGHTS = 1048576
+	STANDARD_RIGHTS_REQUIRED          PROCESS_ACCESS_RIGHTS = 983040
 )
 
 type JOB_OBJECT_LIMIT uint32
 
 const (
-	JOB_OBJECT_LIMIT_WORKINGSET = 1
-	JOB_OBJECT_LIMIT_PROCESS_TIME = 2
-	JOB_OBJECT_LIMIT_JOB_TIME = 4
-	JOB_OBJECT_LIMIT_ACTIVE_PROCESS = 8
-	JOB_OBJECT_LIMIT_AFFINITY = 16
-	JOB_OBJECT_LIMIT_PRIORITY_CLASS = 32
-	JOB_OBJECT_LIMIT_PRESERVE_JOB_TIME = 64
-	JOB_OBJECT_LIMIT_SCHEDULING_CLASS = 128
-	JOB_OBJECT_LIMIT_PROCESS_MEMORY = 256
-	JOB_OBJECT_LIMIT_JOB_MEMORY = 512
-	JOB_OBJECT_LIMIT_JOB_MEMORY_HIGH = 512
-	JOB_OBJECT_LIMIT_DIE_ON_UNHANDLED_EXCEPTION = 1024
-	JOB_OBJECT_LIMIT_BREAKAWAY_OK = 2048
-	JOB_OBJECT_LIMIT_SILENT_BREAKAWAY_OK = 4096
-	JOB_OBJECT_LIMIT_KILL_ON_JOB_CLOSE = 8192
-	JOB_OBJECT_LIMIT_SUBSET_AFFINITY = 16384
-	JOB_OBJECT_LIMIT_JOB_MEMORY_LOW = 32768
-	JOB_OBJECT_LIMIT_JOB_READ_BYTES = 65536
-	JOB_OBJECT_LIMIT_JOB_WRITE_BYTES = 131072
-	JOB_OBJECT_LIMIT_RATE_CONTROL = 262144
-	JOB_OBJECT_LIMIT_CPU_RATE_CONTROL = 262144
-	JOB_OBJECT_LIMIT_IO_RATE_CONTROL = 524288
-	JOB_OBJECT_LIMIT_NET_RATE_CONTROL = 1048576
-	JOB_OBJECT_LIMIT_VALID_FLAGS = 524287
-	JOB_OBJECT_BASIC_LIMIT_VALID_FLAGS = 255
-	JOB_OBJECT_EXTENDED_LIMIT_VALID_FLAGS = 32767
-	JOB_OBJECT_NOTIFICATION_LIMIT_VALID_FLAGS = 2064900
+	JOB_OBJECT_LIMIT_WORKINGSET                 JOB_OBJECT_LIMIT = 1
+	JOB_OBJECT_LIMIT_PROCESS_TIME               JOB_OBJECT_LIMIT = 2
+	JOB_OBJECT_LIMIT_JOB_TIME                   JOB_OBJECT_LIMIT = 4
+	JOB_OBJECT_LIMIT_ACTIVE_PROCESS             JOB_OBJECT_LIMIT = 8
+	JOB_OBJECT_LIMIT_AFFINITY                   JOB_OBJECT_LIMIT = 16
+	JOB_OBJECT_LIMIT_PRIORITY_CLASS             JOB_OBJECT_LIMIT = 32
+	JOB_OBJECT_LIMIT_PRESERVE_JOB_TIME          JOB_OBJECT_LIMIT = 64
+	JOB_OBJECT_LIMIT_SCHEDULING_CLASS           JOB_OBJECT_LIMIT = 128
+	JOB_OBJECT_LIMIT_PROCESS_MEMORY             JOB_OBJECT_LIMIT = 256
+	JOB_OBJECT_LIMIT_JOB_MEMORY                 JOB_OBJECT_LIMIT = 512
+	JOB_OBJECT_LIMIT_JOB_MEMORY_HIGH            JOB_OBJECT_LIMIT = 512
+	JOB_OBJECT_LIMIT_DIE_ON_UNHANDLED_EXCEPTION JOB_OBJECT_LIMIT = 1024
+	JOB_OBJECT_LIMIT_BREAKAWAY_OK               JOB_OBJECT_LIMIT = 2048
+	JOB_OBJECT_LIMIT_SILENT_BREAKAWAY_OK        JOB_OBJECT_LIMIT = 4096
+	JOB_OBJECT_LIMIT_KILL_ON_JOB_CLOSE          JOB_OBJECT_LIMIT = 8192
+	JOB_OBJECT_LIMIT_SUBSET_AFFINITY            JOB_OBJECT_LIMIT = 16384
+	JOB_OBJECT_LIMIT_JOB_MEMORY_LOW             JOB_OBJECT_LIMIT = 32768
+	JOB_OBJECT_LIMIT_JOB_READ_BYTES             JOB_OBJECT_LIMIT = 65536
+	JOB_OBJECT_LIMIT_JOB_WRITE_BYTES            JOB_OBJECT_LIMIT = 131072
+	JOB_OBJECT_LIMIT_RATE_CONTROL               JOB_OBJECT_LIMIT = 262144
+	JOB_OBJECT_LIMIT_CPU_RATE_CONTROL           JOB_OBJECT_LIMIT = 262144
+	JOB_OBJECT_LIMIT_IO_RATE_CONTROL            JOB_OBJECT_LIMIT = 524288
+	JOB_OBJECT_LIMIT_NET_RATE_CONTROL           JOB_OBJECT_LIMIT = 1048576
+	JOB_OBJECT_LIMIT_VALID_FLAGS                JOB_OBJECT_LIMIT = 524287
+	JOB_OBJECT_BASIC_LIMIT_VALID_FLAGS          JOB_OBJECT_LIMIT = 255
+	JOB_OBJECT_EXTENDED_LIMIT_VALID_FLAGS       JOB_OBJECT_LIMIT = 32767
+	JOB_OBJECT_NOTIFICATION_LIMIT_VALID_FLAGS   JOB_OBJECT_LIMIT = 2064900
 )
 
 type JOB_OBJECT_UILIMIT uint32
 
 const (
-	JOB_OBJECT_UILIMIT_NONE = 0
-	JOB_OBJECT_UILIMIT_HANDLES = 1
-	JOB_OBJECT_UILIMIT_READCLIPBOARD = 2
-	JOB_OBJECT_UILIMIT_WRITECLIPBOARD = 4
-	JOB_OBJECT_UILIMIT_SYSTEMPARAMETERS = 8
-	JOB_OBJECT_UILIMIT_DISPLAYSETTINGS = 16
-	JOB_OBJECT_UILIMIT_GLOBALATOMS = 32
-	JOB_OBJECT_UILIMIT_DESKTOP = 64
-	JOB_OBJECT_UILIMIT_EXITWINDOWS = 128
+	JOB_OBJECT_UILIMIT_NONE             JOB_OBJECT_UILIMIT = 0
+	JOB_OBJECT_UILIMIT_HANDLES          JOB_OBJECT_UILIMIT = 1
+	JOB_OBJECT_UILIMIT_READCLIPBOARD    JOB_OBJECT_UILIMIT = 2
+	JOB_OBJECT_UILIMIT_WRITECLIPBOARD   JOB_OBJECT_UILIMIT = 4
+	JOB_OBJECT_UILIMIT_SYSTEMPARAMETERS JOB_OBJECT_UILIMIT = 8
+	JOB_OBJECT_UILIMIT_DISPLAYSETTINGS  JOB_OBJECT_UILIMIT = 16
+	JOB_OBJECT_UILIMIT_GLOBALATOMS      JOB_OBJECT_UILIMIT = 32
+	JOB_OBJECT_UILIMIT_DESKTOP          JOB_OBJECT_UILIMIT = 64
+	JOB_OBJECT_UILIMIT_EXITWINDOWS      JOB_OBJECT_UILIMIT = 128
 )
 
 type JOB_OBJECT_SECURITY uint32
 
 const (
-	JOB_OBJECT_SECURITY_NO_ADMIN = 1
-	JOB_OBJECT_SECURITY_RESTRICTED_TOKEN = 2
-	JOB_OBJECT_SECURITY_ONLY_TOKEN = 4
-	JOB_OBJECT_SECURITY_FILTER_TOKENS = 8
-	JOB_OBJECT_SECURITY_VALID_FLAGS = 15
+	JOB_OBJECT_SECURITY_NO_ADMIN         JOB_OBJECT_SECURITY = 1
+	JOB_OBJECT_SECURITY_RESTRICTED_TOKEN JOB_OBJECT_SECURITY = 2
+	JOB_OBJECT_SECURITY_ONLY_TOKEN       JOB_OBJECT_SECURITY = 4
+	JOB_OBJECT_SECURITY_FILTER_TOKENS    JOB_OBJECT_SECURITY = 8
+	JOB_OBJECT_SECURITY_VALID_FLAGS      JOB_OBJECT_SECURITY = 15
 )
 
 type ACCESS_REASON_TYPE int32
 
 const (
-	AccessReasonNone = 0
-	AccessReasonAllowedAce = 65536
-	AccessReasonDeniedAce = 131072
-	AccessReasonAllowedParentAce = 196608
-	AccessReasonDeniedParentAce = 262144
-	AccessReasonNotGrantedByCape = 327680
-	AccessReasonNotGrantedByParentCape = 393216
-	AccessReasonNotGrantedToAppContainer = 458752
-	AccessReasonMissingPrivilege = 1048576
-	AccessReasonFromPrivilege = 2097152
-	AccessReasonIntegrityLevel = 3145728
-	AccessReasonOwnership = 4194304
-	AccessReasonNullDacl = 5242880
-	AccessReasonEmptyDacl = 6291456
-	AccessReasonNoSD = 7340032
-	AccessReasonNoGrant = 8388608
-	AccessReasonTrustLabel = 9437184
-	AccessReasonFilterAce = 10485760
+	AccessReasonNone                     ACCESS_REASON_TYPE = 0
+	AccessReasonAllowedAce               ACCESS_REASON_TYPE = 65536
+	AccessReasonDeniedAce                ACCESS_REASON_TYPE = 131072
+	AccessReasonAllowedParentAce         ACCESS_REASON_TYPE = 196608
+	AccessReasonDeniedParentAce          ACCESS_REASON_TYPE = 262144
+	AccessReasonNotGrantedByCape         ACCESS_REASON_TYPE = 327680
+	AccessReasonNotGrantedByParentCape   ACCESS_REASON_TYPE = 393216
+	AccessReasonNotGrantedToAppContainer ACCESS_REASON_TYPE = 458752
+	AccessReasonMissingPrivilege         ACCESS_REASON_TYPE = 1048576
+	AccessReasonFromPrivilege            ACCESS_REASON_TYPE = 2097152
+	AccessReasonIntegrityLevel           ACCESS_REASON_TYPE = 3145728
+	AccessReasonOwnership                ACCESS_REASON_TYPE = 4194304
+	AccessReasonNullDacl                 ACCESS_REASON_TYPE = 5242880
+	AccessReasonEmptyDacl                ACCESS_REASON_TYPE = 6291456
+	AccessReasonNoSD                     ACCESS_REASON_TYPE = 7340032
+	AccessReasonNoGrant                  ACCESS_REASON_TYPE = 8388608
+	AccessReasonTrustLabel               ACCESS_REASON_TYPE = 9437184
+	AccessReasonFilterAce                ACCESS_REASON_TYPE = 10485760
 )
 
 type SE_IMAGE_SIGNATURE_TYPE int32
 
 const (
-	SeImageSignatureNone = 0
-	SeImageSignatureEmbedded = 1
-	SeImageSignatureCache = 2
-	SeImageSignatureCatalogCached = 3
-	SeImageSignatureCatalogNotCached = 4
-	SeImageSignatureCatalogHint = 5
-	SeImageSignaturePackageCatalog = 6
+	SeImageSignatureNone             SE_IMAGE_SIGNATURE_TYPE = 0
+	SeImageSignatureEmbedded         SE_IMAGE_SIGNATURE_TYPE = 1
+	SeImageSignatureCache            SE_IMAGE_SIGNATURE_TYPE = 2
+	SeImageSignatureCatalogCached    SE_IMAGE_SIGNATURE_TYPE = 3
+	SeImageSignatureCatalogNotCached SE_IMAGE_SIGNATURE_TYPE = 4
+	SeImageSignatureCatalogHint      SE_IMAGE_SIGNATURE_TYPE = 5
+	SeImageSignaturePackageCatalog   SE_IMAGE_SIGNATURE_TYPE = 6
 )
 
 type SE_LEARNING_MODE_DATA_TYPE int32
 
 const (
-	SeLearningModeInvalidType = 0
-	SeLearningModeSettings = 1
-	SeLearningModeMax = 2
+	SeLearningModeInvalidType SE_LEARNING_MODE_DATA_TYPE = 0
+	SeLearningModeSettings    SE_LEARNING_MODE_DATA_TYPE = 1
+	SeLearningModeMax         SE_LEARNING_MODE_DATA_TYPE = 2
 )
 
 type PROCESS_MITIGATION_POLICY int32
 
 const (
-	ProcessDEPPolicy = 0
-	ProcessASLRPolicy = 1
-	ProcessDynamicCodePolicy = 2
-	ProcessStrictHandleCheckPolicy = 3
-	ProcessSystemCallDisablePolicy = 4
-	ProcessMitigationOptionsMask = 5
-	ProcessExtensionPointDisablePolicy = 6
-	ProcessControlFlowGuardPolicy = 7
-	ProcessSignaturePolicy = 8
-	ProcessFontDisablePolicy = 9
-	ProcessImageLoadPolicy = 10
-	ProcessSystemCallFilterPolicy = 11
-	ProcessPayloadRestrictionPolicy = 12
-	ProcessChildProcessPolicy = 13
-	ProcessSideChannelIsolationPolicy = 14
-	ProcessUserShadowStackPolicy = 15
-	MaxProcessMitigationPolicy = 16
+	ProcessDEPPolicy                   PROCESS_MITIGATION_POLICY = 0
+	ProcessASLRPolicy                  PROCESS_MITIGATION_POLICY = 1
+	ProcessDynamicCodePolicy           PROCESS_MITIGATION_POLICY = 2
+	ProcessStrictHandleCheckPolicy     PROCESS_MITIGATION_POLICY = 3
+	ProcessSystemCallDisablePolicy     PROCESS_MITIGATION_POLICY = 4
+	ProcessMitigationOptionsMask       PROCESS_MITIGATION_POLICY = 5
+	ProcessExtensionPointDisablePolicy PROCESS_MITIGATION_POLICY = 6
+	ProcessControlFlowGuardPolicy      PROCESS_MITIGATION_POLICY = 7
+	ProcessSignaturePolicy             PROCESS_MITIGATION_POLICY = 8
+	ProcessFontDisablePolicy           PROCESS_MITIGATION_POLICY = 9
+	ProcessImageLoadPolicy             PROCESS_MITIGATION_POLICY = 10
+	ProcessSystemCallFilterPolicy      PROCESS_MITIGATION_POLICY = 11
+	ProcessPayloadRestrictionPolicy    PROCESS_MITIGATION_POLICY = 12
+	ProcessChildProcessPolicy          PROCESS_MITIGATION_POLICY = 13
+	ProcessSideChannelIsolationPolicy  PROCESS_MITIGATION_POLICY = 14
+	ProcessUserShadowStackPolicy       PROCESS_MITIGATION_POLICY = 15
+	MaxProcessMitigationPolicy         PROCESS_MITIGATION_POLICY = 16
 )
 
 type JOBOBJECT_RATE_CONTROL_TOLERANCE int32
 
 const (
-	ToleranceLow = 1
-	ToleranceMedium = 2
-	ToleranceHigh = 3
+	ToleranceLow    JOBOBJECT_RATE_CONTROL_TOLERANCE = 1
+	ToleranceMedium JOBOBJECT_RATE_CONTROL_TOLERANCE = 2
+	ToleranceHigh   JOBOBJECT_RATE_CONTROL_TOLERANCE = 3
 )
 
 type JOBOBJECT_RATE_CONTROL_TOLERANCE_INTERVAL int32
 
 const (
-	ToleranceIntervalShort = 1
-	ToleranceIntervalMedium = 2
-	ToleranceIntervalLong = 3
+	ToleranceIntervalShort  JOBOBJECT_RATE_CONTROL_TOLERANCE_INTERVAL = 1
+	ToleranceIntervalMedium JOBOBJECT_RATE_CONTROL_TOLERANCE_INTERVAL = 2
+	ToleranceIntervalLong   JOBOBJECT_RATE_CONTROL_TOLERANCE_INTERVAL = 3
 )
 
 type JOB_OBJECT_NET_RATE_CONTROL_FLAGS int32
 
 const (
-	JOB_OBJECT_NET_RATE_CONTROL_ENABLE = 1
-	JOB_OBJECT_NET_RATE_CONTROL_MAX_BANDWIDTH = 2
-	JOB_OBJECT_NET_RATE_CONTROL_DSCP_TAG = 4
-	JOB_OBJECT_NET_RATE_CONTROL_VALID_FLAGS = 7
+	JOB_OBJECT_NET_RATE_CONTROL_ENABLE        JOB_OBJECT_NET_RATE_CONTROL_FLAGS = 1
+	JOB_OBJECT_NET_RATE_CONTROL_MAX_BANDWIDTH JOB_OBJECT_NET_RATE_CONTROL_FLAGS = 2
+	JOB_OBJECT_NET_RATE_CONTROL_DSCP_TAG      JOB_OBJECT_NET_RATE_CONTROL_FLAGS = 4
+	JOB_OBJECT_NET_RATE_CONTROL_VALID_FLAGS   JOB_OBJECT_NET_RATE_CONTROL_FLAGS = 7
 )
 
 type JOB_OBJECT_IO_RATE_CONTROL_FLAGS int32
 
 const (
-	JOB_OBJECT_IO_RATE_CONTROL_ENABLE = 1
-	JOB_OBJECT_IO_RATE_CONTROL_STANDALONE_VOLUME = 2
-	JOB_OBJECT_IO_RATE_CONTROL_FORCE_UNIT_ACCESS_ALL = 4
-	JOB_OBJECT_IO_RATE_CONTROL_FORCE_UNIT_ACCESS_ON_SOFT_CAP = 8
-	JOB_OBJECT_IO_RATE_CONTROL_VALID_FLAGS = 15
+	JOB_OBJECT_IO_RATE_CONTROL_ENABLE                        JOB_OBJECT_IO_RATE_CONTROL_FLAGS = 1
+	JOB_OBJECT_IO_RATE_CONTROL_STANDALONE_VOLUME             JOB_OBJECT_IO_RATE_CONTROL_FLAGS = 2
+	JOB_OBJECT_IO_RATE_CONTROL_FORCE_UNIT_ACCESS_ALL         JOB_OBJECT_IO_RATE_CONTROL_FLAGS = 4
+	JOB_OBJECT_IO_RATE_CONTROL_FORCE_UNIT_ACCESS_ON_SOFT_CAP JOB_OBJECT_IO_RATE_CONTROL_FLAGS = 8
+	JOB_OBJECT_IO_RATE_CONTROL_VALID_FLAGS                   JOB_OBJECT_IO_RATE_CONTROL_FLAGS = 15
 )
 
 type JOBOBJECT_IO_ATTRIBUTION_CONTROL_FLAGS int32
 
 const (
-	JOBOBJECT_IO_ATTRIBUTION_CONTROL_ENABLE = 1
-	JOBOBJECT_IO_ATTRIBUTION_CONTROL_DISABLE = 2
-	JOBOBJECT_IO_ATTRIBUTION_CONTROL_VALID_FLAGS = 3
+	JOBOBJECT_IO_ATTRIBUTION_CONTROL_ENABLE      JOBOBJECT_IO_ATTRIBUTION_CONTROL_FLAGS = 1
+	JOBOBJECT_IO_ATTRIBUTION_CONTROL_DISABLE     JOBOBJECT_IO_ATTRIBUTION_CONTROL_FLAGS = 2
+	JOBOBJECT_IO_ATTRIBUTION_CONTROL_VALID_FLAGS JOBOBJECT_IO_ATTRIBUTION_CONTROL_FLAGS = 3
 )
 
 type JOBOBJECTINFOCLASS int32
 
 const (
-	JobObjectBasicAccountingInformation = 1
-	JobObjectBasicLimitInformation = 2
-	JobObjectBasicProcessIdList = 3
-	JobObjectBasicUIRestrictions = 4
-	JobObjectSecurityLimitInformation = 5
-	JobObjectEndOfJobTimeInformation = 6
-	JobObjectAssociateCompletionPortInformation = 7
-	JobObjectBasicAndIoAccountingInformation = 8
-	JobObjectExtendedLimitInformation = 9
-	JobObjectJobSetInformation = 10
-	JobObjectGroupInformation = 11
-	JobObjectNotificationLimitInformation = 12
-	JobObjectLimitViolationInformation = 13
-	JobObjectGroupInformationEx = 14
-	JobObjectCpuRateControlInformation = 15
-	JobObjectCompletionFilter = 16
-	JobObjectCompletionCounter = 17
-	JobObjectReserved1Information = 18
-	JobObjectReserved2Information = 19
-	JobObjectReserved3Information = 20
-	JobObjectReserved4Information = 21
-	JobObjectReserved5Information = 22
-	JobObjectReserved6Information = 23
-	JobObjectReserved7Information = 24
-	JobObjectReserved8Information = 25
-	JobObjectReserved9Information = 26
-	JobObjectReserved10Information = 27
-	JobObjectReserved11Information = 28
-	JobObjectReserved12Information = 29
-	JobObjectReserved13Information = 30
-	JobObjectReserved14Information = 31
-	JobObjectNetRateControlInformation = 32
-	JobObjectNotificationLimitInformation2 = 33
-	JobObjectLimitViolationInformation2 = 34
-	JobObjectCreateSilo = 35
-	JobObjectSiloBasicInformation = 36
-	JobObjectReserved15Information = 37
-	JobObjectReserved16Information = 38
-	JobObjectReserved17Information = 39
-	JobObjectReserved18Information = 40
-	JobObjectReserved19Information = 41
-	JobObjectReserved20Information = 42
-	JobObjectReserved21Information = 43
-	JobObjectReserved22Information = 44
-	JobObjectReserved23Information = 45
-	JobObjectReserved24Information = 46
-	JobObjectReserved25Information = 47
-	MaxJobObjectInfoClass = 48
+	JobObjectBasicAccountingInformation         JOBOBJECTINFOCLASS = 1
+	JobObjectBasicLimitInformation              JOBOBJECTINFOCLASS = 2
+	JobObjectBasicProcessIdList                 JOBOBJECTINFOCLASS = 3
+	JobObjectBasicUIRestrictions                JOBOBJECTINFOCLASS = 4
+	JobObjectSecurityLimitInformation           JOBOBJECTINFOCLASS = 5
+	JobObjectEndOfJobTimeInformation            JOBOBJECTINFOCLASS = 6
+	JobObjectAssociateCompletionPortInformation JOBOBJECTINFOCLASS = 7
+	JobObjectBasicAndIoAccountingInformation    JOBOBJECTINFOCLASS = 8
+	JobObjectExtendedLimitInformation           JOBOBJECTINFOCLASS = 9
+	JobObjectJobSetInformation                  JOBOBJECTINFOCLASS = 10
+	JobObjectGroupInformation                   JOBOBJECTINFOCLASS = 11
+	JobObjectNotificationLimitInformation       JOBOBJECTINFOCLASS = 12
+	JobObjectLimitViolationInformation          JOBOBJECTINFOCLASS = 13
+	JobObjectGroupInformationEx                 JOBOBJECTINFOCLASS = 14
+	JobObjectCpuRateControlInformation          JOBOBJECTINFOCLASS = 15
+	JobObjectCompletionFilter                   JOBOBJECTINFOCLASS = 16
+	JobObjectCompletionCounter                  JOBOBJECTINFOCLASS = 17
+	JobObjectReserved1Information               JOBOBJECTINFOCLASS = 18
+	JobObjectReserved2Information               JOBOBJECTINFOCLASS = 19
+	JobObjectReserved3Information               JOBOBJECTINFOCLASS = 20
+	JobObjectReserved4Information               JOBOBJECTINFOCLASS = 21
+	JobObjectReserved5Information               JOBOBJECTINFOCLASS = 22
+	JobObjectReserved6Information               JOBOBJECTINFOCLASS = 23
+	JobObjectReserved7Information               JOBOBJECTINFOCLASS = 24
+	JobObjectReserved8Information               JOBOBJECTINFOCLASS = 25
+	JobObjectReserved9Information               JOBOBJECTINFOCLASS = 26
+	JobObjectReserved10Information              JOBOBJECTINFOCLASS = 27
+	JobObjectReserved11Information              JOBOBJECTINFOCLASS = 28
+	JobObjectReserved12Information              JOBOBJECTINFOCLASS = 29
+	JobObjectReserved13Information              JOBOBJECTINFOCLASS = 30
+	JobObjectReserved14Information              JOBOBJECTINFOCLASS = 31
+	JobObjectNetRateControlInformation          JOBOBJECTINFOCLASS = 32
+	JobObjectNotificationLimitInformation2      JOBOBJECTINFOCLASS = 33
+	JobObjectLimitViolationInformation2         JOBOBJECTINFOCLASS = 34
+	JobObjectCreateSilo                         JOBOBJECTINFOCLASS = 35
+	JobObjectSiloBasicInformation               JOBOBJECTINFOCLASS = 36
+	JobObjectReserved15Information              JOBOBJECTINFOCLASS = 37
+	JobObjectReserved16Information              JOBOBJECTINFOCLASS = 38
+	JobObjectReserved17Information              JOBOBJECTINFOCLASS = 39
+	JobObjectReserved18Information              JOBOBJECTINFOCLASS = 40
+	JobObjectReserved19Information              JOBOBJECTINFOCLASS = 41
+	JobObjectReserved20Information              JOBOBJECTINFOCLASS = 42
+	JobObjectReserved21Information              JOBOBJECTINFOCLASS = 43
+	JobObjectReserved22Information              JOBOBJECTINFOCLASS = 44
+	JobObjectReserved23Information              JOBOBJECTINFOCLASS = 45
+	JobObjectReserved24Information              JOBOBJECTINFOCLASS = 46
+	JobObjectReserved25Information              JOBOBJECTINFOCLASS = 47
+	MaxJobObjectInfoClass                       JOBOBJECTINFOCLASS = 48
 )
 
 type SERVERSILO_STATE int32
 
 const (
-	SERVERSILO_INITING = 0
-	SERVERSILO_STARTED = 1
-	SERVERSILO_SHUTTING_DOWN = 2
-	SERVERSILO_TERMINATING = 3
-	SERVERSILO_TERMINATED = 4
+	SERVERSILO_INITING       SERVERSILO_STATE = 0
+	SERVERSILO_STARTED       SERVERSILO_STATE = 1
+	SERVERSILO_SHUTTING_DOWN SERVERSILO_STATE = 2
+	SERVERSILO_TERMINATING   SERVERSILO_STATE = 3
+	SERVERSILO_TERMINATED    SERVERSILO_STATE = 4
 )
 
 type LOGICAL_PROCESSOR_RELATIONSHIP int32
 
 const (
-	RelationProcessorCore = 0
-	RelationNumaNode = 1
-	RelationCache = 2
-	RelationProcessorPackage = 3
-	RelationGroup = 4
-	RelationAll = 65535
+	RelationProcessorCore    LOGICAL_PROCESSOR_RELATIONSHIP = 0
+	RelationNumaNode         LOGICAL_PROCESSOR_RELATIONSHIP = 1
+	RelationCache            LOGICAL_PROCESSOR_RELATIONSHIP = 2
+	RelationProcessorPackage LOGICAL_PROCESSOR_RELATIONSHIP = 3
+	RelationGroup            LOGICAL_PROCESSOR_RELATIONSHIP = 4
+	RelationAll              LOGICAL_PROCESSOR_RELATIONSHIP = 65535
 )
 
 type PROCESSOR_CACHE_TYPE int32
 
 const (
-	CacheUnified = 0
-	CacheInstruction = 1
-	CacheData = 2
-	CacheTrace = 3
+	CacheUnified     PROCESSOR_CACHE_TYPE = 0
+	CacheInstruction PROCESSOR_CACHE_TYPE = 1
+	CacheData        PROCESSOR_CACHE_TYPE = 2
+	CacheTrace       PROCESSOR_CACHE_TYPE = 3
 )
 
 type CPU_SET_INFORMATION_TYPE int32
 
 const (
-	CpuSetInformation = 0
+	CpuSetInformation CPU_SET_INFORMATION_TYPE = 0
 )
 
 type MEM_EXTENDED_PARAMETER_TYPE int32
 
 const (
-	MemExtendedParameterInvalidType = 0
-	MemExtendedParameterAddressRequirements = 1
-	MemExtendedParameterNumaNode = 2
-	MemExtendedParameterPartitionHandle = 3
-	MemExtendedParameterUserPhysicalHandle = 4
-	MemExtendedParameterAttributeFlags = 5
-	MemExtendedParameterMax = 6
+	MemExtendedParameterInvalidType         MEM_EXTENDED_PARAMETER_TYPE = 0
+	MemExtendedParameterAddressRequirements MEM_EXTENDED_PARAMETER_TYPE = 1
+	MemExtendedParameterNumaNode            MEM_EXTENDED_PARAMETER_TYPE = 2
+	MemExtendedParameterPartitionHandle     MEM_EXTENDED_PARAMETER_TYPE = 3
+	MemExtendedParameterUserPhysicalHandle  MEM_EXTENDED_PARAMETER_TYPE = 4
+	MemExtendedParameterAttributeFlags      MEM_EXTENDED_PARAMETER_TYPE = 5
+	MemExtendedParameterMax                 MEM_EXTENDED_PARAMETER_TYPE = 6
 )
 
 type MEM_SECTION_EXTENDED_PARAMETER_TYPE int32
 
 const (
-	MemSectionExtendedParameterInvalidType = 0
-	MemSectionExtendedParameterUserPhysicalFlags = 1
-	MemSectionExtendedParameterNumaNode = 2
-	MemSectionExtendedParameterMax = 3
+	MemSectionExtendedParameterInvalidType       MEM_SECTION_EXTENDED_PARAMETER_TYPE = 0
+	MemSectionExtendedParameterUserPhysicalFlags MEM_SECTION_EXTENDED_PARAMETER_TYPE = 1
+	MemSectionExtendedParameterNumaNode          MEM_SECTION_EXTENDED_PARAMETER_TYPE = 2
+	MemSectionExtendedParameterMax               MEM_SECTION_EXTENDED_PARAMETER_TYPE = 3
 )
 
 type SharedVirtualDiskSupportType int32
 
 const (
-	SharedVirtualDisksUnsupported = 0
-	SharedVirtualDisksSupported = 1
-	SharedVirtualDiskSnapshotsSupported = 3
-	SharedVirtualDiskCDPSnapshotsSupported = 7
+	SharedVirtualDisksUnsupported          SharedVirtualDiskSupportType = 0
+	SharedVirtualDisksSupported            SharedVirtualDiskSupportType = 1
+	SharedVirtualDiskSnapshotsSupported    SharedVirtualDiskSupportType = 3
+	SharedVirtualDiskCDPSnapshotsSupported SharedVirtualDiskSupportType = 7
 )
 
 type SharedVirtualDiskHandleState int32
 
 const (
-	SharedVirtualDiskHandleStateNone = 0
-	SharedVirtualDiskHandleStateFileShared = 1
-	SharedVirtualDiskHandleStateHandleShared = 3
+	SharedVirtualDiskHandleStateNone         SharedVirtualDiskHandleState = 0
+	SharedVirtualDiskHandleStateFileShared   SharedVirtualDiskHandleState = 1
+	SharedVirtualDiskHandleStateHandleShared SharedVirtualDiskHandleState = 3
 )
 
 type SYSTEM_POWER_STATE int32
 
 const (
-	PowerSystemUnspecified = 0
-	PowerSystemWorking = 1
-	PowerSystemSleeping1 = 2
-	PowerSystemSleeping2 = 3
-	PowerSystemSleeping3 = 4
-	PowerSystemHibernate = 5
-	PowerSystemShutdown = 6
-	PowerSystemMaximum = 7
+	PowerSystemUnspecified SYSTEM_POWER_STATE = 0
+	PowerSystemWorking     SYSTEM_POWER_STATE = 1
+	PowerSystemSleeping1   SYSTEM_POWER_STATE = 2
+	PowerSystemSleeping2   SYSTEM_POWER_STATE = 3
+	PowerSystemSleeping3   SYSTEM_POWER_STATE = 4
+	PowerSystemHibernate   SYSTEM_POWER_STATE = 5
+	PowerSystemShutdown    SYSTEM_POWER_STATE = 6
+	PowerSystemMaximum     SYSTEM_POWER_STATE = 7
 )
 
 type POWER_ACTION int32
 
 const (
-	PowerActionNone = 0
-	PowerActionReserved = 1
-	PowerActionSleep = 2
-	PowerActionHibernate = 3
-	PowerActionShutdown = 4
-	PowerActionShutdownReset = 5
-	PowerActionShutdownOff = 6
-	PowerActionWarmEject = 7
-	PowerActionDisplayOff = 8
+	PowerActionNone          POWER_ACTION = 0
+	PowerActionReserved      POWER_ACTION = 1
+	PowerActionSleep         POWER_ACTION = 2
+	PowerActionHibernate     POWER_ACTION = 3
+	PowerActionShutdown      POWER_ACTION = 4
+	PowerActionShutdownReset POWER_ACTION = 5
+	PowerActionShutdownOff   POWER_ACTION = 6
+	PowerActionWarmEject     POWER_ACTION = 7
+	PowerActionDisplayOff    POWER_ACTION = 8
 )
 
 type DEVICE_POWER_STATE int32
 
 const (
-	PowerDeviceUnspecified = 0
-	PowerDeviceD0 = 1
-	PowerDeviceD1 = 2
-	PowerDeviceD2 = 3
-	PowerDeviceD3 = 4
-	PowerDeviceMaximum = 5
+	PowerDeviceUnspecified DEVICE_POWER_STATE = 0
+	PowerDeviceD0          DEVICE_POWER_STATE = 1
+	PowerDeviceD1          DEVICE_POWER_STATE = 2
+	PowerDeviceD2          DEVICE_POWER_STATE = 3
+	PowerDeviceD3          DEVICE_POWER_STATE = 4
+	PowerDeviceMaximum     DEVICE_POWER_STATE = 5
 )
 
 type MONITOR_DISPLAY_STATE int32
 
 const (
-	PowerMonitorOff = 0
-	PowerMonitorOn = 1
-	PowerMonitorDim = 2
+	PowerMonitorOff MONITOR_DISPLAY_STATE = 0
+	PowerMonitorOn  MONITOR_DISPLAY_STATE = 1
+	PowerMonitorDim MONITOR_DISPLAY_STATE = 2
 )
 
 type USER_ACTIVITY_PRESENCE int32
 
 const (
-	PowerUserPresent = 0
-	PowerUserNotPresent = 1
-	PowerUserInactive = 2
-	PowerUserMaximum = 3
-	PowerUserInvalid = 3
+	PowerUserPresent    USER_ACTIVITY_PRESENCE = 0
+	PowerUserNotPresent USER_ACTIVITY_PRESENCE = 1
+	PowerUserInactive   USER_ACTIVITY_PRESENCE = 2
+	PowerUserMaximum    USER_ACTIVITY_PRESENCE = 3
+	PowerUserInvalid    USER_ACTIVITY_PRESENCE = 3
 )
 
 type LATENCY_TIME int32
 
 const (
-	LT_DONT_CARE = 0
-	LT_LOWEST_LATENCY = 1
+	LT_DONT_CARE      LATENCY_TIME = 0
+	LT_LOWEST_LATENCY LATENCY_TIME = 1
 )
 
 type POWER_REQUEST_TYPE int32
 
 const (
-	PowerRequestDisplayRequired = 0
-	PowerRequestSystemRequired = 1
-	PowerRequestAwayModeRequired = 2
-	PowerRequestExecutionRequired = 3
+	PowerRequestDisplayRequired   POWER_REQUEST_TYPE = 0
+	PowerRequestSystemRequired    POWER_REQUEST_TYPE = 1
+	PowerRequestAwayModeRequired  POWER_REQUEST_TYPE = 2
+	PowerRequestExecutionRequired POWER_REQUEST_TYPE = 3
 )
 
 type POWER_INFORMATION_LEVEL int32
 
 const (
-	SystemPowerPolicyAc = 0
-	SystemPowerPolicyDc = 1
-	VerifySystemPolicyAc = 2
-	VerifySystemPolicyDc = 3
-	SystemPowerCapabilities = 4
-	SystemBatteryState = 5
-	SystemPowerStateHandler = 6
-	ProcessorStateHandler = 7
-	SystemPowerPolicyCurrent = 8
-	AdministratorPowerPolicy = 9
-	SystemReserveHiberFile = 10
-	ProcessorInformation = 11
-	SystemPowerInformation = 12
-	ProcessorStateHandler2 = 13
-	LastWakeTime = 14
-	LastSleepTime = 15
-	SystemExecutionState = 16
-	SystemPowerStateNotifyHandler = 17
-	ProcessorPowerPolicyAc = 18
-	ProcessorPowerPolicyDc = 19
-	VerifyProcessorPowerPolicyAc = 20
-	VerifyProcessorPowerPolicyDc = 21
-	ProcessorPowerPolicyCurrent = 22
-	SystemPowerStateLogging = 23
-	SystemPowerLoggingEntry = 24
-	SetPowerSettingValue = 25
-	NotifyUserPowerSetting = 26
-	PowerInformationLevelUnused0 = 27
-	SystemMonitorHiberBootPowerOff = 28
-	SystemVideoState = 29
-	TraceApplicationPowerMessage = 30
-	TraceApplicationPowerMessageEnd = 31
-	ProcessorPerfStates = 32
-	ProcessorIdleStates = 33
-	ProcessorCap = 34
-	SystemWakeSource = 35
-	SystemHiberFileInformation = 36
-	TraceServicePowerMessage = 37
-	ProcessorLoad = 38
-	PowerShutdownNotification = 39
-	MonitorCapabilities = 40
-	SessionPowerInit = 41
-	SessionDisplayState = 42
-	PowerRequestCreate = 43
-	PowerRequestAction = 44
-	GetPowerRequestList = 45
-	ProcessorInformationEx = 46
-	NotifyUserModeLegacyPowerEvent = 47
-	GroupPark = 48
-	ProcessorIdleDomains = 49
-	WakeTimerList = 50
-	SystemHiberFileSize = 51
-	ProcessorIdleStatesHv = 52
-	ProcessorPerfStatesHv = 53
-	ProcessorPerfCapHv = 54
-	ProcessorSetIdle = 55
-	LogicalProcessorIdling = 56
-	UserPresence = 57
-	PowerSettingNotificationName = 58
-	GetPowerSettingValue = 59
-	IdleResiliency = 60
-	SessionRITState = 61
-	SessionConnectNotification = 62
-	SessionPowerCleanup = 63
-	SessionLockState = 64
-	SystemHiberbootState = 65
-	PlatformInformation = 66
-	PdcInvocation = 67
-	MonitorInvocation = 68
-	FirmwareTableInformationRegistered = 69
-	SetShutdownSelectedTime = 70
-	SuspendResumeInvocation = 71
-	PlmPowerRequestCreate = 72
-	ScreenOff = 73
-	CsDeviceNotification = 74
-	PlatformRole = 75
-	LastResumePerformance = 76
-	DisplayBurst = 77
-	ExitLatencySamplingPercentage = 78
-	RegisterSpmPowerSettings = 79
-	PlatformIdleStates = 80
-	ProcessorIdleVeto = 81
-	PlatformIdleVeto = 82
-	SystemBatteryStatePrecise = 83
-	ThermalEvent = 84
-	PowerRequestActionInternal = 85
-	BatteryDeviceState = 86
-	PowerInformationInternal = 87
-	ThermalStandby = 88
-	SystemHiberFileType = 89
-	PhysicalPowerButtonPress = 90
-	QueryPotentialDripsConstraint = 91
-	EnergyTrackerCreate = 92
-	EnergyTrackerQuery = 93
-	UpdateBlackBoxRecorder = 94
-	SessionAllowExternalDmaDevices = 95
-	PowerInformationLevelMaximum = 96
+	SystemPowerPolicyAc                POWER_INFORMATION_LEVEL = 0
+	SystemPowerPolicyDc                POWER_INFORMATION_LEVEL = 1
+	VerifySystemPolicyAc               POWER_INFORMATION_LEVEL = 2
+	VerifySystemPolicyDc               POWER_INFORMATION_LEVEL = 3
+	SystemPowerCapabilities            POWER_INFORMATION_LEVEL = 4
+	SystemBatteryState                 POWER_INFORMATION_LEVEL = 5
+	SystemPowerStateHandler            POWER_INFORMATION_LEVEL = 6
+	ProcessorStateHandler              POWER_INFORMATION_LEVEL = 7
+	SystemPowerPolicyCurrent           POWER_INFORMATION_LEVEL = 8
+	AdministratorPowerPolicy           POWER_INFORMATION_LEVEL = 9
+	SystemReserveHiberFile             POWER_INFORMATION_LEVEL = 10
+	ProcessorInformation               POWER_INFORMATION_LEVEL = 11
+	SystemPowerInformation             POWER_INFORMATION_LEVEL = 12
+	ProcessorStateHandler2             POWER_INFORMATION_LEVEL = 13
+	LastWakeTime                       POWER_INFORMATION_LEVEL = 14
+	LastSleepTime                      POWER_INFORMATION_LEVEL = 15
+	SystemExecutionState               POWER_INFORMATION_LEVEL = 16
+	SystemPowerStateNotifyHandler      POWER_INFORMATION_LEVEL = 17
+	ProcessorPowerPolicyAc             POWER_INFORMATION_LEVEL = 18
+	ProcessorPowerPolicyDc             POWER_INFORMATION_LEVEL = 19
+	VerifyProcessorPowerPolicyAc       POWER_INFORMATION_LEVEL = 20
+	VerifyProcessorPowerPolicyDc       POWER_INFORMATION_LEVEL = 21
+	ProcessorPowerPolicyCurrent        POWER_INFORMATION_LEVEL = 22
+	SystemPowerStateLogging            POWER_INFORMATION_LEVEL = 23
+	SystemPowerLoggingEntry            POWER_INFORMATION_LEVEL = 24
+	SetPowerSettingValue               POWER_INFORMATION_LEVEL = 25
+	NotifyUserPowerSetting             POWER_INFORMATION_LEVEL = 26
+	PowerInformationLevelUnused0       POWER_INFORMATION_LEVEL = 27
+	SystemMonitorHiberBootPowerOff     POWER_INFORMATION_LEVEL = 28
+	SystemVideoState                   POWER_INFORMATION_LEVEL = 29
+	TraceApplicationPowerMessage       POWER_INFORMATION_LEVEL = 30
+	TraceApplicationPowerMessageEnd    POWER_INFORMATION_LEVEL = 31
+	ProcessorPerfStates                POWER_INFORMATION_LEVEL = 32
+	ProcessorIdleStates                POWER_INFORMATION_LEVEL = 33
+	ProcessorCap                       POWER_INFORMATION_LEVEL = 34
+	SystemWakeSource                   POWER_INFORMATION_LEVEL = 35
+	SystemHiberFileInformation         POWER_INFORMATION_LEVEL = 36
+	TraceServicePowerMessage           POWER_INFORMATION_LEVEL = 37
+	ProcessorLoad                      POWER_INFORMATION_LEVEL = 38
+	PowerShutdownNotification          POWER_INFORMATION_LEVEL = 39
+	MonitorCapabilities                POWER_INFORMATION_LEVEL = 40
+	SessionPowerInit                   POWER_INFORMATION_LEVEL = 41
+	SessionDisplayState                POWER_INFORMATION_LEVEL = 42
+	PowerRequestCreate                 POWER_INFORMATION_LEVEL = 43
+	PowerRequestAction                 POWER_INFORMATION_LEVEL = 44
+	GetPowerRequestList                POWER_INFORMATION_LEVEL = 45
+	ProcessorInformationEx             POWER_INFORMATION_LEVEL = 46
+	NotifyUserModeLegacyPowerEvent     POWER_INFORMATION_LEVEL = 47
+	GroupPark                          POWER_INFORMATION_LEVEL = 48
+	ProcessorIdleDomains               POWER_INFORMATION_LEVEL = 49
+	WakeTimerList                      POWER_INFORMATION_LEVEL = 50
+	SystemHiberFileSize                POWER_INFORMATION_LEVEL = 51
+	ProcessorIdleStatesHv              POWER_INFORMATION_LEVEL = 52
+	ProcessorPerfStatesHv              POWER_INFORMATION_LEVEL = 53
+	ProcessorPerfCapHv                 POWER_INFORMATION_LEVEL = 54
+	ProcessorSetIdle                   POWER_INFORMATION_LEVEL = 55
+	LogicalProcessorIdling             POWER_INFORMATION_LEVEL = 56
+	UserPresence                       POWER_INFORMATION_LEVEL = 57
+	PowerSettingNotificationName       POWER_INFORMATION_LEVEL = 58
+	GetPowerSettingValue               POWER_INFORMATION_LEVEL = 59
+	IdleResiliency                     POWER_INFORMATION_LEVEL = 60
+	SessionRITState                    POWER_INFORMATION_LEVEL = 61
+	SessionConnectNotification         POWER_INFORMATION_LEVEL = 62
+	SessionPowerCleanup                POWER_INFORMATION_LEVEL = 63
+	SessionLockState                   POWER_INFORMATION_LEVEL = 64
+	SystemHiberbootState               POWER_INFORMATION_LEVEL = 65
+	PlatformInformation                POWER_INFORMATION_LEVEL = 66
+	PdcInvocation                      POWER_INFORMATION_LEVEL = 67
+	MonitorInvocation                  POWER_INFORMATION_LEVEL = 68
+	FirmwareTableInformationRegistered POWER_INFORMATION_LEVEL = 69
+	SetShutdownSelectedTime            POWER_INFORMATION_LEVEL = 70
+	SuspendResumeInvocation            POWER_INFORMATION_LEVEL = 71
+	PlmPowerRequestCreate              POWER_INFORMATION_LEVEL = 72
+	ScreenOff                          POWER_INFORMATION_LEVEL = 73
+	CsDeviceNotification               POWER_INFORMATION_LEVEL = 74
+	PlatformRole                       POWER_INFORMATION_LEVEL = 75
+	LastResumePerformance              POWER_INFORMATION_LEVEL = 76
+	DisplayBurst                       POWER_INFORMATION_LEVEL = 77
+	ExitLatencySamplingPercentage      POWER_INFORMATION_LEVEL = 78
+	RegisterSpmPowerSettings           POWER_INFORMATION_LEVEL = 79
+	PlatformIdleStates                 POWER_INFORMATION_LEVEL = 80
+	ProcessorIdleVeto                  POWER_INFORMATION_LEVEL = 81
+	PlatformIdleVeto                   POWER_INFORMATION_LEVEL = 82
+	SystemBatteryStatePrecise          POWER_INFORMATION_LEVEL = 83
+	ThermalEvent                       POWER_INFORMATION_LEVEL = 84
+	PowerRequestActionInternal         POWER_INFORMATION_LEVEL = 85
+	BatteryDeviceState                 POWER_INFORMATION_LEVEL = 86
+	PowerInformationInternal           POWER_INFORMATION_LEVEL = 87
+	ThermalStandby                     POWER_INFORMATION_LEVEL = 88
+	SystemHiberFileType                POWER_INFORMATION_LEVEL = 89
+	PhysicalPowerButtonPress           POWER_INFORMATION_LEVEL = 90
+	QueryPotentialDripsConstraint      POWER_INFORMATION_LEVEL = 91
+	EnergyTrackerCreate                POWER_INFORMATION_LEVEL = 92
+	EnergyTrackerQuery                 POWER_INFORMATION_LEVEL = 93
+	UpdateBlackBoxRecorder             POWER_INFORMATION_LEVEL = 94
+	SessionAllowExternalDmaDevices     POWER_INFORMATION_LEVEL = 95
+	PowerInformationLevelMaximum       POWER_INFORMATION_LEVEL = 96
 )
 
 type POWER_USER_PRESENCE_TYPE int32
 
 const (
-	UserNotPresent = 0
-	UserPresent = 1
-	UserUnknown = 255
+	UserNotPresent POWER_USER_PRESENCE_TYPE = 0
+	UserPresent    POWER_USER_PRESENCE_TYPE = 1
+	UserUnknown    POWER_USER_PRESENCE_TYPE = 255
 )
 
 type POWER_MONITOR_REQUEST_REASON int32
 
 const (
-	MonitorRequestReasonUnknown = 0
-	MonitorRequestReasonPowerButton = 1
-	MonitorRequestReasonRemoteConnection = 2
-	MonitorRequestReasonScMonitorpower = 3
-	MonitorRequestReasonUserInput = 4
-	MonitorRequestReasonAcDcDisplayBurst = 5
-	MonitorRequestReasonUserDisplayBurst = 6
-	MonitorRequestReasonPoSetSystemState = 7
-	MonitorRequestReasonSetThreadExecutionState = 8
-	MonitorRequestReasonFullWake = 9
-	MonitorRequestReasonSessionUnlock = 10
-	MonitorRequestReasonScreenOffRequest = 11
-	MonitorRequestReasonIdleTimeout = 12
-	MonitorRequestReasonPolicyChange = 13
-	MonitorRequestReasonSleepButton = 14
-	MonitorRequestReasonLid = 15
-	MonitorRequestReasonBatteryCountChange = 16
-	MonitorRequestReasonGracePeriod = 17
-	MonitorRequestReasonPnP = 18
-	MonitorRequestReasonDP = 19
-	MonitorRequestReasonSxTransition = 20
-	MonitorRequestReasonSystemIdle = 21
-	MonitorRequestReasonNearProximity = 22
-	MonitorRequestReasonThermalStandby = 23
-	MonitorRequestReasonResumePdc = 24
-	MonitorRequestReasonResumeS4 = 25
-	MonitorRequestReasonTerminal = 26
-	MonitorRequestReasonPdcSignal = 27
-	MonitorRequestReasonAcDcDisplayBurstSuppressed = 28
-	MonitorRequestReasonSystemStateEntered = 29
-	MonitorRequestReasonWinrt = 30
-	MonitorRequestReasonUserInputKeyboard = 31
-	MonitorRequestReasonUserInputMouse = 32
-	MonitorRequestReasonUserInputTouch = 33
-	MonitorRequestReasonUserInputPen = 34
-	MonitorRequestReasonUserInputAccelerometer = 35
-	MonitorRequestReasonUserInputHid = 36
-	MonitorRequestReasonUserInputPoUserPresent = 37
-	MonitorRequestReasonUserInputSessionSwitch = 38
-	MonitorRequestReasonUserInputInitialization = 39
-	MonitorRequestReasonPdcSignalWindowsMobilePwrNotif = 40
-	MonitorRequestReasonPdcSignalWindowsMobileShell = 41
-	MonitorRequestReasonPdcSignalHeyCortana = 42
-	MonitorRequestReasonPdcSignalHolographicShell = 43
-	MonitorRequestReasonPdcSignalFingerprint = 44
-	MonitorRequestReasonDirectedDrips = 45
-	MonitorRequestReasonDim = 46
-	MonitorRequestReasonBuiltinPanel = 47
-	MonitorRequestReasonDisplayRequiredUnDim = 48
-	MonitorRequestReasonBatteryCountChangeSuppressed = 49
-	MonitorRequestReasonResumeModernStandby = 50
-	MonitorRequestReasonMax = 51
+	MonitorRequestReasonUnknown                        POWER_MONITOR_REQUEST_REASON = 0
+	MonitorRequestReasonPowerButton                    POWER_MONITOR_REQUEST_REASON = 1
+	MonitorRequestReasonRemoteConnection               POWER_MONITOR_REQUEST_REASON = 2
+	MonitorRequestReasonScMonitorpower                 POWER_MONITOR_REQUEST_REASON = 3
+	MonitorRequestReasonUserInput                      POWER_MONITOR_REQUEST_REASON = 4
+	MonitorRequestReasonAcDcDisplayBurst               POWER_MONITOR_REQUEST_REASON = 5
+	MonitorRequestReasonUserDisplayBurst               POWER_MONITOR_REQUEST_REASON = 6
+	MonitorRequestReasonPoSetSystemState               POWER_MONITOR_REQUEST_REASON = 7
+	MonitorRequestReasonSetThreadExecutionState        POWER_MONITOR_REQUEST_REASON = 8
+	MonitorRequestReasonFullWake                       POWER_MONITOR_REQUEST_REASON = 9
+	MonitorRequestReasonSessionUnlock                  POWER_MONITOR_REQUEST_REASON = 10
+	MonitorRequestReasonScreenOffRequest               POWER_MONITOR_REQUEST_REASON = 11
+	MonitorRequestReasonIdleTimeout                    POWER_MONITOR_REQUEST_REASON = 12
+	MonitorRequestReasonPolicyChange                   POWER_MONITOR_REQUEST_REASON = 13
+	MonitorRequestReasonSleepButton                    POWER_MONITOR_REQUEST_REASON = 14
+	MonitorRequestReasonLid                            POWER_MONITOR_REQUEST_REASON = 15
+	MonitorRequestReasonBatteryCountChange             POWER_MONITOR_REQUEST_REASON = 16
+	MonitorRequestReasonGracePeriod                    POWER_MONITOR_REQUEST_REASON = 17
+	MonitorRequestReasonPnP                            POWER_MONITOR_REQUEST_REASON = 18
+	MonitorRequestReasonDP                             POWER_MONITOR_REQUEST_REASON = 19
+	MonitorRequestReasonSxTransition                   POWER_MONITOR_REQUEST_REASON = 20
+	MonitorRequestReasonSystemIdle                     POWER_MONITOR_REQUEST_REASON = 21
+	MonitorRequestReasonNearProximity                  POWER_MONITOR_REQUEST_REASON = 22
+	MonitorRequestReasonThermalStandby                 POWER_MONITOR_REQUEST_REASON = 23
+	MonitorRequestReasonResumePdc                      POWER_MONITOR_REQUEST_REASON = 24
+	MonitorRequestReasonResumeS4                       POWER_MONITOR_REQUEST_REASON = 25
+	MonitorRequestReasonTerminal                       POWER_MONITOR_REQUEST_REASON = 26
+	MonitorRequestReasonPdcSignal                      POWER_MONITOR_REQUEST_REASON = 27
+	MonitorRequestReasonAcDcDisplayBurstSuppressed     POWER_MONITOR_REQUEST_REASON = 28
+	MonitorRequestReasonSystemStateEntered             POWER_MONITOR_REQUEST_REASON = 29
+	MonitorRequestReasonWinrt                          POWER_MONITOR_REQUEST_REASON = 30
+	MonitorRequestReasonUserInputKeyboard              POWER_MONITOR_REQUEST_REASON = 31
+	MonitorRequestReasonUserInputMouse                 POWER_MONITOR_REQUEST_REASON = 32
+	MonitorRequestReasonUserInputTouch                 POWER_MONITOR_REQUEST_REASON = 33
+	MonitorRequestReasonUserInputPen                   POWER_MONITOR_REQUEST_REASON = 34
+	MonitorRequestReasonUserInputAccelerometer         POWER_MONITOR_REQUEST_REASON = 35
+	MonitorRequestReasonUserInputHid                   POWER_MONITOR_REQUEST_REASON = 36
+	MonitorRequestReasonUserInputPoUserPresent         POWER_MONITOR_REQUEST_REASON = 37
+	MonitorRequestReasonUserInputSessionSwitch         POWER_MONITOR_REQUEST_REASON = 38
+	MonitorRequestReasonUserInputInitialization        POWER_MONITOR_REQUEST_REASON = 39
+	MonitorRequestReasonPdcSignalWindowsMobilePwrNotif POWER_MONITOR_REQUEST_REASON = 40
+	MonitorRequestReasonPdcSignalWindowsMobileShell    POWER_MONITOR_REQUEST_REASON = 41
+	MonitorRequestReasonPdcSignalHeyCortana            POWER_MONITOR_REQUEST_REASON = 42
+	MonitorRequestReasonPdcSignalHolographicShell      POWER_MONITOR_REQUEST_REASON = 43
+	MonitorRequestReasonPdcSignalFingerprint           POWER_MONITOR_REQUEST_REASON = 44
+	MonitorRequestReasonDirectedDrips                  POWER_MONITOR_REQUEST_REASON = 45
+	MonitorRequestReasonDim                            POWER_MONITOR_REQUEST_REASON = 46
+	MonitorRequestReasonBuiltinPanel                   POWER_MONITOR_REQUEST_REASON = 47
+	MonitorRequestReasonDisplayRequiredUnDim           POWER_MONITOR_REQUEST_REASON = 48
+	MonitorRequestReasonBatteryCountChangeSuppressed   POWER_MONITOR_REQUEST_REASON = 49
+	MonitorRequestReasonResumeModernStandby            POWER_MONITOR_REQUEST_REASON = 50
+	MonitorRequestReasonMax                            POWER_MONITOR_REQUEST_REASON = 51
 )
 
 type POWER_MONITOR_REQUEST_TYPE int32
 
 const (
-	MonitorRequestTypeOff = 0
-	MonitorRequestTypeOnAndPresent = 1
-	MonitorRequestTypeToggleOn = 2
+	MonitorRequestTypeOff          POWER_MONITOR_REQUEST_TYPE = 0
+	MonitorRequestTypeOnAndPresent POWER_MONITOR_REQUEST_TYPE = 1
+	MonitorRequestTypeToggleOn     POWER_MONITOR_REQUEST_TYPE = 2
 )
 
 type SYSTEM_POWER_CONDITION int32
 
 const (
-	PoAc = 0
-	PoDc = 1
-	PoHot = 2
-	PoConditionMaximum = 3
+	PoAc               SYSTEM_POWER_CONDITION = 0
+	PoDc               SYSTEM_POWER_CONDITION = 1
+	PoHot              SYSTEM_POWER_CONDITION = 2
+	PoConditionMaximum SYSTEM_POWER_CONDITION = 3
 )
 
 type POWER_PLATFORM_ROLE int32
 
 const (
-	PlatformRoleUnspecified = 0
-	PlatformRoleDesktop = 1
-	PlatformRoleMobile = 2
-	PlatformRoleWorkstation = 3
-	PlatformRoleEnterpriseServer = 4
-	PlatformRoleSOHOServer = 5
-	PlatformRoleAppliancePC = 6
-	PlatformRolePerformanceServer = 7
-	PlatformRoleSlate = 8
-	PlatformRoleMaximum = 9
+	PlatformRoleUnspecified       POWER_PLATFORM_ROLE = 0
+	PlatformRoleDesktop           POWER_PLATFORM_ROLE = 1
+	PlatformRoleMobile            POWER_PLATFORM_ROLE = 2
+	PlatformRoleWorkstation       POWER_PLATFORM_ROLE = 3
+	PlatformRoleEnterpriseServer  POWER_PLATFORM_ROLE = 4
+	PlatformRoleSOHOServer        POWER_PLATFORM_ROLE = 5
+	PlatformRoleAppliancePC       POWER_PLATFORM_ROLE = 6
+	PlatformRolePerformanceServer POWER_PLATFORM_ROLE = 7
+	PlatformRoleSlate             POWER_PLATFORM_ROLE = 8
+	PlatformRoleMaximum           POWER_PLATFORM_ROLE = 9
 )
 
 type HIBERFILE_BUCKET_SIZE int32
 
 const (
-	HiberFileBucket1GB = 0
-	HiberFileBucket2GB = 1
-	HiberFileBucket4GB = 2
-	HiberFileBucket8GB = 3
-	HiberFileBucket16GB = 4
-	HiberFileBucket32GB = 5
-	HiberFileBucketUnlimited = 6
-	HiberFileBucketMax = 7
+	HiberFileBucket1GB       HIBERFILE_BUCKET_SIZE = 0
+	HiberFileBucket2GB       HIBERFILE_BUCKET_SIZE = 1
+	HiberFileBucket4GB       HIBERFILE_BUCKET_SIZE = 2
+	HiberFileBucket8GB       HIBERFILE_BUCKET_SIZE = 3
+	HiberFileBucket16GB      HIBERFILE_BUCKET_SIZE = 4
+	HiberFileBucket32GB      HIBERFILE_BUCKET_SIZE = 5
+	HiberFileBucketUnlimited HIBERFILE_BUCKET_SIZE = 6
+	HiberFileBucketMax       HIBERFILE_BUCKET_SIZE = 7
 )
 
 type IMAGE_AUX_SYMBOL_TYPE int32
 
 const (
-	IMAGE_AUX_SYMBOL_TYPE_TOKEN_DEF = 1
+	IMAGE_AUX_SYMBOL_TYPE_TOKEN_DEF IMAGE_AUX_SYMBOL_TYPE = 1
 )
 
 type ARM64_FNPDATA_FLAGS int32
 
 const (
-	PdataRefToFullXdata = 0
-	PdataPackedUnwindFunction = 1
-	PdataPackedUnwindFragment = 2
+	PdataRefToFullXdata       ARM64_FNPDATA_FLAGS = 0
+	PdataPackedUnwindFunction ARM64_FNPDATA_FLAGS = 1
+	PdataPackedUnwindFragment ARM64_FNPDATA_FLAGS = 2
 )
 
 type ARM64_FNPDATA_CR int32
 
 const (
-	PdataCrUnchained = 0
-	PdataCrUnchainedSavedLr = 1
-	PdataCrChained = 3
+	PdataCrUnchained        ARM64_FNPDATA_CR = 0
+	PdataCrUnchainedSavedLr ARM64_FNPDATA_CR = 1
+	PdataCrChained          ARM64_FNPDATA_CR = 3
 )
 
 type IMPORT_OBJECT_TYPE int32
 
 const (
-	IMPORT_OBJECT_CODE = 0
-	IMPORT_OBJECT_DATA = 1
-	IMPORT_OBJECT_CONST = 2
+	IMPORT_OBJECT_CODE  IMPORT_OBJECT_TYPE = 0
+	IMPORT_OBJECT_DATA  IMPORT_OBJECT_TYPE = 1
+	IMPORT_OBJECT_CONST IMPORT_OBJECT_TYPE = 2
 )
 
 type IMPORT_OBJECT_NAME_TYPE int32
 
 const (
-	IMPORT_OBJECT_ORDINAL = 0
-	IMPORT_OBJECT_NAME = 1
-	IMPORT_OBJECT_NAME_NO_PREFIX = 2
-	IMPORT_OBJECT_NAME_UNDECORATE = 3
-	IMPORT_OBJECT_NAME_EXPORTAS = 4
+	IMPORT_OBJECT_ORDINAL         IMPORT_OBJECT_NAME_TYPE = 0
+	IMPORT_OBJECT_NAME            IMPORT_OBJECT_NAME_TYPE = 1
+	IMPORT_OBJECT_NAME_NO_PREFIX  IMPORT_OBJECT_NAME_TYPE = 2
+	IMPORT_OBJECT_NAME_UNDECORATE IMPORT_OBJECT_NAME_TYPE = 3
+	IMPORT_OBJECT_NAME_EXPORTAS   IMPORT_OBJECT_NAME_TYPE = 4
 )
 
 type ReplacesCorHdrNumericDefines int32
 
 const (
-	COMIMAGE_FLAGS_ILONLY = 1
-	COMIMAGE_FLAGS_32BITREQUIRED = 2
-	COMIMAGE_FLAGS_IL_LIBRARY = 4
-	COMIMAGE_FLAGS_STRONGNAMESIGNED = 8
-	COMIMAGE_FLAGS_NATIVE_ENTRYPOINT = 16
-	COMIMAGE_FLAGS_TRACKDEBUGDATA = 65536
-	COMIMAGE_FLAGS_32BITPREFERRED = 131072
-	COR_VERSION_MAJOR_V2 = 2
-	COR_VERSION_MAJOR = 2
-	COR_VERSION_MINOR = 5
-	COR_DELETED_NAME_LENGTH = 8
-	COR_VTABLEGAP_NAME_LENGTH = 8
-	NATIVE_TYPE_MAX_CB = 1
-	COR_ILMETHOD_SECT_SMALL_MAX_DATASIZE = 255
-	IMAGE_COR_MIH_METHODRVA = 1
-	IMAGE_COR_MIH_EHRVA = 2
-	IMAGE_COR_MIH_BASICBLOCK = 8
-	COR_VTABLE_32BIT = 1
-	COR_VTABLE_64BIT = 2
-	COR_VTABLE_FROM_UNMANAGED = 4
-	COR_VTABLE_FROM_UNMANAGED_RETAIN_APPDOMAIN = 8
-	COR_VTABLE_CALL_MOST_DERIVED = 16
-	IMAGE_COR_EATJ_THUNK_SIZE = 32
-	MAX_CLASS_NAME = 1024
-	MAX_PACKAGE_NAME = 1024
+	COMIMAGE_FLAGS_ILONLY                      ReplacesCorHdrNumericDefines = 1
+	COMIMAGE_FLAGS_32BITREQUIRED               ReplacesCorHdrNumericDefines = 2
+	COMIMAGE_FLAGS_IL_LIBRARY                  ReplacesCorHdrNumericDefines = 4
+	COMIMAGE_FLAGS_STRONGNAMESIGNED            ReplacesCorHdrNumericDefines = 8
+	COMIMAGE_FLAGS_NATIVE_ENTRYPOINT           ReplacesCorHdrNumericDefines = 16
+	COMIMAGE_FLAGS_TRACKDEBUGDATA              ReplacesCorHdrNumericDefines = 65536
+	COMIMAGE_FLAGS_32BITPREFERRED              ReplacesCorHdrNumericDefines = 131072
+	COR_VERSION_MAJOR_V2                       ReplacesCorHdrNumericDefines = 2
+	COR_VERSION_MAJOR                          ReplacesCorHdrNumericDefines = 2
+	COR_VERSION_MINOR                          ReplacesCorHdrNumericDefines = 5
+	COR_DELETED_NAME_LENGTH                    ReplacesCorHdrNumericDefines = 8
+	COR_VTABLEGAP_NAME_LENGTH                  ReplacesCorHdrNumericDefines = 8
+	NATIVE_TYPE_MAX_CB                         ReplacesCorHdrNumericDefines = 1
+	COR_ILMETHOD_SECT_SMALL_MAX_DATASIZE       ReplacesCorHdrNumericDefines = 255
+	IMAGE_COR_MIH_METHODRVA                    ReplacesCorHdrNumericDefines = 1
+	IMAGE_COR_MIH_EHRVA                        ReplacesCorHdrNumericDefines = 2
+	IMAGE_COR_MIH_BASICBLOCK                   ReplacesCorHdrNumericDefines = 8
+	COR_VTABLE_32BIT                           ReplacesCorHdrNumericDefines = 1
+	COR_VTABLE_64BIT                           ReplacesCorHdrNumericDefines = 2
+	COR_VTABLE_FROM_UNMANAGED                  ReplacesCorHdrNumericDefines = 4
+	COR_VTABLE_FROM_UNMANAGED_RETAIN_APPDOMAIN ReplacesCorHdrNumericDefines = 8
+	COR_VTABLE_CALL_MOST_DERIVED               ReplacesCorHdrNumericDefines = 16
+	IMAGE_COR_EATJ_THUNK_SIZE                  ReplacesCorHdrNumericDefines = 32
+	MAX_CLASS_NAME                             ReplacesCorHdrNumericDefines = 1024
+	MAX_PACKAGE_NAME                           ReplacesCorHdrNumericDefines = 1024
 )
 
 type RTL_UMS_THREAD_INFO_CLASS int32
 
 const (
-	UmsThreadInvalidInfoClass = 0
-	UmsThreadUserContext = 1
-	UmsThreadPriority = 2
-	UmsThreadAffinity = 3
-	UmsThreadTeb = 4
-	UmsThreadIsSuspended = 5
-	UmsThreadIsTerminated = 6
-	UmsThreadMaxInfoClass = 7
+	UmsThreadInvalidInfoClass RTL_UMS_THREAD_INFO_CLASS = 0
+	UmsThreadUserContext      RTL_UMS_THREAD_INFO_CLASS = 1
+	UmsThreadPriority         RTL_UMS_THREAD_INFO_CLASS = 2
+	UmsThreadAffinity         RTL_UMS_THREAD_INFO_CLASS = 3
+	UmsThreadTeb              RTL_UMS_THREAD_INFO_CLASS = 4
+	UmsThreadIsSuspended      RTL_UMS_THREAD_INFO_CLASS = 5
+	UmsThreadIsTerminated     RTL_UMS_THREAD_INFO_CLASS = 6
+	UmsThreadMaxInfoClass     RTL_UMS_THREAD_INFO_CLASS = 7
 )
 
 type RTL_UMS_SCHEDULER_REASON int32
 
 const (
-	UmsSchedulerStartup = 0
-	UmsSchedulerThreadBlocked = 1
-	UmsSchedulerThreadYield = 2
+	UmsSchedulerStartup       RTL_UMS_SCHEDULER_REASON = 0
+	UmsSchedulerThreadBlocked RTL_UMS_SCHEDULER_REASON = 1
+	UmsSchedulerThreadYield   RTL_UMS_SCHEDULER_REASON = 2
 )
 
 type OS_DEPLOYEMENT_STATE_VALUES int32
 
 const (
-	OS_DEPLOYMENT_STANDARD = 1
-	OS_DEPLOYMENT_COMPACT = 2
+	OS_DEPLOYMENT_STANDARD OS_DEPLOYEMENT_STATE_VALUES = 1
+	OS_DEPLOYMENT_COMPACT  OS_DEPLOYEMENT_STATE_VALUES = 2
 )
 
 type IMAGE_POLICY_ENTRY_TYPE int32
 
 const (
-	ImagePolicyEntryTypeNone = 0
-	ImagePolicyEntryTypeBool = 1
-	ImagePolicyEntryTypeInt8 = 2
-	ImagePolicyEntryTypeUInt8 = 3
-	ImagePolicyEntryTypeInt16 = 4
-	ImagePolicyEntryTypeUInt16 = 5
-	ImagePolicyEntryTypeInt32 = 6
-	ImagePolicyEntryTypeUInt32 = 7
-	ImagePolicyEntryTypeInt64 = 8
-	ImagePolicyEntryTypeUInt64 = 9
-	ImagePolicyEntryTypeAnsiString = 10
-	ImagePolicyEntryTypeUnicodeString = 11
-	ImagePolicyEntryTypeOverride = 12
-	ImagePolicyEntryTypeMaximum = 13
+	ImagePolicyEntryTypeNone          IMAGE_POLICY_ENTRY_TYPE = 0
+	ImagePolicyEntryTypeBool          IMAGE_POLICY_ENTRY_TYPE = 1
+	ImagePolicyEntryTypeInt8          IMAGE_POLICY_ENTRY_TYPE = 2
+	ImagePolicyEntryTypeUInt8         IMAGE_POLICY_ENTRY_TYPE = 3
+	ImagePolicyEntryTypeInt16         IMAGE_POLICY_ENTRY_TYPE = 4
+	ImagePolicyEntryTypeUInt16        IMAGE_POLICY_ENTRY_TYPE = 5
+	ImagePolicyEntryTypeInt32         IMAGE_POLICY_ENTRY_TYPE = 6
+	ImagePolicyEntryTypeUInt32        IMAGE_POLICY_ENTRY_TYPE = 7
+	ImagePolicyEntryTypeInt64         IMAGE_POLICY_ENTRY_TYPE = 8
+	ImagePolicyEntryTypeUInt64        IMAGE_POLICY_ENTRY_TYPE = 9
+	ImagePolicyEntryTypeAnsiString    IMAGE_POLICY_ENTRY_TYPE = 10
+	ImagePolicyEntryTypeUnicodeString IMAGE_POLICY_ENTRY_TYPE = 11
+	ImagePolicyEntryTypeOverride      IMAGE_POLICY_ENTRY_TYPE = 12
+	ImagePolicyEntryTypeMaximum       IMAGE_POLICY_ENTRY_TYPE = 13
 )
 
 type IMAGE_POLICY_ID int32
 
 const (
-	ImagePolicyIdNone = 0
-	ImagePolicyIdEtw = 1
-	ImagePolicyIdDebug = 2
-	ImagePolicyIdCrashDump = 3
-	ImagePolicyIdCrashDumpKey = 4
-	ImagePolicyIdCrashDumpKeyGuid = 5
-	ImagePolicyIdParentSd = 6
-	ImagePolicyIdParentSdRev = 7
-	ImagePolicyIdSvn = 8
-	ImagePolicyIdDeviceId = 9
-	ImagePolicyIdCapability = 10
-	ImagePolicyIdScenarioId = 11
-	ImagePolicyIdMaximum = 12
+	ImagePolicyIdNone             IMAGE_POLICY_ID = 0
+	ImagePolicyIdEtw              IMAGE_POLICY_ID = 1
+	ImagePolicyIdDebug            IMAGE_POLICY_ID = 2
+	ImagePolicyIdCrashDump        IMAGE_POLICY_ID = 3
+	ImagePolicyIdCrashDumpKey     IMAGE_POLICY_ID = 4
+	ImagePolicyIdCrashDumpKeyGuid IMAGE_POLICY_ID = 5
+	ImagePolicyIdParentSd         IMAGE_POLICY_ID = 6
+	ImagePolicyIdParentSdRev      IMAGE_POLICY_ID = 7
+	ImagePolicyIdSvn              IMAGE_POLICY_ID = 8
+	ImagePolicyIdDeviceId         IMAGE_POLICY_ID = 9
+	ImagePolicyIdCapability       IMAGE_POLICY_ID = 10
+	ImagePolicyIdScenarioId       IMAGE_POLICY_ID = 11
+	ImagePolicyIdMaximum          IMAGE_POLICY_ID = 12
 )
 
 type HEAP_INFORMATION_CLASS int32
 
 const (
-	HeapCompatibilityInformation = 0
-	HeapEnableTerminationOnCorruption = 1
-	HeapOptimizeResources = 3
+	HeapCompatibilityInformation      HEAP_INFORMATION_CLASS = 0
+	HeapEnableTerminationOnCorruption HEAP_INFORMATION_CLASS = 1
+	HeapOptimizeResources             HEAP_INFORMATION_CLASS = 3
 )
 
 type ACTIVATION_CONTEXT_INFO_CLASS int32
 
 const (
-	ActivationContextBasicInformation = 1
-	ActivationContextDetailedInformation = 2
-	AssemblyDetailedInformationInActivationContext = 3
-	FileInformationInAssemblyOfAssemblyInActivationContext = 4
-	RunlevelInformationInActivationContext = 5
-	CompatibilityInformationInActivationContext = 6
-	ActivationContextManifestResourceName = 7
-	MaxActivationContextInfoClass = 8
-	AssemblyDetailedInformationInActivationContxt = 3
-	FileInformationInAssemblyOfAssemblyInActivationContxt = 4
+	ActivationContextBasicInformation                      ACTIVATION_CONTEXT_INFO_CLASS = 1
+	ActivationContextDetailedInformation                   ACTIVATION_CONTEXT_INFO_CLASS = 2
+	AssemblyDetailedInformationInActivationContext         ACTIVATION_CONTEXT_INFO_CLASS = 3
+	FileInformationInAssemblyOfAssemblyInActivationContext ACTIVATION_CONTEXT_INFO_CLASS = 4
+	RunlevelInformationInActivationContext                 ACTIVATION_CONTEXT_INFO_CLASS = 5
+	CompatibilityInformationInActivationContext            ACTIVATION_CONTEXT_INFO_CLASS = 6
+	ActivationContextManifestResourceName                  ACTIVATION_CONTEXT_INFO_CLASS = 7
+	MaxActivationContextInfoClass                          ACTIVATION_CONTEXT_INFO_CLASS = 8
+	AssemblyDetailedInformationInActivationContxt          ACTIVATION_CONTEXT_INFO_CLASS = 3
+	FileInformationInAssemblyOfAssemblyInActivationContxt  ACTIVATION_CONTEXT_INFO_CLASS = 4
 )
 
 type CM_SERVICE_NODE_TYPE int32
 
 const (
-	DriverType = 1
-	FileSystemType = 2
-	Win32ServiceOwnProcess = 16
-	Win32ServiceShareProcess = 32
-	AdapterType = 4
-	RecognizerType = 8
+	DriverType               CM_SERVICE_NODE_TYPE = 1
+	FileSystemType           CM_SERVICE_NODE_TYPE = 2
+	Win32ServiceOwnProcess   CM_SERVICE_NODE_TYPE = 16
+	Win32ServiceShareProcess CM_SERVICE_NODE_TYPE = 32
+	AdapterType              CM_SERVICE_NODE_TYPE = 4
+	RecognizerType           CM_SERVICE_NODE_TYPE = 8
 )
 
 type CM_SERVICE_LOAD_TYPE int32
 
 const (
-	BootLoad = 0
-	SystemLoad = 1
-	AutoLoad = 2
-	DemandLoad = 3
-	DisableLoad = 4
+	BootLoad    CM_SERVICE_LOAD_TYPE = 0
+	SystemLoad  CM_SERVICE_LOAD_TYPE = 1
+	AutoLoad    CM_SERVICE_LOAD_TYPE = 2
+	DemandLoad  CM_SERVICE_LOAD_TYPE = 3
+	DisableLoad CM_SERVICE_LOAD_TYPE = 4
 )
 
 type CM_ERROR_CONTROL_TYPE int32
 
 const (
-	IgnoreError = 0
-	NormalError = 1
-	SevereError = 2
-	CriticalError = 3
+	IgnoreError   CM_ERROR_CONTROL_TYPE = 0
+	NormalError   CM_ERROR_CONTROL_TYPE = 1
+	SevereError   CM_ERROR_CONTROL_TYPE = 2
+	CriticalError CM_ERROR_CONTROL_TYPE = 3
 )
 
 type TAPE_DRIVE_PROBLEM_TYPE int32
 
 const (
-	TapeDriveProblemNone = 0
-	TapeDriveReadWriteWarning = 1
-	TapeDriveReadWriteError = 2
-	TapeDriveReadWarning = 3
-	TapeDriveWriteWarning = 4
-	TapeDriveReadError = 5
-	TapeDriveWriteError = 6
-	TapeDriveHardwareError = 7
-	TapeDriveUnsupportedMedia = 8
-	TapeDriveScsiConnectionError = 9
-	TapeDriveTimetoClean = 10
-	TapeDriveCleanDriveNow = 11
-	TapeDriveMediaLifeExpired = 12
-	TapeDriveSnappedTape = 13
+	TapeDriveProblemNone         TAPE_DRIVE_PROBLEM_TYPE = 0
+	TapeDriveReadWriteWarning    TAPE_DRIVE_PROBLEM_TYPE = 1
+	TapeDriveReadWriteError      TAPE_DRIVE_PROBLEM_TYPE = 2
+	TapeDriveReadWarning         TAPE_DRIVE_PROBLEM_TYPE = 3
+	TapeDriveWriteWarning        TAPE_DRIVE_PROBLEM_TYPE = 4
+	TapeDriveReadError           TAPE_DRIVE_PROBLEM_TYPE = 5
+	TapeDriveWriteError          TAPE_DRIVE_PROBLEM_TYPE = 6
+	TapeDriveHardwareError       TAPE_DRIVE_PROBLEM_TYPE = 7
+	TapeDriveUnsupportedMedia    TAPE_DRIVE_PROBLEM_TYPE = 8
+	TapeDriveScsiConnectionError TAPE_DRIVE_PROBLEM_TYPE = 9
+	TapeDriveTimetoClean         TAPE_DRIVE_PROBLEM_TYPE = 10
+	TapeDriveCleanDriveNow       TAPE_DRIVE_PROBLEM_TYPE = 11
+	TapeDriveMediaLifeExpired    TAPE_DRIVE_PROBLEM_TYPE = 12
+	TapeDriveSnappedTape         TAPE_DRIVE_PROBLEM_TYPE = 13
 )
 
 type TRANSACTION_STATE int32
 
 const (
-	TransactionStateNormal = 1
-	TransactionStateIndoubt = 2
-	TransactionStateCommittedNotify = 3
+	TransactionStateNormal          TRANSACTION_STATE = 1
+	TransactionStateIndoubt         TRANSACTION_STATE = 2
+	TransactionStateCommittedNotify TRANSACTION_STATE = 3
 )
 
 type TRANSACTION_INFORMATION_CLASS int32
 
 const (
-	TransactionBasicInformation = 0
-	TransactionPropertiesInformation = 1
-	TransactionEnlistmentInformation = 2
-	TransactionSuperiorEnlistmentInformation = 3
-	TransactionBindInformation = 4
-	TransactionDTCPrivateInformation = 5
+	TransactionBasicInformation              TRANSACTION_INFORMATION_CLASS = 0
+	TransactionPropertiesInformation         TRANSACTION_INFORMATION_CLASS = 1
+	TransactionEnlistmentInformation         TRANSACTION_INFORMATION_CLASS = 2
+	TransactionSuperiorEnlistmentInformation TRANSACTION_INFORMATION_CLASS = 3
+	TransactionBindInformation               TRANSACTION_INFORMATION_CLASS = 4
+	TransactionDTCPrivateInformation         TRANSACTION_INFORMATION_CLASS = 5
 )
 
 type TRANSACTIONMANAGER_INFORMATION_CLASS int32
 
 const (
-	TransactionManagerBasicInformation = 0
-	TransactionManagerLogInformation = 1
-	TransactionManagerLogPathInformation = 2
-	TransactionManagerRecoveryInformation = 4
-	TransactionManagerOnlineProbeInformation = 3
-	TransactionManagerOldestTransactionInformation = 5
+	TransactionManagerBasicInformation             TRANSACTIONMANAGER_INFORMATION_CLASS = 0
+	TransactionManagerLogInformation               TRANSACTIONMANAGER_INFORMATION_CLASS = 1
+	TransactionManagerLogPathInformation           TRANSACTIONMANAGER_INFORMATION_CLASS = 2
+	TransactionManagerRecoveryInformation          TRANSACTIONMANAGER_INFORMATION_CLASS = 4
+	TransactionManagerOnlineProbeInformation       TRANSACTIONMANAGER_INFORMATION_CLASS = 3
+	TransactionManagerOldestTransactionInformation TRANSACTIONMANAGER_INFORMATION_CLASS = 5
 )
 
 type RESOURCEMANAGER_INFORMATION_CLASS int32
 
 const (
-	ResourceManagerBasicInformation = 0
-	ResourceManagerCompletionInformation = 1
+	ResourceManagerBasicInformation      RESOURCEMANAGER_INFORMATION_CLASS = 0
+	ResourceManagerCompletionInformation RESOURCEMANAGER_INFORMATION_CLASS = 1
 )
 
 type ENLISTMENT_INFORMATION_CLASS int32
 
 const (
-	EnlistmentBasicInformation = 0
-	EnlistmentRecoveryInformation = 1
-	EnlistmentCrmInformation = 2
+	EnlistmentBasicInformation    ENLISTMENT_INFORMATION_CLASS = 0
+	EnlistmentRecoveryInformation ENLISTMENT_INFORMATION_CLASS = 1
+	EnlistmentCrmInformation      ENLISTMENT_INFORMATION_CLASS = 2
 )
 
 type KTMOBJECT_TYPE int32
 
 const (
-	KTMOBJECT_TRANSACTION = 0
-	KTMOBJECT_TRANSACTION_MANAGER = 1
-	KTMOBJECT_RESOURCE_MANAGER = 2
-	KTMOBJECT_ENLISTMENT = 3
-	KTMOBJECT_INVALID = 4
+	KTMOBJECT_TRANSACTION         KTMOBJECT_TYPE = 0
+	KTMOBJECT_TRANSACTION_MANAGER KTMOBJECT_TYPE = 1
+	KTMOBJECT_RESOURCE_MANAGER    KTMOBJECT_TYPE = 2
+	KTMOBJECT_ENLISTMENT          KTMOBJECT_TYPE = 3
+	KTMOBJECT_INVALID             KTMOBJECT_TYPE = 4
 )
 
 type TP_CALLBACK_PRIORITY int32
 
 const (
-	TP_CALLBACK_PRIORITY_HIGH = 0
-	TP_CALLBACK_PRIORITY_NORMAL = 1
-	TP_CALLBACK_PRIORITY_LOW = 2
-	TP_CALLBACK_PRIORITY_INVALID = 3
-	TP_CALLBACK_PRIORITY_COUNT = 3
+	TP_CALLBACK_PRIORITY_HIGH    TP_CALLBACK_PRIORITY = 0
+	TP_CALLBACK_PRIORITY_NORMAL  TP_CALLBACK_PRIORITY = 1
+	TP_CALLBACK_PRIORITY_LOW     TP_CALLBACK_PRIORITY = 2
+	TP_CALLBACK_PRIORITY_INVALID TP_CALLBACK_PRIORITY = 3
+	TP_CALLBACK_PRIORITY_COUNT   TP_CALLBACK_PRIORITY = 3
 )
 
 type AR_STATE int32
 
 const (
-	AR_ENABLED = 0
-	AR_DISABLED = 1
-	AR_SUPPRESSED = 2
-	AR_REMOTESESSION = 4
-	AR_MULTIMON = 8
-	AR_NOSENSOR = 16
-	AR_NOT_SUPPORTED = 32
-	AR_DOCKED = 64
-	AR_LAPTOP = 128
+	AR_ENABLED       AR_STATE = 0
+	AR_DISABLED      AR_STATE = 1
+	AR_SUPPRESSED    AR_STATE = 2
+	AR_REMOTESESSION AR_STATE = 4
+	AR_MULTIMON      AR_STATE = 8
+	AR_NOSENSOR      AR_STATE = 16
+	AR_NOT_SUPPORTED AR_STATE = 32
+	AR_DOCKED        AR_STATE = 64
+	AR_LAPTOP        AR_STATE = 128
 )
 
 type ORIENTATION_PREFERENCE int32
 
 const (
-	ORIENTATION_PREFERENCE_NONE = 0
-	ORIENTATION_PREFERENCE_LANDSCAPE = 1
-	ORIENTATION_PREFERENCE_PORTRAIT = 2
-	ORIENTATION_PREFERENCE_LANDSCAPE_FLIPPED = 4
-	ORIENTATION_PREFERENCE_PORTRAIT_FLIPPED = 8
+	ORIENTATION_PREFERENCE_NONE              ORIENTATION_PREFERENCE = 0
+	ORIENTATION_PREFERENCE_LANDSCAPE         ORIENTATION_PREFERENCE = 1
+	ORIENTATION_PREFERENCE_PORTRAIT          ORIENTATION_PREFERENCE = 2
+	ORIENTATION_PREFERENCE_LANDSCAPE_FLIPPED ORIENTATION_PREFERENCE = 4
+	ORIENTATION_PREFERENCE_PORTRAIT_FLIPPED  ORIENTATION_PREFERENCE = 8
 )
 
 type MEMORY_RESOURCE_NOTIFICATION_TYPE int32
 
 const (
-	LowMemoryResourceNotification = 0
-	HighMemoryResourceNotification = 1
+	LowMemoryResourceNotification  MEMORY_RESOURCE_NOTIFICATION_TYPE = 0
+	HighMemoryResourceNotification MEMORY_RESOURCE_NOTIFICATION_TYPE = 1
 )
 
 type OFFER_PRIORITY int32
 
 const (
-	VmOfferPriorityVeryLow = 1
-	VmOfferPriorityLow = 2
-	VmOfferPriorityBelowNormal = 3
-	VmOfferPriorityNormal = 4
+	VmOfferPriorityVeryLow     OFFER_PRIORITY = 1
+	VmOfferPriorityLow         OFFER_PRIORITY = 2
+	VmOfferPriorityBelowNormal OFFER_PRIORITY = 3
+	VmOfferPriorityNormal      OFFER_PRIORITY = 4
 )
 
 type WIN32_MEMORY_INFORMATION_CLASS int32
 
 const (
-	MemoryRegionInfo = 0
+	MemoryRegionInfo WIN32_MEMORY_INFORMATION_CLASS = 0
 )
 
 type STORAGE_MEDIA_TYPE int32
 
 const (
-	DDS_4mm = 32
-	MiniQic = 33
-	Travan = 34
-	QIC = 35
-	MP_8mm = 36
-	AME_8mm = 37
-	AIT1_8mm = 38
-	DLT = 39
-	NCTP = 40
-	IBM_3480 = 41
-	IBM_3490E = 42
-	IBM_Magstar_3590 = 43
-	IBM_Magstar_MP = 44
-	STK_DATA_D3 = 45
-	SONY_DTF = 46
-	DV_6mm = 47
-	DMI = 48
-	SONY_D2 = 49
-	CLEANER_CARTRIDGE = 50
-	CD_ROM = 51
-	CD_R = 52
-	CD_RW = 53
-	DVD_ROM = 54
-	DVD_R = 55
-	DVD_RW = 56
-	MO_3_RW = 57
-	MO_5_WO = 58
-	MO_5_RW = 59
-	MO_5_LIMDOW = 60
-	PC_5_WO = 61
-	PC_5_RW = 62
-	PD_5_RW = 63
-	ABL_5_WO = 64
-	PINNACLE_APEX_5_RW = 65
-	SONY_12_WO = 66
-	PHILIPS_12_WO = 67
-	HITACHI_12_WO = 68
-	CYGNET_12_WO = 69
-	KODAK_14_WO = 70
-	MO_NFR_525 = 71
-	NIKON_12_RW = 72
-	IOMEGA_ZIP = 73
-	IOMEGA_JAZ = 74
-	SYQUEST_EZ135 = 75
-	SYQUEST_EZFLYER = 76
-	SYQUEST_SYJET = 77
-	AVATAR_F2 = 78
-	MP2_8mm = 79
-	DST_S = 80
-	DST_M = 81
-	DST_L = 82
-	VXATape_1 = 83
-	VXATape_2 = 84
-	STK_9840 = 85
-	LTO_Ultrium = 86
-	LTO_Accelis = 87
-	DVD_RAM = 88
-	AIT_8mm = 89
-	ADR_1 = 90
-	ADR_2 = 91
-	STK_9940 = 92
-	SAIT = 93
-	VXATape = 94
+	DDS_4mm            STORAGE_MEDIA_TYPE = 32
+	MiniQic            STORAGE_MEDIA_TYPE = 33
+	Travan             STORAGE_MEDIA_TYPE = 34
+	QIC                STORAGE_MEDIA_TYPE = 35
+	MP_8mm             STORAGE_MEDIA_TYPE = 36
+	AME_8mm            STORAGE_MEDIA_TYPE = 37
+	AIT1_8mm           STORAGE_MEDIA_TYPE = 38
+	DLT                STORAGE_MEDIA_TYPE = 39
+	NCTP               STORAGE_MEDIA_TYPE = 40
+	IBM_3480           STORAGE_MEDIA_TYPE = 41
+	IBM_3490E          STORAGE_MEDIA_TYPE = 42
+	IBM_Magstar_3590   STORAGE_MEDIA_TYPE = 43
+	IBM_Magstar_MP     STORAGE_MEDIA_TYPE = 44
+	STK_DATA_D3        STORAGE_MEDIA_TYPE = 45
+	SONY_DTF           STORAGE_MEDIA_TYPE = 46
+	DV_6mm             STORAGE_MEDIA_TYPE = 47
+	DMI                STORAGE_MEDIA_TYPE = 48
+	SONY_D2            STORAGE_MEDIA_TYPE = 49
+	CLEANER_CARTRIDGE  STORAGE_MEDIA_TYPE = 50
+	CD_ROM             STORAGE_MEDIA_TYPE = 51
+	CD_R               STORAGE_MEDIA_TYPE = 52
+	CD_RW              STORAGE_MEDIA_TYPE = 53
+	DVD_ROM            STORAGE_MEDIA_TYPE = 54
+	DVD_R              STORAGE_MEDIA_TYPE = 55
+	DVD_RW             STORAGE_MEDIA_TYPE = 56
+	MO_3_RW            STORAGE_MEDIA_TYPE = 57
+	MO_5_WO            STORAGE_MEDIA_TYPE = 58
+	MO_5_RW            STORAGE_MEDIA_TYPE = 59
+	MO_5_LIMDOW        STORAGE_MEDIA_TYPE = 60
+	PC_5_WO            STORAGE_MEDIA_TYPE = 61
+	PC_5_RW            STORAGE_MEDIA_TYPE = 62
+	PD_5_RW            STORAGE_MEDIA_TYPE = 63
+	ABL_5_WO           STORAGE_MEDIA_TYPE = 64
+	PINNACLE_APEX_5_RW STORAGE_MEDIA_TYPE = 65
+	SONY_12_WO         STORAGE_MEDIA_TYPE = 66
+	PHILIPS_12_WO      STORAGE_MEDIA_TYPE = 67
+	HITACHI_12_WO      STORAGE_MEDIA_TYPE = 68
+	CYGNET_12_WO       STORAGE_MEDIA_TYPE = 69
+	KODAK_14_WO        STORAGE_MEDIA_TYPE = 70
+	MO_NFR_525         STORAGE_MEDIA_TYPE = 71
+	NIKON_12_RW        STORAGE_MEDIA_TYPE = 72
+	IOMEGA_ZIP         STORAGE_MEDIA_TYPE = 73
+	IOMEGA_JAZ         STORAGE_MEDIA_TYPE = 74
+	SYQUEST_EZ135      STORAGE_MEDIA_TYPE = 75
+	SYQUEST_EZFLYER    STORAGE_MEDIA_TYPE = 76
+	SYQUEST_SYJET      STORAGE_MEDIA_TYPE = 77
+	AVATAR_F2          STORAGE_MEDIA_TYPE = 78
+	MP2_8mm            STORAGE_MEDIA_TYPE = 79
+	DST_S              STORAGE_MEDIA_TYPE = 80
+	DST_M              STORAGE_MEDIA_TYPE = 81
+	DST_L              STORAGE_MEDIA_TYPE = 82
+	VXATape_1          STORAGE_MEDIA_TYPE = 83
+	VXATape_2          STORAGE_MEDIA_TYPE = 84
+	STK_9840           STORAGE_MEDIA_TYPE = 85
+	LTO_Ultrium        STORAGE_MEDIA_TYPE = 86
+	LTO_Accelis        STORAGE_MEDIA_TYPE = 87
+	DVD_RAM            STORAGE_MEDIA_TYPE = 88
+	AIT_8mm            STORAGE_MEDIA_TYPE = 89
+	ADR_1              STORAGE_MEDIA_TYPE = 90
+	ADR_2              STORAGE_MEDIA_TYPE = 91
+	STK_9940           STORAGE_MEDIA_TYPE = 92
+	SAIT               STORAGE_MEDIA_TYPE = 93
+	VXATape            STORAGE_MEDIA_TYPE = 94
 )
 
 type STORAGE_BUS_TYPE int32
 
 const (
-	BusTypeUnknown = 0
-	BusTypeScsi = 1
-	BusTypeAtapi = 2
-	BusTypeAta = 3
-	BusType1394 = 4
-	BusTypeSsa = 5
-	BusTypeFibre = 6
-	BusTypeUsb = 7
-	BusTypeRAID = 8
-	BusTypeiScsi = 9
-	BusTypeSas = 10
-	BusTypeSata = 11
-	BusTypeSd = 12
-	BusTypeMmc = 13
-	BusTypeVirtual = 14
-	BusTypeFileBackedVirtual = 15
-	BusTypeSpaces = 16
-	BusTypeNvme = 17
-	BusTypeSCM = 18
-	BusTypeUfs = 19
-	BusTypeMax = 20
-	BusTypeMaxReserved = 127
+	BusTypeUnknown           STORAGE_BUS_TYPE = 0
+	BusTypeScsi              STORAGE_BUS_TYPE = 1
+	BusTypeAtapi             STORAGE_BUS_TYPE = 2
+	BusTypeAta               STORAGE_BUS_TYPE = 3
+	BusType1394              STORAGE_BUS_TYPE = 4
+	BusTypeSsa               STORAGE_BUS_TYPE = 5
+	BusTypeFibre             STORAGE_BUS_TYPE = 6
+	BusTypeUsb               STORAGE_BUS_TYPE = 7
+	BusTypeRAID              STORAGE_BUS_TYPE = 8
+	BusTypeiScsi             STORAGE_BUS_TYPE = 9
+	BusTypeSas               STORAGE_BUS_TYPE = 10
+	BusTypeSata              STORAGE_BUS_TYPE = 11
+	BusTypeSd                STORAGE_BUS_TYPE = 12
+	BusTypeMmc               STORAGE_BUS_TYPE = 13
+	BusTypeVirtual           STORAGE_BUS_TYPE = 14
+	BusTypeFileBackedVirtual STORAGE_BUS_TYPE = 15
+	BusTypeSpaces            STORAGE_BUS_TYPE = 16
+	BusTypeNvme              STORAGE_BUS_TYPE = 17
+	BusTypeSCM               STORAGE_BUS_TYPE = 18
+	BusTypeUfs               STORAGE_BUS_TYPE = 19
+	BusTypeMax               STORAGE_BUS_TYPE = 20
+	BusTypeMaxReserved       STORAGE_BUS_TYPE = 127
 )
 
 type STORAGE_SET_TYPE int32
 
 const (
-	PropertyStandardSet = 0
-	PropertyExistsSet = 1
-	PropertySetMaxDefined = 2
+	PropertyStandardSet   STORAGE_SET_TYPE = 0
+	PropertyExistsSet     STORAGE_SET_TYPE = 1
+	PropertySetMaxDefined STORAGE_SET_TYPE = 2
 )
 
 type STORAGE_IDENTIFIER_CODE_SET int32
 
 const (
-	StorageIdCodeSetReserved = 0
-	StorageIdCodeSetBinary = 1
-	StorageIdCodeSetAscii = 2
-	StorageIdCodeSetUtf8 = 3
+	StorageIdCodeSetReserved STORAGE_IDENTIFIER_CODE_SET = 0
+	StorageIdCodeSetBinary   STORAGE_IDENTIFIER_CODE_SET = 1
+	StorageIdCodeSetAscii    STORAGE_IDENTIFIER_CODE_SET = 2
+	StorageIdCodeSetUtf8     STORAGE_IDENTIFIER_CODE_SET = 3
 )
 
 type STORAGE_IDENTIFIER_TYPE int32
 
 const (
-	StorageIdTypeVendorSpecific = 0
-	StorageIdTypeVendorId = 1
-	StorageIdTypeEUI64 = 2
-	StorageIdTypeFCPHName = 3
-	StorageIdTypePortRelative = 4
-	StorageIdTypeTargetPortGroup = 5
-	StorageIdTypeLogicalUnitGroup = 6
-	StorageIdTypeMD5LogicalUnitIdentifier = 7
-	StorageIdTypeScsiNameString = 8
+	StorageIdTypeVendorSpecific           STORAGE_IDENTIFIER_TYPE = 0
+	StorageIdTypeVendorId                 STORAGE_IDENTIFIER_TYPE = 1
+	StorageIdTypeEUI64                    STORAGE_IDENTIFIER_TYPE = 2
+	StorageIdTypeFCPHName                 STORAGE_IDENTIFIER_TYPE = 3
+	StorageIdTypePortRelative             STORAGE_IDENTIFIER_TYPE = 4
+	StorageIdTypeTargetPortGroup          STORAGE_IDENTIFIER_TYPE = 5
+	StorageIdTypeLogicalUnitGroup         STORAGE_IDENTIFIER_TYPE = 6
+	StorageIdTypeMD5LogicalUnitIdentifier STORAGE_IDENTIFIER_TYPE = 7
+	StorageIdTypeScsiNameString           STORAGE_IDENTIFIER_TYPE = 8
 )
 
 type STORAGE_ID_NAA_FORMAT int32
 
 const (
-	StorageIdNAAFormatIEEEExtended = 2
-	StorageIdNAAFormatIEEERegistered = 3
-	StorageIdNAAFormatIEEEERegisteredExtended = 5
+	StorageIdNAAFormatIEEEExtended            STORAGE_ID_NAA_FORMAT = 2
+	StorageIdNAAFormatIEEERegistered          STORAGE_ID_NAA_FORMAT = 3
+	StorageIdNAAFormatIEEEERegisteredExtended STORAGE_ID_NAA_FORMAT = 5
 )
 
 type STORAGE_ASSOCIATION_TYPE int32
 
 const (
-	StorageIdAssocDevice = 0
-	StorageIdAssocPort = 1
-	StorageIdAssocTarget = 2
+	StorageIdAssocDevice STORAGE_ASSOCIATION_TYPE = 0
+	StorageIdAssocPort   STORAGE_ASSOCIATION_TYPE = 1
+	StorageIdAssocTarget STORAGE_ASSOCIATION_TYPE = 2
 )
 
 type STORAGE_RPMB_FRAME_TYPE int32
 
 const (
-	StorageRpmbFrameTypeUnknown = 0
-	StorageRpmbFrameTypeStandard = 1
-	StorageRpmbFrameTypeMax = 2
+	StorageRpmbFrameTypeUnknown  STORAGE_RPMB_FRAME_TYPE = 0
+	StorageRpmbFrameTypeStandard STORAGE_RPMB_FRAME_TYPE = 1
+	StorageRpmbFrameTypeMax      STORAGE_RPMB_FRAME_TYPE = 2
 )
 
 type STORAGE_CRYPTO_ALGORITHM_ID int32
 
 const (
-	StorageCryptoAlgorithmUnknown = 0
-	StorageCryptoAlgorithmXTSAES = 1
-	StorageCryptoAlgorithmBitlockerAESCBC = 2
-	StorageCryptoAlgorithmAESECB = 3
-	StorageCryptoAlgorithmESSIVAESCBC = 4
-	StorageCryptoAlgorithmMax = 5
+	StorageCryptoAlgorithmUnknown         STORAGE_CRYPTO_ALGORITHM_ID = 0
+	StorageCryptoAlgorithmXTSAES          STORAGE_CRYPTO_ALGORITHM_ID = 1
+	StorageCryptoAlgorithmBitlockerAESCBC STORAGE_CRYPTO_ALGORITHM_ID = 2
+	StorageCryptoAlgorithmAESECB          STORAGE_CRYPTO_ALGORITHM_ID = 3
+	StorageCryptoAlgorithmESSIVAESCBC     STORAGE_CRYPTO_ALGORITHM_ID = 4
+	StorageCryptoAlgorithmMax             STORAGE_CRYPTO_ALGORITHM_ID = 5
 )
 
 type STORAGE_CRYPTO_KEY_SIZE int32
 
 const (
-	StorageCryptoKeySizeUnknown = 0
-	StorageCryptoKeySize128Bits = 1
-	StorageCryptoKeySize192Bits = 2
-	StorageCryptoKeySize256Bits = 3
-	StorageCryptoKeySize512Bits = 4
+	StorageCryptoKeySizeUnknown STORAGE_CRYPTO_KEY_SIZE = 0
+	StorageCryptoKeySize128Bits STORAGE_CRYPTO_KEY_SIZE = 1
+	StorageCryptoKeySize192Bits STORAGE_CRYPTO_KEY_SIZE = 2
+	StorageCryptoKeySize256Bits STORAGE_CRYPTO_KEY_SIZE = 3
+	StorageCryptoKeySize512Bits STORAGE_CRYPTO_KEY_SIZE = 4
 )
 
 type STORAGE_TIER_MEDIA_TYPE int32
 
 const (
-	StorageTierMediaTypeUnspecified = 0
-	StorageTierMediaTypeDisk = 1
-	StorageTierMediaTypeSsd = 2
-	StorageTierMediaTypeScm = 4
-	StorageTierMediaTypeMax = 5
+	StorageTierMediaTypeUnspecified STORAGE_TIER_MEDIA_TYPE = 0
+	StorageTierMediaTypeDisk        STORAGE_TIER_MEDIA_TYPE = 1
+	StorageTierMediaTypeSsd         STORAGE_TIER_MEDIA_TYPE = 2
+	StorageTierMediaTypeScm         STORAGE_TIER_MEDIA_TYPE = 4
+	StorageTierMediaTypeMax         STORAGE_TIER_MEDIA_TYPE = 5
 )
 
 type STORAGE_TIER_CLASS int32
 
 const (
-	StorageTierClassUnspecified = 0
-	StorageTierClassCapacity = 1
-	StorageTierClassPerformance = 2
-	StorageTierClassMax = 3
+	StorageTierClassUnspecified STORAGE_TIER_CLASS = 0
+	StorageTierClassCapacity    STORAGE_TIER_CLASS = 1
+	StorageTierClassPerformance STORAGE_TIER_CLASS = 2
+	StorageTierClassMax         STORAGE_TIER_CLASS = 3
 )
 
 type STORAGE_PROTOCOL_UFS_DATA_TYPE int32
 
 const (
-	UfsDataTypeUnknown = 0
-	UfsDataTypeQueryDescriptor = 1
-	UfsDataTypeMax = 2
+	UfsDataTypeUnknown         STORAGE_PROTOCOL_UFS_DATA_TYPE = 0
+	UfsDataTypeQueryDescriptor STORAGE_PROTOCOL_UFS_DATA_TYPE = 1
+	UfsDataTypeMax             STORAGE_PROTOCOL_UFS_DATA_TYPE = 2
 )
 
 type STORAGE_DISK_HEALTH_STATUS int32
 
 const (
-	DiskHealthUnknown = 0
-	DiskHealthUnhealthy = 1
-	DiskHealthWarning = 2
-	DiskHealthHealthy = 3
-	DiskHealthMax = 4
+	DiskHealthUnknown   STORAGE_DISK_HEALTH_STATUS = 0
+	DiskHealthUnhealthy STORAGE_DISK_HEALTH_STATUS = 1
+	DiskHealthWarning   STORAGE_DISK_HEALTH_STATUS = 2
+	DiskHealthHealthy   STORAGE_DISK_HEALTH_STATUS = 3
+	DiskHealthMax       STORAGE_DISK_HEALTH_STATUS = 4
 )
 
 type STORAGE_DISK_OPERATIONAL_STATUS int32
 
 const (
-	DiskOpStatusNone = 0
-	DiskOpStatusUnknown = 1
-	DiskOpStatusOk = 2
-	DiskOpStatusPredictingFailure = 3
-	DiskOpStatusInService = 4
-	DiskOpStatusHardwareError = 5
-	DiskOpStatusNotUsable = 6
-	DiskOpStatusTransientError = 7
-	DiskOpStatusMissing = 8
+	DiskOpStatusNone              STORAGE_DISK_OPERATIONAL_STATUS = 0
+	DiskOpStatusUnknown           STORAGE_DISK_OPERATIONAL_STATUS = 1
+	DiskOpStatusOk                STORAGE_DISK_OPERATIONAL_STATUS = 2
+	DiskOpStatusPredictingFailure STORAGE_DISK_OPERATIONAL_STATUS = 3
+	DiskOpStatusInService         STORAGE_DISK_OPERATIONAL_STATUS = 4
+	DiskOpStatusHardwareError     STORAGE_DISK_OPERATIONAL_STATUS = 5
+	DiskOpStatusNotUsable         STORAGE_DISK_OPERATIONAL_STATUS = 6
+	DiskOpStatusTransientError    STORAGE_DISK_OPERATIONAL_STATUS = 7
+	DiskOpStatusMissing           STORAGE_DISK_OPERATIONAL_STATUS = 8
 )
 
 type STORAGE_OPERATIONAL_STATUS_REASON int32
 
 const (
-	DiskOpReasonUnknown = 0
-	DiskOpReasonScsiSenseCode = 1
-	DiskOpReasonMedia = 2
-	DiskOpReasonIo = 3
-	DiskOpReasonThresholdExceeded = 4
-	DiskOpReasonLostData = 5
-	DiskOpReasonEnergySource = 6
-	DiskOpReasonConfiguration = 7
-	DiskOpReasonDeviceController = 8
-	DiskOpReasonMediaController = 9
-	DiskOpReasonComponent = 10
-	DiskOpReasonNVDIMM_N = 11
-	DiskOpReasonBackgroundOperation = 12
-	DiskOpReasonInvalidFirmware = 13
-	DiskOpReasonHealthCheck = 14
-	DiskOpReasonLostDataPersistence = 15
-	DiskOpReasonDisabledByPlatform = 16
-	DiskOpReasonLostWritePersistence = 17
-	DiskOpReasonDataPersistenceLossImminent = 18
-	DiskOpReasonWritePersistenceLossImminent = 19
-	DiskOpReasonMax = 20
+	DiskOpReasonUnknown                      STORAGE_OPERATIONAL_STATUS_REASON = 0
+	DiskOpReasonScsiSenseCode                STORAGE_OPERATIONAL_STATUS_REASON = 1
+	DiskOpReasonMedia                        STORAGE_OPERATIONAL_STATUS_REASON = 2
+	DiskOpReasonIo                           STORAGE_OPERATIONAL_STATUS_REASON = 3
+	DiskOpReasonThresholdExceeded            STORAGE_OPERATIONAL_STATUS_REASON = 4
+	DiskOpReasonLostData                     STORAGE_OPERATIONAL_STATUS_REASON = 5
+	DiskOpReasonEnergySource                 STORAGE_OPERATIONAL_STATUS_REASON = 6
+	DiskOpReasonConfiguration                STORAGE_OPERATIONAL_STATUS_REASON = 7
+	DiskOpReasonDeviceController             STORAGE_OPERATIONAL_STATUS_REASON = 8
+	DiskOpReasonMediaController              STORAGE_OPERATIONAL_STATUS_REASON = 9
+	DiskOpReasonComponent                    STORAGE_OPERATIONAL_STATUS_REASON = 10
+	DiskOpReasonNVDIMM_N                     STORAGE_OPERATIONAL_STATUS_REASON = 11
+	DiskOpReasonBackgroundOperation          STORAGE_OPERATIONAL_STATUS_REASON = 12
+	DiskOpReasonInvalidFirmware              STORAGE_OPERATIONAL_STATUS_REASON = 13
+	DiskOpReasonHealthCheck                  STORAGE_OPERATIONAL_STATUS_REASON = 14
+	DiskOpReasonLostDataPersistence          STORAGE_OPERATIONAL_STATUS_REASON = 15
+	DiskOpReasonDisabledByPlatform           STORAGE_OPERATIONAL_STATUS_REASON = 16
+	DiskOpReasonLostWritePersistence         STORAGE_OPERATIONAL_STATUS_REASON = 17
+	DiskOpReasonDataPersistenceLossImminent  STORAGE_OPERATIONAL_STATUS_REASON = 18
+	DiskOpReasonWritePersistenceLossImminent STORAGE_OPERATIONAL_STATUS_REASON = 19
+	DiskOpReasonMax                          STORAGE_OPERATIONAL_STATUS_REASON = 20
 )
 
 type STORAGE_ZONED_DEVICE_TYPES int32
 
 const (
-	ZonedDeviceTypeUnknown = 0
-	ZonedDeviceTypeHostManaged = 1
-	ZonedDeviceTypeHostAware = 2
-	ZonedDeviceTypeDeviceManaged = 3
+	ZonedDeviceTypeUnknown       STORAGE_ZONED_DEVICE_TYPES = 0
+	ZonedDeviceTypeHostManaged   STORAGE_ZONED_DEVICE_TYPES = 1
+	ZonedDeviceTypeHostAware     STORAGE_ZONED_DEVICE_TYPES = 2
+	ZonedDeviceTypeDeviceManaged STORAGE_ZONED_DEVICE_TYPES = 3
 )
 
 type STORAGE_ZONE_TYPES int32
 
 const (
-	ZoneTypeUnknown = 0
-	ZoneTypeConventional = 1
-	ZoneTypeSequentialWriteRequired = 2
-	ZoneTypeSequentialWritePreferred = 3
-	ZoneTypeMax = 4
+	ZoneTypeUnknown                  STORAGE_ZONE_TYPES = 0
+	ZoneTypeConventional             STORAGE_ZONE_TYPES = 1
+	ZoneTypeSequentialWriteRequired  STORAGE_ZONE_TYPES = 2
+	ZoneTypeSequentialWritePreferred STORAGE_ZONE_TYPES = 3
+	ZoneTypeMax                      STORAGE_ZONE_TYPES = 4
 )
 
 type STORAGE_ZONES_ATTRIBUTES int32
 
 const (
-	ZonesAttributeTypeAndLengthMayDifferent = 0
-	ZonesAttributeTypeSameLengthSame = 1
-	ZonesAttributeTypeSameLastZoneLengthDifferent = 2
-	ZonesAttributeTypeMayDifferentLengthSame = 3
+	ZonesAttributeTypeAndLengthMayDifferent       STORAGE_ZONES_ATTRIBUTES = 0
+	ZonesAttributeTypeSameLengthSame              STORAGE_ZONES_ATTRIBUTES = 1
+	ZonesAttributeTypeSameLastZoneLengthDifferent STORAGE_ZONES_ATTRIBUTES = 2
+	ZonesAttributeTypeMayDifferentLengthSame      STORAGE_ZONES_ATTRIBUTES = 3
 )
 
 type STORAGE_ZONE_CONDITION int32
 
 const (
-	ZoneConditionConventional = 0
-	ZoneConditionEmpty = 1
-	ZoneConditionImplicitlyOpened = 2
-	ZoneConditionExplicitlyOpened = 3
-	ZoneConditionClosed = 4
-	ZoneConditionReadOnly = 13
-	ZoneConditionFull = 14
-	ZoneConditionOffline = 15
+	ZoneConditionConventional     STORAGE_ZONE_CONDITION = 0
+	ZoneConditionEmpty            STORAGE_ZONE_CONDITION = 1
+	ZoneConditionImplicitlyOpened STORAGE_ZONE_CONDITION = 2
+	ZoneConditionExplicitlyOpened STORAGE_ZONE_CONDITION = 3
+	ZoneConditionClosed           STORAGE_ZONE_CONDITION = 4
+	ZoneConditionReadOnly         STORAGE_ZONE_CONDITION = 13
+	ZoneConditionFull             STORAGE_ZONE_CONDITION = 14
+	ZoneConditionOffline          STORAGE_ZONE_CONDITION = 15
 )
 
 type STORAGE_DIAGNOSTIC_LEVEL int32
 
 const (
-	StorageDiagnosticLevelDefault = 0
-	StorageDiagnosticLevelMax = 1
+	StorageDiagnosticLevelDefault STORAGE_DIAGNOSTIC_LEVEL = 0
+	StorageDiagnosticLevelMax     STORAGE_DIAGNOSTIC_LEVEL = 1
 )
 
 type STORAGE_DIAGNOSTIC_TARGET_TYPE int32
 
 const (
-	StorageDiagnosticTargetTypeUndefined = 0
-	StorageDiagnosticTargetTypePort = 1
-	StorageDiagnosticTargetTypeMiniport = 2
-	StorageDiagnosticTargetTypeHbaFirmware = 3
-	StorageDiagnosticTargetTypeMax = 4
+	StorageDiagnosticTargetTypeUndefined   STORAGE_DIAGNOSTIC_TARGET_TYPE = 0
+	StorageDiagnosticTargetTypePort        STORAGE_DIAGNOSTIC_TARGET_TYPE = 1
+	StorageDiagnosticTargetTypeMiniport    STORAGE_DIAGNOSTIC_TARGET_TYPE = 2
+	StorageDiagnosticTargetTypeHbaFirmware STORAGE_DIAGNOSTIC_TARGET_TYPE = 3
+	StorageDiagnosticTargetTypeMax         STORAGE_DIAGNOSTIC_TARGET_TYPE = 4
 )
 
 type DEVICE_INTERNAL_STATUS_DATA_REQUEST_TYPE int32
 
 const (
-	DeviceInternalStatusDataRequestTypeUndefined = 0
-	DeviceCurrentInternalStatusDataHeader = 1
-	DeviceCurrentInternalStatusData = 2
+	DeviceInternalStatusDataRequestTypeUndefined DEVICE_INTERNAL_STATUS_DATA_REQUEST_TYPE = 0
+	DeviceCurrentInternalStatusDataHeader        DEVICE_INTERNAL_STATUS_DATA_REQUEST_TYPE = 1
+	DeviceCurrentInternalStatusData              DEVICE_INTERNAL_STATUS_DATA_REQUEST_TYPE = 2
 )
 
 type DEVICE_INTERNAL_STATUS_DATA_SET int32
 
 const (
-	DeviceStatusDataSetUndefined = 0
-	DeviceStatusDataSet1 = 1
-	DeviceStatusDataSet2 = 2
-	DeviceStatusDataSet3 = 3
-	DeviceStatusDataSet4 = 4
-	DeviceStatusDataSetMax = 5
+	DeviceStatusDataSetUndefined DEVICE_INTERNAL_STATUS_DATA_SET = 0
+	DeviceStatusDataSet1         DEVICE_INTERNAL_STATUS_DATA_SET = 1
+	DeviceStatusDataSet2         DEVICE_INTERNAL_STATUS_DATA_SET = 2
+	DeviceStatusDataSet3         DEVICE_INTERNAL_STATUS_DATA_SET = 3
+	DeviceStatusDataSet4         DEVICE_INTERNAL_STATUS_DATA_SET = 4
+	DeviceStatusDataSetMax       DEVICE_INTERNAL_STATUS_DATA_SET = 5
 )
 
 type _DEVICEDUMP_COLLECTION_TYPE int32
 
 const (
-	TCCollectionBugCheck = 1
-	TCCollectionApplicationRequested = 2
-	TCCollectionDeviceRequested = 3
+	TCCollectionBugCheck             _DEVICEDUMP_COLLECTION_TYPE = 1
+	TCCollectionApplicationRequested _DEVICEDUMP_COLLECTION_TYPE = 2
+	TCCollectionDeviceRequested      _DEVICEDUMP_COLLECTION_TYPE = 3
 )
 
 type STORAGE_POWERUP_REASON_TYPE int32
 
 const (
-	StoragePowerupUnknown = 0
-	StoragePowerupIO = 1
-	StoragePowerupDeviceAttention = 2
+	StoragePowerupUnknown         STORAGE_POWERUP_REASON_TYPE = 0
+	StoragePowerupIO              STORAGE_POWERUP_REASON_TYPE = 1
+	StoragePowerupDeviceAttention STORAGE_POWERUP_REASON_TYPE = 2
 )
 
 type STORAGE_RPMB_COMMAND_TYPE int32
 
 const (
-	StorRpmbProgramAuthKey = 1
-	StorRpmbQueryWriteCounter = 2
-	StorRpmbAuthenticatedWrite = 3
-	StorRpmbAuthenticatedRead = 4
-	StorRpmbReadResultRequest = 5
-	StorRpmbAuthenticatedDeviceConfigWrite = 6
-	StorRpmbAuthenticatedDeviceConfigRead = 7
+	StorRpmbProgramAuthKey                 STORAGE_RPMB_COMMAND_TYPE = 1
+	StorRpmbQueryWriteCounter              STORAGE_RPMB_COMMAND_TYPE = 2
+	StorRpmbAuthenticatedWrite             STORAGE_RPMB_COMMAND_TYPE = 3
+	StorRpmbAuthenticatedRead              STORAGE_RPMB_COMMAND_TYPE = 4
+	StorRpmbReadResultRequest              STORAGE_RPMB_COMMAND_TYPE = 5
+	StorRpmbAuthenticatedDeviceConfigWrite STORAGE_RPMB_COMMAND_TYPE = 6
+	StorRpmbAuthenticatedDeviceConfigRead  STORAGE_RPMB_COMMAND_TYPE = 7
 )
 
 type STORAGE_COUNTER_TYPE int32
 
 const (
-	StorageCounterTypeUnknown = 0
-	StorageCounterTypeTemperatureCelsius = 1
-	StorageCounterTypeTemperatureCelsiusMax = 2
-	StorageCounterTypeReadErrorsTotal = 3
-	StorageCounterTypeReadErrorsCorrected = 4
-	StorageCounterTypeReadErrorsUncorrected = 5
-	StorageCounterTypeWriteErrorsTotal = 6
-	StorageCounterTypeWriteErrorsCorrected = 7
-	StorageCounterTypeWriteErrorsUncorrected = 8
-	StorageCounterTypeManufactureDate = 9
-	StorageCounterTypeStartStopCycleCount = 10
-	StorageCounterTypeStartStopCycleCountMax = 11
-	StorageCounterTypeLoadUnloadCycleCount = 12
-	StorageCounterTypeLoadUnloadCycleCountMax = 13
-	StorageCounterTypeWearPercentage = 14
-	StorageCounterTypeWearPercentageWarning = 15
-	StorageCounterTypeWearPercentageMax = 16
-	StorageCounterTypePowerOnHours = 17
-	StorageCounterTypeReadLatency100NSMax = 18
-	StorageCounterTypeWriteLatency100NSMax = 19
-	StorageCounterTypeFlushLatency100NSMax = 20
-	StorageCounterTypeMax = 21
+	StorageCounterTypeUnknown                 STORAGE_COUNTER_TYPE = 0
+	StorageCounterTypeTemperatureCelsius      STORAGE_COUNTER_TYPE = 1
+	StorageCounterTypeTemperatureCelsiusMax   STORAGE_COUNTER_TYPE = 2
+	StorageCounterTypeReadErrorsTotal         STORAGE_COUNTER_TYPE = 3
+	StorageCounterTypeReadErrorsCorrected     STORAGE_COUNTER_TYPE = 4
+	StorageCounterTypeReadErrorsUncorrected   STORAGE_COUNTER_TYPE = 5
+	StorageCounterTypeWriteErrorsTotal        STORAGE_COUNTER_TYPE = 6
+	StorageCounterTypeWriteErrorsCorrected    STORAGE_COUNTER_TYPE = 7
+	StorageCounterTypeWriteErrorsUncorrected  STORAGE_COUNTER_TYPE = 8
+	StorageCounterTypeManufactureDate         STORAGE_COUNTER_TYPE = 9
+	StorageCounterTypeStartStopCycleCount     STORAGE_COUNTER_TYPE = 10
+	StorageCounterTypeStartStopCycleCountMax  STORAGE_COUNTER_TYPE = 11
+	StorageCounterTypeLoadUnloadCycleCount    STORAGE_COUNTER_TYPE = 12
+	StorageCounterTypeLoadUnloadCycleCountMax STORAGE_COUNTER_TYPE = 13
+	StorageCounterTypeWearPercentage          STORAGE_COUNTER_TYPE = 14
+	StorageCounterTypeWearPercentageWarning   STORAGE_COUNTER_TYPE = 15
+	StorageCounterTypeWearPercentageMax       STORAGE_COUNTER_TYPE = 16
+	StorageCounterTypePowerOnHours            STORAGE_COUNTER_TYPE = 17
+	StorageCounterTypeReadLatency100NSMax     STORAGE_COUNTER_TYPE = 18
+	StorageCounterTypeWriteLatency100NSMax    STORAGE_COUNTER_TYPE = 19
+	StorageCounterTypeFlushLatency100NSMax    STORAGE_COUNTER_TYPE = 20
+	StorageCounterTypeMax                     STORAGE_COUNTER_TYPE = 21
 )
 
 type STORAGE_ATTRIBUTE_MGMT_ACTION int32
 
 const (
-	StorAttributeMgmt_ClearAttribute = 0
-	StorAttributeMgmt_SetAttribute = 1
-	StorAttributeMgmt_ResetAttribute = 2
+	StorAttributeMgmt_ClearAttribute STORAGE_ATTRIBUTE_MGMT_ACTION = 0
+	StorAttributeMgmt_SetAttribute   STORAGE_ATTRIBUTE_MGMT_ACTION = 1
+	StorAttributeMgmt_ResetAttribute STORAGE_ATTRIBUTE_MGMT_ACTION = 2
 )
 
 type SCM_REGION_FLAG int32
 
 const (
-	ScmRegionFlagNone = 0
-	ScmRegionFlagLabel = 1
+	ScmRegionFlagNone  SCM_REGION_FLAG = 0
+	ScmRegionFlagLabel SCM_REGION_FLAG = 1
 )
 
 type SCM_PD_QUERY_TYPE int32
 
 const (
-	ScmPhysicalDeviceQuery_Descriptor = 0
-	ScmPhysicalDeviceQuery_IsSupported = 1
-	ScmPhysicalDeviceQuery_Max = 2
+	ScmPhysicalDeviceQuery_Descriptor  SCM_PD_QUERY_TYPE = 0
+	ScmPhysicalDeviceQuery_IsSupported SCM_PD_QUERY_TYPE = 1
+	ScmPhysicalDeviceQuery_Max         SCM_PD_QUERY_TYPE = 2
 )
 
 type SCM_PD_PROPERTY_ID int32
 
 const (
-	ScmPhysicalDeviceProperty_DeviceInfo = 0
-	ScmPhysicalDeviceProperty_ManagementStatus = 1
-	ScmPhysicalDeviceProperty_FirmwareInfo = 2
-	ScmPhysicalDeviceProperty_LocationString = 3
-	ScmPhysicalDeviceProperty_DeviceSpecificInfo = 4
-	ScmPhysicalDeviceProperty_DeviceHandle = 5
-	ScmPhysicalDeviceProperty_Max = 6
+	ScmPhysicalDeviceProperty_DeviceInfo         SCM_PD_PROPERTY_ID = 0
+	ScmPhysicalDeviceProperty_ManagementStatus   SCM_PD_PROPERTY_ID = 1
+	ScmPhysicalDeviceProperty_FirmwareInfo       SCM_PD_PROPERTY_ID = 2
+	ScmPhysicalDeviceProperty_LocationString     SCM_PD_PROPERTY_ID = 3
+	ScmPhysicalDeviceProperty_DeviceSpecificInfo SCM_PD_PROPERTY_ID = 4
+	ScmPhysicalDeviceProperty_DeviceHandle       SCM_PD_PROPERTY_ID = 5
+	ScmPhysicalDeviceProperty_Max                SCM_PD_PROPERTY_ID = 6
 )
 
 type SCM_PD_HEALTH_STATUS int32
 
 const (
-	ScmPhysicalDeviceHealth_Unknown = 0
-	ScmPhysicalDeviceHealth_Unhealthy = 1
-	ScmPhysicalDeviceHealth_Warning = 2
-	ScmPhysicalDeviceHealth_Healthy = 3
-	ScmPhysicalDeviceHealth_Max = 4
+	ScmPhysicalDeviceHealth_Unknown   SCM_PD_HEALTH_STATUS = 0
+	ScmPhysicalDeviceHealth_Unhealthy SCM_PD_HEALTH_STATUS = 1
+	ScmPhysicalDeviceHealth_Warning   SCM_PD_HEALTH_STATUS = 2
+	ScmPhysicalDeviceHealth_Healthy   SCM_PD_HEALTH_STATUS = 3
+	ScmPhysicalDeviceHealth_Max       SCM_PD_HEALTH_STATUS = 4
 )
 
 type SCM_PD_OPERATIONAL_STATUS int32
 
 const (
-	ScmPhysicalDeviceOpStatus_Unknown = 0
-	ScmPhysicalDeviceOpStatus_Ok = 1
-	ScmPhysicalDeviceOpStatus_PredictingFailure = 2
-	ScmPhysicalDeviceOpStatus_InService = 3
-	ScmPhysicalDeviceOpStatus_HardwareError = 4
-	ScmPhysicalDeviceOpStatus_NotUsable = 5
-	ScmPhysicalDeviceOpStatus_TransientError = 6
-	ScmPhysicalDeviceOpStatus_Missing = 7
-	ScmPhysicalDeviceOpStatus_Max = 8
+	ScmPhysicalDeviceOpStatus_Unknown           SCM_PD_OPERATIONAL_STATUS = 0
+	ScmPhysicalDeviceOpStatus_Ok                SCM_PD_OPERATIONAL_STATUS = 1
+	ScmPhysicalDeviceOpStatus_PredictingFailure SCM_PD_OPERATIONAL_STATUS = 2
+	ScmPhysicalDeviceOpStatus_InService         SCM_PD_OPERATIONAL_STATUS = 3
+	ScmPhysicalDeviceOpStatus_HardwareError     SCM_PD_OPERATIONAL_STATUS = 4
+	ScmPhysicalDeviceOpStatus_NotUsable         SCM_PD_OPERATIONAL_STATUS = 5
+	ScmPhysicalDeviceOpStatus_TransientError    SCM_PD_OPERATIONAL_STATUS = 6
+	ScmPhysicalDeviceOpStatus_Missing           SCM_PD_OPERATIONAL_STATUS = 7
+	ScmPhysicalDeviceOpStatus_Max               SCM_PD_OPERATIONAL_STATUS = 8
 )
 
 type SCM_PD_OPERATIONAL_STATUS_REASON int32
 
 const (
-	ScmPhysicalDeviceOpReason_Unknown = 0
-	ScmPhysicalDeviceOpReason_Media = 1
-	ScmPhysicalDeviceOpReason_ThresholdExceeded = 2
-	ScmPhysicalDeviceOpReason_LostData = 3
-	ScmPhysicalDeviceOpReason_EnergySource = 4
-	ScmPhysicalDeviceOpReason_Configuration = 5
-	ScmPhysicalDeviceOpReason_DeviceController = 6
-	ScmPhysicalDeviceOpReason_MediaController = 7
-	ScmPhysicalDeviceOpReason_Component = 8
-	ScmPhysicalDeviceOpReason_BackgroundOperation = 9
-	ScmPhysicalDeviceOpReason_InvalidFirmware = 10
-	ScmPhysicalDeviceOpReason_HealthCheck = 11
-	ScmPhysicalDeviceOpReason_LostDataPersistence = 12
-	ScmPhysicalDeviceOpReason_DisabledByPlatform = 13
-	ScmPhysicalDeviceOpReason_PermanentError = 14
-	ScmPhysicalDeviceOpReason_LostWritePersistence = 15
-	ScmPhysicalDeviceOpReason_FatalError = 16
-	ScmPhysicalDeviceOpReason_DataPersistenceLossImminent = 17
-	ScmPhysicalDeviceOpReason_WritePersistenceLossImminent = 18
-	ScmPhysicalDeviceOpReason_MediaRemainingSpareBlock = 19
-	ScmPhysicalDeviceOpReason_PerformanceDegradation = 20
-	ScmPhysicalDeviceOpReason_ExcessiveTemperature = 21
-	ScmPhysicalDeviceOpReason_Max = 22
+	ScmPhysicalDeviceOpReason_Unknown                      SCM_PD_OPERATIONAL_STATUS_REASON = 0
+	ScmPhysicalDeviceOpReason_Media                        SCM_PD_OPERATIONAL_STATUS_REASON = 1
+	ScmPhysicalDeviceOpReason_ThresholdExceeded            SCM_PD_OPERATIONAL_STATUS_REASON = 2
+	ScmPhysicalDeviceOpReason_LostData                     SCM_PD_OPERATIONAL_STATUS_REASON = 3
+	ScmPhysicalDeviceOpReason_EnergySource                 SCM_PD_OPERATIONAL_STATUS_REASON = 4
+	ScmPhysicalDeviceOpReason_Configuration                SCM_PD_OPERATIONAL_STATUS_REASON = 5
+	ScmPhysicalDeviceOpReason_DeviceController             SCM_PD_OPERATIONAL_STATUS_REASON = 6
+	ScmPhysicalDeviceOpReason_MediaController              SCM_PD_OPERATIONAL_STATUS_REASON = 7
+	ScmPhysicalDeviceOpReason_Component                    SCM_PD_OPERATIONAL_STATUS_REASON = 8
+	ScmPhysicalDeviceOpReason_BackgroundOperation          SCM_PD_OPERATIONAL_STATUS_REASON = 9
+	ScmPhysicalDeviceOpReason_InvalidFirmware              SCM_PD_OPERATIONAL_STATUS_REASON = 10
+	ScmPhysicalDeviceOpReason_HealthCheck                  SCM_PD_OPERATIONAL_STATUS_REASON = 11
+	ScmPhysicalDeviceOpReason_LostDataPersistence          SCM_PD_OPERATIONAL_STATUS_REASON = 12
+	ScmPhysicalDeviceOpReason_DisabledByPlatform           SCM_PD_OPERATIONAL_STATUS_REASON = 13
+	ScmPhysicalDeviceOpReason_PermanentError               SCM_PD_OPERATIONAL_STATUS_REASON = 14
+	ScmPhysicalDeviceOpReason_LostWritePersistence         SCM_PD_OPERATIONAL_STATUS_REASON = 15
+	ScmPhysicalDeviceOpReason_FatalError                   SCM_PD_OPERATIONAL_STATUS_REASON = 16
+	ScmPhysicalDeviceOpReason_DataPersistenceLossImminent  SCM_PD_OPERATIONAL_STATUS_REASON = 17
+	ScmPhysicalDeviceOpReason_WritePersistenceLossImminent SCM_PD_OPERATIONAL_STATUS_REASON = 18
+	ScmPhysicalDeviceOpReason_MediaRemainingSpareBlock     SCM_PD_OPERATIONAL_STATUS_REASON = 19
+	ScmPhysicalDeviceOpReason_PerformanceDegradation       SCM_PD_OPERATIONAL_STATUS_REASON = 20
+	ScmPhysicalDeviceOpReason_ExcessiveTemperature         SCM_PD_OPERATIONAL_STATUS_REASON = 21
+	ScmPhysicalDeviceOpReason_Max                          SCM_PD_OPERATIONAL_STATUS_REASON = 22
 )
 
 type SCM_PD_MEDIA_REINITIALIZATION_STATUS int32
 
 const (
-	ScmPhysicalDeviceReinit_Success = 0
-	ScmPhysicalDeviceReinit_RebootNeeded = 1
-	ScmPhysicalDeviceReinit_ColdBootNeeded = 2
-	ScmPhysicalDeviceReinit_Max = 3
+	ScmPhysicalDeviceReinit_Success        SCM_PD_MEDIA_REINITIALIZATION_STATUS = 0
+	ScmPhysicalDeviceReinit_RebootNeeded   SCM_PD_MEDIA_REINITIALIZATION_STATUS = 1
+	ScmPhysicalDeviceReinit_ColdBootNeeded SCM_PD_MEDIA_REINITIALIZATION_STATUS = 2
+	ScmPhysicalDeviceReinit_Max            SCM_PD_MEDIA_REINITIALIZATION_STATUS = 3
 )
 
 type DETECTION_TYPE int32
 
 const (
-	DetectNone = 0
-	DetectInt13 = 1
-	DetectExInt13 = 2
+	DetectNone    DETECTION_TYPE = 0
+	DetectInt13   DETECTION_TYPE = 1
+	DetectExInt13 DETECTION_TYPE = 2
 )
 
 type DISK_CACHE_RETENTION_PRIORITY int32
 
 const (
-	EqualPriority = 0
-	KeepPrefetchedData = 1
-	KeepReadData = 2
+	EqualPriority      DISK_CACHE_RETENTION_PRIORITY = 0
+	KeepPrefetchedData DISK_CACHE_RETENTION_PRIORITY = 1
+	KeepReadData       DISK_CACHE_RETENTION_PRIORITY = 2
 )
 
 type BIN_TYPES int32
 
 const (
-	RequestSize = 0
-	RequestLocation = 1
+	RequestSize     BIN_TYPES = 0
+	RequestLocation BIN_TYPES = 1
 )
 
 type ELEMENT_TYPE int32
 
 const (
-	AllElements = 0
-	ChangerTransport = 1
-	ChangerSlot = 2
-	ChangerIEPort = 3
-	ChangerDrive = 4
-	ChangerDoor = 5
-	ChangerKeypad = 6
-	ChangerMaxElement = 7
+	AllElements       ELEMENT_TYPE = 0
+	ChangerTransport  ELEMENT_TYPE = 1
+	ChangerSlot       ELEMENT_TYPE = 2
+	ChangerIEPort     ELEMENT_TYPE = 3
+	ChangerDrive      ELEMENT_TYPE = 4
+	ChangerDoor       ELEMENT_TYPE = 5
+	ChangerKeypad     ELEMENT_TYPE = 6
+	ChangerMaxElement ELEMENT_TYPE = 7
 )
 
 type CHANGER_DEVICE_PROBLEM_TYPE int32
 
 const (
-	DeviceProblemNone = 0
-	DeviceProblemHardware = 1
-	DeviceProblemCHMError = 2
-	DeviceProblemDoorOpen = 3
-	DeviceProblemCalibrationError = 4
-	DeviceProblemTargetFailure = 5
-	DeviceProblemCHMMoveError = 6
-	DeviceProblemCHMZeroError = 7
-	DeviceProblemCartridgeInsertError = 8
-	DeviceProblemPositionError = 9
-	DeviceProblemSensorError = 10
-	DeviceProblemCartridgeEjectError = 11
-	DeviceProblemGripperError = 12
-	DeviceProblemDriveError = 13
+	DeviceProblemNone                 CHANGER_DEVICE_PROBLEM_TYPE = 0
+	DeviceProblemHardware             CHANGER_DEVICE_PROBLEM_TYPE = 1
+	DeviceProblemCHMError             CHANGER_DEVICE_PROBLEM_TYPE = 2
+	DeviceProblemDoorOpen             CHANGER_DEVICE_PROBLEM_TYPE = 3
+	DeviceProblemCalibrationError     CHANGER_DEVICE_PROBLEM_TYPE = 4
+	DeviceProblemTargetFailure        CHANGER_DEVICE_PROBLEM_TYPE = 5
+	DeviceProblemCHMMoveError         CHANGER_DEVICE_PROBLEM_TYPE = 6
+	DeviceProblemCHMZeroError         CHANGER_DEVICE_PROBLEM_TYPE = 7
+	DeviceProblemCartridgeInsertError CHANGER_DEVICE_PROBLEM_TYPE = 8
+	DeviceProblemPositionError        CHANGER_DEVICE_PROBLEM_TYPE = 9
+	DeviceProblemSensorError          CHANGER_DEVICE_PROBLEM_TYPE = 10
+	DeviceProblemCartridgeEjectError  CHANGER_DEVICE_PROBLEM_TYPE = 11
+	DeviceProblemGripperError         CHANGER_DEVICE_PROBLEM_TYPE = 12
+	DeviceProblemDriveError           CHANGER_DEVICE_PROBLEM_TYPE = 13
 )
 
 type SHRINK_VOLUME_REQUEST_TYPES int32
 
 const (
-	ShrinkPrepare = 1
-	ShrinkCommit = 2
-	ShrinkAbort = 3
+	ShrinkPrepare SHRINK_VOLUME_REQUEST_TYPES = 1
+	ShrinkCommit  SHRINK_VOLUME_REQUEST_TYPES = 2
+	ShrinkAbort   SHRINK_VOLUME_REQUEST_TYPES = 3
 )
 
 type CSVFS_DISK_CONNECTIVITY int32
 
 const (
-	CsvFsDiskConnectivityNone = 0
-	CsvFsDiskConnectivityMdsNodeOnly = 1
-	CsvFsDiskConnectivitySubsetOfNodes = 2
-	CsvFsDiskConnectivityAllNodes = 3
+	CsvFsDiskConnectivityNone          CSVFS_DISK_CONNECTIVITY = 0
+	CsvFsDiskConnectivityMdsNodeOnly   CSVFS_DISK_CONNECTIVITY = 1
+	CsvFsDiskConnectivitySubsetOfNodes CSVFS_DISK_CONNECTIVITY = 2
+	CsvFsDiskConnectivityAllNodes      CSVFS_DISK_CONNECTIVITY = 3
 )
 
 type STORAGE_RESERVE_ID int32
 
 const (
-	StorageReserveIdNone = 0
-	StorageReserveIdHard = 1
-	StorageReserveIdSoft = 2
-	StorageReserveIdUpdateScratch = 3
-	StorageReserveIdMax = 4
+	StorageReserveIdNone          STORAGE_RESERVE_ID = 0
+	StorageReserveIdHard          STORAGE_RESERVE_ID = 1
+	StorageReserveIdSoft          STORAGE_RESERVE_ID = 2
+	StorageReserveIdUpdateScratch STORAGE_RESERVE_ID = 3
+	StorageReserveIdMax           STORAGE_RESERVE_ID = 4
 )
 
 type QUERY_FILE_LAYOUT_FILTER_TYPE int32
 
 const (
-	QUERY_FILE_LAYOUT_FILTER_TYPE_NONE = 0
-	QUERY_FILE_LAYOUT_FILTER_TYPE_CLUSTERS = 1
-	QUERY_FILE_LAYOUT_FILTER_TYPE_FILEID = 2
-	QUERY_FILE_LAYOUT_FILTER_TYPE_STORAGE_RESERVE_ID = 3
-	QUERY_FILE_LAYOUT_NUM_FILTER_TYPES = 4
+	QUERY_FILE_LAYOUT_FILTER_TYPE_NONE               QUERY_FILE_LAYOUT_FILTER_TYPE = 0
+	QUERY_FILE_LAYOUT_FILTER_TYPE_CLUSTERS           QUERY_FILE_LAYOUT_FILTER_TYPE = 1
+	QUERY_FILE_LAYOUT_FILTER_TYPE_FILEID             QUERY_FILE_LAYOUT_FILTER_TYPE = 2
+	QUERY_FILE_LAYOUT_FILTER_TYPE_STORAGE_RESERVE_ID QUERY_FILE_LAYOUT_FILTER_TYPE = 3
+	QUERY_FILE_LAYOUT_NUM_FILTER_TYPES               QUERY_FILE_LAYOUT_FILTER_TYPE = 4
 )
 
 type FILE_STORAGE_TIER_CLASS int32
 
 const (
-	FileStorageTierClassUnspecified = 0
-	FileStorageTierClassCapacity = 1
-	FileStorageTierClassPerformance = 2
-	FileStorageTierClassMax = 3
+	FileStorageTierClassUnspecified FILE_STORAGE_TIER_CLASS = 0
+	FileStorageTierClassCapacity    FILE_STORAGE_TIER_CLASS = 1
+	FileStorageTierClassPerformance FILE_STORAGE_TIER_CLASS = 2
+	FileStorageTierClassMax         FILE_STORAGE_TIER_CLASS = 3
 )
 
 type REFS_SMR_VOLUME_GC_STATE int32
 
 const (
-	SmrGcStateInactive = 0
-	SmrGcStatePaused = 1
-	SmrGcStateActive = 2
-	SmrGcStateActiveFullSpeed = 3
+	SmrGcStateInactive        REFS_SMR_VOLUME_GC_STATE = 0
+	SmrGcStatePaused          REFS_SMR_VOLUME_GC_STATE = 1
+	SmrGcStateActive          REFS_SMR_VOLUME_GC_STATE = 2
+	SmrGcStateActiveFullSpeed REFS_SMR_VOLUME_GC_STATE = 3
 )
 
 type REFS_SMR_VOLUME_GC_ACTION int32
 
 const (
-	SmrGcActionStart = 1
-	SmrGcActionStartFullSpeed = 2
-	SmrGcActionPause = 3
-	SmrGcActionStop = 4
+	SmrGcActionStart          REFS_SMR_VOLUME_GC_ACTION = 1
+	SmrGcActionStartFullSpeed REFS_SMR_VOLUME_GC_ACTION = 2
+	SmrGcActionPause          REFS_SMR_VOLUME_GC_ACTION = 3
+	SmrGcActionStop           REFS_SMR_VOLUME_GC_ACTION = 4
 )
 
 type REFS_SMR_VOLUME_GC_METHOD int32
 
 const (
-	SmrGcMethodCompaction = 1
-	SmrGcMethodCompression = 2
-	SmrGcMethodRotation = 3
+	SmrGcMethodCompaction  REFS_SMR_VOLUME_GC_METHOD = 1
+	SmrGcMethodCompression REFS_SMR_VOLUME_GC_METHOD = 2
+	SmrGcMethodRotation    REFS_SMR_VOLUME_GC_METHOD = 3
 )
 
 type VIRTUAL_STORAGE_BEHAVIOR_CODE int32
 
 const (
-	VirtualStorageBehaviorUndefined = 0
-	VirtualStorageBehaviorCacheWriteThrough = 1
-	VirtualStorageBehaviorCacheWriteBack = 2
+	VirtualStorageBehaviorUndefined         VIRTUAL_STORAGE_BEHAVIOR_CODE = 0
+	VirtualStorageBehaviorCacheWriteThrough VIRTUAL_STORAGE_BEHAVIOR_CODE = 1
+	VirtualStorageBehaviorCacheWriteBack    VIRTUAL_STORAGE_BEHAVIOR_CODE = 2
 )
 
 type BIDI_TYPE int32
 
 const (
-	BIDI_NULL = 0
-	BIDI_INT = 1
-	BIDI_FLOAT = 2
-	BIDI_BOOL = 3
-	BIDI_STRING = 4
-	BIDI_TEXT = 5
-	BIDI_ENUM = 6
-	BIDI_BLOB = 7
+	BIDI_NULL   BIDI_TYPE = 0
+	BIDI_INT    BIDI_TYPE = 1
+	BIDI_FLOAT  BIDI_TYPE = 2
+	BIDI_BOOL   BIDI_TYPE = 3
+	BIDI_STRING BIDI_TYPE = 4
+	BIDI_TEXT   BIDI_TYPE = 5
+	BIDI_ENUM   BIDI_TYPE = 6
+	BIDI_BLOB   BIDI_TYPE = 7
 )
 
 type PRINTER_OPTION_FLAGS int32
 
 const (
-	PRINTER_OPTION_NO_CACHE = 1
-	PRINTER_OPTION_CACHE = 2
-	PRINTER_OPTION_CLIENT_CHANGE = 4
-	PRINTER_OPTION_NO_CLIENT_DATA = 8
+	PRINTER_OPTION_NO_CACHE       PRINTER_OPTION_FLAGS = 1
+	PRINTER_OPTION_CACHE          PRINTER_OPTION_FLAGS = 2
+	PRINTER_OPTION_CLIENT_CHANGE  PRINTER_OPTION_FLAGS = 4
+	PRINTER_OPTION_NO_CLIENT_DATA PRINTER_OPTION_FLAGS = 8
 )
 
 type EPrintPropertyType int32
 
 const (
-	kPropertyTypeString = 1
-	kPropertyTypeInt32 = 2
-	kPropertyTypeInt64 = 3
-	kPropertyTypeByte = 4
-	kPropertyTypeTime = 5
-	kPropertyTypeDevMode = 6
-	kPropertyTypeSD = 7
-	kPropertyTypeNotificationReply = 8
-	kPropertyTypeNotificationOptions = 9
-	kPropertyTypeBuffer = 10
+	kPropertyTypeString              EPrintPropertyType = 1
+	kPropertyTypeInt32               EPrintPropertyType = 2
+	kPropertyTypeInt64               EPrintPropertyType = 3
+	kPropertyTypeByte                EPrintPropertyType = 4
+	kPropertyTypeTime                EPrintPropertyType = 5
+	kPropertyTypeDevMode             EPrintPropertyType = 6
+	kPropertyTypeSD                  EPrintPropertyType = 7
+	kPropertyTypeNotificationReply   EPrintPropertyType = 8
+	kPropertyTypeNotificationOptions EPrintPropertyType = 9
+	kPropertyTypeBuffer              EPrintPropertyType = 10
 )
 
 type EPrintXPSJobProgress int32
 
 const (
-	kAddingDocumentSequence = 0
-	kDocumentSequenceAdded = 1
-	kAddingFixedDocument = 2
-	kFixedDocumentAdded = 3
-	kAddingFixedPage = 4
-	kFixedPageAdded = 5
-	kResourceAdded = 6
-	kFontAdded = 7
-	kImageAdded = 8
-	kXpsDocumentCommitted = 9
+	kAddingDocumentSequence EPrintXPSJobProgress = 0
+	kDocumentSequenceAdded  EPrintXPSJobProgress = 1
+	kAddingFixedDocument    EPrintXPSJobProgress = 2
+	kFixedDocumentAdded     EPrintXPSJobProgress = 3
+	kAddingFixedPage        EPrintXPSJobProgress = 4
+	kFixedPageAdded         EPrintXPSJobProgress = 5
+	kResourceAdded          EPrintXPSJobProgress = 6
+	kFontAdded              EPrintXPSJobProgress = 7
+	kImageAdded             EPrintXPSJobProgress = 8
+	kXpsDocumentCommitted   EPrintXPSJobProgress = 9
 )
 
 type EPrintXPSJobOperation int32
 
 const (
-	kJobProduction = 1
-	kJobConsumption = 2
+	kJobProduction  EPrintXPSJobOperation = 1
+	kJobConsumption EPrintXPSJobOperation = 2
 )
 
 type PRINT_EXECUTION_CONTEXT int32
 
 const (
-	PRINT_EXECUTION_CONTEXT_APPLICATION = 0
-	PRINT_EXECUTION_CONTEXT_SPOOLER_SERVICE = 1
-	PRINT_EXECUTION_CONTEXT_SPOOLER_ISOLATION_HOST = 2
-	PRINT_EXECUTION_CONTEXT_FILTER_PIPELINE = 3
-	PRINT_EXECUTION_CONTEXT_WOW64 = 4
+	PRINT_EXECUTION_CONTEXT_APPLICATION            PRINT_EXECUTION_CONTEXT = 0
+	PRINT_EXECUTION_CONTEXT_SPOOLER_SERVICE        PRINT_EXECUTION_CONTEXT = 1
+	PRINT_EXECUTION_CONTEXT_SPOOLER_ISOLATION_HOST PRINT_EXECUTION_CONTEXT = 2
+	PRINT_EXECUTION_CONTEXT_FILTER_PIPELINE        PRINT_EXECUTION_CONTEXT = 3
+	PRINT_EXECUTION_CONTEXT_WOW64                  PRINT_EXECUTION_CONTEXT = 4
 )
 
 type DISPATCHERQUEUE_THREAD_APARTMENTTYPE int32
 
 const (
-	DQTAT_COM_NONE = 0
-	DQTAT_COM_ASTA = 1
-	DQTAT_COM_STA = 2
+	DQTAT_COM_NONE DISPATCHERQUEUE_THREAD_APARTMENTTYPE = 0
+	DQTAT_COM_ASTA DISPATCHERQUEUE_THREAD_APARTMENTTYPE = 1
+	DQTAT_COM_STA  DISPATCHERQUEUE_THREAD_APARTMENTTYPE = 2
 )
 
 type DISPATCHERQUEUE_THREAD_TYPE int32
 
 const (
-	DQTYPE_THREAD_DEDICATED = 1
-	DQTYPE_THREAD_CURRENT = 2
+	DQTYPE_THREAD_DEDICATED DISPATCHERQUEUE_THREAD_TYPE = 1
+	DQTYPE_THREAD_CURRENT   DISPATCHERQUEUE_THREAD_TYPE = 2
 )
 
 type VDS_STORAGE_IDENTIFIER_CODE_SET int32
 
 const (
-	VDSStorageIdCodeSetReserved = 0
-	VDSStorageIdCodeSetBinary = 1
-	VDSStorageIdCodeSetAscii = 2
-	VDSStorageIdCodeSetUtf8 = 3
+	VDSStorageIdCodeSetReserved VDS_STORAGE_IDENTIFIER_CODE_SET = 0
+	VDSStorageIdCodeSetBinary   VDS_STORAGE_IDENTIFIER_CODE_SET = 1
+	VDSStorageIdCodeSetAscii    VDS_STORAGE_IDENTIFIER_CODE_SET = 2
+	VDSStorageIdCodeSetUtf8     VDS_STORAGE_IDENTIFIER_CODE_SET = 3
 )
 
 type VDS_STORAGE_IDENTIFIER_TYPE int32
 
 const (
-	VDSStorageIdTypeVendorSpecific = 0
-	VDSStorageIdTypeVendorId = 1
-	VDSStorageIdTypeEUI64 = 2
-	VDSStorageIdTypeFCPHName = 3
-	VDSStorageIdTypePortRelative = 4
-	VDSStorageIdTypeTargetPortGroup = 5
-	VDSStorageIdTypeLogicalUnitGroup = 6
-	VDSStorageIdTypeMD5LogicalUnitIdentifier = 7
-	VDSStorageIdTypeScsiNameString = 8
+	VDSStorageIdTypeVendorSpecific           VDS_STORAGE_IDENTIFIER_TYPE = 0
+	VDSStorageIdTypeVendorId                 VDS_STORAGE_IDENTIFIER_TYPE = 1
+	VDSStorageIdTypeEUI64                    VDS_STORAGE_IDENTIFIER_TYPE = 2
+	VDSStorageIdTypeFCPHName                 VDS_STORAGE_IDENTIFIER_TYPE = 3
+	VDSStorageIdTypePortRelative             VDS_STORAGE_IDENTIFIER_TYPE = 4
+	VDSStorageIdTypeTargetPortGroup          VDS_STORAGE_IDENTIFIER_TYPE = 5
+	VDSStorageIdTypeLogicalUnitGroup         VDS_STORAGE_IDENTIFIER_TYPE = 6
+	VDSStorageIdTypeMD5LogicalUnitIdentifier VDS_STORAGE_IDENTIFIER_TYPE = 7
+	VDSStorageIdTypeScsiNameString           VDS_STORAGE_IDENTIFIER_TYPE = 8
 )
 
 type VDS_STORAGE_BUS_TYPE int32
 
 const (
-	VDSBusTypeUnknown = 0
-	VDSBusTypeScsi = 1
-	VDSBusTypeAtapi = 2
-	VDSBusTypeAta = 3
-	VDSBusType1394 = 4
-	VDSBusTypeSsa = 5
-	VDSBusTypeFibre = 6
-	VDSBusTypeUsb = 7
-	VDSBusTypeRAID = 8
-	VDSBusTypeiScsi = 9
-	VDSBusTypeSas = 10
-	VDSBusTypeSata = 11
-	VDSBusTypeSd = 12
-	VDSBusTypeMmc = 13
-	VDSBusTypeMax = 14
-	VDSBusTypeVirtual = 14
-	VDSBusTypeFileBackedVirtual = 15
-	VDSBusTypeSpaces = 16
-	VDSBusTypeNVMe = 17
-	VDSBusTypeScm = 18
-	VDSBusTypeUfs = 19
-	VDSBusTypeMaxReserved = 127
+	VDSBusTypeUnknown           VDS_STORAGE_BUS_TYPE = 0
+	VDSBusTypeScsi              VDS_STORAGE_BUS_TYPE = 1
+	VDSBusTypeAtapi             VDS_STORAGE_BUS_TYPE = 2
+	VDSBusTypeAta               VDS_STORAGE_BUS_TYPE = 3
+	VDSBusType1394              VDS_STORAGE_BUS_TYPE = 4
+	VDSBusTypeSsa               VDS_STORAGE_BUS_TYPE = 5
+	VDSBusTypeFibre             VDS_STORAGE_BUS_TYPE = 6
+	VDSBusTypeUsb               VDS_STORAGE_BUS_TYPE = 7
+	VDSBusTypeRAID              VDS_STORAGE_BUS_TYPE = 8
+	VDSBusTypeiScsi             VDS_STORAGE_BUS_TYPE = 9
+	VDSBusTypeSas               VDS_STORAGE_BUS_TYPE = 10
+	VDSBusTypeSata              VDS_STORAGE_BUS_TYPE = 11
+	VDSBusTypeSd                VDS_STORAGE_BUS_TYPE = 12
+	VDSBusTypeMmc               VDS_STORAGE_BUS_TYPE = 13
+	VDSBusTypeMax               VDS_STORAGE_BUS_TYPE = 14
+	VDSBusTypeVirtual           VDS_STORAGE_BUS_TYPE = 14
+	VDSBusTypeFileBackedVirtual VDS_STORAGE_BUS_TYPE = 15
+	VDSBusTypeSpaces            VDS_STORAGE_BUS_TYPE = 16
+	VDSBusTypeNVMe              VDS_STORAGE_BUS_TYPE = 17
+	VDSBusTypeScm               VDS_STORAGE_BUS_TYPE = 18
+	VDSBusTypeUfs               VDS_STORAGE_BUS_TYPE = 19
+	VDSBusTypeMaxReserved       VDS_STORAGE_BUS_TYPE = 127
 )
 
 type VDS_INTERCONNECT_ADDRESS_TYPE int32
 
 const (
-	VDS_IA_UNKNOWN = 0
-	VDS_IA_FCFS = 1
-	VDS_IA_FCPH = 2
-	VDS_IA_FCPH3 = 3
-	VDS_IA_MAC = 4
-	VDS_IA_SCSI = 5
+	VDS_IA_UNKNOWN VDS_INTERCONNECT_ADDRESS_TYPE = 0
+	VDS_IA_FCFS    VDS_INTERCONNECT_ADDRESS_TYPE = 1
+	VDS_IA_FCPH    VDS_INTERCONNECT_ADDRESS_TYPE = 2
+	VDS_IA_FCPH3   VDS_INTERCONNECT_ADDRESS_TYPE = 3
+	VDS_IA_MAC     VDS_INTERCONNECT_ADDRESS_TYPE = 4
+	VDS_IA_SCSI    VDS_INTERCONNECT_ADDRESS_TYPE = 5
 )
 
 type VDS_OBJECT_TYPE int32
 
 const (
-	VDS_OT_UNKNOWN = 0
-	VDS_OT_PROVIDER = 1
-	VDS_OT_PACK = 10
-	VDS_OT_VOLUME = 11
-	VDS_OT_VOLUME_PLEX = 12
-	VDS_OT_DISK = 13
-	VDS_OT_SUB_SYSTEM = 30
-	VDS_OT_CONTROLLER = 31
-	VDS_OT_DRIVE = 32
-	VDS_OT_LUN = 33
-	VDS_OT_LUN_PLEX = 34
-	VDS_OT_PORT = 35
-	VDS_OT_PORTAL = 36
-	VDS_OT_TARGET = 37
-	VDS_OT_PORTAL_GROUP = 38
-	VDS_OT_STORAGE_POOL = 39
-	VDS_OT_HBAPORT = 90
-	VDS_OT_INIT_ADAPTER = 91
-	VDS_OT_INIT_PORTAL = 92
-	VDS_OT_ASYNC = 100
-	VDS_OT_ENUM = 101
-	VDS_OT_VDISK = 200
-	VDS_OT_OPEN_VDISK = 201
+	VDS_OT_UNKNOWN      VDS_OBJECT_TYPE = 0
+	VDS_OT_PROVIDER     VDS_OBJECT_TYPE = 1
+	VDS_OT_PACK         VDS_OBJECT_TYPE = 10
+	VDS_OT_VOLUME       VDS_OBJECT_TYPE = 11
+	VDS_OT_VOLUME_PLEX  VDS_OBJECT_TYPE = 12
+	VDS_OT_DISK         VDS_OBJECT_TYPE = 13
+	VDS_OT_SUB_SYSTEM   VDS_OBJECT_TYPE = 30
+	VDS_OT_CONTROLLER   VDS_OBJECT_TYPE = 31
+	VDS_OT_DRIVE        VDS_OBJECT_TYPE = 32
+	VDS_OT_LUN          VDS_OBJECT_TYPE = 33
+	VDS_OT_LUN_PLEX     VDS_OBJECT_TYPE = 34
+	VDS_OT_PORT         VDS_OBJECT_TYPE = 35
+	VDS_OT_PORTAL       VDS_OBJECT_TYPE = 36
+	VDS_OT_TARGET       VDS_OBJECT_TYPE = 37
+	VDS_OT_PORTAL_GROUP VDS_OBJECT_TYPE = 38
+	VDS_OT_STORAGE_POOL VDS_OBJECT_TYPE = 39
+	VDS_OT_HBAPORT      VDS_OBJECT_TYPE = 90
+	VDS_OT_INIT_ADAPTER VDS_OBJECT_TYPE = 91
+	VDS_OT_INIT_PORTAL  VDS_OBJECT_TYPE = 92
+	VDS_OT_ASYNC        VDS_OBJECT_TYPE = 100
+	VDS_OT_ENUM         VDS_OBJECT_TYPE = 101
+	VDS_OT_VDISK        VDS_OBJECT_TYPE = 200
+	VDS_OT_OPEN_VDISK   VDS_OBJECT_TYPE = 201
 )
 
 type VDS_PROVIDER_TYPE int32
 
 const (
-	VDS_PT_UNKNOWN = 0
-	VDS_PT_SOFTWARE = 1
-	VDS_PT_HARDWARE = 2
-	VDS_PT_VIRTUALDISK = 3
-	VDS_PT_MAX = 4
+	VDS_PT_UNKNOWN     VDS_PROVIDER_TYPE = 0
+	VDS_PT_SOFTWARE    VDS_PROVIDER_TYPE = 1
+	VDS_PT_HARDWARE    VDS_PROVIDER_TYPE = 2
+	VDS_PT_VIRTUALDISK VDS_PROVIDER_TYPE = 3
+	VDS_PT_MAX         VDS_PROVIDER_TYPE = 4
 )
 
 type VDS_PROVIDER_FLAG int32
 
 const (
-	VDS_PF_DYNAMIC = 1
-	VDS_PF_INTERNAL_HARDWARE_PROVIDER = 2
-	VDS_PF_ONE_DISK_ONLY_PER_PACK = 4
-	VDS_PF_ONE_PACK_ONLINE_ONLY = 8
-	VDS_PF_VOLUME_SPACE_MUST_BE_CONTIGUOUS = 16
-	VDS_PF_SUPPORT_DYNAMIC = -2147483648
-	VDS_PF_SUPPORT_FAULT_TOLERANT = 1073741824
-	VDS_PF_SUPPORT_DYNAMIC_1394 = 536870912
-	VDS_PF_SUPPORT_MIRROR = 32
-	VDS_PF_SUPPORT_RAID5 = 64
+	VDS_PF_DYNAMIC                         VDS_PROVIDER_FLAG = 1
+	VDS_PF_INTERNAL_HARDWARE_PROVIDER      VDS_PROVIDER_FLAG = 2
+	VDS_PF_ONE_DISK_ONLY_PER_PACK          VDS_PROVIDER_FLAG = 4
+	VDS_PF_ONE_PACK_ONLINE_ONLY            VDS_PROVIDER_FLAG = 8
+	VDS_PF_VOLUME_SPACE_MUST_BE_CONTIGUOUS VDS_PROVIDER_FLAG = 16
+	VDS_PF_SUPPORT_DYNAMIC                 VDS_PROVIDER_FLAG = -2147483648
+	VDS_PF_SUPPORT_FAULT_TOLERANT          VDS_PROVIDER_FLAG = 1073741824
+	VDS_PF_SUPPORT_DYNAMIC_1394            VDS_PROVIDER_FLAG = 536870912
+	VDS_PF_SUPPORT_MIRROR                  VDS_PROVIDER_FLAG = 32
+	VDS_PF_SUPPORT_RAID5                   VDS_PROVIDER_FLAG = 64
 )
 
 type VDS_RECOVER_ACTION int32
 
 const (
-	VDS_RA_UNKNOWN = 0
-	VDS_RA_REFRESH = 1
-	VDS_RA_RESTART = 2
+	VDS_RA_UNKNOWN VDS_RECOVER_ACTION = 0
+	VDS_RA_REFRESH VDS_RECOVER_ACTION = 1
+	VDS_RA_RESTART VDS_RECOVER_ACTION = 2
 )
 
 type VDS_NOTIFICATION_TARGET_TYPE int32
 
 const (
-	VDS_NTT_UNKNOWN = 0
-	VDS_NTT_PACK = 10
-	VDS_NTT_VOLUME = 11
-	VDS_NTT_DISK = 13
-	VDS_NTT_PARTITION = 60
-	VDS_NTT_DRIVE_LETTER = 61
-	VDS_NTT_FILE_SYSTEM = 62
-	VDS_NTT_MOUNT_POINT = 63
-	VDS_NTT_SUB_SYSTEM = 30
-	VDS_NTT_CONTROLLER = 31
-	VDS_NTT_DRIVE = 32
-	VDS_NTT_LUN = 33
-	VDS_NTT_PORT = 35
-	VDS_NTT_PORTAL = 36
-	VDS_NTT_TARGET = 37
-	VDS_NTT_PORTAL_GROUP = 38
-	VDS_NTT_SERVICE = 200
+	VDS_NTT_UNKNOWN      VDS_NOTIFICATION_TARGET_TYPE = 0
+	VDS_NTT_PACK         VDS_NOTIFICATION_TARGET_TYPE = 10
+	VDS_NTT_VOLUME       VDS_NOTIFICATION_TARGET_TYPE = 11
+	VDS_NTT_DISK         VDS_NOTIFICATION_TARGET_TYPE = 13
+	VDS_NTT_PARTITION    VDS_NOTIFICATION_TARGET_TYPE = 60
+	VDS_NTT_DRIVE_LETTER VDS_NOTIFICATION_TARGET_TYPE = 61
+	VDS_NTT_FILE_SYSTEM  VDS_NOTIFICATION_TARGET_TYPE = 62
+	VDS_NTT_MOUNT_POINT  VDS_NOTIFICATION_TARGET_TYPE = 63
+	VDS_NTT_SUB_SYSTEM   VDS_NOTIFICATION_TARGET_TYPE = 30
+	VDS_NTT_CONTROLLER   VDS_NOTIFICATION_TARGET_TYPE = 31
+	VDS_NTT_DRIVE        VDS_NOTIFICATION_TARGET_TYPE = 32
+	VDS_NTT_LUN          VDS_NOTIFICATION_TARGET_TYPE = 33
+	VDS_NTT_PORT         VDS_NOTIFICATION_TARGET_TYPE = 35
+	VDS_NTT_PORTAL       VDS_NOTIFICATION_TARGET_TYPE = 36
+	VDS_NTT_TARGET       VDS_NOTIFICATION_TARGET_TYPE = 37
+	VDS_NTT_PORTAL_GROUP VDS_NOTIFICATION_TARGET_TYPE = 38
+	VDS_NTT_SERVICE      VDS_NOTIFICATION_TARGET_TYPE = 200
 )
 
 type VDS_ASYNC_OUTPUT_TYPE int32
 
 const (
-	VDS_ASYNCOUT_UNKNOWN = 0
-	VDS_ASYNCOUT_CREATEVOLUME = 1
-	VDS_ASYNCOUT_EXTENDVOLUME = 2
-	VDS_ASYNCOUT_SHRINKVOLUME = 3
-	VDS_ASYNCOUT_ADDVOLUMEPLEX = 4
-	VDS_ASYNCOUT_BREAKVOLUMEPLEX = 5
-	VDS_ASYNCOUT_REMOVEVOLUMEPLEX = 6
-	VDS_ASYNCOUT_REPAIRVOLUMEPLEX = 7
-	VDS_ASYNCOUT_RECOVERPACK = 8
-	VDS_ASYNCOUT_REPLACEDISK = 9
-	VDS_ASYNCOUT_CREATEPARTITION = 10
-	VDS_ASYNCOUT_CLEAN = 11
-	VDS_ASYNCOUT_CREATELUN = 50
-	VDS_ASYNCOUT_ADDLUNPLEX = 52
-	VDS_ASYNCOUT_REMOVELUNPLEX = 53
-	VDS_ASYNCOUT_EXTENDLUN = 54
-	VDS_ASYNCOUT_SHRINKLUN = 55
-	VDS_ASYNCOUT_RECOVERLUN = 56
-	VDS_ASYNCOUT_LOGINTOTARGET = 60
-	VDS_ASYNCOUT_LOGOUTFROMTARGET = 61
-	VDS_ASYNCOUT_CREATETARGET = 62
-	VDS_ASYNCOUT_CREATEPORTALGROUP = 63
-	VDS_ASYNCOUT_DELETETARGET = 64
-	VDS_ASYNCOUT_ADDPORTAL = 65
-	VDS_ASYNCOUT_REMOVEPORTAL = 66
-	VDS_ASYNCOUT_DELETEPORTALGROUP = 67
-	VDS_ASYNCOUT_FORMAT = 101
-	VDS_ASYNCOUT_CREATE_VDISK = 200
-	VDS_ASYNCOUT_ATTACH_VDISK = 201
-	VDS_ASYNCOUT_COMPACT_VDISK = 202
-	VDS_ASYNCOUT_MERGE_VDISK = 203
-	VDS_ASYNCOUT_EXPAND_VDISK = 204
+	VDS_ASYNCOUT_UNKNOWN           VDS_ASYNC_OUTPUT_TYPE = 0
+	VDS_ASYNCOUT_CREATEVOLUME      VDS_ASYNC_OUTPUT_TYPE = 1
+	VDS_ASYNCOUT_EXTENDVOLUME      VDS_ASYNC_OUTPUT_TYPE = 2
+	VDS_ASYNCOUT_SHRINKVOLUME      VDS_ASYNC_OUTPUT_TYPE = 3
+	VDS_ASYNCOUT_ADDVOLUMEPLEX     VDS_ASYNC_OUTPUT_TYPE = 4
+	VDS_ASYNCOUT_BREAKVOLUMEPLEX   VDS_ASYNC_OUTPUT_TYPE = 5
+	VDS_ASYNCOUT_REMOVEVOLUMEPLEX  VDS_ASYNC_OUTPUT_TYPE = 6
+	VDS_ASYNCOUT_REPAIRVOLUMEPLEX  VDS_ASYNC_OUTPUT_TYPE = 7
+	VDS_ASYNCOUT_RECOVERPACK       VDS_ASYNC_OUTPUT_TYPE = 8
+	VDS_ASYNCOUT_REPLACEDISK       VDS_ASYNC_OUTPUT_TYPE = 9
+	VDS_ASYNCOUT_CREATEPARTITION   VDS_ASYNC_OUTPUT_TYPE = 10
+	VDS_ASYNCOUT_CLEAN             VDS_ASYNC_OUTPUT_TYPE = 11
+	VDS_ASYNCOUT_CREATELUN         VDS_ASYNC_OUTPUT_TYPE = 50
+	VDS_ASYNCOUT_ADDLUNPLEX        VDS_ASYNC_OUTPUT_TYPE = 52
+	VDS_ASYNCOUT_REMOVELUNPLEX     VDS_ASYNC_OUTPUT_TYPE = 53
+	VDS_ASYNCOUT_EXTENDLUN         VDS_ASYNC_OUTPUT_TYPE = 54
+	VDS_ASYNCOUT_SHRINKLUN         VDS_ASYNC_OUTPUT_TYPE = 55
+	VDS_ASYNCOUT_RECOVERLUN        VDS_ASYNC_OUTPUT_TYPE = 56
+	VDS_ASYNCOUT_LOGINTOTARGET     VDS_ASYNC_OUTPUT_TYPE = 60
+	VDS_ASYNCOUT_LOGOUTFROMTARGET  VDS_ASYNC_OUTPUT_TYPE = 61
+	VDS_ASYNCOUT_CREATETARGET      VDS_ASYNC_OUTPUT_TYPE = 62
+	VDS_ASYNCOUT_CREATEPORTALGROUP VDS_ASYNC_OUTPUT_TYPE = 63
+	VDS_ASYNCOUT_DELETETARGET      VDS_ASYNC_OUTPUT_TYPE = 64
+	VDS_ASYNCOUT_ADDPORTAL         VDS_ASYNC_OUTPUT_TYPE = 65
+	VDS_ASYNCOUT_REMOVEPORTAL      VDS_ASYNC_OUTPUT_TYPE = 66
+	VDS_ASYNCOUT_DELETEPORTALGROUP VDS_ASYNC_OUTPUT_TYPE = 67
+	VDS_ASYNCOUT_FORMAT            VDS_ASYNC_OUTPUT_TYPE = 101
+	VDS_ASYNCOUT_CREATE_VDISK      VDS_ASYNC_OUTPUT_TYPE = 200
+	VDS_ASYNCOUT_ATTACH_VDISK      VDS_ASYNC_OUTPUT_TYPE = 201
+	VDS_ASYNCOUT_COMPACT_VDISK     VDS_ASYNC_OUTPUT_TYPE = 202
+	VDS_ASYNCOUT_MERGE_VDISK       VDS_ASYNC_OUTPUT_TYPE = 203
+	VDS_ASYNCOUT_EXPAND_VDISK      VDS_ASYNC_OUTPUT_TYPE = 204
 )
 
 type VDS_IPADDRESS_TYPE int32
 
 const (
-	VDS_IPT_TEXT = 0
-	VDS_IPT_IPV4 = 1
-	VDS_IPT_IPV6 = 2
-	VDS_IPT_EMPTY = 3
+	VDS_IPT_TEXT  VDS_IPADDRESS_TYPE = 0
+	VDS_IPT_IPV4  VDS_IPADDRESS_TYPE = 1
+	VDS_IPT_IPV6  VDS_IPADDRESS_TYPE = 2
+	VDS_IPT_EMPTY VDS_IPADDRESS_TYPE = 3
 )
 
 type VDS_HEALTH int32
 
 const (
-	VDS_H_UNKNOWN = 0
-	VDS_H_HEALTHY = 1
-	VDS_H_REBUILDING = 2
-	VDS_H_STALE = 3
-	VDS_H_FAILING = 4
-	VDS_H_FAILING_REDUNDANCY = 5
-	VDS_H_FAILED_REDUNDANCY = 6
-	VDS_H_FAILED_REDUNDANCY_FAILING = 7
-	VDS_H_FAILED = 8
-	VDS_H_REPLACED = 9
-	VDS_H_PENDING_FAILURE = 10
-	VDS_H_DEGRADED = 11
+	VDS_H_UNKNOWN                   VDS_HEALTH = 0
+	VDS_H_HEALTHY                   VDS_HEALTH = 1
+	VDS_H_REBUILDING                VDS_HEALTH = 2
+	VDS_H_STALE                     VDS_HEALTH = 3
+	VDS_H_FAILING                   VDS_HEALTH = 4
+	VDS_H_FAILING_REDUNDANCY        VDS_HEALTH = 5
+	VDS_H_FAILED_REDUNDANCY         VDS_HEALTH = 6
+	VDS_H_FAILED_REDUNDANCY_FAILING VDS_HEALTH = 7
+	VDS_H_FAILED                    VDS_HEALTH = 8
+	VDS_H_REPLACED                  VDS_HEALTH = 9
+	VDS_H_PENDING_FAILURE           VDS_HEALTH = 10
+	VDS_H_DEGRADED                  VDS_HEALTH = 11
 )
 
 type VDS_TRANSITION_STATE int32
 
 const (
-	VDS_TS_UNKNOWN = 0
-	VDS_TS_STABLE = 1
-	VDS_TS_EXTENDING = 2
-	VDS_TS_SHRINKING = 3
-	VDS_TS_RECONFIGING = 4
-	VDS_TS_RESTRIPING = 5
+	VDS_TS_UNKNOWN     VDS_TRANSITION_STATE = 0
+	VDS_TS_STABLE      VDS_TRANSITION_STATE = 1
+	VDS_TS_EXTENDING   VDS_TRANSITION_STATE = 2
+	VDS_TS_SHRINKING   VDS_TRANSITION_STATE = 3
+	VDS_TS_RECONFIGING VDS_TRANSITION_STATE = 4
+	VDS_TS_RESTRIPING  VDS_TRANSITION_STATE = 5
 )
 
 type VDS_FILE_SYSTEM_TYPE int32
 
 const (
-	VDS_FST_UNKNOWN = 0
-	VDS_FST_RAW = 1
-	VDS_FST_FAT = 2
-	VDS_FST_FAT32 = 3
-	VDS_FST_NTFS = 4
-	VDS_FST_CDFS = 5
-	VDS_FST_UDF = 6
-	VDS_FST_EXFAT = 7
-	VDS_FST_CSVFS = 8
-	VDS_FST_REFS = 9
+	VDS_FST_UNKNOWN VDS_FILE_SYSTEM_TYPE = 0
+	VDS_FST_RAW     VDS_FILE_SYSTEM_TYPE = 1
+	VDS_FST_FAT     VDS_FILE_SYSTEM_TYPE = 2
+	VDS_FST_FAT32   VDS_FILE_SYSTEM_TYPE = 3
+	VDS_FST_NTFS    VDS_FILE_SYSTEM_TYPE = 4
+	VDS_FST_CDFS    VDS_FILE_SYSTEM_TYPE = 5
+	VDS_FST_UDF     VDS_FILE_SYSTEM_TYPE = 6
+	VDS_FST_EXFAT   VDS_FILE_SYSTEM_TYPE = 7
+	VDS_FST_CSVFS   VDS_FILE_SYSTEM_TYPE = 8
+	VDS_FST_REFS    VDS_FILE_SYSTEM_TYPE = 9
 )
 
 type VDS_HBAPORT_TYPE int32
 
 const (
-	VDS_HPT_UNKNOWN = 1
-	VDS_HPT_OTHER = 2
-	VDS_HPT_NOTPRESENT = 3
-	VDS_HPT_NPORT = 5
-	VDS_HPT_NLPORT = 6
-	VDS_HPT_FLPORT = 7
-	VDS_HPT_FPORT = 8
-	VDS_HPT_EPORT = 9
-	VDS_HPT_GPORT = 10
-	VDS_HPT_LPORT = 20
-	VDS_HPT_PTP = 21
+	VDS_HPT_UNKNOWN    VDS_HBAPORT_TYPE = 1
+	VDS_HPT_OTHER      VDS_HBAPORT_TYPE = 2
+	VDS_HPT_NOTPRESENT VDS_HBAPORT_TYPE = 3
+	VDS_HPT_NPORT      VDS_HBAPORT_TYPE = 5
+	VDS_HPT_NLPORT     VDS_HBAPORT_TYPE = 6
+	VDS_HPT_FLPORT     VDS_HBAPORT_TYPE = 7
+	VDS_HPT_FPORT      VDS_HBAPORT_TYPE = 8
+	VDS_HPT_EPORT      VDS_HBAPORT_TYPE = 9
+	VDS_HPT_GPORT      VDS_HBAPORT_TYPE = 10
+	VDS_HPT_LPORT      VDS_HBAPORT_TYPE = 20
+	VDS_HPT_PTP        VDS_HBAPORT_TYPE = 21
 )
 
 type VDS_HBAPORT_STATUS int32
 
 const (
-	VDS_HPS_UNKNOWN = 1
-	VDS_HPS_ONLINE = 2
-	VDS_HPS_OFFLINE = 3
-	VDS_HPS_BYPASSED = 4
-	VDS_HPS_DIAGNOSTICS = 5
-	VDS_HPS_LINKDOWN = 6
-	VDS_HPS_ERROR = 7
-	VDS_HPS_LOOPBACK = 8
+	VDS_HPS_UNKNOWN     VDS_HBAPORT_STATUS = 1
+	VDS_HPS_ONLINE      VDS_HBAPORT_STATUS = 2
+	VDS_HPS_OFFLINE     VDS_HBAPORT_STATUS = 3
+	VDS_HPS_BYPASSED    VDS_HBAPORT_STATUS = 4
+	VDS_HPS_DIAGNOSTICS VDS_HBAPORT_STATUS = 5
+	VDS_HPS_LINKDOWN    VDS_HBAPORT_STATUS = 6
+	VDS_HPS_ERROR       VDS_HBAPORT_STATUS = 7
+	VDS_HPS_LOOPBACK    VDS_HBAPORT_STATUS = 8
 )
 
 type VDS_HBAPORT_SPEED_FLAG int32
 
 const (
-	VDS_HSF_UNKNOWN = 0
-	VDS_HSF_1GBIT = 1
-	VDS_HSF_2GBIT = 2
-	VDS_HSF_10GBIT = 4
-	VDS_HSF_4GBIT = 8
-	VDS_HSF_NOT_NEGOTIATED = 32768
+	VDS_HSF_UNKNOWN        VDS_HBAPORT_SPEED_FLAG = 0
+	VDS_HSF_1GBIT          VDS_HBAPORT_SPEED_FLAG = 1
+	VDS_HSF_2GBIT          VDS_HBAPORT_SPEED_FLAG = 2
+	VDS_HSF_10GBIT         VDS_HBAPORT_SPEED_FLAG = 4
+	VDS_HSF_4GBIT          VDS_HBAPORT_SPEED_FLAG = 8
+	VDS_HSF_NOT_NEGOTIATED VDS_HBAPORT_SPEED_FLAG = 32768
 )
 
 type VDS_PATH_STATUS int32
 
 const (
-	VDS_MPS_UNKNOWN = 0
-	VDS_MPS_ONLINE = 1
-	VDS_MPS_FAILED = 5
-	VDS_MPS_STANDBY = 7
+	VDS_MPS_UNKNOWN VDS_PATH_STATUS = 0
+	VDS_MPS_ONLINE  VDS_PATH_STATUS = 1
+	VDS_MPS_FAILED  VDS_PATH_STATUS = 5
+	VDS_MPS_STANDBY VDS_PATH_STATUS = 7
 )
 
 type VDS_LOADBALANCE_POLICY_ENUM int32
 
 const (
-	VDS_LBP_UNKNOWN = 0
-	VDS_LBP_FAILOVER = 1
-	VDS_LBP_ROUND_ROBIN = 2
-	VDS_LBP_ROUND_ROBIN_WITH_SUBSET = 3
-	VDS_LBP_DYN_LEAST_QUEUE_DEPTH = 4
-	VDS_LBP_WEIGHTED_PATHS = 5
-	VDS_LBP_LEAST_BLOCKS = 6
-	VDS_LBP_VENDOR_SPECIFIC = 7
+	VDS_LBP_UNKNOWN                 VDS_LOADBALANCE_POLICY_ENUM = 0
+	VDS_LBP_FAILOVER                VDS_LOADBALANCE_POLICY_ENUM = 1
+	VDS_LBP_ROUND_ROBIN             VDS_LOADBALANCE_POLICY_ENUM = 2
+	VDS_LBP_ROUND_ROBIN_WITH_SUBSET VDS_LOADBALANCE_POLICY_ENUM = 3
+	VDS_LBP_DYN_LEAST_QUEUE_DEPTH   VDS_LOADBALANCE_POLICY_ENUM = 4
+	VDS_LBP_WEIGHTED_PATHS          VDS_LOADBALANCE_POLICY_ENUM = 5
+	VDS_LBP_LEAST_BLOCKS            VDS_LOADBALANCE_POLICY_ENUM = 6
+	VDS_LBP_VENDOR_SPECIFIC         VDS_LOADBALANCE_POLICY_ENUM = 7
 )
 
 type VDS_PROVIDER_LBSUPPORT_FLAG int32
 
 const (
-	VDS_LBF_FAILOVER = 1
-	VDS_LBF_ROUND_ROBIN = 2
-	VDS_LBF_ROUND_ROBIN_WITH_SUBSET = 4
-	VDS_LBF_DYN_LEAST_QUEUE_DEPTH = 8
-	VDS_LBF_WEIGHTED_PATHS = 16
-	VDS_LBF_LEAST_BLOCKS = 32
-	VDS_LBF_VENDOR_SPECIFIC = 64
+	VDS_LBF_FAILOVER                VDS_PROVIDER_LBSUPPORT_FLAG = 1
+	VDS_LBF_ROUND_ROBIN             VDS_PROVIDER_LBSUPPORT_FLAG = 2
+	VDS_LBF_ROUND_ROBIN_WITH_SUBSET VDS_PROVIDER_LBSUPPORT_FLAG = 4
+	VDS_LBF_DYN_LEAST_QUEUE_DEPTH   VDS_PROVIDER_LBSUPPORT_FLAG = 8
+	VDS_LBF_WEIGHTED_PATHS          VDS_PROVIDER_LBSUPPORT_FLAG = 16
+	VDS_LBF_LEAST_BLOCKS            VDS_PROVIDER_LBSUPPORT_FLAG = 32
+	VDS_LBF_VENDOR_SPECIFIC         VDS_PROVIDER_LBSUPPORT_FLAG = 64
 )
 
 type VDS_VERSION_SUPPORT_FLAG int32
 
 const (
-	VDS_VSF_1_0 = 1
-	VDS_VSF_1_1 = 2
-	VDS_VSF_2_0 = 4
-	VDS_VSF_2_1 = 8
-	VDS_VSF_3_0 = 16
+	VDS_VSF_1_0 VDS_VERSION_SUPPORT_FLAG = 1
+	VDS_VSF_1_1 VDS_VERSION_SUPPORT_FLAG = 2
+	VDS_VSF_2_0 VDS_VERSION_SUPPORT_FLAG = 4
+	VDS_VSF_2_1 VDS_VERSION_SUPPORT_FLAG = 8
+	VDS_VSF_3_0 VDS_VERSION_SUPPORT_FLAG = 16
 )
 
 type VDS_HWPROVIDER_TYPE int32
 
 const (
-	VDS_HWT_UNKNOWN = 0
-	VDS_HWT_PCI_RAID = 1
-	VDS_HWT_FIBRE_CHANNEL = 2
-	VDS_HWT_ISCSI = 3
-	VDS_HWT_SAS = 4
-	VDS_HWT_HYBRID = 5
+	VDS_HWT_UNKNOWN       VDS_HWPROVIDER_TYPE = 0
+	VDS_HWT_PCI_RAID      VDS_HWPROVIDER_TYPE = 1
+	VDS_HWT_FIBRE_CHANNEL VDS_HWPROVIDER_TYPE = 2
+	VDS_HWT_ISCSI         VDS_HWPROVIDER_TYPE = 3
+	VDS_HWT_SAS           VDS_HWPROVIDER_TYPE = 4
+	VDS_HWT_HYBRID        VDS_HWPROVIDER_TYPE = 5
 )
 
 type VDS_ISCSI_LOGIN_TYPE int32
 
 const (
-	VDS_ILT_MANUAL = 0
-	VDS_ILT_PERSISTENT = 1
-	VDS_ILT_BOOT = 2
+	VDS_ILT_MANUAL     VDS_ISCSI_LOGIN_TYPE = 0
+	VDS_ILT_PERSISTENT VDS_ISCSI_LOGIN_TYPE = 1
+	VDS_ILT_BOOT       VDS_ISCSI_LOGIN_TYPE = 2
 )
 
 type VDS_ISCSI_AUTH_TYPE int32
 
 const (
-	VDS_IAT_NONE = 0
-	VDS_IAT_CHAP = 1
-	VDS_IAT_MUTUAL_CHAP = 2
+	VDS_IAT_NONE        VDS_ISCSI_AUTH_TYPE = 0
+	VDS_IAT_CHAP        VDS_ISCSI_AUTH_TYPE = 1
+	VDS_IAT_MUTUAL_CHAP VDS_ISCSI_AUTH_TYPE = 2
 )
 
 type VDS_ISCSI_IPSEC_FLAG int32
 
 const (
-	VDS_IIF_VALID = 1
-	VDS_IIF_IKE = 2
-	VDS_IIF_MAIN_MODE = 4
-	VDS_IIF_AGGRESSIVE_MODE = 8
-	VDS_IIF_PFS_ENABLE = 16
-	VDS_IIF_TRANSPORT_MODE_PREFERRED = 32
-	VDS_IIF_TUNNEL_MODE_PREFERRED = 64
+	VDS_IIF_VALID                    VDS_ISCSI_IPSEC_FLAG = 1
+	VDS_IIF_IKE                      VDS_ISCSI_IPSEC_FLAG = 2
+	VDS_IIF_MAIN_MODE                VDS_ISCSI_IPSEC_FLAG = 4
+	VDS_IIF_AGGRESSIVE_MODE          VDS_ISCSI_IPSEC_FLAG = 8
+	VDS_IIF_PFS_ENABLE               VDS_ISCSI_IPSEC_FLAG = 16
+	VDS_IIF_TRANSPORT_MODE_PREFERRED VDS_ISCSI_IPSEC_FLAG = 32
+	VDS_IIF_TUNNEL_MODE_PREFERRED    VDS_ISCSI_IPSEC_FLAG = 64
 )
 
 type VDS_ISCSI_LOGIN_FLAG int32
 
 const (
-	VDS_ILF_REQUIRE_IPSEC = 1
-	VDS_ILF_MULTIPATH_ENABLED = 2
+	VDS_ILF_REQUIRE_IPSEC     VDS_ISCSI_LOGIN_FLAG = 1
+	VDS_ILF_MULTIPATH_ENABLED VDS_ISCSI_LOGIN_FLAG = 2
 )
 
 type VDS_SUB_SYSTEM_STATUS int32
 
 const (
-	VDS_SSS_UNKNOWN = 0
-	VDS_SSS_ONLINE = 1
-	VDS_SSS_NOT_READY = 2
-	VDS_SSS_OFFLINE = 4
-	VDS_SSS_FAILED = 5
-	VDS_SSS_PARTIALLY_MANAGED = 9
+	VDS_SSS_UNKNOWN           VDS_SUB_SYSTEM_STATUS = 0
+	VDS_SSS_ONLINE            VDS_SUB_SYSTEM_STATUS = 1
+	VDS_SSS_NOT_READY         VDS_SUB_SYSTEM_STATUS = 2
+	VDS_SSS_OFFLINE           VDS_SUB_SYSTEM_STATUS = 4
+	VDS_SSS_FAILED            VDS_SUB_SYSTEM_STATUS = 5
+	VDS_SSS_PARTIALLY_MANAGED VDS_SUB_SYSTEM_STATUS = 9
 )
 
 type VDS_SUB_SYSTEM_FLAG int32
 
 const (
-	VDS_SF_LUN_MASKING_CAPABLE = 1
-	VDS_SF_LUN_PLEXING_CAPABLE = 2
-	VDS_SF_LUN_REMAPPING_CAPABLE = 4
-	VDS_SF_DRIVE_EXTENT_CAPABLE = 8
-	VDS_SF_HARDWARE_CHECKSUM_CAPABLE = 16
-	VDS_SF_RADIUS_CAPABLE = 32
-	VDS_SF_READ_BACK_VERIFY_CAPABLE = 64
-	VDS_SF_WRITE_THROUGH_CACHING_CAPABLE = 128
-	VDS_SF_SUPPORTS_FAULT_TOLERANT_LUNS = 512
-	VDS_SF_SUPPORTS_NON_FAULT_TOLERANT_LUNS = 1024
-	VDS_SF_SUPPORTS_SIMPLE_LUNS = 2048
-	VDS_SF_SUPPORTS_SPAN_LUNS = 4096
-	VDS_SF_SUPPORTS_STRIPE_LUNS = 8192
-	VDS_SF_SUPPORTS_MIRROR_LUNS = 16384
-	VDS_SF_SUPPORTS_PARITY_LUNS = 32768
-	VDS_SF_SUPPORTS_AUTH_CHAP = 65536
-	VDS_SF_SUPPORTS_AUTH_MUTUAL_CHAP = 131072
-	VDS_SF_SUPPORTS_SIMPLE_TARGET_CONFIG = 262144
-	VDS_SF_SUPPORTS_LUN_NUMBER = 524288
-	VDS_SF_SUPPORTS_MIRRORED_CACHE = 1048576
-	VDS_SF_READ_CACHING_CAPABLE = 2097152
-	VDS_SF_WRITE_CACHING_CAPABLE = 4194304
-	VDS_SF_MEDIA_SCAN_CAPABLE = 8388608
-	VDS_SF_CONSISTENCY_CHECK_CAPABLE = 16777216
+	VDS_SF_LUN_MASKING_CAPABLE              VDS_SUB_SYSTEM_FLAG = 1
+	VDS_SF_LUN_PLEXING_CAPABLE              VDS_SUB_SYSTEM_FLAG = 2
+	VDS_SF_LUN_REMAPPING_CAPABLE            VDS_SUB_SYSTEM_FLAG = 4
+	VDS_SF_DRIVE_EXTENT_CAPABLE             VDS_SUB_SYSTEM_FLAG = 8
+	VDS_SF_HARDWARE_CHECKSUM_CAPABLE        VDS_SUB_SYSTEM_FLAG = 16
+	VDS_SF_RADIUS_CAPABLE                   VDS_SUB_SYSTEM_FLAG = 32
+	VDS_SF_READ_BACK_VERIFY_CAPABLE         VDS_SUB_SYSTEM_FLAG = 64
+	VDS_SF_WRITE_THROUGH_CACHING_CAPABLE    VDS_SUB_SYSTEM_FLAG = 128
+	VDS_SF_SUPPORTS_FAULT_TOLERANT_LUNS     VDS_SUB_SYSTEM_FLAG = 512
+	VDS_SF_SUPPORTS_NON_FAULT_TOLERANT_LUNS VDS_SUB_SYSTEM_FLAG = 1024
+	VDS_SF_SUPPORTS_SIMPLE_LUNS             VDS_SUB_SYSTEM_FLAG = 2048
+	VDS_SF_SUPPORTS_SPAN_LUNS               VDS_SUB_SYSTEM_FLAG = 4096
+	VDS_SF_SUPPORTS_STRIPE_LUNS             VDS_SUB_SYSTEM_FLAG = 8192
+	VDS_SF_SUPPORTS_MIRROR_LUNS             VDS_SUB_SYSTEM_FLAG = 16384
+	VDS_SF_SUPPORTS_PARITY_LUNS             VDS_SUB_SYSTEM_FLAG = 32768
+	VDS_SF_SUPPORTS_AUTH_CHAP               VDS_SUB_SYSTEM_FLAG = 65536
+	VDS_SF_SUPPORTS_AUTH_MUTUAL_CHAP        VDS_SUB_SYSTEM_FLAG = 131072
+	VDS_SF_SUPPORTS_SIMPLE_TARGET_CONFIG    VDS_SUB_SYSTEM_FLAG = 262144
+	VDS_SF_SUPPORTS_LUN_NUMBER              VDS_SUB_SYSTEM_FLAG = 524288
+	VDS_SF_SUPPORTS_MIRRORED_CACHE          VDS_SUB_SYSTEM_FLAG = 1048576
+	VDS_SF_READ_CACHING_CAPABLE             VDS_SUB_SYSTEM_FLAG = 2097152
+	VDS_SF_WRITE_CACHING_CAPABLE            VDS_SUB_SYSTEM_FLAG = 4194304
+	VDS_SF_MEDIA_SCAN_CAPABLE               VDS_SUB_SYSTEM_FLAG = 8388608
+	VDS_SF_CONSISTENCY_CHECK_CAPABLE        VDS_SUB_SYSTEM_FLAG = 16777216
 )
 
 type VDS_SUB_SYSTEM_SUPPORTED_RAID_TYPE_FLAG int32
 
 const (
-	VDS_SF_SUPPORTS_RAID2_LUNS = 1
-	VDS_SF_SUPPORTS_RAID3_LUNS = 2
-	VDS_SF_SUPPORTS_RAID4_LUNS = 4
-	VDS_SF_SUPPORTS_RAID5_LUNS = 8
-	VDS_SF_SUPPORTS_RAID6_LUNS = 16
-	VDS_SF_SUPPORTS_RAID01_LUNS = 32
-	VDS_SF_SUPPORTS_RAID03_LUNS = 64
-	VDS_SF_SUPPORTS_RAID05_LUNS = 128
-	VDS_SF_SUPPORTS_RAID10_LUNS = 256
-	VDS_SF_SUPPORTS_RAID15_LUNS = 512
-	VDS_SF_SUPPORTS_RAID30_LUNS = 1024
-	VDS_SF_SUPPORTS_RAID50_LUNS = 2048
-	VDS_SF_SUPPORTS_RAID51_LUNS = 4096
-	VDS_SF_SUPPORTS_RAID53_LUNS = 8192
-	VDS_SF_SUPPORTS_RAID60_LUNS = 16384
-	VDS_SF_SUPPORTS_RAID61_LUNS = 32768
+	VDS_SF_SUPPORTS_RAID2_LUNS  VDS_SUB_SYSTEM_SUPPORTED_RAID_TYPE_FLAG = 1
+	VDS_SF_SUPPORTS_RAID3_LUNS  VDS_SUB_SYSTEM_SUPPORTED_RAID_TYPE_FLAG = 2
+	VDS_SF_SUPPORTS_RAID4_LUNS  VDS_SUB_SYSTEM_SUPPORTED_RAID_TYPE_FLAG = 4
+	VDS_SF_SUPPORTS_RAID5_LUNS  VDS_SUB_SYSTEM_SUPPORTED_RAID_TYPE_FLAG = 8
+	VDS_SF_SUPPORTS_RAID6_LUNS  VDS_SUB_SYSTEM_SUPPORTED_RAID_TYPE_FLAG = 16
+	VDS_SF_SUPPORTS_RAID01_LUNS VDS_SUB_SYSTEM_SUPPORTED_RAID_TYPE_FLAG = 32
+	VDS_SF_SUPPORTS_RAID03_LUNS VDS_SUB_SYSTEM_SUPPORTED_RAID_TYPE_FLAG = 64
+	VDS_SF_SUPPORTS_RAID05_LUNS VDS_SUB_SYSTEM_SUPPORTED_RAID_TYPE_FLAG = 128
+	VDS_SF_SUPPORTS_RAID10_LUNS VDS_SUB_SYSTEM_SUPPORTED_RAID_TYPE_FLAG = 256
+	VDS_SF_SUPPORTS_RAID15_LUNS VDS_SUB_SYSTEM_SUPPORTED_RAID_TYPE_FLAG = 512
+	VDS_SF_SUPPORTS_RAID30_LUNS VDS_SUB_SYSTEM_SUPPORTED_RAID_TYPE_FLAG = 1024
+	VDS_SF_SUPPORTS_RAID50_LUNS VDS_SUB_SYSTEM_SUPPORTED_RAID_TYPE_FLAG = 2048
+	VDS_SF_SUPPORTS_RAID51_LUNS VDS_SUB_SYSTEM_SUPPORTED_RAID_TYPE_FLAG = 4096
+	VDS_SF_SUPPORTS_RAID53_LUNS VDS_SUB_SYSTEM_SUPPORTED_RAID_TYPE_FLAG = 8192
+	VDS_SF_SUPPORTS_RAID60_LUNS VDS_SUB_SYSTEM_SUPPORTED_RAID_TYPE_FLAG = 16384
+	VDS_SF_SUPPORTS_RAID61_LUNS VDS_SUB_SYSTEM_SUPPORTED_RAID_TYPE_FLAG = 32768
 )
 
 type VDS_INTERCONNECT_FLAG int32
 
 const (
-	VDS_ITF_PCI_RAID = 1
-	VDS_ITF_FIBRE_CHANNEL = 2
-	VDS_ITF_ISCSI = 4
-	VDS_ITF_SAS = 8
+	VDS_ITF_PCI_RAID      VDS_INTERCONNECT_FLAG = 1
+	VDS_ITF_FIBRE_CHANNEL VDS_INTERCONNECT_FLAG = 2
+	VDS_ITF_ISCSI         VDS_INTERCONNECT_FLAG = 4
+	VDS_ITF_SAS           VDS_INTERCONNECT_FLAG = 8
 )
 
 type VDS_CONTROLLER_STATUS int32
 
 const (
-	VDS_CS_UNKNOWN = 0
-	VDS_CS_ONLINE = 1
-	VDS_CS_NOT_READY = 2
-	VDS_CS_OFFLINE = 4
-	VDS_CS_FAILED = 5
-	VDS_CS_REMOVED = 8
+	VDS_CS_UNKNOWN   VDS_CONTROLLER_STATUS = 0
+	VDS_CS_ONLINE    VDS_CONTROLLER_STATUS = 1
+	VDS_CS_NOT_READY VDS_CONTROLLER_STATUS = 2
+	VDS_CS_OFFLINE   VDS_CONTROLLER_STATUS = 4
+	VDS_CS_FAILED    VDS_CONTROLLER_STATUS = 5
+	VDS_CS_REMOVED   VDS_CONTROLLER_STATUS = 8
 )
 
 type VDS_PORT_STATUS int32
 
 const (
-	VDS_PRS_UNKNOWN = 0
-	VDS_PRS_ONLINE = 1
-	VDS_PRS_NOT_READY = 2
-	VDS_PRS_OFFLINE = 4
-	VDS_PRS_FAILED = 5
-	VDS_PRS_REMOVED = 8
+	VDS_PRS_UNKNOWN   VDS_PORT_STATUS = 0
+	VDS_PRS_ONLINE    VDS_PORT_STATUS = 1
+	VDS_PRS_NOT_READY VDS_PORT_STATUS = 2
+	VDS_PRS_OFFLINE   VDS_PORT_STATUS = 4
+	VDS_PRS_FAILED    VDS_PORT_STATUS = 5
+	VDS_PRS_REMOVED   VDS_PORT_STATUS = 8
 )
 
 type VDS_DRIVE_STATUS int32
 
 const (
-	VDS_DRS_UNKNOWN = 0
-	VDS_DRS_ONLINE = 1
-	VDS_DRS_NOT_READY = 2
-	VDS_DRS_OFFLINE = 4
-	VDS_DRS_FAILED = 5
-	VDS_DRS_REMOVED = 8
+	VDS_DRS_UNKNOWN   VDS_DRIVE_STATUS = 0
+	VDS_DRS_ONLINE    VDS_DRIVE_STATUS = 1
+	VDS_DRS_NOT_READY VDS_DRIVE_STATUS = 2
+	VDS_DRS_OFFLINE   VDS_DRIVE_STATUS = 4
+	VDS_DRS_FAILED    VDS_DRIVE_STATUS = 5
+	VDS_DRS_REMOVED   VDS_DRIVE_STATUS = 8
 )
 
 type VDS_DRIVE_FLAG int32
 
 const (
-	VDS_DRF_HOTSPARE = 1
-	VDS_DRF_ASSIGNED = 2
-	VDS_DRF_UNASSIGNED = 4
-	VDS_DRF_HOTSPARE_IN_USE = 8
-	VDS_DRF_HOTSPARE_STANDBY = 16
+	VDS_DRF_HOTSPARE         VDS_DRIVE_FLAG = 1
+	VDS_DRF_ASSIGNED         VDS_DRIVE_FLAG = 2
+	VDS_DRF_UNASSIGNED       VDS_DRIVE_FLAG = 4
+	VDS_DRF_HOTSPARE_IN_USE  VDS_DRIVE_FLAG = 8
+	VDS_DRF_HOTSPARE_STANDBY VDS_DRIVE_FLAG = 16
 )
 
 type VDS_LUN_TYPE int32
 
 const (
-	VDS_LT_UNKNOWN = 0
-	VDS_LT_DEFAULT = 1
-	VDS_LT_FAULT_TOLERANT = 2
-	VDS_LT_NON_FAULT_TOLERANT = 3
-	VDS_LT_SIMPLE = 10
-	VDS_LT_SPAN = 11
-	VDS_LT_STRIPE = 12
-	VDS_LT_MIRROR = 13
-	VDS_LT_PARITY = 14
-	VDS_LT_RAID2 = 15
-	VDS_LT_RAID3 = 16
-	VDS_LT_RAID4 = 17
-	VDS_LT_RAID5 = 18
-	VDS_LT_RAID6 = 19
-	VDS_LT_RAID01 = 20
-	VDS_LT_RAID03 = 21
-	VDS_LT_RAID05 = 22
-	VDS_LT_RAID10 = 23
-	VDS_LT_RAID15 = 24
-	VDS_LT_RAID30 = 25
-	VDS_LT_RAID50 = 26
-	VDS_LT_RAID51 = 27
-	VDS_LT_RAID53 = 28
-	VDS_LT_RAID60 = 29
-	VDS_LT_RAID61 = 30
+	VDS_LT_UNKNOWN            VDS_LUN_TYPE = 0
+	VDS_LT_DEFAULT            VDS_LUN_TYPE = 1
+	VDS_LT_FAULT_TOLERANT     VDS_LUN_TYPE = 2
+	VDS_LT_NON_FAULT_TOLERANT VDS_LUN_TYPE = 3
+	VDS_LT_SIMPLE             VDS_LUN_TYPE = 10
+	VDS_LT_SPAN               VDS_LUN_TYPE = 11
+	VDS_LT_STRIPE             VDS_LUN_TYPE = 12
+	VDS_LT_MIRROR             VDS_LUN_TYPE = 13
+	VDS_LT_PARITY             VDS_LUN_TYPE = 14
+	VDS_LT_RAID2              VDS_LUN_TYPE = 15
+	VDS_LT_RAID3              VDS_LUN_TYPE = 16
+	VDS_LT_RAID4              VDS_LUN_TYPE = 17
+	VDS_LT_RAID5              VDS_LUN_TYPE = 18
+	VDS_LT_RAID6              VDS_LUN_TYPE = 19
+	VDS_LT_RAID01             VDS_LUN_TYPE = 20
+	VDS_LT_RAID03             VDS_LUN_TYPE = 21
+	VDS_LT_RAID05             VDS_LUN_TYPE = 22
+	VDS_LT_RAID10             VDS_LUN_TYPE = 23
+	VDS_LT_RAID15             VDS_LUN_TYPE = 24
+	VDS_LT_RAID30             VDS_LUN_TYPE = 25
+	VDS_LT_RAID50             VDS_LUN_TYPE = 26
+	VDS_LT_RAID51             VDS_LUN_TYPE = 27
+	VDS_LT_RAID53             VDS_LUN_TYPE = 28
+	VDS_LT_RAID60             VDS_LUN_TYPE = 29
+	VDS_LT_RAID61             VDS_LUN_TYPE = 30
 )
 
 type VDS_LUN_STATUS int32
 
 const (
-	VDS_LS_UNKNOWN = 0
-	VDS_LS_ONLINE = 1
-	VDS_LS_NOT_READY = 2
-	VDS_LS_OFFLINE = 4
-	VDS_LS_FAILED = 5
+	VDS_LS_UNKNOWN   VDS_LUN_STATUS = 0
+	VDS_LS_ONLINE    VDS_LUN_STATUS = 1
+	VDS_LS_NOT_READY VDS_LUN_STATUS = 2
+	VDS_LS_OFFLINE   VDS_LUN_STATUS = 4
+	VDS_LS_FAILED    VDS_LUN_STATUS = 5
 )
 
 type VDS_LUN_FLAG int32
 
 const (
-	VDS_LF_LBN_REMAP_ENABLED = 1
-	VDS_LF_READ_BACK_VERIFY_ENABLED = 2
-	VDS_LF_WRITE_THROUGH_CACHING_ENABLED = 4
-	VDS_LF_HARDWARE_CHECKSUM_ENABLED = 8
-	VDS_LF_READ_CACHE_ENABLED = 16
-	VDS_LF_WRITE_CACHE_ENABLED = 32
-	VDS_LF_MEDIA_SCAN_ENABLED = 64
-	VDS_LF_CONSISTENCY_CHECK_ENABLED = 128
-	VDS_LF_SNAPSHOT = 256
+	VDS_LF_LBN_REMAP_ENABLED             VDS_LUN_FLAG = 1
+	VDS_LF_READ_BACK_VERIFY_ENABLED      VDS_LUN_FLAG = 2
+	VDS_LF_WRITE_THROUGH_CACHING_ENABLED VDS_LUN_FLAG = 4
+	VDS_LF_HARDWARE_CHECKSUM_ENABLED     VDS_LUN_FLAG = 8
+	VDS_LF_READ_CACHE_ENABLED            VDS_LUN_FLAG = 16
+	VDS_LF_WRITE_CACHE_ENABLED           VDS_LUN_FLAG = 32
+	VDS_LF_MEDIA_SCAN_ENABLED            VDS_LUN_FLAG = 64
+	VDS_LF_CONSISTENCY_CHECK_ENABLED     VDS_LUN_FLAG = 128
+	VDS_LF_SNAPSHOT                      VDS_LUN_FLAG = 256
 )
 
 type VDS_LUN_PLEX_TYPE int32
 
 const (
-	VDS_LPT_UNKNOWN = 0
-	VDS_LPT_SIMPLE = 10
-	VDS_LPT_SPAN = 11
-	VDS_LPT_STRIPE = 12
-	VDS_LPT_PARITY = 14
-	VDS_LPT_RAID2 = 15
-	VDS_LPT_RAID3 = 16
-	VDS_LPT_RAID4 = 17
-	VDS_LPT_RAID5 = 18
-	VDS_LPT_RAID6 = 19
-	VDS_LPT_RAID03 = 21
-	VDS_LPT_RAID05 = 22
-	VDS_LPT_RAID10 = 23
-	VDS_LPT_RAID15 = 24
-	VDS_LPT_RAID30 = 25
-	VDS_LPT_RAID50 = 26
-	VDS_LPT_RAID53 = 28
-	VDS_LPT_RAID60 = 29
+	VDS_LPT_UNKNOWN VDS_LUN_PLEX_TYPE = 0
+	VDS_LPT_SIMPLE  VDS_LUN_PLEX_TYPE = 10
+	VDS_LPT_SPAN    VDS_LUN_PLEX_TYPE = 11
+	VDS_LPT_STRIPE  VDS_LUN_PLEX_TYPE = 12
+	VDS_LPT_PARITY  VDS_LUN_PLEX_TYPE = 14
+	VDS_LPT_RAID2   VDS_LUN_PLEX_TYPE = 15
+	VDS_LPT_RAID3   VDS_LUN_PLEX_TYPE = 16
+	VDS_LPT_RAID4   VDS_LUN_PLEX_TYPE = 17
+	VDS_LPT_RAID5   VDS_LUN_PLEX_TYPE = 18
+	VDS_LPT_RAID6   VDS_LUN_PLEX_TYPE = 19
+	VDS_LPT_RAID03  VDS_LUN_PLEX_TYPE = 21
+	VDS_LPT_RAID05  VDS_LUN_PLEX_TYPE = 22
+	VDS_LPT_RAID10  VDS_LUN_PLEX_TYPE = 23
+	VDS_LPT_RAID15  VDS_LUN_PLEX_TYPE = 24
+	VDS_LPT_RAID30  VDS_LUN_PLEX_TYPE = 25
+	VDS_LPT_RAID50  VDS_LUN_PLEX_TYPE = 26
+	VDS_LPT_RAID53  VDS_LUN_PLEX_TYPE = 28
+	VDS_LPT_RAID60  VDS_LUN_PLEX_TYPE = 29
 )
 
 type VDS_LUN_PLEX_STATUS int32
 
 const (
-	VDS_LPS_UNKNOWN = 0
-	VDS_LPS_ONLINE = 1
-	VDS_LPS_NOT_READY = 2
-	VDS_LPS_OFFLINE = 4
-	VDS_LPS_FAILED = 5
+	VDS_LPS_UNKNOWN   VDS_LUN_PLEX_STATUS = 0
+	VDS_LPS_ONLINE    VDS_LUN_PLEX_STATUS = 1
+	VDS_LPS_NOT_READY VDS_LUN_PLEX_STATUS = 2
+	VDS_LPS_OFFLINE   VDS_LUN_PLEX_STATUS = 4
+	VDS_LPS_FAILED    VDS_LUN_PLEX_STATUS = 5
 )
 
 type VDS_LUN_PLEX_FLAG int32
 
 const (
-	VDS_LPF_LBN_REMAP_ENABLED = 1
+	VDS_LPF_LBN_REMAP_ENABLED VDS_LUN_PLEX_FLAG = 1
 )
 
 type VDS_ISCSI_PORTAL_STATUS int32
 
 const (
-	VDS_IPS_UNKNOWN = 0
-	VDS_IPS_ONLINE = 1
-	VDS_IPS_NOT_READY = 2
-	VDS_IPS_OFFLINE = 4
-	VDS_IPS_FAILED = 5
+	VDS_IPS_UNKNOWN   VDS_ISCSI_PORTAL_STATUS = 0
+	VDS_IPS_ONLINE    VDS_ISCSI_PORTAL_STATUS = 1
+	VDS_IPS_NOT_READY VDS_ISCSI_PORTAL_STATUS = 2
+	VDS_IPS_OFFLINE   VDS_ISCSI_PORTAL_STATUS = 4
+	VDS_IPS_FAILED    VDS_ISCSI_PORTAL_STATUS = 5
 )
 
 type VDS_STORAGE_POOL_STATUS int32
 
 const (
-	VDS_SPS_UNKNOWN = 0
-	VDS_SPS_ONLINE = 1
-	VDS_SPS_NOT_READY = 2
-	VDS_SPS_OFFLINE = 4
+	VDS_SPS_UNKNOWN   VDS_STORAGE_POOL_STATUS = 0
+	VDS_SPS_ONLINE    VDS_STORAGE_POOL_STATUS = 1
+	VDS_SPS_NOT_READY VDS_STORAGE_POOL_STATUS = 2
+	VDS_SPS_OFFLINE   VDS_STORAGE_POOL_STATUS = 4
 )
 
 type VDS_STORAGE_POOL_TYPE int32
 
 const (
-	VDS_SPT_UNKNOWN = 0
-	VDS_SPT_PRIMORDIAL = 1
-	VDS_SPT_CONCRETE = 2
+	VDS_SPT_UNKNOWN    VDS_STORAGE_POOL_TYPE = 0
+	VDS_SPT_PRIMORDIAL VDS_STORAGE_POOL_TYPE = 1
+	VDS_SPT_CONCRETE   VDS_STORAGE_POOL_TYPE = 2
 )
 
 type VDS_MAINTENANCE_OPERATION int32
 
 const (
-	BlinkLight = 1
-	BeepAlarm = 2
-	SpinDown = 3
-	SpinUp = 4
-	Ping = 5
+	BlinkLight VDS_MAINTENANCE_OPERATION = 1
+	BeepAlarm  VDS_MAINTENANCE_OPERATION = 2
+	SpinDown   VDS_MAINTENANCE_OPERATION = 3
+	SpinUp     VDS_MAINTENANCE_OPERATION = 4
+	Ping       VDS_MAINTENANCE_OPERATION = 5
 )
 
 type VDS_RAID_TYPE int32
 
 const (
-	VDS_RT_UNKNOWN = 0
-	VDS_RT_RAID0 = 10
-	VDS_RT_RAID1 = 11
-	VDS_RT_RAID2 = 12
-	VDS_RT_RAID3 = 13
-	VDS_RT_RAID4 = 14
-	VDS_RT_RAID5 = 15
-	VDS_RT_RAID6 = 16
-	VDS_RT_RAID01 = 17
-	VDS_RT_RAID03 = 18
-	VDS_RT_RAID05 = 19
-	VDS_RT_RAID10 = 20
-	VDS_RT_RAID15 = 21
-	VDS_RT_RAID30 = 22
-	VDS_RT_RAID50 = 23
-	VDS_RT_RAID51 = 24
-	VDS_RT_RAID53 = 25
-	VDS_RT_RAID60 = 26
-	VDS_RT_RAID61 = 27
+	VDS_RT_UNKNOWN VDS_RAID_TYPE = 0
+	VDS_RT_RAID0   VDS_RAID_TYPE = 10
+	VDS_RT_RAID1   VDS_RAID_TYPE = 11
+	VDS_RT_RAID2   VDS_RAID_TYPE = 12
+	VDS_RT_RAID3   VDS_RAID_TYPE = 13
+	VDS_RT_RAID4   VDS_RAID_TYPE = 14
+	VDS_RT_RAID5   VDS_RAID_TYPE = 15
+	VDS_RT_RAID6   VDS_RAID_TYPE = 16
+	VDS_RT_RAID01  VDS_RAID_TYPE = 17
+	VDS_RT_RAID03  VDS_RAID_TYPE = 18
+	VDS_RT_RAID05  VDS_RAID_TYPE = 19
+	VDS_RT_RAID10  VDS_RAID_TYPE = 20
+	VDS_RT_RAID15  VDS_RAID_TYPE = 21
+	VDS_RT_RAID30  VDS_RAID_TYPE = 22
+	VDS_RT_RAID50  VDS_RAID_TYPE = 23
+	VDS_RT_RAID51  VDS_RAID_TYPE = 24
+	VDS_RT_RAID53  VDS_RAID_TYPE = 25
+	VDS_RT_RAID60  VDS_RAID_TYPE = 26
+	VDS_RT_RAID61  VDS_RAID_TYPE = 27
 )
 
 type VSS_OBJECT_TYPE int32
 
 const (
-	VSS_OBJECT_UNKNOWN = 0
-	VSS_OBJECT_NONE = 1
-	VSS_OBJECT_SNAPSHOT_SET = 2
-	VSS_OBJECT_SNAPSHOT = 3
-	VSS_OBJECT_PROVIDER = 4
-	VSS_OBJECT_TYPE_COUNT = 5
+	VSS_OBJECT_UNKNOWN      VSS_OBJECT_TYPE = 0
+	VSS_OBJECT_NONE         VSS_OBJECT_TYPE = 1
+	VSS_OBJECT_SNAPSHOT_SET VSS_OBJECT_TYPE = 2
+	VSS_OBJECT_SNAPSHOT     VSS_OBJECT_TYPE = 3
+	VSS_OBJECT_PROVIDER     VSS_OBJECT_TYPE = 4
+	VSS_OBJECT_TYPE_COUNT   VSS_OBJECT_TYPE = 5
 )
 
 type VSS_SNAPSHOT_STATE int32
 
 const (
-	VSS_SS_UNKNOWN = 0
-	VSS_SS_PREPARING = 1
-	VSS_SS_PROCESSING_PREPARE = 2
-	VSS_SS_PREPARED = 3
-	VSS_SS_PROCESSING_PRECOMMIT = 4
-	VSS_SS_PRECOMMITTED = 5
-	VSS_SS_PROCESSING_COMMIT = 6
-	VSS_SS_COMMITTED = 7
-	VSS_SS_PROCESSING_POSTCOMMIT = 8
-	VSS_SS_PROCESSING_PREFINALCOMMIT = 9
-	VSS_SS_PREFINALCOMMITTED = 10
-	VSS_SS_PROCESSING_POSTFINALCOMMIT = 11
-	VSS_SS_CREATED = 12
-	VSS_SS_ABORTED = 13
-	VSS_SS_DELETED = 14
-	VSS_SS_POSTCOMMITTED = 15
-	VSS_SS_COUNT = 16
+	VSS_SS_UNKNOWN                    VSS_SNAPSHOT_STATE = 0
+	VSS_SS_PREPARING                  VSS_SNAPSHOT_STATE = 1
+	VSS_SS_PROCESSING_PREPARE         VSS_SNAPSHOT_STATE = 2
+	VSS_SS_PREPARED                   VSS_SNAPSHOT_STATE = 3
+	VSS_SS_PROCESSING_PRECOMMIT       VSS_SNAPSHOT_STATE = 4
+	VSS_SS_PRECOMMITTED               VSS_SNAPSHOT_STATE = 5
+	VSS_SS_PROCESSING_COMMIT          VSS_SNAPSHOT_STATE = 6
+	VSS_SS_COMMITTED                  VSS_SNAPSHOT_STATE = 7
+	VSS_SS_PROCESSING_POSTCOMMIT      VSS_SNAPSHOT_STATE = 8
+	VSS_SS_PROCESSING_PREFINALCOMMIT  VSS_SNAPSHOT_STATE = 9
+	VSS_SS_PREFINALCOMMITTED          VSS_SNAPSHOT_STATE = 10
+	VSS_SS_PROCESSING_POSTFINALCOMMIT VSS_SNAPSHOT_STATE = 11
+	VSS_SS_CREATED                    VSS_SNAPSHOT_STATE = 12
+	VSS_SS_ABORTED                    VSS_SNAPSHOT_STATE = 13
+	VSS_SS_DELETED                    VSS_SNAPSHOT_STATE = 14
+	VSS_SS_POSTCOMMITTED              VSS_SNAPSHOT_STATE = 15
+	VSS_SS_COUNT                      VSS_SNAPSHOT_STATE = 16
 )
 
 type VSS_VOLUME_SNAPSHOT_ATTRIBUTES int32
 
 const (
-	VSS_VOLSNAP_ATTR_PERSISTENT = 1
-	VSS_VOLSNAP_ATTR_NO_AUTORECOVERY = 2
-	VSS_VOLSNAP_ATTR_CLIENT_ACCESSIBLE = 4
-	VSS_VOLSNAP_ATTR_NO_AUTO_RELEASE = 8
-	VSS_VOLSNAP_ATTR_NO_WRITERS = 16
-	VSS_VOLSNAP_ATTR_TRANSPORTABLE = 32
-	VSS_VOLSNAP_ATTR_NOT_SURFACED = 64
-	VSS_VOLSNAP_ATTR_NOT_TRANSACTED = 128
-	VSS_VOLSNAP_ATTR_HARDWARE_ASSISTED = 65536
-	VSS_VOLSNAP_ATTR_DIFFERENTIAL = 131072
-	VSS_VOLSNAP_ATTR_PLEX = 262144
-	VSS_VOLSNAP_ATTR_IMPORTED = 524288
-	VSS_VOLSNAP_ATTR_EXPOSED_LOCALLY = 1048576
-	VSS_VOLSNAP_ATTR_EXPOSED_REMOTELY = 2097152
-	VSS_VOLSNAP_ATTR_AUTORECOVER = 4194304
-	VSS_VOLSNAP_ATTR_ROLLBACK_RECOVERY = 8388608
-	VSS_VOLSNAP_ATTR_DELAYED_POSTSNAPSHOT = 16777216
-	VSS_VOLSNAP_ATTR_TXF_RECOVERY = 33554432
-	VSS_VOLSNAP_ATTR_FILE_SHARE = 67108864
+	VSS_VOLSNAP_ATTR_PERSISTENT           VSS_VOLUME_SNAPSHOT_ATTRIBUTES = 1
+	VSS_VOLSNAP_ATTR_NO_AUTORECOVERY      VSS_VOLUME_SNAPSHOT_ATTRIBUTES = 2
+	VSS_VOLSNAP_ATTR_CLIENT_ACCESSIBLE    VSS_VOLUME_SNAPSHOT_ATTRIBUTES = 4
+	VSS_VOLSNAP_ATTR_NO_AUTO_RELEASE      VSS_VOLUME_SNAPSHOT_ATTRIBUTES = 8
+	VSS_VOLSNAP_ATTR_NO_WRITERS           VSS_VOLUME_SNAPSHOT_ATTRIBUTES = 16
+	VSS_VOLSNAP_ATTR_TRANSPORTABLE        VSS_VOLUME_SNAPSHOT_ATTRIBUTES = 32
+	VSS_VOLSNAP_ATTR_NOT_SURFACED         VSS_VOLUME_SNAPSHOT_ATTRIBUTES = 64
+	VSS_VOLSNAP_ATTR_NOT_TRANSACTED       VSS_VOLUME_SNAPSHOT_ATTRIBUTES = 128
+	VSS_VOLSNAP_ATTR_HARDWARE_ASSISTED    VSS_VOLUME_SNAPSHOT_ATTRIBUTES = 65536
+	VSS_VOLSNAP_ATTR_DIFFERENTIAL         VSS_VOLUME_SNAPSHOT_ATTRIBUTES = 131072
+	VSS_VOLSNAP_ATTR_PLEX                 VSS_VOLUME_SNAPSHOT_ATTRIBUTES = 262144
+	VSS_VOLSNAP_ATTR_IMPORTED             VSS_VOLUME_SNAPSHOT_ATTRIBUTES = 524288
+	VSS_VOLSNAP_ATTR_EXPOSED_LOCALLY      VSS_VOLUME_SNAPSHOT_ATTRIBUTES = 1048576
+	VSS_VOLSNAP_ATTR_EXPOSED_REMOTELY     VSS_VOLUME_SNAPSHOT_ATTRIBUTES = 2097152
+	VSS_VOLSNAP_ATTR_AUTORECOVER          VSS_VOLUME_SNAPSHOT_ATTRIBUTES = 4194304
+	VSS_VOLSNAP_ATTR_ROLLBACK_RECOVERY    VSS_VOLUME_SNAPSHOT_ATTRIBUTES = 8388608
+	VSS_VOLSNAP_ATTR_DELAYED_POSTSNAPSHOT VSS_VOLUME_SNAPSHOT_ATTRIBUTES = 16777216
+	VSS_VOLSNAP_ATTR_TXF_RECOVERY         VSS_VOLUME_SNAPSHOT_ATTRIBUTES = 33554432
+	VSS_VOLSNAP_ATTR_FILE_SHARE           VSS_VOLUME_SNAPSHOT_ATTRIBUTES = 67108864
 )
 
 type VSS_SNAPSHOT_CONTEXT int32
 
 const (
-	VSS_CTX_BACKUP = 0
-	VSS_CTX_FILE_SHARE_BACKUP = 16
-	VSS_CTX_NAS_ROLLBACK = 25
-	VSS_CTX_APP_ROLLBACK = 9
-	VSS_CTX_CLIENT_ACCESSIBLE = 29
-	VSS_CTX_CLIENT_ACCESSIBLE_WRITERS = 13
-	VSS_CTX_ALL = -1
+	VSS_CTX_BACKUP                    VSS_SNAPSHOT_CONTEXT = 0
+	VSS_CTX_FILE_SHARE_BACKUP         VSS_SNAPSHOT_CONTEXT = 16
+	VSS_CTX_NAS_ROLLBACK              VSS_SNAPSHOT_CONTEXT = 25
+	VSS_CTX_APP_ROLLBACK              VSS_SNAPSHOT_CONTEXT = 9
+	VSS_CTX_CLIENT_ACCESSIBLE         VSS_SNAPSHOT_CONTEXT = 29
+	VSS_CTX_CLIENT_ACCESSIBLE_WRITERS VSS_SNAPSHOT_CONTEXT = 13
+	VSS_CTX_ALL                       VSS_SNAPSHOT_CONTEXT = -1
 )
 
 type VSS_PROVIDER_CAPABILITIES int32
 
 const (
-	VSS_PRV_CAPABILITY_LEGACY = 1
-	VSS_PRV_CAPABILITY_COMPLIANT = 2
-	VSS_PRV_CAPABILITY_LUN_REPOINT = 4
-	VSS_PRV_CAPABILITY_LUN_RESYNC = 8
-	VSS_PRV_CAPABILITY_OFFLINE_CREATION = 16
-	VSS_PRV_CAPABILITY_MULTIPLE_IMPORT = 32
-	VSS_PRV_CAPABILITY_RECYCLING = 64
-	VSS_PRV_CAPABILITY_PLEX = 128
-	VSS_PRV_CAPABILITY_DIFFERENTIAL = 256
-	VSS_PRV_CAPABILITY_CLUSTERED = 512
+	VSS_PRV_CAPABILITY_LEGACY           VSS_PROVIDER_CAPABILITIES = 1
+	VSS_PRV_CAPABILITY_COMPLIANT        VSS_PROVIDER_CAPABILITIES = 2
+	VSS_PRV_CAPABILITY_LUN_REPOINT      VSS_PROVIDER_CAPABILITIES = 4
+	VSS_PRV_CAPABILITY_LUN_RESYNC       VSS_PROVIDER_CAPABILITIES = 8
+	VSS_PRV_CAPABILITY_OFFLINE_CREATION VSS_PROVIDER_CAPABILITIES = 16
+	VSS_PRV_CAPABILITY_MULTIPLE_IMPORT  VSS_PROVIDER_CAPABILITIES = 32
+	VSS_PRV_CAPABILITY_RECYCLING        VSS_PROVIDER_CAPABILITIES = 64
+	VSS_PRV_CAPABILITY_PLEX             VSS_PROVIDER_CAPABILITIES = 128
+	VSS_PRV_CAPABILITY_DIFFERENTIAL     VSS_PROVIDER_CAPABILITIES = 256
+	VSS_PRV_CAPABILITY_CLUSTERED        VSS_PROVIDER_CAPABILITIES = 512
 )
 
 type VSS_HARDWARE_OPTIONS int32
 
 const (
-	VSS_BREAKEX_FLAG_MASK_LUNS = 1
-	VSS_BREAKEX_FLAG_MAKE_READ_WRITE = 2
-	VSS_BREAKEX_FLAG_REVERT_IDENTITY_ALL = 4
-	VSS_BREAKEX_FLAG_REVERT_IDENTITY_NONE = 8
-	VSS_ONLUNSTATECHANGE_NOTIFY_READ_WRITE = 256
-	VSS_ONLUNSTATECHANGE_NOTIFY_LUN_PRE_RECOVERY = 512
-	VSS_ONLUNSTATECHANGE_NOTIFY_LUN_POST_RECOVERY = 1024
-	VSS_ONLUNSTATECHANGE_DO_MASK_LUNS = 2048
+	VSS_BREAKEX_FLAG_MASK_LUNS                    VSS_HARDWARE_OPTIONS = 1
+	VSS_BREAKEX_FLAG_MAKE_READ_WRITE              VSS_HARDWARE_OPTIONS = 2
+	VSS_BREAKEX_FLAG_REVERT_IDENTITY_ALL          VSS_HARDWARE_OPTIONS = 4
+	VSS_BREAKEX_FLAG_REVERT_IDENTITY_NONE         VSS_HARDWARE_OPTIONS = 8
+	VSS_ONLUNSTATECHANGE_NOTIFY_READ_WRITE        VSS_HARDWARE_OPTIONS = 256
+	VSS_ONLUNSTATECHANGE_NOTIFY_LUN_PRE_RECOVERY  VSS_HARDWARE_OPTIONS = 512
+	VSS_ONLUNSTATECHANGE_NOTIFY_LUN_POST_RECOVERY VSS_HARDWARE_OPTIONS = 1024
+	VSS_ONLUNSTATECHANGE_DO_MASK_LUNS             VSS_HARDWARE_OPTIONS = 2048
 )
 
 type VSS_RECOVERY_OPTIONS int32
 
 const (
-	VSS_RECOVERY_REVERT_IDENTITY_ALL = 256
-	VSS_RECOVERY_NO_VOLUME_CHECK = 512
+	VSS_RECOVERY_REVERT_IDENTITY_ALL VSS_RECOVERY_OPTIONS = 256
+	VSS_RECOVERY_NO_VOLUME_CHECK     VSS_RECOVERY_OPTIONS = 512
 )
 
 type VSS_WRITER_STATE int32
 
 const (
-	VSS_WS_UNKNOWN = 0
-	VSS_WS_STABLE = 1
-	VSS_WS_WAITING_FOR_FREEZE = 2
-	VSS_WS_WAITING_FOR_THAW = 3
-	VSS_WS_WAITING_FOR_POST_SNAPSHOT = 4
-	VSS_WS_WAITING_FOR_BACKUP_COMPLETE = 5
-	VSS_WS_FAILED_AT_IDENTIFY = 6
-	VSS_WS_FAILED_AT_PREPARE_BACKUP = 7
-	VSS_WS_FAILED_AT_PREPARE_SNAPSHOT = 8
-	VSS_WS_FAILED_AT_FREEZE = 9
-	VSS_WS_FAILED_AT_THAW = 10
-	VSS_WS_FAILED_AT_POST_SNAPSHOT = 11
-	VSS_WS_FAILED_AT_BACKUP_COMPLETE = 12
-	VSS_WS_FAILED_AT_PRE_RESTORE = 13
-	VSS_WS_FAILED_AT_POST_RESTORE = 14
-	VSS_WS_FAILED_AT_BACKUPSHUTDOWN = 15
-	VSS_WS_COUNT = 16
+	VSS_WS_UNKNOWN                     VSS_WRITER_STATE = 0
+	VSS_WS_STABLE                      VSS_WRITER_STATE = 1
+	VSS_WS_WAITING_FOR_FREEZE          VSS_WRITER_STATE = 2
+	VSS_WS_WAITING_FOR_THAW            VSS_WRITER_STATE = 3
+	VSS_WS_WAITING_FOR_POST_SNAPSHOT   VSS_WRITER_STATE = 4
+	VSS_WS_WAITING_FOR_BACKUP_COMPLETE VSS_WRITER_STATE = 5
+	VSS_WS_FAILED_AT_IDENTIFY          VSS_WRITER_STATE = 6
+	VSS_WS_FAILED_AT_PREPARE_BACKUP    VSS_WRITER_STATE = 7
+	VSS_WS_FAILED_AT_PREPARE_SNAPSHOT  VSS_WRITER_STATE = 8
+	VSS_WS_FAILED_AT_FREEZE            VSS_WRITER_STATE = 9
+	VSS_WS_FAILED_AT_THAW              VSS_WRITER_STATE = 10
+	VSS_WS_FAILED_AT_POST_SNAPSHOT     VSS_WRITER_STATE = 11
+	VSS_WS_FAILED_AT_BACKUP_COMPLETE   VSS_WRITER_STATE = 12
+	VSS_WS_FAILED_AT_PRE_RESTORE       VSS_WRITER_STATE = 13
+	VSS_WS_FAILED_AT_POST_RESTORE      VSS_WRITER_STATE = 14
+	VSS_WS_FAILED_AT_BACKUPSHUTDOWN    VSS_WRITER_STATE = 15
+	VSS_WS_COUNT                       VSS_WRITER_STATE = 16
 )
 
 type VSS_BACKUP_TYPE int32
 
 const (
-	VSS_BT_UNDEFINED = 0
-	VSS_BT_FULL = 1
-	VSS_BT_INCREMENTAL = 2
-	VSS_BT_DIFFERENTIAL = 3
-	VSS_BT_LOG = 4
-	VSS_BT_COPY = 5
-	VSS_BT_OTHER = 6
+	VSS_BT_UNDEFINED    VSS_BACKUP_TYPE = 0
+	VSS_BT_FULL         VSS_BACKUP_TYPE = 1
+	VSS_BT_INCREMENTAL  VSS_BACKUP_TYPE = 2
+	VSS_BT_DIFFERENTIAL VSS_BACKUP_TYPE = 3
+	VSS_BT_LOG          VSS_BACKUP_TYPE = 4
+	VSS_BT_COPY         VSS_BACKUP_TYPE = 5
+	VSS_BT_OTHER        VSS_BACKUP_TYPE = 6
 )
 
 type VSS_RESTORE_TYPE int32
 
 const (
-	VSS_RTYPE_UNDEFINED = 0
-	VSS_RTYPE_BY_COPY = 1
-	VSS_RTYPE_IMPORT = 2
-	VSS_RTYPE_OTHER = 3
+	VSS_RTYPE_UNDEFINED VSS_RESTORE_TYPE = 0
+	VSS_RTYPE_BY_COPY   VSS_RESTORE_TYPE = 1
+	VSS_RTYPE_IMPORT    VSS_RESTORE_TYPE = 2
+	VSS_RTYPE_OTHER     VSS_RESTORE_TYPE = 3
 )
 
 type VSS_ROLLFORWARD_TYPE int32
 
 const (
-	VSS_RF_UNDEFINED = 0
-	VSS_RF_NONE = 1
-	VSS_RF_ALL = 2
-	VSS_RF_PARTIAL = 3
+	VSS_RF_UNDEFINED VSS_ROLLFORWARD_TYPE = 0
+	VSS_RF_NONE      VSS_ROLLFORWARD_TYPE = 1
+	VSS_RF_ALL       VSS_ROLLFORWARD_TYPE = 2
+	VSS_RF_PARTIAL   VSS_ROLLFORWARD_TYPE = 3
 )
 
 type VSS_PROVIDER_TYPE int32
 
 const (
-	VSS_PROV_UNKNOWN = 0
-	VSS_PROV_SYSTEM = 1
-	VSS_PROV_SOFTWARE = 2
-	VSS_PROV_HARDWARE = 3
-	VSS_PROV_FILESHARE = 4
+	VSS_PROV_UNKNOWN   VSS_PROVIDER_TYPE = 0
+	VSS_PROV_SYSTEM    VSS_PROVIDER_TYPE = 1
+	VSS_PROV_SOFTWARE  VSS_PROVIDER_TYPE = 2
+	VSS_PROV_HARDWARE  VSS_PROVIDER_TYPE = 3
+	VSS_PROV_FILESHARE VSS_PROVIDER_TYPE = 4
 )
 
 type VSS_APPLICATION_LEVEL int32
 
 const (
-	VSS_APP_UNKNOWN = 0
-	VSS_APP_SYSTEM = 1
-	VSS_APP_BACK_END = 2
-	VSS_APP_FRONT_END = 3
-	VSS_APP_SYSTEM_RM = 4
-	VSS_APP_AUTO = -1
+	VSS_APP_UNKNOWN   VSS_APPLICATION_LEVEL = 0
+	VSS_APP_SYSTEM    VSS_APPLICATION_LEVEL = 1
+	VSS_APP_BACK_END  VSS_APPLICATION_LEVEL = 2
+	VSS_APP_FRONT_END VSS_APPLICATION_LEVEL = 3
+	VSS_APP_SYSTEM_RM VSS_APPLICATION_LEVEL = 4
+	VSS_APP_AUTO      VSS_APPLICATION_LEVEL = -1
 )
 
 type VSS_SNAPSHOT_COMPATIBILITY int32
 
 const (
-	VSS_SC_DISABLE_DEFRAG = 1
-	VSS_SC_DISABLE_CONTENTINDEX = 2
+	VSS_SC_DISABLE_DEFRAG       VSS_SNAPSHOT_COMPATIBILITY = 1
+	VSS_SC_DISABLE_CONTENTINDEX VSS_SNAPSHOT_COMPATIBILITY = 2
 )
 
 type VSS_SNAPSHOT_PROPERTY_ID int32
 
 const (
-	VSS_SPROPID_UNKNOWN = 0
-	VSS_SPROPID_SNAPSHOT_ID = 1
-	VSS_SPROPID_SNAPSHOT_SET_ID = 2
-	VSS_SPROPID_SNAPSHOTS_COUNT = 3
-	VSS_SPROPID_SNAPSHOT_DEVICE = 4
-	VSS_SPROPID_ORIGINAL_VOLUME = 5
-	VSS_SPROPID_ORIGINATING_MACHINE = 6
-	VSS_SPROPID_SERVICE_MACHINE = 7
-	VSS_SPROPID_EXPOSED_NAME = 8
-	VSS_SPROPID_EXPOSED_PATH = 9
-	VSS_SPROPID_PROVIDER_ID = 10
-	VSS_SPROPID_SNAPSHOT_ATTRIBUTES = 11
-	VSS_SPROPID_CREATION_TIMESTAMP = 12
-	VSS_SPROPID_STATUS = 13
+	VSS_SPROPID_UNKNOWN             VSS_SNAPSHOT_PROPERTY_ID = 0
+	VSS_SPROPID_SNAPSHOT_ID         VSS_SNAPSHOT_PROPERTY_ID = 1
+	VSS_SPROPID_SNAPSHOT_SET_ID     VSS_SNAPSHOT_PROPERTY_ID = 2
+	VSS_SPROPID_SNAPSHOTS_COUNT     VSS_SNAPSHOT_PROPERTY_ID = 3
+	VSS_SPROPID_SNAPSHOT_DEVICE     VSS_SNAPSHOT_PROPERTY_ID = 4
+	VSS_SPROPID_ORIGINAL_VOLUME     VSS_SNAPSHOT_PROPERTY_ID = 5
+	VSS_SPROPID_ORIGINATING_MACHINE VSS_SNAPSHOT_PROPERTY_ID = 6
+	VSS_SPROPID_SERVICE_MACHINE     VSS_SNAPSHOT_PROPERTY_ID = 7
+	VSS_SPROPID_EXPOSED_NAME        VSS_SNAPSHOT_PROPERTY_ID = 8
+	VSS_SPROPID_EXPOSED_PATH        VSS_SNAPSHOT_PROPERTY_ID = 9
+	VSS_SPROPID_PROVIDER_ID         VSS_SNAPSHOT_PROPERTY_ID = 10
+	VSS_SPROPID_SNAPSHOT_ATTRIBUTES VSS_SNAPSHOT_PROPERTY_ID = 11
+	VSS_SPROPID_CREATION_TIMESTAMP  VSS_SNAPSHOT_PROPERTY_ID = 12
+	VSS_SPROPID_STATUS              VSS_SNAPSHOT_PROPERTY_ID = 13
 )
 
 type VSS_FILE_SPEC_BACKUP_TYPE int32
 
 const (
-	VSS_FSBT_FULL_BACKUP_REQUIRED = 1
-	VSS_FSBT_DIFFERENTIAL_BACKUP_REQUIRED = 2
-	VSS_FSBT_INCREMENTAL_BACKUP_REQUIRED = 4
-	VSS_FSBT_LOG_BACKUP_REQUIRED = 8
-	VSS_FSBT_FULL_SNAPSHOT_REQUIRED = 256
-	VSS_FSBT_DIFFERENTIAL_SNAPSHOT_REQUIRED = 512
-	VSS_FSBT_INCREMENTAL_SNAPSHOT_REQUIRED = 1024
-	VSS_FSBT_LOG_SNAPSHOT_REQUIRED = 2048
-	VSS_FSBT_CREATED_DURING_BACKUP = 65536
-	VSS_FSBT_ALL_BACKUP_REQUIRED = 15
-	VSS_FSBT_ALL_SNAPSHOT_REQUIRED = 3840
+	VSS_FSBT_FULL_BACKUP_REQUIRED           VSS_FILE_SPEC_BACKUP_TYPE = 1
+	VSS_FSBT_DIFFERENTIAL_BACKUP_REQUIRED   VSS_FILE_SPEC_BACKUP_TYPE = 2
+	VSS_FSBT_INCREMENTAL_BACKUP_REQUIRED    VSS_FILE_SPEC_BACKUP_TYPE = 4
+	VSS_FSBT_LOG_BACKUP_REQUIRED            VSS_FILE_SPEC_BACKUP_TYPE = 8
+	VSS_FSBT_FULL_SNAPSHOT_REQUIRED         VSS_FILE_SPEC_BACKUP_TYPE = 256
+	VSS_FSBT_DIFFERENTIAL_SNAPSHOT_REQUIRED VSS_FILE_SPEC_BACKUP_TYPE = 512
+	VSS_FSBT_INCREMENTAL_SNAPSHOT_REQUIRED  VSS_FILE_SPEC_BACKUP_TYPE = 1024
+	VSS_FSBT_LOG_SNAPSHOT_REQUIRED          VSS_FILE_SPEC_BACKUP_TYPE = 2048
+	VSS_FSBT_CREATED_DURING_BACKUP          VSS_FILE_SPEC_BACKUP_TYPE = 65536
+	VSS_FSBT_ALL_BACKUP_REQUIRED            VSS_FILE_SPEC_BACKUP_TYPE = 15
+	VSS_FSBT_ALL_SNAPSHOT_REQUIRED          VSS_FILE_SPEC_BACKUP_TYPE = 3840
 )
 
 type VSS_BACKUP_SCHEMA int32
 
 const (
-	VSS_BS_UNDEFINED = 0
-	VSS_BS_DIFFERENTIAL = 1
-	VSS_BS_INCREMENTAL = 2
-	VSS_BS_EXCLUSIVE_INCREMENTAL_DIFFERENTIAL = 4
-	VSS_BS_LOG = 8
-	VSS_BS_COPY = 16
-	VSS_BS_TIMESTAMPED = 32
-	VSS_BS_LAST_MODIFY = 64
-	VSS_BS_LSN = 128
-	VSS_BS_WRITER_SUPPORTS_NEW_TARGET = 256
-	VSS_BS_WRITER_SUPPORTS_RESTORE_WITH_MOVE = 512
-	VSS_BS_INDEPENDENT_SYSTEM_STATE = 1024
-	VSS_BS_ROLLFORWARD_RESTORE = 4096
-	VSS_BS_RESTORE_RENAME = 8192
-	VSS_BS_AUTHORITATIVE_RESTORE = 16384
-	VSS_BS_WRITER_SUPPORTS_PARALLEL_RESTORES = 32768
+	VSS_BS_UNDEFINED                          VSS_BACKUP_SCHEMA = 0
+	VSS_BS_DIFFERENTIAL                       VSS_BACKUP_SCHEMA = 1
+	VSS_BS_INCREMENTAL                        VSS_BACKUP_SCHEMA = 2
+	VSS_BS_EXCLUSIVE_INCREMENTAL_DIFFERENTIAL VSS_BACKUP_SCHEMA = 4
+	VSS_BS_LOG                                VSS_BACKUP_SCHEMA = 8
+	VSS_BS_COPY                               VSS_BACKUP_SCHEMA = 16
+	VSS_BS_TIMESTAMPED                        VSS_BACKUP_SCHEMA = 32
+	VSS_BS_LAST_MODIFY                        VSS_BACKUP_SCHEMA = 64
+	VSS_BS_LSN                                VSS_BACKUP_SCHEMA = 128
+	VSS_BS_WRITER_SUPPORTS_NEW_TARGET         VSS_BACKUP_SCHEMA = 256
+	VSS_BS_WRITER_SUPPORTS_RESTORE_WITH_MOVE  VSS_BACKUP_SCHEMA = 512
+	VSS_BS_INDEPENDENT_SYSTEM_STATE           VSS_BACKUP_SCHEMA = 1024
+	VSS_BS_ROLLFORWARD_RESTORE                VSS_BACKUP_SCHEMA = 4096
+	VSS_BS_RESTORE_RENAME                     VSS_BACKUP_SCHEMA = 8192
+	VSS_BS_AUTHORITATIVE_RESTORE              VSS_BACKUP_SCHEMA = 16384
+	VSS_BS_WRITER_SUPPORTS_PARALLEL_RESTORES  VSS_BACKUP_SCHEMA = 32768
 )
 
 type VSS_USAGE_TYPE int32
 
 const (
-	VSS_UT_UNDEFINED = 0
-	VSS_UT_BOOTABLESYSTEMSTATE = 1
-	VSS_UT_SYSTEMSERVICE = 2
-	VSS_UT_USERDATA = 3
-	VSS_UT_OTHER = 4
+	VSS_UT_UNDEFINED           VSS_USAGE_TYPE = 0
+	VSS_UT_BOOTABLESYSTEMSTATE VSS_USAGE_TYPE = 1
+	VSS_UT_SYSTEMSERVICE       VSS_USAGE_TYPE = 2
+	VSS_UT_USERDATA            VSS_USAGE_TYPE = 3
+	VSS_UT_OTHER               VSS_USAGE_TYPE = 4
 )
 
 type VSS_SOURCE_TYPE int32
 
 const (
-	VSS_ST_UNDEFINED = 0
-	VSS_ST_TRANSACTEDDB = 1
-	VSS_ST_NONTRANSACTEDDB = 2
-	VSS_ST_OTHER = 3
+	VSS_ST_UNDEFINED       VSS_SOURCE_TYPE = 0
+	VSS_ST_TRANSACTEDDB    VSS_SOURCE_TYPE = 1
+	VSS_ST_NONTRANSACTEDDB VSS_SOURCE_TYPE = 2
+	VSS_ST_OTHER           VSS_SOURCE_TYPE = 3
 )
 
 type VSS_RESTOREMETHOD_ENUM int32
 
 const (
-	VSS_RME_UNDEFINED = 0
-	VSS_RME_RESTORE_IF_NOT_THERE = 1
-	VSS_RME_RESTORE_IF_CAN_REPLACE = 2
-	VSS_RME_STOP_RESTORE_START = 3
-	VSS_RME_RESTORE_TO_ALTERNATE_LOCATION = 4
-	VSS_RME_RESTORE_AT_REBOOT = 5
-	VSS_RME_RESTORE_AT_REBOOT_IF_CANNOT_REPLACE = 6
-	VSS_RME_CUSTOM = 7
-	VSS_RME_RESTORE_STOP_START = 8
+	VSS_RME_UNDEFINED                           VSS_RESTOREMETHOD_ENUM = 0
+	VSS_RME_RESTORE_IF_NOT_THERE                VSS_RESTOREMETHOD_ENUM = 1
+	VSS_RME_RESTORE_IF_CAN_REPLACE              VSS_RESTOREMETHOD_ENUM = 2
+	VSS_RME_STOP_RESTORE_START                  VSS_RESTOREMETHOD_ENUM = 3
+	VSS_RME_RESTORE_TO_ALTERNATE_LOCATION       VSS_RESTOREMETHOD_ENUM = 4
+	VSS_RME_RESTORE_AT_REBOOT                   VSS_RESTOREMETHOD_ENUM = 5
+	VSS_RME_RESTORE_AT_REBOOT_IF_CANNOT_REPLACE VSS_RESTOREMETHOD_ENUM = 6
+	VSS_RME_CUSTOM                              VSS_RESTOREMETHOD_ENUM = 7
+	VSS_RME_RESTORE_STOP_START                  VSS_RESTOREMETHOD_ENUM = 8
 )
 
 type VSS_WRITERRESTORE_ENUM int32
 
 const (
-	VSS_WRE_UNDEFINED = 0
-	VSS_WRE_NEVER = 1
-	VSS_WRE_IF_REPLACE_FAILS = 2
-	VSS_WRE_ALWAYS = 3
+	VSS_WRE_UNDEFINED        VSS_WRITERRESTORE_ENUM = 0
+	VSS_WRE_NEVER            VSS_WRITERRESTORE_ENUM = 1
+	VSS_WRE_IF_REPLACE_FAILS VSS_WRITERRESTORE_ENUM = 2
+	VSS_WRE_ALWAYS           VSS_WRITERRESTORE_ENUM = 3
 )
 
 type VSS_COMPONENT_TYPE int32
 
 const (
-	VSS_CT_UNDEFINED = 0
-	VSS_CT_DATABASE = 1
-	VSS_CT_FILEGROUP = 2
+	VSS_CT_UNDEFINED VSS_COMPONENT_TYPE = 0
+	VSS_CT_DATABASE  VSS_COMPONENT_TYPE = 1
+	VSS_CT_FILEGROUP VSS_COMPONENT_TYPE = 2
 )
 
 type VSS_ALTERNATE_WRITER_STATE int32
 
 const (
-	VSS_AWS_UNDEFINED = 0
-	VSS_AWS_NO_ALTERNATE_WRITER = 1
-	VSS_AWS_ALTERNATE_WRITER_EXISTS = 2
-	VSS_AWS_THIS_IS_ALTERNATE_WRITER = 3
+	VSS_AWS_UNDEFINED                VSS_ALTERNATE_WRITER_STATE = 0
+	VSS_AWS_NO_ALTERNATE_WRITER      VSS_ALTERNATE_WRITER_STATE = 1
+	VSS_AWS_ALTERNATE_WRITER_EXISTS  VSS_ALTERNATE_WRITER_STATE = 2
+	VSS_AWS_THIS_IS_ALTERNATE_WRITER VSS_ALTERNATE_WRITER_STATE = 3
 )
 
 type VSS_SUBSCRIBE_MASK int32
 
 const (
-	VSS_SM_POST_SNAPSHOT_FLAG = 1
-	VSS_SM_BACKUP_EVENTS_FLAG = 2
-	VSS_SM_RESTORE_EVENTS_FLAG = 4
-	VSS_SM_IO_THROTTLING_FLAG = 8
-	VSS_SM_ALL_FLAGS = -1
+	VSS_SM_POST_SNAPSHOT_FLAG  VSS_SUBSCRIBE_MASK = 1
+	VSS_SM_BACKUP_EVENTS_FLAG  VSS_SUBSCRIBE_MASK = 2
+	VSS_SM_RESTORE_EVENTS_FLAG VSS_SUBSCRIBE_MASK = 4
+	VSS_SM_IO_THROTTLING_FLAG  VSS_SUBSCRIBE_MASK = 8
+	VSS_SM_ALL_FLAGS           VSS_SUBSCRIBE_MASK = -1
 )
 
 type VSS_RESTORE_TARGET int32
 
 const (
-	VSS_RT_UNDEFINED = 0
-	VSS_RT_ORIGINAL = 1
-	VSS_RT_ALTERNATE = 2
-	VSS_RT_DIRECTED = 3
-	VSS_RT_ORIGINAL_LOCATION = 4
+	VSS_RT_UNDEFINED         VSS_RESTORE_TARGET = 0
+	VSS_RT_ORIGINAL          VSS_RESTORE_TARGET = 1
+	VSS_RT_ALTERNATE         VSS_RESTORE_TARGET = 2
+	VSS_RT_DIRECTED          VSS_RESTORE_TARGET = 3
+	VSS_RT_ORIGINAL_LOCATION VSS_RESTORE_TARGET = 4
 )
 
 type VSS_FILE_RESTORE_STATUS int32
 
 const (
-	VSS_RS_UNDEFINED = 0
-	VSS_RS_NONE = 1
-	VSS_RS_ALL = 2
-	VSS_RS_FAILED = 3
+	VSS_RS_UNDEFINED VSS_FILE_RESTORE_STATUS = 0
+	VSS_RS_NONE      VSS_FILE_RESTORE_STATUS = 1
+	VSS_RS_ALL       VSS_FILE_RESTORE_STATUS = 2
+	VSS_RS_FAILED    VSS_FILE_RESTORE_STATUS = 3
 )
 
 type VSS_COMPONENT_FLAGS int32
 
 const (
-	VSS_CF_BACKUP_RECOVERY = 1
-	VSS_CF_APP_ROLLBACK_RECOVERY = 2
-	VSS_CF_NOT_SYSTEM_STATE = 4
+	VSS_CF_BACKUP_RECOVERY       VSS_COMPONENT_FLAGS = 1
+	VSS_CF_APP_ROLLBACK_RECOVERY VSS_COMPONENT_FLAGS = 2
+	VSS_CF_NOT_SYSTEM_STATE      VSS_COMPONENT_FLAGS = 4
 )
 
 type VSS_MGMT_OBJECT_TYPE int32
 
 const (
-	VSS_MGMT_OBJECT_UNKNOWN = 0
-	VSS_MGMT_OBJECT_VOLUME = 1
-	VSS_MGMT_OBJECT_DIFF_VOLUME = 2
-	VSS_MGMT_OBJECT_DIFF_AREA = 3
+	VSS_MGMT_OBJECT_UNKNOWN     VSS_MGMT_OBJECT_TYPE = 0
+	VSS_MGMT_OBJECT_VOLUME      VSS_MGMT_OBJECT_TYPE = 1
+	VSS_MGMT_OBJECT_DIFF_VOLUME VSS_MGMT_OBJECT_TYPE = 2
+	VSS_MGMT_OBJECT_DIFF_AREA   VSS_MGMT_OBJECT_TYPE = 3
 )
 
 type VSS_PROTECTION_LEVEL int32
 
 const (
-	VSS_PROTECTION_LEVEL_ORIGINAL_VOLUME = 0
-	VSS_PROTECTION_LEVEL_SNAPSHOT = 1
+	VSS_PROTECTION_LEVEL_ORIGINAL_VOLUME VSS_PROTECTION_LEVEL = 0
+	VSS_PROTECTION_LEVEL_SNAPSHOT        VSS_PROTECTION_LEVEL = 1
 )
 
 type VSS_PROTECTION_FAULT int32
 
 const (
-	VSS_PROTECTION_FAULT_NONE = 0
-	VSS_PROTECTION_FAULT_DIFF_AREA_MISSING = 1
-	VSS_PROTECTION_FAULT_IO_FAILURE_DURING_ONLINE = 2
-	VSS_PROTECTION_FAULT_META_DATA_CORRUPTION = 3
-	VSS_PROTECTION_FAULT_MEMORY_ALLOCATION_FAILURE = 4
-	VSS_PROTECTION_FAULT_MAPPED_MEMORY_FAILURE = 5
-	VSS_PROTECTION_FAULT_COW_READ_FAILURE = 6
-	VSS_PROTECTION_FAULT_COW_WRITE_FAILURE = 7
-	VSS_PROTECTION_FAULT_DIFF_AREA_FULL = 8
-	VSS_PROTECTION_FAULT_GROW_TOO_SLOW = 9
-	VSS_PROTECTION_FAULT_GROW_FAILED = 10
-	VSS_PROTECTION_FAULT_DESTROY_ALL_SNAPSHOTS = 11
-	VSS_PROTECTION_FAULT_FILE_SYSTEM_FAILURE = 12
-	VSS_PROTECTION_FAULT_IO_FAILURE = 13
-	VSS_PROTECTION_FAULT_DIFF_AREA_REMOVED = 14
-	VSS_PROTECTION_FAULT_EXTERNAL_WRITER_TO_DIFF_AREA = 15
-	VSS_PROTECTION_FAULT_MOUNT_DURING_CLUSTER_OFFLINE = 16
+	VSS_PROTECTION_FAULT_NONE                         VSS_PROTECTION_FAULT = 0
+	VSS_PROTECTION_FAULT_DIFF_AREA_MISSING            VSS_PROTECTION_FAULT = 1
+	VSS_PROTECTION_FAULT_IO_FAILURE_DURING_ONLINE     VSS_PROTECTION_FAULT = 2
+	VSS_PROTECTION_FAULT_META_DATA_CORRUPTION         VSS_PROTECTION_FAULT = 3
+	VSS_PROTECTION_FAULT_MEMORY_ALLOCATION_FAILURE    VSS_PROTECTION_FAULT = 4
+	VSS_PROTECTION_FAULT_MAPPED_MEMORY_FAILURE        VSS_PROTECTION_FAULT = 5
+	VSS_PROTECTION_FAULT_COW_READ_FAILURE             VSS_PROTECTION_FAULT = 6
+	VSS_PROTECTION_FAULT_COW_WRITE_FAILURE            VSS_PROTECTION_FAULT = 7
+	VSS_PROTECTION_FAULT_DIFF_AREA_FULL               VSS_PROTECTION_FAULT = 8
+	VSS_PROTECTION_FAULT_GROW_TOO_SLOW                VSS_PROTECTION_FAULT = 9
+	VSS_PROTECTION_FAULT_GROW_FAILED                  VSS_PROTECTION_FAULT = 10
+	VSS_PROTECTION_FAULT_DESTROY_ALL_SNAPSHOTS        VSS_PROTECTION_FAULT = 11
+	VSS_PROTECTION_FAULT_FILE_SYSTEM_FAILURE          VSS_PROTECTION_FAULT = 12
+	VSS_PROTECTION_FAULT_IO_FAILURE                   VSS_PROTECTION_FAULT = 13
+	VSS_PROTECTION_FAULT_DIFF_AREA_REMOVED            VSS_PROTECTION_FAULT = 14
+	VSS_PROTECTION_FAULT_EXTERNAL_WRITER_TO_DIFF_AREA VSS_PROTECTION_FAULT = 15
+	VSS_PROTECTION_FAULT_MOUNT_DURING_CLUSTER_OFFLINE VSS_PROTECTION_FAULT = 16
 )
 
 type D3DLIGHTTYPE int32
 
 const (
-	D3DLIGHT_POINT = 1
-	D3DLIGHT_SPOT = 2
-	D3DLIGHT_DIRECTIONAL = 3
-	D3DLIGHT_PARALLELPOINT = 4
-	D3DLIGHT_FORCE_DWORD = 2147483647
+	D3DLIGHT_POINT         D3DLIGHTTYPE = 1
+	D3DLIGHT_SPOT          D3DLIGHTTYPE = 2
+	D3DLIGHT_DIRECTIONAL   D3DLIGHTTYPE = 3
+	D3DLIGHT_PARALLELPOINT D3DLIGHTTYPE = 4
+	D3DLIGHT_FORCE_DWORD   D3DLIGHTTYPE = 2147483647
 )
 
 type D3DOPCODE int32
 
 const (
-	D3DOP_POINT = 1
-	D3DOP_LINE = 2
-	D3DOP_TRIANGLE = 3
-	D3DOP_MATRIXLOAD = 4
-	D3DOP_MATRIXMULTIPLY = 5
-	D3DOP_STATETRANSFORM = 6
-	D3DOP_STATELIGHT = 7
-	D3DOP_STATERENDER = 8
-	D3DOP_PROCESSVERTICES = 9
-	D3DOP_TEXTURELOAD = 10
-	D3DOP_EXIT = 11
-	D3DOP_BRANCHFORWARD = 12
-	D3DOP_SPAN = 13
-	D3DOP_SETSTATUS = 14
-	D3DOP_FORCE_DWORD = 2147483647
+	D3DOP_POINT           D3DOPCODE = 1
+	D3DOP_LINE            D3DOPCODE = 2
+	D3DOP_TRIANGLE        D3DOPCODE = 3
+	D3DOP_MATRIXLOAD      D3DOPCODE = 4
+	D3DOP_MATRIXMULTIPLY  D3DOPCODE = 5
+	D3DOP_STATETRANSFORM  D3DOPCODE = 6
+	D3DOP_STATELIGHT      D3DOPCODE = 7
+	D3DOP_STATERENDER     D3DOPCODE = 8
+	D3DOP_PROCESSVERTICES D3DOPCODE = 9
+	D3DOP_TEXTURELOAD     D3DOPCODE = 10
+	D3DOP_EXIT            D3DOPCODE = 11
+	D3DOP_BRANCHFORWARD   D3DOPCODE = 12
+	D3DOP_SPAN            D3DOPCODE = 13
+	D3DOP_SETSTATUS       D3DOPCODE = 14
+	D3DOP_FORCE_DWORD     D3DOPCODE = 2147483647
 )
 
 type D3DSHADEMODE int32
 
 const (
-	D3DSHADE_FLAT = 1
-	D3DSHADE_GOURAUD = 2
-	D3DSHADE_PHONG = 3
-	D3DSHADE_FORCE_DWORD = 2147483647
+	D3DSHADE_FLAT        D3DSHADEMODE = 1
+	D3DSHADE_GOURAUD     D3DSHADEMODE = 2
+	D3DSHADE_PHONG       D3DSHADEMODE = 3
+	D3DSHADE_FORCE_DWORD D3DSHADEMODE = 2147483647
 )
 
 type D3DFILLMODE int32
 
 const (
-	D3DFILL_POINT = 1
-	D3DFILL_WIREFRAME = 2
-	D3DFILL_SOLID = 3
-	D3DFILL_FORCE_DWORD = 2147483647
+	D3DFILL_POINT       D3DFILLMODE = 1
+	D3DFILL_WIREFRAME   D3DFILLMODE = 2
+	D3DFILL_SOLID       D3DFILLMODE = 3
+	D3DFILL_FORCE_DWORD D3DFILLMODE = 2147483647
 )
 
 type D3DTEXTUREFILTER int32
 
 const (
-	D3DFILTER_NEAREST = 1
-	D3DFILTER_LINEAR = 2
-	D3DFILTER_MIPNEAREST = 3
-	D3DFILTER_MIPLINEAR = 4
-	D3DFILTER_LINEARMIPNEAREST = 5
-	D3DFILTER_LINEARMIPLINEAR = 6
-	D3DFILTER_FORCE_DWORD = 2147483647
+	D3DFILTER_NEAREST          D3DTEXTUREFILTER = 1
+	D3DFILTER_LINEAR           D3DTEXTUREFILTER = 2
+	D3DFILTER_MIPNEAREST       D3DTEXTUREFILTER = 3
+	D3DFILTER_MIPLINEAR        D3DTEXTUREFILTER = 4
+	D3DFILTER_LINEARMIPNEAREST D3DTEXTUREFILTER = 5
+	D3DFILTER_LINEARMIPLINEAR  D3DTEXTUREFILTER = 6
+	D3DFILTER_FORCE_DWORD      D3DTEXTUREFILTER = 2147483647
 )
 
 type D3DBLEND uint32
 
 const (
-	D3DBLEND_ZERO = 1
-	D3DBLEND_ONE = 2
-	D3DBLEND_SRCCOLOR = 3
-	D3DBLEND_INVSRCCOLOR = 4
-	D3DBLEND_SRCALPHA = 5
-	D3DBLEND_INVSRCALPHA = 6
-	D3DBLEND_DESTALPHA = 7
-	D3DBLEND_INVDESTALPHA = 8
-	D3DBLEND_DESTCOLOR = 9
-	D3DBLEND_INVDESTCOLOR = 10
-	D3DBLEND_SRCALPHASAT = 11
-	D3DBLEND_BOTHSRCALPHA = 12
-	D3DBLEND_BOTHINVSRCALPHA = 13
-	D3DBLEND_FORCE_DWORD = 2147483647
+	D3DBLEND_ZERO            D3DBLEND = 1
+	D3DBLEND_ONE             D3DBLEND = 2
+	D3DBLEND_SRCCOLOR        D3DBLEND = 3
+	D3DBLEND_INVSRCCOLOR     D3DBLEND = 4
+	D3DBLEND_SRCALPHA        D3DBLEND = 5
+	D3DBLEND_INVSRCALPHA     D3DBLEND = 6
+	D3DBLEND_DESTALPHA       D3DBLEND = 7
+	D3DBLEND_INVDESTALPHA    D3DBLEND = 8
+	D3DBLEND_DESTCOLOR       D3DBLEND = 9
+	D3DBLEND_INVDESTCOLOR    D3DBLEND = 10
+	D3DBLEND_SRCALPHASAT     D3DBLEND = 11
+	D3DBLEND_BOTHSRCALPHA    D3DBLEND = 12
+	D3DBLEND_BOTHINVSRCALPHA D3DBLEND = 13
+	D3DBLEND_FORCE_DWORD     D3DBLEND = 2147483647
 )
 
 type D3DTEXTUREBLEND int32
 
 const (
-	D3DTBLEND_DECAL = 1
-	D3DTBLEND_MODULATE = 2
-	D3DTBLEND_DECALALPHA = 3
-	D3DTBLEND_MODULATEALPHA = 4
-	D3DTBLEND_DECALMASK = 5
-	D3DTBLEND_MODULATEMASK = 6
-	D3DTBLEND_COPY = 7
-	D3DTBLEND_ADD = 8
-	D3DTBLEND_FORCE_DWORD = 2147483647
+	D3DTBLEND_DECAL         D3DTEXTUREBLEND = 1
+	D3DTBLEND_MODULATE      D3DTEXTUREBLEND = 2
+	D3DTBLEND_DECALALPHA    D3DTEXTUREBLEND = 3
+	D3DTBLEND_MODULATEALPHA D3DTEXTUREBLEND = 4
+	D3DTBLEND_DECALMASK     D3DTEXTUREBLEND = 5
+	D3DTBLEND_MODULATEMASK  D3DTEXTUREBLEND = 6
+	D3DTBLEND_COPY          D3DTEXTUREBLEND = 7
+	D3DTBLEND_ADD           D3DTEXTUREBLEND = 8
+	D3DTBLEND_FORCE_DWORD   D3DTEXTUREBLEND = 2147483647
 )
 
 type D3DTEXTUREADDRESS int32
 
 const (
-	D3DTADDRESS_WRAP = 1
-	D3DTADDRESS_MIRROR = 2
-	D3DTADDRESS_CLAMP = 3
-	D3DTADDRESS_BORDER = 4
-	D3DTADDRESS_FORCE_DWORD = 2147483647
+	D3DTADDRESS_WRAP        D3DTEXTUREADDRESS = 1
+	D3DTADDRESS_MIRROR      D3DTEXTUREADDRESS = 2
+	D3DTADDRESS_CLAMP       D3DTEXTUREADDRESS = 3
+	D3DTADDRESS_BORDER      D3DTEXTUREADDRESS = 4
+	D3DTADDRESS_FORCE_DWORD D3DTEXTUREADDRESS = 2147483647
 )
 
 type D3DCULL uint32
 
 const (
-	D3DCULL_NONE = 1
-	D3DCULL_CW = 2
-	D3DCULL_CCW = 3
-	D3DCULL_FORCE_DWORD = 2147483647
+	D3DCULL_NONE        D3DCULL = 1
+	D3DCULL_CW          D3DCULL = 2
+	D3DCULL_CCW         D3DCULL = 3
+	D3DCULL_FORCE_DWORD D3DCULL = 2147483647
 )
 
 type D3DCMPFUNC int32
 
 const (
-	D3DCMP_NEVER = 1
-	D3DCMP_LESS = 2
-	D3DCMP_EQUAL = 3
-	D3DCMP_LESSEQUAL = 4
-	D3DCMP_GREATER = 5
-	D3DCMP_NOTEQUAL = 6
-	D3DCMP_GREATEREQUAL = 7
-	D3DCMP_ALWAYS = 8
-	D3DCMP_FORCE_DWORD = 2147483647
+	D3DCMP_NEVER        D3DCMPFUNC = 1
+	D3DCMP_LESS         D3DCMPFUNC = 2
+	D3DCMP_EQUAL        D3DCMPFUNC = 3
+	D3DCMP_LESSEQUAL    D3DCMPFUNC = 4
+	D3DCMP_GREATER      D3DCMPFUNC = 5
+	D3DCMP_NOTEQUAL     D3DCMPFUNC = 6
+	D3DCMP_GREATEREQUAL D3DCMPFUNC = 7
+	D3DCMP_ALWAYS       D3DCMPFUNC = 8
+	D3DCMP_FORCE_DWORD  D3DCMPFUNC = 2147483647
 )
 
 type D3DSTENCILOP uint32
 
 const (
-	D3DSTENCILOP_KEEP = 1
-	D3DSTENCILOP_ZERO = 2
-	D3DSTENCILOP_REPLACE = 3
-	D3DSTENCILOP_INCRSAT = 4
-	D3DSTENCILOP_DECRSAT = 5
-	D3DSTENCILOP_INVERT = 6
-	D3DSTENCILOP_INCR = 7
-	D3DSTENCILOP_DECR = 8
-	D3DSTENCILOP_FORCE_DWORD = 2147483647
+	D3DSTENCILOP_KEEP        D3DSTENCILOP = 1
+	D3DSTENCILOP_ZERO        D3DSTENCILOP = 2
+	D3DSTENCILOP_REPLACE     D3DSTENCILOP = 3
+	D3DSTENCILOP_INCRSAT     D3DSTENCILOP = 4
+	D3DSTENCILOP_DECRSAT     D3DSTENCILOP = 5
+	D3DSTENCILOP_INVERT      D3DSTENCILOP = 6
+	D3DSTENCILOP_INCR        D3DSTENCILOP = 7
+	D3DSTENCILOP_DECR        D3DSTENCILOP = 8
+	D3DSTENCILOP_FORCE_DWORD D3DSTENCILOP = 2147483647
 )
 
 type D3DFOGMODE int32
 
 const (
-	D3DFOG_NONE = 0
-	D3DFOG_EXP = 1
-	D3DFOG_EXP2 = 2
-	D3DFOG_LINEAR = 3
-	D3DFOG_FORCE_DWORD = 2147483647
+	D3DFOG_NONE        D3DFOGMODE = 0
+	D3DFOG_EXP         D3DFOGMODE = 1
+	D3DFOG_EXP2        D3DFOGMODE = 2
+	D3DFOG_LINEAR      D3DFOGMODE = 3
+	D3DFOG_FORCE_DWORD D3DFOGMODE = 2147483647
 )
 
 type D3DZBUFFERTYPE int32
 
 const (
-	D3DZB_FALSE = 0
-	D3DZB_TRUE = 1
-	D3DZB_USEW = 2
-	D3DZB_FORCE_DWORD = 2147483647
+	D3DZB_FALSE       D3DZBUFFERTYPE = 0
+	D3DZB_TRUE        D3DZBUFFERTYPE = 1
+	D3DZB_USEW        D3DZBUFFERTYPE = 2
+	D3DZB_FORCE_DWORD D3DZBUFFERTYPE = 2147483647
 )
 
 type D3DANTIALIASMODE int32
 
 const (
-	D3DANTIALIAS_NONE = 0
-	D3DANTIALIAS_SORTDEPENDENT = 1
-	D3DANTIALIAS_SORTINDEPENDENT = 2
-	D3DANTIALIAS_FORCE_DWORD = 2147483647
+	D3DANTIALIAS_NONE            D3DANTIALIASMODE = 0
+	D3DANTIALIAS_SORTDEPENDENT   D3DANTIALIASMODE = 1
+	D3DANTIALIAS_SORTINDEPENDENT D3DANTIALIASMODE = 2
+	D3DANTIALIAS_FORCE_DWORD     D3DANTIALIASMODE = 2147483647
 )
 
 type D3DVERTEXTYPE int32
 
 const (
-	D3DVT_VERTEX = 1
-	D3DVT_LVERTEX = 2
-	D3DVT_TLVERTEX = 3
-	D3DVT_FORCE_DWORD = 2147483647
+	D3DVT_VERTEX      D3DVERTEXTYPE = 1
+	D3DVT_LVERTEX     D3DVERTEXTYPE = 2
+	D3DVT_TLVERTEX    D3DVERTEXTYPE = 3
+	D3DVT_FORCE_DWORD D3DVERTEXTYPE = 2147483647
 )
 
 type D3DPRIMITIVETYPE int32
 
 const (
-	D3DPT_POINTLIST = 1
-	D3DPT_LINELIST = 2
-	D3DPT_LINESTRIP = 3
-	D3DPT_TRIANGLELIST = 4
-	D3DPT_TRIANGLESTRIP = 5
-	D3DPT_TRIANGLEFAN = 6
-	D3DPT_FORCE_DWORD = 2147483647
+	D3DPT_POINTLIST     D3DPRIMITIVETYPE = 1
+	D3DPT_LINELIST      D3DPRIMITIVETYPE = 2
+	D3DPT_LINESTRIP     D3DPRIMITIVETYPE = 3
+	D3DPT_TRIANGLELIST  D3DPRIMITIVETYPE = 4
+	D3DPT_TRIANGLESTRIP D3DPRIMITIVETYPE = 5
+	D3DPT_TRIANGLEFAN   D3DPRIMITIVETYPE = 6
+	D3DPT_FORCE_DWORD   D3DPRIMITIVETYPE = 2147483647
 )
 
 type D3DTRANSFORMSTATETYPE int32
 
 const (
-	D3DTRANSFORMSTATE_WORLD = 1
-	D3DTRANSFORMSTATE_VIEW = 2
-	D3DTRANSFORMSTATE_PROJECTION = 3
-	D3DTRANSFORMSTATE_WORLD1 = 4
-	D3DTRANSFORMSTATE_WORLD2 = 5
-	D3DTRANSFORMSTATE_WORLD3 = 6
-	D3DTRANSFORMSTATE_TEXTURE0 = 16
-	D3DTRANSFORMSTATE_TEXTURE1 = 17
-	D3DTRANSFORMSTATE_TEXTURE2 = 18
-	D3DTRANSFORMSTATE_TEXTURE3 = 19
-	D3DTRANSFORMSTATE_TEXTURE4 = 20
-	D3DTRANSFORMSTATE_TEXTURE5 = 21
-	D3DTRANSFORMSTATE_TEXTURE6 = 22
-	D3DTRANSFORMSTATE_TEXTURE7 = 23
-	D3DTRANSFORMSTATE_FORCE_DWORD = 2147483647
+	D3DTRANSFORMSTATE_WORLD       D3DTRANSFORMSTATETYPE = 1
+	D3DTRANSFORMSTATE_VIEW        D3DTRANSFORMSTATETYPE = 2
+	D3DTRANSFORMSTATE_PROJECTION  D3DTRANSFORMSTATETYPE = 3
+	D3DTRANSFORMSTATE_WORLD1      D3DTRANSFORMSTATETYPE = 4
+	D3DTRANSFORMSTATE_WORLD2      D3DTRANSFORMSTATETYPE = 5
+	D3DTRANSFORMSTATE_WORLD3      D3DTRANSFORMSTATETYPE = 6
+	D3DTRANSFORMSTATE_TEXTURE0    D3DTRANSFORMSTATETYPE = 16
+	D3DTRANSFORMSTATE_TEXTURE1    D3DTRANSFORMSTATETYPE = 17
+	D3DTRANSFORMSTATE_TEXTURE2    D3DTRANSFORMSTATETYPE = 18
+	D3DTRANSFORMSTATE_TEXTURE3    D3DTRANSFORMSTATETYPE = 19
+	D3DTRANSFORMSTATE_TEXTURE4    D3DTRANSFORMSTATETYPE = 20
+	D3DTRANSFORMSTATE_TEXTURE5    D3DTRANSFORMSTATETYPE = 21
+	D3DTRANSFORMSTATE_TEXTURE6    D3DTRANSFORMSTATETYPE = 22
+	D3DTRANSFORMSTATE_TEXTURE7    D3DTRANSFORMSTATETYPE = 23
+	D3DTRANSFORMSTATE_FORCE_DWORD D3DTRANSFORMSTATETYPE = 2147483647
 )
 
 type D3DLIGHTSTATETYPE int32
 
 const (
-	D3DLIGHTSTATE_MATERIAL = 1
-	D3DLIGHTSTATE_AMBIENT = 2
-	D3DLIGHTSTATE_COLORMODEL = 3
-	D3DLIGHTSTATE_FOGMODE = 4
-	D3DLIGHTSTATE_FOGSTART = 5
-	D3DLIGHTSTATE_FOGEND = 6
-	D3DLIGHTSTATE_FOGDENSITY = 7
-	D3DLIGHTSTATE_COLORVERTEX = 8
-	D3DLIGHTSTATE_FORCE_DWORD = 2147483647
+	D3DLIGHTSTATE_MATERIAL    D3DLIGHTSTATETYPE = 1
+	D3DLIGHTSTATE_AMBIENT     D3DLIGHTSTATETYPE = 2
+	D3DLIGHTSTATE_COLORMODEL  D3DLIGHTSTATETYPE = 3
+	D3DLIGHTSTATE_FOGMODE     D3DLIGHTSTATETYPE = 4
+	D3DLIGHTSTATE_FOGSTART    D3DLIGHTSTATETYPE = 5
+	D3DLIGHTSTATE_FOGEND      D3DLIGHTSTATETYPE = 6
+	D3DLIGHTSTATE_FOGDENSITY  D3DLIGHTSTATETYPE = 7
+	D3DLIGHTSTATE_COLORVERTEX D3DLIGHTSTATETYPE = 8
+	D3DLIGHTSTATE_FORCE_DWORD D3DLIGHTSTATETYPE = 2147483647
 )
 
 type D3DRENDERSTATETYPE int32
 
 const (
-	D3DRENDERSTATE_ANTIALIAS = 2
-	D3DRENDERSTATE_TEXTUREPERSPECTIVE = 4
-	D3DRENDERSTATE_ZENABLE = 7
-	D3DRENDERSTATE_FILLMODE = 8
-	D3DRENDERSTATE_SHADEMODE = 9
-	D3DRENDERSTATE_LINEPATTERN = 10
-	D3DRENDERSTATE_ZWRITEENABLE = 14
-	D3DRENDERSTATE_ALPHATESTENABLE = 15
-	D3DRENDERSTATE_LASTPIXEL = 16
-	D3DRENDERSTATE_SRCBLEND = 19
-	D3DRENDERSTATE_DESTBLEND = 20
-	D3DRENDERSTATE_CULLMODE = 22
-	D3DRENDERSTATE_ZFUNC = 23
-	D3DRENDERSTATE_ALPHAREF = 24
-	D3DRENDERSTATE_ALPHAFUNC = 25
-	D3DRENDERSTATE_DITHERENABLE = 26
-	D3DRENDERSTATE_ALPHABLENDENABLE = 27
-	D3DRENDERSTATE_FOGENABLE = 28
-	D3DRENDERSTATE_SPECULARENABLE = 29
-	D3DRENDERSTATE_ZVISIBLE = 30
-	D3DRENDERSTATE_STIPPLEDALPHA = 33
-	D3DRENDERSTATE_FOGCOLOR = 34
-	D3DRENDERSTATE_FOGTABLEMODE = 35
-	D3DRENDERSTATE_FOGSTART = 36
-	D3DRENDERSTATE_FOGEND = 37
-	D3DRENDERSTATE_FOGDENSITY = 38
-	D3DRENDERSTATE_EDGEANTIALIAS = 40
-	D3DRENDERSTATE_COLORKEYENABLE = 41
-	D3DRENDERSTATE_ZBIAS = 47
-	D3DRENDERSTATE_RANGEFOGENABLE = 48
-	D3DRENDERSTATE_STENCILENABLE = 52
-	D3DRENDERSTATE_STENCILFAIL = 53
-	D3DRENDERSTATE_STENCILZFAIL = 54
-	D3DRENDERSTATE_STENCILPASS = 55
-	D3DRENDERSTATE_STENCILFUNC = 56
-	D3DRENDERSTATE_STENCILREF = 57
-	D3DRENDERSTATE_STENCILMASK = 58
-	D3DRENDERSTATE_STENCILWRITEMASK = 59
-	D3DRENDERSTATE_TEXTUREFACTOR = 60
-	D3DRENDERSTATE_WRAP0 = 128
-	D3DRENDERSTATE_WRAP1 = 129
-	D3DRENDERSTATE_WRAP2 = 130
-	D3DRENDERSTATE_WRAP3 = 131
-	D3DRENDERSTATE_WRAP4 = 132
-	D3DRENDERSTATE_WRAP5 = 133
-	D3DRENDERSTATE_WRAP6 = 134
-	D3DRENDERSTATE_WRAP7 = 135
-	D3DRENDERSTATE_CLIPPING = 136
-	D3DRENDERSTATE_LIGHTING = 137
-	D3DRENDERSTATE_EXTENTS = 138
-	D3DRENDERSTATE_AMBIENT = 139
-	D3DRENDERSTATE_FOGVERTEXMODE = 140
-	D3DRENDERSTATE_COLORVERTEX = 141
-	D3DRENDERSTATE_LOCALVIEWER = 142
-	D3DRENDERSTATE_NORMALIZENORMALS = 143
-	D3DRENDERSTATE_COLORKEYBLENDENABLE = 144
-	D3DRENDERSTATE_DIFFUSEMATERIALSOURCE = 145
-	D3DRENDERSTATE_SPECULARMATERIALSOURCE = 146
-	D3DRENDERSTATE_AMBIENTMATERIALSOURCE = 147
-	D3DRENDERSTATE_EMISSIVEMATERIALSOURCE = 148
-	D3DRENDERSTATE_VERTEXBLEND = 151
-	D3DRENDERSTATE_CLIPPLANEENABLE = 152
-	D3DRENDERSTATE_TEXTUREHANDLE = 1
-	D3DRENDERSTATE_TEXTUREADDRESS = 3
-	D3DRENDERSTATE_WRAPU = 5
-	D3DRENDERSTATE_WRAPV = 6
-	D3DRENDERSTATE_MONOENABLE = 11
-	D3DRENDERSTATE_ROP2 = 12
-	D3DRENDERSTATE_PLANEMASK = 13
-	D3DRENDERSTATE_TEXTUREMAG = 17
-	D3DRENDERSTATE_TEXTUREMIN = 18
-	D3DRENDERSTATE_TEXTUREMAPBLEND = 21
-	D3DRENDERSTATE_SUBPIXEL = 31
-	D3DRENDERSTATE_SUBPIXELX = 32
-	D3DRENDERSTATE_STIPPLEENABLE = 39
-	D3DRENDERSTATE_BORDERCOLOR = 43
-	D3DRENDERSTATE_TEXTUREADDRESSU = 44
-	D3DRENDERSTATE_TEXTUREADDRESSV = 45
-	D3DRENDERSTATE_MIPMAPLODBIAS = 46
-	D3DRENDERSTATE_ANISOTROPY = 49
-	D3DRENDERSTATE_FLUSHBATCH = 50
-	D3DRENDERSTATE_TRANSLUCENTSORTINDEPENDENT = 51
-	D3DRENDERSTATE_STIPPLEPATTERN00 = 64
-	D3DRENDERSTATE_STIPPLEPATTERN01 = 65
-	D3DRENDERSTATE_STIPPLEPATTERN02 = 66
-	D3DRENDERSTATE_STIPPLEPATTERN03 = 67
-	D3DRENDERSTATE_STIPPLEPATTERN04 = 68
-	D3DRENDERSTATE_STIPPLEPATTERN05 = 69
-	D3DRENDERSTATE_STIPPLEPATTERN06 = 70
-	D3DRENDERSTATE_STIPPLEPATTERN07 = 71
-	D3DRENDERSTATE_STIPPLEPATTERN08 = 72
-	D3DRENDERSTATE_STIPPLEPATTERN09 = 73
-	D3DRENDERSTATE_STIPPLEPATTERN10 = 74
-	D3DRENDERSTATE_STIPPLEPATTERN11 = 75
-	D3DRENDERSTATE_STIPPLEPATTERN12 = 76
-	D3DRENDERSTATE_STIPPLEPATTERN13 = 77
-	D3DRENDERSTATE_STIPPLEPATTERN14 = 78
-	D3DRENDERSTATE_STIPPLEPATTERN15 = 79
-	D3DRENDERSTATE_STIPPLEPATTERN16 = 80
-	D3DRENDERSTATE_STIPPLEPATTERN17 = 81
-	D3DRENDERSTATE_STIPPLEPATTERN18 = 82
-	D3DRENDERSTATE_STIPPLEPATTERN19 = 83
-	D3DRENDERSTATE_STIPPLEPATTERN20 = 84
-	D3DRENDERSTATE_STIPPLEPATTERN21 = 85
-	D3DRENDERSTATE_STIPPLEPATTERN22 = 86
-	D3DRENDERSTATE_STIPPLEPATTERN23 = 87
-	D3DRENDERSTATE_STIPPLEPATTERN24 = 88
-	D3DRENDERSTATE_STIPPLEPATTERN25 = 89
-	D3DRENDERSTATE_STIPPLEPATTERN26 = 90
-	D3DRENDERSTATE_STIPPLEPATTERN27 = 91
-	D3DRENDERSTATE_STIPPLEPATTERN28 = 92
-	D3DRENDERSTATE_STIPPLEPATTERN29 = 93
-	D3DRENDERSTATE_STIPPLEPATTERN30 = 94
-	D3DRENDERSTATE_STIPPLEPATTERN31 = 95
-	D3DRENDERSTATE_FOGTABLESTART = 36
-	D3DRENDERSTATE_FOGTABLEEND = 37
-	D3DRENDERSTATE_FOGTABLEDENSITY = 38
-	D3DRENDERSTATE_FORCE_DWORD = 2147483647
+	D3DRENDERSTATE_ANTIALIAS                  D3DRENDERSTATETYPE = 2
+	D3DRENDERSTATE_TEXTUREPERSPECTIVE         D3DRENDERSTATETYPE = 4
+	D3DRENDERSTATE_ZENABLE                    D3DRENDERSTATETYPE = 7
+	D3DRENDERSTATE_FILLMODE                   D3DRENDERSTATETYPE = 8
+	D3DRENDERSTATE_SHADEMODE                  D3DRENDERSTATETYPE = 9
+	D3DRENDERSTATE_LINEPATTERN                D3DRENDERSTATETYPE = 10
+	D3DRENDERSTATE_ZWRITEENABLE               D3DRENDERSTATETYPE = 14
+	D3DRENDERSTATE_ALPHATESTENABLE            D3DRENDERSTATETYPE = 15
+	D3DRENDERSTATE_LASTPIXEL                  D3DRENDERSTATETYPE = 16
+	D3DRENDERSTATE_SRCBLEND                   D3DRENDERSTATETYPE = 19
+	D3DRENDERSTATE_DESTBLEND                  D3DRENDERSTATETYPE = 20
+	D3DRENDERSTATE_CULLMODE                   D3DRENDERSTATETYPE = 22
+	D3DRENDERSTATE_ZFUNC                      D3DRENDERSTATETYPE = 23
+	D3DRENDERSTATE_ALPHAREF                   D3DRENDERSTATETYPE = 24
+	D3DRENDERSTATE_ALPHAFUNC                  D3DRENDERSTATETYPE = 25
+	D3DRENDERSTATE_DITHERENABLE               D3DRENDERSTATETYPE = 26
+	D3DRENDERSTATE_ALPHABLENDENABLE           D3DRENDERSTATETYPE = 27
+	D3DRENDERSTATE_FOGENABLE                  D3DRENDERSTATETYPE = 28
+	D3DRENDERSTATE_SPECULARENABLE             D3DRENDERSTATETYPE = 29
+	D3DRENDERSTATE_ZVISIBLE                   D3DRENDERSTATETYPE = 30
+	D3DRENDERSTATE_STIPPLEDALPHA              D3DRENDERSTATETYPE = 33
+	D3DRENDERSTATE_FOGCOLOR                   D3DRENDERSTATETYPE = 34
+	D3DRENDERSTATE_FOGTABLEMODE               D3DRENDERSTATETYPE = 35
+	D3DRENDERSTATE_FOGSTART                   D3DRENDERSTATETYPE = 36
+	D3DRENDERSTATE_FOGEND                     D3DRENDERSTATETYPE = 37
+	D3DRENDERSTATE_FOGDENSITY                 D3DRENDERSTATETYPE = 38
+	D3DRENDERSTATE_EDGEANTIALIAS              D3DRENDERSTATETYPE = 40
+	D3DRENDERSTATE_COLORKEYENABLE             D3DRENDERSTATETYPE = 41
+	D3DRENDERSTATE_ZBIAS                      D3DRENDERSTATETYPE = 47
+	D3DRENDERSTATE_RANGEFOGENABLE             D3DRENDERSTATETYPE = 48
+	D3DRENDERSTATE_STENCILENABLE              D3DRENDERSTATETYPE = 52
+	D3DRENDERSTATE_STENCILFAIL                D3DRENDERSTATETYPE = 53
+	D3DRENDERSTATE_STENCILZFAIL               D3DRENDERSTATETYPE = 54
+	D3DRENDERSTATE_STENCILPASS                D3DRENDERSTATETYPE = 55
+	D3DRENDERSTATE_STENCILFUNC                D3DRENDERSTATETYPE = 56
+	D3DRENDERSTATE_STENCILREF                 D3DRENDERSTATETYPE = 57
+	D3DRENDERSTATE_STENCILMASK                D3DRENDERSTATETYPE = 58
+	D3DRENDERSTATE_STENCILWRITEMASK           D3DRENDERSTATETYPE = 59
+	D3DRENDERSTATE_TEXTUREFACTOR              D3DRENDERSTATETYPE = 60
+	D3DRENDERSTATE_WRAP0                      D3DRENDERSTATETYPE = 128
+	D3DRENDERSTATE_WRAP1                      D3DRENDERSTATETYPE = 129
+	D3DRENDERSTATE_WRAP2                      D3DRENDERSTATETYPE = 130
+	D3DRENDERSTATE_WRAP3                      D3DRENDERSTATETYPE = 131
+	D3DRENDERSTATE_WRAP4                      D3DRENDERSTATETYPE = 132
+	D3DRENDERSTATE_WRAP5                      D3DRENDERSTATETYPE = 133
+	D3DRENDERSTATE_WRAP6                      D3DRENDERSTATETYPE = 134
+	D3DRENDERSTATE_WRAP7                      D3DRENDERSTATETYPE = 135
+	D3DRENDERSTATE_CLIPPING                   D3DRENDERSTATETYPE = 136
+	D3DRENDERSTATE_LIGHTING                   D3DRENDERSTATETYPE = 137
+	D3DRENDERSTATE_EXTENTS                    D3DRENDERSTATETYPE = 138
+	D3DRENDERSTATE_AMBIENT                    D3DRENDERSTATETYPE = 139
+	D3DRENDERSTATE_FOGVERTEXMODE              D3DRENDERSTATETYPE = 140
+	D3DRENDERSTATE_COLORVERTEX                D3DRENDERSTATETYPE = 141
+	D3DRENDERSTATE_LOCALVIEWER                D3DRENDERSTATETYPE = 142
+	D3DRENDERSTATE_NORMALIZENORMALS           D3DRENDERSTATETYPE = 143
+	D3DRENDERSTATE_COLORKEYBLENDENABLE        D3DRENDERSTATETYPE = 144
+	D3DRENDERSTATE_DIFFUSEMATERIALSOURCE      D3DRENDERSTATETYPE = 145
+	D3DRENDERSTATE_SPECULARMATERIALSOURCE     D3DRENDERSTATETYPE = 146
+	D3DRENDERSTATE_AMBIENTMATERIALSOURCE      D3DRENDERSTATETYPE = 147
+	D3DRENDERSTATE_EMISSIVEMATERIALSOURCE     D3DRENDERSTATETYPE = 148
+	D3DRENDERSTATE_VERTEXBLEND                D3DRENDERSTATETYPE = 151
+	D3DRENDERSTATE_CLIPPLANEENABLE            D3DRENDERSTATETYPE = 152
+	D3DRENDERSTATE_TEXTUREHANDLE              D3DRENDERSTATETYPE = 1
+	D3DRENDERSTATE_TEXTUREADDRESS             D3DRENDERSTATETYPE = 3
+	D3DRENDERSTATE_WRAPU                      D3DRENDERSTATETYPE = 5
+	D3DRENDERSTATE_WRAPV                      D3DRENDERSTATETYPE = 6
+	D3DRENDERSTATE_MONOENABLE                 D3DRENDERSTATETYPE = 11
+	D3DRENDERSTATE_ROP2                       D3DRENDERSTATETYPE = 12
+	D3DRENDERSTATE_PLANEMASK                  D3DRENDERSTATETYPE = 13
+	D3DRENDERSTATE_TEXTUREMAG                 D3DRENDERSTATETYPE = 17
+	D3DRENDERSTATE_TEXTUREMIN                 D3DRENDERSTATETYPE = 18
+	D3DRENDERSTATE_TEXTUREMAPBLEND            D3DRENDERSTATETYPE = 21
+	D3DRENDERSTATE_SUBPIXEL                   D3DRENDERSTATETYPE = 31
+	D3DRENDERSTATE_SUBPIXELX                  D3DRENDERSTATETYPE = 32
+	D3DRENDERSTATE_STIPPLEENABLE              D3DRENDERSTATETYPE = 39
+	D3DRENDERSTATE_BORDERCOLOR                D3DRENDERSTATETYPE = 43
+	D3DRENDERSTATE_TEXTUREADDRESSU            D3DRENDERSTATETYPE = 44
+	D3DRENDERSTATE_TEXTUREADDRESSV            D3DRENDERSTATETYPE = 45
+	D3DRENDERSTATE_MIPMAPLODBIAS              D3DRENDERSTATETYPE = 46
+	D3DRENDERSTATE_ANISOTROPY                 D3DRENDERSTATETYPE = 49
+	D3DRENDERSTATE_FLUSHBATCH                 D3DRENDERSTATETYPE = 50
+	D3DRENDERSTATE_TRANSLUCENTSORTINDEPENDENT D3DRENDERSTATETYPE = 51
+	D3DRENDERSTATE_STIPPLEPATTERN00           D3DRENDERSTATETYPE = 64
+	D3DRENDERSTATE_STIPPLEPATTERN01           D3DRENDERSTATETYPE = 65
+	D3DRENDERSTATE_STIPPLEPATTERN02           D3DRENDERSTATETYPE = 66
+	D3DRENDERSTATE_STIPPLEPATTERN03           D3DRENDERSTATETYPE = 67
+	D3DRENDERSTATE_STIPPLEPATTERN04           D3DRENDERSTATETYPE = 68
+	D3DRENDERSTATE_STIPPLEPATTERN05           D3DRENDERSTATETYPE = 69
+	D3DRENDERSTATE_STIPPLEPATTERN06           D3DRENDERSTATETYPE = 70
+	D3DRENDERSTATE_STIPPLEPATTERN07           D3DRENDERSTATETYPE = 71
+	D3DRENDERSTATE_STIPPLEPATTERN08           D3DRENDERSTATETYPE = 72
+	D3DRENDERSTATE_STIPPLEPATTERN09           D3DRENDERSTATETYPE = 73
+	D3DRENDERSTATE_STIPPLEPATTERN10           D3DRENDERSTATETYPE = 74
+	D3DRENDERSTATE_STIPPLEPATTERN11           D3DRENDERSTATETYPE = 75
+	D3DRENDERSTATE_STIPPLEPATTERN12           D3DRENDERSTATETYPE = 76
+	D3DRENDERSTATE_STIPPLEPATTERN13           D3DRENDERSTATETYPE = 77
+	D3DRENDERSTATE_STIPPLEPATTERN14           D3DRENDERSTATETYPE = 78
+	D3DRENDERSTATE_STIPPLEPATTERN15           D3DRENDERSTATETYPE = 79
+	D3DRENDERSTATE_STIPPLEPATTERN16           D3DRENDERSTATETYPE = 80
+	D3DRENDERSTATE_STIPPLEPATTERN17           D3DRENDERSTATETYPE = 81
+	D3DRENDERSTATE_STIPPLEPATTERN18           D3DRENDERSTATETYPE = 82
+	D3DRENDERSTATE_STIPPLEPATTERN19           D3DRENDERSTATETYPE = 83
+	D3DRENDERSTATE_STIPPLEPATTERN20           D3DRENDERSTATETYPE = 84
+	D3DRENDERSTATE_STIPPLEPATTERN21           D3DRENDERSTATETYPE = 85
+	D3DRENDERSTATE_STIPPLEPATTERN22           D3DRENDERSTATETYPE = 86
+	D3DRENDERSTATE_STIPPLEPATTERN23           D3DRENDERSTATETYPE = 87
+	D3DRENDERSTATE_STIPPLEPATTERN24           D3DRENDERSTATETYPE = 88
+	D3DRENDERSTATE_STIPPLEPATTERN25           D3DRENDERSTATETYPE = 89
+	D3DRENDERSTATE_STIPPLEPATTERN26           D3DRENDERSTATETYPE = 90
+	D3DRENDERSTATE_STIPPLEPATTERN27           D3DRENDERSTATETYPE = 91
+	D3DRENDERSTATE_STIPPLEPATTERN28           D3DRENDERSTATETYPE = 92
+	D3DRENDERSTATE_STIPPLEPATTERN29           D3DRENDERSTATETYPE = 93
+	D3DRENDERSTATE_STIPPLEPATTERN30           D3DRENDERSTATETYPE = 94
+	D3DRENDERSTATE_STIPPLEPATTERN31           D3DRENDERSTATETYPE = 95
+	D3DRENDERSTATE_FOGTABLESTART              D3DRENDERSTATETYPE = 36
+	D3DRENDERSTATE_FOGTABLEEND                D3DRENDERSTATETYPE = 37
+	D3DRENDERSTATE_FOGTABLEDENSITY            D3DRENDERSTATETYPE = 38
+	D3DRENDERSTATE_FORCE_DWORD                D3DRENDERSTATETYPE = 2147483647
 )
 
 type D3DMATERIALCOLORSOURCE int32
 
 const (
-	D3DMCS_MATERIAL = 0
-	D3DMCS_COLOR1 = 1
-	D3DMCS_COLOR2 = 2
-	D3DMCS_FORCE_DWORD = 2147483647
+	D3DMCS_MATERIAL    D3DMATERIALCOLORSOURCE = 0
+	D3DMCS_COLOR1      D3DMATERIALCOLORSOURCE = 1
+	D3DMCS_COLOR2      D3DMATERIALCOLORSOURCE = 2
+	D3DMCS_FORCE_DWORD D3DMATERIALCOLORSOURCE = 2147483647
 )
 
 type D3DTEXTURESTAGESTATETYPE int32
 
 const (
-	D3DTSS_COLOROP = 1
-	D3DTSS_COLORARG1 = 2
-	D3DTSS_COLORARG2 = 3
-	D3DTSS_ALPHAOP = 4
-	D3DTSS_ALPHAARG1 = 5
-	D3DTSS_ALPHAARG2 = 6
-	D3DTSS_BUMPENVMAT00 = 7
-	D3DTSS_BUMPENVMAT01 = 8
-	D3DTSS_BUMPENVMAT10 = 9
-	D3DTSS_BUMPENVMAT11 = 10
-	D3DTSS_TEXCOORDINDEX = 11
-	D3DTSS_ADDRESS = 12
-	D3DTSS_ADDRESSU = 13
-	D3DTSS_ADDRESSV = 14
-	D3DTSS_BORDERCOLOR = 15
-	D3DTSS_MAGFILTER = 16
-	D3DTSS_MINFILTER = 17
-	D3DTSS_MIPFILTER = 18
-	D3DTSS_MIPMAPLODBIAS = 19
-	D3DTSS_MAXMIPLEVEL = 20
-	D3DTSS_MAXANISOTROPY = 21
-	D3DTSS_BUMPENVLSCALE = 22
-	D3DTSS_BUMPENVLOFFSET = 23
-	D3DTSS_TEXTURETRANSFORMFLAGS = 24
-	D3DTSS_FORCE_DWORD = 2147483647
+	D3DTSS_COLOROP               D3DTEXTURESTAGESTATETYPE = 1
+	D3DTSS_COLORARG1             D3DTEXTURESTAGESTATETYPE = 2
+	D3DTSS_COLORARG2             D3DTEXTURESTAGESTATETYPE = 3
+	D3DTSS_ALPHAOP               D3DTEXTURESTAGESTATETYPE = 4
+	D3DTSS_ALPHAARG1             D3DTEXTURESTAGESTATETYPE = 5
+	D3DTSS_ALPHAARG2             D3DTEXTURESTAGESTATETYPE = 6
+	D3DTSS_BUMPENVMAT00          D3DTEXTURESTAGESTATETYPE = 7
+	D3DTSS_BUMPENVMAT01          D3DTEXTURESTAGESTATETYPE = 8
+	D3DTSS_BUMPENVMAT10          D3DTEXTURESTAGESTATETYPE = 9
+	D3DTSS_BUMPENVMAT11          D3DTEXTURESTAGESTATETYPE = 10
+	D3DTSS_TEXCOORDINDEX         D3DTEXTURESTAGESTATETYPE = 11
+	D3DTSS_ADDRESS               D3DTEXTURESTAGESTATETYPE = 12
+	D3DTSS_ADDRESSU              D3DTEXTURESTAGESTATETYPE = 13
+	D3DTSS_ADDRESSV              D3DTEXTURESTAGESTATETYPE = 14
+	D3DTSS_BORDERCOLOR           D3DTEXTURESTAGESTATETYPE = 15
+	D3DTSS_MAGFILTER             D3DTEXTURESTAGESTATETYPE = 16
+	D3DTSS_MINFILTER             D3DTEXTURESTAGESTATETYPE = 17
+	D3DTSS_MIPFILTER             D3DTEXTURESTAGESTATETYPE = 18
+	D3DTSS_MIPMAPLODBIAS         D3DTEXTURESTAGESTATETYPE = 19
+	D3DTSS_MAXMIPLEVEL           D3DTEXTURESTAGESTATETYPE = 20
+	D3DTSS_MAXANISOTROPY         D3DTEXTURESTAGESTATETYPE = 21
+	D3DTSS_BUMPENVLSCALE         D3DTEXTURESTAGESTATETYPE = 22
+	D3DTSS_BUMPENVLOFFSET        D3DTEXTURESTAGESTATETYPE = 23
+	D3DTSS_TEXTURETRANSFORMFLAGS D3DTEXTURESTAGESTATETYPE = 24
+	D3DTSS_FORCE_DWORD           D3DTEXTURESTAGESTATETYPE = 2147483647
 )
 
 type D3DTEXTUREOP int32
 
 const (
-	D3DTOP_DISABLE = 1
-	D3DTOP_SELECTARG1 = 2
-	D3DTOP_SELECTARG2 = 3
-	D3DTOP_MODULATE = 4
-	D3DTOP_MODULATE2X = 5
-	D3DTOP_MODULATE4X = 6
-	D3DTOP_ADD = 7
-	D3DTOP_ADDSIGNED = 8
-	D3DTOP_ADDSIGNED2X = 9
-	D3DTOP_SUBTRACT = 10
-	D3DTOP_ADDSMOOTH = 11
-	D3DTOP_BLENDDIFFUSEALPHA = 12
-	D3DTOP_BLENDTEXTUREALPHA = 13
-	D3DTOP_BLENDFACTORALPHA = 14
-	D3DTOP_BLENDTEXTUREALPHAPM = 15
-	D3DTOP_BLENDCURRENTALPHA = 16
-	D3DTOP_PREMODULATE = 17
-	D3DTOP_MODULATEALPHA_ADDCOLOR = 18
-	D3DTOP_MODULATECOLOR_ADDALPHA = 19
-	D3DTOP_MODULATEINVALPHA_ADDCOLOR = 20
-	D3DTOP_MODULATEINVCOLOR_ADDALPHA = 21
-	D3DTOP_BUMPENVMAP = 22
-	D3DTOP_BUMPENVMAPLUMINANCE = 23
-	D3DTOP_DOTPRODUCT3 = 24
-	D3DTOP_FORCE_DWORD = 2147483647
+	D3DTOP_DISABLE                   D3DTEXTUREOP = 1
+	D3DTOP_SELECTARG1                D3DTEXTUREOP = 2
+	D3DTOP_SELECTARG2                D3DTEXTUREOP = 3
+	D3DTOP_MODULATE                  D3DTEXTUREOP = 4
+	D3DTOP_MODULATE2X                D3DTEXTUREOP = 5
+	D3DTOP_MODULATE4X                D3DTEXTUREOP = 6
+	D3DTOP_ADD                       D3DTEXTUREOP = 7
+	D3DTOP_ADDSIGNED                 D3DTEXTUREOP = 8
+	D3DTOP_ADDSIGNED2X               D3DTEXTUREOP = 9
+	D3DTOP_SUBTRACT                  D3DTEXTUREOP = 10
+	D3DTOP_ADDSMOOTH                 D3DTEXTUREOP = 11
+	D3DTOP_BLENDDIFFUSEALPHA         D3DTEXTUREOP = 12
+	D3DTOP_BLENDTEXTUREALPHA         D3DTEXTUREOP = 13
+	D3DTOP_BLENDFACTORALPHA          D3DTEXTUREOP = 14
+	D3DTOP_BLENDTEXTUREALPHAPM       D3DTEXTUREOP = 15
+	D3DTOP_BLENDCURRENTALPHA         D3DTEXTUREOP = 16
+	D3DTOP_PREMODULATE               D3DTEXTUREOP = 17
+	D3DTOP_MODULATEALPHA_ADDCOLOR    D3DTEXTUREOP = 18
+	D3DTOP_MODULATECOLOR_ADDALPHA    D3DTEXTUREOP = 19
+	D3DTOP_MODULATEINVALPHA_ADDCOLOR D3DTEXTUREOP = 20
+	D3DTOP_MODULATEINVCOLOR_ADDALPHA D3DTEXTUREOP = 21
+	D3DTOP_BUMPENVMAP                D3DTEXTUREOP = 22
+	D3DTOP_BUMPENVMAPLUMINANCE       D3DTEXTUREOP = 23
+	D3DTOP_DOTPRODUCT3               D3DTEXTUREOP = 24
+	D3DTOP_FORCE_DWORD               D3DTEXTUREOP = 2147483647
 )
 
 type D3DTEXTUREMAGFILTER int32
 
 const (
-	D3DTFG_POINT = 1
-	D3DTFG_LINEAR = 2
-	D3DTFG_FLATCUBIC = 3
-	D3DTFG_GAUSSIANCUBIC = 4
-	D3DTFG_ANISOTROPIC = 5
-	D3DTFG_FORCE_DWORD = 2147483647
+	D3DTFG_POINT         D3DTEXTUREMAGFILTER = 1
+	D3DTFG_LINEAR        D3DTEXTUREMAGFILTER = 2
+	D3DTFG_FLATCUBIC     D3DTEXTUREMAGFILTER = 3
+	D3DTFG_GAUSSIANCUBIC D3DTEXTUREMAGFILTER = 4
+	D3DTFG_ANISOTROPIC   D3DTEXTUREMAGFILTER = 5
+	D3DTFG_FORCE_DWORD   D3DTEXTUREMAGFILTER = 2147483647
 )
 
 type D3DTEXTUREMINFILTER int32
 
 const (
-	D3DTFN_POINT = 1
-	D3DTFN_LINEAR = 2
-	D3DTFN_ANISOTROPIC = 3
-	D3DTFN_FORCE_DWORD = 2147483647
+	D3DTFN_POINT       D3DTEXTUREMINFILTER = 1
+	D3DTFN_LINEAR      D3DTEXTUREMINFILTER = 2
+	D3DTFN_ANISOTROPIC D3DTEXTUREMINFILTER = 3
+	D3DTFN_FORCE_DWORD D3DTEXTUREMINFILTER = 2147483647
 )
 
 type D3DTEXTUREMIPFILTER int32
 
 const (
-	D3DTFP_NONE = 1
-	D3DTFP_POINT = 2
-	D3DTFP_LINEAR = 3
-	D3DTFP_FORCE_DWORD = 2147483647
+	D3DTFP_NONE        D3DTEXTUREMIPFILTER = 1
+	D3DTFP_POINT       D3DTEXTUREMIPFILTER = 2
+	D3DTFP_LINEAR      D3DTEXTUREMIPFILTER = 3
+	D3DTFP_FORCE_DWORD D3DTEXTUREMIPFILTER = 2147483647
 )
 
 type D3DSTATEBLOCKTYPE int32
 
 const (
-	D3DSBT_ALL = 1
-	D3DSBT_PIXELSTATE = 2
-	D3DSBT_VERTEXSTATE = 3
-	D3DSBT_FORCE_DWORD = -1
+	D3DSBT_ALL         D3DSTATEBLOCKTYPE = 1
+	D3DSBT_PIXELSTATE  D3DSTATEBLOCKTYPE = 2
+	D3DSBT_VERTEXSTATE D3DSTATEBLOCKTYPE = 3
+	D3DSBT_FORCE_DWORD D3DSTATEBLOCKTYPE = -1
 )
 
 type D3DVERTEXBLENDFLAGS int32
 
 const (
-	D3DVBLEND_DISABLE = 0
-	D3DVBLEND_1WEIGHT = 1
-	D3DVBLEND_2WEIGHTS = 2
-	D3DVBLEND_3WEIGHTS = 3
+	D3DVBLEND_DISABLE  D3DVERTEXBLENDFLAGS = 0
+	D3DVBLEND_1WEIGHT  D3DVERTEXBLENDFLAGS = 1
+	D3DVBLEND_2WEIGHTS D3DVERTEXBLENDFLAGS = 2
+	D3DVBLEND_3WEIGHTS D3DVERTEXBLENDFLAGS = 3
 )
 
 type D3DTEXTURETRANSFORMFLAGS int32
 
 const (
-	D3DTTFF_DISABLE = 0
-	D3DTTFF_COUNT1 = 1
-	D3DTTFF_COUNT2 = 2
-	D3DTTFF_COUNT3 = 3
-	D3DTTFF_COUNT4 = 4
-	D3DTTFF_PROJECTED = 256
-	D3DTTFF_FORCE_DWORD = 2147483647
+	D3DTTFF_DISABLE     D3DTEXTURETRANSFORMFLAGS = 0
+	D3DTTFF_COUNT1      D3DTEXTURETRANSFORMFLAGS = 1
+	D3DTTFF_COUNT2      D3DTEXTURETRANSFORMFLAGS = 2
+	D3DTTFF_COUNT3      D3DTEXTURETRANSFORMFLAGS = 3
+	D3DTTFF_COUNT4      D3DTEXTURETRANSFORMFLAGS = 4
+	D3DTTFF_PROJECTED   D3DTEXTURETRANSFORMFLAGS = 256
+	D3DTTFF_FORCE_DWORD D3DTEXTURETRANSFORMFLAGS = 2147483647
 )
 
 type D3DNTHAL_DP2OPERATION int32
 
 const (
-	D3DNTDP2OP_POINTS = 1
-	D3DNTDP2OP_INDEXEDLINELIST = 2
-	D3DNTDP2OP_INDEXEDTRIANGLELIST = 3
-	D3DNTDP2OP_RENDERSTATE = 8
-	D3DNTDP2OP_LINELIST = 15
-	D3DNTDP2OP_LINESTRIP = 16
-	D3DNTDP2OP_INDEXEDLINESTRIP = 17
-	D3DNTDP2OP_TRIANGLELIST = 18
-	D3DNTDP2OP_TRIANGLESTRIP = 19
-	D3DNTDP2OP_INDEXEDTRIANGLESTRIP = 20
-	D3DNTDP2OP_TRIANGLEFAN = 21
-	D3DNTDP2OP_INDEXEDTRIANGLEFAN = 22
-	D3DNTDP2OP_TRIANGLEFAN_IMM = 23
-	D3DNTDP2OP_LINELIST_IMM = 24
-	D3DNTDP2OP_TEXTURESTAGESTATE = 25
-	D3DNTDP2OP_INDEXEDTRIANGLELIST2 = 26
-	D3DNTDP2OP_INDEXEDLINELIST2 = 27
-	D3DNTDP2OP_VIEWPORTINFO = 28
-	D3DNTDP2OP_WINFO = 29
-	D3DNTDP2OP_SETPALETTE = 30
-	D3DNTDP2OP_UPDATEPALETTE = 31
-	D3DNTDP2OP_ZRANGE = 32
-	D3DNTDP2OP_SETMATERIAL = 33
-	D3DNTDP2OP_SETLIGHT = 34
-	D3DNTDP2OP_CREATELIGHT = 35
-	D3DNTDP2OP_SETTRANSFORM = 36
-	D3DNTDP2OP_TEXBLT = 38
-	D3DNTDP2OP_STATESET = 39
-	D3DNTDP2OP_SETPRIORITY = 40
-	D3DNTDP2OP_SETRENDERTARGET = 41
-	D3DNTDP2OP_CLEAR = 42
-	D3DNTDP2OP_SETTEXLOD = 43
-	D3DNTDP2OP_SETCLIPPLANE = 44
+	D3DNTDP2OP_POINTS               D3DNTHAL_DP2OPERATION = 1
+	D3DNTDP2OP_INDEXEDLINELIST      D3DNTHAL_DP2OPERATION = 2
+	D3DNTDP2OP_INDEXEDTRIANGLELIST  D3DNTHAL_DP2OPERATION = 3
+	D3DNTDP2OP_RENDERSTATE          D3DNTHAL_DP2OPERATION = 8
+	D3DNTDP2OP_LINELIST             D3DNTHAL_DP2OPERATION = 15
+	D3DNTDP2OP_LINESTRIP            D3DNTHAL_DP2OPERATION = 16
+	D3DNTDP2OP_INDEXEDLINESTRIP     D3DNTHAL_DP2OPERATION = 17
+	D3DNTDP2OP_TRIANGLELIST         D3DNTHAL_DP2OPERATION = 18
+	D3DNTDP2OP_TRIANGLESTRIP        D3DNTHAL_DP2OPERATION = 19
+	D3DNTDP2OP_INDEXEDTRIANGLESTRIP D3DNTHAL_DP2OPERATION = 20
+	D3DNTDP2OP_TRIANGLEFAN          D3DNTHAL_DP2OPERATION = 21
+	D3DNTDP2OP_INDEXEDTRIANGLEFAN   D3DNTHAL_DP2OPERATION = 22
+	D3DNTDP2OP_TRIANGLEFAN_IMM      D3DNTHAL_DP2OPERATION = 23
+	D3DNTDP2OP_LINELIST_IMM         D3DNTHAL_DP2OPERATION = 24
+	D3DNTDP2OP_TEXTURESTAGESTATE    D3DNTHAL_DP2OPERATION = 25
+	D3DNTDP2OP_INDEXEDTRIANGLELIST2 D3DNTHAL_DP2OPERATION = 26
+	D3DNTDP2OP_INDEXEDLINELIST2     D3DNTHAL_DP2OPERATION = 27
+	D3DNTDP2OP_VIEWPORTINFO         D3DNTHAL_DP2OPERATION = 28
+	D3DNTDP2OP_WINFO                D3DNTHAL_DP2OPERATION = 29
+	D3DNTDP2OP_SETPALETTE           D3DNTHAL_DP2OPERATION = 30
+	D3DNTDP2OP_UPDATEPALETTE        D3DNTHAL_DP2OPERATION = 31
+	D3DNTDP2OP_ZRANGE               D3DNTHAL_DP2OPERATION = 32
+	D3DNTDP2OP_SETMATERIAL          D3DNTHAL_DP2OPERATION = 33
+	D3DNTDP2OP_SETLIGHT             D3DNTHAL_DP2OPERATION = 34
+	D3DNTDP2OP_CREATELIGHT          D3DNTHAL_DP2OPERATION = 35
+	D3DNTDP2OP_SETTRANSFORM         D3DNTHAL_DP2OPERATION = 36
+	D3DNTDP2OP_TEXBLT               D3DNTHAL_DP2OPERATION = 38
+	D3DNTDP2OP_STATESET             D3DNTHAL_DP2OPERATION = 39
+	D3DNTDP2OP_SETPRIORITY          D3DNTHAL_DP2OPERATION = 40
+	D3DNTDP2OP_SETRENDERTARGET      D3DNTHAL_DP2OPERATION = 41
+	D3DNTDP2OP_CLEAR                D3DNTHAL_DP2OPERATION = 42
+	D3DNTDP2OP_SETTEXLOD            D3DNTHAL_DP2OPERATION = 43
+	D3DNTDP2OP_SETCLIPPLANE         D3DNTHAL_DP2OPERATION = 44
 )
 
 type ENG_SYSTEM_ATTRIBUTE int32
 
 const (
-	EngProcessorFeature = 1
-	EngNumberOfProcessors = 2
-	EngOptimumAvailableUserMemory = 3
-	EngOptimumAvailableSystemMemory = 4
+	EngProcessorFeature             ENG_SYSTEM_ATTRIBUTE = 1
+	EngNumberOfProcessors           ENG_SYSTEM_ATTRIBUTE = 2
+	EngOptimumAvailableUserMemory   ENG_SYSTEM_ATTRIBUTE = 3
+	EngOptimumAvailableSystemMemory ENG_SYSTEM_ATTRIBUTE = 4
 )
 
 type ENG_DEVICE_ATTRIBUTE int32
 
 const (
-	QDA_RESERVED = 0
-	QDA_ACCELERATION_LEVEL = 1
+	QDA_RESERVED           ENG_DEVICE_ATTRIBUTE = 0
+	QDA_ACCELERATION_LEVEL ENG_DEVICE_ATTRIBUTE = 1
 )
 
 type DEVPROPSTORE int32
 
 const (
-	DEVPROP_STORE_SYSTEM = 0
-	DEVPROP_STORE_USER = 1
+	DEVPROP_STORE_SYSTEM DEVPROPSTORE = 0
+	DEVPROP_STORE_USER   DEVPROPSTORE = 1
 )
 
 type PWM_POLARITY int32
 
 const (
-	PWM_ACTIVE_HIGH = 0
-	PWM_ACTIVE_LOW = 1
+	PWM_ACTIVE_HIGH PWM_POLARITY = 0
+	PWM_ACTIVE_LOW  PWM_POLARITY = 1
 )
 
 type ENCLAVE_SEALING_IDENTITY_POLICY int32
 
 const (
-	ENCLAVE_IDENTITY_POLICY_SEAL_INVALID = 0
-	ENCLAVE_IDENTITY_POLICY_SEAL_EXACT_CODE = 1
-	ENCLAVE_IDENTITY_POLICY_SEAL_SAME_PRIMARY_CODE = 2
-	ENCLAVE_IDENTITY_POLICY_SEAL_SAME_IMAGE = 3
-	ENCLAVE_IDENTITY_POLICY_SEAL_SAME_FAMILY = 4
-	ENCLAVE_IDENTITY_POLICY_SEAL_SAME_AUTHOR = 5
+	ENCLAVE_IDENTITY_POLICY_SEAL_INVALID           ENCLAVE_SEALING_IDENTITY_POLICY = 0
+	ENCLAVE_IDENTITY_POLICY_SEAL_EXACT_CODE        ENCLAVE_SEALING_IDENTITY_POLICY = 1
+	ENCLAVE_IDENTITY_POLICY_SEAL_SAME_PRIMARY_CODE ENCLAVE_SEALING_IDENTITY_POLICY = 2
+	ENCLAVE_IDENTITY_POLICY_SEAL_SAME_IMAGE        ENCLAVE_SEALING_IDENTITY_POLICY = 3
+	ENCLAVE_IDENTITY_POLICY_SEAL_SAME_FAMILY       ENCLAVE_SEALING_IDENTITY_POLICY = 4
+	ENCLAVE_IDENTITY_POLICY_SEAL_SAME_AUTHOR       ENCLAVE_SEALING_IDENTITY_POLICY = 5
 )
 
 type EFFECTIVE_POWER_MODE int32
 
 const (
-	EffectivePowerModeBatterySaver = 0
-	EffectivePowerModeBetterBattery = 1
-	EffectivePowerModeBalanced = 2
-	EffectivePowerModeHighPerformance = 3
-	EffectivePowerModeMaxPerformance = 4
-	EffectivePowerModeGameMode = 5
-	EffectivePowerModeMixedReality = 6
+	EffectivePowerModeBatterySaver    EFFECTIVE_POWER_MODE = 0
+	EffectivePowerModeBetterBattery   EFFECTIVE_POWER_MODE = 1
+	EffectivePowerModeBalanced        EFFECTIVE_POWER_MODE = 2
+	EffectivePowerModeHighPerformance EFFECTIVE_POWER_MODE = 3
+	EffectivePowerModeMaxPerformance  EFFECTIVE_POWER_MODE = 4
+	EffectivePowerModeGameMode        EFFECTIVE_POWER_MODE = 5
+	EffectivePowerModeMixedReality    EFFECTIVE_POWER_MODE = 6
 )
 
 type POWER_DATA_ACCESSOR int32
 
 const (
-	ACCESS_AC_POWER_SETTING_INDEX = 0
-	ACCESS_DC_POWER_SETTING_INDEX = 1
-	ACCESS_FRIENDLY_NAME = 2
-	ACCESS_DESCRIPTION = 3
-	ACCESS_POSSIBLE_POWER_SETTING = 4
-	ACCESS_POSSIBLE_POWER_SETTING_FRIENDLY_NAME = 5
-	ACCESS_POSSIBLE_POWER_SETTING_DESCRIPTION = 6
-	ACCESS_DEFAULT_AC_POWER_SETTING = 7
-	ACCESS_DEFAULT_DC_POWER_SETTING = 8
-	ACCESS_POSSIBLE_VALUE_MIN = 9
-	ACCESS_POSSIBLE_VALUE_MAX = 10
-	ACCESS_POSSIBLE_VALUE_INCREMENT = 11
-	ACCESS_POSSIBLE_VALUE_UNITS = 12
-	ACCESS_ICON_RESOURCE = 13
-	ACCESS_DEFAULT_SECURITY_DESCRIPTOR = 14
-	ACCESS_ATTRIBUTES = 15
-	ACCESS_SCHEME = 16
-	ACCESS_SUBGROUP = 17
-	ACCESS_INDIVIDUAL_SETTING = 18
-	ACCESS_ACTIVE_SCHEME = 19
-	ACCESS_CREATE_SCHEME = 20
-	ACCESS_AC_POWER_SETTING_MAX = 21
-	ACCESS_DC_POWER_SETTING_MAX = 22
-	ACCESS_AC_POWER_SETTING_MIN = 23
-	ACCESS_DC_POWER_SETTING_MIN = 24
-	ACCESS_PROFILE = 25
-	ACCESS_OVERLAY_SCHEME = 26
-	ACCESS_ACTIVE_OVERLAY_SCHEME = 27
+	ACCESS_AC_POWER_SETTING_INDEX               POWER_DATA_ACCESSOR = 0
+	ACCESS_DC_POWER_SETTING_INDEX               POWER_DATA_ACCESSOR = 1
+	ACCESS_FRIENDLY_NAME                        POWER_DATA_ACCESSOR = 2
+	ACCESS_DESCRIPTION                          POWER_DATA_ACCESSOR = 3
+	ACCESS_POSSIBLE_POWER_SETTING               POWER_DATA_ACCESSOR = 4
+	ACCESS_POSSIBLE_POWER_SETTING_FRIENDLY_NAME POWER_DATA_ACCESSOR = 5
+	ACCESS_POSSIBLE_POWER_SETTING_DESCRIPTION   POWER_DATA_ACCESSOR = 6
+	ACCESS_DEFAULT_AC_POWER_SETTING             POWER_DATA_ACCESSOR = 7
+	ACCESS_DEFAULT_DC_POWER_SETTING             POWER_DATA_ACCESSOR = 8
+	ACCESS_POSSIBLE_VALUE_MIN                   POWER_DATA_ACCESSOR = 9
+	ACCESS_POSSIBLE_VALUE_MAX                   POWER_DATA_ACCESSOR = 10
+	ACCESS_POSSIBLE_VALUE_INCREMENT             POWER_DATA_ACCESSOR = 11
+	ACCESS_POSSIBLE_VALUE_UNITS                 POWER_DATA_ACCESSOR = 12
+	ACCESS_ICON_RESOURCE                        POWER_DATA_ACCESSOR = 13
+	ACCESS_DEFAULT_SECURITY_DESCRIPTOR          POWER_DATA_ACCESSOR = 14
+	ACCESS_ATTRIBUTES                           POWER_DATA_ACCESSOR = 15
+	ACCESS_SCHEME                               POWER_DATA_ACCESSOR = 16
+	ACCESS_SUBGROUP                             POWER_DATA_ACCESSOR = 17
+	ACCESS_INDIVIDUAL_SETTING                   POWER_DATA_ACCESSOR = 18
+	ACCESS_ACTIVE_SCHEME                        POWER_DATA_ACCESSOR = 19
+	ACCESS_CREATE_SCHEME                        POWER_DATA_ACCESSOR = 20
+	ACCESS_AC_POWER_SETTING_MAX                 POWER_DATA_ACCESSOR = 21
+	ACCESS_DC_POWER_SETTING_MAX                 POWER_DATA_ACCESSOR = 22
+	ACCESS_AC_POWER_SETTING_MIN                 POWER_DATA_ACCESSOR = 23
+	ACCESS_DC_POWER_SETTING_MIN                 POWER_DATA_ACCESSOR = 24
+	ACCESS_PROFILE                              POWER_DATA_ACCESSOR = 25
+	ACCESS_OVERLAY_SCHEME                       POWER_DATA_ACCESSOR = 26
+	ACCESS_ACTIVE_OVERLAY_SCHEME                POWER_DATA_ACCESSOR = 27
 )
 
 type BATTERY_QUERY_INFORMATION_LEVEL int32
 
 const (
-	BatteryInformation = 0
-	BatteryGranularityInformation = 1
-	BatteryTemperature = 2
-	BatteryEstimatedTime = 3
-	BatteryDeviceName = 4
-	BatteryManufactureDate = 5
-	BatteryManufactureName = 6
-	BatteryUniqueID = 7
-	BatterySerialNumber = 8
+	BatteryInformation            BATTERY_QUERY_INFORMATION_LEVEL = 0
+	BatteryGranularityInformation BATTERY_QUERY_INFORMATION_LEVEL = 1
+	BatteryTemperature            BATTERY_QUERY_INFORMATION_LEVEL = 2
+	BatteryEstimatedTime          BATTERY_QUERY_INFORMATION_LEVEL = 3
+	BatteryDeviceName             BATTERY_QUERY_INFORMATION_LEVEL = 4
+	BatteryManufactureDate        BATTERY_QUERY_INFORMATION_LEVEL = 5
+	BatteryManufactureName        BATTERY_QUERY_INFORMATION_LEVEL = 6
+	BatteryUniqueID               BATTERY_QUERY_INFORMATION_LEVEL = 7
+	BatterySerialNumber           BATTERY_QUERY_INFORMATION_LEVEL = 8
 )
 
 type BATTERY_CHARGING_SOURCE_TYPE int32
 
 const (
-	BatteryChargingSourceType_AC = 1
-	BatteryChargingSourceType_USB = 2
-	BatteryChargingSourceType_Wireless = 3
-	BatteryChargingSourceType_Max = 4
+	BatteryChargingSourceType_AC       BATTERY_CHARGING_SOURCE_TYPE = 1
+	BatteryChargingSourceType_USB      BATTERY_CHARGING_SOURCE_TYPE = 2
+	BatteryChargingSourceType_Wireless BATTERY_CHARGING_SOURCE_TYPE = 3
+	BatteryChargingSourceType_Max      BATTERY_CHARGING_SOURCE_TYPE = 4
 )
 
 type USB_CHARGER_PORT int32
 
 const (
-	UsbChargerPort_Legacy = 0
-	UsbChargerPort_TypeC = 1
-	UsbChargerPort_Max = 2
+	UsbChargerPort_Legacy USB_CHARGER_PORT = 0
+	UsbChargerPort_TypeC  USB_CHARGER_PORT = 1
+	UsbChargerPort_Max    USB_CHARGER_PORT = 2
 )
 
 type BATTERY_SET_INFORMATION_LEVEL int32
 
 const (
-	BatteryCriticalBias = 0
-	BatteryCharge = 1
-	BatteryDischarge = 2
-	BatteryChargingSource = 3
-	BatteryChargerId = 4
-	BatteryChargerStatus = 5
+	BatteryCriticalBias   BATTERY_SET_INFORMATION_LEVEL = 0
+	BatteryCharge         BATTERY_SET_INFORMATION_LEVEL = 1
+	BatteryDischarge      BATTERY_SET_INFORMATION_LEVEL = 2
+	BatteryChargingSource BATTERY_SET_INFORMATION_LEVEL = 3
+	BatteryChargerId      BATTERY_SET_INFORMATION_LEVEL = 4
+	BatteryChargerStatus  BATTERY_SET_INFORMATION_LEVEL = 5
 )
 
 type VIDEO_WIN32K_CALLBACKS_PARAMS_TYPE int32
 
 const (
-	VideoPowerNotifyCallout = 1
-	VideoEnumChildPdoNotifyCallout = 3
-	VideoFindAdapterCallout = 4
-	VideoPnpNotifyCallout = 7
-	VideoDxgkDisplaySwitchCallout = 8
-	VideoDxgkFindAdapterTdrCallout = 10
-	VideoDxgkHardwareProtectionTeardown = 11
-	VideoRepaintDesktop = 12
-	VideoUpdateCursor = 13
-	VideoDisableMultiPlaneOverlay = 14
-	VideoDesktopDuplicationChange = 15
-	VideoBlackScreenDiagnostics = 16
+	VideoPowerNotifyCallout             VIDEO_WIN32K_CALLBACKS_PARAMS_TYPE = 1
+	VideoEnumChildPdoNotifyCallout      VIDEO_WIN32K_CALLBACKS_PARAMS_TYPE = 3
+	VideoFindAdapterCallout             VIDEO_WIN32K_CALLBACKS_PARAMS_TYPE = 4
+	VideoPnpNotifyCallout               VIDEO_WIN32K_CALLBACKS_PARAMS_TYPE = 7
+	VideoDxgkDisplaySwitchCallout       VIDEO_WIN32K_CALLBACKS_PARAMS_TYPE = 8
+	VideoDxgkFindAdapterTdrCallout      VIDEO_WIN32K_CALLBACKS_PARAMS_TYPE = 10
+	VideoDxgkHardwareProtectionTeardown VIDEO_WIN32K_CALLBACKS_PARAMS_TYPE = 11
+	VideoRepaintDesktop                 VIDEO_WIN32K_CALLBACKS_PARAMS_TYPE = 12
+	VideoUpdateCursor                   VIDEO_WIN32K_CALLBACKS_PARAMS_TYPE = 13
+	VideoDisableMultiPlaneOverlay       VIDEO_WIN32K_CALLBACKS_PARAMS_TYPE = 14
+	VideoDesktopDuplicationChange       VIDEO_WIN32K_CALLBACKS_PARAMS_TYPE = 15
+	VideoBlackScreenDiagnostics         VIDEO_WIN32K_CALLBACKS_PARAMS_TYPE = 16
 )
 
 type BlackScreenDiagnosticsCalloutParam int32
 
 const (
-	BlackScreenDiagnosticsData = 1
-	BlackScreenDisplayRecovery = 2
+	BlackScreenDiagnosticsData BlackScreenDiagnosticsCalloutParam = 1
+	BlackScreenDisplayRecovery BlackScreenDiagnosticsCalloutParam = 2
 )
 
 type VIDEO_BANK_TYPE int32
 
 const (
-	VideoNotBanked = 0
-	VideoBanked1RW = 1
-	VideoBanked1R1W = 2
-	VideoBanked2RW = 3
-	NumVideoBankTypes = 4
+	VideoNotBanked    VIDEO_BANK_TYPE = 0
+	VideoBanked1RW    VIDEO_BANK_TYPE = 1
+	VideoBanked1R1W   VIDEO_BANK_TYPE = 2
+	VideoBanked2RW    VIDEO_BANK_TYPE = 3
+	NumVideoBankTypes VIDEO_BANK_TYPE = 4
 )
 
 type VIDEO_POWER_STATE int32
 
 const (
-	VideoPowerUnspecified = 0
-	VideoPowerOn = 1
-	VideoPowerStandBy = 2
-	VideoPowerSuspend = 3
-	VideoPowerOff = 4
-	VideoPowerHibernate = 5
-	VideoPowerShutdown = 6
-	VideoPowerMaximum = 7
+	VideoPowerUnspecified VIDEO_POWER_STATE = 0
+	VideoPowerOn          VIDEO_POWER_STATE = 1
+	VideoPowerStandBy     VIDEO_POWER_STATE = 2
+	VideoPowerSuspend     VIDEO_POWER_STATE = 3
+	VideoPowerOff         VIDEO_POWER_STATE = 4
+	VideoPowerHibernate   VIDEO_POWER_STATE = 5
+	VideoPowerShutdown    VIDEO_POWER_STATE = 6
+	VideoPowerMaximum     VIDEO_POWER_STATE = 7
 )
 
 type BRIGHTNESS_INTERFACE_VERSION int32
 
 const (
-	BRIGHTNESS_INTERFACE_VERSION_1 = 1
-	BRIGHTNESS_INTERFACE_VERSION_2 = 2
-	BRIGHTNESS_INTERFACE_VERSION_3 = 3
+	BRIGHTNESS_INTERFACE_VERSION_1 BRIGHTNESS_INTERFACE_VERSION = 1
+	BRIGHTNESS_INTERFACE_VERSION_2 BRIGHTNESS_INTERFACE_VERSION = 2
+	BRIGHTNESS_INTERFACE_VERSION_3 BRIGHTNESS_INTERFACE_VERSION = 3
 )
 
 type BACKLIGHT_OPTIMIZATION_LEVEL int32
 
 const (
-	BacklightOptimizationDisable = 0
-	BacklightOptimizationDesktop = 1
-	BacklightOptimizationDynamic = 2
-	BacklightOptimizationDimmed = 3
-	BacklightOptimizationEDR = 4
+	BacklightOptimizationDisable BACKLIGHT_OPTIMIZATION_LEVEL = 0
+	BacklightOptimizationDesktop BACKLIGHT_OPTIMIZATION_LEVEL = 1
+	BacklightOptimizationDynamic BACKLIGHT_OPTIMIZATION_LEVEL = 2
+	BacklightOptimizationDimmed  BACKLIGHT_OPTIMIZATION_LEVEL = 3
+	BacklightOptimizationEDR     BACKLIGHT_OPTIMIZATION_LEVEL = 4
 )
 
 type COLORSPACE_TRANSFORM_DATA_TYPE int32
 
 const (
-	COLORSPACE_TRANSFORM_DATA_TYPE_FIXED_POINT = 0
-	COLORSPACE_TRANSFORM_DATA_TYPE_FLOAT = 1
+	COLORSPACE_TRANSFORM_DATA_TYPE_FIXED_POINT COLORSPACE_TRANSFORM_DATA_TYPE = 0
+	COLORSPACE_TRANSFORM_DATA_TYPE_FLOAT       COLORSPACE_TRANSFORM_DATA_TYPE = 1
 )
 
 type COLORSPACE_TRANSFORM_TARGET_CAPS_VERSION int32
 
 const (
-	COLORSPACE_TRANSFORM_VERSION_DEFAULT = 0
-	COLORSPACE_TRANSFORM_VERSION_1 = 1
-	COLORSPACE_TRANSFORM_VERSION_NOT_SUPPORTED = 0
+	COLORSPACE_TRANSFORM_VERSION_DEFAULT       COLORSPACE_TRANSFORM_TARGET_CAPS_VERSION = 0
+	COLORSPACE_TRANSFORM_VERSION_1             COLORSPACE_TRANSFORM_TARGET_CAPS_VERSION = 1
+	COLORSPACE_TRANSFORM_VERSION_NOT_SUPPORTED COLORSPACE_TRANSFORM_TARGET_CAPS_VERSION = 0
 )
 
 type COLORSPACE_TRANSFORM_TYPE int32
 
 const (
-	COLORSPACE_TRANSFORM_TYPE_UNINITIALIZED = 0
-	COLORSPACE_TRANSFORM_TYPE_DEFAULT = 1
-	COLORSPACE_TRANSFORM_TYPE_RGB256x3x16 = 2
-	COLORSPACE_TRANSFORM_TYPE_DXGI_1 = 3
-	COLORSPACE_TRANSFORM_TYPE_MATRIX_3x4 = 4
-	COLORSPACE_TRANSFORM_TYPE_MATRIX_V2 = 5
+	COLORSPACE_TRANSFORM_TYPE_UNINITIALIZED COLORSPACE_TRANSFORM_TYPE = 0
+	COLORSPACE_TRANSFORM_TYPE_DEFAULT       COLORSPACE_TRANSFORM_TYPE = 1
+	COLORSPACE_TRANSFORM_TYPE_RGB256x3x16   COLORSPACE_TRANSFORM_TYPE = 2
+	COLORSPACE_TRANSFORM_TYPE_DXGI_1        COLORSPACE_TRANSFORM_TYPE = 3
+	COLORSPACE_TRANSFORM_TYPE_MATRIX_3x4    COLORSPACE_TRANSFORM_TYPE = 4
+	COLORSPACE_TRANSFORM_TYPE_MATRIX_V2     COLORSPACE_TRANSFORM_TYPE = 5
 )
 
 type OUTPUT_WIRE_COLOR_SPACE_TYPE int32
 
 const (
-	OUTPUT_WIRE_COLOR_SPACE_G22_P709 = 0
-	OUTPUT_WIRE_COLOR_SPACE_RESERVED = 4
-	OUTPUT_WIRE_COLOR_SPACE_G2084_P2020 = 12
-	OUTPUT_WIRE_COLOR_SPACE_G22_P709_WCG = 30
-	OUTPUT_WIRE_COLOR_SPACE_G22_P2020 = 31
-	OUTPUT_WIRE_COLOR_SPACE_G2084_P2020_HDR10PLUS = 32
-	OUTPUT_WIRE_COLOR_SPACE_G2084_P2020_DVLL = 33
+	OUTPUT_WIRE_COLOR_SPACE_G22_P709              OUTPUT_WIRE_COLOR_SPACE_TYPE = 0
+	OUTPUT_WIRE_COLOR_SPACE_RESERVED              OUTPUT_WIRE_COLOR_SPACE_TYPE = 4
+	OUTPUT_WIRE_COLOR_SPACE_G2084_P2020           OUTPUT_WIRE_COLOR_SPACE_TYPE = 12
+	OUTPUT_WIRE_COLOR_SPACE_G22_P709_WCG          OUTPUT_WIRE_COLOR_SPACE_TYPE = 30
+	OUTPUT_WIRE_COLOR_SPACE_G22_P2020             OUTPUT_WIRE_COLOR_SPACE_TYPE = 31
+	OUTPUT_WIRE_COLOR_SPACE_G2084_P2020_HDR10PLUS OUTPUT_WIRE_COLOR_SPACE_TYPE = 32
+	OUTPUT_WIRE_COLOR_SPACE_G2084_P2020_DVLL      OUTPUT_WIRE_COLOR_SPACE_TYPE = 33
 )
 
 type OUTPUT_COLOR_ENCODING int32
 
 const (
-	OUTPUT_COLOR_ENCODING_RGB = 0
-	OUTPUT_COLOR_ENCODING_YCBCR444 = 1
-	OUTPUT_COLOR_ENCODING_YCBCR422 = 2
-	OUTPUT_COLOR_ENCODING_YCBCR420 = 3
-	OUTPUT_COLOR_ENCODING_INTENSITY = 4
-	OUTPUT_COLOR_ENCODING_FORCE_UINT32 = -1
+	OUTPUT_COLOR_ENCODING_RGB          OUTPUT_COLOR_ENCODING = 0
+	OUTPUT_COLOR_ENCODING_YCBCR444     OUTPUT_COLOR_ENCODING = 1
+	OUTPUT_COLOR_ENCODING_YCBCR422     OUTPUT_COLOR_ENCODING = 2
+	OUTPUT_COLOR_ENCODING_YCBCR420     OUTPUT_COLOR_ENCODING = 3
+	OUTPUT_COLOR_ENCODING_INTENSITY    OUTPUT_COLOR_ENCODING = 4
+	OUTPUT_COLOR_ENCODING_FORCE_UINT32 OUTPUT_COLOR_ENCODING = -1
 )
 
 type COLORSPACE_TRANSFORM_STAGE_CONTROL int32
 
 const (
-	ColorSpaceTransformStageControl_No_Change = 0
-	ColorSpaceTransformStageControl_Enable = 1
-	ColorSpaceTransformStageControl_Bypass = 2
+	ColorSpaceTransformStageControl_No_Change COLORSPACE_TRANSFORM_STAGE_CONTROL = 0
+	ColorSpaceTransformStageControl_Enable    COLORSPACE_TRANSFORM_STAGE_CONTROL = 1
+	ColorSpaceTransformStageControl_Bypass    COLORSPACE_TRANSFORM_STAGE_CONTROL = 2
 )
 
 type DSI_CONTROL_TRANSMISSION_MODE int32
 
 const (
-	DCT_DEFAULT = 0
-	DCT_FORCE_LOW_POWER = 1
-	DCT_FORCE_HIGH_PERFORMANCE = 2
+	DCT_DEFAULT                DSI_CONTROL_TRANSMISSION_MODE = 0
+	DCT_FORCE_LOW_POWER        DSI_CONTROL_TRANSMISSION_MODE = 1
+	DCT_FORCE_HIGH_PERFORMANCE DSI_CONTROL_TRANSMISSION_MODE = 2
 )
 
 type PROCESS_MEMORY_EXHAUSTION_TYPE int32
 
 const (
-	PMETypeFailFastOnCommitFailure = 0
-	PMETypeMax = 1
+	PMETypeFailFastOnCommitFailure PROCESS_MEMORY_EXHAUSTION_TYPE = 0
+	PMETypeMax                     PROCESS_MEMORY_EXHAUSTION_TYPE = 1
 )
-

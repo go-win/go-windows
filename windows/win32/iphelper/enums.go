@@ -7,265 +7,264 @@ package iphelper
 type IF_ACCESS_TYPE int32
 
 const (
-	IF_ACCESS_LOOPBACK = 1
-	IF_ACCESS_BROADCAST = 2
-	IF_ACCESS_POINT_TO_POINT = 3
-	IF_ACCESS_POINTTOPOINT = 3
-	IF_ACCESS_POINT_TO_MULTI_POINT = 4
-	IF_ACCESS_POINTTOMULTIPOINT = 4
+	IF_ACCESS_LOOPBACK             IF_ACCESS_TYPE = 1
+	IF_ACCESS_BROADCAST            IF_ACCESS_TYPE = 2
+	IF_ACCESS_POINT_TO_POINT       IF_ACCESS_TYPE = 3
+	IF_ACCESS_POINTTOPOINT         IF_ACCESS_TYPE = 3
+	IF_ACCESS_POINT_TO_MULTI_POINT IF_ACCESS_TYPE = 4
+	IF_ACCESS_POINTTOMULTIPOINT    IF_ACCESS_TYPE = 4
 )
 
 type INTERNAL_IF_OPER_STATUS int32
 
 const (
-	IF_OPER_STATUS_NON_OPERATIONAL = 0
-	IF_OPER_STATUS_UNREACHABLE = 1
-	IF_OPER_STATUS_DISCONNECTED = 2
-	IF_OPER_STATUS_CONNECTING = 3
-	IF_OPER_STATUS_CONNECTED = 4
-	IF_OPER_STATUS_OPERATIONAL = 5
+	IF_OPER_STATUS_NON_OPERATIONAL INTERNAL_IF_OPER_STATUS = 0
+	IF_OPER_STATUS_UNREACHABLE     INTERNAL_IF_OPER_STATUS = 1
+	IF_OPER_STATUS_DISCONNECTED    INTERNAL_IF_OPER_STATUS = 2
+	IF_OPER_STATUS_CONNECTING      INTERNAL_IF_OPER_STATUS = 3
+	IF_OPER_STATUS_CONNECTED       INTERNAL_IF_OPER_STATUS = 4
+	IF_OPER_STATUS_OPERATIONAL     INTERNAL_IF_OPER_STATUS = 5
 )
 
 type NET_IF_RCV_ADDRESS_TYPE int32
 
 const (
-	NET_IF_RCV_ADDRESS_TYPE_OTHER = 1
-	NET_IF_RCV_ADDRESS_TYPE_VOLATILE = 2
-	NET_IF_RCV_ADDRESS_TYPE_NON_VOLATILE = 3
+	NET_IF_RCV_ADDRESS_TYPE_OTHER        NET_IF_RCV_ADDRESS_TYPE = 1
+	NET_IF_RCV_ADDRESS_TYPE_VOLATILE     NET_IF_RCV_ADDRESS_TYPE = 2
+	NET_IF_RCV_ADDRESS_TYPE_NON_VOLATILE NET_IF_RCV_ADDRESS_TYPE = 3
 )
 
 type IF_ADMINISTRATIVE_STATE int32
 
 const (
-	IF_ADMINISTRATIVE_DISABLED = 0
-	IF_ADMINISTRATIVE_ENABLED = 1
-	IF_ADMINISTRATIVE_DEMANDDIAL = 2
+	IF_ADMINISTRATIVE_DISABLED   IF_ADMINISTRATIVE_STATE = 0
+	IF_ADMINISTRATIVE_ENABLED    IF_ADMINISTRATIVE_STATE = 1
+	IF_ADMINISTRATIVE_DEMANDDIAL IF_ADMINISTRATIVE_STATE = 2
 )
 
 type IF_OPER_STATUS int32
 
 const (
-	IfOperStatusUp = 1
-	IfOperStatusDown = 2
-	IfOperStatusTesting = 3
-	IfOperStatusUnknown = 4
-	IfOperStatusDormant = 5
-	IfOperStatusNotPresent = 6
-	IfOperStatusLowerLayerDown = 7
+	IfOperStatusUp             IF_OPER_STATUS = 1
+	IfOperStatusDown           IF_OPER_STATUS = 2
+	IfOperStatusTesting        IF_OPER_STATUS = 3
+	IfOperStatusUnknown        IF_OPER_STATUS = 4
+	IfOperStatusDormant        IF_OPER_STATUS = 5
+	IfOperStatusNotPresent     IF_OPER_STATUS = 6
+	IfOperStatusLowerLayerDown IF_OPER_STATUS = 7
 )
 
 type MIB_IF_ENTRY_LEVEL int32
 
 const (
-	MibIfEntryNormal = 0
-	MibIfEntryNormalWithoutStatistics = 2
+	MibIfEntryNormal                  MIB_IF_ENTRY_LEVEL = 0
+	MibIfEntryNormalWithoutStatistics MIB_IF_ENTRY_LEVEL = 2
 )
 
 type MIB_IPFORWARD_TYPE int32
 
 const (
-	MIB_IPROUTE_TYPE_OTHER = 1
-	MIB_IPROUTE_TYPE_INVALID = 2
-	MIB_IPROUTE_TYPE_DIRECT = 3
-	MIB_IPROUTE_TYPE_INDIRECT = 4
+	MIB_IPROUTE_TYPE_OTHER    MIB_IPFORWARD_TYPE = 1
+	MIB_IPROUTE_TYPE_INVALID  MIB_IPFORWARD_TYPE = 2
+	MIB_IPROUTE_TYPE_DIRECT   MIB_IPFORWARD_TYPE = 3
+	MIB_IPROUTE_TYPE_INDIRECT MIB_IPFORWARD_TYPE = 4
 )
 
 type MIB_IPNET_TYPE int32
 
 const (
-	MIB_IPNET_TYPE_OTHER = 1
-	MIB_IPNET_TYPE_INVALID = 2
-	MIB_IPNET_TYPE_DYNAMIC = 3
-	MIB_IPNET_TYPE_STATIC = 4
+	MIB_IPNET_TYPE_OTHER   MIB_IPNET_TYPE = 1
+	MIB_IPNET_TYPE_INVALID MIB_IPNET_TYPE = 2
+	MIB_IPNET_TYPE_DYNAMIC MIB_IPNET_TYPE = 3
+	MIB_IPNET_TYPE_STATIC  MIB_IPNET_TYPE = 4
 )
 
 type MIB_IPSTATS_FORWARDING int32
 
 const (
-	MIB_IP_FORWARDING = 1
-	MIB_IP_NOT_FORWARDING = 2
+	MIB_IP_FORWARDING     MIB_IPSTATS_FORWARDING = 1
+	MIB_IP_NOT_FORWARDING MIB_IPSTATS_FORWARDING = 2
 )
 
 type MIB_TCP_STATE int32
 
 const (
-	MIB_TCP_STATE_CLOSED = 1
-	MIB_TCP_STATE_LISTEN = 2
-	MIB_TCP_STATE_SYN_SENT = 3
-	MIB_TCP_STATE_SYN_RCVD = 4
-	MIB_TCP_STATE_ESTAB = 5
-	MIB_TCP_STATE_FIN_WAIT1 = 6
-	MIB_TCP_STATE_FIN_WAIT2 = 7
-	MIB_TCP_STATE_CLOSE_WAIT = 8
-	MIB_TCP_STATE_CLOSING = 9
-	MIB_TCP_STATE_LAST_ACK = 10
-	MIB_TCP_STATE_TIME_WAIT = 11
-	MIB_TCP_STATE_DELETE_TCB = 12
-	MIB_TCP_STATE_RESERVED = 100
+	MIB_TCP_STATE_CLOSED     MIB_TCP_STATE = 1
+	MIB_TCP_STATE_LISTEN     MIB_TCP_STATE = 2
+	MIB_TCP_STATE_SYN_SENT   MIB_TCP_STATE = 3
+	MIB_TCP_STATE_SYN_RCVD   MIB_TCP_STATE = 4
+	MIB_TCP_STATE_ESTAB      MIB_TCP_STATE = 5
+	MIB_TCP_STATE_FIN_WAIT1  MIB_TCP_STATE = 6
+	MIB_TCP_STATE_FIN_WAIT2  MIB_TCP_STATE = 7
+	MIB_TCP_STATE_CLOSE_WAIT MIB_TCP_STATE = 8
+	MIB_TCP_STATE_CLOSING    MIB_TCP_STATE = 9
+	MIB_TCP_STATE_LAST_ACK   MIB_TCP_STATE = 10
+	MIB_TCP_STATE_TIME_WAIT  MIB_TCP_STATE = 11
+	MIB_TCP_STATE_DELETE_TCB MIB_TCP_STATE = 12
+	MIB_TCP_STATE_RESERVED   MIB_TCP_STATE = 100
 )
 
 type TCP_RTO_ALGORITHM int32
 
 const (
-	TcpRtoAlgorithmOther = 1
-	TcpRtoAlgorithmConstant = 2
-	TcpRtoAlgorithmRsre = 3
-	TcpRtoAlgorithmVanj = 4
-	MIB_TCP_RTO_OTHER = 1
-	MIB_TCP_RTO_CONSTANT = 2
-	MIB_TCP_RTO_RSRE = 3
-	MIB_TCP_RTO_VANJ = 4
+	TcpRtoAlgorithmOther    TCP_RTO_ALGORITHM = 1
+	TcpRtoAlgorithmConstant TCP_RTO_ALGORITHM = 2
+	TcpRtoAlgorithmRsre     TCP_RTO_ALGORITHM = 3
+	TcpRtoAlgorithmVanj     TCP_RTO_ALGORITHM = 4
+	MIB_TCP_RTO_OTHER       TCP_RTO_ALGORITHM = 1
+	MIB_TCP_RTO_CONSTANT    TCP_RTO_ALGORITHM = 2
+	MIB_TCP_RTO_RSRE        TCP_RTO_ALGORITHM = 3
+	MIB_TCP_RTO_VANJ        TCP_RTO_ALGORITHM = 4
 )
 
 type TCP_TABLE_CLASS int32
 
 const (
-	TCP_TABLE_BASIC_LISTENER = 0
-	TCP_TABLE_BASIC_CONNECTIONS = 1
-	TCP_TABLE_BASIC_ALL = 2
-	TCP_TABLE_OWNER_PID_LISTENER = 3
-	TCP_TABLE_OWNER_PID_CONNECTIONS = 4
-	TCP_TABLE_OWNER_PID_ALL = 5
-	TCP_TABLE_OWNER_MODULE_LISTENER = 6
-	TCP_TABLE_OWNER_MODULE_CONNECTIONS = 7
-	TCP_TABLE_OWNER_MODULE_ALL = 8
+	TCP_TABLE_BASIC_LISTENER           TCP_TABLE_CLASS = 0
+	TCP_TABLE_BASIC_CONNECTIONS        TCP_TABLE_CLASS = 1
+	TCP_TABLE_BASIC_ALL                TCP_TABLE_CLASS = 2
+	TCP_TABLE_OWNER_PID_LISTENER       TCP_TABLE_CLASS = 3
+	TCP_TABLE_OWNER_PID_CONNECTIONS    TCP_TABLE_CLASS = 4
+	TCP_TABLE_OWNER_PID_ALL            TCP_TABLE_CLASS = 5
+	TCP_TABLE_OWNER_MODULE_LISTENER    TCP_TABLE_CLASS = 6
+	TCP_TABLE_OWNER_MODULE_CONNECTIONS TCP_TABLE_CLASS = 7
+	TCP_TABLE_OWNER_MODULE_ALL         TCP_TABLE_CLASS = 8
 )
 
 type UDP_TABLE_CLASS int32
 
 const (
-	UDP_TABLE_BASIC = 0
-	UDP_TABLE_OWNER_PID = 1
-	UDP_TABLE_OWNER_MODULE = 2
+	UDP_TABLE_BASIC        UDP_TABLE_CLASS = 0
+	UDP_TABLE_OWNER_PID    UDP_TABLE_CLASS = 1
+	UDP_TABLE_OWNER_MODULE UDP_TABLE_CLASS = 2
 )
 
 type TCPIP_OWNER_MODULE_INFO_CLASS int32
 
 const (
-	TCPIP_OWNER_MODULE_INFO_BASIC = 0
+	TCPIP_OWNER_MODULE_INFO_BASIC TCPIP_OWNER_MODULE_INFO_CLASS = 0
 )
 
 type TCP_ESTATS_TYPE int32
 
 const (
-	TcpConnectionEstatsSynOpts = 0
-	TcpConnectionEstatsData = 1
-	TcpConnectionEstatsSndCong = 2
-	TcpConnectionEstatsPath = 3
-	TcpConnectionEstatsSendBuff = 4
-	TcpConnectionEstatsRec = 5
-	TcpConnectionEstatsObsRec = 6
-	TcpConnectionEstatsBandwidth = 7
-	TcpConnectionEstatsFineRtt = 8
-	TcpConnectionEstatsMaximum = 9
+	TcpConnectionEstatsSynOpts   TCP_ESTATS_TYPE = 0
+	TcpConnectionEstatsData      TCP_ESTATS_TYPE = 1
+	TcpConnectionEstatsSndCong   TCP_ESTATS_TYPE = 2
+	TcpConnectionEstatsPath      TCP_ESTATS_TYPE = 3
+	TcpConnectionEstatsSendBuff  TCP_ESTATS_TYPE = 4
+	TcpConnectionEstatsRec       TCP_ESTATS_TYPE = 5
+	TcpConnectionEstatsObsRec    TCP_ESTATS_TYPE = 6
+	TcpConnectionEstatsBandwidth TCP_ESTATS_TYPE = 7
+	TcpConnectionEstatsFineRtt   TCP_ESTATS_TYPE = 8
+	TcpConnectionEstatsMaximum   TCP_ESTATS_TYPE = 9
 )
 
 type TCP_BOOLEAN_OPTIONAL int32
 
 const (
-	TcpBoolOptDisabled = 0
-	TcpBoolOptEnabled = 1
-	TcpBoolOptUnchanged = -1
+	TcpBoolOptDisabled  TCP_BOOLEAN_OPTIONAL = 0
+	TcpBoolOptEnabled   TCP_BOOLEAN_OPTIONAL = 1
+	TcpBoolOptUnchanged TCP_BOOLEAN_OPTIONAL = -1
 )
 
 type TCP_SOFT_ERROR int32
 
 const (
-	TcpErrorNone = 0
-	TcpErrorBelowDataWindow = 1
-	TcpErrorAboveDataWindow = 2
-	TcpErrorBelowAckWindow = 3
-	TcpErrorAboveAckWindow = 4
-	TcpErrorBelowTsWindow = 5
-	TcpErrorAboveTsWindow = 6
-	TcpErrorDataChecksumError = 7
-	TcpErrorDataLengthError = 8
-	TcpErrorMaxSoftError = 9
+	TcpErrorNone              TCP_SOFT_ERROR = 0
+	TcpErrorBelowDataWindow   TCP_SOFT_ERROR = 1
+	TcpErrorAboveDataWindow   TCP_SOFT_ERROR = 2
+	TcpErrorBelowAckWindow    TCP_SOFT_ERROR = 3
+	TcpErrorAboveAckWindow    TCP_SOFT_ERROR = 4
+	TcpErrorBelowTsWindow     TCP_SOFT_ERROR = 5
+	TcpErrorAboveTsWindow     TCP_SOFT_ERROR = 6
+	TcpErrorDataChecksumError TCP_SOFT_ERROR = 7
+	TcpErrorDataLengthError   TCP_SOFT_ERROR = 8
+	TcpErrorMaxSoftError      TCP_SOFT_ERROR = 9
 )
 
 type NET_ADDRESS_FORMAT int32
 
 const (
-	NET_ADDRESS_FORMAT_UNSPECIFIED = 0
-	NET_ADDRESS_DNS_NAME = 1
-	NET_ADDRESS_IPV4 = 2
-	NET_ADDRESS_IPV6 = 3
+	NET_ADDRESS_FORMAT_UNSPECIFIED NET_ADDRESS_FORMAT = 0
+	NET_ADDRESS_DNS_NAME           NET_ADDRESS_FORMAT = 1
+	NET_ADDRESS_IPV4               NET_ADDRESS_FORMAT = 2
+	NET_ADDRESS_IPV6               NET_ADDRESS_FORMAT = 3
 )
 
 type SCOPE_LEVEL int32
 
 const (
-	ScopeLevelInterface = 1
-	ScopeLevelLink = 2
-	ScopeLevelSubnet = 3
-	ScopeLevelAdmin = 4
-	ScopeLevelSite = 5
-	ScopeLevelOrganization = 8
-	ScopeLevelGlobal = 14
-	ScopeLevelCount = 16
+	ScopeLevelInterface    SCOPE_LEVEL = 1
+	ScopeLevelLink         SCOPE_LEVEL = 2
+	ScopeLevelSubnet       SCOPE_LEVEL = 3
+	ScopeLevelAdmin        SCOPE_LEVEL = 4
+	ScopeLevelSite         SCOPE_LEVEL = 5
+	ScopeLevelOrganization SCOPE_LEVEL = 8
+	ScopeLevelGlobal       SCOPE_LEVEL = 14
+	ScopeLevelCount        SCOPE_LEVEL = 16
 )
 
 type NL_PREFIX_ORIGIN int32
 
 const (
-	IpPrefixOriginOther = 0
-	IpPrefixOriginManual = 1
-	IpPrefixOriginWellKnown = 2
-	IpPrefixOriginDhcp = 3
-	IpPrefixOriginRouterAdvertisement = 4
-	IpPrefixOriginUnchanged = 16
+	IpPrefixOriginOther               NL_PREFIX_ORIGIN = 0
+	IpPrefixOriginManual              NL_PREFIX_ORIGIN = 1
+	IpPrefixOriginWellKnown           NL_PREFIX_ORIGIN = 2
+	IpPrefixOriginDhcp                NL_PREFIX_ORIGIN = 3
+	IpPrefixOriginRouterAdvertisement NL_PREFIX_ORIGIN = 4
+	IpPrefixOriginUnchanged           NL_PREFIX_ORIGIN = 16
 )
 
 type NL_SUFFIX_ORIGIN int32
 
 const (
-	NlsoOther = 0
-	NlsoManual = 1
-	NlsoWellKnown = 2
-	NlsoDhcp = 3
-	NlsoLinkLayerAddress = 4
-	NlsoRandom = 5
-	IpSuffixOriginOther = 0
-	IpSuffixOriginManual = 1
-	IpSuffixOriginWellKnown = 2
-	IpSuffixOriginDhcp = 3
-	IpSuffixOriginLinkLayerAddress = 4
-	IpSuffixOriginRandom = 5
-	IpSuffixOriginUnchanged = 16
+	NlsoOther                      NL_SUFFIX_ORIGIN = 0
+	NlsoManual                     NL_SUFFIX_ORIGIN = 1
+	NlsoWellKnown                  NL_SUFFIX_ORIGIN = 2
+	NlsoDhcp                       NL_SUFFIX_ORIGIN = 3
+	NlsoLinkLayerAddress           NL_SUFFIX_ORIGIN = 4
+	NlsoRandom                     NL_SUFFIX_ORIGIN = 5
+	IpSuffixOriginOther            NL_SUFFIX_ORIGIN = 0
+	IpSuffixOriginManual           NL_SUFFIX_ORIGIN = 1
+	IpSuffixOriginWellKnown        NL_SUFFIX_ORIGIN = 2
+	IpSuffixOriginDhcp             NL_SUFFIX_ORIGIN = 3
+	IpSuffixOriginLinkLayerAddress NL_SUFFIX_ORIGIN = 4
+	IpSuffixOriginRandom           NL_SUFFIX_ORIGIN = 5
+	IpSuffixOriginUnchanged        NL_SUFFIX_ORIGIN = 16
 )
 
 type NL_DAD_STATE int32
 
 const (
-	NldsInvalid = 0
-	NldsTentative = 1
-	NldsDuplicate = 2
-	NldsDeprecated = 3
-	NldsPreferred = 4
-	IpDadStateInvalid = 0
-	IpDadStateTentative = 1
-	IpDadStateDuplicate = 2
-	IpDadStateDeprecated = 3
-	IpDadStatePreferred = 4
+	NldsInvalid          NL_DAD_STATE = 0
+	NldsTentative        NL_DAD_STATE = 1
+	NldsDuplicate        NL_DAD_STATE = 2
+	NldsDeprecated       NL_DAD_STATE = 3
+	NldsPreferred        NL_DAD_STATE = 4
+	IpDadStateInvalid    NL_DAD_STATE = 0
+	IpDadStateTentative  NL_DAD_STATE = 1
+	IpDadStateDuplicate  NL_DAD_STATE = 2
+	IpDadStateDeprecated NL_DAD_STATE = 3
+	IpDadStatePreferred  NL_DAD_STATE = 4
 )
 
 type NL_NETWORK_CONNECTIVITY_LEVEL_HINT int32
 
 const (
-	NetworkConnectivityLevelHintUnknown = 0
-	NetworkConnectivityLevelHintNone = 1
-	NetworkConnectivityLevelHintLocalAccess = 2
-	NetworkConnectivityLevelHintInternetAccess = 3
-	NetworkConnectivityLevelHintConstrainedInternetAccess = 4
-	NetworkConnectivityLevelHintHidden = 5
+	NetworkConnectivityLevelHintUnknown                   NL_NETWORK_CONNECTIVITY_LEVEL_HINT = 0
+	NetworkConnectivityLevelHintNone                      NL_NETWORK_CONNECTIVITY_LEVEL_HINT = 1
+	NetworkConnectivityLevelHintLocalAccess               NL_NETWORK_CONNECTIVITY_LEVEL_HINT = 2
+	NetworkConnectivityLevelHintInternetAccess            NL_NETWORK_CONNECTIVITY_LEVEL_HINT = 3
+	NetworkConnectivityLevelHintConstrainedInternetAccess NL_NETWORK_CONNECTIVITY_LEVEL_HINT = 4
+	NetworkConnectivityLevelHintHidden                    NL_NETWORK_CONNECTIVITY_LEVEL_HINT = 5
 )
 
 type NL_NETWORK_CONNECTIVITY_COST_HINT int32
 
 const (
-	NetworkConnectivityCostHintUnknown = 0
-	NetworkConnectivityCostHintUnrestricted = 1
-	NetworkConnectivityCostHintFixed = 2
-	NetworkConnectivityCostHintVariable = 3
+	NetworkConnectivityCostHintUnknown      NL_NETWORK_CONNECTIVITY_COST_HINT = 0
+	NetworkConnectivityCostHintUnrestricted NL_NETWORK_CONNECTIVITY_COST_HINT = 1
+	NetworkConnectivityCostHintFixed        NL_NETWORK_CONNECTIVITY_COST_HINT = 2
+	NetworkConnectivityCostHintVariable     NL_NETWORK_CONNECTIVITY_COST_HINT = 3
 )
-

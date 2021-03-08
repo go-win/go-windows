@@ -7,956 +7,955 @@ package filesystem
 type FIND_FIRST_EX_FLAGS uint32
 
 const (
-	FIND_FIRST_EX_CASE_SENSITIVE = 1
-	FIND_FIRST_EX_LARGE_FETCH = 2
-	FIND_FIRST_EX_ON_DISK_ENTRIES_ONLY = 4
+	FIND_FIRST_EX_CASE_SENSITIVE       FIND_FIRST_EX_FLAGS = 1
+	FIND_FIRST_EX_LARGE_FETCH          FIND_FIRST_EX_FLAGS = 2
+	FIND_FIRST_EX_ON_DISK_ENTRIES_ONLY FIND_FIRST_EX_FLAGS = 4
 )
 
 type FILE_NOTIFY_CHANGE uint32
 
 const (
-	FILE_NOTIFY_CHANGE_FILE_NAME = 1
-	FILE_NOTIFY_CHANGE_DIR_NAME = 2
-	FILE_NOTIFY_CHANGE_ATTRIBUTES = 4
-	FILE_NOTIFY_CHANGE_SIZE = 8
-	FILE_NOTIFY_CHANGE_LAST_WRITE = 16
-	FILE_NOTIFY_CHANGE_LAST_ACCESS = 32
-	FILE_NOTIFY_CHANGE_CREATION = 64
-	FILE_NOTIFY_CHANGE_SECURITY = 256
+	FILE_NOTIFY_CHANGE_FILE_NAME   FILE_NOTIFY_CHANGE = 1
+	FILE_NOTIFY_CHANGE_DIR_NAME    FILE_NOTIFY_CHANGE = 2
+	FILE_NOTIFY_CHANGE_ATTRIBUTES  FILE_NOTIFY_CHANGE = 4
+	FILE_NOTIFY_CHANGE_SIZE        FILE_NOTIFY_CHANGE = 8
+	FILE_NOTIFY_CHANGE_LAST_WRITE  FILE_NOTIFY_CHANGE = 16
+	FILE_NOTIFY_CHANGE_LAST_ACCESS FILE_NOTIFY_CHANGE = 32
+	FILE_NOTIFY_CHANGE_CREATION    FILE_NOTIFY_CHANGE = 64
+	FILE_NOTIFY_CHANGE_SECURITY    FILE_NOTIFY_CHANGE = 256
 )
 
 type DEFINE_DOS_DEVICE_FLAGS uint32
 
 const (
-	DDD_RAW_TARGET_PATH = 1
-	DDD_REMOVE_DEFINITION = 2
-	DDD_EXACT_MATCH_ON_REMOVE = 4
-	DDD_NO_BROADCAST_SYSTEM = 8
-	DDD_LUID_BROADCAST_DRIVE = 16
+	DDD_RAW_TARGET_PATH       DEFINE_DOS_DEVICE_FLAGS = 1
+	DDD_REMOVE_DEFINITION     DEFINE_DOS_DEVICE_FLAGS = 2
+	DDD_EXACT_MATCH_ON_REMOVE DEFINE_DOS_DEVICE_FLAGS = 4
+	DDD_NO_BROADCAST_SYSTEM   DEFINE_DOS_DEVICE_FLAGS = 8
+	DDD_LUID_BROADCAST_DRIVE  DEFINE_DOS_DEVICE_FLAGS = 16
 )
 
 type FILE_CREATE_FLAGS uint32
 
 const (
-	CREATE_NEW = 1
-	CREATE_ALWAYS = 2
-	OPEN_EXISTING = 3
-	OPEN_ALWAYS = 4
-	TRUNCATE_EXISTING = 5
+	CREATE_NEW        FILE_CREATE_FLAGS = 1
+	CREATE_ALWAYS     FILE_CREATE_FLAGS = 2
+	OPEN_EXISTING     FILE_CREATE_FLAGS = 3
+	OPEN_ALWAYS       FILE_CREATE_FLAGS = 4
+	TRUNCATE_EXISTING FILE_CREATE_FLAGS = 5
 )
 
 type FILE_SHARE_FLAGS uint32
 
 const (
-	FILE_SHARE_NONE = 0
-	FILE_SHARE_DELETE = 4
-	FILE_SHARE_READ = 1
-	FILE_SHARE_WRITE = 2
+	FILE_SHARE_NONE   FILE_SHARE_FLAGS = 0
+	FILE_SHARE_DELETE FILE_SHARE_FLAGS = 4
+	FILE_SHARE_READ   FILE_SHARE_FLAGS = 1
+	FILE_SHARE_WRITE  FILE_SHARE_FLAGS = 2
 )
 
 type FILE_FLAGS_AND_ATTRIBUTES uint32
 
 const (
-	FILE_ATTRIBUTE_READONLY = 1
-	FILE_ATTRIBUTE_HIDDEN = 2
-	FILE_ATTRIBUTE_SYSTEM = 4
-	FILE_ATTRIBUTE_DIRECTORY = 16
-	FILE_ATTRIBUTE_ARCHIVE = 32
-	FILE_ATTRIBUTE_DEVICE = 64
-	FILE_ATTRIBUTE_NORMAL = 128
-	FILE_ATTRIBUTE_TEMPORARY = 256
-	FILE_ATTRIBUTE_SPARSE_FILE = 512
-	FILE_ATTRIBUTE_REPARSE_POINT = 1024
-	FILE_ATTRIBUTE_COMPRESSED = 2048
-	FILE_ATTRIBUTE_OFFLINE = 4096
-	FILE_ATTRIBUTE_NOT_CONTENT_INDEXED = 8192
-	FILE_ATTRIBUTE_ENCRYPTED = 16384
-	FILE_ATTRIBUTE_INTEGRITY_STREAM = 32768
-	FILE_ATTRIBUTE_VIRTUAL = 65536
-	FILE_ATTRIBUTE_NO_SCRUB_DATA = 131072
-	FILE_ATTRIBUTE_EA = 262144
-	FILE_ATTRIBUTE_PINNED = 524288
-	FILE_ATTRIBUTE_UNPINNED = 1048576
-	FILE_ATTRIBUTE_RECALL_ON_OPEN = 262144
-	FILE_ATTRIBUTE_RECALL_ON_DATA_ACCESS = 4194304
+	FILE_ATTRIBUTE_READONLY              FILE_FLAGS_AND_ATTRIBUTES = 1
+	FILE_ATTRIBUTE_HIDDEN                FILE_FLAGS_AND_ATTRIBUTES = 2
+	FILE_ATTRIBUTE_SYSTEM                FILE_FLAGS_AND_ATTRIBUTES = 4
+	FILE_ATTRIBUTE_DIRECTORY             FILE_FLAGS_AND_ATTRIBUTES = 16
+	FILE_ATTRIBUTE_ARCHIVE               FILE_FLAGS_AND_ATTRIBUTES = 32
+	FILE_ATTRIBUTE_DEVICE                FILE_FLAGS_AND_ATTRIBUTES = 64
+	FILE_ATTRIBUTE_NORMAL                FILE_FLAGS_AND_ATTRIBUTES = 128
+	FILE_ATTRIBUTE_TEMPORARY             FILE_FLAGS_AND_ATTRIBUTES = 256
+	FILE_ATTRIBUTE_SPARSE_FILE           FILE_FLAGS_AND_ATTRIBUTES = 512
+	FILE_ATTRIBUTE_REPARSE_POINT         FILE_FLAGS_AND_ATTRIBUTES = 1024
+	FILE_ATTRIBUTE_COMPRESSED            FILE_FLAGS_AND_ATTRIBUTES = 2048
+	FILE_ATTRIBUTE_OFFLINE               FILE_FLAGS_AND_ATTRIBUTES = 4096
+	FILE_ATTRIBUTE_NOT_CONTENT_INDEXED   FILE_FLAGS_AND_ATTRIBUTES = 8192
+	FILE_ATTRIBUTE_ENCRYPTED             FILE_FLAGS_AND_ATTRIBUTES = 16384
+	FILE_ATTRIBUTE_INTEGRITY_STREAM      FILE_FLAGS_AND_ATTRIBUTES = 32768
+	FILE_ATTRIBUTE_VIRTUAL               FILE_FLAGS_AND_ATTRIBUTES = 65536
+	FILE_ATTRIBUTE_NO_SCRUB_DATA         FILE_FLAGS_AND_ATTRIBUTES = 131072
+	FILE_ATTRIBUTE_EA                    FILE_FLAGS_AND_ATTRIBUTES = 262144
+	FILE_ATTRIBUTE_PINNED                FILE_FLAGS_AND_ATTRIBUTES = 524288
+	FILE_ATTRIBUTE_UNPINNED              FILE_FLAGS_AND_ATTRIBUTES = 1048576
+	FILE_ATTRIBUTE_RECALL_ON_OPEN        FILE_FLAGS_AND_ATTRIBUTES = 262144
+	FILE_ATTRIBUTE_RECALL_ON_DATA_ACCESS FILE_FLAGS_AND_ATTRIBUTES = 4194304
 )
 
 type FILE_ACCESS_FLAGS uint32
 
 const (
-	FILE_READ_DATA = 1
-	FILE_LIST_DIRECTORY = 1
-	FILE_WRITE_DATA = 2
-	FILE_ADD_FILE = 2
-	FILE_APPEND_DATA = 4
-	FILE_ADD_SUBDIRECTORY = 4
-	FILE_CREATE_PIPE_INSTANCE = 4
-	FILE_READ_EA = 8
-	FILE_WRITE_EA = 16
-	FILE_EXECUTE = 32
-	FILE_TRAVERSE = 32
-	FILE_DELETE_CHILD = 64
-	FILE_READ_ATTRIBUTES = 128
-	FILE_WRITE_ATTRIBUTES = 256
-	READ_CONTROL = 131072
-	SYNCHRONIZE = 1048576
-	STANDARD_RIGHTS_REQUIRED = 983040
-	STANDARD_RIGHTS_READ = 131072
-	STANDARD_RIGHTS_WRITE = 131072
-	STANDARD_RIGHTS_EXECUTE = 131072
-	STANDARD_RIGHTS_ALL = 2031616
-	SPECIFIC_RIGHTS_ALL = 65535
-	FILE_ALL_ACCESS = 2032127
-	FILE_GENERIC_READ = 1179785
-	FILE_GENERIC_WRITE = 1179926
-	FILE_GENERIC_EXECUTE = 1179808
+	FILE_READ_DATA            FILE_ACCESS_FLAGS = 1
+	FILE_LIST_DIRECTORY       FILE_ACCESS_FLAGS = 1
+	FILE_WRITE_DATA           FILE_ACCESS_FLAGS = 2
+	FILE_ADD_FILE             FILE_ACCESS_FLAGS = 2
+	FILE_APPEND_DATA          FILE_ACCESS_FLAGS = 4
+	FILE_ADD_SUBDIRECTORY     FILE_ACCESS_FLAGS = 4
+	FILE_CREATE_PIPE_INSTANCE FILE_ACCESS_FLAGS = 4
+	FILE_READ_EA              FILE_ACCESS_FLAGS = 8
+	FILE_WRITE_EA             FILE_ACCESS_FLAGS = 16
+	FILE_EXECUTE              FILE_ACCESS_FLAGS = 32
+	FILE_TRAVERSE             FILE_ACCESS_FLAGS = 32
+	FILE_DELETE_CHILD         FILE_ACCESS_FLAGS = 64
+	FILE_READ_ATTRIBUTES      FILE_ACCESS_FLAGS = 128
+	FILE_WRITE_ATTRIBUTES     FILE_ACCESS_FLAGS = 256
+	READ_CONTROL              FILE_ACCESS_FLAGS = 131072
+	SYNCHRONIZE               FILE_ACCESS_FLAGS = 1048576
+	STANDARD_RIGHTS_REQUIRED  FILE_ACCESS_FLAGS = 983040
+	STANDARD_RIGHTS_READ      FILE_ACCESS_FLAGS = 131072
+	STANDARD_RIGHTS_WRITE     FILE_ACCESS_FLAGS = 131072
+	STANDARD_RIGHTS_EXECUTE   FILE_ACCESS_FLAGS = 131072
+	STANDARD_RIGHTS_ALL       FILE_ACCESS_FLAGS = 2031616
+	SPECIFIC_RIGHTS_ALL       FILE_ACCESS_FLAGS = 65535
+	FILE_ALL_ACCESS           FILE_ACCESS_FLAGS = 2032127
+	FILE_GENERIC_READ         FILE_ACCESS_FLAGS = 1179785
+	FILE_GENERIC_WRITE        FILE_ACCESS_FLAGS = 1179926
+	FILE_GENERIC_EXECUTE      FILE_ACCESS_FLAGS = 1179808
 )
 
 type TRANSACTION_OUTCOME int32
 
 const (
-	TransactionOutcomeUndetermined = 1
-	TransactionOutcomeCommitted = 2
-	TransactionOutcomeAborted = 3
+	TransactionOutcomeUndetermined TRANSACTION_OUTCOME = 1
+	TransactionOutcomeCommitted    TRANSACTION_OUTCOME = 2
+	TransactionOutcomeAborted      TRANSACTION_OUTCOME = 3
 )
 
 type STREAM_INFO_LEVELS int32
 
 const (
-	FindStreamInfoStandard = 0
-	FindStreamInfoMaxInfoLevel = 1
+	FindStreamInfoStandard     STREAM_INFO_LEVELS = 0
+	FindStreamInfoMaxInfoLevel STREAM_INFO_LEVELS = 1
 )
 
 type NtmsObjectsTypes int32
 
 const (
-	NTMS_UNKNOWN = 0
-	NTMS_OBJECT = 1
-	NTMS_CHANGER = 2
-	NTMS_CHANGER_TYPE = 3
-	NTMS_COMPUTER = 4
-	NTMS_DRIVE = 5
-	NTMS_DRIVE_TYPE = 6
-	NTMS_IEDOOR = 7
-	NTMS_IEPORT = 8
-	NTMS_LIBRARY = 9
-	NTMS_LIBREQUEST = 10
-	NTMS_LOGICAL_MEDIA = 11
-	NTMS_MEDIA_POOL = 12
-	NTMS_MEDIA_TYPE = 13
-	NTMS_PARTITION = 14
-	NTMS_PHYSICAL_MEDIA = 15
-	NTMS_STORAGESLOT = 16
-	NTMS_OPREQUEST = 17
-	NTMS_UI_DESTINATION = 18
-	NTMS_NUMBER_OF_OBJECT_TYPES = 19
+	NTMS_UNKNOWN                NtmsObjectsTypes = 0
+	NTMS_OBJECT                 NtmsObjectsTypes = 1
+	NTMS_CHANGER                NtmsObjectsTypes = 2
+	NTMS_CHANGER_TYPE           NtmsObjectsTypes = 3
+	NTMS_COMPUTER               NtmsObjectsTypes = 4
+	NTMS_DRIVE                  NtmsObjectsTypes = 5
+	NTMS_DRIVE_TYPE             NtmsObjectsTypes = 6
+	NTMS_IEDOOR                 NtmsObjectsTypes = 7
+	NTMS_IEPORT                 NtmsObjectsTypes = 8
+	NTMS_LIBRARY                NtmsObjectsTypes = 9
+	NTMS_LIBREQUEST             NtmsObjectsTypes = 10
+	NTMS_LOGICAL_MEDIA          NtmsObjectsTypes = 11
+	NTMS_MEDIA_POOL             NtmsObjectsTypes = 12
+	NTMS_MEDIA_TYPE             NtmsObjectsTypes = 13
+	NTMS_PARTITION              NtmsObjectsTypes = 14
+	NTMS_PHYSICAL_MEDIA         NtmsObjectsTypes = 15
+	NTMS_STORAGESLOT            NtmsObjectsTypes = 16
+	NTMS_OPREQUEST              NtmsObjectsTypes = 17
+	NTMS_UI_DESTINATION         NtmsObjectsTypes = 18
+	NTMS_NUMBER_OF_OBJECT_TYPES NtmsObjectsTypes = 19
 )
 
 type NtmsAsyncStatus int32
 
 const (
-	NTMS_ASYNCSTATE_QUEUED = 0
-	NTMS_ASYNCSTATE_WAIT_RESOURCE = 1
-	NTMS_ASYNCSTATE_WAIT_OPERATOR = 2
-	NTMS_ASYNCSTATE_INPROCESS = 3
-	NTMS_ASYNCSTATE_COMPLETE = 4
+	NTMS_ASYNCSTATE_QUEUED        NtmsAsyncStatus = 0
+	NTMS_ASYNCSTATE_WAIT_RESOURCE NtmsAsyncStatus = 1
+	NTMS_ASYNCSTATE_WAIT_OPERATOR NtmsAsyncStatus = 2
+	NTMS_ASYNCSTATE_INPROCESS     NtmsAsyncStatus = 3
+	NTMS_ASYNCSTATE_COMPLETE      NtmsAsyncStatus = 4
 )
 
 type NtmsAsyncOperations int32
 
 const (
-	NTMS_ASYNCOP_MOUNT = 1
+	NTMS_ASYNCOP_MOUNT NtmsAsyncOperations = 1
 )
 
 type NtmsSessionOptions int32
 
 const (
-	NTMS_SESSION_QUERYEXPEDITE = 1
+	NTMS_SESSION_QUERYEXPEDITE NtmsSessionOptions = 1
 )
 
 type NtmsMountOptions int32
 
 const (
-	NTMS_MOUNT_READ = 1
-	NTMS_MOUNT_WRITE = 2
-	NTMS_MOUNT_ERROR_NOT_AVAILABLE = 4
-	NTMS_MOUNT_ERROR_IF_UNAVAILABLE = 4
-	NTMS_MOUNT_ERROR_OFFLINE = 8
-	NTMS_MOUNT_ERROR_IF_OFFLINE = 8
-	NTMS_MOUNT_SPECIFIC_DRIVE = 16
-	NTMS_MOUNT_NOWAIT = 32
+	NTMS_MOUNT_READ                 NtmsMountOptions = 1
+	NTMS_MOUNT_WRITE                NtmsMountOptions = 2
+	NTMS_MOUNT_ERROR_NOT_AVAILABLE  NtmsMountOptions = 4
+	NTMS_MOUNT_ERROR_IF_UNAVAILABLE NtmsMountOptions = 4
+	NTMS_MOUNT_ERROR_OFFLINE        NtmsMountOptions = 8
+	NTMS_MOUNT_ERROR_IF_OFFLINE     NtmsMountOptions = 8
+	NTMS_MOUNT_SPECIFIC_DRIVE       NtmsMountOptions = 16
+	NTMS_MOUNT_NOWAIT               NtmsMountOptions = 32
 )
 
 type NtmsDismountOptions int32
 
 const (
-	NTMS_DISMOUNT_DEFERRED = 1
-	NTMS_DISMOUNT_IMMEDIATE = 2
+	NTMS_DISMOUNT_DEFERRED  NtmsDismountOptions = 1
+	NTMS_DISMOUNT_IMMEDIATE NtmsDismountOptions = 2
 )
 
 type NtmsMountPriority int32
 
 const (
-	NTMS_PRIORITY_DEFAULT = 0
-	NTMS_PRIORITY_HIGHEST = 15
-	NTMS_PRIORITY_HIGH = 7
-	NTMS_PRIORITY_NORMAL = 0
-	NTMS_PRIORITY_LOW = -7
-	NTMS_PRIORITY_LOWEST = -15
+	NTMS_PRIORITY_DEFAULT NtmsMountPriority = 0
+	NTMS_PRIORITY_HIGHEST NtmsMountPriority = 15
+	NTMS_PRIORITY_HIGH    NtmsMountPriority = 7
+	NTMS_PRIORITY_NORMAL  NtmsMountPriority = 0
+	NTMS_PRIORITY_LOW     NtmsMountPriority = -7
+	NTMS_PRIORITY_LOWEST  NtmsMountPriority = -15
 )
 
 type NtmsAllocateOptions int32
 
 const (
-	NTMS_ALLOCATE_NEW = 1
-	NTMS_ALLOCATE_NEXT = 2
-	NTMS_ALLOCATE_ERROR_IF_UNAVAILABLE = 4
+	NTMS_ALLOCATE_NEW                  NtmsAllocateOptions = 1
+	NTMS_ALLOCATE_NEXT                 NtmsAllocateOptions = 2
+	NTMS_ALLOCATE_ERROR_IF_UNAVAILABLE NtmsAllocateOptions = 4
 )
 
 type NtmsCreateOptions int32
 
 const (
-	NTMS_OPEN_EXISTING = 1
-	NTMS_CREATE_NEW = 2
-	NTMS_OPEN_ALWAYS = 3
+	NTMS_OPEN_EXISTING NtmsCreateOptions = 1
+	NTMS_CREATE_NEW    NtmsCreateOptions = 2
+	NTMS_OPEN_ALWAYS   NtmsCreateOptions = 3
 )
 
 type NtmsDriveState int32
 
 const (
-	NTMS_DRIVESTATE_DISMOUNTED = 0
-	NTMS_DRIVESTATE_MOUNTED = 1
-	NTMS_DRIVESTATE_LOADED = 2
-	NTMS_DRIVESTATE_UNLOADED = 5
-	NTMS_DRIVESTATE_BEING_CLEANED = 6
-	NTMS_DRIVESTATE_DISMOUNTABLE = 7
+	NTMS_DRIVESTATE_DISMOUNTED    NtmsDriveState = 0
+	NTMS_DRIVESTATE_MOUNTED       NtmsDriveState = 1
+	NTMS_DRIVESTATE_LOADED        NtmsDriveState = 2
+	NTMS_DRIVESTATE_UNLOADED      NtmsDriveState = 5
+	NTMS_DRIVESTATE_BEING_CLEANED NtmsDriveState = 6
+	NTMS_DRIVESTATE_DISMOUNTABLE  NtmsDriveState = 7
 )
 
 type NtmsLibraryType int32
 
 const (
-	NTMS_LIBRARYTYPE_UNKNOWN = 0
-	NTMS_LIBRARYTYPE_OFFLINE = 1
-	NTMS_LIBRARYTYPE_ONLINE = 2
-	NTMS_LIBRARYTYPE_STANDALONE = 3
+	NTMS_LIBRARYTYPE_UNKNOWN    NtmsLibraryType = 0
+	NTMS_LIBRARYTYPE_OFFLINE    NtmsLibraryType = 1
+	NTMS_LIBRARYTYPE_ONLINE     NtmsLibraryType = 2
+	NTMS_LIBRARYTYPE_STANDALONE NtmsLibraryType = 3
 )
 
 type NtmsLibraryFlags int32
 
 const (
-	NTMS_LIBRARYFLAG_FIXEDOFFLINE = 1
-	NTMS_LIBRARYFLAG_CLEANERPRESENT = 2
-	NTMS_LIBRARYFLAG_AUTODETECTCHANGE = 4
-	NTMS_LIBRARYFLAG_IGNORECLEANERUSESREMAINING = 8
-	NTMS_LIBRARYFLAG_RECOGNIZECLEANERBARCODE = 16
+	NTMS_LIBRARYFLAG_FIXEDOFFLINE               NtmsLibraryFlags = 1
+	NTMS_LIBRARYFLAG_CLEANERPRESENT             NtmsLibraryFlags = 2
+	NTMS_LIBRARYFLAG_AUTODETECTCHANGE           NtmsLibraryFlags = 4
+	NTMS_LIBRARYFLAG_IGNORECLEANERUSESREMAINING NtmsLibraryFlags = 8
+	NTMS_LIBRARYFLAG_RECOGNIZECLEANERBARCODE    NtmsLibraryFlags = 16
 )
 
 type NtmsInventoryMethod int32
 
 const (
-	NTMS_INVENTORY_NONE = 0
-	NTMS_INVENTORY_FAST = 1
-	NTMS_INVENTORY_OMID = 2
-	NTMS_INVENTORY_DEFAULT = 3
-	NTMS_INVENTORY_SLOT = 4
-	NTMS_INVENTORY_STOP = 5
-	NTMS_INVENTORY_MAX = 6
+	NTMS_INVENTORY_NONE    NtmsInventoryMethod = 0
+	NTMS_INVENTORY_FAST    NtmsInventoryMethod = 1
+	NTMS_INVENTORY_OMID    NtmsInventoryMethod = 2
+	NTMS_INVENTORY_DEFAULT NtmsInventoryMethod = 3
+	NTMS_INVENTORY_SLOT    NtmsInventoryMethod = 4
+	NTMS_INVENTORY_STOP    NtmsInventoryMethod = 5
+	NTMS_INVENTORY_MAX     NtmsInventoryMethod = 6
 )
 
 type NtmsSlotState int32
 
 const (
-	NTMS_SLOTSTATE_UNKNOWN = 0
-	NTMS_SLOTSTATE_FULL = 1
-	NTMS_SLOTSTATE_EMPTY = 2
-	NTMS_SLOTSTATE_NOTPRESENT = 3
-	NTMS_SLOTSTATE_NEEDSINVENTORY = 4
+	NTMS_SLOTSTATE_UNKNOWN        NtmsSlotState = 0
+	NTMS_SLOTSTATE_FULL           NtmsSlotState = 1
+	NTMS_SLOTSTATE_EMPTY          NtmsSlotState = 2
+	NTMS_SLOTSTATE_NOTPRESENT     NtmsSlotState = 3
+	NTMS_SLOTSTATE_NEEDSINVENTORY NtmsSlotState = 4
 )
 
 type NtmsDoorState int32
 
 const (
-	NTMS_DOORSTATE_UNKNOWN = 0
-	NTMS_DOORSTATE_CLOSED = 1
-	NTMS_DOORSTATE_OPEN = 2
+	NTMS_DOORSTATE_UNKNOWN NtmsDoorState = 0
+	NTMS_DOORSTATE_CLOSED  NtmsDoorState = 1
+	NTMS_DOORSTATE_OPEN    NtmsDoorState = 2
 )
 
 type NtmsPortPosition int32
 
 const (
-	NTMS_PORTPOSITION_UNKNOWN = 0
-	NTMS_PORTPOSITION_EXTENDED = 1
-	NTMS_PORTPOSITION_RETRACTED = 2
+	NTMS_PORTPOSITION_UNKNOWN   NtmsPortPosition = 0
+	NTMS_PORTPOSITION_EXTENDED  NtmsPortPosition = 1
+	NTMS_PORTPOSITION_RETRACTED NtmsPortPosition = 2
 )
 
 type NtmsPortContent int32
 
 const (
-	NTMS_PORTCONTENT_UNKNOWN = 0
-	NTMS_PORTCONTENT_FULL = 1
-	NTMS_PORTCONTENT_EMPTY = 2
+	NTMS_PORTCONTENT_UNKNOWN NtmsPortContent = 0
+	NTMS_PORTCONTENT_FULL    NtmsPortContent = 1
+	NTMS_PORTCONTENT_EMPTY   NtmsPortContent = 2
 )
 
 type NtmsBarCodeState int32
 
 const (
-	NTMS_BARCODESTATE_OK = 1
-	NTMS_BARCODESTATE_UNREADABLE = 2
+	NTMS_BARCODESTATE_OK         NtmsBarCodeState = 1
+	NTMS_BARCODESTATE_UNREADABLE NtmsBarCodeState = 2
 )
 
 type NtmsMediaState int32
 
 const (
-	NTMS_MEDIASTATE_IDLE = 0
-	NTMS_MEDIASTATE_INUSE = 1
-	NTMS_MEDIASTATE_MOUNTED = 2
-	NTMS_MEDIASTATE_LOADED = 3
-	NTMS_MEDIASTATE_UNLOADED = 4
-	NTMS_MEDIASTATE_OPERROR = 5
-	NTMS_MEDIASTATE_OPREQ = 6
+	NTMS_MEDIASTATE_IDLE     NtmsMediaState = 0
+	NTMS_MEDIASTATE_INUSE    NtmsMediaState = 1
+	NTMS_MEDIASTATE_MOUNTED  NtmsMediaState = 2
+	NTMS_MEDIASTATE_LOADED   NtmsMediaState = 3
+	NTMS_MEDIASTATE_UNLOADED NtmsMediaState = 4
+	NTMS_MEDIASTATE_OPERROR  NtmsMediaState = 5
+	NTMS_MEDIASTATE_OPREQ    NtmsMediaState = 6
 )
 
 type NtmsPartitionState int32
 
 const (
-	NTMS_PARTSTATE_UNKNOWN = 0
-	NTMS_PARTSTATE_UNPREPARED = 1
-	NTMS_PARTSTATE_INCOMPATIBLE = 2
-	NTMS_PARTSTATE_DECOMMISSIONED = 3
-	NTMS_PARTSTATE_AVAILABLE = 4
-	NTMS_PARTSTATE_ALLOCATED = 5
-	NTMS_PARTSTATE_COMPLETE = 6
-	NTMS_PARTSTATE_FOREIGN = 7
-	NTMS_PARTSTATE_IMPORT = 8
-	NTMS_PARTSTATE_RESERVED = 9
+	NTMS_PARTSTATE_UNKNOWN        NtmsPartitionState = 0
+	NTMS_PARTSTATE_UNPREPARED     NtmsPartitionState = 1
+	NTMS_PARTSTATE_INCOMPATIBLE   NtmsPartitionState = 2
+	NTMS_PARTSTATE_DECOMMISSIONED NtmsPartitionState = 3
+	NTMS_PARTSTATE_AVAILABLE      NtmsPartitionState = 4
+	NTMS_PARTSTATE_ALLOCATED      NtmsPartitionState = 5
+	NTMS_PARTSTATE_COMPLETE       NtmsPartitionState = 6
+	NTMS_PARTSTATE_FOREIGN        NtmsPartitionState = 7
+	NTMS_PARTSTATE_IMPORT         NtmsPartitionState = 8
+	NTMS_PARTSTATE_RESERVED       NtmsPartitionState = 9
 )
 
 type NtmsPoolType int32
 
 const (
-	NTMS_POOLTYPE_UNKNOWN = 0
-	NTMS_POOLTYPE_SCRATCH = 1
-	NTMS_POOLTYPE_FOREIGN = 2
-	NTMS_POOLTYPE_IMPORT = 3
-	NTMS_POOLTYPE_APPLICATION = 1000
+	NTMS_POOLTYPE_UNKNOWN     NtmsPoolType = 0
+	NTMS_POOLTYPE_SCRATCH     NtmsPoolType = 1
+	NTMS_POOLTYPE_FOREIGN     NtmsPoolType = 2
+	NTMS_POOLTYPE_IMPORT      NtmsPoolType = 3
+	NTMS_POOLTYPE_APPLICATION NtmsPoolType = 1000
 )
 
 type NtmsAllocationPolicy int32
 
 const (
-	NTMS_ALLOCATE_FROMSCRATCH = 1
+	NTMS_ALLOCATE_FROMSCRATCH NtmsAllocationPolicy = 1
 )
 
 type NtmsDeallocationPolicy int32
 
 const (
-	NTMS_DEALLOCATE_TOSCRATCH = 1
+	NTMS_DEALLOCATE_TOSCRATCH NtmsDeallocationPolicy = 1
 )
 
 type NtmsReadWriteCharacteristics int32
 
 const (
-	NTMS_MEDIARW_UNKNOWN = 0
-	NTMS_MEDIARW_REWRITABLE = 1
-	NTMS_MEDIARW_WRITEONCE = 2
-	NTMS_MEDIARW_READONLY = 3
+	NTMS_MEDIARW_UNKNOWN    NtmsReadWriteCharacteristics = 0
+	NTMS_MEDIARW_REWRITABLE NtmsReadWriteCharacteristics = 1
+	NTMS_MEDIARW_WRITEONCE  NtmsReadWriteCharacteristics = 2
+	NTMS_MEDIARW_READONLY   NtmsReadWriteCharacteristics = 3
 )
 
 type NtmsLmOperation int32
 
 const (
-	NTMS_LM_REMOVE = 0
-	NTMS_LM_DISABLECHANGER = 1
-	NTMS_LM_DISABLELIBRARY = 1
-	NTMS_LM_ENABLECHANGER = 2
-	NTMS_LM_ENABLELIBRARY = 2
-	NTMS_LM_DISABLEDRIVE = 3
-	NTMS_LM_ENABLEDRIVE = 4
-	NTMS_LM_DISABLEMEDIA = 5
-	NTMS_LM_ENABLEMEDIA = 6
-	NTMS_LM_UPDATEOMID = 7
-	NTMS_LM_INVENTORY = 8
-	NTMS_LM_DOORACCESS = 9
-	NTMS_LM_EJECT = 10
-	NTMS_LM_EJECTCLEANER = 11
-	NTMS_LM_INJECT = 12
-	NTMS_LM_INJECTCLEANER = 13
-	NTMS_LM_PROCESSOMID = 14
-	NTMS_LM_CLEANDRIVE = 15
-	NTMS_LM_DISMOUNT = 16
-	NTMS_LM_MOUNT = 17
-	NTMS_LM_WRITESCRATCH = 18
-	NTMS_LM_CLASSIFY = 19
-	NTMS_LM_RESERVECLEANER = 20
-	NTMS_LM_RELEASECLEANER = 21
-	NTMS_LM_MAXWORKITEM = 22
+	NTMS_LM_REMOVE         NtmsLmOperation = 0
+	NTMS_LM_DISABLECHANGER NtmsLmOperation = 1
+	NTMS_LM_DISABLELIBRARY NtmsLmOperation = 1
+	NTMS_LM_ENABLECHANGER  NtmsLmOperation = 2
+	NTMS_LM_ENABLELIBRARY  NtmsLmOperation = 2
+	NTMS_LM_DISABLEDRIVE   NtmsLmOperation = 3
+	NTMS_LM_ENABLEDRIVE    NtmsLmOperation = 4
+	NTMS_LM_DISABLEMEDIA   NtmsLmOperation = 5
+	NTMS_LM_ENABLEMEDIA    NtmsLmOperation = 6
+	NTMS_LM_UPDATEOMID     NtmsLmOperation = 7
+	NTMS_LM_INVENTORY      NtmsLmOperation = 8
+	NTMS_LM_DOORACCESS     NtmsLmOperation = 9
+	NTMS_LM_EJECT          NtmsLmOperation = 10
+	NTMS_LM_EJECTCLEANER   NtmsLmOperation = 11
+	NTMS_LM_INJECT         NtmsLmOperation = 12
+	NTMS_LM_INJECTCLEANER  NtmsLmOperation = 13
+	NTMS_LM_PROCESSOMID    NtmsLmOperation = 14
+	NTMS_LM_CLEANDRIVE     NtmsLmOperation = 15
+	NTMS_LM_DISMOUNT       NtmsLmOperation = 16
+	NTMS_LM_MOUNT          NtmsLmOperation = 17
+	NTMS_LM_WRITESCRATCH   NtmsLmOperation = 18
+	NTMS_LM_CLASSIFY       NtmsLmOperation = 19
+	NTMS_LM_RESERVECLEANER NtmsLmOperation = 20
+	NTMS_LM_RELEASECLEANER NtmsLmOperation = 21
+	NTMS_LM_MAXWORKITEM    NtmsLmOperation = 22
 )
 
 type NtmsLmState int32
 
 const (
-	NTMS_LM_QUEUED = 0
-	NTMS_LM_INPROCESS = 1
-	NTMS_LM_PASSED = 2
-	NTMS_LM_FAILED = 3
-	NTMS_LM_INVALID = 4
-	NTMS_LM_WAITING = 5
-	NTMS_LM_DEFERRED = 6
-	NTMS_LM_DEFFERED = 6
-	NTMS_LM_CANCELLED = 7
-	NTMS_LM_STOPPED = 8
+	NTMS_LM_QUEUED    NtmsLmState = 0
+	NTMS_LM_INPROCESS NtmsLmState = 1
+	NTMS_LM_PASSED    NtmsLmState = 2
+	NTMS_LM_FAILED    NtmsLmState = 3
+	NTMS_LM_INVALID   NtmsLmState = 4
+	NTMS_LM_WAITING   NtmsLmState = 5
+	NTMS_LM_DEFERRED  NtmsLmState = 6
+	NTMS_LM_DEFFERED  NtmsLmState = 6
+	NTMS_LM_CANCELLED NtmsLmState = 7
+	NTMS_LM_STOPPED   NtmsLmState = 8
 )
 
 type NtmsOpreqCommand int32
 
 const (
-	NTMS_OPREQ_UNKNOWN = 0
-	NTMS_OPREQ_NEWMEDIA = 1
-	NTMS_OPREQ_CLEANER = 2
-	NTMS_OPREQ_DEVICESERVICE = 3
-	NTMS_OPREQ_MOVEMEDIA = 4
-	NTMS_OPREQ_MESSAGE = 5
+	NTMS_OPREQ_UNKNOWN       NtmsOpreqCommand = 0
+	NTMS_OPREQ_NEWMEDIA      NtmsOpreqCommand = 1
+	NTMS_OPREQ_CLEANER       NtmsOpreqCommand = 2
+	NTMS_OPREQ_DEVICESERVICE NtmsOpreqCommand = 3
+	NTMS_OPREQ_MOVEMEDIA     NtmsOpreqCommand = 4
+	NTMS_OPREQ_MESSAGE       NtmsOpreqCommand = 5
 )
 
 type NtmsOpreqState int32
 
 const (
-	NTMS_OPSTATE_UNKNOWN = 0
-	NTMS_OPSTATE_SUBMITTED = 1
-	NTMS_OPSTATE_ACTIVE = 2
-	NTMS_OPSTATE_INPROGRESS = 3
-	NTMS_OPSTATE_REFUSED = 4
-	NTMS_OPSTATE_COMPLETE = 5
+	NTMS_OPSTATE_UNKNOWN    NtmsOpreqState = 0
+	NTMS_OPSTATE_SUBMITTED  NtmsOpreqState = 1
+	NTMS_OPSTATE_ACTIVE     NtmsOpreqState = 2
+	NTMS_OPSTATE_INPROGRESS NtmsOpreqState = 3
+	NTMS_OPSTATE_REFUSED    NtmsOpreqState = 4
+	NTMS_OPSTATE_COMPLETE   NtmsOpreqState = 5
 )
 
 type NtmsLibRequestFlags int32
 
 const (
-	NTMS_LIBREQFLAGS_NOAUTOPURGE = 1
-	NTMS_LIBREQFLAGS_NOFAILEDPURGE = 2
+	NTMS_LIBREQFLAGS_NOAUTOPURGE   NtmsLibRequestFlags = 1
+	NTMS_LIBREQFLAGS_NOFAILEDPURGE NtmsLibRequestFlags = 2
 )
 
 type NtmsOpRequestFlags int32
 
 const (
-	NTMS_OPREQFLAGS_NOAUTOPURGE = 1
-	NTMS_OPREQFLAGS_NOFAILEDPURGE = 2
-	NTMS_OPREQFLAGS_NOALERTS = 16
-	NTMS_OPREQFLAGS_NOTRAYICON = 32
+	NTMS_OPREQFLAGS_NOAUTOPURGE   NtmsOpRequestFlags = 1
+	NTMS_OPREQFLAGS_NOFAILEDPURGE NtmsOpRequestFlags = 2
+	NTMS_OPREQFLAGS_NOALERTS      NtmsOpRequestFlags = 16
+	NTMS_OPREQFLAGS_NOTRAYICON    NtmsOpRequestFlags = 32
 )
 
 type NtmsMediaPoolPolicy int32
 
 const (
-	NTMS_POOLPOLICY_PURGEOFFLINESCRATCH = 1
-	NTMS_POOLPOLICY_KEEPOFFLINEIMPORT = 2
+	NTMS_POOLPOLICY_PURGEOFFLINESCRATCH NtmsMediaPoolPolicy = 1
+	NTMS_POOLPOLICY_KEEPOFFLINEIMPORT   NtmsMediaPoolPolicy = 2
 )
 
 type NtmsOperationalState int32
 
 const (
-	NTMS_READY = 0
-	NTMS_INITIALIZING = 10
-	NTMS_NEEDS_SERVICE = 20
-	NTMS_NOT_PRESENT = 21
+	NTMS_READY         NtmsOperationalState = 0
+	NTMS_INITIALIZING  NtmsOperationalState = 10
+	NTMS_NEEDS_SERVICE NtmsOperationalState = 20
+	NTMS_NOT_PRESENT   NtmsOperationalState = 21
 )
 
 type NtmsCreateNtmsMediaOptions int32
 
 const (
-	NTMS_ERROR_ON_DUPLICATE = 1
+	NTMS_ERROR_ON_DUPLICATE NtmsCreateNtmsMediaOptions = 1
 )
 
 type NtmsEnumerateOption int32
 
 const (
-	NTMS_ENUM_DEFAULT = 0
-	NTMS_ENUM_ROOTPOOL = 1
+	NTMS_ENUM_DEFAULT  NtmsEnumerateOption = 0
+	NTMS_ENUM_ROOTPOOL NtmsEnumerateOption = 1
 )
 
 type NtmsEjectOperation int32
 
 const (
-	NTMS_EJECT_START = 0
-	NTMS_EJECT_STOP = 1
-	NTMS_EJECT_QUEUE = 2
-	NTMS_EJECT_FORCE = 3
-	NTMS_EJECT_IMMEDIATE = 4
-	NTMS_EJECT_ASK_USER = 5
+	NTMS_EJECT_START     NtmsEjectOperation = 0
+	NTMS_EJECT_STOP      NtmsEjectOperation = 1
+	NTMS_EJECT_QUEUE     NtmsEjectOperation = 2
+	NTMS_EJECT_FORCE     NtmsEjectOperation = 3
+	NTMS_EJECT_IMMEDIATE NtmsEjectOperation = 4
+	NTMS_EJECT_ASK_USER  NtmsEjectOperation = 5
 )
 
 type NtmsInjectOperation int32
 
 const (
-	NTMS_INJECT_START = 0
-	NTMS_INJECT_STOP = 1
-	NTMS_INJECT_RETRACT = 2
-	NTMS_INJECT_STARTMANY = 3
+	NTMS_INJECT_START     NtmsInjectOperation = 0
+	NTMS_INJECT_STOP      NtmsInjectOperation = 1
+	NTMS_INJECT_RETRACT   NtmsInjectOperation = 2
+	NTMS_INJECT_STARTMANY NtmsInjectOperation = 3
 )
 
 type NtmsDriveType int32
 
 const (
-	NTMS_UNKNOWN_DRIVE = 0
+	NTMS_UNKNOWN_DRIVE NtmsDriveType = 0
 )
 
 type NtmsAccessMask int32
 
 const (
-	NTMS_USE_ACCESS = 1
-	NTMS_MODIFY_ACCESS = 2
-	NTMS_CONTROL_ACCESS = 4
+	NTMS_USE_ACCESS     NtmsAccessMask = 1
+	NTMS_MODIFY_ACCESS  NtmsAccessMask = 2
+	NTMS_CONTROL_ACCESS NtmsAccessMask = 4
 )
 
 type NtmsUITypes int32
 
 const (
-	NTMS_UITYPE_INVALID = 0
-	NTMS_UITYPE_INFO = 1
-	NTMS_UITYPE_REQ = 2
-	NTMS_UITYPE_ERR = 3
-	NTMS_UITYPE_MAX = 4
+	NTMS_UITYPE_INVALID NtmsUITypes = 0
+	NTMS_UITYPE_INFO    NtmsUITypes = 1
+	NTMS_UITYPE_REQ     NtmsUITypes = 2
+	NTMS_UITYPE_ERR     NtmsUITypes = 3
+	NTMS_UITYPE_MAX     NtmsUITypes = 4
 )
 
 type NtmsUIOperations int32
 
 const (
-	NTMS_UIDEST_ADD = 1
-	NTMS_UIDEST_DELETE = 2
-	NTMS_UIDEST_DELETEALL = 3
-	NTMS_UIOPERATION_MAX = 4
+	NTMS_UIDEST_ADD       NtmsUIOperations = 1
+	NTMS_UIDEST_DELETE    NtmsUIOperations = 2
+	NTMS_UIDEST_DELETEALL NtmsUIOperations = 3
+	NTMS_UIOPERATION_MAX  NtmsUIOperations = 4
 )
 
 type NtmsNotificationOperations int32
 
 const (
-	NTMS_OBJ_UPDATE = 1
-	NTMS_OBJ_INSERT = 2
-	NTMS_OBJ_DELETE = 3
-	NTMS_EVENT_SIGNAL = 4
-	NTMS_EVENT_COMPLETE = 5
+	NTMS_OBJ_UPDATE     NtmsNotificationOperations = 1
+	NTMS_OBJ_INSERT     NtmsNotificationOperations = 2
+	NTMS_OBJ_DELETE     NtmsNotificationOperations = 3
+	NTMS_EVENT_SIGNAL   NtmsNotificationOperations = 4
+	NTMS_EVENT_COMPLETE NtmsNotificationOperations = 5
 )
 
 type CLS_CONTEXT_MODE int32
 
 const (
-	ClsContextNone = 0
-	ClsContextUndoNext = 1
-	ClsContextPrevious = 2
-	ClsContextForward = 3
+	ClsContextNone     CLS_CONTEXT_MODE = 0
+	ClsContextUndoNext CLS_CONTEXT_MODE = 1
+	ClsContextPrevious CLS_CONTEXT_MODE = 2
+	ClsContextForward  CLS_CONTEXT_MODE = 3
 )
 
 type CLFS_CONTEXT_MODE int32
 
 const (
-	ClfsContextNone = 0
-	ClfsContextUndoNext = 1
-	ClfsContextPrevious = 2
-	ClfsContextForward = 3
+	ClfsContextNone     CLFS_CONTEXT_MODE = 0
+	ClfsContextUndoNext CLFS_CONTEXT_MODE = 1
+	ClfsContextPrevious CLFS_CONTEXT_MODE = 2
+	ClfsContextForward  CLFS_CONTEXT_MODE = 3
 )
 
 type CLS_LOG_INFORMATION_CLASS int32
 
 const (
-	ClfsLogBasicInformation = 0
-	ClfsLogBasicInformationPhysical = 1
-	ClfsLogPhysicalNameInformation = 2
-	ClfsLogStreamIdentifierInformation = 3
-	ClfsLogSystemMarkingInformation = 4
-	ClfsLogPhysicalLsnInformation = 5
+	ClfsLogBasicInformation            CLS_LOG_INFORMATION_CLASS = 0
+	ClfsLogBasicInformationPhysical    CLS_LOG_INFORMATION_CLASS = 1
+	ClfsLogPhysicalNameInformation     CLS_LOG_INFORMATION_CLASS = 2
+	ClfsLogStreamIdentifierInformation CLS_LOG_INFORMATION_CLASS = 3
+	ClfsLogSystemMarkingInformation    CLS_LOG_INFORMATION_CLASS = 4
+	ClfsLogPhysicalLsnInformation      CLS_LOG_INFORMATION_CLASS = 5
 )
 
 type CLS_IOSTATS_CLASS int32
 
 const (
-	ClsIoStatsDefault = 0
-	ClsIoStatsMax = 65535
+	ClsIoStatsDefault CLS_IOSTATS_CLASS = 0
+	ClsIoStatsMax     CLS_IOSTATS_CLASS = 65535
 )
 
 type CLFS_IOSTATS_CLASS int32
 
 const (
-	ClfsIoStatsDefault = 0
-	ClfsIoStatsMax = 65535
+	ClfsIoStatsDefault CLFS_IOSTATS_CLASS = 0
+	ClfsIoStatsMax     CLFS_IOSTATS_CLASS = 65535
 )
 
 type CLFS_LOG_ARCHIVE_MODE int32
 
 const (
-	ClfsLogArchiveEnabled = 1
-	ClfsLogArchiveDisabled = 2
+	ClfsLogArchiveEnabled  CLFS_LOG_ARCHIVE_MODE = 1
+	ClfsLogArchiveDisabled CLFS_LOG_ARCHIVE_MODE = 2
 )
 
 type CLFS_MGMT_POLICY_TYPE int32
 
 const (
-	ClfsMgmtPolicyMaximumSize = 0
-	ClfsMgmtPolicyMinimumSize = 1
-	ClfsMgmtPolicyNewContainerSize = 2
-	ClfsMgmtPolicyGrowthRate = 3
-	ClfsMgmtPolicyLogTail = 4
-	ClfsMgmtPolicyAutoShrink = 5
-	ClfsMgmtPolicyAutoGrow = 6
-	ClfsMgmtPolicyNewContainerPrefix = 7
-	ClfsMgmtPolicyNewContainerSuffix = 8
-	ClfsMgmtPolicyNewContainerExtension = 9
-	ClfsMgmtPolicyInvalid = 10
+	ClfsMgmtPolicyMaximumSize           CLFS_MGMT_POLICY_TYPE = 0
+	ClfsMgmtPolicyMinimumSize           CLFS_MGMT_POLICY_TYPE = 1
+	ClfsMgmtPolicyNewContainerSize      CLFS_MGMT_POLICY_TYPE = 2
+	ClfsMgmtPolicyGrowthRate            CLFS_MGMT_POLICY_TYPE = 3
+	ClfsMgmtPolicyLogTail               CLFS_MGMT_POLICY_TYPE = 4
+	ClfsMgmtPolicyAutoShrink            CLFS_MGMT_POLICY_TYPE = 5
+	ClfsMgmtPolicyAutoGrow              CLFS_MGMT_POLICY_TYPE = 6
+	ClfsMgmtPolicyNewContainerPrefix    CLFS_MGMT_POLICY_TYPE = 7
+	ClfsMgmtPolicyNewContainerSuffix    CLFS_MGMT_POLICY_TYPE = 8
+	ClfsMgmtPolicyNewContainerExtension CLFS_MGMT_POLICY_TYPE = 9
+	ClfsMgmtPolicyInvalid               CLFS_MGMT_POLICY_TYPE = 10
 )
 
 type CLFS_MGMT_NOTIFICATION_TYPE int32
 
 const (
-	ClfsMgmtAdvanceTailNotification = 0
-	ClfsMgmtLogFullHandlerNotification = 1
-	ClfsMgmtLogUnpinnedNotification = 2
-	ClfsMgmtLogWriteNotification = 3
+	ClfsMgmtAdvanceTailNotification    CLFS_MGMT_NOTIFICATION_TYPE = 0
+	ClfsMgmtLogFullHandlerNotification CLFS_MGMT_NOTIFICATION_TYPE = 1
+	ClfsMgmtLogUnpinnedNotification    CLFS_MGMT_NOTIFICATION_TYPE = 2
+	ClfsMgmtLogWriteNotification       CLFS_MGMT_NOTIFICATION_TYPE = 3
 )
 
 type SERVER_CERTIFICATE_TYPE int32
 
 const (
-	QUIC = 0
+	QUIC SERVER_CERTIFICATE_TYPE = 0
 )
 
 type FINDEX_INFO_LEVELS int32
 
 const (
-	FindExInfoStandard = 0
-	FindExInfoBasic = 1
-	FindExInfoMaxInfoLevel = 2
+	FindExInfoStandard     FINDEX_INFO_LEVELS = 0
+	FindExInfoBasic        FINDEX_INFO_LEVELS = 1
+	FindExInfoMaxInfoLevel FINDEX_INFO_LEVELS = 2
 )
 
 type FINDEX_SEARCH_OPS int32
 
 const (
-	FindExSearchNameMatch = 0
-	FindExSearchLimitToDirectories = 1
-	FindExSearchLimitToDevices = 2
-	FindExSearchMaxSearchOp = 3
+	FindExSearchNameMatch          FINDEX_SEARCH_OPS = 0
+	FindExSearchLimitToDirectories FINDEX_SEARCH_OPS = 1
+	FindExSearchLimitToDevices     FINDEX_SEARCH_OPS = 2
+	FindExSearchMaxSearchOp        FINDEX_SEARCH_OPS = 3
 )
 
 type READ_DIRECTORY_NOTIFY_INFORMATION_CLASS int32
 
 const (
-	ReadDirectoryNotifyInformation = 1
-	ReadDirectoryNotifyExtendedInformation = 2
+	ReadDirectoryNotifyInformation         READ_DIRECTORY_NOTIFY_INFORMATION_CLASS = 1
+	ReadDirectoryNotifyExtendedInformation READ_DIRECTORY_NOTIFY_INFORMATION_CLASS = 2
 )
 
 type GET_FILEEX_INFO_LEVELS int32
 
 const (
-	GetFileExInfoStandard = 0
-	GetFileExMaxInfoLevel = 1
+	GetFileExInfoStandard GET_FILEEX_INFO_LEVELS = 0
+	GetFileExMaxInfoLevel GET_FILEEX_INFO_LEVELS = 1
 )
 
 type FILE_INFO_BY_HANDLE_CLASS int32
 
 const (
-	FileBasicInfo = 0
-	FileStandardInfo = 1
-	FileNameInfo = 2
-	FileRenameInfo = 3
-	FileDispositionInfo = 4
-	FileAllocationInfo = 5
-	FileEndOfFileInfo = 6
-	FileStreamInfo = 7
-	FileCompressionInfo = 8
-	FileAttributeTagInfo = 9
-	FileIdBothDirectoryInfo = 10
-	FileIdBothDirectoryRestartInfo = 11
-	FileIoPriorityHintInfo = 12
-	FileRemoteProtocolInfo = 13
-	FileFullDirectoryInfo = 14
-	FileFullDirectoryRestartInfo = 15
-	FileStorageInfo = 16
-	FileAlignmentInfo = 17
-	FileIdInfo = 18
-	FileIdExtdDirectoryInfo = 19
-	FileIdExtdDirectoryRestartInfo = 20
-	FileDispositionInfoEx = 21
-	FileRenameInfoEx = 22
-	FileCaseSensitiveInfo = 23
-	FileNormalizedNameInfo = 24
-	MaximumFileInfoByHandleClass = 25
+	FileBasicInfo                  FILE_INFO_BY_HANDLE_CLASS = 0
+	FileStandardInfo               FILE_INFO_BY_HANDLE_CLASS = 1
+	FileNameInfo                   FILE_INFO_BY_HANDLE_CLASS = 2
+	FileRenameInfo                 FILE_INFO_BY_HANDLE_CLASS = 3
+	FileDispositionInfo            FILE_INFO_BY_HANDLE_CLASS = 4
+	FileAllocationInfo             FILE_INFO_BY_HANDLE_CLASS = 5
+	FileEndOfFileInfo              FILE_INFO_BY_HANDLE_CLASS = 6
+	FileStreamInfo                 FILE_INFO_BY_HANDLE_CLASS = 7
+	FileCompressionInfo            FILE_INFO_BY_HANDLE_CLASS = 8
+	FileAttributeTagInfo           FILE_INFO_BY_HANDLE_CLASS = 9
+	FileIdBothDirectoryInfo        FILE_INFO_BY_HANDLE_CLASS = 10
+	FileIdBothDirectoryRestartInfo FILE_INFO_BY_HANDLE_CLASS = 11
+	FileIoPriorityHintInfo         FILE_INFO_BY_HANDLE_CLASS = 12
+	FileRemoteProtocolInfo         FILE_INFO_BY_HANDLE_CLASS = 13
+	FileFullDirectoryInfo          FILE_INFO_BY_HANDLE_CLASS = 14
+	FileFullDirectoryRestartInfo   FILE_INFO_BY_HANDLE_CLASS = 15
+	FileStorageInfo                FILE_INFO_BY_HANDLE_CLASS = 16
+	FileAlignmentInfo              FILE_INFO_BY_HANDLE_CLASS = 17
+	FileIdInfo                     FILE_INFO_BY_HANDLE_CLASS = 18
+	FileIdExtdDirectoryInfo        FILE_INFO_BY_HANDLE_CLASS = 19
+	FileIdExtdDirectoryRestartInfo FILE_INFO_BY_HANDLE_CLASS = 20
+	FileDispositionInfoEx          FILE_INFO_BY_HANDLE_CLASS = 21
+	FileRenameInfoEx               FILE_INFO_BY_HANDLE_CLASS = 22
+	FileCaseSensitiveInfo          FILE_INFO_BY_HANDLE_CLASS = 23
+	FileNormalizedNameInfo         FILE_INFO_BY_HANDLE_CLASS = 24
+	MaximumFileInfoByHandleClass   FILE_INFO_BY_HANDLE_CLASS = 25
 )
 
 type STORAGE_QUERY_TYPE int32
 
 const (
-	PropertyStandardQuery = 0
-	PropertyExistsQuery = 1
-	PropertyMaskQuery = 2
-	PropertyQueryMaxDefined = 3
+	PropertyStandardQuery   STORAGE_QUERY_TYPE = 0
+	PropertyExistsQuery     STORAGE_QUERY_TYPE = 1
+	PropertyMaskQuery       STORAGE_QUERY_TYPE = 2
+	PropertyQueryMaxDefined STORAGE_QUERY_TYPE = 3
 )
 
 type STORAGE_PROPERTY_ID int32
 
 const (
-	StorageDeviceProperty = 0
-	StorageAdapterProperty = 1
-	StorageDeviceIdProperty = 2
-	StorageDeviceUniqueIdProperty = 3
-	StorageDeviceWriteCacheProperty = 4
-	StorageMiniportProperty = 5
-	StorageAccessAlignmentProperty = 6
-	StorageDeviceSeekPenaltyProperty = 7
-	StorageDeviceTrimProperty = 8
-	StorageDeviceWriteAggregationProperty = 9
-	StorageDeviceDeviceTelemetryProperty = 10
-	StorageDeviceLBProvisioningProperty = 11
-	StorageDevicePowerProperty = 12
-	StorageDeviceCopyOffloadProperty = 13
-	StorageDeviceResiliencyProperty = 14
-	StorageDeviceMediumProductType = 15
-	StorageAdapterRpmbProperty = 16
-	StorageAdapterCryptoProperty = 17
-	StorageDeviceIoCapabilityProperty = 48
-	StorageAdapterProtocolSpecificProperty = 49
-	StorageDeviceProtocolSpecificProperty = 50
-	StorageAdapterTemperatureProperty = 51
-	StorageDeviceTemperatureProperty = 52
-	StorageAdapterPhysicalTopologyProperty = 53
-	StorageDevicePhysicalTopologyProperty = 54
-	StorageDeviceAttributesProperty = 55
-	StorageDeviceManagementStatus = 56
-	StorageAdapterSerialNumberProperty = 57
-	StorageDeviceLocationProperty = 58
-	StorageDeviceNumaProperty = 59
-	StorageDeviceZonedDeviceProperty = 60
-	StorageDeviceUnsafeShutdownCount = 61
-	StorageDeviceEnduranceProperty = 62
+	StorageDeviceProperty                  STORAGE_PROPERTY_ID = 0
+	StorageAdapterProperty                 STORAGE_PROPERTY_ID = 1
+	StorageDeviceIdProperty                STORAGE_PROPERTY_ID = 2
+	StorageDeviceUniqueIdProperty          STORAGE_PROPERTY_ID = 3
+	StorageDeviceWriteCacheProperty        STORAGE_PROPERTY_ID = 4
+	StorageMiniportProperty                STORAGE_PROPERTY_ID = 5
+	StorageAccessAlignmentProperty         STORAGE_PROPERTY_ID = 6
+	StorageDeviceSeekPenaltyProperty       STORAGE_PROPERTY_ID = 7
+	StorageDeviceTrimProperty              STORAGE_PROPERTY_ID = 8
+	StorageDeviceWriteAggregationProperty  STORAGE_PROPERTY_ID = 9
+	StorageDeviceDeviceTelemetryProperty   STORAGE_PROPERTY_ID = 10
+	StorageDeviceLBProvisioningProperty    STORAGE_PROPERTY_ID = 11
+	StorageDevicePowerProperty             STORAGE_PROPERTY_ID = 12
+	StorageDeviceCopyOffloadProperty       STORAGE_PROPERTY_ID = 13
+	StorageDeviceResiliencyProperty        STORAGE_PROPERTY_ID = 14
+	StorageDeviceMediumProductType         STORAGE_PROPERTY_ID = 15
+	StorageAdapterRpmbProperty             STORAGE_PROPERTY_ID = 16
+	StorageAdapterCryptoProperty           STORAGE_PROPERTY_ID = 17
+	StorageDeviceIoCapabilityProperty      STORAGE_PROPERTY_ID = 48
+	StorageAdapterProtocolSpecificProperty STORAGE_PROPERTY_ID = 49
+	StorageDeviceProtocolSpecificProperty  STORAGE_PROPERTY_ID = 50
+	StorageAdapterTemperatureProperty      STORAGE_PROPERTY_ID = 51
+	StorageDeviceTemperatureProperty       STORAGE_PROPERTY_ID = 52
+	StorageAdapterPhysicalTopologyProperty STORAGE_PROPERTY_ID = 53
+	StorageDevicePhysicalTopologyProperty  STORAGE_PROPERTY_ID = 54
+	StorageDeviceAttributesProperty        STORAGE_PROPERTY_ID = 55
+	StorageDeviceManagementStatus          STORAGE_PROPERTY_ID = 56
+	StorageAdapterSerialNumberProperty     STORAGE_PROPERTY_ID = 57
+	StorageDeviceLocationProperty          STORAGE_PROPERTY_ID = 58
+	StorageDeviceNumaProperty              STORAGE_PROPERTY_ID = 59
+	StorageDeviceZonedDeviceProperty       STORAGE_PROPERTY_ID = 60
+	StorageDeviceUnsafeShutdownCount       STORAGE_PROPERTY_ID = 61
+	StorageDeviceEnduranceProperty         STORAGE_PROPERTY_ID = 62
 )
 
 type STORAGE_PORT_CODE_SET int32
 
 const (
-	StoragePortCodeSetReserved = 0
-	StoragePortCodeSetStorport = 1
-	StoragePortCodeSetSCSIport = 2
-	StoragePortCodeSetSpaceport = 3
-	StoragePortCodeSetATAport = 4
-	StoragePortCodeSetUSBport = 5
-	StoragePortCodeSetSBP2port = 6
-	StoragePortCodeSetSDport = 7
+	StoragePortCodeSetReserved  STORAGE_PORT_CODE_SET = 0
+	StoragePortCodeSetStorport  STORAGE_PORT_CODE_SET = 1
+	StoragePortCodeSetSCSIport  STORAGE_PORT_CODE_SET = 2
+	StoragePortCodeSetSpaceport STORAGE_PORT_CODE_SET = 3
+	StoragePortCodeSetATAport   STORAGE_PORT_CODE_SET = 4
+	StoragePortCodeSetUSBport   STORAGE_PORT_CODE_SET = 5
+	StoragePortCodeSetSBP2port  STORAGE_PORT_CODE_SET = 6
+	StoragePortCodeSetSDport    STORAGE_PORT_CODE_SET = 7
 )
 
 type STORAGE_PROTOCOL_TYPE int32
 
 const (
-	ProtocolTypeUnknown = 0
-	ProtocolTypeScsi = 1
-	ProtocolTypeAta = 2
-	ProtocolTypeNvme = 3
-	ProtocolTypeSd = 4
-	ProtocolTypeUfs = 5
-	ProtocolTypeProprietary = 126
-	ProtocolTypeMaxReserved = 127
+	ProtocolTypeUnknown     STORAGE_PROTOCOL_TYPE = 0
+	ProtocolTypeScsi        STORAGE_PROTOCOL_TYPE = 1
+	ProtocolTypeAta         STORAGE_PROTOCOL_TYPE = 2
+	ProtocolTypeNvme        STORAGE_PROTOCOL_TYPE = 3
+	ProtocolTypeSd          STORAGE_PROTOCOL_TYPE = 4
+	ProtocolTypeUfs         STORAGE_PROTOCOL_TYPE = 5
+	ProtocolTypeProprietary STORAGE_PROTOCOL_TYPE = 126
+	ProtocolTypeMaxReserved STORAGE_PROTOCOL_TYPE = 127
 )
 
 type STORAGE_PROTOCOL_NVME_DATA_TYPE int32
 
 const (
-	NVMeDataTypeUnknown = 0
-	NVMeDataTypeIdentify = 1
-	NVMeDataTypeLogPage = 2
-	NVMeDataTypeFeature = 3
+	NVMeDataTypeUnknown  STORAGE_PROTOCOL_NVME_DATA_TYPE = 0
+	NVMeDataTypeIdentify STORAGE_PROTOCOL_NVME_DATA_TYPE = 1
+	NVMeDataTypeLogPage  STORAGE_PROTOCOL_NVME_DATA_TYPE = 2
+	NVMeDataTypeFeature  STORAGE_PROTOCOL_NVME_DATA_TYPE = 3
 )
 
 type STORAGE_PROTOCOL_ATA_DATA_TYPE int32
 
 const (
-	AtaDataTypeUnknown = 0
-	AtaDataTypeIdentify = 1
-	AtaDataTypeLogPage = 2
+	AtaDataTypeUnknown  STORAGE_PROTOCOL_ATA_DATA_TYPE = 0
+	AtaDataTypeIdentify STORAGE_PROTOCOL_ATA_DATA_TYPE = 1
+	AtaDataTypeLogPage  STORAGE_PROTOCOL_ATA_DATA_TYPE = 2
 )
 
 type STORAGE_DEVICE_FORM_FACTOR int32
 
 const (
-	FormFactorUnknown = 0
-	FormFactor3_5 = 1
-	FormFactor2_5 = 2
-	FormFactor1_8 = 3
-	FormFactor1_8Less = 4
-	FormFactorEmbedded = 5
-	FormFactorMemoryCard = 6
-	FormFactormSata = 7
-	FormFactorM_2 = 8
-	FormFactorPCIeBoard = 9
-	FormFactorDimm = 10
+	FormFactorUnknown    STORAGE_DEVICE_FORM_FACTOR = 0
+	FormFactor3_5        STORAGE_DEVICE_FORM_FACTOR = 1
+	FormFactor2_5        STORAGE_DEVICE_FORM_FACTOR = 2
+	FormFactor1_8        STORAGE_DEVICE_FORM_FACTOR = 3
+	FormFactor1_8Less    STORAGE_DEVICE_FORM_FACTOR = 4
+	FormFactorEmbedded   STORAGE_DEVICE_FORM_FACTOR = 5
+	FormFactorMemoryCard STORAGE_DEVICE_FORM_FACTOR = 6
+	FormFactormSata      STORAGE_DEVICE_FORM_FACTOR = 7
+	FormFactorM_2        STORAGE_DEVICE_FORM_FACTOR = 8
+	FormFactorPCIeBoard  STORAGE_DEVICE_FORM_FACTOR = 9
+	FormFactorDimm       STORAGE_DEVICE_FORM_FACTOR = 10
 )
 
 type STORAGE_COMPONENT_HEALTH_STATUS int32
 
 const (
-	HealthStatusUnknown = 0
-	HealthStatusNormal = 1
-	HealthStatusThrottled = 2
-	HealthStatusWarning = 3
-	HealthStatusDisabled = 4
-	HealthStatusFailed = 5
+	HealthStatusUnknown   STORAGE_COMPONENT_HEALTH_STATUS = 0
+	HealthStatusNormal    STORAGE_COMPONENT_HEALTH_STATUS = 1
+	HealthStatusThrottled STORAGE_COMPONENT_HEALTH_STATUS = 2
+	HealthStatusWarning   STORAGE_COMPONENT_HEALTH_STATUS = 3
+	HealthStatusDisabled  STORAGE_COMPONENT_HEALTH_STATUS = 4
+	HealthStatusFailed    STORAGE_COMPONENT_HEALTH_STATUS = 5
 )
 
 type WRITE_CACHE_TYPE int32
 
 const (
-	WriteCacheTypeUnknown = 0
-	WriteCacheTypeNone = 1
-	WriteCacheTypeWriteBack = 2
-	WriteCacheTypeWriteThrough = 3
+	WriteCacheTypeUnknown      WRITE_CACHE_TYPE = 0
+	WriteCacheTypeNone         WRITE_CACHE_TYPE = 1
+	WriteCacheTypeWriteBack    WRITE_CACHE_TYPE = 2
+	WriteCacheTypeWriteThrough WRITE_CACHE_TYPE = 3
 )
 
 type WRITE_CACHE_ENABLE int32
 
 const (
-	WriteCacheEnableUnknown = 0
-	WriteCacheDisabled = 1
-	WriteCacheEnabled = 2
+	WriteCacheEnableUnknown WRITE_CACHE_ENABLE = 0
+	WriteCacheDisabled      WRITE_CACHE_ENABLE = 1
+	WriteCacheEnabled       WRITE_CACHE_ENABLE = 2
 )
 
 type WRITE_CACHE_CHANGE int32
 
 const (
-	WriteCacheChangeUnknown = 0
-	WriteCacheNotChangeable = 1
-	WriteCacheChangeable = 2
+	WriteCacheChangeUnknown WRITE_CACHE_CHANGE = 0
+	WriteCacheNotChangeable WRITE_CACHE_CHANGE = 1
+	WriteCacheChangeable    WRITE_CACHE_CHANGE = 2
 )
 
 type WRITE_THROUGH int32
 
 const (
-	WriteThroughUnknown = 0
-	WriteThroughNotSupported = 1
-	WriteThroughSupported = 2
+	WriteThroughUnknown      WRITE_THROUGH = 0
+	WriteThroughNotSupported WRITE_THROUGH = 1
+	WriteThroughSupported    WRITE_THROUGH = 2
 )
 
 type STORAGE_DEVICE_POWER_CAP_UNITS int32
 
 const (
-	StorageDevicePowerCapUnitsPercent = 0
-	StorageDevicePowerCapUnitsMilliwatts = 1
+	StorageDevicePowerCapUnitsPercent    STORAGE_DEVICE_POWER_CAP_UNITS = 0
+	StorageDevicePowerCapUnitsMilliwatts STORAGE_DEVICE_POWER_CAP_UNITS = 1
 )
 
 type MEDIA_TYPE int32
 
 const (
-	Unknown = 0
-	F5_1Pt2_512 = 1
-	F3_1Pt44_512 = 2
-	F3_2Pt88_512 = 3
-	F3_20Pt8_512 = 4
-	F3_720_512 = 5
-	F5_360_512 = 6
-	F5_320_512 = 7
-	F5_320_1024 = 8
-	F5_180_512 = 9
-	F5_160_512 = 10
-	RemovableMedia = 11
-	FixedMedia = 12
-	F3_120M_512 = 13
-	F3_640_512 = 14
-	F5_640_512 = 15
-	F5_720_512 = 16
-	F3_1Pt2_512 = 17
-	F3_1Pt23_1024 = 18
-	F5_1Pt23_1024 = 19
-	F3_128Mb_512 = 20
-	F3_230Mb_512 = 21
-	F8_256_128 = 22
-	F3_200Mb_512 = 23
-	F3_240M_512 = 24
-	F3_32M_512 = 25
+	Unknown        MEDIA_TYPE = 0
+	F5_1Pt2_512    MEDIA_TYPE = 1
+	F3_1Pt44_512   MEDIA_TYPE = 2
+	F3_2Pt88_512   MEDIA_TYPE = 3
+	F3_20Pt8_512   MEDIA_TYPE = 4
+	F3_720_512     MEDIA_TYPE = 5
+	F5_360_512     MEDIA_TYPE = 6
+	F5_320_512     MEDIA_TYPE = 7
+	F5_320_1024    MEDIA_TYPE = 8
+	F5_180_512     MEDIA_TYPE = 9
+	F5_160_512     MEDIA_TYPE = 10
+	RemovableMedia MEDIA_TYPE = 11
+	FixedMedia     MEDIA_TYPE = 12
+	F3_120M_512    MEDIA_TYPE = 13
+	F3_640_512     MEDIA_TYPE = 14
+	F5_640_512     MEDIA_TYPE = 15
+	F5_720_512     MEDIA_TYPE = 16
+	F3_1Pt2_512    MEDIA_TYPE = 17
+	F3_1Pt23_1024  MEDIA_TYPE = 18
+	F5_1Pt23_1024  MEDIA_TYPE = 19
+	F3_128Mb_512   MEDIA_TYPE = 20
+	F3_230Mb_512   MEDIA_TYPE = 21
+	F8_256_128     MEDIA_TYPE = 22
+	F3_200Mb_512   MEDIA_TYPE = 23
+	F3_240M_512    MEDIA_TYPE = 24
+	F3_32M_512     MEDIA_TYPE = 25
 )
 
 type PARTITION_STYLE int32
 
 const (
-	PARTITION_STYLE_MBR = 0
-	PARTITION_STYLE_GPT = 1
-	PARTITION_STYLE_RAW = 2
+	PARTITION_STYLE_MBR PARTITION_STYLE = 0
+	PARTITION_STYLE_GPT PARTITION_STYLE = 1
+	PARTITION_STYLE_RAW PARTITION_STYLE = 2
 )
 
 type CSV_CONTROL_OP int32
 
 const (
-	CsvControlStartRedirectFile = 2
-	CsvControlStopRedirectFile = 3
-	CsvControlQueryRedirectState = 4
-	CsvControlQueryFileRevision = 6
-	CsvControlQueryMdsPath = 8
-	CsvControlQueryFileRevisionFileId128 = 9
-	CsvControlQueryVolumeRedirectState = 10
-	CsvControlEnableUSNRangeModificationTracking = 13
-	CsvControlMarkHandleLocalVolumeMount = 14
-	CsvControlUnmarkHandleLocalVolumeMount = 15
-	CsvControlGetCsvFsMdsPathV2 = 18
-	CsvControlDisableCaching = 19
-	CsvControlEnableCaching = 20
-	CsvControlStartForceDFO = 21
-	CsvControlStopForceDFO = 22
+	CsvControlStartRedirectFile                  CSV_CONTROL_OP = 2
+	CsvControlStopRedirectFile                   CSV_CONTROL_OP = 3
+	CsvControlQueryRedirectState                 CSV_CONTROL_OP = 4
+	CsvControlQueryFileRevision                  CSV_CONTROL_OP = 6
+	CsvControlQueryMdsPath                       CSV_CONTROL_OP = 8
+	CsvControlQueryFileRevisionFileId128         CSV_CONTROL_OP = 9
+	CsvControlQueryVolumeRedirectState           CSV_CONTROL_OP = 10
+	CsvControlEnableUSNRangeModificationTracking CSV_CONTROL_OP = 13
+	CsvControlMarkHandleLocalVolumeMount         CSV_CONTROL_OP = 14
+	CsvControlUnmarkHandleLocalVolumeMount       CSV_CONTROL_OP = 15
+	CsvControlGetCsvFsMdsPathV2                  CSV_CONTROL_OP = 18
+	CsvControlDisableCaching                     CSV_CONTROL_OP = 19
+	CsvControlEnableCaching                      CSV_CONTROL_OP = 20
+	CsvControlStartForceDFO                      CSV_CONTROL_OP = 21
+	CsvControlStopForceDFO                       CSV_CONTROL_OP = 22
 )
 
 type FILE_STORAGE_TIER_MEDIA_TYPE int32
 
 const (
-	FileStorageTierMediaTypeUnspecified = 0
-	FileStorageTierMediaTypeDisk = 1
-	FileStorageTierMediaTypeSsd = 2
-	FileStorageTierMediaTypeScm = 4
-	FileStorageTierMediaTypeMax = 5
+	FileStorageTierMediaTypeUnspecified FILE_STORAGE_TIER_MEDIA_TYPE = 0
+	FileStorageTierMediaTypeDisk        FILE_STORAGE_TIER_MEDIA_TYPE = 1
+	FileStorageTierMediaTypeSsd         FILE_STORAGE_TIER_MEDIA_TYPE = 2
+	FileStorageTierMediaTypeScm         FILE_STORAGE_TIER_MEDIA_TYPE = 4
+	FileStorageTierMediaTypeMax         FILE_STORAGE_TIER_MEDIA_TYPE = 5
 )
 
 type COPYFILE2_MESSAGE_TYPE int32
 
 const (
-	COPYFILE2_CALLBACK_NONE = 0
-	COPYFILE2_CALLBACK_CHUNK_STARTED = 1
-	COPYFILE2_CALLBACK_CHUNK_FINISHED = 2
-	COPYFILE2_CALLBACK_STREAM_STARTED = 3
-	COPYFILE2_CALLBACK_STREAM_FINISHED = 4
-	COPYFILE2_CALLBACK_POLL_CONTINUE = 5
-	COPYFILE2_CALLBACK_ERROR = 6
-	COPYFILE2_CALLBACK_MAX = 7
+	COPYFILE2_CALLBACK_NONE            COPYFILE2_MESSAGE_TYPE = 0
+	COPYFILE2_CALLBACK_CHUNK_STARTED   COPYFILE2_MESSAGE_TYPE = 1
+	COPYFILE2_CALLBACK_CHUNK_FINISHED  COPYFILE2_MESSAGE_TYPE = 2
+	COPYFILE2_CALLBACK_STREAM_STARTED  COPYFILE2_MESSAGE_TYPE = 3
+	COPYFILE2_CALLBACK_STREAM_FINISHED COPYFILE2_MESSAGE_TYPE = 4
+	COPYFILE2_CALLBACK_POLL_CONTINUE   COPYFILE2_MESSAGE_TYPE = 5
+	COPYFILE2_CALLBACK_ERROR           COPYFILE2_MESSAGE_TYPE = 6
+	COPYFILE2_CALLBACK_MAX             COPYFILE2_MESSAGE_TYPE = 7
 )
 
 type COPYFILE2_MESSAGE_ACTION int32
 
 const (
-	COPYFILE2_PROGRESS_CONTINUE = 0
-	COPYFILE2_PROGRESS_CANCEL = 1
-	COPYFILE2_PROGRESS_STOP = 2
-	COPYFILE2_PROGRESS_QUIET = 3
-	COPYFILE2_PROGRESS_PAUSE = 4
+	COPYFILE2_PROGRESS_CONTINUE COPYFILE2_MESSAGE_ACTION = 0
+	COPYFILE2_PROGRESS_CANCEL   COPYFILE2_MESSAGE_ACTION = 1
+	COPYFILE2_PROGRESS_STOP     COPYFILE2_MESSAGE_ACTION = 2
+	COPYFILE2_PROGRESS_QUIET    COPYFILE2_MESSAGE_ACTION = 3
+	COPYFILE2_PROGRESS_PAUSE    COPYFILE2_MESSAGE_ACTION = 4
 )
 
 type COPYFILE2_COPY_PHASE int32
 
 const (
-	COPYFILE2_PHASE_NONE = 0
-	COPYFILE2_PHASE_PREPARE_SOURCE = 1
-	COPYFILE2_PHASE_PREPARE_DEST = 2
-	COPYFILE2_PHASE_READ_SOURCE = 3
-	COPYFILE2_PHASE_WRITE_DESTINATION = 4
-	COPYFILE2_PHASE_SERVER_COPY = 5
-	COPYFILE2_PHASE_NAMEGRAFT_COPY = 6
-	COPYFILE2_PHASE_MAX = 7
+	COPYFILE2_PHASE_NONE              COPYFILE2_COPY_PHASE = 0
+	COPYFILE2_PHASE_PREPARE_SOURCE    COPYFILE2_COPY_PHASE = 1
+	COPYFILE2_PHASE_PREPARE_DEST      COPYFILE2_COPY_PHASE = 2
+	COPYFILE2_PHASE_READ_SOURCE       COPYFILE2_COPY_PHASE = 3
+	COPYFILE2_PHASE_WRITE_DESTINATION COPYFILE2_COPY_PHASE = 4
+	COPYFILE2_PHASE_SERVER_COPY       COPYFILE2_COPY_PHASE = 5
+	COPYFILE2_PHASE_NAMEGRAFT_COPY    COPYFILE2_COPY_PHASE = 6
+	COPYFILE2_PHASE_MAX               COPYFILE2_COPY_PHASE = 7
 )
 
 type PRIORITY_HINT int32
 
 const (
-	IoPriorityHintVeryLow = 0
-	IoPriorityHintLow = 1
-	IoPriorityHintNormal = 2
-	MaximumIoPriorityHintType = 3
+	IoPriorityHintVeryLow     PRIORITY_HINT = 0
+	IoPriorityHintLow         PRIORITY_HINT = 1
+	IoPriorityHintNormal      PRIORITY_HINT = 2
+	MaximumIoPriorityHintType PRIORITY_HINT = 3
 )
 
 type FILE_ID_TYPE int32
 
 const (
-	FileIdType = 0
-	ObjectIdType = 1
-	ExtendedFileIdType = 2
-	MaximumFileIdType = 3
+	FileIdType         FILE_ID_TYPE = 0
+	ObjectIdType       FILE_ID_TYPE = 1
+	ExtendedFileIdType FILE_ID_TYPE = 2
+	MaximumFileIdType  FILE_ID_TYPE = 3
 )
-

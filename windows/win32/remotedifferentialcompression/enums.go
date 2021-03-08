@@ -7,48 +7,47 @@ package remotedifferentialcompression
 type RDC_ErrorCode int32
 
 const (
-	RDC_NoError = 0
-	RDC_HeaderVersionNewer = 1
-	RDC_HeaderVersionOlder = 2
-	RDC_HeaderMissingOrCorrupt = 3
-	RDC_HeaderWrongType = 4
-	RDC_DataMissingOrCorrupt = 5
-	RDC_DataTooManyRecords = 6
-	RDC_FileChecksumMismatch = 7
-	RDC_ApplicationError = 8
-	RDC_Aborted = 9
-	RDC_Win32Error = 10
+	RDC_NoError                RDC_ErrorCode = 0
+	RDC_HeaderVersionNewer     RDC_ErrorCode = 1
+	RDC_HeaderVersionOlder     RDC_ErrorCode = 2
+	RDC_HeaderMissingOrCorrupt RDC_ErrorCode = 3
+	RDC_HeaderWrongType        RDC_ErrorCode = 4
+	RDC_DataMissingOrCorrupt   RDC_ErrorCode = 5
+	RDC_DataTooManyRecords     RDC_ErrorCode = 6
+	RDC_FileChecksumMismatch   RDC_ErrorCode = 7
+	RDC_ApplicationError       RDC_ErrorCode = 8
+	RDC_Aborted                RDC_ErrorCode = 9
+	RDC_Win32Error             RDC_ErrorCode = 10
 )
 
 type GeneratorParametersType int32
 
 const (
-	RDCGENTYPE_Unused = 0
-	RDCGENTYPE_FilterMax = 1
+	RDCGENTYPE_Unused    GeneratorParametersType = 0
+	RDCGENTYPE_FilterMax GeneratorParametersType = 1
 )
 
 type RdcNeedType int32
 
 const (
-	RDCNEED_SOURCE = 0
-	RDCNEED_TARGET = 1
-	RDCNEED_SEED = 2
-	RDCNEED_SEED_MAX = 255
+	RDCNEED_SOURCE   RdcNeedType = 0
+	RDCNEED_TARGET   RdcNeedType = 1
+	RDCNEED_SEED     RdcNeedType = 2
+	RDCNEED_SEED_MAX RdcNeedType = 255
 )
 
 type RdcCreatedTables int32
 
 const (
-	RDCTABLE_InvalidOrUnknown = 0
-	RDCTABLE_Existing = 1
-	RDCTABLE_New = 2
+	RDCTABLE_InvalidOrUnknown RdcCreatedTables = 0
+	RDCTABLE_Existing         RdcCreatedTables = 1
+	RDCTABLE_New              RdcCreatedTables = 2
 )
 
 type RdcMappingAccessMode int32
 
 const (
-	RDCMAPPING_Undefined = 0
-	RDCMAPPING_ReadOnly = 1
-	RDCMAPPING_ReadWrite = 2
+	RDCMAPPING_Undefined RdcMappingAccessMode = 0
+	RDCMAPPING_ReadOnly  RdcMappingAccessMode = 1
+	RDCMAPPING_ReadWrite RdcMappingAccessMode = 2
 )
-

@@ -7,8 +7,7 @@ package windowsaddressbook
 type Gender int32
 
 const (
-	genderUnspecified = 0
-	genderFemale = 1
-	genderMale = 2
+	genderUnspecified Gender = 0
+	genderFemale      Gender = 1
+	genderMale        Gender = 2
 )
-

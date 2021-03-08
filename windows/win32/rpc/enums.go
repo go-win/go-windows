@@ -7,188 +7,187 @@ package rpc
 type RPC_HTTP_REDIRECTOR_STAGE int32
 
 const (
-	RPCHTTP_RS_REDIRECT = 1
-	RPCHTTP_RS_ACCESS_1 = 2
-	RPCHTTP_RS_SESSION = 3
-	RPCHTTP_RS_ACCESS_2 = 4
-	RPCHTTP_RS_INTERFACE = 5
+	RPCHTTP_RS_REDIRECT  RPC_HTTP_REDIRECTOR_STAGE = 1
+	RPCHTTP_RS_ACCESS_1  RPC_HTTP_REDIRECTOR_STAGE = 2
+	RPCHTTP_RS_SESSION   RPC_HTTP_REDIRECTOR_STAGE = 3
+	RPCHTTP_RS_ACCESS_2  RPC_HTTP_REDIRECTOR_STAGE = 4
+	RPCHTTP_RS_INTERFACE RPC_HTTP_REDIRECTOR_STAGE = 5
 )
 
 type RPC_ADDRESS_CHANGE_TYPE int32
 
 const (
-	PROTOCOL_NOT_LOADED = 1
-	PROTOCOL_LOADED = 2
-	PROTOCOL_ADDRESS_CHANGE = 3
+	PROTOCOL_NOT_LOADED     RPC_ADDRESS_CHANGE_TYPE = 1
+	PROTOCOL_LOADED         RPC_ADDRESS_CHANGE_TYPE = 2
+	PROTOCOL_ADDRESS_CHANGE RPC_ADDRESS_CHANGE_TYPE = 3
 )
 
 type LRPC_SYSTEM_HANDLE_MARSHAL_DIRECTION int32
 
 const (
-	MarshalDirectionMarshal = 0
-	MarshalDirectionUnmarshal = 1
+	MarshalDirectionMarshal   LRPC_SYSTEM_HANDLE_MARSHAL_DIRECTION = 0
+	MarshalDirectionUnmarshal LRPC_SYSTEM_HANDLE_MARSHAL_DIRECTION = 1
 )
 
 type RpcProxyPerfCounters int32
 
 const (
-	RpcCurrentUniqueUser = 1
-	RpcBackEndConnectionAttempts = 2
-	RpcBackEndConnectionFailed = 3
-	RpcRequestsPerSecond = 4
-	RpcIncomingConnections = 5
-	RpcIncomingBandwidth = 6
-	RpcOutgoingBandwidth = 7
-	RpcAttemptedLbsDecisions = 8
-	RpcFailedLbsDecisions = 9
-	RpcAttemptedLbsMessages = 10
-	RpcFailedLbsMessages = 11
-	RpcLastCounter = 12
+	RpcCurrentUniqueUser         RpcProxyPerfCounters = 1
+	RpcBackEndConnectionAttempts RpcProxyPerfCounters = 2
+	RpcBackEndConnectionFailed   RpcProxyPerfCounters = 3
+	RpcRequestsPerSecond         RpcProxyPerfCounters = 4
+	RpcIncomingConnections       RpcProxyPerfCounters = 5
+	RpcIncomingBandwidth         RpcProxyPerfCounters = 6
+	RpcOutgoingBandwidth         RpcProxyPerfCounters = 7
+	RpcAttemptedLbsDecisions     RpcProxyPerfCounters = 8
+	RpcFailedLbsDecisions        RpcProxyPerfCounters = 9
+	RpcAttemptedLbsMessages      RpcProxyPerfCounters = 10
+	RpcFailedLbsMessages         RpcProxyPerfCounters = 11
+	RpcLastCounter               RpcProxyPerfCounters = 12
 )
 
 type RPC_NOTIFICATION_TYPES int32
 
 const (
-	RpcNotificationTypeNone = 0
-	RpcNotificationTypeEvent = 1
-	RpcNotificationTypeApc = 2
-	RpcNotificationTypeIoc = 3
-	RpcNotificationTypeHwnd = 4
-	RpcNotificationTypeCallback = 5
+	RpcNotificationTypeNone     RPC_NOTIFICATION_TYPES = 0
+	RpcNotificationTypeEvent    RPC_NOTIFICATION_TYPES = 1
+	RpcNotificationTypeApc      RPC_NOTIFICATION_TYPES = 2
+	RpcNotificationTypeIoc      RPC_NOTIFICATION_TYPES = 3
+	RpcNotificationTypeHwnd     RPC_NOTIFICATION_TYPES = 4
+	RpcNotificationTypeCallback RPC_NOTIFICATION_TYPES = 5
 )
 
 type RPC_ASYNC_EVENT int32
 
 const (
-	RpcCallComplete = 0
-	RpcSendComplete = 1
-	RpcReceiveComplete = 2
-	RpcClientDisconnect = 3
-	RpcClientCancel = 4
+	RpcCallComplete     RPC_ASYNC_EVENT = 0
+	RpcSendComplete     RPC_ASYNC_EVENT = 1
+	RpcReceiveComplete  RPC_ASYNC_EVENT = 2
+	RpcClientDisconnect RPC_ASYNC_EVENT = 3
+	RpcClientCancel     RPC_ASYNC_EVENT = 4
 )
 
 type ExtendedErrorParamTypes int32
 
 const (
-	eeptAnsiString = 1
-	eeptUnicodeString = 2
-	eeptLongVal = 3
-	eeptShortVal = 4
-	eeptPointerVal = 5
-	eeptNone = 6
-	eeptBinary = 7
+	eeptAnsiString    ExtendedErrorParamTypes = 1
+	eeptUnicodeString ExtendedErrorParamTypes = 2
+	eeptLongVal       ExtendedErrorParamTypes = 3
+	eeptShortVal      ExtendedErrorParamTypes = 4
+	eeptPointerVal    ExtendedErrorParamTypes = 5
+	eeptNone          ExtendedErrorParamTypes = 6
+	eeptBinary        ExtendedErrorParamTypes = 7
 )
 
 type RpcLocalAddressFormat int32
 
 const (
-	rlafInvalid = 0
-	rlafIPv4 = 1
-	rlafIPv6 = 2
+	rlafInvalid RpcLocalAddressFormat = 0
+	rlafIPv4    RpcLocalAddressFormat = 1
+	rlafIPv6    RpcLocalAddressFormat = 2
 )
 
 type RpcCallType int32
 
 const (
-	rctInvalid = 0
-	rctNormal = 1
-	rctTraining = 2
-	rctGuaranteed = 3
+	rctInvalid    RpcCallType = 0
+	rctNormal     RpcCallType = 1
+	rctTraining   RpcCallType = 2
+	rctGuaranteed RpcCallType = 3
 )
 
 type RpcCallClientLocality int32
 
 const (
-	rcclInvalid = 0
-	rcclLocal = 1
-	rcclRemote = 2
-	rcclClientUnknownLocality = 3
+	rcclInvalid               RpcCallClientLocality = 0
+	rcclLocal                 RpcCallClientLocality = 1
+	rcclRemote                RpcCallClientLocality = 2
+	rcclClientUnknownLocality RpcCallClientLocality = 3
 )
 
 type RPC_NOTIFICATIONS int32
 
 const (
-	RpcNotificationCallNone = 0
-	RpcNotificationClientDisconnect = 1
-	RpcNotificationCallCancel = 2
+	RpcNotificationCallNone         RPC_NOTIFICATIONS = 0
+	RpcNotificationClientDisconnect RPC_NOTIFICATIONS = 1
+	RpcNotificationCallCancel       RPC_NOTIFICATIONS = 2
 )
 
 type USER_MARSHAL_CB_TYPE int32
 
 const (
-	USER_MARSHAL_CB_BUFFER_SIZE = 0
-	USER_MARSHAL_CB_MARSHALL = 1
-	USER_MARSHAL_CB_UNMARSHALL = 2
-	USER_MARSHAL_CB_FREE = 3
+	USER_MARSHAL_CB_BUFFER_SIZE USER_MARSHAL_CB_TYPE = 0
+	USER_MARSHAL_CB_MARSHALL    USER_MARSHAL_CB_TYPE = 1
+	USER_MARSHAL_CB_UNMARSHALL  USER_MARSHAL_CB_TYPE = 2
+	USER_MARSHAL_CB_FREE        USER_MARSHAL_CB_TYPE = 3
 )
 
 type IDL_CS_CONVERT int32
 
 const (
-	IDL_CS_NO_CONVERT = 0
-	IDL_CS_IN_PLACE_CONVERT = 1
-	IDL_CS_NEW_BUFFER_CONVERT = 2
+	IDL_CS_NO_CONVERT         IDL_CS_CONVERT = 0
+	IDL_CS_IN_PLACE_CONVERT   IDL_CS_CONVERT = 1
+	IDL_CS_NEW_BUFFER_CONVERT IDL_CS_CONVERT = 2
 )
 
 type XLAT_SIDE int32
 
 const (
-	XLAT_SERVER = 1
-	XLAT_CLIENT = 2
+	XLAT_SERVER XLAT_SIDE = 1
+	XLAT_CLIENT XLAT_SIDE = 2
 )
 
 type system_handle_t int32
 
 const (
-	SYSTEM_HANDLE_FILE = 0
-	SYSTEM_HANDLE_SEMAPHORE = 1
-	SYSTEM_HANDLE_EVENT = 2
-	SYSTEM_HANDLE_MUTEX = 3
-	SYSTEM_HANDLE_PROCESS = 4
-	SYSTEM_HANDLE_TOKEN = 5
-	SYSTEM_HANDLE_SECTION = 6
-	SYSTEM_HANDLE_REG_KEY = 7
-	SYSTEM_HANDLE_THREAD = 8
-	SYSTEM_HANDLE_COMPOSITION_OBJECT = 9
-	SYSTEM_HANDLE_SOCKET = 10
-	SYSTEM_HANDLE_JOB = 11
-	SYSTEM_HANDLE_PIPE = 12
-	SYSTEM_HANDLE_MAX = 12
-	SYSTEM_HANDLE_INVALID = 255
+	SYSTEM_HANDLE_FILE               system_handle_t = 0
+	SYSTEM_HANDLE_SEMAPHORE          system_handle_t = 1
+	SYSTEM_HANDLE_EVENT              system_handle_t = 2
+	SYSTEM_HANDLE_MUTEX              system_handle_t = 3
+	SYSTEM_HANDLE_PROCESS            system_handle_t = 4
+	SYSTEM_HANDLE_TOKEN              system_handle_t = 5
+	SYSTEM_HANDLE_SECTION            system_handle_t = 6
+	SYSTEM_HANDLE_REG_KEY            system_handle_t = 7
+	SYSTEM_HANDLE_THREAD             system_handle_t = 8
+	SYSTEM_HANDLE_COMPOSITION_OBJECT system_handle_t = 9
+	SYSTEM_HANDLE_SOCKET             system_handle_t = 10
+	SYSTEM_HANDLE_JOB                system_handle_t = 11
+	SYSTEM_HANDLE_PIPE               system_handle_t = 12
+	SYSTEM_HANDLE_MAX                system_handle_t = 12
+	SYSTEM_HANDLE_INVALID            system_handle_t = 255
 )
 
 type STUB_PHASE int32
 
 const (
-	STUB_UNMARSHAL = 0
-	STUB_CALL_SERVER = 1
-	STUB_MARSHAL = 2
-	STUB_CALL_SERVER_NO_HRESULT = 3
+	STUB_UNMARSHAL              STUB_PHASE = 0
+	STUB_CALL_SERVER            STUB_PHASE = 1
+	STUB_MARSHAL                STUB_PHASE = 2
+	STUB_CALL_SERVER_NO_HRESULT STUB_PHASE = 3
 )
 
 type PROXY_PHASE int32
 
 const (
-	PROXY_CALCSIZE = 0
-	PROXY_GETBUFFER = 1
-	PROXY_MARSHAL = 2
-	PROXY_SENDRECEIVE = 3
-	PROXY_UNMARSHAL = 4
+	PROXY_CALCSIZE    PROXY_PHASE = 0
+	PROXY_GETBUFFER   PROXY_PHASE = 1
+	PROXY_MARSHAL     PROXY_PHASE = 2
+	PROXY_SENDRECEIVE PROXY_PHASE = 3
+	PROXY_UNMARSHAL   PROXY_PHASE = 4
 )
 
 type MIDL_ES_CODE int32
 
 const (
-	MES_ENCODE = 0
-	MES_DECODE = 1
-	MES_ENCODE_NDR64 = 2
+	MES_ENCODE       MIDL_ES_CODE = 0
+	MES_DECODE       MIDL_ES_CODE = 1
+	MES_ENCODE_NDR64 MIDL_ES_CODE = 2
 )
 
 type MIDL_ES_HANDLE_STYLE int32
 
 const (
-	MES_INCREMENTAL_HANDLE = 0
-	MES_FIXED_BUFFER_HANDLE = 1
-	MES_DYNAMIC_BUFFER_HANDLE = 2
+	MES_INCREMENTAL_HANDLE    MIDL_ES_HANDLE_STYLE = 0
+	MES_FIXED_BUFFER_HANDLE   MIDL_ES_HANDLE_STYLE = 1
+	MES_DYNAMIC_BUFFER_HANDLE MIDL_ES_HANDLE_STYLE = 2
 )
-

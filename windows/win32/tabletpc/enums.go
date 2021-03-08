@@ -7,1386 +7,1385 @@ package tabletpc
 type PROPERTY_UNITS int32
 
 const (
-	PROPERTY_UNITS_DEFAULT = 0
-	PROPERTY_UNITS_INCHES = 1
-	PROPERTY_UNITS_CENTIMETERS = 2
-	PROPERTY_UNITS_DEGREES = 3
-	PROPERTY_UNITS_RADIANS = 4
-	PROPERTY_UNITS_SECONDS = 5
-	PROPERTY_UNITS_POUNDS = 6
-	PROPERTY_UNITS_GRAMS = 7
-	PROPERTY_UNITS_SILINEAR = 8
-	PROPERTY_UNITS_SIROTATION = 9
-	PROPERTY_UNITS_ENGLINEAR = 10
-	PROPERTY_UNITS_ENGROTATION = 11
-	PROPERTY_UNITS_SLUGS = 12
-	PROPERTY_UNITS_KELVIN = 13
-	PROPERTY_UNITS_FAHRENHEIT = 14
-	PROPERTY_UNITS_AMPERE = 15
-	PROPERTY_UNITS_CANDELA = 16
+	PROPERTY_UNITS_DEFAULT     PROPERTY_UNITS = 0
+	PROPERTY_UNITS_INCHES      PROPERTY_UNITS = 1
+	PROPERTY_UNITS_CENTIMETERS PROPERTY_UNITS = 2
+	PROPERTY_UNITS_DEGREES     PROPERTY_UNITS = 3
+	PROPERTY_UNITS_RADIANS     PROPERTY_UNITS = 4
+	PROPERTY_UNITS_SECONDS     PROPERTY_UNITS = 5
+	PROPERTY_UNITS_POUNDS      PROPERTY_UNITS = 6
+	PROPERTY_UNITS_GRAMS       PROPERTY_UNITS = 7
+	PROPERTY_UNITS_SILINEAR    PROPERTY_UNITS = 8
+	PROPERTY_UNITS_SIROTATION  PROPERTY_UNITS = 9
+	PROPERTY_UNITS_ENGLINEAR   PROPERTY_UNITS = 10
+	PROPERTY_UNITS_ENGROTATION PROPERTY_UNITS = 11
+	PROPERTY_UNITS_SLUGS       PROPERTY_UNITS = 12
+	PROPERTY_UNITS_KELVIN      PROPERTY_UNITS = 13
+	PROPERTY_UNITS_FAHRENHEIT  PROPERTY_UNITS = 14
+	PROPERTY_UNITS_AMPERE      PROPERTY_UNITS = 15
+	PROPERTY_UNITS_CANDELA     PROPERTY_UNITS = 16
 )
 
 type enumINKMETRIC_FLAGS int32
 
 const (
-	IMF_FONT_SELECTED_IN_HDC = 1
-	IMF_ITALIC = 2
-	IMF_BOLD = 4
+	IMF_FONT_SELECTED_IN_HDC enumINKMETRIC_FLAGS = 1
+	IMF_ITALIC               enumINKMETRIC_FLAGS = 2
+	IMF_BOLD                 enumINKMETRIC_FLAGS = 4
 )
 
 type enumGetCandidateFlags int32
 
 const (
-	TCF_ALLOW_RECOGNITION = 1
-	TCF_FORCE_RECOGNITION = 2
+	TCF_ALLOW_RECOGNITION enumGetCandidateFlags = 1
+	TCF_FORCE_RECOGNITION enumGetCandidateFlags = 2
 )
 
 type InkSelectionConstants int32
 
 const (
-	ISC_FirstElement = 0
-	ISC_AllElements = -1
+	ISC_FirstElement InkSelectionConstants = 0
+	ISC_AllElements  InkSelectionConstants = -1
 )
 
 type InkBoundingBoxMode int32
 
 const (
-	IBBM_Default = 0
-	IBBM_NoCurveFit = 1
-	IBBM_CurveFit = 2
-	IBBM_PointsOnly = 3
-	IBBM_Union = 4
+	IBBM_Default    InkBoundingBoxMode = 0
+	IBBM_NoCurveFit InkBoundingBoxMode = 1
+	IBBM_CurveFit   InkBoundingBoxMode = 2
+	IBBM_PointsOnly InkBoundingBoxMode = 3
+	IBBM_Union      InkBoundingBoxMode = 4
 )
 
 type InkExtractFlags int32
 
 const (
-	IEF_CopyFromOriginal = 0
-	IEF_RemoveFromOriginal = 1
-	IEF_Default = 1
+	IEF_CopyFromOriginal   InkExtractFlags = 0
+	IEF_RemoveFromOriginal InkExtractFlags = 1
+	IEF_Default            InkExtractFlags = 1
 )
 
 type InkPersistenceFormat int32
 
 const (
-	IPF_InkSerializedFormat = 0
-	IPF_Base64InkSerializedFormat = 1
-	IPF_GIF = 2
-	IPF_Base64GIF = 3
+	IPF_InkSerializedFormat       InkPersistenceFormat = 0
+	IPF_Base64InkSerializedFormat InkPersistenceFormat = 1
+	IPF_GIF                       InkPersistenceFormat = 2
+	IPF_Base64GIF                 InkPersistenceFormat = 3
 )
 
 type InkPersistenceCompressionMode int32
 
 const (
-	IPCM_Default = 0
-	IPCM_MaximumCompression = 1
-	IPCM_NoCompression = 2
+	IPCM_Default            InkPersistenceCompressionMode = 0
+	IPCM_MaximumCompression InkPersistenceCompressionMode = 1
+	IPCM_NoCompression      InkPersistenceCompressionMode = 2
 )
 
 type InkPenTip int32
 
 const (
-	IPT_Ball = 0
-	IPT_Rectangle = 1
+	IPT_Ball      InkPenTip = 0
+	IPT_Rectangle InkPenTip = 1
 )
 
 type InkRasterOperation int32
 
 const (
-	IRO_Black = 1
-	IRO_NotMergePen = 2
-	IRO_MaskNotPen = 3
-	IRO_NotCopyPen = 4
-	IRO_MaskPenNot = 5
-	IRO_Not = 6
-	IRO_XOrPen = 7
-	IRO_NotMaskPen = 8
-	IRO_MaskPen = 9
-	IRO_NotXOrPen = 10
-	IRO_NoOperation = 11
-	IRO_MergeNotPen = 12
-	IRO_CopyPen = 13
-	IRO_MergePenNot = 14
-	IRO_MergePen = 15
-	IRO_White = 16
+	IRO_Black       InkRasterOperation = 1
+	IRO_NotMergePen InkRasterOperation = 2
+	IRO_MaskNotPen  InkRasterOperation = 3
+	IRO_NotCopyPen  InkRasterOperation = 4
+	IRO_MaskPenNot  InkRasterOperation = 5
+	IRO_Not         InkRasterOperation = 6
+	IRO_XOrPen      InkRasterOperation = 7
+	IRO_NotMaskPen  InkRasterOperation = 8
+	IRO_MaskPen     InkRasterOperation = 9
+	IRO_NotXOrPen   InkRasterOperation = 10
+	IRO_NoOperation InkRasterOperation = 11
+	IRO_MergeNotPen InkRasterOperation = 12
+	IRO_CopyPen     InkRasterOperation = 13
+	IRO_MergePenNot InkRasterOperation = 14
+	IRO_MergePen    InkRasterOperation = 15
+	IRO_White       InkRasterOperation = 16
 )
 
 type InkMousePointer int32
 
 const (
-	IMP_Default = 0
-	IMP_Arrow = 1
-	IMP_Crosshair = 2
-	IMP_Ibeam = 3
-	IMP_SizeNESW = 4
-	IMP_SizeNS = 5
-	IMP_SizeNWSE = 6
-	IMP_SizeWE = 7
-	IMP_UpArrow = 8
-	IMP_Hourglass = 9
-	IMP_NoDrop = 10
-	IMP_ArrowHourglass = 11
-	IMP_ArrowQuestion = 12
-	IMP_SizeAll = 13
-	IMP_Hand = 14
-	IMP_Custom = 99
+	IMP_Default        InkMousePointer = 0
+	IMP_Arrow          InkMousePointer = 1
+	IMP_Crosshair      InkMousePointer = 2
+	IMP_Ibeam          InkMousePointer = 3
+	IMP_SizeNESW       InkMousePointer = 4
+	IMP_SizeNS         InkMousePointer = 5
+	IMP_SizeNWSE       InkMousePointer = 6
+	IMP_SizeWE         InkMousePointer = 7
+	IMP_UpArrow        InkMousePointer = 8
+	IMP_Hourglass      InkMousePointer = 9
+	IMP_NoDrop         InkMousePointer = 10
+	IMP_ArrowHourglass InkMousePointer = 11
+	IMP_ArrowQuestion  InkMousePointer = 12
+	IMP_SizeAll        InkMousePointer = 13
+	IMP_Hand           InkMousePointer = 14
+	IMP_Custom         InkMousePointer = 99
 )
 
 type InkClipboardModes int32
 
 const (
-	ICB_Copy = 0
-	ICB_Cut = 1
-	ICB_ExtractOnly = 48
-	ICB_DelayedCopy = 32
-	ICB_Default = 0
+	ICB_Copy        InkClipboardModes = 0
+	ICB_Cut         InkClipboardModes = 1
+	ICB_ExtractOnly InkClipboardModes = 48
+	ICB_DelayedCopy InkClipboardModes = 32
+	ICB_Default     InkClipboardModes = 0
 )
 
 type InkClipboardFormats int32
 
 const (
-	ICF_None = 0
-	ICF_InkSerializedFormat = 1
-	ICF_SketchInk = 2
-	ICF_TextInk = 6
-	ICF_EnhancedMetafile = 8
-	ICF_Metafile = 32
-	ICF_Bitmap = 64
-	ICF_PasteMask = 7
-	ICF_CopyMask = 127
-	ICF_Default = 127
+	ICF_None                InkClipboardFormats = 0
+	ICF_InkSerializedFormat InkClipboardFormats = 1
+	ICF_SketchInk           InkClipboardFormats = 2
+	ICF_TextInk             InkClipboardFormats = 6
+	ICF_EnhancedMetafile    InkClipboardFormats = 8
+	ICF_Metafile            InkClipboardFormats = 32
+	ICF_Bitmap              InkClipboardFormats = 64
+	ICF_PasteMask           InkClipboardFormats = 7
+	ICF_CopyMask            InkClipboardFormats = 127
+	ICF_Default             InkClipboardFormats = 127
 )
 
 type SelectionHitResult int32
 
 const (
-	SHR_None = 0
-	SHR_NW = 1
-	SHR_SE = 2
-	SHR_NE = 3
-	SHR_SW = 4
-	SHR_E = 5
-	SHR_W = 6
-	SHR_N = 7
-	SHR_S = 8
-	SHR_Selection = 9
+	SHR_None      SelectionHitResult = 0
+	SHR_NW        SelectionHitResult = 1
+	SHR_SE        SelectionHitResult = 2
+	SHR_NE        SelectionHitResult = 3
+	SHR_SW        SelectionHitResult = 4
+	SHR_E         SelectionHitResult = 5
+	SHR_W         SelectionHitResult = 6
+	SHR_N         SelectionHitResult = 7
+	SHR_S         SelectionHitResult = 8
+	SHR_Selection SelectionHitResult = 9
 )
 
 type InkRecognitionStatus int32
 
 const (
-	IRS_NoError = 0
-	IRS_Interrupted = 1
-	IRS_ProcessFailed = 2
-	IRS_InkAddedFailed = 4
-	IRS_SetAutoCompletionModeFailed = 8
-	IRS_SetStrokesFailed = 16
-	IRS_SetGuideFailed = 32
-	IRS_SetFlagsFailed = 64
-	IRS_SetFactoidFailed = 128
-	IRS_SetPrefixSuffixFailed = 256
-	IRS_SetWordListFailed = 512
+	IRS_NoError                     InkRecognitionStatus = 0
+	IRS_Interrupted                 InkRecognitionStatus = 1
+	IRS_ProcessFailed               InkRecognitionStatus = 2
+	IRS_InkAddedFailed              InkRecognitionStatus = 4
+	IRS_SetAutoCompletionModeFailed InkRecognitionStatus = 8
+	IRS_SetStrokesFailed            InkRecognitionStatus = 16
+	IRS_SetGuideFailed              InkRecognitionStatus = 32
+	IRS_SetFlagsFailed              InkRecognitionStatus = 64
+	IRS_SetFactoidFailed            InkRecognitionStatus = 128
+	IRS_SetPrefixSuffixFailed       InkRecognitionStatus = 256
+	IRS_SetWordListFailed           InkRecognitionStatus = 512
 )
 
 type DISPID_InkRectangle int32
 
 const (
-	DISPID_IRTop = 1
-	DISPID_IRLeft = 2
-	DISPID_IRBottom = 3
-	DISPID_IRRight = 4
-	DISPID_IRGetRectangle = 5
-	DISPID_IRSetRectangle = 6
-	DISPID_IRData = 7
+	DISPID_IRTop          DISPID_InkRectangle = 1
+	DISPID_IRLeft         DISPID_InkRectangle = 2
+	DISPID_IRBottom       DISPID_InkRectangle = 3
+	DISPID_IRRight        DISPID_InkRectangle = 4
+	DISPID_IRGetRectangle DISPID_InkRectangle = 5
+	DISPID_IRSetRectangle DISPID_InkRectangle = 6
+	DISPID_IRData         DISPID_InkRectangle = 7
 )
 
 type DISPID_InkExtendedProperty int32
 
 const (
-	DISPID_IEPGuid = 1
-	DISPID_IEPData = 2
+	DISPID_IEPGuid DISPID_InkExtendedProperty = 1
+	DISPID_IEPData DISPID_InkExtendedProperty = 2
 )
 
 type DISPID_InkExtendedProperties int32
 
 const (
-	DISPID_IEPs_NewEnum = -4
-	DISPID_IEPsItem = 0
-	DISPID_IEPsCount = 1
-	DISPID_IEPsAdd = 2
-	DISPID_IEPsRemove = 3
-	DISPID_IEPsClear = 4
-	DISPID_IEPsDoesPropertyExist = 5
+	DISPID_IEPs_NewEnum          DISPID_InkExtendedProperties = -4
+	DISPID_IEPsItem              DISPID_InkExtendedProperties = 0
+	DISPID_IEPsCount             DISPID_InkExtendedProperties = 1
+	DISPID_IEPsAdd               DISPID_InkExtendedProperties = 2
+	DISPID_IEPsRemove            DISPID_InkExtendedProperties = 3
+	DISPID_IEPsClear             DISPID_InkExtendedProperties = 4
+	DISPID_IEPsDoesPropertyExist DISPID_InkExtendedProperties = 5
 )
 
 type DISPID_InkDrawingAttributes int32
 
 const (
-	DISPID_DAHeight = 1
-	DISPID_DAColor = 2
-	DISPID_DAWidth = 3
-	DISPID_DAFitToCurve = 4
-	DISPID_DAIgnorePressure = 5
-	DISPID_DAAntiAliased = 6
-	DISPID_DATransparency = 7
-	DISPID_DARasterOperation = 8
-	DISPID_DAPenTip = 9
-	DISPID_DAClone = 10
-	DISPID_DAExtendedProperties = 11
+	DISPID_DAHeight             DISPID_InkDrawingAttributes = 1
+	DISPID_DAColor              DISPID_InkDrawingAttributes = 2
+	DISPID_DAWidth              DISPID_InkDrawingAttributes = 3
+	DISPID_DAFitToCurve         DISPID_InkDrawingAttributes = 4
+	DISPID_DAIgnorePressure     DISPID_InkDrawingAttributes = 5
+	DISPID_DAAntiAliased        DISPID_InkDrawingAttributes = 6
+	DISPID_DATransparency       DISPID_InkDrawingAttributes = 7
+	DISPID_DARasterOperation    DISPID_InkDrawingAttributes = 8
+	DISPID_DAPenTip             DISPID_InkDrawingAttributes = 9
+	DISPID_DAClone              DISPID_InkDrawingAttributes = 10
+	DISPID_DAExtendedProperties DISPID_InkDrawingAttributes = 11
 )
 
 type DISPID_InkTransform int32
 
 const (
-	DISPID_ITReset = 1
-	DISPID_ITTranslate = 2
-	DISPID_ITRotate = 3
-	DISPID_ITReflect = 4
-	DISPID_ITShear = 5
-	DISPID_ITScale = 6
-	DISPID_ITeM11 = 7
-	DISPID_ITeM12 = 8
-	DISPID_ITeM21 = 9
-	DISPID_ITeM22 = 10
-	DISPID_ITeDx = 11
-	DISPID_ITeDy = 12
-	DISPID_ITGetTransform = 13
-	DISPID_ITSetTransform = 14
-	DISPID_ITData = 15
+	DISPID_ITReset        DISPID_InkTransform = 1
+	DISPID_ITTranslate    DISPID_InkTransform = 2
+	DISPID_ITRotate       DISPID_InkTransform = 3
+	DISPID_ITReflect      DISPID_InkTransform = 4
+	DISPID_ITShear        DISPID_InkTransform = 5
+	DISPID_ITScale        DISPID_InkTransform = 6
+	DISPID_ITeM11         DISPID_InkTransform = 7
+	DISPID_ITeM12         DISPID_InkTransform = 8
+	DISPID_ITeM21         DISPID_InkTransform = 9
+	DISPID_ITeM22         DISPID_InkTransform = 10
+	DISPID_ITeDx          DISPID_InkTransform = 11
+	DISPID_ITeDy          DISPID_InkTransform = 12
+	DISPID_ITGetTransform DISPID_InkTransform = 13
+	DISPID_ITSetTransform DISPID_InkTransform = 14
+	DISPID_ITData         DISPID_InkTransform = 15
 )
 
 type InkApplicationGesture int32
 
 const (
-	IAG_AllGestures = 0
-	IAG_NoGesture = 61440
-	IAG_Scratchout = 61441
-	IAG_Triangle = 61442
-	IAG_Square = 61443
-	IAG_Star = 61444
-	IAG_Check = 61445
-	IAG_Curlicue = 61456
-	IAG_DoubleCurlicue = 61457
-	IAG_Circle = 61472
-	IAG_DoubleCircle = 61473
-	IAG_SemiCircleLeft = 61480
-	IAG_SemiCircleRight = 61481
-	IAG_ChevronUp = 61488
-	IAG_ChevronDown = 61489
-	IAG_ChevronLeft = 61490
-	IAG_ChevronRight = 61491
-	IAG_ArrowUp = 61496
-	IAG_ArrowDown = 61497
-	IAG_ArrowLeft = 61498
-	IAG_ArrowRight = 61499
-	IAG_Up = 61528
-	IAG_Down = 61529
-	IAG_Left = 61530
-	IAG_Right = 61531
-	IAG_UpDown = 61536
-	IAG_DownUp = 61537
-	IAG_LeftRight = 61538
-	IAG_RightLeft = 61539
-	IAG_UpLeftLong = 61540
-	IAG_UpRightLong = 61541
-	IAG_DownLeftLong = 61542
-	IAG_DownRightLong = 61543
-	IAG_UpLeft = 61544
-	IAG_UpRight = 61545
-	IAG_DownLeft = 61546
-	IAG_DownRight = 61547
-	IAG_LeftUp = 61548
-	IAG_LeftDown = 61549
-	IAG_RightUp = 61550
-	IAG_RightDown = 61551
-	IAG_Exclamation = 61604
-	IAG_Tap = 61680
-	IAG_DoubleTap = 61681
+	IAG_AllGestures     InkApplicationGesture = 0
+	IAG_NoGesture       InkApplicationGesture = 61440
+	IAG_Scratchout      InkApplicationGesture = 61441
+	IAG_Triangle        InkApplicationGesture = 61442
+	IAG_Square          InkApplicationGesture = 61443
+	IAG_Star            InkApplicationGesture = 61444
+	IAG_Check           InkApplicationGesture = 61445
+	IAG_Curlicue        InkApplicationGesture = 61456
+	IAG_DoubleCurlicue  InkApplicationGesture = 61457
+	IAG_Circle          InkApplicationGesture = 61472
+	IAG_DoubleCircle    InkApplicationGesture = 61473
+	IAG_SemiCircleLeft  InkApplicationGesture = 61480
+	IAG_SemiCircleRight InkApplicationGesture = 61481
+	IAG_ChevronUp       InkApplicationGesture = 61488
+	IAG_ChevronDown     InkApplicationGesture = 61489
+	IAG_ChevronLeft     InkApplicationGesture = 61490
+	IAG_ChevronRight    InkApplicationGesture = 61491
+	IAG_ArrowUp         InkApplicationGesture = 61496
+	IAG_ArrowDown       InkApplicationGesture = 61497
+	IAG_ArrowLeft       InkApplicationGesture = 61498
+	IAG_ArrowRight      InkApplicationGesture = 61499
+	IAG_Up              InkApplicationGesture = 61528
+	IAG_Down            InkApplicationGesture = 61529
+	IAG_Left            InkApplicationGesture = 61530
+	IAG_Right           InkApplicationGesture = 61531
+	IAG_UpDown          InkApplicationGesture = 61536
+	IAG_DownUp          InkApplicationGesture = 61537
+	IAG_LeftRight       InkApplicationGesture = 61538
+	IAG_RightLeft       InkApplicationGesture = 61539
+	IAG_UpLeftLong      InkApplicationGesture = 61540
+	IAG_UpRightLong     InkApplicationGesture = 61541
+	IAG_DownLeftLong    InkApplicationGesture = 61542
+	IAG_DownRightLong   InkApplicationGesture = 61543
+	IAG_UpLeft          InkApplicationGesture = 61544
+	IAG_UpRight         InkApplicationGesture = 61545
+	IAG_DownLeft        InkApplicationGesture = 61546
+	IAG_DownRight       InkApplicationGesture = 61547
+	IAG_LeftUp          InkApplicationGesture = 61548
+	IAG_LeftDown        InkApplicationGesture = 61549
+	IAG_RightUp         InkApplicationGesture = 61550
+	IAG_RightDown       InkApplicationGesture = 61551
+	IAG_Exclamation     InkApplicationGesture = 61604
+	IAG_Tap             InkApplicationGesture = 61680
+	IAG_DoubleTap       InkApplicationGesture = 61681
 )
 
 type InkSystemGesture int32
 
 const (
-	ISG_Tap = 16
-	ISG_DoubleTap = 17
-	ISG_RightTap = 18
-	ISG_Drag = 19
-	ISG_RightDrag = 20
-	ISG_HoldEnter = 21
-	ISG_HoldLeave = 22
-	ISG_HoverEnter = 23
-	ISG_HoverLeave = 24
-	ISG_Flick = 31
+	ISG_Tap        InkSystemGesture = 16
+	ISG_DoubleTap  InkSystemGesture = 17
+	ISG_RightTap   InkSystemGesture = 18
+	ISG_Drag       InkSystemGesture = 19
+	ISG_RightDrag  InkSystemGesture = 20
+	ISG_HoldEnter  InkSystemGesture = 21
+	ISG_HoldLeave  InkSystemGesture = 22
+	ISG_HoverEnter InkSystemGesture = 23
+	ISG_HoverLeave InkSystemGesture = 24
+	ISG_Flick      InkSystemGesture = 31
 )
 
 type InkRecognitionConfidence int32
 
 const (
-	IRC_Strong = 0
-	IRC_Intermediate = 1
-	IRC_Poor = 2
+	IRC_Strong       InkRecognitionConfidence = 0
+	IRC_Intermediate InkRecognitionConfidence = 1
+	IRC_Poor         InkRecognitionConfidence = 2
 )
 
 type DISPID_InkGesture int32
 
 const (
-	DISPID_IGId = 0
-	DISPID_IGGetHotPoint = 1
-	DISPID_IGConfidence = 2
+	DISPID_IGId          DISPID_InkGesture = 0
+	DISPID_IGGetHotPoint DISPID_InkGesture = 1
+	DISPID_IGConfidence  DISPID_InkGesture = 2
 )
 
 type DISPID_InkCursor int32
 
 const (
-	DISPID_ICsrName = 0
-	DISPID_ICsrId = 1
-	DISPID_ICsrDrawingAttributes = 2
-	DISPID_ICsrButtons = 3
-	DISPID_ICsrInverted = 4
-	DISPID_ICsrTablet = 5
+	DISPID_ICsrName              DISPID_InkCursor = 0
+	DISPID_ICsrId                DISPID_InkCursor = 1
+	DISPID_ICsrDrawingAttributes DISPID_InkCursor = 2
+	DISPID_ICsrButtons           DISPID_InkCursor = 3
+	DISPID_ICsrInverted          DISPID_InkCursor = 4
+	DISPID_ICsrTablet            DISPID_InkCursor = 5
 )
 
 type DISPID_InkCursors int32
 
 const (
-	DISPID_ICs_NewEnum = -4
-	DISPID_ICsItem = 0
-	DISPID_ICsCount = 1
+	DISPID_ICs_NewEnum DISPID_InkCursors = -4
+	DISPID_ICsItem     DISPID_InkCursors = 0
+	DISPID_ICsCount    DISPID_InkCursors = 1
 )
 
 type InkCursorButtonState int32
 
 const (
-	ICBS_Unavailable = 0
-	ICBS_Up = 1
-	ICBS_Down = 2
+	ICBS_Unavailable InkCursorButtonState = 0
+	ICBS_Up          InkCursorButtonState = 1
+	ICBS_Down        InkCursorButtonState = 2
 )
 
 type DISPID_InkCursorButton int32
 
 const (
-	DISPID_ICBName = 0
-	DISPID_ICBId = 1
-	DISPID_ICBState = 2
+	DISPID_ICBName  DISPID_InkCursorButton = 0
+	DISPID_ICBId    DISPID_InkCursorButton = 1
+	DISPID_ICBState DISPID_InkCursorButton = 2
 )
 
 type DISPID_InkCursorButtons int32
 
 const (
-	DISPID_ICBs_NewEnum = -4
-	DISPID_ICBsItem = 0
-	DISPID_ICBsCount = 1
+	DISPID_ICBs_NewEnum DISPID_InkCursorButtons = -4
+	DISPID_ICBsItem     DISPID_InkCursorButtons = 0
+	DISPID_ICBsCount    DISPID_InkCursorButtons = 1
 )
 
 type TabletHardwareCapabilities int32
 
 const (
-	THWC_Integrated = 1
-	THWC_CursorMustTouch = 2
-	THWC_HardProximity = 4
-	THWC_CursorsHavePhysicalIds = 8
+	THWC_Integrated             TabletHardwareCapabilities = 1
+	THWC_CursorMustTouch        TabletHardwareCapabilities = 2
+	THWC_HardProximity          TabletHardwareCapabilities = 4
+	THWC_CursorsHavePhysicalIds TabletHardwareCapabilities = 8
 )
 
 type TabletPropertyMetricUnit int32
 
 const (
-	TPMU_Default = 0
-	TPMU_Inches = 1
-	TPMU_Centimeters = 2
-	TPMU_Degrees = 3
-	TPMU_Radians = 4
-	TPMU_Seconds = 5
-	TPMU_Pounds = 6
-	TPMU_Grams = 7
+	TPMU_Default     TabletPropertyMetricUnit = 0
+	TPMU_Inches      TabletPropertyMetricUnit = 1
+	TPMU_Centimeters TabletPropertyMetricUnit = 2
+	TPMU_Degrees     TabletPropertyMetricUnit = 3
+	TPMU_Radians     TabletPropertyMetricUnit = 4
+	TPMU_Seconds     TabletPropertyMetricUnit = 5
+	TPMU_Pounds      TabletPropertyMetricUnit = 6
+	TPMU_Grams       TabletPropertyMetricUnit = 7
 )
 
 type DISPID_InkTablet int32
 
 const (
-	DISPID_ITName = 0
-	DISPID_ITPlugAndPlayId = 1
-	DISPID_ITPropertyMetrics = 2
-	DISPID_ITIsPacketPropertySupported = 3
-	DISPID_ITMaximumInputRectangle = 4
-	DISPID_ITHardwareCapabilities = 5
+	DISPID_ITName                      DISPID_InkTablet = 0
+	DISPID_ITPlugAndPlayId             DISPID_InkTablet = 1
+	DISPID_ITPropertyMetrics           DISPID_InkTablet = 2
+	DISPID_ITIsPacketPropertySupported DISPID_InkTablet = 3
+	DISPID_ITMaximumInputRectangle     DISPID_InkTablet = 4
+	DISPID_ITHardwareCapabilities      DISPID_InkTablet = 5
 )
 
 type TabletDeviceKind int32
 
 const (
-	TDK_Mouse = 0
-	TDK_Pen = 1
-	TDK_Touch = 2
+	TDK_Mouse TabletDeviceKind = 0
+	TDK_Pen   TabletDeviceKind = 1
+	TDK_Touch TabletDeviceKind = 2
 )
 
 type DISPID_InkTablet2 int32
 
 const (
-	DISPID_IT2DeviceKind = 0
+	DISPID_IT2DeviceKind DISPID_InkTablet2 = 0
 )
 
 type DISPID_InkTablet3 int32
 
 const (
-	DISPID_IT3IsMultiTouch = 0
-	DISPID_IT3MaximumCursors = 1
+	DISPID_IT3IsMultiTouch   DISPID_InkTablet3 = 0
+	DISPID_IT3MaximumCursors DISPID_InkTablet3 = 1
 )
 
 type DISPID_InkTablets int32
 
 const (
-	DISPID_ITs_NewEnum = -4
-	DISPID_ITsItem = 0
-	DISPID_ITsDefaultTablet = 1
-	DISPID_ITsCount = 2
-	DISPID_ITsIsPacketPropertySupported = 3
+	DISPID_ITs_NewEnum                  DISPID_InkTablets = -4
+	DISPID_ITsItem                      DISPID_InkTablets = 0
+	DISPID_ITsDefaultTablet             DISPID_InkTablets = 1
+	DISPID_ITsCount                     DISPID_InkTablets = 2
+	DISPID_ITsIsPacketPropertySupported DISPID_InkTablets = 3
 )
 
 type DISPID_InkStrokeDisp int32
 
 const (
-	DISPID_ISDInkIndex = 1
-	DISPID_ISDID = 2
-	DISPID_ISDGetBoundingBox = 3
-	DISPID_ISDDrawingAttributes = 4
-	DISPID_ISDFindIntersections = 5
-	DISPID_ISDGetRectangleIntersections = 6
-	DISPID_ISDClip = 7
-	DISPID_ISDHitTestCircle = 8
-	DISPID_ISDNearestPoint = 9
-	DISPID_ISDSplit = 10
-	DISPID_ISDExtendedProperties = 11
-	DISPID_ISDInk = 12
-	DISPID_ISDBezierPoints = 13
-	DISPID_ISDPolylineCusps = 14
-	DISPID_ISDBezierCusps = 15
-	DISPID_ISDSelfIntersections = 16
-	DISPID_ISDPacketCount = 17
-	DISPID_ISDPacketSize = 18
-	DISPID_ISDPacketDescription = 19
-	DISPID_ISDDeleted = 20
-	DISPID_ISDGetPacketDescriptionPropertyMetrics = 21
-	DISPID_ISDGetPoints = 22
-	DISPID_ISDSetPoints = 23
-	DISPID_ISDGetPacketData = 24
-	DISPID_ISDGetPacketValuesByProperty = 25
-	DISPID_ISDSetPacketValuesByProperty = 26
-	DISPID_ISDGetFlattenedBezierPoints = 27
-	DISPID_ISDScaleToRectangle = 28
-	DISPID_ISDTransform = 29
-	DISPID_ISDMove = 30
-	DISPID_ISDRotate = 31
-	DISPID_ISDShear = 32
-	DISPID_ISDScale = 33
+	DISPID_ISDInkIndex                            DISPID_InkStrokeDisp = 1
+	DISPID_ISDID                                  DISPID_InkStrokeDisp = 2
+	DISPID_ISDGetBoundingBox                      DISPID_InkStrokeDisp = 3
+	DISPID_ISDDrawingAttributes                   DISPID_InkStrokeDisp = 4
+	DISPID_ISDFindIntersections                   DISPID_InkStrokeDisp = 5
+	DISPID_ISDGetRectangleIntersections           DISPID_InkStrokeDisp = 6
+	DISPID_ISDClip                                DISPID_InkStrokeDisp = 7
+	DISPID_ISDHitTestCircle                       DISPID_InkStrokeDisp = 8
+	DISPID_ISDNearestPoint                        DISPID_InkStrokeDisp = 9
+	DISPID_ISDSplit                               DISPID_InkStrokeDisp = 10
+	DISPID_ISDExtendedProperties                  DISPID_InkStrokeDisp = 11
+	DISPID_ISDInk                                 DISPID_InkStrokeDisp = 12
+	DISPID_ISDBezierPoints                        DISPID_InkStrokeDisp = 13
+	DISPID_ISDPolylineCusps                       DISPID_InkStrokeDisp = 14
+	DISPID_ISDBezierCusps                         DISPID_InkStrokeDisp = 15
+	DISPID_ISDSelfIntersections                   DISPID_InkStrokeDisp = 16
+	DISPID_ISDPacketCount                         DISPID_InkStrokeDisp = 17
+	DISPID_ISDPacketSize                          DISPID_InkStrokeDisp = 18
+	DISPID_ISDPacketDescription                   DISPID_InkStrokeDisp = 19
+	DISPID_ISDDeleted                             DISPID_InkStrokeDisp = 20
+	DISPID_ISDGetPacketDescriptionPropertyMetrics DISPID_InkStrokeDisp = 21
+	DISPID_ISDGetPoints                           DISPID_InkStrokeDisp = 22
+	DISPID_ISDSetPoints                           DISPID_InkStrokeDisp = 23
+	DISPID_ISDGetPacketData                       DISPID_InkStrokeDisp = 24
+	DISPID_ISDGetPacketValuesByProperty           DISPID_InkStrokeDisp = 25
+	DISPID_ISDSetPacketValuesByProperty           DISPID_InkStrokeDisp = 26
+	DISPID_ISDGetFlattenedBezierPoints            DISPID_InkStrokeDisp = 27
+	DISPID_ISDScaleToRectangle                    DISPID_InkStrokeDisp = 28
+	DISPID_ISDTransform                           DISPID_InkStrokeDisp = 29
+	DISPID_ISDMove                                DISPID_InkStrokeDisp = 30
+	DISPID_ISDRotate                              DISPID_InkStrokeDisp = 31
+	DISPID_ISDShear                               DISPID_InkStrokeDisp = 32
+	DISPID_ISDScale                               DISPID_InkStrokeDisp = 33
 )
 
 type DISPID_InkStrokes int32
 
 const (
-	DISPID_ISs_NewEnum = -4
-	DISPID_ISsItem = 0
-	DISPID_ISsCount = 1
-	DISPID_ISsValid = 2
-	DISPID_ISsInk = 3
-	DISPID_ISsAdd = 4
-	DISPID_ISsAddStrokes = 5
-	DISPID_ISsRemove = 6
-	DISPID_ISsRemoveStrokes = 7
-	DISPID_ISsToString = 8
-	DISPID_ISsModifyDrawingAttributes = 9
-	DISPID_ISsGetBoundingBox = 10
-	DISPID_ISsScaleToRectangle = 11
-	DISPID_ISsTransform = 12
-	DISPID_ISsMove = 13
-	DISPID_ISsRotate = 14
-	DISPID_ISsShear = 15
-	DISPID_ISsScale = 16
-	DISPID_ISsClip = 17
-	DISPID_ISsRecognitionResult = 18
-	DISPID_ISsRemoveRecognitionResult = 19
+	DISPID_ISs_NewEnum                DISPID_InkStrokes = -4
+	DISPID_ISsItem                    DISPID_InkStrokes = 0
+	DISPID_ISsCount                   DISPID_InkStrokes = 1
+	DISPID_ISsValid                   DISPID_InkStrokes = 2
+	DISPID_ISsInk                     DISPID_InkStrokes = 3
+	DISPID_ISsAdd                     DISPID_InkStrokes = 4
+	DISPID_ISsAddStrokes              DISPID_InkStrokes = 5
+	DISPID_ISsRemove                  DISPID_InkStrokes = 6
+	DISPID_ISsRemoveStrokes           DISPID_InkStrokes = 7
+	DISPID_ISsToString                DISPID_InkStrokes = 8
+	DISPID_ISsModifyDrawingAttributes DISPID_InkStrokes = 9
+	DISPID_ISsGetBoundingBox          DISPID_InkStrokes = 10
+	DISPID_ISsScaleToRectangle        DISPID_InkStrokes = 11
+	DISPID_ISsTransform               DISPID_InkStrokes = 12
+	DISPID_ISsMove                    DISPID_InkStrokes = 13
+	DISPID_ISsRotate                  DISPID_InkStrokes = 14
+	DISPID_ISsShear                   DISPID_InkStrokes = 15
+	DISPID_ISsScale                   DISPID_InkStrokes = 16
+	DISPID_ISsClip                    DISPID_InkStrokes = 17
+	DISPID_ISsRecognitionResult       DISPID_InkStrokes = 18
+	DISPID_ISsRemoveRecognitionResult DISPID_InkStrokes = 19
 )
 
 type DISPID_InkCustomStrokes int32
 
 const (
-	DISPID_ICSs_NewEnum = -4
-	DISPID_ICSsItem = 0
-	DISPID_ICSsCount = 1
-	DISPID_ICSsAdd = 2
-	DISPID_ICSsRemove = 3
-	DISPID_ICSsClear = 4
+	DISPID_ICSs_NewEnum DISPID_InkCustomStrokes = -4
+	DISPID_ICSsItem     DISPID_InkCustomStrokes = 0
+	DISPID_ICSsCount    DISPID_InkCustomStrokes = 1
+	DISPID_ICSsAdd      DISPID_InkCustomStrokes = 2
+	DISPID_ICSsRemove   DISPID_InkCustomStrokes = 3
+	DISPID_ICSsClear    DISPID_InkCustomStrokes = 4
 )
 
 type DISPID_StrokeEvent int32
 
 const (
-	DISPID_SEStrokesAdded = 1
-	DISPID_SEStrokesRemoved = 2
+	DISPID_SEStrokesAdded   DISPID_StrokeEvent = 1
+	DISPID_SEStrokesRemoved DISPID_StrokeEvent = 2
 )
 
 type DISPID_Ink int32
 
 const (
-	DISPID_IStrokes = 1
-	DISPID_IExtendedProperties = 2
-	DISPID_IGetBoundingBox = 3
-	DISPID_IDeleteStrokes = 4
-	DISPID_IDeleteStroke = 5
-	DISPID_IExtractStrokes = 6
-	DISPID_IExtractWithRectangle = 7
-	DISPID_IDirty = 8
-	DISPID_ICustomStrokes = 9
-	DISPID_IClone = 10
-	DISPID_IHitTestCircle = 11
-	DISPID_IHitTestWithRectangle = 12
-	DISPID_IHitTestWithLasso = 13
-	DISPID_INearestPoint = 14
-	DISPID_ICreateStrokes = 15
-	DISPID_ICreateStroke = 16
-	DISPID_IAddStrokesAtRectangle = 17
-	DISPID_IClip = 18
-	DISPID_ISave = 19
-	DISPID_ILoad = 20
-	DISPID_ICreateStrokeFromPoints = 21
-	DISPID_IClipboardCopyWithRectangle = 22
-	DISPID_IClipboardCopy = 23
-	DISPID_ICanPaste = 24
-	DISPID_IClipboardPaste = 25
+	DISPID_IStrokes                    DISPID_Ink = 1
+	DISPID_IExtendedProperties         DISPID_Ink = 2
+	DISPID_IGetBoundingBox             DISPID_Ink = 3
+	DISPID_IDeleteStrokes              DISPID_Ink = 4
+	DISPID_IDeleteStroke               DISPID_Ink = 5
+	DISPID_IExtractStrokes             DISPID_Ink = 6
+	DISPID_IExtractWithRectangle       DISPID_Ink = 7
+	DISPID_IDirty                      DISPID_Ink = 8
+	DISPID_ICustomStrokes              DISPID_Ink = 9
+	DISPID_IClone                      DISPID_Ink = 10
+	DISPID_IHitTestCircle              DISPID_Ink = 11
+	DISPID_IHitTestWithRectangle       DISPID_Ink = 12
+	DISPID_IHitTestWithLasso           DISPID_Ink = 13
+	DISPID_INearestPoint               DISPID_Ink = 14
+	DISPID_ICreateStrokes              DISPID_Ink = 15
+	DISPID_ICreateStroke               DISPID_Ink = 16
+	DISPID_IAddStrokesAtRectangle      DISPID_Ink = 17
+	DISPID_IClip                       DISPID_Ink = 18
+	DISPID_ISave                       DISPID_Ink = 19
+	DISPID_ILoad                       DISPID_Ink = 20
+	DISPID_ICreateStrokeFromPoints     DISPID_Ink = 21
+	DISPID_IClipboardCopyWithRectangle DISPID_Ink = 22
+	DISPID_IClipboardCopy              DISPID_Ink = 23
+	DISPID_ICanPaste                   DISPID_Ink = 24
+	DISPID_IClipboardPaste             DISPID_Ink = 25
 )
 
 type DISPID_InkEvent int32
 
 const (
-	DISPID_IEInkAdded = 1
-	DISPID_IEInkDeleted = 2
+	DISPID_IEInkAdded   DISPID_InkEvent = 1
+	DISPID_IEInkDeleted DISPID_InkEvent = 2
 )
 
 type DISPID_InkRenderer int32
 
 const (
-	DISPID_IRGetViewTransform = 1
-	DISPID_IRSetViewTransform = 2
-	DISPID_IRGetObjectTransform = 3
-	DISPID_IRSetObjectTransform = 4
-	DISPID_IRDraw = 5
-	DISPID_IRDrawStroke = 6
-	DISPID_IRPixelToInkSpace = 7
-	DISPID_IRInkSpaceToPixel = 8
-	DISPID_IRPixelToInkSpaceFromPoints = 9
-	DISPID_IRInkSpaceToPixelFromPoints = 10
-	DISPID_IRMeasure = 11
-	DISPID_IRMeasureStroke = 12
-	DISPID_IRMove = 13
-	DISPID_IRRotate = 14
-	DISPID_IRScale = 15
+	DISPID_IRGetViewTransform          DISPID_InkRenderer = 1
+	DISPID_IRSetViewTransform          DISPID_InkRenderer = 2
+	DISPID_IRGetObjectTransform        DISPID_InkRenderer = 3
+	DISPID_IRSetObjectTransform        DISPID_InkRenderer = 4
+	DISPID_IRDraw                      DISPID_InkRenderer = 5
+	DISPID_IRDrawStroke                DISPID_InkRenderer = 6
+	DISPID_IRPixelToInkSpace           DISPID_InkRenderer = 7
+	DISPID_IRInkSpaceToPixel           DISPID_InkRenderer = 8
+	DISPID_IRPixelToInkSpaceFromPoints DISPID_InkRenderer = 9
+	DISPID_IRInkSpaceToPixelFromPoints DISPID_InkRenderer = 10
+	DISPID_IRMeasure                   DISPID_InkRenderer = 11
+	DISPID_IRMeasureStroke             DISPID_InkRenderer = 12
+	DISPID_IRMove                      DISPID_InkRenderer = 13
+	DISPID_IRRotate                    DISPID_InkRenderer = 14
+	DISPID_IRScale                     DISPID_InkRenderer = 15
 )
 
 type InkCollectorEventInterest int32
 
 const (
-	ICEI_DefaultEvents = -1
-	ICEI_CursorDown = 0
-	ICEI_Stroke = 1
-	ICEI_NewPackets = 2
-	ICEI_NewInAirPackets = 3
-	ICEI_CursorButtonDown = 4
-	ICEI_CursorButtonUp = 5
-	ICEI_CursorInRange = 6
-	ICEI_CursorOutOfRange = 7
-	ICEI_SystemGesture = 8
-	ICEI_TabletAdded = 9
-	ICEI_TabletRemoved = 10
-	ICEI_MouseDown = 11
-	ICEI_MouseMove = 12
-	ICEI_MouseUp = 13
-	ICEI_MouseWheel = 14
-	ICEI_DblClick = 15
-	ICEI_AllEvents = 16
+	ICEI_DefaultEvents    InkCollectorEventInterest = -1
+	ICEI_CursorDown       InkCollectorEventInterest = 0
+	ICEI_Stroke           InkCollectorEventInterest = 1
+	ICEI_NewPackets       InkCollectorEventInterest = 2
+	ICEI_NewInAirPackets  InkCollectorEventInterest = 3
+	ICEI_CursorButtonDown InkCollectorEventInterest = 4
+	ICEI_CursorButtonUp   InkCollectorEventInterest = 5
+	ICEI_CursorInRange    InkCollectorEventInterest = 6
+	ICEI_CursorOutOfRange InkCollectorEventInterest = 7
+	ICEI_SystemGesture    InkCollectorEventInterest = 8
+	ICEI_TabletAdded      InkCollectorEventInterest = 9
+	ICEI_TabletRemoved    InkCollectorEventInterest = 10
+	ICEI_MouseDown        InkCollectorEventInterest = 11
+	ICEI_MouseMove        InkCollectorEventInterest = 12
+	ICEI_MouseUp          InkCollectorEventInterest = 13
+	ICEI_MouseWheel       InkCollectorEventInterest = 14
+	ICEI_DblClick         InkCollectorEventInterest = 15
+	ICEI_AllEvents        InkCollectorEventInterest = 16
 )
 
 type InkMouseButton int32
 
 const (
-	IMF_Left = 1
-	IMF_Right = 2
-	IMF_Middle = 4
+	IMF_Left   InkMouseButton = 1
+	IMF_Right  InkMouseButton = 2
+	IMF_Middle InkMouseButton = 4
 )
 
 type InkShiftKeyModifierFlags int32
 
 const (
-	IKM_Shift = 1
-	IKM_Control = 2
-	IKM_Alt = 4
+	IKM_Shift   InkShiftKeyModifierFlags = 1
+	IKM_Control InkShiftKeyModifierFlags = 2
+	IKM_Alt     InkShiftKeyModifierFlags = 4
 )
 
 type DISPID_InkCollectorEvent int32
 
 const (
-	DISPID_ICEStroke = 1
-	DISPID_ICECursorDown = 2
-	DISPID_ICENewPackets = 3
-	DISPID_ICENewInAirPackets = 4
-	DISPID_ICECursorButtonDown = 5
-	DISPID_ICECursorButtonUp = 6
-	DISPID_ICECursorInRange = 7
-	DISPID_ICECursorOutOfRange = 8
-	DISPID_ICESystemGesture = 9
-	DISPID_ICEGesture = 10
-	DISPID_ICETabletAdded = 11
-	DISPID_ICETabletRemoved = 12
-	DISPID_IOEPainting = 13
-	DISPID_IOEPainted = 14
-	DISPID_IOESelectionChanging = 15
-	DISPID_IOESelectionChanged = 16
-	DISPID_IOESelectionMoving = 17
-	DISPID_IOESelectionMoved = 18
-	DISPID_IOESelectionResizing = 19
-	DISPID_IOESelectionResized = 20
-	DISPID_IOEStrokesDeleting = 21
-	DISPID_IOEStrokesDeleted = 22
-	DISPID_IPEChangeUICues = 23
-	DISPID_IPEClick = 24
-	DISPID_IPEDblClick = 25
-	DISPID_IPEInvalidated = 26
-	DISPID_IPEMouseDown = 27
-	DISPID_IPEMouseEnter = 28
-	DISPID_IPEMouseHover = 29
-	DISPID_IPEMouseLeave = 30
-	DISPID_IPEMouseMove = 31
-	DISPID_IPEMouseUp = 32
-	DISPID_IPEMouseWheel = 33
-	DISPID_IPESizeModeChanged = 34
-	DISPID_IPEStyleChanged = 35
-	DISPID_IPESystemColorsChanged = 36
-	DISPID_IPEKeyDown = 37
-	DISPID_IPEKeyPress = 38
-	DISPID_IPEKeyUp = 39
-	DISPID_IPEResize = 40
-	DISPID_IPESizeChanged = 41
+	DISPID_ICEStroke              DISPID_InkCollectorEvent = 1
+	DISPID_ICECursorDown          DISPID_InkCollectorEvent = 2
+	DISPID_ICENewPackets          DISPID_InkCollectorEvent = 3
+	DISPID_ICENewInAirPackets     DISPID_InkCollectorEvent = 4
+	DISPID_ICECursorButtonDown    DISPID_InkCollectorEvent = 5
+	DISPID_ICECursorButtonUp      DISPID_InkCollectorEvent = 6
+	DISPID_ICECursorInRange       DISPID_InkCollectorEvent = 7
+	DISPID_ICECursorOutOfRange    DISPID_InkCollectorEvent = 8
+	DISPID_ICESystemGesture       DISPID_InkCollectorEvent = 9
+	DISPID_ICEGesture             DISPID_InkCollectorEvent = 10
+	DISPID_ICETabletAdded         DISPID_InkCollectorEvent = 11
+	DISPID_ICETabletRemoved       DISPID_InkCollectorEvent = 12
+	DISPID_IOEPainting            DISPID_InkCollectorEvent = 13
+	DISPID_IOEPainted             DISPID_InkCollectorEvent = 14
+	DISPID_IOESelectionChanging   DISPID_InkCollectorEvent = 15
+	DISPID_IOESelectionChanged    DISPID_InkCollectorEvent = 16
+	DISPID_IOESelectionMoving     DISPID_InkCollectorEvent = 17
+	DISPID_IOESelectionMoved      DISPID_InkCollectorEvent = 18
+	DISPID_IOESelectionResizing   DISPID_InkCollectorEvent = 19
+	DISPID_IOESelectionResized    DISPID_InkCollectorEvent = 20
+	DISPID_IOEStrokesDeleting     DISPID_InkCollectorEvent = 21
+	DISPID_IOEStrokesDeleted      DISPID_InkCollectorEvent = 22
+	DISPID_IPEChangeUICues        DISPID_InkCollectorEvent = 23
+	DISPID_IPEClick               DISPID_InkCollectorEvent = 24
+	DISPID_IPEDblClick            DISPID_InkCollectorEvent = 25
+	DISPID_IPEInvalidated         DISPID_InkCollectorEvent = 26
+	DISPID_IPEMouseDown           DISPID_InkCollectorEvent = 27
+	DISPID_IPEMouseEnter          DISPID_InkCollectorEvent = 28
+	DISPID_IPEMouseHover          DISPID_InkCollectorEvent = 29
+	DISPID_IPEMouseLeave          DISPID_InkCollectorEvent = 30
+	DISPID_IPEMouseMove           DISPID_InkCollectorEvent = 31
+	DISPID_IPEMouseUp             DISPID_InkCollectorEvent = 32
+	DISPID_IPEMouseWheel          DISPID_InkCollectorEvent = 33
+	DISPID_IPESizeModeChanged     DISPID_InkCollectorEvent = 34
+	DISPID_IPEStyleChanged        DISPID_InkCollectorEvent = 35
+	DISPID_IPESystemColorsChanged DISPID_InkCollectorEvent = 36
+	DISPID_IPEKeyDown             DISPID_InkCollectorEvent = 37
+	DISPID_IPEKeyPress            DISPID_InkCollectorEvent = 38
+	DISPID_IPEKeyUp               DISPID_InkCollectorEvent = 39
+	DISPID_IPEResize              DISPID_InkCollectorEvent = 40
+	DISPID_IPESizeChanged         DISPID_InkCollectorEvent = 41
 )
 
 type InkOverlayEditingMode int32
 
 const (
-	IOEM_Ink = 0
-	IOEM_Delete = 1
-	IOEM_Select = 2
+	IOEM_Ink    InkOverlayEditingMode = 0
+	IOEM_Delete InkOverlayEditingMode = 1
+	IOEM_Select InkOverlayEditingMode = 2
 )
 
 type InkOverlayAttachMode int32
 
 const (
-	IOAM_Behind = 0
-	IOAM_InFront = 1
+	IOAM_Behind  InkOverlayAttachMode = 0
+	IOAM_InFront InkOverlayAttachMode = 1
 )
 
 type InkPictureSizeMode int32
 
 const (
-	IPSM_AutoSize = 0
-	IPSM_CenterImage = 1
-	IPSM_Normal = 2
-	IPSM_StretchImage = 3
+	IPSM_AutoSize     InkPictureSizeMode = 0
+	IPSM_CenterImage  InkPictureSizeMode = 1
+	IPSM_Normal       InkPictureSizeMode = 2
+	IPSM_StretchImage InkPictureSizeMode = 3
 )
 
 type InkOverlayEraserMode int32
 
 const (
-	IOERM_StrokeErase = 0
-	IOERM_PointErase = 1
+	IOERM_StrokeErase InkOverlayEraserMode = 0
+	IOERM_PointErase  InkOverlayEraserMode = 1
 )
 
 type InkCollectionMode int32
 
 const (
-	ICM_InkOnly = 0
-	ICM_GestureOnly = 1
-	ICM_InkAndGesture = 2
+	ICM_InkOnly       InkCollectionMode = 0
+	ICM_GestureOnly   InkCollectionMode = 1
+	ICM_InkAndGesture InkCollectionMode = 2
 )
 
 type DISPID_InkCollector int32
 
 const (
-	DISPID_ICEnabled = 1
-	DISPID_ICHwnd = 2
-	DISPID_ICPaint = 3
-	DISPID_ICText = 4
-	DISPID_ICDefaultDrawingAttributes = 5
-	DISPID_ICRenderer = 6
-	DISPID_ICInk = 7
-	DISPID_ICAutoRedraw = 8
-	DISPID_ICCollectingInk = 9
-	DISPID_ICSetEventInterest = 10
-	DISPID_ICGetEventInterest = 11
-	DISPID_IOEditingMode = 12
-	DISPID_IOSelection = 13
-	DISPID_IOAttachMode = 14
-	DISPID_IOHitTestSelection = 15
-	DISPID_IODraw = 16
-	DISPID_IPPicture = 17
-	DISPID_IPSizeMode = 18
-	DISPID_IPBackColor = 19
-	DISPID_ICCursors = 20
-	DISPID_ICMarginX = 21
-	DISPID_ICMarginY = 22
-	DISPID_ICSetWindowInputRectangle = 23
-	DISPID_ICGetWindowInputRectangle = 24
-	DISPID_ICTablet = 25
-	DISPID_ICSetAllTabletsMode = 26
-	DISPID_ICSetSingleTabletIntegratedMode = 27
-	DISPID_ICCollectionMode = 28
-	DISPID_ICSetGestureStatus = 29
-	DISPID_ICGetGestureStatus = 30
-	DISPID_ICDynamicRendering = 31
-	DISPID_ICDesiredPacketDescription = 32
-	DISPID_IOEraserMode = 33
-	DISPID_IOEraserWidth = 34
-	DISPID_ICMouseIcon = 35
-	DISPID_ICMousePointer = 36
-	DISPID_IPInkEnabled = 37
-	DISPID_ICSupportHighContrastInk = 38
-	DISPID_IOSupportHighContrastSelectionUI = 39
+	DISPID_ICEnabled                        DISPID_InkCollector = 1
+	DISPID_ICHwnd                           DISPID_InkCollector = 2
+	DISPID_ICPaint                          DISPID_InkCollector = 3
+	DISPID_ICText                           DISPID_InkCollector = 4
+	DISPID_ICDefaultDrawingAttributes       DISPID_InkCollector = 5
+	DISPID_ICRenderer                       DISPID_InkCollector = 6
+	DISPID_ICInk                            DISPID_InkCollector = 7
+	DISPID_ICAutoRedraw                     DISPID_InkCollector = 8
+	DISPID_ICCollectingInk                  DISPID_InkCollector = 9
+	DISPID_ICSetEventInterest               DISPID_InkCollector = 10
+	DISPID_ICGetEventInterest               DISPID_InkCollector = 11
+	DISPID_IOEditingMode                    DISPID_InkCollector = 12
+	DISPID_IOSelection                      DISPID_InkCollector = 13
+	DISPID_IOAttachMode                     DISPID_InkCollector = 14
+	DISPID_IOHitTestSelection               DISPID_InkCollector = 15
+	DISPID_IODraw                           DISPID_InkCollector = 16
+	DISPID_IPPicture                        DISPID_InkCollector = 17
+	DISPID_IPSizeMode                       DISPID_InkCollector = 18
+	DISPID_IPBackColor                      DISPID_InkCollector = 19
+	DISPID_ICCursors                        DISPID_InkCollector = 20
+	DISPID_ICMarginX                        DISPID_InkCollector = 21
+	DISPID_ICMarginY                        DISPID_InkCollector = 22
+	DISPID_ICSetWindowInputRectangle        DISPID_InkCollector = 23
+	DISPID_ICGetWindowInputRectangle        DISPID_InkCollector = 24
+	DISPID_ICTablet                         DISPID_InkCollector = 25
+	DISPID_ICSetAllTabletsMode              DISPID_InkCollector = 26
+	DISPID_ICSetSingleTabletIntegratedMode  DISPID_InkCollector = 27
+	DISPID_ICCollectionMode                 DISPID_InkCollector = 28
+	DISPID_ICSetGestureStatus               DISPID_InkCollector = 29
+	DISPID_ICGetGestureStatus               DISPID_InkCollector = 30
+	DISPID_ICDynamicRendering               DISPID_InkCollector = 31
+	DISPID_ICDesiredPacketDescription       DISPID_InkCollector = 32
+	DISPID_IOEraserMode                     DISPID_InkCollector = 33
+	DISPID_IOEraserWidth                    DISPID_InkCollector = 34
+	DISPID_ICMouseIcon                      DISPID_InkCollector = 35
+	DISPID_ICMousePointer                   DISPID_InkCollector = 36
+	DISPID_IPInkEnabled                     DISPID_InkCollector = 37
+	DISPID_ICSupportHighContrastInk         DISPID_InkCollector = 38
+	DISPID_IOSupportHighContrastSelectionUI DISPID_InkCollector = 39
 )
 
 type DISPID_InkRecognizer int32
 
 const (
-	DISPID_RecoClsid = 1
-	DISPID_RecoName = 2
-	DISPID_RecoVendor = 3
-	DISPID_RecoCapabilities = 4
-	DISPID_RecoLanguageID = 5
-	DISPID_RecoPreferredPacketDescription = 6
-	DISPID_RecoCreateRecognizerContext = 7
-	DISPID_RecoSupportedProperties = 8
+	DISPID_RecoClsid                      DISPID_InkRecognizer = 1
+	DISPID_RecoName                       DISPID_InkRecognizer = 2
+	DISPID_RecoVendor                     DISPID_InkRecognizer = 3
+	DISPID_RecoCapabilities               DISPID_InkRecognizer = 4
+	DISPID_RecoLanguageID                 DISPID_InkRecognizer = 5
+	DISPID_RecoPreferredPacketDescription DISPID_InkRecognizer = 6
+	DISPID_RecoCreateRecognizerContext    DISPID_InkRecognizer = 7
+	DISPID_RecoSupportedProperties        DISPID_InkRecognizer = 8
 )
 
 type InkRecognizerCapabilities int32
 
 const (
-	IRC_DontCare = 1
-	IRC_Object = 2
-	IRC_FreeInput = 4
-	IRC_LinedInput = 8
-	IRC_BoxedInput = 16
-	IRC_CharacterAutoCompletionInput = 32
-	IRC_RightAndDown = 64
-	IRC_LeftAndDown = 128
-	IRC_DownAndLeft = 256
-	IRC_DownAndRight = 512
-	IRC_ArbitraryAngle = 1024
-	IRC_Lattice = 2048
-	IRC_AdviseInkChange = 4096
-	IRC_StrokeReorder = 8192
-	IRC_Personalizable = 16384
-	IRC_PrefersArbitraryAngle = 32768
-	IRC_PrefersParagraphBreaking = 65536
-	IRC_PrefersSegmentation = 131072
-	IRC_Cursive = 262144
-	IRC_TextPrediction = 524288
-	IRC_Alpha = 1048576
-	IRC_Beta = 2097152
+	IRC_DontCare                     InkRecognizerCapabilities = 1
+	IRC_Object                       InkRecognizerCapabilities = 2
+	IRC_FreeInput                    InkRecognizerCapabilities = 4
+	IRC_LinedInput                   InkRecognizerCapabilities = 8
+	IRC_BoxedInput                   InkRecognizerCapabilities = 16
+	IRC_CharacterAutoCompletionInput InkRecognizerCapabilities = 32
+	IRC_RightAndDown                 InkRecognizerCapabilities = 64
+	IRC_LeftAndDown                  InkRecognizerCapabilities = 128
+	IRC_DownAndLeft                  InkRecognizerCapabilities = 256
+	IRC_DownAndRight                 InkRecognizerCapabilities = 512
+	IRC_ArbitraryAngle               InkRecognizerCapabilities = 1024
+	IRC_Lattice                      InkRecognizerCapabilities = 2048
+	IRC_AdviseInkChange              InkRecognizerCapabilities = 4096
+	IRC_StrokeReorder                InkRecognizerCapabilities = 8192
+	IRC_Personalizable               InkRecognizerCapabilities = 16384
+	IRC_PrefersArbitraryAngle        InkRecognizerCapabilities = 32768
+	IRC_PrefersParagraphBreaking     InkRecognizerCapabilities = 65536
+	IRC_PrefersSegmentation          InkRecognizerCapabilities = 131072
+	IRC_Cursive                      InkRecognizerCapabilities = 262144
+	IRC_TextPrediction               InkRecognizerCapabilities = 524288
+	IRC_Alpha                        InkRecognizerCapabilities = 1048576
+	IRC_Beta                         InkRecognizerCapabilities = 2097152
 )
 
 type DISPID_InkRecognizer2 int32
 
 const (
-	DISPID_RecoId = 0
-	DISPID_RecoUnicodeRanges = 1
+	DISPID_RecoId            DISPID_InkRecognizer2 = 0
+	DISPID_RecoUnicodeRanges DISPID_InkRecognizer2 = 1
 )
 
 type DISPID_InkRecognizers int32
 
 const (
-	DISPID_IRecos_NewEnum = -4
-	DISPID_IRecosItem = 0
-	DISPID_IRecosCount = 1
-	DISPID_IRecosGetDefaultRecognizer = 2
+	DISPID_IRecos_NewEnum             DISPID_InkRecognizers = -4
+	DISPID_IRecosItem                 DISPID_InkRecognizers = 0
+	DISPID_IRecosCount                DISPID_InkRecognizers = 1
+	DISPID_IRecosGetDefaultRecognizer DISPID_InkRecognizers = 2
 )
 
 type InkRecognizerCharacterAutoCompletionMode int32
 
 const (
-	IRCACM_Full = 0
-	IRCACM_Prefix = 1
-	IRCACM_Random = 2
+	IRCACM_Full   InkRecognizerCharacterAutoCompletionMode = 0
+	IRCACM_Prefix InkRecognizerCharacterAutoCompletionMode = 1
+	IRCACM_Random InkRecognizerCharacterAutoCompletionMode = 2
 )
 
 type InkRecognitionModes int32
 
 const (
-	IRM_None = 0
-	IRM_WordModeOnly = 1
-	IRM_Coerce = 2
-	IRM_TopInkBreaksOnly = 4
-	IRM_PrefixOk = 8
-	IRM_LineMode = 16
-	IRM_DisablePersonalization = 32
-	IRM_AutoSpace = 64
-	IRM_Max = 128
+	IRM_None                   InkRecognitionModes = 0
+	IRM_WordModeOnly           InkRecognitionModes = 1
+	IRM_Coerce                 InkRecognitionModes = 2
+	IRM_TopInkBreaksOnly       InkRecognitionModes = 4
+	IRM_PrefixOk               InkRecognitionModes = 8
+	IRM_LineMode               InkRecognitionModes = 16
+	IRM_DisablePersonalization InkRecognitionModes = 32
+	IRM_AutoSpace              InkRecognitionModes = 64
+	IRM_Max                    InkRecognitionModes = 128
 )
 
 type DISPID_InkRecognitionEvent int32
 
 const (
-	DISPID_IRERecognitionWithAlternates = 1
-	DISPID_IRERecognition = 2
+	DISPID_IRERecognitionWithAlternates DISPID_InkRecognitionEvent = 1
+	DISPID_IRERecognition               DISPID_InkRecognitionEvent = 2
 )
 
 type DISPID_InkRecoContext int32
 
 const (
-	DISPID_IRecoCtx_Strokes = 1
-	DISPID_IRecoCtx_CharacterAutoCompletionMode = 2
-	DISPID_IRecoCtx_Factoid = 3
-	DISPID_IRecoCtx_WordList = 4
-	DISPID_IRecoCtx_Recognizer = 5
-	DISPID_IRecoCtx_Guide = 6
-	DISPID_IRecoCtx_Flags = 7
-	DISPID_IRecoCtx_PrefixText = 8
-	DISPID_IRecoCtx_SuffixText = 9
-	DISPID_IRecoCtx_StopRecognition = 10
-	DISPID_IRecoCtx_Clone = 11
-	DISPID_IRecoCtx_Recognize = 12
-	DISPID_IRecoCtx_StopBackgroundRecognition = 13
-	DISPID_IRecoCtx_EndInkInput = 14
-	DISPID_IRecoCtx_BackgroundRecognize = 15
-	DISPID_IRecoCtx_BackgroundRecognizeWithAlternates = 16
-	DISPID_IRecoCtx_IsStringSupported = 17
+	DISPID_IRecoCtx_Strokes                           DISPID_InkRecoContext = 1
+	DISPID_IRecoCtx_CharacterAutoCompletionMode       DISPID_InkRecoContext = 2
+	DISPID_IRecoCtx_Factoid                           DISPID_InkRecoContext = 3
+	DISPID_IRecoCtx_WordList                          DISPID_InkRecoContext = 4
+	DISPID_IRecoCtx_Recognizer                        DISPID_InkRecoContext = 5
+	DISPID_IRecoCtx_Guide                             DISPID_InkRecoContext = 6
+	DISPID_IRecoCtx_Flags                             DISPID_InkRecoContext = 7
+	DISPID_IRecoCtx_PrefixText                        DISPID_InkRecoContext = 8
+	DISPID_IRecoCtx_SuffixText                        DISPID_InkRecoContext = 9
+	DISPID_IRecoCtx_StopRecognition                   DISPID_InkRecoContext = 10
+	DISPID_IRecoCtx_Clone                             DISPID_InkRecoContext = 11
+	DISPID_IRecoCtx_Recognize                         DISPID_InkRecoContext = 12
+	DISPID_IRecoCtx_StopBackgroundRecognition         DISPID_InkRecoContext = 13
+	DISPID_IRecoCtx_EndInkInput                       DISPID_InkRecoContext = 14
+	DISPID_IRecoCtx_BackgroundRecognize               DISPID_InkRecoContext = 15
+	DISPID_IRecoCtx_BackgroundRecognizeWithAlternates DISPID_InkRecoContext = 16
+	DISPID_IRecoCtx_IsStringSupported                 DISPID_InkRecoContext = 17
 )
 
 type DISPID_InkRecoContext2 int32
 
 const (
-	DISPID_IRecoCtx2_EnabledUnicodeRanges = 0
+	DISPID_IRecoCtx2_EnabledUnicodeRanges DISPID_InkRecoContext2 = 0
 )
 
 type InkRecognitionAlternatesSelection int32
 
 const (
-	IRAS_Start = 0
-	IRAS_DefaultCount = 10
-	IRAS_All = -1
+	IRAS_Start        InkRecognitionAlternatesSelection = 0
+	IRAS_DefaultCount InkRecognitionAlternatesSelection = 10
+	IRAS_All          InkRecognitionAlternatesSelection = -1
 )
 
 type DISPID_InkRecognitionResult int32
 
 const (
-	DISPID_InkRecognitionResult_TopString = 1
-	DISPID_InkRecognitionResult_TopAlternate = 2
-	DISPID_InkRecognitionResult_Strokes = 3
-	DISPID_InkRecognitionResult_TopConfidence = 4
-	DISPID_InkRecognitionResult_AlternatesFromSelection = 5
-	DISPID_InkRecognitionResult_ModifyTopAlternate = 6
-	DISPID_InkRecognitionResult_SetResultOnStrokes = 7
+	DISPID_InkRecognitionResult_TopString               DISPID_InkRecognitionResult = 1
+	DISPID_InkRecognitionResult_TopAlternate            DISPID_InkRecognitionResult = 2
+	DISPID_InkRecognitionResult_Strokes                 DISPID_InkRecognitionResult = 3
+	DISPID_InkRecognitionResult_TopConfidence           DISPID_InkRecognitionResult = 4
+	DISPID_InkRecognitionResult_AlternatesFromSelection DISPID_InkRecognitionResult = 5
+	DISPID_InkRecognitionResult_ModifyTopAlternate      DISPID_InkRecognitionResult = 6
+	DISPID_InkRecognitionResult_SetResultOnStrokes      DISPID_InkRecognitionResult = 7
 )
 
 type DISPID_InkRecoAlternate int32
 
 const (
-	DISPID_InkRecoAlternate_String = 1
-	DISPID_InkRecoAlternate_LineNumber = 2
-	DISPID_InkRecoAlternate_Baseline = 3
-	DISPID_InkRecoAlternate_Midline = 4
-	DISPID_InkRecoAlternate_Ascender = 5
-	DISPID_InkRecoAlternate_Descender = 6
-	DISPID_InkRecoAlternate_Confidence = 7
-	DISPID_InkRecoAlternate_Strokes = 8
-	DISPID_InkRecoAlternate_GetStrokesFromStrokeRanges = 9
-	DISPID_InkRecoAlternate_GetStrokesFromTextRange = 10
-	DISPID_InkRecoAlternate_GetTextRangeFromStrokes = 11
-	DISPID_InkRecoAlternate_GetPropertyValue = 12
-	DISPID_InkRecoAlternate_LineAlternates = 13
-	DISPID_InkRecoAlternate_ConfidenceAlternates = 14
-	DISPID_InkRecoAlternate_AlternatesWithConstantPropertyValues = 15
+	DISPID_InkRecoAlternate_String                               DISPID_InkRecoAlternate = 1
+	DISPID_InkRecoAlternate_LineNumber                           DISPID_InkRecoAlternate = 2
+	DISPID_InkRecoAlternate_Baseline                             DISPID_InkRecoAlternate = 3
+	DISPID_InkRecoAlternate_Midline                              DISPID_InkRecoAlternate = 4
+	DISPID_InkRecoAlternate_Ascender                             DISPID_InkRecoAlternate = 5
+	DISPID_InkRecoAlternate_Descender                            DISPID_InkRecoAlternate = 6
+	DISPID_InkRecoAlternate_Confidence                           DISPID_InkRecoAlternate = 7
+	DISPID_InkRecoAlternate_Strokes                              DISPID_InkRecoAlternate = 8
+	DISPID_InkRecoAlternate_GetStrokesFromStrokeRanges           DISPID_InkRecoAlternate = 9
+	DISPID_InkRecoAlternate_GetStrokesFromTextRange              DISPID_InkRecoAlternate = 10
+	DISPID_InkRecoAlternate_GetTextRangeFromStrokes              DISPID_InkRecoAlternate = 11
+	DISPID_InkRecoAlternate_GetPropertyValue                     DISPID_InkRecoAlternate = 12
+	DISPID_InkRecoAlternate_LineAlternates                       DISPID_InkRecoAlternate = 13
+	DISPID_InkRecoAlternate_ConfidenceAlternates                 DISPID_InkRecoAlternate = 14
+	DISPID_InkRecoAlternate_AlternatesWithConstantPropertyValues DISPID_InkRecoAlternate = 15
 )
 
 type DISPID_InkRecognitionAlternates int32
 
 const (
-	DISPID_InkRecognitionAlternates_NewEnum = -4
-	DISPID_InkRecognitionAlternates_Item = 0
-	DISPID_InkRecognitionAlternates_Count = 1
-	DISPID_InkRecognitionAlternates_Strokes = 2
+	DISPID_InkRecognitionAlternates_NewEnum DISPID_InkRecognitionAlternates = -4
+	DISPID_InkRecognitionAlternates_Item    DISPID_InkRecognitionAlternates = 0
+	DISPID_InkRecognitionAlternates_Count   DISPID_InkRecognitionAlternates = 1
+	DISPID_InkRecognitionAlternates_Strokes DISPID_InkRecognitionAlternates = 2
 )
 
 type DISPID_InkRecognizerGuide int32
 
 const (
-	DISPID_IRGWritingBox = 1
-	DISPID_IRGDrawnBox = 2
-	DISPID_IRGRows = 3
-	DISPID_IRGColumns = 4
-	DISPID_IRGMidline = 5
-	DISPID_IRGGuideData = 6
+	DISPID_IRGWritingBox DISPID_InkRecognizerGuide = 1
+	DISPID_IRGDrawnBox   DISPID_InkRecognizerGuide = 2
+	DISPID_IRGRows       DISPID_InkRecognizerGuide = 3
+	DISPID_IRGColumns    DISPID_InkRecognizerGuide = 4
+	DISPID_IRGMidline    DISPID_InkRecognizerGuide = 5
+	DISPID_IRGGuideData  DISPID_InkRecognizerGuide = 6
 )
 
 type DISPID_InkWordList int32
 
 const (
-	DISPID_InkWordList_AddWord = 0
-	DISPID_InkWordList_RemoveWord = 1
-	DISPID_InkWordList_Merge = 2
+	DISPID_InkWordList_AddWord    DISPID_InkWordList = 0
+	DISPID_InkWordList_RemoveWord DISPID_InkWordList = 1
+	DISPID_InkWordList_Merge      DISPID_InkWordList = 2
 )
 
 type DISPID_InkWordList2 int32
 
 const (
-	DISPID_InkWordList2_AddWords = 3
+	DISPID_InkWordList2_AddWords DISPID_InkWordList2 = 3
 )
 
 type InkDivisionType int32
 
 const (
-	IDT_Segment = 0
-	IDT_Line = 1
-	IDT_Paragraph = 2
-	IDT_Drawing = 3
+	IDT_Segment   InkDivisionType = 0
+	IDT_Line      InkDivisionType = 1
+	IDT_Paragraph InkDivisionType = 2
+	IDT_Drawing   InkDivisionType = 3
 )
 
 type DISPID_InkDivider int32
 
 const (
-	DISPID_IInkDivider_Strokes = 1
-	DISPID_IInkDivider_RecognizerContext = 2
-	DISPID_IInkDivider_LineHeight = 3
-	DISPID_IInkDivider_Divide = 4
+	DISPID_IInkDivider_Strokes           DISPID_InkDivider = 1
+	DISPID_IInkDivider_RecognizerContext DISPID_InkDivider = 2
+	DISPID_IInkDivider_LineHeight        DISPID_InkDivider = 3
+	DISPID_IInkDivider_Divide            DISPID_InkDivider = 4
 )
 
 type DISPID_InkDivisionResult int32
 
 const (
-	DISPID_IInkDivisionResult_Strokes = 1
-	DISPID_IInkDivisionResult_ResultByType = 2
+	DISPID_IInkDivisionResult_Strokes      DISPID_InkDivisionResult = 1
+	DISPID_IInkDivisionResult_ResultByType DISPID_InkDivisionResult = 2
 )
 
 type DISPID_InkDivisionUnit int32
 
 const (
-	DISPID_IInkDivisionUnit_Strokes = 1
-	DISPID_IInkDivisionUnit_DivisionType = 2
-	DISPID_IInkDivisionUnit_RecognizedString = 3
-	DISPID_IInkDivisionUnit_RotationTransform = 4
+	DISPID_IInkDivisionUnit_Strokes           DISPID_InkDivisionUnit = 1
+	DISPID_IInkDivisionUnit_DivisionType      DISPID_InkDivisionUnit = 2
+	DISPID_IInkDivisionUnit_RecognizedString  DISPID_InkDivisionUnit = 3
+	DISPID_IInkDivisionUnit_RotationTransform DISPID_InkDivisionUnit = 4
 )
 
 type DISPID_InkDivisionUnits int32
 
 const (
-	DISPID_IInkDivisionUnits_NewEnum = -4
-	DISPID_IInkDivisionUnits_Item = 0
-	DISPID_IInkDivisionUnits_Count = 1
+	DISPID_IInkDivisionUnits_NewEnum DISPID_InkDivisionUnits = -4
+	DISPID_IInkDivisionUnits_Item    DISPID_InkDivisionUnits = 0
+	DISPID_IInkDivisionUnits_Count   DISPID_InkDivisionUnits = 1
 )
 
 type DISPID_PenInputPanel int32
 
 const (
-	DISPID_PIPAttachedEditWindow = 0
-	DISPID_PIPFactoid = 1
-	DISPID_PIPCurrentPanel = 2
-	DISPID_PIPDefaultPanel = 3
-	DISPID_PIPVisible = 4
-	DISPID_PIPTop = 5
-	DISPID_PIPLeft = 6
-	DISPID_PIPWidth = 7
-	DISPID_PIPHeight = 8
-	DISPID_PIPMoveTo = 9
-	DISPID_PIPCommitPendingInput = 10
-	DISPID_PIPRefresh = 11
-	DISPID_PIPBusy = 12
-	DISPID_PIPVerticalOffset = 13
-	DISPID_PIPHorizontalOffset = 14
-	DISPID_PIPEnableTsf = 15
-	DISPID_PIPAutoShow = 16
+	DISPID_PIPAttachedEditWindow DISPID_PenInputPanel = 0
+	DISPID_PIPFactoid            DISPID_PenInputPanel = 1
+	DISPID_PIPCurrentPanel       DISPID_PenInputPanel = 2
+	DISPID_PIPDefaultPanel       DISPID_PenInputPanel = 3
+	DISPID_PIPVisible            DISPID_PenInputPanel = 4
+	DISPID_PIPTop                DISPID_PenInputPanel = 5
+	DISPID_PIPLeft               DISPID_PenInputPanel = 6
+	DISPID_PIPWidth              DISPID_PenInputPanel = 7
+	DISPID_PIPHeight             DISPID_PenInputPanel = 8
+	DISPID_PIPMoveTo             DISPID_PenInputPanel = 9
+	DISPID_PIPCommitPendingInput DISPID_PenInputPanel = 10
+	DISPID_PIPRefresh            DISPID_PenInputPanel = 11
+	DISPID_PIPBusy               DISPID_PenInputPanel = 12
+	DISPID_PIPVerticalOffset     DISPID_PenInputPanel = 13
+	DISPID_PIPHorizontalOffset   DISPID_PenInputPanel = 14
+	DISPID_PIPEnableTsf          DISPID_PenInputPanel = 15
+	DISPID_PIPAutoShow           DISPID_PenInputPanel = 16
 )
 
 type DISPID_PenInputPanelEvents int32
 
 const (
-	DISPID_PIPEVisibleChanged = 0
-	DISPID_PIPEPanelChanged = 1
-	DISPID_PIPEInputFailed = 2
-	DISPID_PIPEPanelMoving = 3
+	DISPID_PIPEVisibleChanged DISPID_PenInputPanelEvents = 0
+	DISPID_PIPEPanelChanged   DISPID_PenInputPanelEvents = 1
+	DISPID_PIPEInputFailed    DISPID_PenInputPanelEvents = 2
+	DISPID_PIPEPanelMoving    DISPID_PenInputPanelEvents = 3
 )
 
 type VisualState int32
 
 const (
-	InPlace = 0
-	Floating = 1
-	DockedTop = 2
-	DockedBottom = 3
-	Closed = 4
+	InPlace      VisualState = 0
+	Floating     VisualState = 1
+	DockedTop    VisualState = 2
+	DockedBottom VisualState = 3
+	Closed       VisualState = 4
 )
 
 type InteractionMode int32
 
 const (
-	InteractionMode_InPlace = 0
-	InteractionMode_Floating = 1
-	InteractionMode_DockedTop = 2
-	InteractionMode_DockedBottom = 3
+	InteractionMode_InPlace      InteractionMode = 0
+	InteractionMode_Floating     InteractionMode = 1
+	InteractionMode_DockedTop    InteractionMode = 2
+	InteractionMode_DockedBottom InteractionMode = 3
 )
 
 type InPlaceState int32
 
 const (
-	InPlaceState_Auto = 0
-	InPlaceState_HoverTarget = 1
-	InPlaceState_Expanded = 2
+	InPlaceState_Auto        InPlaceState = 0
+	InPlaceState_HoverTarget InPlaceState = 1
+	InPlaceState_Expanded    InPlaceState = 2
 )
 
 type PanelInputArea int32
 
 const (
-	PanelInputArea_Auto = 0
-	PanelInputArea_Keyboard = 1
-	PanelInputArea_WritingPad = 2
-	PanelInputArea_CharacterPad = 3
+	PanelInputArea_Auto         PanelInputArea = 0
+	PanelInputArea_Keyboard     PanelInputArea = 1
+	PanelInputArea_WritingPad   PanelInputArea = 2
+	PanelInputArea_CharacterPad PanelInputArea = 3
 )
 
 type CorrectionMode int32
 
 const (
-	CorrectionMode_NotVisible = 0
-	CorrectionMode_PreInsertion = 1
-	CorrectionMode_PostInsertionCollapsed = 2
-	CorrectionMode_PostInsertionExpanded = 3
+	CorrectionMode_NotVisible             CorrectionMode = 0
+	CorrectionMode_PreInsertion           CorrectionMode = 1
+	CorrectionMode_PostInsertionCollapsed CorrectionMode = 2
+	CorrectionMode_PostInsertionExpanded  CorrectionMode = 3
 )
 
 type CorrectionPosition int32
 
 const (
-	CorrectionPosition_Auto = 0
-	CorrectionPosition_Bottom = 1
-	CorrectionPosition_Top = 2
+	CorrectionPosition_Auto   CorrectionPosition = 0
+	CorrectionPosition_Bottom CorrectionPosition = 1
+	CorrectionPosition_Top    CorrectionPosition = 2
 )
 
 type InPlaceDirection int32
 
 const (
-	InPlaceDirection_Auto = 0
-	InPlaceDirection_Bottom = 1
-	InPlaceDirection_Top = 2
+	InPlaceDirection_Auto   InPlaceDirection = 0
+	InPlaceDirection_Bottom InPlaceDirection = 1
+	InPlaceDirection_Top    InPlaceDirection = 2
 )
 
 type EventMask int32
 
 const (
-	EventMask_InPlaceStateChanging = 1
-	EventMask_InPlaceStateChanged = 2
-	EventMask_InPlaceSizeChanging = 4
-	EventMask_InPlaceSizeChanged = 8
-	EventMask_InputAreaChanging = 16
-	EventMask_InputAreaChanged = 32
-	EventMask_CorrectionModeChanging = 64
-	EventMask_CorrectionModeChanged = 128
-	EventMask_InPlaceVisibilityChanging = 256
-	EventMask_InPlaceVisibilityChanged = 512
-	EventMask_TextInserting = 1024
-	EventMask_TextInserted = 2048
-	EventMask_All = 4095
+	EventMask_InPlaceStateChanging      EventMask = 1
+	EventMask_InPlaceStateChanged       EventMask = 2
+	EventMask_InPlaceSizeChanging       EventMask = 4
+	EventMask_InPlaceSizeChanged        EventMask = 8
+	EventMask_InputAreaChanging         EventMask = 16
+	EventMask_InputAreaChanged          EventMask = 32
+	EventMask_CorrectionModeChanging    EventMask = 64
+	EventMask_CorrectionModeChanged     EventMask = 128
+	EventMask_InPlaceVisibilityChanging EventMask = 256
+	EventMask_InPlaceVisibilityChanged  EventMask = 512
+	EventMask_TextInserting             EventMask = 1024
+	EventMask_TextInserted              EventMask = 2048
+	EventMask_All                       EventMask = 4095
 )
 
 type PanelType int32
 
 const (
-	PT_Default = 0
-	PT_Inactive = 1
-	PT_Handwriting = 2
-	PT_Keyboard = 3
+	PT_Default     PanelType = 0
+	PT_Inactive    PanelType = 1
+	PT_Handwriting PanelType = 2
+	PT_Keyboard    PanelType = 3
 )
 
 type FLICKDIRECTION int32
 
 const (
-	FLICKDIRECTION_MIN = 0
-	FLICKDIRECTION_RIGHT = 0
-	FLICKDIRECTION_UPRIGHT = 1
-	FLICKDIRECTION_UP = 2
-	FLICKDIRECTION_UPLEFT = 3
-	FLICKDIRECTION_LEFT = 4
-	FLICKDIRECTION_DOWNLEFT = 5
-	FLICKDIRECTION_DOWN = 6
-	FLICKDIRECTION_DOWNRIGHT = 7
-	FLICKDIRECTION_INVALID = 8
+	FLICKDIRECTION_MIN       FLICKDIRECTION = 0
+	FLICKDIRECTION_RIGHT     FLICKDIRECTION = 0
+	FLICKDIRECTION_UPRIGHT   FLICKDIRECTION = 1
+	FLICKDIRECTION_UP        FLICKDIRECTION = 2
+	FLICKDIRECTION_UPLEFT    FLICKDIRECTION = 3
+	FLICKDIRECTION_LEFT      FLICKDIRECTION = 4
+	FLICKDIRECTION_DOWNLEFT  FLICKDIRECTION = 5
+	FLICKDIRECTION_DOWN      FLICKDIRECTION = 6
+	FLICKDIRECTION_DOWNRIGHT FLICKDIRECTION = 7
+	FLICKDIRECTION_INVALID   FLICKDIRECTION = 8
 )
 
 type FLICKMODE int32
 
 const (
-	FLICKMODE_MIN = 0
-	FLICKMODE_OFF = 0
-	FLICKMODE_ON = 1
-	FLICKMODE_LEARNING = 2
-	FLICKMODE_MAX = 2
-	FLICKMODE_DEFAULT = 1
+	FLICKMODE_MIN      FLICKMODE = 0
+	FLICKMODE_OFF      FLICKMODE = 0
+	FLICKMODE_ON       FLICKMODE = 1
+	FLICKMODE_LEARNING FLICKMODE = 2
+	FLICKMODE_MAX      FLICKMODE = 2
+	FLICKMODE_DEFAULT  FLICKMODE = 1
 )
 
 type FLICKACTION_COMMANDCODE int32
 
 const (
-	FLICKACTION_COMMANDCODE_NULL = 0
-	FLICKACTION_COMMANDCODE_SCROLL = 1
-	FLICKACTION_COMMANDCODE_APPCOMMAND = 2
-	FLICKACTION_COMMANDCODE_CUSTOMKEY = 3
-	FLICKACTION_COMMANDCODE_KEYMODIFIER = 4
+	FLICKACTION_COMMANDCODE_NULL        FLICKACTION_COMMANDCODE = 0
+	FLICKACTION_COMMANDCODE_SCROLL      FLICKACTION_COMMANDCODE = 1
+	FLICKACTION_COMMANDCODE_APPCOMMAND  FLICKACTION_COMMANDCODE = 2
+	FLICKACTION_COMMANDCODE_CUSTOMKEY   FLICKACTION_COMMANDCODE = 3
+	FLICKACTION_COMMANDCODE_KEYMODIFIER FLICKACTION_COMMANDCODE = 4
 )
 
 type SCROLLDIRECTION int32
 
 const (
-	SCROLLDIRECTION_UP = 0
-	SCROLLDIRECTION_DOWN = 1
+	SCROLLDIRECTION_UP   SCROLLDIRECTION = 0
+	SCROLLDIRECTION_DOWN SCROLLDIRECTION = 1
 )
 
 type KEYMODIFIER int32
 
 const (
-	KEYMODIFIER_CONTROL = 1
-	KEYMODIFIER_MENU = 2
-	KEYMODIFIER_SHIFT = 4
-	KEYMODIFIER_WIN = 8
-	KEYMODIFIER_ALTGR = 16
-	KEYMODIFIER_EXT = 32
+	KEYMODIFIER_CONTROL KEYMODIFIER = 1
+	KEYMODIFIER_MENU    KEYMODIFIER = 2
+	KEYMODIFIER_SHIFT   KEYMODIFIER = 4
+	KEYMODIFIER_WIN     KEYMODIFIER = 8
+	KEYMODIFIER_ALTGR   KEYMODIFIER = 16
+	KEYMODIFIER_EXT     KEYMODIFIER = 32
 )
 
 type MouseButton int32
 
 const (
-	NO_BUTTON = 0
-	LEFT_BUTTON = 1
-	RIGHT_BUTTON = 2
-	MIDDLE_BUTTON = 4
+	NO_BUTTON     MouseButton = 0
+	LEFT_BUTTON   MouseButton = 1
+	RIGHT_BUTTON  MouseButton = 2
+	MIDDLE_BUTTON MouseButton = 4
 )
 
 type SelAlignmentConstants int32
 
 const (
-	rtfLeft = 0
-	rtfRight = 1
-	rtfCenter = 2
+	rtfLeft   SelAlignmentConstants = 0
+	rtfRight  SelAlignmentConstants = 1
+	rtfCenter SelAlignmentConstants = 2
 )
 
 type DISPID_InkEdit int32
 
 const (
-	DISPID_Text = 0
-	DISPID_TextRTF = 1
-	DISPID_Hwnd = 2
-	DISPID_DisableNoScroll = 3
-	DISPID_Locked = 4
-	DISPID_Enabled = 5
-	DISPID_MaxLength = 6
-	DISPID_MultiLine = 7
-	DISPID_ScrollBars = 8
-	DISPID_RTSelStart = 9
-	DISPID_RTSelLength = 10
-	DISPID_RTSelText = 11
-	DISPID_SelAlignment = 12
-	DISPID_SelBold = 13
-	DISPID_SelCharOffset = 14
-	DISPID_SelColor = 15
-	DISPID_SelFontName = 16
-	DISPID_SelFontSize = 17
-	DISPID_SelItalic = 18
-	DISPID_SelRTF = 19
-	DISPID_SelUnderline = 20
-	DISPID_DragIcon = 21
-	DISPID_Status = 22
-	DISPID_UseMouseForInput = 23
-	DISPID_InkMode = 24
-	DISPID_InkInsertMode = 25
-	DISPID_RecoTimeout = 26
-	DISPID_DrawAttr = 27
-	DISPID_Recognizer = 28
-	DISPID_Factoid = 29
-	DISPID_SelInk = 30
-	DISPID_SelInksDisplayMode = 31
-	DISPID_Recognize = 32
-	DISPID_GetGestStatus = 33
-	DISPID_SetGestStatus = 34
-	DISPID_Refresh = 35
+	DISPID_Text               DISPID_InkEdit = 0
+	DISPID_TextRTF            DISPID_InkEdit = 1
+	DISPID_Hwnd               DISPID_InkEdit = 2
+	DISPID_DisableNoScroll    DISPID_InkEdit = 3
+	DISPID_Locked             DISPID_InkEdit = 4
+	DISPID_Enabled            DISPID_InkEdit = 5
+	DISPID_MaxLength          DISPID_InkEdit = 6
+	DISPID_MultiLine          DISPID_InkEdit = 7
+	DISPID_ScrollBars         DISPID_InkEdit = 8
+	DISPID_RTSelStart         DISPID_InkEdit = 9
+	DISPID_RTSelLength        DISPID_InkEdit = 10
+	DISPID_RTSelText          DISPID_InkEdit = 11
+	DISPID_SelAlignment       DISPID_InkEdit = 12
+	DISPID_SelBold            DISPID_InkEdit = 13
+	DISPID_SelCharOffset      DISPID_InkEdit = 14
+	DISPID_SelColor           DISPID_InkEdit = 15
+	DISPID_SelFontName        DISPID_InkEdit = 16
+	DISPID_SelFontSize        DISPID_InkEdit = 17
+	DISPID_SelItalic          DISPID_InkEdit = 18
+	DISPID_SelRTF             DISPID_InkEdit = 19
+	DISPID_SelUnderline       DISPID_InkEdit = 20
+	DISPID_DragIcon           DISPID_InkEdit = 21
+	DISPID_Status             DISPID_InkEdit = 22
+	DISPID_UseMouseForInput   DISPID_InkEdit = 23
+	DISPID_InkMode            DISPID_InkEdit = 24
+	DISPID_InkInsertMode      DISPID_InkEdit = 25
+	DISPID_RecoTimeout        DISPID_InkEdit = 26
+	DISPID_DrawAttr           DISPID_InkEdit = 27
+	DISPID_Recognizer         DISPID_InkEdit = 28
+	DISPID_Factoid            DISPID_InkEdit = 29
+	DISPID_SelInk             DISPID_InkEdit = 30
+	DISPID_SelInksDisplayMode DISPID_InkEdit = 31
+	DISPID_Recognize          DISPID_InkEdit = 32
+	DISPID_GetGestStatus      DISPID_InkEdit = 33
+	DISPID_SetGestStatus      DISPID_InkEdit = 34
+	DISPID_Refresh            DISPID_InkEdit = 35
 )
 
 type DISPID_InkEditEvents int32
 
 const (
-	DISPID_IeeChange = 1
-	DISPID_IeeSelChange = 2
-	DISPID_IeeKeyDown = 3
-	DISPID_IeeKeyUp = 4
-	DISPID_IeeMouseUp = 5
-	DISPID_IeeMouseDown = 6
-	DISPID_IeeKeyPress = 7
-	DISPID_IeeDblClick = 8
-	DISPID_IeeClick = 9
-	DISPID_IeeMouseMove = 10
-	DISPID_IeeCursorDown = 21
-	DISPID_IeeStroke = 22
-	DISPID_IeeGesture = 23
-	DISPID_IeeRecognitionResult = 24
+	DISPID_IeeChange            DISPID_InkEditEvents = 1
+	DISPID_IeeSelChange         DISPID_InkEditEvents = 2
+	DISPID_IeeKeyDown           DISPID_InkEditEvents = 3
+	DISPID_IeeKeyUp             DISPID_InkEditEvents = 4
+	DISPID_IeeMouseUp           DISPID_InkEditEvents = 5
+	DISPID_IeeMouseDown         DISPID_InkEditEvents = 6
+	DISPID_IeeKeyPress          DISPID_InkEditEvents = 7
+	DISPID_IeeDblClick          DISPID_InkEditEvents = 8
+	DISPID_IeeClick             DISPID_InkEditEvents = 9
+	DISPID_IeeMouseMove         DISPID_InkEditEvents = 10
+	DISPID_IeeCursorDown        DISPID_InkEditEvents = 21
+	DISPID_IeeStroke            DISPID_InkEditEvents = 22
+	DISPID_IeeGesture           DISPID_InkEditEvents = 23
+	DISPID_IeeRecognitionResult DISPID_InkEditEvents = 24
 )
 
 type InkMode int32
 
 const (
-	IEM_Disabled = 0
-	IEM_Ink = 1
-	IEM_InkAndGesture = 2
+	IEM_Disabled      InkMode = 0
+	IEM_Ink           InkMode = 1
+	IEM_InkAndGesture InkMode = 2
 )
 
 type InkInsertMode int32
 
 const (
-	IEM_InsertText = 0
-	IEM_InsertInk = 1
+	IEM_InsertText InkInsertMode = 0
+	IEM_InsertInk  InkInsertMode = 1
 )
 
 type InkEditStatus int32
 
 const (
-	IES_Idle = 0
-	IES_Collecting = 1
-	IES_Recognizing = 2
+	IES_Idle        InkEditStatus = 0
+	IES_Collecting  InkEditStatus = 1
+	IES_Recognizing InkEditStatus = 2
 )
 
 type InkDisplayMode int32
 
 const (
-	IDM_Ink = 0
-	IDM_Text = 1
+	IDM_Ink  InkDisplayMode = 0
+	IDM_Text InkDisplayMode = 1
 )
 
 type AppearanceConstants int32
 
 const (
-	rtfFlat = 0
-	rtfThreeD = 1
+	rtfFlat   AppearanceConstants = 0
+	rtfThreeD AppearanceConstants = 1
 )
 
 type BorderStyleConstants int32
 
 const (
-	rtfNoBorder = 0
-	rtfFixedSingle = 1
+	rtfNoBorder    BorderStyleConstants = 0
+	rtfFixedSingle BorderStyleConstants = 1
 )
 
 type ScrollBarsConstants int32
 
 const (
-	rtfNone = 0
-	rtfHorizontal = 1
-	rtfVertical = 2
-	rtfBoth = 3
+	rtfNone       ScrollBarsConstants = 0
+	rtfHorizontal ScrollBarsConstants = 1
+	rtfVertical   ScrollBarsConstants = 2
+	rtfBoth       ScrollBarsConstants = 3
 )
 
 type MICUIELEMENT int32
 
 const (
-	MICUIELEMENT_BUTTON_WRITE = 1
-	MICUIELEMENT_BUTTON_ERASE = 2
-	MICUIELEMENT_BUTTON_CORRECT = 4
-	MICUIELEMENT_BUTTON_CLEAR = 8
-	MICUIELEMENT_BUTTON_UNDO = 16
-	MICUIELEMENT_BUTTON_REDO = 32
-	MICUIELEMENT_BUTTON_INSERT = 64
-	MICUIELEMENT_BUTTON_CANCEL = 128
-	MICUIELEMENT_INKPANEL_BACKGROUND = 256
-	MICUIELEMENT_RESULTPANEL_BACKGROUND = 512
+	MICUIELEMENT_BUTTON_WRITE           MICUIELEMENT = 1
+	MICUIELEMENT_BUTTON_ERASE           MICUIELEMENT = 2
+	MICUIELEMENT_BUTTON_CORRECT         MICUIELEMENT = 4
+	MICUIELEMENT_BUTTON_CLEAR           MICUIELEMENT = 8
+	MICUIELEMENT_BUTTON_UNDO            MICUIELEMENT = 16
+	MICUIELEMENT_BUTTON_REDO            MICUIELEMENT = 32
+	MICUIELEMENT_BUTTON_INSERT          MICUIELEMENT = 64
+	MICUIELEMENT_BUTTON_CANCEL          MICUIELEMENT = 128
+	MICUIELEMENT_INKPANEL_BACKGROUND    MICUIELEMENT = 256
+	MICUIELEMENT_RESULTPANEL_BACKGROUND MICUIELEMENT = 512
 )
 
 type MICUIELEMENTSTATE int32
 
 const (
-	MICUIELEMENTSTATE_NORMAL = 1
-	MICUIELEMENTSTATE_HOT = 2
-	MICUIELEMENTSTATE_PRESSED = 3
-	MICUIELEMENTSTATE_DISABLED = 4
+	MICUIELEMENTSTATE_NORMAL   MICUIELEMENTSTATE = 1
+	MICUIELEMENTSTATE_HOT      MICUIELEMENTSTATE = 2
+	MICUIELEMENTSTATE_PRESSED  MICUIELEMENTSTATE = 3
+	MICUIELEMENTSTATE_DISABLED MICUIELEMENTSTATE = 4
 )
 
 type DISPID_MathInputControlEvents int32
 
 const (
-	DISPID_MICInsert = 0
-	DISPID_MICClose = 1
-	DISPID_MICPaint = 2
-	DISPID_MICClear = 3
+	DISPID_MICInsert DISPID_MathInputControlEvents = 0
+	DISPID_MICClose  DISPID_MathInputControlEvents = 1
+	DISPID_MICPaint  DISPID_MathInputControlEvents = 2
+	DISPID_MICClear  DISPID_MathInputControlEvents = 3
 )
 
 type RealTimeStylusDataInterest int32
 
 const (
-	RTSDI_AllData = -1
-	RTSDI_None = 0
-	RTSDI_Error = 1
-	RTSDI_RealTimeStylusEnabled = 2
-	RTSDI_RealTimeStylusDisabled = 4
-	RTSDI_StylusNew = 8
-	RTSDI_StylusInRange = 16
-	RTSDI_InAirPackets = 32
-	RTSDI_StylusOutOfRange = 64
-	RTSDI_StylusDown = 128
-	RTSDI_Packets = 256
-	RTSDI_StylusUp = 512
-	RTSDI_StylusButtonUp = 1024
-	RTSDI_StylusButtonDown = 2048
-	RTSDI_SystemEvents = 4096
-	RTSDI_TabletAdded = 8192
-	RTSDI_TabletRemoved = 16384
-	RTSDI_CustomStylusDataAdded = 32768
-	RTSDI_UpdateMapping = 65536
-	RTSDI_DefaultEvents = 37766
+	RTSDI_AllData                RealTimeStylusDataInterest = -1
+	RTSDI_None                   RealTimeStylusDataInterest = 0
+	RTSDI_Error                  RealTimeStylusDataInterest = 1
+	RTSDI_RealTimeStylusEnabled  RealTimeStylusDataInterest = 2
+	RTSDI_RealTimeStylusDisabled RealTimeStylusDataInterest = 4
+	RTSDI_StylusNew              RealTimeStylusDataInterest = 8
+	RTSDI_StylusInRange          RealTimeStylusDataInterest = 16
+	RTSDI_InAirPackets           RealTimeStylusDataInterest = 32
+	RTSDI_StylusOutOfRange       RealTimeStylusDataInterest = 64
+	RTSDI_StylusDown             RealTimeStylusDataInterest = 128
+	RTSDI_Packets                RealTimeStylusDataInterest = 256
+	RTSDI_StylusUp               RealTimeStylusDataInterest = 512
+	RTSDI_StylusButtonUp         RealTimeStylusDataInterest = 1024
+	RTSDI_StylusButtonDown       RealTimeStylusDataInterest = 2048
+	RTSDI_SystemEvents           RealTimeStylusDataInterest = 4096
+	RTSDI_TabletAdded            RealTimeStylusDataInterest = 8192
+	RTSDI_TabletRemoved          RealTimeStylusDataInterest = 16384
+	RTSDI_CustomStylusDataAdded  RealTimeStylusDataInterest = 32768
+	RTSDI_UpdateMapping          RealTimeStylusDataInterest = 65536
+	RTSDI_DefaultEvents          RealTimeStylusDataInterest = 37766
 )
 
 type StylusQueue int32
 
 const (
-	SyncStylusQueue = 1
-	AsyncStylusQueueImmediate = 2
-	AsyncStylusQueue = 3
+	SyncStylusQueue           StylusQueue = 1
+	AsyncStylusQueueImmediate StylusQueue = 2
+	AsyncStylusQueue          StylusQueue = 3
 )
 
 type RealTimeStylusLockType int32
 
 const (
-	RTSLT_ObjLock = 1
-	RTSLT_SyncEventLock = 2
-	RTSLT_AsyncEventLock = 4
-	RTSLT_ExcludeCallback = 8
-	RTSLT_SyncObjLock = 11
-	RTSLT_AsyncObjLock = 13
+	RTSLT_ObjLock         RealTimeStylusLockType = 1
+	RTSLT_SyncEventLock   RealTimeStylusLockType = 2
+	RTSLT_AsyncEventLock  RealTimeStylusLockType = 4
+	RTSLT_ExcludeCallback RealTimeStylusLockType = 8
+	RTSLT_SyncObjLock     RealTimeStylusLockType = 11
+	RTSLT_AsyncObjLock    RealTimeStylusLockType = 13
 )
 
 type LINE_METRICS int32
 
 const (
-	LM_BASELINE = 0
-	LM_MIDLINE = 1
-	LM_ASCENDER = 2
-	LM_DESCENDER = 3
+	LM_BASELINE  LINE_METRICS = 0
+	LM_MIDLINE   LINE_METRICS = 1
+	LM_ASCENDER  LINE_METRICS = 2
+	LM_DESCENDER LINE_METRICS = 3
 )
 
 type CONFIDENCE_LEVEL int32
 
 const (
-	CFL_STRONG = 0
-	CFL_INTERMEDIATE = 1
-	CFL_POOR = 2
+	CFL_STRONG       CONFIDENCE_LEVEL = 0
+	CFL_INTERMEDIATE CONFIDENCE_LEVEL = 1
+	CFL_POOR         CONFIDENCE_LEVEL = 2
 )
 
 type ALT_BREAKS int32
 
 const (
-	ALT_BREAKS_SAME = 0
-	ALT_BREAKS_UNIQUE = 1
-	ALT_BREAKS_FULL = 2
+	ALT_BREAKS_SAME   ALT_BREAKS = 0
+	ALT_BREAKS_UNIQUE ALT_BREAKS = 1
+	ALT_BREAKS_FULL   ALT_BREAKS = 2
 )
 
 type enumRECO_TYPE int32
 
 const (
-	RECO_TYPE_WSTRING = 0
-	RECO_TYPE_WCHAR = 1
+	RECO_TYPE_WSTRING enumRECO_TYPE = 0
+	RECO_TYPE_WCHAR   enumRECO_TYPE = 1
 )
-

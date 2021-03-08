@@ -7,42 +7,41 @@ package xaudio2
 type XAPO_BUFFER_FLAGS int32
 
 const (
-	XAPO_BUFFER_SILENT = 0
-	XAPO_BUFFER_VALID = 1
+	XAPO_BUFFER_SILENT XAPO_BUFFER_FLAGS = 0
+	XAPO_BUFFER_VALID  XAPO_BUFFER_FLAGS = 1
 )
 
 type XAUDIO2_FILTER_TYPE int32
 
 const (
-	LowPassFilter = 0
-	BandPassFilter = 1
-	HighPassFilter = 2
-	NotchFilter = 3
-	LowPassOnePoleFilter = 4
-	HighPassOnePoleFilter = 5
+	LowPassFilter         XAUDIO2_FILTER_TYPE = 0
+	BandPassFilter        XAUDIO2_FILTER_TYPE = 1
+	HighPassFilter        XAUDIO2_FILTER_TYPE = 2
+	NotchFilter           XAUDIO2_FILTER_TYPE = 3
+	LowPassOnePoleFilter  XAUDIO2_FILTER_TYPE = 4
+	HighPassOnePoleFilter XAUDIO2_FILTER_TYPE = 5
 )
 
 type HrtfDirectivityType int32
 
 const (
-	OmniDirectional = 0
-	Cardioid = 1
-	Cone = 2
+	OmniDirectional HrtfDirectivityType = 0
+	Cardioid        HrtfDirectivityType = 1
+	Cone            HrtfDirectivityType = 2
 )
 
 type HrtfEnvironment int32
 
 const (
-	Small = 0
-	Medium = 1
-	Large = 2
-	Outdoors = 3
+	Small    HrtfEnvironment = 0
+	Medium   HrtfEnvironment = 1
+	Large    HrtfEnvironment = 2
+	Outdoors HrtfEnvironment = 3
 )
 
 type HrtfDistanceDecayType int32
 
 const (
-	NaturalDecay = 0
-	CustomDecay = 1
+	NaturalDecay HrtfDistanceDecayType = 0
+	CustomDecay  HrtfDistanceDecayType = 1
 )
-

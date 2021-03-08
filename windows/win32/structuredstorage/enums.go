@@ -7,112 +7,111 @@ package structuredstorage
 type STGTY int32
 
 const (
-	STGTY_STORAGE = 1
-	STGTY_STREAM = 2
-	STGTY_LOCKBYTES = 3
-	STGTY_PROPERTY = 4
+	STGTY_STORAGE   STGTY = 1
+	STGTY_STREAM    STGTY = 2
+	STGTY_LOCKBYTES STGTY = 3
+	STGTY_PROPERTY  STGTY = 4
 )
 
 type STREAM_SEEK uint32
 
 const (
-	STREAM_SEEK_SET = 0
-	STREAM_SEEK_CUR = 1
-	STREAM_SEEK_END = 2
+	STREAM_SEEK_SET STREAM_SEEK = 0
+	STREAM_SEEK_CUR STREAM_SEEK = 1
+	STREAM_SEEK_END STREAM_SEEK = 2
 )
 
 type LOCKTYPE int32
 
 const (
-	LOCK_WRITE = 1
-	LOCK_EXCLUSIVE = 2
-	LOCK_ONLYONCE = 4
+	LOCK_WRITE     LOCKTYPE = 1
+	LOCK_EXCLUSIVE LOCKTYPE = 2
+	LOCK_ONLYONCE  LOCKTYPE = 4
 )
 
 type PIDMSI_STATUS_VALUE int32
 
 const (
-	PIDMSI_STATUS_NORMAL = 0
-	PIDMSI_STATUS_NEW = 1
-	PIDMSI_STATUS_PRELIM = 2
-	PIDMSI_STATUS_DRAFT = 3
-	PIDMSI_STATUS_INPROGRESS = 4
-	PIDMSI_STATUS_EDIT = 5
-	PIDMSI_STATUS_REVIEW = 6
-	PIDMSI_STATUS_PROOF = 7
-	PIDMSI_STATUS_FINAL = 8
-	PIDMSI_STATUS_OTHER = 32767
+	PIDMSI_STATUS_NORMAL     PIDMSI_STATUS_VALUE = 0
+	PIDMSI_STATUS_NEW        PIDMSI_STATUS_VALUE = 1
+	PIDMSI_STATUS_PRELIM     PIDMSI_STATUS_VALUE = 2
+	PIDMSI_STATUS_DRAFT      PIDMSI_STATUS_VALUE = 3
+	PIDMSI_STATUS_INPROGRESS PIDMSI_STATUS_VALUE = 4
+	PIDMSI_STATUS_EDIT       PIDMSI_STATUS_VALUE = 5
+	PIDMSI_STATUS_REVIEW     PIDMSI_STATUS_VALUE = 6
+	PIDMSI_STATUS_PROOF      PIDMSI_STATUS_VALUE = 7
+	PIDMSI_STATUS_FINAL      PIDMSI_STATUS_VALUE = 8
+	PIDMSI_STATUS_OTHER      PIDMSI_STATUS_VALUE = 32767
 )
 
 type JET_RELOP int32
 
 const (
-	JET_relopEquals = 0
-	JET_relopPrefixEquals = 1
-	JET_relopNotEquals = 2
-	JET_relopLessThanOrEqual = 3
-	JET_relopLessThan = 4
-	JET_relopGreaterThanOrEqual = 5
-	JET_relopGreaterThan = 6
-	JET_relopBitmaskEqualsZero = 7
-	JET_relopBitmaskNotEqualsZero = 8
+	JET_relopEquals               JET_RELOP = 0
+	JET_relopPrefixEquals         JET_RELOP = 1
+	JET_relopNotEquals            JET_RELOP = 2
+	JET_relopLessThanOrEqual      JET_RELOP = 3
+	JET_relopLessThan             JET_RELOP = 4
+	JET_relopGreaterThanOrEqual   JET_RELOP = 5
+	JET_relopGreaterThan          JET_RELOP = 6
+	JET_relopBitmaskEqualsZero    JET_RELOP = 7
+	JET_relopBitmaskNotEqualsZero JET_RELOP = 8
 )
 
 type JET_ERRCAT int32
 
 const (
-	JET_errcatUnknown = 0
-	JET_errcatError = 1
-	JET_errcatOperation = 2
-	JET_errcatFatal = 3
-	JET_errcatIO = 4
-	JET_errcatResource = 5
-	JET_errcatMemory = 6
-	JET_errcatQuota = 7
-	JET_errcatDisk = 8
-	JET_errcatData = 9
-	JET_errcatCorruption = 10
-	JET_errcatInconsistent = 11
-	JET_errcatFragmentation = 12
-	JET_errcatApi = 13
-	JET_errcatUsage = 14
-	JET_errcatState = 15
-	JET_errcatObsolete = 16
-	JET_errcatMax = 17
+	JET_errcatUnknown       JET_ERRCAT = 0
+	JET_errcatError         JET_ERRCAT = 1
+	JET_errcatOperation     JET_ERRCAT = 2
+	JET_errcatFatal         JET_ERRCAT = 3
+	JET_errcatIO            JET_ERRCAT = 4
+	JET_errcatResource      JET_ERRCAT = 5
+	JET_errcatMemory        JET_ERRCAT = 6
+	JET_errcatQuota         JET_ERRCAT = 7
+	JET_errcatDisk          JET_ERRCAT = 8
+	JET_errcatData          JET_ERRCAT = 9
+	JET_errcatCorruption    JET_ERRCAT = 10
+	JET_errcatInconsistent  JET_ERRCAT = 11
+	JET_errcatFragmentation JET_ERRCAT = 12
+	JET_errcatApi           JET_ERRCAT = 13
+	JET_errcatUsage         JET_ERRCAT = 14
+	JET_errcatState         JET_ERRCAT = 15
+	JET_errcatObsolete      JET_ERRCAT = 16
+	JET_errcatMax           JET_ERRCAT = 17
 )
 
 type JET_INDEXCHECKING int32
 
 const (
-	JET_IndexCheckingOff = 0
-	JET_IndexCheckingOn = 1
-	JET_IndexCheckingDeferToOpenTable = 2
-	JET_IndexCheckingMax = 3
+	JET_IndexCheckingOff              JET_INDEXCHECKING = 0
+	JET_IndexCheckingOn               JET_INDEXCHECKING = 1
+	JET_IndexCheckingDeferToOpenTable JET_INDEXCHECKING = 2
+	JET_IndexCheckingMax              JET_INDEXCHECKING = 3
 )
 
 type STGC int32
 
 const (
-	STGC_DEFAULT = 0
-	STGC_OVERWRITE = 1
-	STGC_ONLYIFCURRENT = 2
-	STGC_DANGEROUSLYCOMMITMERELYTODISKCACHE = 4
-	STGC_CONSOLIDATE = 8
+	STGC_DEFAULT                            STGC = 0
+	STGC_OVERWRITE                          STGC = 1
+	STGC_ONLYIFCURRENT                      STGC = 2
+	STGC_DANGEROUSLYCOMMITMERELYTODISKCACHE STGC = 4
+	STGC_CONSOLIDATE                        STGC = 8
 )
 
 type STGMOVE int32
 
 const (
-	STGMOVE_MOVE = 0
-	STGMOVE_COPY = 1
-	STGMOVE_SHALLOWCOPY = 2
+	STGMOVE_MOVE        STGMOVE = 0
+	STGMOVE_COPY        STGMOVE = 1
+	STGMOVE_SHALLOWCOPY STGMOVE = 2
 )
 
 type STATFLAG int32
 
 const (
-	STATFLAG_DEFAULT = 0
-	STATFLAG_NONAME = 1
-	STATFLAG_NOOPEN = 2
+	STATFLAG_DEFAULT STATFLAG = 0
+	STATFLAG_NONAME  STATFLAG = 1
+	STATFLAG_NOOPEN  STATFLAG = 2
 )
-

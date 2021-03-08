@@ -7,19 +7,18 @@ package distributedfilesystem
 type DFS_TARGET_PRIORITY_CLASS int32
 
 const (
-	DfsInvalidPriorityClass = -1
-	DfsSiteCostNormalPriorityClass = 0
-	DfsGlobalHighPriorityClass = 1
-	DfsSiteCostHighPriorityClass = 2
-	DfsSiteCostLowPriorityClass = 3
-	DfsGlobalLowPriorityClass = 4
+	DfsInvalidPriorityClass        DFS_TARGET_PRIORITY_CLASS = -1
+	DfsSiteCostNormalPriorityClass DFS_TARGET_PRIORITY_CLASS = 0
+	DfsGlobalHighPriorityClass     DFS_TARGET_PRIORITY_CLASS = 1
+	DfsSiteCostHighPriorityClass   DFS_TARGET_PRIORITY_CLASS = 2
+	DfsSiteCostLowPriorityClass    DFS_TARGET_PRIORITY_CLASS = 3
+	DfsGlobalLowPriorityClass      DFS_TARGET_PRIORITY_CLASS = 4
 )
 
 type DFS_NAMESPACE_VERSION_ORIGIN int32
 
 const (
-	DFS_NAMESPACE_VERSION_ORIGIN_COMBINED = 0
-	DFS_NAMESPACE_VERSION_ORIGIN_SERVER = 1
-	DFS_NAMESPACE_VERSION_ORIGIN_DOMAIN = 2
+	DFS_NAMESPACE_VERSION_ORIGIN_COMBINED DFS_NAMESPACE_VERSION_ORIGIN = 0
+	DFS_NAMESPACE_VERSION_ORIGIN_SERVER   DFS_NAMESPACE_VERSION_ORIGIN = 1
+	DFS_NAMESPACE_VERSION_ORIGIN_DOMAIN   DFS_NAMESPACE_VERSION_ORIGIN = 2
 )
-

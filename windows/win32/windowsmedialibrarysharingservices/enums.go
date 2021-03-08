@@ -7,8 +7,7 @@ package windowsmedialibrarysharingservices
 type WindowsMediaLibrarySharingDeviceAuthorizationStatus int32
 
 const (
-	DEVICE_AUTHORIZATION_UNKNOWN = 0
-	DEVICE_AUTHORIZATION_ALLOWED = 1
-	DEVICE_AUTHORIZATION_DENIED = 2
+	DEVICE_AUTHORIZATION_UNKNOWN WindowsMediaLibrarySharingDeviceAuthorizationStatus = 0
+	DEVICE_AUTHORIZATION_ALLOWED WindowsMediaLibrarySharingDeviceAuthorizationStatus = 1
+	DEVICE_AUTHORIZATION_DENIED  WindowsMediaLibrarySharingDeviceAuthorizationStatus = 2
 )
-

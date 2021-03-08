@@ -7,71 +7,70 @@ package kernel
 type EXCEPTION_DISPOSITION int32
 
 const (
-	ExceptionContinueExecution = 0
-	ExceptionContinueSearch = 1
-	ExceptionNestedException = 2
-	ExceptionCollidedUnwind = 3
+	ExceptionContinueExecution EXCEPTION_DISPOSITION = 0
+	ExceptionContinueSearch    EXCEPTION_DISPOSITION = 1
+	ExceptionNestedException   EXCEPTION_DISPOSITION = 2
+	ExceptionCollidedUnwind    EXCEPTION_DISPOSITION = 3
 )
 
 type EVENT_TYPE int32
 
 const (
-	NotificationEvent = 0
-	SynchronizationEvent = 1
+	NotificationEvent    EVENT_TYPE = 0
+	SynchronizationEvent EVENT_TYPE = 1
 )
 
 type TIMER_TYPE int32
 
 const (
-	NotificationTimer = 0
-	SynchronizationTimer = 1
+	NotificationTimer    TIMER_TYPE = 0
+	SynchronizationTimer TIMER_TYPE = 1
 )
 
 type WAIT_TYPE int32
 
 const (
-	WaitAll = 0
-	WaitAny = 1
-	WaitNotification = 2
-	WaitDequeue = 3
+	WaitAll          WAIT_TYPE = 0
+	WaitAny          WAIT_TYPE = 1
+	WaitNotification WAIT_TYPE = 2
+	WaitDequeue      WAIT_TYPE = 3
 )
 
 type NT_PRODUCT_TYPE int32
 
 const (
-	NtProductWinNt = 1
-	NtProductLanManNt = 2
-	NtProductServer = 3
+	NtProductWinNt    NT_PRODUCT_TYPE = 1
+	NtProductLanManNt NT_PRODUCT_TYPE = 2
+	NtProductServer   NT_PRODUCT_TYPE = 3
 )
 
 type SUITE_TYPE int32
 
 const (
-	SmallBusiness = 0
-	Enterprise = 1
-	BackOffice = 2
-	CommunicationServer = 3
-	TerminalServer = 4
-	SmallBusinessRestricted = 5
-	EmbeddedNT = 6
-	DataCenter = 7
-	SingleUserTS = 8
-	Personal = 9
-	Blade = 10
-	EmbeddedRestricted = 11
-	SecurityAppliance = 12
-	StorageServer = 13
-	ComputeServer = 14
-	WHServer = 15
-	PhoneNT = 16
-	MultiUserTS = 17
-	MaxSuiteType = 18
+	SmallBusiness           SUITE_TYPE = 0
+	Enterprise              SUITE_TYPE = 1
+	BackOffice              SUITE_TYPE = 2
+	CommunicationServer     SUITE_TYPE = 3
+	TerminalServer          SUITE_TYPE = 4
+	SmallBusinessRestricted SUITE_TYPE = 5
+	EmbeddedNT              SUITE_TYPE = 6
+	DataCenter              SUITE_TYPE = 7
+	SingleUserTS            SUITE_TYPE = 8
+	Personal                SUITE_TYPE = 9
+	Blade                   SUITE_TYPE = 10
+	EmbeddedRestricted      SUITE_TYPE = 11
+	SecurityAppliance       SUITE_TYPE = 12
+	StorageServer           SUITE_TYPE = 13
+	ComputeServer           SUITE_TYPE = 14
+	WHServer                SUITE_TYPE = 15
+	PhoneNT                 SUITE_TYPE = 16
+	MultiUserTS             SUITE_TYPE = 17
+	MaxSuiteType            SUITE_TYPE = 18
 )
 
 type COMPARTMENT_ID int32
 
 const (
-	UNSPECIFIED_COMPARTMENT_ID = 0
-	DEFAULT_COMPARTMENT_ID = 1
+	UNSPECIFIED_COMPARTMENT_ID COMPARTMENT_ID = 0
+	DEFAULT_COMPARTMENT_ID     COMPARTMENT_ID = 1
 )
-

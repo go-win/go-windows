@@ -7,1106 +7,1105 @@ package nativewifi
 type DOT11_BSS_TYPE int32
 
 const (
-	dot11_BSS_type_infrastructure = 1
-	dot11_BSS_type_independent = 2
-	dot11_BSS_type_any = 3
+	dot11_BSS_type_infrastructure DOT11_BSS_TYPE = 1
+	dot11_BSS_type_independent    DOT11_BSS_TYPE = 2
+	dot11_BSS_type_any            DOT11_BSS_TYPE = 3
 )
 
 type DOT11_AUTH_ALGORITHM int32
 
 const (
-	DOT11_AUTH_ALGO_80211_OPEN = 1
-	DOT11_AUTH_ALGO_80211_SHARED_KEY = 2
-	DOT11_AUTH_ALGO_WPA = 3
-	DOT11_AUTH_ALGO_WPA_PSK = 4
-	DOT11_AUTH_ALGO_WPA_NONE = 5
-	DOT11_AUTH_ALGO_RSNA = 6
-	DOT11_AUTH_ALGO_RSNA_PSK = 7
-	DOT11_AUTH_ALGO_WPA3 = 8
-	DOT11_AUTH_ALGO_WPA3_SAE = 9
-	DOT11_AUTH_ALGO_OWE = 10
-	DOT11_AUTH_ALGO_IHV_START = -2147483648
-	DOT11_AUTH_ALGO_IHV_END = -1
+	DOT11_AUTH_ALGO_80211_OPEN       DOT11_AUTH_ALGORITHM = 1
+	DOT11_AUTH_ALGO_80211_SHARED_KEY DOT11_AUTH_ALGORITHM = 2
+	DOT11_AUTH_ALGO_WPA              DOT11_AUTH_ALGORITHM = 3
+	DOT11_AUTH_ALGO_WPA_PSK          DOT11_AUTH_ALGORITHM = 4
+	DOT11_AUTH_ALGO_WPA_NONE         DOT11_AUTH_ALGORITHM = 5
+	DOT11_AUTH_ALGO_RSNA             DOT11_AUTH_ALGORITHM = 6
+	DOT11_AUTH_ALGO_RSNA_PSK         DOT11_AUTH_ALGORITHM = 7
+	DOT11_AUTH_ALGO_WPA3             DOT11_AUTH_ALGORITHM = 8
+	DOT11_AUTH_ALGO_WPA3_SAE         DOT11_AUTH_ALGORITHM = 9
+	DOT11_AUTH_ALGO_OWE              DOT11_AUTH_ALGORITHM = 10
+	DOT11_AUTH_ALGO_IHV_START        DOT11_AUTH_ALGORITHM = -2147483648
+	DOT11_AUTH_ALGO_IHV_END          DOT11_AUTH_ALGORITHM = -1
 )
 
 type DOT11_CIPHER_ALGORITHM int32
 
 const (
-	DOT11_CIPHER_ALGO_NONE = 0
-	DOT11_CIPHER_ALGO_WEP40 = 1
-	DOT11_CIPHER_ALGO_TKIP = 2
-	DOT11_CIPHER_ALGO_CCMP = 4
-	DOT11_CIPHER_ALGO_WEP104 = 5
-	DOT11_CIPHER_ALGO_BIP = 6
-	DOT11_CIPHER_ALGO_GCMP = 8
-	DOT11_CIPHER_ALGO_GCMP_256 = 9
-	DOT11_CIPHER_ALGO_CCMP_256 = 10
-	DOT11_CIPHER_ALGO_BIP_GMAC_128 = 11
-	DOT11_CIPHER_ALGO_BIP_GMAC_256 = 12
-	DOT11_CIPHER_ALGO_BIP_CMAC_256 = 13
-	DOT11_CIPHER_ALGO_WPA_USE_GROUP = 256
-	DOT11_CIPHER_ALGO_RSN_USE_GROUP = 256
-	DOT11_CIPHER_ALGO_WEP = 257
-	DOT11_CIPHER_ALGO_IHV_START = -2147483648
-	DOT11_CIPHER_ALGO_IHV_END = -1
+	DOT11_CIPHER_ALGO_NONE          DOT11_CIPHER_ALGORITHM = 0
+	DOT11_CIPHER_ALGO_WEP40         DOT11_CIPHER_ALGORITHM = 1
+	DOT11_CIPHER_ALGO_TKIP          DOT11_CIPHER_ALGORITHM = 2
+	DOT11_CIPHER_ALGO_CCMP          DOT11_CIPHER_ALGORITHM = 4
+	DOT11_CIPHER_ALGO_WEP104        DOT11_CIPHER_ALGORITHM = 5
+	DOT11_CIPHER_ALGO_BIP           DOT11_CIPHER_ALGORITHM = 6
+	DOT11_CIPHER_ALGO_GCMP          DOT11_CIPHER_ALGORITHM = 8
+	DOT11_CIPHER_ALGO_GCMP_256      DOT11_CIPHER_ALGORITHM = 9
+	DOT11_CIPHER_ALGO_CCMP_256      DOT11_CIPHER_ALGORITHM = 10
+	DOT11_CIPHER_ALGO_BIP_GMAC_128  DOT11_CIPHER_ALGORITHM = 11
+	DOT11_CIPHER_ALGO_BIP_GMAC_256  DOT11_CIPHER_ALGORITHM = 12
+	DOT11_CIPHER_ALGO_BIP_CMAC_256  DOT11_CIPHER_ALGORITHM = 13
+	DOT11_CIPHER_ALGO_WPA_USE_GROUP DOT11_CIPHER_ALGORITHM = 256
+	DOT11_CIPHER_ALGO_RSN_USE_GROUP DOT11_CIPHER_ALGORITHM = 256
+	DOT11_CIPHER_ALGO_WEP           DOT11_CIPHER_ALGORITHM = 257
+	DOT11_CIPHER_ALGO_IHV_START     DOT11_CIPHER_ALGORITHM = -2147483648
+	DOT11_CIPHER_ALGO_IHV_END       DOT11_CIPHER_ALGORITHM = -1
 )
 
 type NDIS_REQUEST_TYPE int32
 
 const (
-	NdisRequestQueryInformation = 0
-	NdisRequestSetInformation = 1
-	NdisRequestQueryStatistics = 2
-	NdisRequestOpen = 3
-	NdisRequestClose = 4
-	NdisRequestSend = 5
-	NdisRequestTransferData = 6
-	NdisRequestReset = 7
-	NdisRequestGeneric1 = 8
-	NdisRequestGeneric2 = 9
-	NdisRequestGeneric3 = 10
-	NdisRequestGeneric4 = 11
+	NdisRequestQueryInformation NDIS_REQUEST_TYPE = 0
+	NdisRequestSetInformation   NDIS_REQUEST_TYPE = 1
+	NdisRequestQueryStatistics  NDIS_REQUEST_TYPE = 2
+	NdisRequestOpen             NDIS_REQUEST_TYPE = 3
+	NdisRequestClose            NDIS_REQUEST_TYPE = 4
+	NdisRequestSend             NDIS_REQUEST_TYPE = 5
+	NdisRequestTransferData     NDIS_REQUEST_TYPE = 6
+	NdisRequestReset            NDIS_REQUEST_TYPE = 7
+	NdisRequestGeneric1         NDIS_REQUEST_TYPE = 8
+	NdisRequestGeneric2         NDIS_REQUEST_TYPE = 9
+	NdisRequestGeneric3         NDIS_REQUEST_TYPE = 10
+	NdisRequestGeneric4         NDIS_REQUEST_TYPE = 11
 )
 
 type NDIS_INTERRUPT_MODERATION int32
 
 const (
-	NdisInterruptModerationUnknown = 0
-	NdisInterruptModerationNotSupported = 1
-	NdisInterruptModerationEnabled = 2
-	NdisInterruptModerationDisabled = 3
+	NdisInterruptModerationUnknown      NDIS_INTERRUPT_MODERATION = 0
+	NdisInterruptModerationNotSupported NDIS_INTERRUPT_MODERATION = 1
+	NdisInterruptModerationEnabled      NDIS_INTERRUPT_MODERATION = 2
+	NdisInterruptModerationDisabled     NDIS_INTERRUPT_MODERATION = 3
 )
 
 type NDIS_802_11_STATUS_TYPE int32
 
 const (
-	Ndis802_11StatusType_Authentication = 0
-	Ndis802_11StatusType_MediaStreamMode = 1
-	Ndis802_11StatusType_PMKID_CandidateList = 2
-	Ndis802_11StatusTypeMax = 3
+	Ndis802_11StatusType_Authentication      NDIS_802_11_STATUS_TYPE = 0
+	Ndis802_11StatusType_MediaStreamMode     NDIS_802_11_STATUS_TYPE = 1
+	Ndis802_11StatusType_PMKID_CandidateList NDIS_802_11_STATUS_TYPE = 2
+	Ndis802_11StatusTypeMax                  NDIS_802_11_STATUS_TYPE = 3
 )
 
 type NDIS_802_11_NETWORK_TYPE int32
 
 const (
-	Ndis802_11FH = 0
-	Ndis802_11DS = 1
-	Ndis802_11OFDM5 = 2
-	Ndis802_11OFDM24 = 3
-	Ndis802_11Automode = 4
-	Ndis802_11NetworkTypeMax = 5
+	Ndis802_11FH             NDIS_802_11_NETWORK_TYPE = 0
+	Ndis802_11DS             NDIS_802_11_NETWORK_TYPE = 1
+	Ndis802_11OFDM5          NDIS_802_11_NETWORK_TYPE = 2
+	Ndis802_11OFDM24         NDIS_802_11_NETWORK_TYPE = 3
+	Ndis802_11Automode       NDIS_802_11_NETWORK_TYPE = 4
+	Ndis802_11NetworkTypeMax NDIS_802_11_NETWORK_TYPE = 5
 )
 
 type NDIS_802_11_POWER_MODE int32
 
 const (
-	Ndis802_11PowerModeCAM = 0
-	Ndis802_11PowerModeMAX_PSP = 1
-	Ndis802_11PowerModeFast_PSP = 2
-	Ndis802_11PowerModeMax = 3
+	Ndis802_11PowerModeCAM      NDIS_802_11_POWER_MODE = 0
+	Ndis802_11PowerModeMAX_PSP  NDIS_802_11_POWER_MODE = 1
+	Ndis802_11PowerModeFast_PSP NDIS_802_11_POWER_MODE = 2
+	Ndis802_11PowerModeMax      NDIS_802_11_POWER_MODE = 3
 )
 
 type NDIS_802_11_NETWORK_INFRASTRUCTURE int32
 
 const (
-	Ndis802_11IBSS = 0
-	Ndis802_11Infrastructure = 1
-	Ndis802_11AutoUnknown = 2
-	Ndis802_11InfrastructureMax = 3
+	Ndis802_11IBSS              NDIS_802_11_NETWORK_INFRASTRUCTURE = 0
+	Ndis802_11Infrastructure    NDIS_802_11_NETWORK_INFRASTRUCTURE = 1
+	Ndis802_11AutoUnknown       NDIS_802_11_NETWORK_INFRASTRUCTURE = 2
+	Ndis802_11InfrastructureMax NDIS_802_11_NETWORK_INFRASTRUCTURE = 3
 )
 
 type NDIS_802_11_AUTHENTICATION_MODE int32
 
 const (
-	Ndis802_11AuthModeOpen = 0
-	Ndis802_11AuthModeShared = 1
-	Ndis802_11AuthModeAutoSwitch = 2
-	Ndis802_11AuthModeWPA = 3
-	Ndis802_11AuthModeWPAPSK = 4
-	Ndis802_11AuthModeWPANone = 5
-	Ndis802_11AuthModeWPA2 = 6
-	Ndis802_11AuthModeWPA2PSK = 7
-	Ndis802_11AuthModeWPA3 = 8
-	Ndis802_11AuthModeWPA3SAE = 9
-	Ndis802_11AuthModeMax = 10
+	Ndis802_11AuthModeOpen       NDIS_802_11_AUTHENTICATION_MODE = 0
+	Ndis802_11AuthModeShared     NDIS_802_11_AUTHENTICATION_MODE = 1
+	Ndis802_11AuthModeAutoSwitch NDIS_802_11_AUTHENTICATION_MODE = 2
+	Ndis802_11AuthModeWPA        NDIS_802_11_AUTHENTICATION_MODE = 3
+	Ndis802_11AuthModeWPAPSK     NDIS_802_11_AUTHENTICATION_MODE = 4
+	Ndis802_11AuthModeWPANone    NDIS_802_11_AUTHENTICATION_MODE = 5
+	Ndis802_11AuthModeWPA2       NDIS_802_11_AUTHENTICATION_MODE = 6
+	Ndis802_11AuthModeWPA2PSK    NDIS_802_11_AUTHENTICATION_MODE = 7
+	Ndis802_11AuthModeWPA3       NDIS_802_11_AUTHENTICATION_MODE = 8
+	Ndis802_11AuthModeWPA3SAE    NDIS_802_11_AUTHENTICATION_MODE = 9
+	Ndis802_11AuthModeMax        NDIS_802_11_AUTHENTICATION_MODE = 10
 )
 
 type NDIS_802_11_PRIVACY_FILTER int32
 
 const (
-	Ndis802_11PrivFilterAcceptAll = 0
-	Ndis802_11PrivFilter8021xWEP = 1
+	Ndis802_11PrivFilterAcceptAll NDIS_802_11_PRIVACY_FILTER = 0
+	Ndis802_11PrivFilter8021xWEP  NDIS_802_11_PRIVACY_FILTER = 1
 )
 
 type NDIS_802_11_WEP_STATUS int32
 
 const (
-	Ndis802_11WEPEnabled = 0
-	Ndis802_11Encryption1Enabled = 0
-	Ndis802_11WEPDisabled = 1
-	Ndis802_11EncryptionDisabled = 1
-	Ndis802_11WEPKeyAbsent = 2
-	Ndis802_11Encryption1KeyAbsent = 2
-	Ndis802_11WEPNotSupported = 3
-	Ndis802_11EncryptionNotSupported = 3
-	Ndis802_11Encryption2Enabled = 4
-	Ndis802_11Encryption2KeyAbsent = 5
-	Ndis802_11Encryption3Enabled = 6
-	Ndis802_11Encryption3KeyAbsent = 7
+	Ndis802_11WEPEnabled             NDIS_802_11_WEP_STATUS = 0
+	Ndis802_11Encryption1Enabled     NDIS_802_11_WEP_STATUS = 0
+	Ndis802_11WEPDisabled            NDIS_802_11_WEP_STATUS = 1
+	Ndis802_11EncryptionDisabled     NDIS_802_11_WEP_STATUS = 1
+	Ndis802_11WEPKeyAbsent           NDIS_802_11_WEP_STATUS = 2
+	Ndis802_11Encryption1KeyAbsent   NDIS_802_11_WEP_STATUS = 2
+	Ndis802_11WEPNotSupported        NDIS_802_11_WEP_STATUS = 3
+	Ndis802_11EncryptionNotSupported NDIS_802_11_WEP_STATUS = 3
+	Ndis802_11Encryption2Enabled     NDIS_802_11_WEP_STATUS = 4
+	Ndis802_11Encryption2KeyAbsent   NDIS_802_11_WEP_STATUS = 5
+	Ndis802_11Encryption3Enabled     NDIS_802_11_WEP_STATUS = 6
+	Ndis802_11Encryption3KeyAbsent   NDIS_802_11_WEP_STATUS = 7
 )
 
 type NDIS_802_11_RELOAD_DEFAULTS int32
 
 const (
-	Ndis802_11ReloadWEPKeys = 0
+	Ndis802_11ReloadWEPKeys NDIS_802_11_RELOAD_DEFAULTS = 0
 )
 
 type NDIS_802_11_MEDIA_STREAM_MODE int32
 
 const (
-	Ndis802_11MediaStreamOff = 0
-	Ndis802_11MediaStreamOn = 1
+	Ndis802_11MediaStreamOff NDIS_802_11_MEDIA_STREAM_MODE = 0
+	Ndis802_11MediaStreamOn  NDIS_802_11_MEDIA_STREAM_MODE = 1
 )
 
 type NDIS_802_11_RADIO_STATUS int32
 
 const (
-	Ndis802_11RadioStatusOn = 0
-	Ndis802_11RadioStatusHardwareOff = 1
-	Ndis802_11RadioStatusSoftwareOff = 2
-	Ndis802_11RadioStatusHardwareSoftwareOff = 3
-	Ndis802_11RadioStatusMax = 4
+	Ndis802_11RadioStatusOn                  NDIS_802_11_RADIO_STATUS = 0
+	Ndis802_11RadioStatusHardwareOff         NDIS_802_11_RADIO_STATUS = 1
+	Ndis802_11RadioStatusSoftwareOff         NDIS_802_11_RADIO_STATUS = 2
+	Ndis802_11RadioStatusHardwareSoftwareOff NDIS_802_11_RADIO_STATUS = 3
+	Ndis802_11RadioStatusMax                 NDIS_802_11_RADIO_STATUS = 4
 )
 
 type OFFLOAD_OPERATION_E int32
 
 const (
-	AUTHENTICATE = 1
-	ENCRYPT = 2
+	AUTHENTICATE OFFLOAD_OPERATION_E = 1
+	ENCRYPT      OFFLOAD_OPERATION_E = 2
 )
 
 type OFFLOAD_CONF_ALGO int32
 
 const (
-	OFFLOAD_IPSEC_CONF_NONE = 0
-	OFFLOAD_IPSEC_CONF_DES = 1
-	OFFLOAD_IPSEC_CONF_RESERVED = 2
-	OFFLOAD_IPSEC_CONF_3_DES = 3
-	OFFLOAD_IPSEC_CONF_MAX = 4
+	OFFLOAD_IPSEC_CONF_NONE     OFFLOAD_CONF_ALGO = 0
+	OFFLOAD_IPSEC_CONF_DES      OFFLOAD_CONF_ALGO = 1
+	OFFLOAD_IPSEC_CONF_RESERVED OFFLOAD_CONF_ALGO = 2
+	OFFLOAD_IPSEC_CONF_3_DES    OFFLOAD_CONF_ALGO = 3
+	OFFLOAD_IPSEC_CONF_MAX      OFFLOAD_CONF_ALGO = 4
 )
 
 type OFFLOAD_INTEGRITY_ALGO int32
 
 const (
-	OFFLOAD_IPSEC_INTEGRITY_NONE = 0
-	OFFLOAD_IPSEC_INTEGRITY_MD5 = 1
-	OFFLOAD_IPSEC_INTEGRITY_SHA = 2
-	OFFLOAD_IPSEC_INTEGRITY_MAX = 3
+	OFFLOAD_IPSEC_INTEGRITY_NONE OFFLOAD_INTEGRITY_ALGO = 0
+	OFFLOAD_IPSEC_INTEGRITY_MD5  OFFLOAD_INTEGRITY_ALGO = 1
+	OFFLOAD_IPSEC_INTEGRITY_SHA  OFFLOAD_INTEGRITY_ALGO = 2
+	OFFLOAD_IPSEC_INTEGRITY_MAX  OFFLOAD_INTEGRITY_ALGO = 3
 )
 
 type UDP_ENCAP_TYPE int32
 
 const (
-	OFFLOAD_IPSEC_UDPESP_ENCAPTYPE_IKE = 0
-	OFFLOAD_IPSEC_UDPESP_ENCAPTYPE_OTHER = 1
+	OFFLOAD_IPSEC_UDPESP_ENCAPTYPE_IKE   UDP_ENCAP_TYPE = 0
+	OFFLOAD_IPSEC_UDPESP_ENCAPTYPE_OTHER UDP_ENCAP_TYPE = 1
 )
 
 type NDIS_MEDIUM int32
 
 const (
-	NdisMedium802_3 = 0
-	NdisMedium802_5 = 1
-	NdisMediumFddi = 2
-	NdisMediumWan = 3
-	NdisMediumLocalTalk = 4
-	NdisMediumDix = 5
-	NdisMediumArcnetRaw = 6
-	NdisMediumArcnet878_2 = 7
-	NdisMediumAtm = 8
-	NdisMediumWirelessWan = 9
-	NdisMediumIrda = 10
-	NdisMediumBpc = 11
-	NdisMediumCoWan = 12
-	NdisMedium1394 = 13
-	NdisMediumInfiniBand = 14
-	NdisMediumTunnel = 15
-	NdisMediumNative802_11 = 16
-	NdisMediumLoopback = 17
-	NdisMediumWiMAX = 18
-	NdisMediumIP = 19
-	NdisMediumMax = 20
+	NdisMedium802_3        NDIS_MEDIUM = 0
+	NdisMedium802_5        NDIS_MEDIUM = 1
+	NdisMediumFddi         NDIS_MEDIUM = 2
+	NdisMediumWan          NDIS_MEDIUM = 3
+	NdisMediumLocalTalk    NDIS_MEDIUM = 4
+	NdisMediumDix          NDIS_MEDIUM = 5
+	NdisMediumArcnetRaw    NDIS_MEDIUM = 6
+	NdisMediumArcnet878_2  NDIS_MEDIUM = 7
+	NdisMediumAtm          NDIS_MEDIUM = 8
+	NdisMediumWirelessWan  NDIS_MEDIUM = 9
+	NdisMediumIrda         NDIS_MEDIUM = 10
+	NdisMediumBpc          NDIS_MEDIUM = 11
+	NdisMediumCoWan        NDIS_MEDIUM = 12
+	NdisMedium1394         NDIS_MEDIUM = 13
+	NdisMediumInfiniBand   NDIS_MEDIUM = 14
+	NdisMediumTunnel       NDIS_MEDIUM = 15
+	NdisMediumNative802_11 NDIS_MEDIUM = 16
+	NdisMediumLoopback     NDIS_MEDIUM = 17
+	NdisMediumWiMAX        NDIS_MEDIUM = 18
+	NdisMediumIP           NDIS_MEDIUM = 19
+	NdisMediumMax          NDIS_MEDIUM = 20
 )
 
 type NDIS_PHYSICAL_MEDIUM int32
 
 const (
-	NdisPhysicalMediumUnspecified = 0
-	NdisPhysicalMediumWirelessLan = 1
-	NdisPhysicalMediumCableModem = 2
-	NdisPhysicalMediumPhoneLine = 3
-	NdisPhysicalMediumPowerLine = 4
-	NdisPhysicalMediumDSL = 5
-	NdisPhysicalMediumFibreChannel = 6
-	NdisPhysicalMedium1394 = 7
-	NdisPhysicalMediumWirelessWan = 8
-	NdisPhysicalMediumNative802_11 = 9
-	NdisPhysicalMediumBluetooth = 10
-	NdisPhysicalMediumInfiniband = 11
-	NdisPhysicalMediumWiMax = 12
-	NdisPhysicalMediumUWB = 13
-	NdisPhysicalMedium802_3 = 14
-	NdisPhysicalMedium802_5 = 15
-	NdisPhysicalMediumIrda = 16
-	NdisPhysicalMediumWiredWAN = 17
-	NdisPhysicalMediumWiredCoWan = 18
-	NdisPhysicalMediumOther = 19
-	NdisPhysicalMediumNative802_15_4 = 20
-	NdisPhysicalMediumMax = 21
+	NdisPhysicalMediumUnspecified    NDIS_PHYSICAL_MEDIUM = 0
+	NdisPhysicalMediumWirelessLan    NDIS_PHYSICAL_MEDIUM = 1
+	NdisPhysicalMediumCableModem     NDIS_PHYSICAL_MEDIUM = 2
+	NdisPhysicalMediumPhoneLine      NDIS_PHYSICAL_MEDIUM = 3
+	NdisPhysicalMediumPowerLine      NDIS_PHYSICAL_MEDIUM = 4
+	NdisPhysicalMediumDSL            NDIS_PHYSICAL_MEDIUM = 5
+	NdisPhysicalMediumFibreChannel   NDIS_PHYSICAL_MEDIUM = 6
+	NdisPhysicalMedium1394           NDIS_PHYSICAL_MEDIUM = 7
+	NdisPhysicalMediumWirelessWan    NDIS_PHYSICAL_MEDIUM = 8
+	NdisPhysicalMediumNative802_11   NDIS_PHYSICAL_MEDIUM = 9
+	NdisPhysicalMediumBluetooth      NDIS_PHYSICAL_MEDIUM = 10
+	NdisPhysicalMediumInfiniband     NDIS_PHYSICAL_MEDIUM = 11
+	NdisPhysicalMediumWiMax          NDIS_PHYSICAL_MEDIUM = 12
+	NdisPhysicalMediumUWB            NDIS_PHYSICAL_MEDIUM = 13
+	NdisPhysicalMedium802_3          NDIS_PHYSICAL_MEDIUM = 14
+	NdisPhysicalMedium802_5          NDIS_PHYSICAL_MEDIUM = 15
+	NdisPhysicalMediumIrda           NDIS_PHYSICAL_MEDIUM = 16
+	NdisPhysicalMediumWiredWAN       NDIS_PHYSICAL_MEDIUM = 17
+	NdisPhysicalMediumWiredCoWan     NDIS_PHYSICAL_MEDIUM = 18
+	NdisPhysicalMediumOther          NDIS_PHYSICAL_MEDIUM = 19
+	NdisPhysicalMediumNative802_15_4 NDIS_PHYSICAL_MEDIUM = 20
+	NdisPhysicalMediumMax            NDIS_PHYSICAL_MEDIUM = 21
 )
 
 type NDIS_HARDWARE_STATUS int32
 
 const (
-	NdisHardwareStatusReady = 0
-	NdisHardwareStatusInitializing = 1
-	NdisHardwareStatusReset = 2
-	NdisHardwareStatusClosing = 3
-	NdisHardwareStatusNotReady = 4
+	NdisHardwareStatusReady        NDIS_HARDWARE_STATUS = 0
+	NdisHardwareStatusInitializing NDIS_HARDWARE_STATUS = 1
+	NdisHardwareStatusReset        NDIS_HARDWARE_STATUS = 2
+	NdisHardwareStatusClosing      NDIS_HARDWARE_STATUS = 3
+	NdisHardwareStatusNotReady     NDIS_HARDWARE_STATUS = 4
 )
 
 type NDIS_DEVICE_POWER_STATE int32
 
 const (
-	NdisDeviceStateUnspecified = 0
-	NdisDeviceStateD0 = 1
-	NdisDeviceStateD1 = 2
-	NdisDeviceStateD2 = 3
-	NdisDeviceStateD3 = 4
-	NdisDeviceStateMaximum = 5
+	NdisDeviceStateUnspecified NDIS_DEVICE_POWER_STATE = 0
+	NdisDeviceStateD0          NDIS_DEVICE_POWER_STATE = 1
+	NdisDeviceStateD1          NDIS_DEVICE_POWER_STATE = 2
+	NdisDeviceStateD2          NDIS_DEVICE_POWER_STATE = 3
+	NdisDeviceStateD3          NDIS_DEVICE_POWER_STATE = 4
+	NdisDeviceStateMaximum     NDIS_DEVICE_POWER_STATE = 5
 )
 
 type NDIS_FDDI_ATTACHMENT_TYPE int32
 
 const (
-	NdisFddiTypeIsolated = 1
-	NdisFddiTypeLocalA = 2
-	NdisFddiTypeLocalB = 3
-	NdisFddiTypeLocalAB = 4
-	NdisFddiTypeLocalS = 5
-	NdisFddiTypeWrapA = 6
-	NdisFddiTypeWrapB = 7
-	NdisFddiTypeWrapAB = 8
-	NdisFddiTypeWrapS = 9
-	NdisFddiTypeCWrapA = 10
-	NdisFddiTypeCWrapB = 11
-	NdisFddiTypeCWrapS = 12
-	NdisFddiTypeThrough = 13
+	NdisFddiTypeIsolated NDIS_FDDI_ATTACHMENT_TYPE = 1
+	NdisFddiTypeLocalA   NDIS_FDDI_ATTACHMENT_TYPE = 2
+	NdisFddiTypeLocalB   NDIS_FDDI_ATTACHMENT_TYPE = 3
+	NdisFddiTypeLocalAB  NDIS_FDDI_ATTACHMENT_TYPE = 4
+	NdisFddiTypeLocalS   NDIS_FDDI_ATTACHMENT_TYPE = 5
+	NdisFddiTypeWrapA    NDIS_FDDI_ATTACHMENT_TYPE = 6
+	NdisFddiTypeWrapB    NDIS_FDDI_ATTACHMENT_TYPE = 7
+	NdisFddiTypeWrapAB   NDIS_FDDI_ATTACHMENT_TYPE = 8
+	NdisFddiTypeWrapS    NDIS_FDDI_ATTACHMENT_TYPE = 9
+	NdisFddiTypeCWrapA   NDIS_FDDI_ATTACHMENT_TYPE = 10
+	NdisFddiTypeCWrapB   NDIS_FDDI_ATTACHMENT_TYPE = 11
+	NdisFddiTypeCWrapS   NDIS_FDDI_ATTACHMENT_TYPE = 12
+	NdisFddiTypeThrough  NDIS_FDDI_ATTACHMENT_TYPE = 13
 )
 
 type NDIS_FDDI_RING_MGT_STATE int32
 
 const (
-	NdisFddiRingIsolated = 1
-	NdisFddiRingNonOperational = 2
-	NdisFddiRingOperational = 3
-	NdisFddiRingDetect = 4
-	NdisFddiRingNonOperationalDup = 5
-	NdisFddiRingOperationalDup = 6
-	NdisFddiRingDirected = 7
-	NdisFddiRingTrace = 8
+	NdisFddiRingIsolated          NDIS_FDDI_RING_MGT_STATE = 1
+	NdisFddiRingNonOperational    NDIS_FDDI_RING_MGT_STATE = 2
+	NdisFddiRingOperational       NDIS_FDDI_RING_MGT_STATE = 3
+	NdisFddiRingDetect            NDIS_FDDI_RING_MGT_STATE = 4
+	NdisFddiRingNonOperationalDup NDIS_FDDI_RING_MGT_STATE = 5
+	NdisFddiRingOperationalDup    NDIS_FDDI_RING_MGT_STATE = 6
+	NdisFddiRingDirected          NDIS_FDDI_RING_MGT_STATE = 7
+	NdisFddiRingTrace             NDIS_FDDI_RING_MGT_STATE = 8
 )
 
 type NDIS_FDDI_LCONNECTION_STATE int32
 
 const (
-	NdisFddiStateOff = 1
-	NdisFddiStateBreak = 2
-	NdisFddiStateTrace = 3
-	NdisFddiStateConnect = 4
-	NdisFddiStateNext = 5
-	NdisFddiStateSignal = 6
-	NdisFddiStateJoin = 7
-	NdisFddiStateVerify = 8
-	NdisFddiStateActive = 9
-	NdisFddiStateMaintenance = 10
+	NdisFddiStateOff         NDIS_FDDI_LCONNECTION_STATE = 1
+	NdisFddiStateBreak       NDIS_FDDI_LCONNECTION_STATE = 2
+	NdisFddiStateTrace       NDIS_FDDI_LCONNECTION_STATE = 3
+	NdisFddiStateConnect     NDIS_FDDI_LCONNECTION_STATE = 4
+	NdisFddiStateNext        NDIS_FDDI_LCONNECTION_STATE = 5
+	NdisFddiStateSignal      NDIS_FDDI_LCONNECTION_STATE = 6
+	NdisFddiStateJoin        NDIS_FDDI_LCONNECTION_STATE = 7
+	NdisFddiStateVerify      NDIS_FDDI_LCONNECTION_STATE = 8
+	NdisFddiStateActive      NDIS_FDDI_LCONNECTION_STATE = 9
+	NdisFddiStateMaintenance NDIS_FDDI_LCONNECTION_STATE = 10
 )
 
 type NDIS_WAN_MEDIUM_SUBTYPE int32
 
 const (
-	NdisWanMediumHub = 0
-	NdisWanMediumX_25 = 1
-	NdisWanMediumIsdn = 2
-	NdisWanMediumSerial = 3
-	NdisWanMediumFrameRelay = 4
-	NdisWanMediumAtm = 5
-	NdisWanMediumSonet = 6
-	NdisWanMediumSW56K = 7
-	NdisWanMediumPPTP = 8
-	NdisWanMediumL2TP = 9
-	NdisWanMediumIrda = 10
-	NdisWanMediumParallel = 11
-	NdisWanMediumPppoe = 12
-	NdisWanMediumSSTP = 13
-	NdisWanMediumAgileVPN = 14
-	NdisWanMediumGre = 15
-	NdisWanMediumSubTypeMax = 16
+	NdisWanMediumHub        NDIS_WAN_MEDIUM_SUBTYPE = 0
+	NdisWanMediumX_25       NDIS_WAN_MEDIUM_SUBTYPE = 1
+	NdisWanMediumIsdn       NDIS_WAN_MEDIUM_SUBTYPE = 2
+	NdisWanMediumSerial     NDIS_WAN_MEDIUM_SUBTYPE = 3
+	NdisWanMediumFrameRelay NDIS_WAN_MEDIUM_SUBTYPE = 4
+	NdisWanMediumAtm        NDIS_WAN_MEDIUM_SUBTYPE = 5
+	NdisWanMediumSonet      NDIS_WAN_MEDIUM_SUBTYPE = 6
+	NdisWanMediumSW56K      NDIS_WAN_MEDIUM_SUBTYPE = 7
+	NdisWanMediumPPTP       NDIS_WAN_MEDIUM_SUBTYPE = 8
+	NdisWanMediumL2TP       NDIS_WAN_MEDIUM_SUBTYPE = 9
+	NdisWanMediumIrda       NDIS_WAN_MEDIUM_SUBTYPE = 10
+	NdisWanMediumParallel   NDIS_WAN_MEDIUM_SUBTYPE = 11
+	NdisWanMediumPppoe      NDIS_WAN_MEDIUM_SUBTYPE = 12
+	NdisWanMediumSSTP       NDIS_WAN_MEDIUM_SUBTYPE = 13
+	NdisWanMediumAgileVPN   NDIS_WAN_MEDIUM_SUBTYPE = 14
+	NdisWanMediumGre        NDIS_WAN_MEDIUM_SUBTYPE = 15
+	NdisWanMediumSubTypeMax NDIS_WAN_MEDIUM_SUBTYPE = 16
 )
 
 type NDIS_WAN_HEADER_FORMAT int32
 
 const (
-	NdisWanHeaderNative = 0
-	NdisWanHeaderEthernet = 1
+	NdisWanHeaderNative   NDIS_WAN_HEADER_FORMAT = 0
+	NdisWanHeaderEthernet NDIS_WAN_HEADER_FORMAT = 1
 )
 
 type NDIS_WAN_QUALITY int32
 
 const (
-	NdisWanRaw = 0
-	NdisWanErrorControl = 1
-	NdisWanReliable = 2
+	NdisWanRaw          NDIS_WAN_QUALITY = 0
+	NdisWanErrorControl NDIS_WAN_QUALITY = 1
+	NdisWanReliable     NDIS_WAN_QUALITY = 2
 )
 
 type NDIS_802_5_RING_STATE int32
 
 const (
-	NdisRingStateOpened = 1
-	NdisRingStateClosed = 2
-	NdisRingStateOpening = 3
-	NdisRingStateClosing = 4
-	NdisRingStateOpenFailure = 5
-	NdisRingStateRingFailure = 6
+	NdisRingStateOpened      NDIS_802_5_RING_STATE = 1
+	NdisRingStateClosed      NDIS_802_5_RING_STATE = 2
+	NdisRingStateOpening     NDIS_802_5_RING_STATE = 3
+	NdisRingStateClosing     NDIS_802_5_RING_STATE = 4
+	NdisRingStateOpenFailure NDIS_802_5_RING_STATE = 5
+	NdisRingStateRingFailure NDIS_802_5_RING_STATE = 6
 )
 
 type NDIS_MEDIA_STATE int32
 
 const (
-	NdisMediaStateConnected = 0
-	NdisMediaStateDisconnected = 1
+	NdisMediaStateConnected    NDIS_MEDIA_STATE = 0
+	NdisMediaStateDisconnected NDIS_MEDIA_STATE = 1
 )
 
 type NDIS_SUPPORTED_PAUSE_FUNCTIONS int32
 
 const (
-	NdisPauseFunctionsUnsupported = 0
-	NdisPauseFunctionsSendOnly = 1
-	NdisPauseFunctionsReceiveOnly = 2
-	NdisPauseFunctionsSendAndReceive = 3
-	NdisPauseFunctionsUnknown = 4
+	NdisPauseFunctionsUnsupported    NDIS_SUPPORTED_PAUSE_FUNCTIONS = 0
+	NdisPauseFunctionsSendOnly       NDIS_SUPPORTED_PAUSE_FUNCTIONS = 1
+	NdisPauseFunctionsReceiveOnly    NDIS_SUPPORTED_PAUSE_FUNCTIONS = 2
+	NdisPauseFunctionsSendAndReceive NDIS_SUPPORTED_PAUSE_FUNCTIONS = 3
+	NdisPauseFunctionsUnknown        NDIS_SUPPORTED_PAUSE_FUNCTIONS = 4
 )
 
 type NDIS_PORT_TYPE int32
 
 const (
-	NdisPortTypeUndefined = 0
-	NdisPortTypeBridge = 1
-	NdisPortTypeRasConnection = 2
-	NdisPortType8021xSupplicant = 3
-	NdisPortTypeMax = 4
+	NdisPortTypeUndefined       NDIS_PORT_TYPE = 0
+	NdisPortTypeBridge          NDIS_PORT_TYPE = 1
+	NdisPortTypeRasConnection   NDIS_PORT_TYPE = 2
+	NdisPortType8021xSupplicant NDIS_PORT_TYPE = 3
+	NdisPortTypeMax             NDIS_PORT_TYPE = 4
 )
 
 type NDIS_PORT_AUTHORIZATION_STATE int32
 
 const (
-	NdisPortAuthorizationUnknown = 0
-	NdisPortAuthorized = 1
-	NdisPortUnauthorized = 2
-	NdisPortReauthorizing = 3
+	NdisPortAuthorizationUnknown NDIS_PORT_AUTHORIZATION_STATE = 0
+	NdisPortAuthorized           NDIS_PORT_AUTHORIZATION_STATE = 1
+	NdisPortUnauthorized         NDIS_PORT_AUTHORIZATION_STATE = 2
+	NdisPortReauthorizing        NDIS_PORT_AUTHORIZATION_STATE = 3
 )
 
 type NDIS_PORT_CONTROL_STATE int32
 
 const (
-	NdisPortControlStateUnknown = 0
-	NdisPortControlStateControlled = 1
-	NdisPortControlStateUncontrolled = 2
+	NdisPortControlStateUnknown      NDIS_PORT_CONTROL_STATE = 0
+	NdisPortControlStateControlled   NDIS_PORT_CONTROL_STATE = 1
+	NdisPortControlStateUncontrolled NDIS_PORT_CONTROL_STATE = 2
 )
 
 type NDIS_NETWORK_CHANGE_TYPE int32
 
 const (
-	NdisPossibleNetworkChange = 1
-	NdisDefinitelyNetworkChange = 2
-	NdisNetworkChangeFromMediaConnect = 3
-	NdisNetworkChangeMax = 4
+	NdisPossibleNetworkChange         NDIS_NETWORK_CHANGE_TYPE = 1
+	NdisDefinitelyNetworkChange       NDIS_NETWORK_CHANGE_TYPE = 2
+	NdisNetworkChangeFromMediaConnect NDIS_NETWORK_CHANGE_TYPE = 3
+	NdisNetworkChangeMax              NDIS_NETWORK_CHANGE_TYPE = 4
 )
 
 type NDIS_PROCESSOR_VENDOR int32
 
 const (
-	NdisProcessorVendorUnknown = 0
-	NdisProcessorVendorGenuinIntel = 1
-	NdisProcessorVendorGenuineIntel = 1
-	NdisProcessorVendorAuthenticAMD = 2
+	NdisProcessorVendorUnknown      NDIS_PROCESSOR_VENDOR = 0
+	NdisProcessorVendorGenuinIntel  NDIS_PROCESSOR_VENDOR = 1
+	NdisProcessorVendorGenuineIntel NDIS_PROCESSOR_VENDOR = 1
+	NdisProcessorVendorAuthenticAMD NDIS_PROCESSOR_VENDOR = 2
 )
 
 type DOT11_PHY_TYPE int32
 
 const (
-	dot11_phy_type_unknown = 0
-	dot11_phy_type_any = 0
-	dot11_phy_type_fhss = 1
-	dot11_phy_type_dsss = 2
-	dot11_phy_type_irbaseband = 3
-	dot11_phy_type_ofdm = 4
-	dot11_phy_type_hrdsss = 5
-	dot11_phy_type_erp = 6
-	dot11_phy_type_ht = 7
-	dot11_phy_type_vht = 8
-	dot11_phy_type_dmg = 9
-	dot11_phy_type_he = 10
-	dot11_phy_type_IHV_start = -2147483648
-	dot11_phy_type_IHV_end = -1
+	dot11_phy_type_unknown    DOT11_PHY_TYPE = 0
+	dot11_phy_type_any        DOT11_PHY_TYPE = 0
+	dot11_phy_type_fhss       DOT11_PHY_TYPE = 1
+	dot11_phy_type_dsss       DOT11_PHY_TYPE = 2
+	dot11_phy_type_irbaseband DOT11_PHY_TYPE = 3
+	dot11_phy_type_ofdm       DOT11_PHY_TYPE = 4
+	dot11_phy_type_hrdsss     DOT11_PHY_TYPE = 5
+	dot11_phy_type_erp        DOT11_PHY_TYPE = 6
+	dot11_phy_type_ht         DOT11_PHY_TYPE = 7
+	dot11_phy_type_vht        DOT11_PHY_TYPE = 8
+	dot11_phy_type_dmg        DOT11_PHY_TYPE = 9
+	dot11_phy_type_he         DOT11_PHY_TYPE = 10
+	dot11_phy_type_IHV_start  DOT11_PHY_TYPE = -2147483648
+	dot11_phy_type_IHV_end    DOT11_PHY_TYPE = -1
 )
 
 type DOT11_OFFLOAD_TYPE int32
 
 const (
-	dot11_offload_type_wep = 1
-	dot11_offload_type_auth = 2
+	dot11_offload_type_wep  DOT11_OFFLOAD_TYPE = 1
+	dot11_offload_type_auth DOT11_OFFLOAD_TYPE = 2
 )
 
 type DOT11_KEY_DIRECTION int32
 
 const (
-	dot11_key_direction_both = 1
-	dot11_key_direction_inbound = 2
-	dot11_key_direction_outbound = 3
+	dot11_key_direction_both     DOT11_KEY_DIRECTION = 1
+	dot11_key_direction_inbound  DOT11_KEY_DIRECTION = 2
+	dot11_key_direction_outbound DOT11_KEY_DIRECTION = 3
 )
 
 type DOT11_SCAN_TYPE int32
 
 const (
-	dot11_scan_type_active = 1
-	dot11_scan_type_passive = 2
-	dot11_scan_type_auto = 3
-	dot11_scan_type_forced = -2147483648
+	dot11_scan_type_active  DOT11_SCAN_TYPE = 1
+	dot11_scan_type_passive DOT11_SCAN_TYPE = 2
+	dot11_scan_type_auto    DOT11_SCAN_TYPE = 3
+	dot11_scan_type_forced  DOT11_SCAN_TYPE = -2147483648
 )
 
 type CH_DESCRIPTION_TYPE int32
 
 const (
-	ch_description_type_logical = 1
-	ch_description_type_center_frequency = 2
-	ch_description_type_phy_specific = 3
+	ch_description_type_logical          CH_DESCRIPTION_TYPE = 1
+	ch_description_type_center_frequency CH_DESCRIPTION_TYPE = 2
+	ch_description_type_phy_specific     CH_DESCRIPTION_TYPE = 3
 )
 
 type DOT11_UPDATE_IE_OP int32
 
 const (
-	dot11_update_ie_op_create_replace = 1
-	dot11_update_ie_op_delete = 2
+	dot11_update_ie_op_create_replace DOT11_UPDATE_IE_OP = 1
+	dot11_update_ie_op_delete         DOT11_UPDATE_IE_OP = 2
 )
 
 type DOT11_RESET_TYPE int32
 
 const (
-	dot11_reset_type_phy = 1
-	dot11_reset_type_mac = 2
-	dot11_reset_type_phy_and_mac = 3
+	dot11_reset_type_phy         DOT11_RESET_TYPE = 1
+	dot11_reset_type_mac         DOT11_RESET_TYPE = 2
+	dot11_reset_type_phy_and_mac DOT11_RESET_TYPE = 3
 )
 
 type DOT11_POWER_MODE int32
 
 const (
-	dot11_power_mode_unknown = 0
-	dot11_power_mode_active = 1
-	dot11_power_mode_powersave = 2
+	dot11_power_mode_unknown   DOT11_POWER_MODE = 0
+	dot11_power_mode_active    DOT11_POWER_MODE = 1
+	dot11_power_mode_powersave DOT11_POWER_MODE = 2
 )
 
 type DOT11_TEMP_TYPE int32
 
 const (
-	dot11_temp_type_unknown = 0
-	dot11_temp_type_1 = 1
-	dot11_temp_type_2 = 2
+	dot11_temp_type_unknown DOT11_TEMP_TYPE = 0
+	dot11_temp_type_1       DOT11_TEMP_TYPE = 1
+	dot11_temp_type_2       DOT11_TEMP_TYPE = 2
 )
 
 type DOT11_DIVERSITY_SUPPORT int32
 
 const (
-	dot11_diversity_support_unknown = 0
-	dot11_diversity_support_fixedlist = 1
-	dot11_diversity_support_notsupported = 2
-	dot11_diversity_support_dynamic = 3
+	dot11_diversity_support_unknown      DOT11_DIVERSITY_SUPPORT = 0
+	dot11_diversity_support_fixedlist    DOT11_DIVERSITY_SUPPORT = 1
+	dot11_diversity_support_notsupported DOT11_DIVERSITY_SUPPORT = 2
+	dot11_diversity_support_dynamic      DOT11_DIVERSITY_SUPPORT = 3
 )
 
 type DOT11_HOP_ALGO_ADOPTED int32
 
 const (
-	dot11_hop_algo_current = 0
-	dot11_hop_algo_hop_index = 1
-	dot11_hop_algo_hcc = 2
+	dot11_hop_algo_current   DOT11_HOP_ALGO_ADOPTED = 0
+	dot11_hop_algo_hop_index DOT11_HOP_ALGO_ADOPTED = 1
+	dot11_hop_algo_hcc       DOT11_HOP_ALGO_ADOPTED = 2
 )
 
 type DOT11_AC_PARAM int32
 
 const (
-	dot11_AC_param_BE = 0
-	dot11_AC_param_BK = 1
-	dot11_AC_param_VI = 2
-	dot11_AC_param_VO = 3
-	dot11_AC_param_max = 4
+	dot11_AC_param_BE  DOT11_AC_PARAM = 0
+	dot11_AC_param_BK  DOT11_AC_PARAM = 1
+	dot11_AC_param_VI  DOT11_AC_PARAM = 2
+	dot11_AC_param_VO  DOT11_AC_PARAM = 3
+	dot11_AC_param_max DOT11_AC_PARAM = 4
 )
 
 type DOT11_DIRECTION int32
 
 const (
-	DOT11_DIR_INBOUND = 1
-	DOT11_DIR_OUTBOUND = 2
-	DOT11_DIR_BOTH = 3
+	DOT11_DIR_INBOUND  DOT11_DIRECTION = 1
+	DOT11_DIR_OUTBOUND DOT11_DIRECTION = 2
+	DOT11_DIR_BOTH     DOT11_DIRECTION = 3
 )
 
 type DOT11_ASSOCIATION_STATE int32
 
 const (
-	dot11_assoc_state_zero = 0
-	dot11_assoc_state_unauth_unassoc = 1
-	dot11_assoc_state_auth_unassoc = 2
-	dot11_assoc_state_auth_assoc = 3
+	dot11_assoc_state_zero           DOT11_ASSOCIATION_STATE = 0
+	dot11_assoc_state_unauth_unassoc DOT11_ASSOCIATION_STATE = 1
+	dot11_assoc_state_auth_unassoc   DOT11_ASSOCIATION_STATE = 2
+	dot11_assoc_state_auth_assoc     DOT11_ASSOCIATION_STATE = 3
 )
 
 type DOT11_DS_INFO int32
 
 const (
-	DOT11_DS_CHANGED = 0
-	DOT11_DS_UNCHANGED = 1
-	DOT11_DS_UNKNOWN = 2
+	DOT11_DS_CHANGED   DOT11_DS_INFO = 0
+	DOT11_DS_UNCHANGED DOT11_DS_INFO = 1
+	DOT11_DS_UNKNOWN   DOT11_DS_INFO = 2
 )
 
 type DOT11_WPS_CONFIG_METHOD int32
 
 const (
-	DOT11_WPS_CONFIG_METHOD_NULL = 0
-	DOT11_WPS_CONFIG_METHOD_DISPLAY = 8
-	DOT11_WPS_CONFIG_METHOD_NFC_TAG = 32
-	DOT11_WPS_CONFIG_METHOD_NFC_INTERFACE = 64
-	DOT11_WPS_CONFIG_METHOD_PUSHBUTTON = 128
-	DOT11_WPS_CONFIG_METHOD_KEYPAD = 256
-	DOT11_WPS_CONFIG_METHOD_WFDS_DEFAULT = 4096
+	DOT11_WPS_CONFIG_METHOD_NULL          DOT11_WPS_CONFIG_METHOD = 0
+	DOT11_WPS_CONFIG_METHOD_DISPLAY       DOT11_WPS_CONFIG_METHOD = 8
+	DOT11_WPS_CONFIG_METHOD_NFC_TAG       DOT11_WPS_CONFIG_METHOD = 32
+	DOT11_WPS_CONFIG_METHOD_NFC_INTERFACE DOT11_WPS_CONFIG_METHOD = 64
+	DOT11_WPS_CONFIG_METHOD_PUSHBUTTON    DOT11_WPS_CONFIG_METHOD = 128
+	DOT11_WPS_CONFIG_METHOD_KEYPAD        DOT11_WPS_CONFIG_METHOD = 256
+	DOT11_WPS_CONFIG_METHOD_WFDS_DEFAULT  DOT11_WPS_CONFIG_METHOD = 4096
 )
 
 type DOT11_WPS_DEVICE_PASSWORD_ID int32
 
 const (
-	DOT11_WPS_PASSWORD_ID_DEFAULT = 0
-	DOT11_WPS_PASSWORD_ID_USER_SPECIFIED = 1
-	DOT11_WPS_PASSWORD_ID_MACHINE_SPECIFIED = 2
-	DOT11_WPS_PASSWORD_ID_REKEY = 3
-	DOT11_WPS_PASSWORD_ID_PUSHBUTTON = 4
-	DOT11_WPS_PASSWORD_ID_REGISTRAR_SPECIFIED = 5
-	DOT11_WPS_PASSWORD_ID_NFC_CONNECTION_HANDOVER = 7
-	DOT11_WPS_PASSWORD_ID_WFD_SERVICES = 8
-	DOT11_WPS_PASSWORD_ID_OOB_RANGE_MIN = 16
-	DOT11_WPS_PASSWORD_ID_OOB_RANGE_MAX = 65535
+	DOT11_WPS_PASSWORD_ID_DEFAULT                 DOT11_WPS_DEVICE_PASSWORD_ID = 0
+	DOT11_WPS_PASSWORD_ID_USER_SPECIFIED          DOT11_WPS_DEVICE_PASSWORD_ID = 1
+	DOT11_WPS_PASSWORD_ID_MACHINE_SPECIFIED       DOT11_WPS_DEVICE_PASSWORD_ID = 2
+	DOT11_WPS_PASSWORD_ID_REKEY                   DOT11_WPS_DEVICE_PASSWORD_ID = 3
+	DOT11_WPS_PASSWORD_ID_PUSHBUTTON              DOT11_WPS_DEVICE_PASSWORD_ID = 4
+	DOT11_WPS_PASSWORD_ID_REGISTRAR_SPECIFIED     DOT11_WPS_DEVICE_PASSWORD_ID = 5
+	DOT11_WPS_PASSWORD_ID_NFC_CONNECTION_HANDOVER DOT11_WPS_DEVICE_PASSWORD_ID = 7
+	DOT11_WPS_PASSWORD_ID_WFD_SERVICES            DOT11_WPS_DEVICE_PASSWORD_ID = 8
+	DOT11_WPS_PASSWORD_ID_OOB_RANGE_MIN           DOT11_WPS_DEVICE_PASSWORD_ID = 16
+	DOT11_WPS_PASSWORD_ID_OOB_RANGE_MAX           DOT11_WPS_DEVICE_PASSWORD_ID = 65535
 )
 
 type DOT11_ANQP_QUERY_RESULT int32
 
 const (
-	dot11_ANQP_query_result_success = 0
-	dot11_ANQP_query_result_failure = 1
-	dot11_ANQP_query_result_timed_out = 2
-	dot11_ANQP_query_result_resources = 3
-	dot11_ANQP_query_result_advertisement_protocol_not_supported_on_remote = 4
-	dot11_ANQP_query_result_gas_protocol_failure = 5
-	dot11_ANQP_query_result_advertisement_server_not_responding = 6
-	dot11_ANQP_query_result_access_issues = 7
+	dot11_ANQP_query_result_success                                        DOT11_ANQP_QUERY_RESULT = 0
+	dot11_ANQP_query_result_failure                                        DOT11_ANQP_QUERY_RESULT = 1
+	dot11_ANQP_query_result_timed_out                                      DOT11_ANQP_QUERY_RESULT = 2
+	dot11_ANQP_query_result_resources                                      DOT11_ANQP_QUERY_RESULT = 3
+	dot11_ANQP_query_result_advertisement_protocol_not_supported_on_remote DOT11_ANQP_QUERY_RESULT = 4
+	dot11_ANQP_query_result_gas_protocol_failure                           DOT11_ANQP_QUERY_RESULT = 5
+	dot11_ANQP_query_result_advertisement_server_not_responding            DOT11_ANQP_QUERY_RESULT = 6
+	dot11_ANQP_query_result_access_issues                                  DOT11_ANQP_QUERY_RESULT = 7
 )
 
 type DOT11_WFD_DISCOVER_TYPE int32
 
 const (
-	dot11_wfd_discover_type_scan_only = 1
-	dot11_wfd_discover_type_find_only = 2
-	dot11_wfd_discover_type_auto = 3
-	dot11_wfd_discover_type_scan_social_channels = 4
-	dot11_wfd_discover_type_forced = -2147483648
+	dot11_wfd_discover_type_scan_only            DOT11_WFD_DISCOVER_TYPE = 1
+	dot11_wfd_discover_type_find_only            DOT11_WFD_DISCOVER_TYPE = 2
+	dot11_wfd_discover_type_auto                 DOT11_WFD_DISCOVER_TYPE = 3
+	dot11_wfd_discover_type_scan_social_channels DOT11_WFD_DISCOVER_TYPE = 4
+	dot11_wfd_discover_type_forced               DOT11_WFD_DISCOVER_TYPE = -2147483648
 )
 
 type DOT11_WFD_SCAN_TYPE int32
 
 const (
-	dot11_wfd_scan_type_active = 1
-	dot11_wfd_scan_type_passive = 2
-	dot11_wfd_scan_type_auto = 3
+	dot11_wfd_scan_type_active  DOT11_WFD_SCAN_TYPE = 1
+	dot11_wfd_scan_type_passive DOT11_WFD_SCAN_TYPE = 2
+	dot11_wfd_scan_type_auto    DOT11_WFD_SCAN_TYPE = 3
 )
 
 type DOT11_POWER_MODE_REASON int32
 
 const (
-	dot11_power_mode_reason_no_change = 0
-	dot11_power_mode_reason_noncompliant_AP = 1
-	dot11_power_mode_reason_legacy_WFD_device = 2
-	dot11_power_mode_reason_compliant_AP = 3
-	dot11_power_mode_reason_compliant_WFD_device = 4
-	dot11_power_mode_reason_others = 5
+	dot11_power_mode_reason_no_change            DOT11_POWER_MODE_REASON = 0
+	dot11_power_mode_reason_noncompliant_AP      DOT11_POWER_MODE_REASON = 1
+	dot11_power_mode_reason_legacy_WFD_device    DOT11_POWER_MODE_REASON = 2
+	dot11_power_mode_reason_compliant_AP         DOT11_POWER_MODE_REASON = 3
+	dot11_power_mode_reason_compliant_WFD_device DOT11_POWER_MODE_REASON = 4
+	dot11_power_mode_reason_others               DOT11_POWER_MODE_REASON = 5
 )
 
 type DOT11_MANUFACTURING_TEST_TYPE int32
 
 const (
-	dot11_manufacturing_test_unknown = 0
-	dot11_manufacturing_test_self_start = 1
-	dot11_manufacturing_test_self_query_result = 2
-	dot11_manufacturing_test_rx = 3
-	dot11_manufacturing_test_tx = 4
-	dot11_manufacturing_test_query_adc = 5
-	dot11_manufacturing_test_set_data = 6
-	dot11_manufacturing_test_query_data = 7
-	dot11_manufacturing_test_sleep = 8
-	dot11_manufacturing_test_awake = 9
-	dot11_manufacturing_test_IHV_start = -2147483648
-	dot11_manufacturing_test_IHV_end = -1
+	dot11_manufacturing_test_unknown           DOT11_MANUFACTURING_TEST_TYPE = 0
+	dot11_manufacturing_test_self_start        DOT11_MANUFACTURING_TEST_TYPE = 1
+	dot11_manufacturing_test_self_query_result DOT11_MANUFACTURING_TEST_TYPE = 2
+	dot11_manufacturing_test_rx                DOT11_MANUFACTURING_TEST_TYPE = 3
+	dot11_manufacturing_test_tx                DOT11_MANUFACTURING_TEST_TYPE = 4
+	dot11_manufacturing_test_query_adc         DOT11_MANUFACTURING_TEST_TYPE = 5
+	dot11_manufacturing_test_set_data          DOT11_MANUFACTURING_TEST_TYPE = 6
+	dot11_manufacturing_test_query_data        DOT11_MANUFACTURING_TEST_TYPE = 7
+	dot11_manufacturing_test_sleep             DOT11_MANUFACTURING_TEST_TYPE = 8
+	dot11_manufacturing_test_awake             DOT11_MANUFACTURING_TEST_TYPE = 9
+	dot11_manufacturing_test_IHV_start         DOT11_MANUFACTURING_TEST_TYPE = -2147483648
+	dot11_manufacturing_test_IHV_end           DOT11_MANUFACTURING_TEST_TYPE = -1
 )
 
 type DOT11_MANUFACTURING_SELF_TEST_TYPE int32
 
 const (
-	DOT11_MANUFACTURING_SELF_TEST_TYPE_INTERFACE = 1
-	DOT11_MANUFACTURING_SELF_TEST_TYPE_RF_INTERFACE = 2
-	DOT11_MANUFACTURING_SELF_TEST_TYPE_BT_COEXISTENCE = 3
+	DOT11_MANUFACTURING_SELF_TEST_TYPE_INTERFACE      DOT11_MANUFACTURING_SELF_TEST_TYPE = 1
+	DOT11_MANUFACTURING_SELF_TEST_TYPE_RF_INTERFACE   DOT11_MANUFACTURING_SELF_TEST_TYPE = 2
+	DOT11_MANUFACTURING_SELF_TEST_TYPE_BT_COEXISTENCE DOT11_MANUFACTURING_SELF_TEST_TYPE = 3
 )
 
 type DOT11_BAND int32
 
 const (
-	dot11_band_2p4g = 1
-	dot11_band_4p9g = 2
-	dot11_band_5g = 3
+	dot11_band_2p4g DOT11_BAND = 1
+	dot11_band_4p9g DOT11_BAND = 2
+	dot11_band_5g   DOT11_BAND = 3
 )
 
 type DOT11_MANUFACTURING_CALLBACK_TYPE int32
 
 const (
-	dot11_manufacturing_callback_unknown = 0
-	dot11_manufacturing_callback_self_test_complete = 1
-	dot11_manufacturing_callback_sleep_complete = 2
-	dot11_manufacturing_callback_IHV_start = -2147483648
-	dot11_manufacturing_callback_IHV_end = -1
+	dot11_manufacturing_callback_unknown            DOT11_MANUFACTURING_CALLBACK_TYPE = 0
+	dot11_manufacturing_callback_self_test_complete DOT11_MANUFACTURING_CALLBACK_TYPE = 1
+	dot11_manufacturing_callback_sleep_complete     DOT11_MANUFACTURING_CALLBACK_TYPE = 2
+	dot11_manufacturing_callback_IHV_start          DOT11_MANUFACTURING_CALLBACK_TYPE = -2147483648
+	dot11_manufacturing_callback_IHV_end            DOT11_MANUFACTURING_CALLBACK_TYPE = -1
 )
 
 type WLAN_CONNECTION_MODE int32
 
 const (
-	wlan_connection_mode_profile = 0
-	wlan_connection_mode_temporary_profile = 1
-	wlan_connection_mode_discovery_secure = 2
-	wlan_connection_mode_discovery_unsecure = 3
-	wlan_connection_mode_auto = 4
-	wlan_connection_mode_invalid = 5
+	wlan_connection_mode_profile            WLAN_CONNECTION_MODE = 0
+	wlan_connection_mode_temporary_profile  WLAN_CONNECTION_MODE = 1
+	wlan_connection_mode_discovery_secure   WLAN_CONNECTION_MODE = 2
+	wlan_connection_mode_discovery_unsecure WLAN_CONNECTION_MODE = 3
+	wlan_connection_mode_auto               WLAN_CONNECTION_MODE = 4
+	wlan_connection_mode_invalid            WLAN_CONNECTION_MODE = 5
 )
 
 type WLAN_INTERFACE_STATE int32
 
 const (
-	wlan_interface_state_not_ready = 0
-	wlan_interface_state_connected = 1
-	wlan_interface_state_ad_hoc_network_formed = 2
-	wlan_interface_state_disconnecting = 3
-	wlan_interface_state_disconnected = 4
-	wlan_interface_state_associating = 5
-	wlan_interface_state_discovering = 6
-	wlan_interface_state_authenticating = 7
+	wlan_interface_state_not_ready             WLAN_INTERFACE_STATE = 0
+	wlan_interface_state_connected             WLAN_INTERFACE_STATE = 1
+	wlan_interface_state_ad_hoc_network_formed WLAN_INTERFACE_STATE = 2
+	wlan_interface_state_disconnecting         WLAN_INTERFACE_STATE = 3
+	wlan_interface_state_disconnected          WLAN_INTERFACE_STATE = 4
+	wlan_interface_state_associating           WLAN_INTERFACE_STATE = 5
+	wlan_interface_state_discovering           WLAN_INTERFACE_STATE = 6
+	wlan_interface_state_authenticating        WLAN_INTERFACE_STATE = 7
 )
 
 type WLAN_ADHOC_NETWORK_STATE int32
 
 const (
-	wlan_adhoc_network_state_formed = 0
-	wlan_adhoc_network_state_connected = 1
+	wlan_adhoc_network_state_formed    WLAN_ADHOC_NETWORK_STATE = 0
+	wlan_adhoc_network_state_connected WLAN_ADHOC_NETWORK_STATE = 1
 )
 
 type DOT11_RADIO_STATE int32
 
 const (
-	dot11_radio_state_unknown = 0
-	dot11_radio_state_on = 1
-	dot11_radio_state_off = 2
+	dot11_radio_state_unknown DOT11_RADIO_STATE = 0
+	dot11_radio_state_on      DOT11_RADIO_STATE = 1
+	dot11_radio_state_off     DOT11_RADIO_STATE = 2
 )
 
 type WLAN_OPERATIONAL_STATE int32
 
 const (
-	wlan_operational_state_unknown = 0
-	wlan_operational_state_off = 1
-	wlan_operational_state_on = 2
-	wlan_operational_state_going_off = 3
-	wlan_operational_state_going_on = 4
+	wlan_operational_state_unknown   WLAN_OPERATIONAL_STATE = 0
+	wlan_operational_state_off       WLAN_OPERATIONAL_STATE = 1
+	wlan_operational_state_on        WLAN_OPERATIONAL_STATE = 2
+	wlan_operational_state_going_off WLAN_OPERATIONAL_STATE = 3
+	wlan_operational_state_going_on  WLAN_OPERATIONAL_STATE = 4
 )
 
 type WLAN_INTERFACE_TYPE int32
 
 const (
-	wlan_interface_type_emulated_802_11 = 0
-	wlan_interface_type_native_802_11 = 1
-	wlan_interface_type_invalid = 2
+	wlan_interface_type_emulated_802_11 WLAN_INTERFACE_TYPE = 0
+	wlan_interface_type_native_802_11   WLAN_INTERFACE_TYPE = 1
+	wlan_interface_type_invalid         WLAN_INTERFACE_TYPE = 2
 )
 
 type WLAN_POWER_SETTING int32
 
 const (
-	wlan_power_setting_no_saving = 0
-	wlan_power_setting_low_saving = 1
-	wlan_power_setting_medium_saving = 2
-	wlan_power_setting_maximum_saving = 3
-	wlan_power_setting_invalid = 4
+	wlan_power_setting_no_saving      WLAN_POWER_SETTING = 0
+	wlan_power_setting_low_saving     WLAN_POWER_SETTING = 1
+	wlan_power_setting_medium_saving  WLAN_POWER_SETTING = 2
+	wlan_power_setting_maximum_saving WLAN_POWER_SETTING = 3
+	wlan_power_setting_invalid        WLAN_POWER_SETTING = 4
 )
 
 type WLAN_NOTIFICATION_ACM int32
 
 const (
-	wlan_notification_acm_start = 0
-	wlan_notification_acm_autoconf_enabled = 1
-	wlan_notification_acm_autoconf_disabled = 2
-	wlan_notification_acm_background_scan_enabled = 3
-	wlan_notification_acm_background_scan_disabled = 4
-	wlan_notification_acm_bss_type_change = 5
-	wlan_notification_acm_power_setting_change = 6
-	wlan_notification_acm_scan_complete = 7
-	wlan_notification_acm_scan_fail = 8
-	wlan_notification_acm_connection_start = 9
-	wlan_notification_acm_connection_complete = 10
-	wlan_notification_acm_connection_attempt_fail = 11
-	wlan_notification_acm_filter_list_change = 12
-	wlan_notification_acm_interface_arrival = 13
-	wlan_notification_acm_interface_removal = 14
-	wlan_notification_acm_profile_change = 15
-	wlan_notification_acm_profile_name_change = 16
-	wlan_notification_acm_profiles_exhausted = 17
-	wlan_notification_acm_network_not_available = 18
-	wlan_notification_acm_network_available = 19
-	wlan_notification_acm_disconnecting = 20
-	wlan_notification_acm_disconnected = 21
-	wlan_notification_acm_adhoc_network_state_change = 22
-	wlan_notification_acm_profile_unblocked = 23
-	wlan_notification_acm_screen_power_change = 24
-	wlan_notification_acm_profile_blocked = 25
-	wlan_notification_acm_scan_list_refresh = 26
-	wlan_notification_acm_operational_state_change = 27
-	wlan_notification_acm_end = 28
+	wlan_notification_acm_start                      WLAN_NOTIFICATION_ACM = 0
+	wlan_notification_acm_autoconf_enabled           WLAN_NOTIFICATION_ACM = 1
+	wlan_notification_acm_autoconf_disabled          WLAN_NOTIFICATION_ACM = 2
+	wlan_notification_acm_background_scan_enabled    WLAN_NOTIFICATION_ACM = 3
+	wlan_notification_acm_background_scan_disabled   WLAN_NOTIFICATION_ACM = 4
+	wlan_notification_acm_bss_type_change            WLAN_NOTIFICATION_ACM = 5
+	wlan_notification_acm_power_setting_change       WLAN_NOTIFICATION_ACM = 6
+	wlan_notification_acm_scan_complete              WLAN_NOTIFICATION_ACM = 7
+	wlan_notification_acm_scan_fail                  WLAN_NOTIFICATION_ACM = 8
+	wlan_notification_acm_connection_start           WLAN_NOTIFICATION_ACM = 9
+	wlan_notification_acm_connection_complete        WLAN_NOTIFICATION_ACM = 10
+	wlan_notification_acm_connection_attempt_fail    WLAN_NOTIFICATION_ACM = 11
+	wlan_notification_acm_filter_list_change         WLAN_NOTIFICATION_ACM = 12
+	wlan_notification_acm_interface_arrival          WLAN_NOTIFICATION_ACM = 13
+	wlan_notification_acm_interface_removal          WLAN_NOTIFICATION_ACM = 14
+	wlan_notification_acm_profile_change             WLAN_NOTIFICATION_ACM = 15
+	wlan_notification_acm_profile_name_change        WLAN_NOTIFICATION_ACM = 16
+	wlan_notification_acm_profiles_exhausted         WLAN_NOTIFICATION_ACM = 17
+	wlan_notification_acm_network_not_available      WLAN_NOTIFICATION_ACM = 18
+	wlan_notification_acm_network_available          WLAN_NOTIFICATION_ACM = 19
+	wlan_notification_acm_disconnecting              WLAN_NOTIFICATION_ACM = 20
+	wlan_notification_acm_disconnected               WLAN_NOTIFICATION_ACM = 21
+	wlan_notification_acm_adhoc_network_state_change WLAN_NOTIFICATION_ACM = 22
+	wlan_notification_acm_profile_unblocked          WLAN_NOTIFICATION_ACM = 23
+	wlan_notification_acm_screen_power_change        WLAN_NOTIFICATION_ACM = 24
+	wlan_notification_acm_profile_blocked            WLAN_NOTIFICATION_ACM = 25
+	wlan_notification_acm_scan_list_refresh          WLAN_NOTIFICATION_ACM = 26
+	wlan_notification_acm_operational_state_change   WLAN_NOTIFICATION_ACM = 27
+	wlan_notification_acm_end                        WLAN_NOTIFICATION_ACM = 28
 )
 
 type WLAN_NOTIFICATION_MSM int32
 
 const (
-	wlan_notification_msm_start = 0
-	wlan_notification_msm_associating = 1
-	wlan_notification_msm_associated = 2
-	wlan_notification_msm_authenticating = 3
-	wlan_notification_msm_connected = 4
-	wlan_notification_msm_roaming_start = 5
-	wlan_notification_msm_roaming_end = 6
-	wlan_notification_msm_radio_state_change = 7
-	wlan_notification_msm_signal_quality_change = 8
-	wlan_notification_msm_disassociating = 9
-	wlan_notification_msm_disconnected = 10
-	wlan_notification_msm_peer_join = 11
-	wlan_notification_msm_peer_leave = 12
-	wlan_notification_msm_adapter_removal = 13
-	wlan_notification_msm_adapter_operation_mode_change = 14
-	wlan_notification_msm_link_degraded = 15
-	wlan_notification_msm_link_improved = 16
-	wlan_notification_msm_end = 17
+	wlan_notification_msm_start                         WLAN_NOTIFICATION_MSM = 0
+	wlan_notification_msm_associating                   WLAN_NOTIFICATION_MSM = 1
+	wlan_notification_msm_associated                    WLAN_NOTIFICATION_MSM = 2
+	wlan_notification_msm_authenticating                WLAN_NOTIFICATION_MSM = 3
+	wlan_notification_msm_connected                     WLAN_NOTIFICATION_MSM = 4
+	wlan_notification_msm_roaming_start                 WLAN_NOTIFICATION_MSM = 5
+	wlan_notification_msm_roaming_end                   WLAN_NOTIFICATION_MSM = 6
+	wlan_notification_msm_radio_state_change            WLAN_NOTIFICATION_MSM = 7
+	wlan_notification_msm_signal_quality_change         WLAN_NOTIFICATION_MSM = 8
+	wlan_notification_msm_disassociating                WLAN_NOTIFICATION_MSM = 9
+	wlan_notification_msm_disconnected                  WLAN_NOTIFICATION_MSM = 10
+	wlan_notification_msm_peer_join                     WLAN_NOTIFICATION_MSM = 11
+	wlan_notification_msm_peer_leave                    WLAN_NOTIFICATION_MSM = 12
+	wlan_notification_msm_adapter_removal               WLAN_NOTIFICATION_MSM = 13
+	wlan_notification_msm_adapter_operation_mode_change WLAN_NOTIFICATION_MSM = 14
+	wlan_notification_msm_link_degraded                 WLAN_NOTIFICATION_MSM = 15
+	wlan_notification_msm_link_improved                 WLAN_NOTIFICATION_MSM = 16
+	wlan_notification_msm_end                           WLAN_NOTIFICATION_MSM = 17
 )
 
 type WLAN_NOTIFICATION_SECURITY int32
 
 const (
-	wlan_notification_security_start = 0
-	wlan_notification_security_end = 1
+	wlan_notification_security_start WLAN_NOTIFICATION_SECURITY = 0
+	wlan_notification_security_end   WLAN_NOTIFICATION_SECURITY = 1
 )
 
 type WLAN_OPCODE_VALUE_TYPE int32
 
 const (
-	wlan_opcode_value_type_query_only = 0
-	wlan_opcode_value_type_set_by_group_policy = 1
-	wlan_opcode_value_type_set_by_user = 2
-	wlan_opcode_value_type_invalid = 3
+	wlan_opcode_value_type_query_only          WLAN_OPCODE_VALUE_TYPE = 0
+	wlan_opcode_value_type_set_by_group_policy WLAN_OPCODE_VALUE_TYPE = 1
+	wlan_opcode_value_type_set_by_user         WLAN_OPCODE_VALUE_TYPE = 2
+	wlan_opcode_value_type_invalid             WLAN_OPCODE_VALUE_TYPE = 3
 )
 
 type WLAN_INTF_OPCODE int32
 
 const (
-	wlan_intf_opcode_autoconf_start = 0
-	wlan_intf_opcode_autoconf_enabled = 1
-	wlan_intf_opcode_background_scan_enabled = 2
-	wlan_intf_opcode_media_streaming_mode = 3
-	wlan_intf_opcode_radio_state = 4
-	wlan_intf_opcode_bss_type = 5
-	wlan_intf_opcode_interface_state = 6
-	wlan_intf_opcode_current_connection = 7
-	wlan_intf_opcode_channel_number = 8
-	wlan_intf_opcode_supported_infrastructure_auth_cipher_pairs = 9
-	wlan_intf_opcode_supported_adhoc_auth_cipher_pairs = 10
-	wlan_intf_opcode_supported_country_or_region_string_list = 11
-	wlan_intf_opcode_current_operation_mode = 12
-	wlan_intf_opcode_supported_safe_mode = 13
-	wlan_intf_opcode_certified_safe_mode = 14
-	wlan_intf_opcode_hosted_network_capable = 15
-	wlan_intf_opcode_management_frame_protection_capable = 16
-	wlan_intf_opcode_autoconf_end = 268435455
-	wlan_intf_opcode_msm_start = 268435712
-	wlan_intf_opcode_statistics = 268435713
-	wlan_intf_opcode_rssi = 268435714
-	wlan_intf_opcode_msm_end = 536870911
-	wlan_intf_opcode_security_start = 536936448
-	wlan_intf_opcode_security_end = 805306367
-	wlan_intf_opcode_ihv_start = 805306368
-	wlan_intf_opcode_ihv_end = 1073741823
+	wlan_intf_opcode_autoconf_start                             WLAN_INTF_OPCODE = 0
+	wlan_intf_opcode_autoconf_enabled                           WLAN_INTF_OPCODE = 1
+	wlan_intf_opcode_background_scan_enabled                    WLAN_INTF_OPCODE = 2
+	wlan_intf_opcode_media_streaming_mode                       WLAN_INTF_OPCODE = 3
+	wlan_intf_opcode_radio_state                                WLAN_INTF_OPCODE = 4
+	wlan_intf_opcode_bss_type                                   WLAN_INTF_OPCODE = 5
+	wlan_intf_opcode_interface_state                            WLAN_INTF_OPCODE = 6
+	wlan_intf_opcode_current_connection                         WLAN_INTF_OPCODE = 7
+	wlan_intf_opcode_channel_number                             WLAN_INTF_OPCODE = 8
+	wlan_intf_opcode_supported_infrastructure_auth_cipher_pairs WLAN_INTF_OPCODE = 9
+	wlan_intf_opcode_supported_adhoc_auth_cipher_pairs          WLAN_INTF_OPCODE = 10
+	wlan_intf_opcode_supported_country_or_region_string_list    WLAN_INTF_OPCODE = 11
+	wlan_intf_opcode_current_operation_mode                     WLAN_INTF_OPCODE = 12
+	wlan_intf_opcode_supported_safe_mode                        WLAN_INTF_OPCODE = 13
+	wlan_intf_opcode_certified_safe_mode                        WLAN_INTF_OPCODE = 14
+	wlan_intf_opcode_hosted_network_capable                     WLAN_INTF_OPCODE = 15
+	wlan_intf_opcode_management_frame_protection_capable        WLAN_INTF_OPCODE = 16
+	wlan_intf_opcode_autoconf_end                               WLAN_INTF_OPCODE = 268435455
+	wlan_intf_opcode_msm_start                                  WLAN_INTF_OPCODE = 268435712
+	wlan_intf_opcode_statistics                                 WLAN_INTF_OPCODE = 268435713
+	wlan_intf_opcode_rssi                                       WLAN_INTF_OPCODE = 268435714
+	wlan_intf_opcode_msm_end                                    WLAN_INTF_OPCODE = 536870911
+	wlan_intf_opcode_security_start                             WLAN_INTF_OPCODE = 536936448
+	wlan_intf_opcode_security_end                               WLAN_INTF_OPCODE = 805306367
+	wlan_intf_opcode_ihv_start                                  WLAN_INTF_OPCODE = 805306368
+	wlan_intf_opcode_ihv_end                                    WLAN_INTF_OPCODE = 1073741823
 )
 
 type WLAN_AUTOCONF_OPCODE int32
 
 const (
-	wlan_autoconf_opcode_start = 0
-	wlan_autoconf_opcode_show_denied_networks = 1
-	wlan_autoconf_opcode_power_setting = 2
-	wlan_autoconf_opcode_only_use_gp_profiles_for_allowed_networks = 3
-	wlan_autoconf_opcode_allow_explicit_creds = 4
-	wlan_autoconf_opcode_block_period = 5
-	wlan_autoconf_opcode_allow_virtual_station_extensibility = 6
-	wlan_autoconf_opcode_end = 7
+	wlan_autoconf_opcode_start                                     WLAN_AUTOCONF_OPCODE = 0
+	wlan_autoconf_opcode_show_denied_networks                      WLAN_AUTOCONF_OPCODE = 1
+	wlan_autoconf_opcode_power_setting                             WLAN_AUTOCONF_OPCODE = 2
+	wlan_autoconf_opcode_only_use_gp_profiles_for_allowed_networks WLAN_AUTOCONF_OPCODE = 3
+	wlan_autoconf_opcode_allow_explicit_creds                      WLAN_AUTOCONF_OPCODE = 4
+	wlan_autoconf_opcode_block_period                              WLAN_AUTOCONF_OPCODE = 5
+	wlan_autoconf_opcode_allow_virtual_station_extensibility       WLAN_AUTOCONF_OPCODE = 6
+	wlan_autoconf_opcode_end                                       WLAN_AUTOCONF_OPCODE = 7
 )
 
 type WLAN_IHV_CONTROL_TYPE int32
 
 const (
-	wlan_ihv_control_type_service = 0
-	wlan_ihv_control_type_driver = 1
+	wlan_ihv_control_type_service WLAN_IHV_CONTROL_TYPE = 0
+	wlan_ihv_control_type_driver  WLAN_IHV_CONTROL_TYPE = 1
 )
 
 type WLAN_FILTER_LIST_TYPE int32
 
 const (
-	wlan_filter_list_type_gp_permit = 0
-	wlan_filter_list_type_gp_deny = 1
-	wlan_filter_list_type_user_permit = 2
-	wlan_filter_list_type_user_deny = 3
+	wlan_filter_list_type_gp_permit   WLAN_FILTER_LIST_TYPE = 0
+	wlan_filter_list_type_gp_deny     WLAN_FILTER_LIST_TYPE = 1
+	wlan_filter_list_type_user_permit WLAN_FILTER_LIST_TYPE = 2
+	wlan_filter_list_type_user_deny   WLAN_FILTER_LIST_TYPE = 3
 )
 
 type WLAN_SECURABLE_OBJECT int32
 
 const (
-	wlan_secure_permit_list = 0
-	wlan_secure_deny_list = 1
-	wlan_secure_ac_enabled = 2
-	wlan_secure_bc_scan_enabled = 3
-	wlan_secure_bss_type = 4
-	wlan_secure_show_denied = 5
-	wlan_secure_interface_properties = 6
-	wlan_secure_ihv_control = 7
-	wlan_secure_all_user_profiles_order = 8
-	wlan_secure_add_new_all_user_profiles = 9
-	wlan_secure_add_new_per_user_profiles = 10
-	wlan_secure_media_streaming_mode_enabled = 11
-	wlan_secure_current_operation_mode = 12
-	wlan_secure_get_plaintext_key = 13
-	wlan_secure_hosted_network_elevated_access = 14
-	wlan_secure_virtual_station_extensibility = 15
-	wlan_secure_wfd_elevated_access = 16
-	WLAN_SECURABLE_OBJECT_COUNT = 17
+	wlan_secure_permit_list                    WLAN_SECURABLE_OBJECT = 0
+	wlan_secure_deny_list                      WLAN_SECURABLE_OBJECT = 1
+	wlan_secure_ac_enabled                     WLAN_SECURABLE_OBJECT = 2
+	wlan_secure_bc_scan_enabled                WLAN_SECURABLE_OBJECT = 3
+	wlan_secure_bss_type                       WLAN_SECURABLE_OBJECT = 4
+	wlan_secure_show_denied                    WLAN_SECURABLE_OBJECT = 5
+	wlan_secure_interface_properties           WLAN_SECURABLE_OBJECT = 6
+	wlan_secure_ihv_control                    WLAN_SECURABLE_OBJECT = 7
+	wlan_secure_all_user_profiles_order        WLAN_SECURABLE_OBJECT = 8
+	wlan_secure_add_new_all_user_profiles      WLAN_SECURABLE_OBJECT = 9
+	wlan_secure_add_new_per_user_profiles      WLAN_SECURABLE_OBJECT = 10
+	wlan_secure_media_streaming_mode_enabled   WLAN_SECURABLE_OBJECT = 11
+	wlan_secure_current_operation_mode         WLAN_SECURABLE_OBJECT = 12
+	wlan_secure_get_plaintext_key              WLAN_SECURABLE_OBJECT = 13
+	wlan_secure_hosted_network_elevated_access WLAN_SECURABLE_OBJECT = 14
+	wlan_secure_virtual_station_extensibility  WLAN_SECURABLE_OBJECT = 15
+	wlan_secure_wfd_elevated_access            WLAN_SECURABLE_OBJECT = 16
+	WLAN_SECURABLE_OBJECT_COUNT                WLAN_SECURABLE_OBJECT = 17
 )
 
 type WFD_ROLE_TYPE int32
 
 const (
-	WFD_ROLE_TYPE_NONE = 0
-	WFD_ROLE_TYPE_DEVICE = 1
-	WFD_ROLE_TYPE_GROUP_OWNER = 2
-	WFD_ROLE_TYPE_CLIENT = 4
-	WFD_ROLE_TYPE_MAX = 5
+	WFD_ROLE_TYPE_NONE        WFD_ROLE_TYPE = 0
+	WFD_ROLE_TYPE_DEVICE      WFD_ROLE_TYPE = 1
+	WFD_ROLE_TYPE_GROUP_OWNER WFD_ROLE_TYPE = 2
+	WFD_ROLE_TYPE_CLIENT      WFD_ROLE_TYPE = 4
+	WFD_ROLE_TYPE_MAX         WFD_ROLE_TYPE = 5
 )
 
 type WL_DISPLAY_PAGES int32
 
 const (
-	WLConnectionPage = 0
-	WLSecurityPage = 1
-	WLAdvPage = 2
+	WLConnectionPage WL_DISPLAY_PAGES = 0
+	WLSecurityPage   WL_DISPLAY_PAGES = 1
+	WLAdvPage        WL_DISPLAY_PAGES = 2
 )
 
 type WLAN_HOSTED_NETWORK_STATE int32
 
 const (
-	wlan_hosted_network_unavailable = 0
-	wlan_hosted_network_idle = 1
-	wlan_hosted_network_active = 2
+	wlan_hosted_network_unavailable WLAN_HOSTED_NETWORK_STATE = 0
+	wlan_hosted_network_idle        WLAN_HOSTED_NETWORK_STATE = 1
+	wlan_hosted_network_active      WLAN_HOSTED_NETWORK_STATE = 2
 )
 
 type WLAN_HOSTED_NETWORK_REASON int32
 
 const (
-	wlan_hosted_network_reason_success = 0
-	wlan_hosted_network_reason_unspecified = 1
-	wlan_hosted_network_reason_bad_parameters = 2
-	wlan_hosted_network_reason_service_shutting_down = 3
-	wlan_hosted_network_reason_insufficient_resources = 4
-	wlan_hosted_network_reason_elevation_required = 5
-	wlan_hosted_network_reason_read_only = 6
-	wlan_hosted_network_reason_persistence_failed = 7
-	wlan_hosted_network_reason_crypt_error = 8
-	wlan_hosted_network_reason_impersonation = 9
-	wlan_hosted_network_reason_stop_before_start = 10
-	wlan_hosted_network_reason_interface_available = 11
-	wlan_hosted_network_reason_interface_unavailable = 12
-	wlan_hosted_network_reason_miniport_stopped = 13
-	wlan_hosted_network_reason_miniport_started = 14
-	wlan_hosted_network_reason_incompatible_connection_started = 15
-	wlan_hosted_network_reason_incompatible_connection_stopped = 16
-	wlan_hosted_network_reason_user_action = 17
-	wlan_hosted_network_reason_client_abort = 18
-	wlan_hosted_network_reason_ap_start_failed = 19
-	wlan_hosted_network_reason_peer_arrived = 20
-	wlan_hosted_network_reason_peer_departed = 21
-	wlan_hosted_network_reason_peer_timeout = 22
-	wlan_hosted_network_reason_gp_denied = 23
-	wlan_hosted_network_reason_service_unavailable = 24
-	wlan_hosted_network_reason_device_change = 25
-	wlan_hosted_network_reason_properties_change = 26
-	wlan_hosted_network_reason_virtual_station_blocking_use = 27
-	wlan_hosted_network_reason_service_available_on_virtual_station = 28
+	wlan_hosted_network_reason_success                              WLAN_HOSTED_NETWORK_REASON = 0
+	wlan_hosted_network_reason_unspecified                          WLAN_HOSTED_NETWORK_REASON = 1
+	wlan_hosted_network_reason_bad_parameters                       WLAN_HOSTED_NETWORK_REASON = 2
+	wlan_hosted_network_reason_service_shutting_down                WLAN_HOSTED_NETWORK_REASON = 3
+	wlan_hosted_network_reason_insufficient_resources               WLAN_HOSTED_NETWORK_REASON = 4
+	wlan_hosted_network_reason_elevation_required                   WLAN_HOSTED_NETWORK_REASON = 5
+	wlan_hosted_network_reason_read_only                            WLAN_HOSTED_NETWORK_REASON = 6
+	wlan_hosted_network_reason_persistence_failed                   WLAN_HOSTED_NETWORK_REASON = 7
+	wlan_hosted_network_reason_crypt_error                          WLAN_HOSTED_NETWORK_REASON = 8
+	wlan_hosted_network_reason_impersonation                        WLAN_HOSTED_NETWORK_REASON = 9
+	wlan_hosted_network_reason_stop_before_start                    WLAN_HOSTED_NETWORK_REASON = 10
+	wlan_hosted_network_reason_interface_available                  WLAN_HOSTED_NETWORK_REASON = 11
+	wlan_hosted_network_reason_interface_unavailable                WLAN_HOSTED_NETWORK_REASON = 12
+	wlan_hosted_network_reason_miniport_stopped                     WLAN_HOSTED_NETWORK_REASON = 13
+	wlan_hosted_network_reason_miniport_started                     WLAN_HOSTED_NETWORK_REASON = 14
+	wlan_hosted_network_reason_incompatible_connection_started      WLAN_HOSTED_NETWORK_REASON = 15
+	wlan_hosted_network_reason_incompatible_connection_stopped      WLAN_HOSTED_NETWORK_REASON = 16
+	wlan_hosted_network_reason_user_action                          WLAN_HOSTED_NETWORK_REASON = 17
+	wlan_hosted_network_reason_client_abort                         WLAN_HOSTED_NETWORK_REASON = 18
+	wlan_hosted_network_reason_ap_start_failed                      WLAN_HOSTED_NETWORK_REASON = 19
+	wlan_hosted_network_reason_peer_arrived                         WLAN_HOSTED_NETWORK_REASON = 20
+	wlan_hosted_network_reason_peer_departed                        WLAN_HOSTED_NETWORK_REASON = 21
+	wlan_hosted_network_reason_peer_timeout                         WLAN_HOSTED_NETWORK_REASON = 22
+	wlan_hosted_network_reason_gp_denied                            WLAN_HOSTED_NETWORK_REASON = 23
+	wlan_hosted_network_reason_service_unavailable                  WLAN_HOSTED_NETWORK_REASON = 24
+	wlan_hosted_network_reason_device_change                        WLAN_HOSTED_NETWORK_REASON = 25
+	wlan_hosted_network_reason_properties_change                    WLAN_HOSTED_NETWORK_REASON = 26
+	wlan_hosted_network_reason_virtual_station_blocking_use         WLAN_HOSTED_NETWORK_REASON = 27
+	wlan_hosted_network_reason_service_available_on_virtual_station WLAN_HOSTED_NETWORK_REASON = 28
 )
 
 type WLAN_HOSTED_NETWORK_PEER_AUTH_STATE int32
 
 const (
-	wlan_hosted_network_peer_state_invalid = 0
-	wlan_hosted_network_peer_state_authenticated = 1
+	wlan_hosted_network_peer_state_invalid       WLAN_HOSTED_NETWORK_PEER_AUTH_STATE = 0
+	wlan_hosted_network_peer_state_authenticated WLAN_HOSTED_NETWORK_PEER_AUTH_STATE = 1
 )
 
 type WLAN_HOSTED_NETWORK_NOTIFICATION_CODE int32
 
 const (
-	wlan_hosted_network_state_change = 4096
-	wlan_hosted_network_peer_state_change = 4097
-	wlan_hosted_network_radio_state_change = 4098
+	wlan_hosted_network_state_change       WLAN_HOSTED_NETWORK_NOTIFICATION_CODE = 4096
+	wlan_hosted_network_peer_state_change  WLAN_HOSTED_NETWORK_NOTIFICATION_CODE = 4097
+	wlan_hosted_network_radio_state_change WLAN_HOSTED_NETWORK_NOTIFICATION_CODE = 4098
 )
 
 type WLAN_HOSTED_NETWORK_OPCODE int32
 
 const (
-	wlan_hosted_network_opcode_connection_settings = 0
-	wlan_hosted_network_opcode_security_settings = 1
-	wlan_hosted_network_opcode_station_profile = 2
-	wlan_hosted_network_opcode_enable = 3
+	wlan_hosted_network_opcode_connection_settings WLAN_HOSTED_NETWORK_OPCODE = 0
+	wlan_hosted_network_opcode_security_settings   WLAN_HOSTED_NETWORK_OPCODE = 1
+	wlan_hosted_network_opcode_station_profile     WLAN_HOSTED_NETWORK_OPCODE = 2
+	wlan_hosted_network_opcode_enable              WLAN_HOSTED_NETWORK_OPCODE = 3
 )
 
 type ONEX_AUTH_IDENTITY int32
 
 const (
-	OneXAuthIdentityNone = 0
-	OneXAuthIdentityMachine = 1
-	OneXAuthIdentityUser = 2
-	OneXAuthIdentityExplicitUser = 3
-	OneXAuthIdentityGuest = 4
-	OneXAuthIdentityInvalid = 5
+	OneXAuthIdentityNone         ONEX_AUTH_IDENTITY = 0
+	OneXAuthIdentityMachine      ONEX_AUTH_IDENTITY = 1
+	OneXAuthIdentityUser         ONEX_AUTH_IDENTITY = 2
+	OneXAuthIdentityExplicitUser ONEX_AUTH_IDENTITY = 3
+	OneXAuthIdentityGuest        ONEX_AUTH_IDENTITY = 4
+	OneXAuthIdentityInvalid      ONEX_AUTH_IDENTITY = 5
 )
 
 type ONEX_AUTH_STATUS int32
 
 const (
-	OneXAuthNotStarted = 0
-	OneXAuthInProgress = 1
-	OneXAuthNoAuthenticatorFound = 2
-	OneXAuthSuccess = 3
-	OneXAuthFailure = 4
-	OneXAuthInvalid = 5
+	OneXAuthNotStarted           ONEX_AUTH_STATUS = 0
+	OneXAuthInProgress           ONEX_AUTH_STATUS = 1
+	OneXAuthNoAuthenticatorFound ONEX_AUTH_STATUS = 2
+	OneXAuthSuccess              ONEX_AUTH_STATUS = 3
+	OneXAuthFailure              ONEX_AUTH_STATUS = 4
+	OneXAuthInvalid              ONEX_AUTH_STATUS = 5
 )
 
 type ONEX_REASON_CODE int32
 
 const (
-	ONEX_REASON_CODE_SUCCESS = 0
-	ONEX_REASON_START = 327680
-	ONEX_UNABLE_TO_IDENTIFY_USER = 327681
-	ONEX_IDENTITY_NOT_FOUND = 327682
-	ONEX_UI_DISABLED = 327683
-	ONEX_UI_FAILURE = 327684
-	ONEX_EAP_FAILURE_RECEIVED = 327685
-	ONEX_AUTHENTICATOR_NO_LONGER_PRESENT = 327686
-	ONEX_NO_RESPONSE_TO_IDENTITY = 327687
-	ONEX_PROFILE_VERSION_NOT_SUPPORTED = 327688
-	ONEX_PROFILE_INVALID_LENGTH = 327689
-	ONEX_PROFILE_DISALLOWED_EAP_TYPE = 327690
-	ONEX_PROFILE_INVALID_EAP_TYPE_OR_FLAG = 327691
-	ONEX_PROFILE_INVALID_ONEX_FLAGS = 327692
-	ONEX_PROFILE_INVALID_TIMER_VALUE = 327693
-	ONEX_PROFILE_INVALID_SUPPLICANT_MODE = 327694
-	ONEX_PROFILE_INVALID_AUTH_MODE = 327695
-	ONEX_PROFILE_INVALID_EAP_CONNECTION_PROPERTIES = 327696
-	ONEX_UI_CANCELLED = 327697
-	ONEX_PROFILE_INVALID_EXPLICIT_CREDENTIALS = 327698
-	ONEX_PROFILE_EXPIRED_EXPLICIT_CREDENTIALS = 327699
-	ONEX_UI_NOT_PERMITTED = 327700
+	ONEX_REASON_CODE_SUCCESS                       ONEX_REASON_CODE = 0
+	ONEX_REASON_START                              ONEX_REASON_CODE = 327680
+	ONEX_UNABLE_TO_IDENTIFY_USER                   ONEX_REASON_CODE = 327681
+	ONEX_IDENTITY_NOT_FOUND                        ONEX_REASON_CODE = 327682
+	ONEX_UI_DISABLED                               ONEX_REASON_CODE = 327683
+	ONEX_UI_FAILURE                                ONEX_REASON_CODE = 327684
+	ONEX_EAP_FAILURE_RECEIVED                      ONEX_REASON_CODE = 327685
+	ONEX_AUTHENTICATOR_NO_LONGER_PRESENT           ONEX_REASON_CODE = 327686
+	ONEX_NO_RESPONSE_TO_IDENTITY                   ONEX_REASON_CODE = 327687
+	ONEX_PROFILE_VERSION_NOT_SUPPORTED             ONEX_REASON_CODE = 327688
+	ONEX_PROFILE_INVALID_LENGTH                    ONEX_REASON_CODE = 327689
+	ONEX_PROFILE_DISALLOWED_EAP_TYPE               ONEX_REASON_CODE = 327690
+	ONEX_PROFILE_INVALID_EAP_TYPE_OR_FLAG          ONEX_REASON_CODE = 327691
+	ONEX_PROFILE_INVALID_ONEX_FLAGS                ONEX_REASON_CODE = 327692
+	ONEX_PROFILE_INVALID_TIMER_VALUE               ONEX_REASON_CODE = 327693
+	ONEX_PROFILE_INVALID_SUPPLICANT_MODE           ONEX_REASON_CODE = 327694
+	ONEX_PROFILE_INVALID_AUTH_MODE                 ONEX_REASON_CODE = 327695
+	ONEX_PROFILE_INVALID_EAP_CONNECTION_PROPERTIES ONEX_REASON_CODE = 327696
+	ONEX_UI_CANCELLED                              ONEX_REASON_CODE = 327697
+	ONEX_PROFILE_INVALID_EXPLICIT_CREDENTIALS      ONEX_REASON_CODE = 327698
+	ONEX_PROFILE_EXPIRED_EXPLICIT_CREDENTIALS      ONEX_REASON_CODE = 327699
+	ONEX_UI_NOT_PERMITTED                          ONEX_REASON_CODE = 327700
 )
 
 type ONEX_NOTIFICATION_TYPE int32
 
 const (
-	OneXPublicNotificationBase = 0
-	OneXNotificationTypeResultUpdate = 1
-	OneXNotificationTypeAuthRestarted = 2
-	OneXNotificationTypeEventInvalid = 3
-	OneXNumNotifications = 3
+	OneXPublicNotificationBase        ONEX_NOTIFICATION_TYPE = 0
+	OneXNotificationTypeResultUpdate  ONEX_NOTIFICATION_TYPE = 1
+	OneXNotificationTypeAuthRestarted ONEX_NOTIFICATION_TYPE = 2
+	OneXNotificationTypeEventInvalid  ONEX_NOTIFICATION_TYPE = 3
+	OneXNumNotifications              ONEX_NOTIFICATION_TYPE = 3
 )
 
 type ONEX_AUTH_RESTART_REASON int32
 
 const (
-	OneXRestartReasonPeerInitiated = 0
-	OneXRestartReasonMsmInitiated = 1
-	OneXRestartReasonOneXHeldStateTimeout = 2
-	OneXRestartReasonOneXAuthTimeout = 3
-	OneXRestartReasonOneXConfigurationChanged = 4
-	OneXRestartReasonOneXUserChanged = 5
-	OneXRestartReasonQuarantineStateChanged = 6
-	OneXRestartReasonAltCredsTrial = 7
-	OneXRestartReasonInvalid = 8
+	OneXRestartReasonPeerInitiated            ONEX_AUTH_RESTART_REASON = 0
+	OneXRestartReasonMsmInitiated             ONEX_AUTH_RESTART_REASON = 1
+	OneXRestartReasonOneXHeldStateTimeout     ONEX_AUTH_RESTART_REASON = 2
+	OneXRestartReasonOneXAuthTimeout          ONEX_AUTH_RESTART_REASON = 3
+	OneXRestartReasonOneXConfigurationChanged ONEX_AUTH_RESTART_REASON = 4
+	OneXRestartReasonOneXUserChanged          ONEX_AUTH_RESTART_REASON = 5
+	OneXRestartReasonQuarantineStateChanged   ONEX_AUTH_RESTART_REASON = 6
+	OneXRestartReasonAltCredsTrial            ONEX_AUTH_RESTART_REASON = 7
+	OneXRestartReasonInvalid                  ONEX_AUTH_RESTART_REASON = 8
 )
 
 type ONEX_EAP_METHOD_BACKEND_SUPPORT int32
 
 const (
-	OneXEapMethodBackendSupportUnknown = 0
-	OneXEapMethodBackendSupported = 1
-	OneXEapMethodBackendUnsupported = 2
+	OneXEapMethodBackendSupportUnknown ONEX_EAP_METHOD_BACKEND_SUPPORT = 0
+	OneXEapMethodBackendSupported      ONEX_EAP_METHOD_BACKEND_SUPPORT = 1
+	OneXEapMethodBackendUnsupported    ONEX_EAP_METHOD_BACKEND_SUPPORT = 2
 )
 
 type DOT11_ADHOC_CIPHER_ALGORITHM int32
 
 const (
-	DOT11_ADHOC_CIPHER_ALGO_INVALID = -1
-	DOT11_ADHOC_CIPHER_ALGO_NONE = 0
-	DOT11_ADHOC_CIPHER_ALGO_CCMP = 4
-	DOT11_ADHOC_CIPHER_ALGO_WEP = 257
+	DOT11_ADHOC_CIPHER_ALGO_INVALID DOT11_ADHOC_CIPHER_ALGORITHM = -1
+	DOT11_ADHOC_CIPHER_ALGO_NONE    DOT11_ADHOC_CIPHER_ALGORITHM = 0
+	DOT11_ADHOC_CIPHER_ALGO_CCMP    DOT11_ADHOC_CIPHER_ALGORITHM = 4
+	DOT11_ADHOC_CIPHER_ALGO_WEP     DOT11_ADHOC_CIPHER_ALGORITHM = 257
 )
 
 type DOT11_ADHOC_AUTH_ALGORITHM int32
 
 const (
-	DOT11_ADHOC_AUTH_ALGO_INVALID = -1
-	DOT11_ADHOC_AUTH_ALGO_80211_OPEN = 1
-	DOT11_ADHOC_AUTH_ALGO_RSNA_PSK = 7
+	DOT11_ADHOC_AUTH_ALGO_INVALID    DOT11_ADHOC_AUTH_ALGORITHM = -1
+	DOT11_ADHOC_AUTH_ALGO_80211_OPEN DOT11_ADHOC_AUTH_ALGORITHM = 1
+	DOT11_ADHOC_AUTH_ALGO_RSNA_PSK   DOT11_ADHOC_AUTH_ALGORITHM = 7
 )
 
 type DOT11_ADHOC_NETWORK_CONNECTION_STATUS int32
 
 const (
-	DOT11_ADHOC_NETWORK_CONNECTION_STATUS_INVALID = 0
-	DOT11_ADHOC_NETWORK_CONNECTION_STATUS_DISCONNECTED = 11
-	DOT11_ADHOC_NETWORK_CONNECTION_STATUS_CONNECTING = 12
-	DOT11_ADHOC_NETWORK_CONNECTION_STATUS_CONNECTED = 13
-	DOT11_ADHOC_NETWORK_CONNECTION_STATUS_FORMED = 14
+	DOT11_ADHOC_NETWORK_CONNECTION_STATUS_INVALID      DOT11_ADHOC_NETWORK_CONNECTION_STATUS = 0
+	DOT11_ADHOC_NETWORK_CONNECTION_STATUS_DISCONNECTED DOT11_ADHOC_NETWORK_CONNECTION_STATUS = 11
+	DOT11_ADHOC_NETWORK_CONNECTION_STATUS_CONNECTING   DOT11_ADHOC_NETWORK_CONNECTION_STATUS = 12
+	DOT11_ADHOC_NETWORK_CONNECTION_STATUS_CONNECTED    DOT11_ADHOC_NETWORK_CONNECTION_STATUS = 13
+	DOT11_ADHOC_NETWORK_CONNECTION_STATUS_FORMED       DOT11_ADHOC_NETWORK_CONNECTION_STATUS = 14
 )
 
 type DOT11_ADHOC_CONNECT_FAIL_REASON int32
 
 const (
-	DOT11_ADHOC_CONNECT_FAIL_DOMAIN_MISMATCH = 0
-	DOT11_ADHOC_CONNECT_FAIL_PASSPHRASE_MISMATCH = 1
-	DOT11_ADHOC_CONNECT_FAIL_OTHER = 2
+	DOT11_ADHOC_CONNECT_FAIL_DOMAIN_MISMATCH     DOT11_ADHOC_CONNECT_FAIL_REASON = 0
+	DOT11_ADHOC_CONNECT_FAIL_PASSPHRASE_MISMATCH DOT11_ADHOC_CONNECT_FAIL_REASON = 1
+	DOT11_ADHOC_CONNECT_FAIL_OTHER               DOT11_ADHOC_CONNECT_FAIL_REASON = 2
 )
-

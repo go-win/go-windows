@@ -7,396 +7,395 @@ package extensibleauthenticationprotocol
 type EAP_ATTRIBUTE_TYPE int32
 
 const (
-	eatMinimum = 0
-	eatUserName = 1
-	eatUserPassword = 2
-	eatMD5CHAPPassword = 3
-	eatNASIPAddress = 4
-	eatNASPort = 5
-	eatServiceType = 6
-	eatFramedProtocol = 7
-	eatFramedIPAddress = 8
-	eatFramedIPNetmask = 9
-	eatFramedRouting = 10
-	eatFilterId = 11
-	eatFramedMTU = 12
-	eatFramedCompression = 13
-	eatLoginIPHost = 14
-	eatLoginService = 15
-	eatLoginTCPPort = 16
-	eatUnassigned17 = 17
-	eatReplyMessage = 18
-	eatCallbackNumber = 19
-	eatCallbackId = 20
-	eatUnassigned21 = 21
-	eatFramedRoute = 22
-	eatFramedIPXNetwork = 23
-	eatState = 24
-	eatClass = 25
-	eatVendorSpecific = 26
-	eatSessionTimeout = 27
-	eatIdleTimeout = 28
-	eatTerminationAction = 29
-	eatCalledStationId = 30
-	eatCallingStationId = 31
-	eatNASIdentifier = 32
-	eatProxyState = 33
-	eatLoginLATService = 34
-	eatLoginLATNode = 35
-	eatLoginLATGroup = 36
-	eatFramedAppleTalkLink = 37
-	eatFramedAppleTalkNetwork = 38
-	eatFramedAppleTalkZone = 39
-	eatAcctStatusType = 40
-	eatAcctDelayTime = 41
-	eatAcctInputOctets = 42
-	eatAcctOutputOctets = 43
-	eatAcctSessionId = 44
-	eatAcctAuthentic = 45
-	eatAcctSessionTime = 46
-	eatAcctInputPackets = 47
-	eatAcctOutputPackets = 48
-	eatAcctTerminateCause = 49
-	eatAcctMultiSessionId = 50
-	eatAcctLinkCount = 51
-	eatAcctEventTimeStamp = 55
-	eatMD5CHAPChallenge = 60
-	eatNASPortType = 61
-	eatPortLimit = 62
-	eatLoginLATPort = 63
-	eatTunnelType = 64
-	eatTunnelMediumType = 65
-	eatTunnelClientEndpoint = 66
-	eatTunnelServerEndpoint = 67
-	eatARAPPassword = 70
-	eatARAPFeatures = 71
-	eatARAPZoneAccess = 72
-	eatARAPSecurity = 73
-	eatARAPSecurityData = 74
-	eatPasswordRetry = 75
-	eatPrompt = 76
-	eatConnectInfo = 77
-	eatConfigurationToken = 78
-	eatEAPMessage = 79
-	eatSignature = 80
-	eatARAPChallengeResponse = 84
-	eatAcctInterimInterval = 85
-	eatNASIPv6Address = 95
-	eatFramedInterfaceId = 96
-	eatFramedIPv6Prefix = 97
-	eatLoginIPv6Host = 98
-	eatFramedIPv6Route = 99
-	eatFramedIPv6Pool = 100
-	eatARAPGuestLogon = 8096
-	eatCertificateOID = 8097
-	eatEAPConfiguration = 8098
-	eatPEAPEmbeddedEAPTypeId = 8099
-	eatPEAPFastRoamedSession = 8100
-	eatFastRoamedSession = 8100
-	eatEAPTLV = 8102
-	eatCredentialsChanged = 8103
-	eatInnerEapMethodType = 8104
-	eatClearTextPassword = 8107
-	eatQuarantineSoH = 8150
-	eatCertificateThumbprint = 8250
-	eatPeerId = 9000
-	eatServerId = 9001
-	eatMethodId = 9002
-	eatEMSK = 9003
-	eatSessionId = 9004
-	eatReserved = -1
+	eatMinimum                EAP_ATTRIBUTE_TYPE = 0
+	eatUserName               EAP_ATTRIBUTE_TYPE = 1
+	eatUserPassword           EAP_ATTRIBUTE_TYPE = 2
+	eatMD5CHAPPassword        EAP_ATTRIBUTE_TYPE = 3
+	eatNASIPAddress           EAP_ATTRIBUTE_TYPE = 4
+	eatNASPort                EAP_ATTRIBUTE_TYPE = 5
+	eatServiceType            EAP_ATTRIBUTE_TYPE = 6
+	eatFramedProtocol         EAP_ATTRIBUTE_TYPE = 7
+	eatFramedIPAddress        EAP_ATTRIBUTE_TYPE = 8
+	eatFramedIPNetmask        EAP_ATTRIBUTE_TYPE = 9
+	eatFramedRouting          EAP_ATTRIBUTE_TYPE = 10
+	eatFilterId               EAP_ATTRIBUTE_TYPE = 11
+	eatFramedMTU              EAP_ATTRIBUTE_TYPE = 12
+	eatFramedCompression      EAP_ATTRIBUTE_TYPE = 13
+	eatLoginIPHost            EAP_ATTRIBUTE_TYPE = 14
+	eatLoginService           EAP_ATTRIBUTE_TYPE = 15
+	eatLoginTCPPort           EAP_ATTRIBUTE_TYPE = 16
+	eatUnassigned17           EAP_ATTRIBUTE_TYPE = 17
+	eatReplyMessage           EAP_ATTRIBUTE_TYPE = 18
+	eatCallbackNumber         EAP_ATTRIBUTE_TYPE = 19
+	eatCallbackId             EAP_ATTRIBUTE_TYPE = 20
+	eatUnassigned21           EAP_ATTRIBUTE_TYPE = 21
+	eatFramedRoute            EAP_ATTRIBUTE_TYPE = 22
+	eatFramedIPXNetwork       EAP_ATTRIBUTE_TYPE = 23
+	eatState                  EAP_ATTRIBUTE_TYPE = 24
+	eatClass                  EAP_ATTRIBUTE_TYPE = 25
+	eatVendorSpecific         EAP_ATTRIBUTE_TYPE = 26
+	eatSessionTimeout         EAP_ATTRIBUTE_TYPE = 27
+	eatIdleTimeout            EAP_ATTRIBUTE_TYPE = 28
+	eatTerminationAction      EAP_ATTRIBUTE_TYPE = 29
+	eatCalledStationId        EAP_ATTRIBUTE_TYPE = 30
+	eatCallingStationId       EAP_ATTRIBUTE_TYPE = 31
+	eatNASIdentifier          EAP_ATTRIBUTE_TYPE = 32
+	eatProxyState             EAP_ATTRIBUTE_TYPE = 33
+	eatLoginLATService        EAP_ATTRIBUTE_TYPE = 34
+	eatLoginLATNode           EAP_ATTRIBUTE_TYPE = 35
+	eatLoginLATGroup          EAP_ATTRIBUTE_TYPE = 36
+	eatFramedAppleTalkLink    EAP_ATTRIBUTE_TYPE = 37
+	eatFramedAppleTalkNetwork EAP_ATTRIBUTE_TYPE = 38
+	eatFramedAppleTalkZone    EAP_ATTRIBUTE_TYPE = 39
+	eatAcctStatusType         EAP_ATTRIBUTE_TYPE = 40
+	eatAcctDelayTime          EAP_ATTRIBUTE_TYPE = 41
+	eatAcctInputOctets        EAP_ATTRIBUTE_TYPE = 42
+	eatAcctOutputOctets       EAP_ATTRIBUTE_TYPE = 43
+	eatAcctSessionId          EAP_ATTRIBUTE_TYPE = 44
+	eatAcctAuthentic          EAP_ATTRIBUTE_TYPE = 45
+	eatAcctSessionTime        EAP_ATTRIBUTE_TYPE = 46
+	eatAcctInputPackets       EAP_ATTRIBUTE_TYPE = 47
+	eatAcctOutputPackets      EAP_ATTRIBUTE_TYPE = 48
+	eatAcctTerminateCause     EAP_ATTRIBUTE_TYPE = 49
+	eatAcctMultiSessionId     EAP_ATTRIBUTE_TYPE = 50
+	eatAcctLinkCount          EAP_ATTRIBUTE_TYPE = 51
+	eatAcctEventTimeStamp     EAP_ATTRIBUTE_TYPE = 55
+	eatMD5CHAPChallenge       EAP_ATTRIBUTE_TYPE = 60
+	eatNASPortType            EAP_ATTRIBUTE_TYPE = 61
+	eatPortLimit              EAP_ATTRIBUTE_TYPE = 62
+	eatLoginLATPort           EAP_ATTRIBUTE_TYPE = 63
+	eatTunnelType             EAP_ATTRIBUTE_TYPE = 64
+	eatTunnelMediumType       EAP_ATTRIBUTE_TYPE = 65
+	eatTunnelClientEndpoint   EAP_ATTRIBUTE_TYPE = 66
+	eatTunnelServerEndpoint   EAP_ATTRIBUTE_TYPE = 67
+	eatARAPPassword           EAP_ATTRIBUTE_TYPE = 70
+	eatARAPFeatures           EAP_ATTRIBUTE_TYPE = 71
+	eatARAPZoneAccess         EAP_ATTRIBUTE_TYPE = 72
+	eatARAPSecurity           EAP_ATTRIBUTE_TYPE = 73
+	eatARAPSecurityData       EAP_ATTRIBUTE_TYPE = 74
+	eatPasswordRetry          EAP_ATTRIBUTE_TYPE = 75
+	eatPrompt                 EAP_ATTRIBUTE_TYPE = 76
+	eatConnectInfo            EAP_ATTRIBUTE_TYPE = 77
+	eatConfigurationToken     EAP_ATTRIBUTE_TYPE = 78
+	eatEAPMessage             EAP_ATTRIBUTE_TYPE = 79
+	eatSignature              EAP_ATTRIBUTE_TYPE = 80
+	eatARAPChallengeResponse  EAP_ATTRIBUTE_TYPE = 84
+	eatAcctInterimInterval    EAP_ATTRIBUTE_TYPE = 85
+	eatNASIPv6Address         EAP_ATTRIBUTE_TYPE = 95
+	eatFramedInterfaceId      EAP_ATTRIBUTE_TYPE = 96
+	eatFramedIPv6Prefix       EAP_ATTRIBUTE_TYPE = 97
+	eatLoginIPv6Host          EAP_ATTRIBUTE_TYPE = 98
+	eatFramedIPv6Route        EAP_ATTRIBUTE_TYPE = 99
+	eatFramedIPv6Pool         EAP_ATTRIBUTE_TYPE = 100
+	eatARAPGuestLogon         EAP_ATTRIBUTE_TYPE = 8096
+	eatCertificateOID         EAP_ATTRIBUTE_TYPE = 8097
+	eatEAPConfiguration       EAP_ATTRIBUTE_TYPE = 8098
+	eatPEAPEmbeddedEAPTypeId  EAP_ATTRIBUTE_TYPE = 8099
+	eatPEAPFastRoamedSession  EAP_ATTRIBUTE_TYPE = 8100
+	eatFastRoamedSession      EAP_ATTRIBUTE_TYPE = 8100
+	eatEAPTLV                 EAP_ATTRIBUTE_TYPE = 8102
+	eatCredentialsChanged     EAP_ATTRIBUTE_TYPE = 8103
+	eatInnerEapMethodType     EAP_ATTRIBUTE_TYPE = 8104
+	eatClearTextPassword      EAP_ATTRIBUTE_TYPE = 8107
+	eatQuarantineSoH          EAP_ATTRIBUTE_TYPE = 8150
+	eatCertificateThumbprint  EAP_ATTRIBUTE_TYPE = 8250
+	eatPeerId                 EAP_ATTRIBUTE_TYPE = 9000
+	eatServerId               EAP_ATTRIBUTE_TYPE = 9001
+	eatMethodId               EAP_ATTRIBUTE_TYPE = 9002
+	eatEMSK                   EAP_ATTRIBUTE_TYPE = 9003
+	eatSessionId              EAP_ATTRIBUTE_TYPE = 9004
+	eatReserved               EAP_ATTRIBUTE_TYPE = -1
 )
 
 type EAP_CONFIG_INPUT_FIELD_TYPE int32
 
 const (
-	EapConfigInputUsername = 0
-	EapConfigInputPassword = 1
-	EapConfigInputNetworkUsername = 2
-	EapConfigInputNetworkPassword = 3
-	EapConfigInputPin = 4
-	EapConfigInputPSK = 5
-	EapConfigInputEdit = 6
-	EapConfigSmartCardUsername = 7
-	EapConfigSmartCardError = 8
+	EapConfigInputUsername        EAP_CONFIG_INPUT_FIELD_TYPE = 0
+	EapConfigInputPassword        EAP_CONFIG_INPUT_FIELD_TYPE = 1
+	EapConfigInputNetworkUsername EAP_CONFIG_INPUT_FIELD_TYPE = 2
+	EapConfigInputNetworkPassword EAP_CONFIG_INPUT_FIELD_TYPE = 3
+	EapConfigInputPin             EAP_CONFIG_INPUT_FIELD_TYPE = 4
+	EapConfigInputPSK             EAP_CONFIG_INPUT_FIELD_TYPE = 5
+	EapConfigInputEdit            EAP_CONFIG_INPUT_FIELD_TYPE = 6
+	EapConfigSmartCardUsername    EAP_CONFIG_INPUT_FIELD_TYPE = 7
+	EapConfigSmartCardError       EAP_CONFIG_INPUT_FIELD_TYPE = 8
 )
 
 type EAP_INTERACTIVE_UI_DATA_TYPE int32
 
 const (
-	EapCredReq = 0
-	EapCredResp = 1
-	EapCredExpiryReq = 2
-	EapCredExpiryResp = 3
-	EapCredLogonReq = 4
-	EapCredLogonResp = 5
+	EapCredReq        EAP_INTERACTIVE_UI_DATA_TYPE = 0
+	EapCredResp       EAP_INTERACTIVE_UI_DATA_TYPE = 1
+	EapCredExpiryReq  EAP_INTERACTIVE_UI_DATA_TYPE = 2
+	EapCredExpiryResp EAP_INTERACTIVE_UI_DATA_TYPE = 3
+	EapCredLogonReq   EAP_INTERACTIVE_UI_DATA_TYPE = 4
+	EapCredLogonResp  EAP_INTERACTIVE_UI_DATA_TYPE = 5
 )
 
 type EAP_METHOD_PROPERTY_TYPE int32
 
 const (
-	emptPropCipherSuiteNegotiation = 0
-	emptPropMutualAuth = 1
-	emptPropIntegrity = 2
-	emptPropReplayProtection = 3
-	emptPropConfidentiality = 4
-	emptPropKeyDerivation = 5
-	emptPropKeyStrength64 = 6
-	emptPropKeyStrength128 = 7
-	emptPropKeyStrength256 = 8
-	emptPropKeyStrength512 = 9
-	emptPropKeyStrength1024 = 10
-	emptPropDictionaryAttackResistance = 11
-	emptPropFastReconnect = 12
-	emptPropCryptoBinding = 13
-	emptPropSessionIndependence = 14
-	emptPropFragmentation = 15
-	emptPropChannelBinding = 16
-	emptPropNap = 17
-	emptPropStandalone = 18
-	emptPropMppeEncryption = 19
-	emptPropTunnelMethod = 20
-	emptPropSupportsConfig = 21
-	emptPropCertifiedMethod = 22
-	emptPropHiddenMethod = 23
-	emptPropMachineAuth = 24
-	emptPropUserAuth = 25
-	emptPropIdentityPrivacy = 26
-	emptPropMethodChaining = 27
-	emptPropSharedStateEquivalence = 28
-	emptLegacyMethodPropertyFlag = 31
-	emptPropVendorSpecific = 255
+	emptPropCipherSuiteNegotiation     EAP_METHOD_PROPERTY_TYPE = 0
+	emptPropMutualAuth                 EAP_METHOD_PROPERTY_TYPE = 1
+	emptPropIntegrity                  EAP_METHOD_PROPERTY_TYPE = 2
+	emptPropReplayProtection           EAP_METHOD_PROPERTY_TYPE = 3
+	emptPropConfidentiality            EAP_METHOD_PROPERTY_TYPE = 4
+	emptPropKeyDerivation              EAP_METHOD_PROPERTY_TYPE = 5
+	emptPropKeyStrength64              EAP_METHOD_PROPERTY_TYPE = 6
+	emptPropKeyStrength128             EAP_METHOD_PROPERTY_TYPE = 7
+	emptPropKeyStrength256             EAP_METHOD_PROPERTY_TYPE = 8
+	emptPropKeyStrength512             EAP_METHOD_PROPERTY_TYPE = 9
+	emptPropKeyStrength1024            EAP_METHOD_PROPERTY_TYPE = 10
+	emptPropDictionaryAttackResistance EAP_METHOD_PROPERTY_TYPE = 11
+	emptPropFastReconnect              EAP_METHOD_PROPERTY_TYPE = 12
+	emptPropCryptoBinding              EAP_METHOD_PROPERTY_TYPE = 13
+	emptPropSessionIndependence        EAP_METHOD_PROPERTY_TYPE = 14
+	emptPropFragmentation              EAP_METHOD_PROPERTY_TYPE = 15
+	emptPropChannelBinding             EAP_METHOD_PROPERTY_TYPE = 16
+	emptPropNap                        EAP_METHOD_PROPERTY_TYPE = 17
+	emptPropStandalone                 EAP_METHOD_PROPERTY_TYPE = 18
+	emptPropMppeEncryption             EAP_METHOD_PROPERTY_TYPE = 19
+	emptPropTunnelMethod               EAP_METHOD_PROPERTY_TYPE = 20
+	emptPropSupportsConfig             EAP_METHOD_PROPERTY_TYPE = 21
+	emptPropCertifiedMethod            EAP_METHOD_PROPERTY_TYPE = 22
+	emptPropHiddenMethod               EAP_METHOD_PROPERTY_TYPE = 23
+	emptPropMachineAuth                EAP_METHOD_PROPERTY_TYPE = 24
+	emptPropUserAuth                   EAP_METHOD_PROPERTY_TYPE = 25
+	emptPropIdentityPrivacy            EAP_METHOD_PROPERTY_TYPE = 26
+	emptPropMethodChaining             EAP_METHOD_PROPERTY_TYPE = 27
+	emptPropSharedStateEquivalence     EAP_METHOD_PROPERTY_TYPE = 28
+	emptLegacyMethodPropertyFlag       EAP_METHOD_PROPERTY_TYPE = 31
+	emptPropVendorSpecific             EAP_METHOD_PROPERTY_TYPE = 255
 )
 
 type EAP_METHOD_PROPERTY_VALUE_TYPE int32
 
 const (
-	empvtBool = 0
-	empvtDword = 1
-	empvtString = 2
+	empvtBool   EAP_METHOD_PROPERTY_VALUE_TYPE = 0
+	empvtDword  EAP_METHOD_PROPERTY_VALUE_TYPE = 1
+	empvtString EAP_METHOD_PROPERTY_VALUE_TYPE = 2
 )
 
 type EapCredentialType int32
 
 const (
-	EAP_EMPTY_CREDENTIAL = 0
-	EAP_USERNAME_PASSWORD_CREDENTIAL = 1
-	EAP_WINLOGON_CREDENTIAL = 2
-	EAP_CERTIFICATE_CREDENTIAL = 3
-	EAP_SIM_CREDENTIAL = 4
+	EAP_EMPTY_CREDENTIAL             EapCredentialType = 0
+	EAP_USERNAME_PASSWORD_CREDENTIAL EapCredentialType = 1
+	EAP_WINLOGON_CREDENTIAL          EapCredentialType = 2
+	EAP_CERTIFICATE_CREDENTIAL       EapCredentialType = 3
+	EAP_SIM_CREDENTIAL               EapCredentialType = 4
 )
 
 type EapHostPeerMethodResultReason int32
 
 const (
-	EapHostPeerMethodResultAltSuccessReceived = 1
-	EapHostPeerMethodResultTimeout = 2
-	EapHostPeerMethodResultFromMethod = 3
+	EapHostPeerMethodResultAltSuccessReceived EapHostPeerMethodResultReason = 1
+	EapHostPeerMethodResultTimeout            EapHostPeerMethodResultReason = 2
+	EapHostPeerMethodResultFromMethod         EapHostPeerMethodResultReason = 3
 )
 
 type EapHostPeerResponseAction int32
 
 const (
-	EapHostPeerResponseDiscard = 0
-	EapHostPeerResponseSend = 1
-	EapHostPeerResponseResult = 2
-	EapHostPeerResponseInvokeUi = 3
-	EapHostPeerResponseRespond = 4
-	EapHostPeerResponseStartAuthentication = 5
-	EapHostPeerResponseNone = 6
+	EapHostPeerResponseDiscard             EapHostPeerResponseAction = 0
+	EapHostPeerResponseSend                EapHostPeerResponseAction = 1
+	EapHostPeerResponseResult              EapHostPeerResponseAction = 2
+	EapHostPeerResponseInvokeUi            EapHostPeerResponseAction = 3
+	EapHostPeerResponseRespond             EapHostPeerResponseAction = 4
+	EapHostPeerResponseStartAuthentication EapHostPeerResponseAction = 5
+	EapHostPeerResponseNone                EapHostPeerResponseAction = 6
 )
 
 type EapHostPeerAuthParams int32
 
 const (
-	EapHostPeerAuthStatus = 1
-	EapHostPeerIdentity = 2
-	EapHostPeerIdentityExtendedInfo = 3
-	EapHostNapInfo = 4
+	EapHostPeerAuthStatus           EapHostPeerAuthParams = 1
+	EapHostPeerIdentity             EapHostPeerAuthParams = 2
+	EapHostPeerIdentityExtendedInfo EapHostPeerAuthParams = 3
+	EapHostNapInfo                  EapHostPeerAuthParams = 4
 )
 
 type EAPHOST_AUTH_STATUS int32
 
 const (
-	EapHostInvalidSession = 0
-	EapHostAuthNotStarted = 1
-	EapHostAuthIdentityExchange = 2
-	EapHostAuthNegotiatingType = 3
-	EapHostAuthInProgress = 4
-	EapHostAuthSucceeded = 5
-	EapHostAuthFailed = 6
+	EapHostInvalidSession       EAPHOST_AUTH_STATUS = 0
+	EapHostAuthNotStarted       EAPHOST_AUTH_STATUS = 1
+	EapHostAuthIdentityExchange EAPHOST_AUTH_STATUS = 2
+	EapHostAuthNegotiatingType  EAPHOST_AUTH_STATUS = 3
+	EapHostAuthInProgress       EAPHOST_AUTH_STATUS = 4
+	EapHostAuthSucceeded        EAPHOST_AUTH_STATUS = 5
+	EapHostAuthFailed           EAPHOST_AUTH_STATUS = 6
 )
 
 type ISOLATION_STATE int32
 
 const (
-	ISOLATION_STATE_UNKNOWN = 0
-	ISOLATION_STATE_NOT_RESTRICTED = 1
-	ISOLATION_STATE_IN_PROBATION = 2
-	ISOLATION_STATE_RESTRICTED_ACCESS = 3
+	ISOLATION_STATE_UNKNOWN           ISOLATION_STATE = 0
+	ISOLATION_STATE_NOT_RESTRICTED    ISOLATION_STATE = 1
+	ISOLATION_STATE_IN_PROBATION      ISOLATION_STATE = 2
+	ISOLATION_STATE_RESTRICTED_ACCESS ISOLATION_STATE = 3
 )
 
 type EapCode int32
 
 const (
-	EapCodeMinimum = 1
-	EapCodeRequest = 1
-	EapCodeResponse = 2
-	EapCodeSuccess = 3
-	EapCodeFailure = 4
-	EapCodeMaximum = 4
+	EapCodeMinimum  EapCode = 1
+	EapCodeRequest  EapCode = 1
+	EapCodeResponse EapCode = 2
+	EapCodeSuccess  EapCode = 3
+	EapCodeFailure  EapCode = 4
+	EapCodeMaximum  EapCode = 4
 )
 
 type EAP_METHOD_AUTHENTICATOR_RESPONSE_ACTION int32
 
 const (
-	EAP_METHOD_AUTHENTICATOR_RESPONSE_DISCARD = 0
-	EAP_METHOD_AUTHENTICATOR_RESPONSE_SEND = 1
-	EAP_METHOD_AUTHENTICATOR_RESPONSE_RESULT = 2
-	EAP_METHOD_AUTHENTICATOR_RESPONSE_RESPOND = 3
-	EAP_METHOD_AUTHENTICATOR_RESPONSE_AUTHENTICATE = 4
-	EAP_METHOD_AUTHENTICATOR_RESPONSE_HANDLE_IDENTITY = 5
+	EAP_METHOD_AUTHENTICATOR_RESPONSE_DISCARD         EAP_METHOD_AUTHENTICATOR_RESPONSE_ACTION = 0
+	EAP_METHOD_AUTHENTICATOR_RESPONSE_SEND            EAP_METHOD_AUTHENTICATOR_RESPONSE_ACTION = 1
+	EAP_METHOD_AUTHENTICATOR_RESPONSE_RESULT          EAP_METHOD_AUTHENTICATOR_RESPONSE_ACTION = 2
+	EAP_METHOD_AUTHENTICATOR_RESPONSE_RESPOND         EAP_METHOD_AUTHENTICATOR_RESPONSE_ACTION = 3
+	EAP_METHOD_AUTHENTICATOR_RESPONSE_AUTHENTICATE    EAP_METHOD_AUTHENTICATOR_RESPONSE_ACTION = 4
+	EAP_METHOD_AUTHENTICATOR_RESPONSE_HANDLE_IDENTITY EAP_METHOD_AUTHENTICATOR_RESPONSE_ACTION = 5
 )
 
 type EapPeerMethodResponseAction int32
 
 const (
-	EapPeerMethodResponseActionDiscard = 0
-	EapPeerMethodResponseActionSend = 1
-	EapPeerMethodResponseActionResult = 2
-	EapPeerMethodResponseActionInvokeUI = 3
-	EapPeerMethodResponseActionRespond = 4
-	EapPeerMethodResponseActionNone = 5
+	EapPeerMethodResponseActionDiscard  EapPeerMethodResponseAction = 0
+	EapPeerMethodResponseActionSend     EapPeerMethodResponseAction = 1
+	EapPeerMethodResponseActionResult   EapPeerMethodResponseAction = 2
+	EapPeerMethodResponseActionInvokeUI EapPeerMethodResponseAction = 3
+	EapPeerMethodResponseActionRespond  EapPeerMethodResponseAction = 4
+	EapPeerMethodResponseActionNone     EapPeerMethodResponseAction = 5
 )
 
 type EapPeerMethodResultReason int32
 
 const (
-	EapPeerMethodResultUnknown = 1
-	EapPeerMethodResultSuccess = 2
-	EapPeerMethodResultFailure = 3
+	EapPeerMethodResultUnknown EapPeerMethodResultReason = 1
+	EapPeerMethodResultSuccess EapPeerMethodResultReason = 2
+	EapPeerMethodResultFailure EapPeerMethodResultReason = 3
 )
 
 type EAP_AUTHENTICATOR_SEND_TIMEOUT int32
 
 const (
-	EAP_AUTHENTICATOR_SEND_TIMEOUT_NONE = 0
-	EAP_AUTHENTICATOR_SEND_TIMEOUT_BASIC = 1
-	EAP_AUTHENTICATOR_SEND_TIMEOUT_INTERACTIVE = 2
+	EAP_AUTHENTICATOR_SEND_TIMEOUT_NONE        EAP_AUTHENTICATOR_SEND_TIMEOUT = 0
+	EAP_AUTHENTICATOR_SEND_TIMEOUT_BASIC       EAP_AUTHENTICATOR_SEND_TIMEOUT = 1
+	EAP_AUTHENTICATOR_SEND_TIMEOUT_INTERACTIVE EAP_AUTHENTICATOR_SEND_TIMEOUT = 2
 )
 
 type RAS_AUTH_ATTRIBUTE_TYPE int32
 
 const (
-	raatMinimum = 0
-	raatUserName = 1
-	raatUserPassword = 2
-	raatMD5CHAPPassword = 3
-	raatNASIPAddress = 4
-	raatNASPort = 5
-	raatServiceType = 6
-	raatFramedProtocol = 7
-	raatFramedIPAddress = 8
-	raatFramedIPNetmask = 9
-	raatFramedRouting = 10
-	raatFilterId = 11
-	raatFramedMTU = 12
-	raatFramedCompression = 13
-	raatLoginIPHost = 14
-	raatLoginService = 15
-	raatLoginTCPPort = 16
-	raatUnassigned17 = 17
-	raatReplyMessage = 18
-	raatCallbackNumber = 19
-	raatCallbackId = 20
-	raatUnassigned21 = 21
-	raatFramedRoute = 22
-	raatFramedIPXNetwork = 23
-	raatState = 24
-	raatClass = 25
-	raatVendorSpecific = 26
-	raatSessionTimeout = 27
-	raatIdleTimeout = 28
-	raatTerminationAction = 29
-	raatCalledStationId = 30
-	raatCallingStationId = 31
-	raatNASIdentifier = 32
-	raatProxyState = 33
-	raatLoginLATService = 34
-	raatLoginLATNode = 35
-	raatLoginLATGroup = 36
-	raatFramedAppleTalkLink = 37
-	raatFramedAppleTalkNetwork = 38
-	raatFramedAppleTalkZone = 39
-	raatAcctStatusType = 40
-	raatAcctDelayTime = 41
-	raatAcctInputOctets = 42
-	raatAcctOutputOctets = 43
-	raatAcctSessionId = 44
-	raatAcctAuthentic = 45
-	raatAcctSessionTime = 46
-	raatAcctInputPackets = 47
-	raatAcctOutputPackets = 48
-	raatAcctTerminateCause = 49
-	raatAcctMultiSessionId = 50
-	raatAcctLinkCount = 51
-	raatAcctEventTimeStamp = 55
-	raatMD5CHAPChallenge = 60
-	raatNASPortType = 61
-	raatPortLimit = 62
-	raatLoginLATPort = 63
-	raatTunnelType = 64
-	raatTunnelMediumType = 65
-	raatTunnelClientEndpoint = 66
-	raatTunnelServerEndpoint = 67
-	raatARAPPassword = 70
-	raatARAPFeatures = 71
-	raatARAPZoneAccess = 72
-	raatARAPSecurity = 73
-	raatARAPSecurityData = 74
-	raatPasswordRetry = 75
-	raatPrompt = 76
-	raatConnectInfo = 77
-	raatConfigurationToken = 78
-	raatEAPMessage = 79
-	raatSignature = 80
-	raatARAPChallengeResponse = 84
-	raatAcctInterimInterval = 85
-	raatNASIPv6Address = 95
-	raatFramedInterfaceId = 96
-	raatFramedIPv6Prefix = 97
-	raatLoginIPv6Host = 98
-	raatFramedIPv6Route = 99
-	raatFramedIPv6Pool = 100
-	raatARAPGuestLogon = 8096
-	raatCertificateOID = 8097
-	raatEAPConfiguration = 8098
-	raatPEAPEmbeddedEAPTypeId = 8099
-	raatInnerEAPTypeId = 8099
-	raatPEAPFastRoamedSession = 8100
-	raatFastRoamedSession = 8100
-	raatEAPTLV = 8102
-	raatCredentialsChanged = 8103
-	raatCertificateThumbprint = 8250
-	raatPeerId = 9000
-	raatServerId = 9001
-	raatMethodId = 9002
-	raatEMSK = 9003
-	raatSessionId = 9004
-	raatReserved = -1
+	raatMinimum                RAS_AUTH_ATTRIBUTE_TYPE = 0
+	raatUserName               RAS_AUTH_ATTRIBUTE_TYPE = 1
+	raatUserPassword           RAS_AUTH_ATTRIBUTE_TYPE = 2
+	raatMD5CHAPPassword        RAS_AUTH_ATTRIBUTE_TYPE = 3
+	raatNASIPAddress           RAS_AUTH_ATTRIBUTE_TYPE = 4
+	raatNASPort                RAS_AUTH_ATTRIBUTE_TYPE = 5
+	raatServiceType            RAS_AUTH_ATTRIBUTE_TYPE = 6
+	raatFramedProtocol         RAS_AUTH_ATTRIBUTE_TYPE = 7
+	raatFramedIPAddress        RAS_AUTH_ATTRIBUTE_TYPE = 8
+	raatFramedIPNetmask        RAS_AUTH_ATTRIBUTE_TYPE = 9
+	raatFramedRouting          RAS_AUTH_ATTRIBUTE_TYPE = 10
+	raatFilterId               RAS_AUTH_ATTRIBUTE_TYPE = 11
+	raatFramedMTU              RAS_AUTH_ATTRIBUTE_TYPE = 12
+	raatFramedCompression      RAS_AUTH_ATTRIBUTE_TYPE = 13
+	raatLoginIPHost            RAS_AUTH_ATTRIBUTE_TYPE = 14
+	raatLoginService           RAS_AUTH_ATTRIBUTE_TYPE = 15
+	raatLoginTCPPort           RAS_AUTH_ATTRIBUTE_TYPE = 16
+	raatUnassigned17           RAS_AUTH_ATTRIBUTE_TYPE = 17
+	raatReplyMessage           RAS_AUTH_ATTRIBUTE_TYPE = 18
+	raatCallbackNumber         RAS_AUTH_ATTRIBUTE_TYPE = 19
+	raatCallbackId             RAS_AUTH_ATTRIBUTE_TYPE = 20
+	raatUnassigned21           RAS_AUTH_ATTRIBUTE_TYPE = 21
+	raatFramedRoute            RAS_AUTH_ATTRIBUTE_TYPE = 22
+	raatFramedIPXNetwork       RAS_AUTH_ATTRIBUTE_TYPE = 23
+	raatState                  RAS_AUTH_ATTRIBUTE_TYPE = 24
+	raatClass                  RAS_AUTH_ATTRIBUTE_TYPE = 25
+	raatVendorSpecific         RAS_AUTH_ATTRIBUTE_TYPE = 26
+	raatSessionTimeout         RAS_AUTH_ATTRIBUTE_TYPE = 27
+	raatIdleTimeout            RAS_AUTH_ATTRIBUTE_TYPE = 28
+	raatTerminationAction      RAS_AUTH_ATTRIBUTE_TYPE = 29
+	raatCalledStationId        RAS_AUTH_ATTRIBUTE_TYPE = 30
+	raatCallingStationId       RAS_AUTH_ATTRIBUTE_TYPE = 31
+	raatNASIdentifier          RAS_AUTH_ATTRIBUTE_TYPE = 32
+	raatProxyState             RAS_AUTH_ATTRIBUTE_TYPE = 33
+	raatLoginLATService        RAS_AUTH_ATTRIBUTE_TYPE = 34
+	raatLoginLATNode           RAS_AUTH_ATTRIBUTE_TYPE = 35
+	raatLoginLATGroup          RAS_AUTH_ATTRIBUTE_TYPE = 36
+	raatFramedAppleTalkLink    RAS_AUTH_ATTRIBUTE_TYPE = 37
+	raatFramedAppleTalkNetwork RAS_AUTH_ATTRIBUTE_TYPE = 38
+	raatFramedAppleTalkZone    RAS_AUTH_ATTRIBUTE_TYPE = 39
+	raatAcctStatusType         RAS_AUTH_ATTRIBUTE_TYPE = 40
+	raatAcctDelayTime          RAS_AUTH_ATTRIBUTE_TYPE = 41
+	raatAcctInputOctets        RAS_AUTH_ATTRIBUTE_TYPE = 42
+	raatAcctOutputOctets       RAS_AUTH_ATTRIBUTE_TYPE = 43
+	raatAcctSessionId          RAS_AUTH_ATTRIBUTE_TYPE = 44
+	raatAcctAuthentic          RAS_AUTH_ATTRIBUTE_TYPE = 45
+	raatAcctSessionTime        RAS_AUTH_ATTRIBUTE_TYPE = 46
+	raatAcctInputPackets       RAS_AUTH_ATTRIBUTE_TYPE = 47
+	raatAcctOutputPackets      RAS_AUTH_ATTRIBUTE_TYPE = 48
+	raatAcctTerminateCause     RAS_AUTH_ATTRIBUTE_TYPE = 49
+	raatAcctMultiSessionId     RAS_AUTH_ATTRIBUTE_TYPE = 50
+	raatAcctLinkCount          RAS_AUTH_ATTRIBUTE_TYPE = 51
+	raatAcctEventTimeStamp     RAS_AUTH_ATTRIBUTE_TYPE = 55
+	raatMD5CHAPChallenge       RAS_AUTH_ATTRIBUTE_TYPE = 60
+	raatNASPortType            RAS_AUTH_ATTRIBUTE_TYPE = 61
+	raatPortLimit              RAS_AUTH_ATTRIBUTE_TYPE = 62
+	raatLoginLATPort           RAS_AUTH_ATTRIBUTE_TYPE = 63
+	raatTunnelType             RAS_AUTH_ATTRIBUTE_TYPE = 64
+	raatTunnelMediumType       RAS_AUTH_ATTRIBUTE_TYPE = 65
+	raatTunnelClientEndpoint   RAS_AUTH_ATTRIBUTE_TYPE = 66
+	raatTunnelServerEndpoint   RAS_AUTH_ATTRIBUTE_TYPE = 67
+	raatARAPPassword           RAS_AUTH_ATTRIBUTE_TYPE = 70
+	raatARAPFeatures           RAS_AUTH_ATTRIBUTE_TYPE = 71
+	raatARAPZoneAccess         RAS_AUTH_ATTRIBUTE_TYPE = 72
+	raatARAPSecurity           RAS_AUTH_ATTRIBUTE_TYPE = 73
+	raatARAPSecurityData       RAS_AUTH_ATTRIBUTE_TYPE = 74
+	raatPasswordRetry          RAS_AUTH_ATTRIBUTE_TYPE = 75
+	raatPrompt                 RAS_AUTH_ATTRIBUTE_TYPE = 76
+	raatConnectInfo            RAS_AUTH_ATTRIBUTE_TYPE = 77
+	raatConfigurationToken     RAS_AUTH_ATTRIBUTE_TYPE = 78
+	raatEAPMessage             RAS_AUTH_ATTRIBUTE_TYPE = 79
+	raatSignature              RAS_AUTH_ATTRIBUTE_TYPE = 80
+	raatARAPChallengeResponse  RAS_AUTH_ATTRIBUTE_TYPE = 84
+	raatAcctInterimInterval    RAS_AUTH_ATTRIBUTE_TYPE = 85
+	raatNASIPv6Address         RAS_AUTH_ATTRIBUTE_TYPE = 95
+	raatFramedInterfaceId      RAS_AUTH_ATTRIBUTE_TYPE = 96
+	raatFramedIPv6Prefix       RAS_AUTH_ATTRIBUTE_TYPE = 97
+	raatLoginIPv6Host          RAS_AUTH_ATTRIBUTE_TYPE = 98
+	raatFramedIPv6Route        RAS_AUTH_ATTRIBUTE_TYPE = 99
+	raatFramedIPv6Pool         RAS_AUTH_ATTRIBUTE_TYPE = 100
+	raatARAPGuestLogon         RAS_AUTH_ATTRIBUTE_TYPE = 8096
+	raatCertificateOID         RAS_AUTH_ATTRIBUTE_TYPE = 8097
+	raatEAPConfiguration       RAS_AUTH_ATTRIBUTE_TYPE = 8098
+	raatPEAPEmbeddedEAPTypeId  RAS_AUTH_ATTRIBUTE_TYPE = 8099
+	raatInnerEAPTypeId         RAS_AUTH_ATTRIBUTE_TYPE = 8099
+	raatPEAPFastRoamedSession  RAS_AUTH_ATTRIBUTE_TYPE = 8100
+	raatFastRoamedSession      RAS_AUTH_ATTRIBUTE_TYPE = 8100
+	raatEAPTLV                 RAS_AUTH_ATTRIBUTE_TYPE = 8102
+	raatCredentialsChanged     RAS_AUTH_ATTRIBUTE_TYPE = 8103
+	raatCertificateThumbprint  RAS_AUTH_ATTRIBUTE_TYPE = 8250
+	raatPeerId                 RAS_AUTH_ATTRIBUTE_TYPE = 9000
+	raatServerId               RAS_AUTH_ATTRIBUTE_TYPE = 9001
+	raatMethodId               RAS_AUTH_ATTRIBUTE_TYPE = 9002
+	raatEMSK                   RAS_AUTH_ATTRIBUTE_TYPE = 9003
+	raatSessionId              RAS_AUTH_ATTRIBUTE_TYPE = 9004
+	raatReserved               RAS_AUTH_ATTRIBUTE_TYPE = -1
 )
 
 type PPP_EAP_ACTION int32
 
 const (
-	EAPACTION_NoAction = 0
-	EAPACTION_Authenticate = 1
-	EAPACTION_Done = 2
-	EAPACTION_SendAndDone = 3
-	EAPACTION_Send = 4
-	EAPACTION_SendWithTimeout = 5
-	EAPACTION_SendWithTimeoutInteractive = 6
-	EAPACTION_IndicateTLV = 7
-	EAPACTION_IndicateIdentity = 8
+	EAPACTION_NoAction                   PPP_EAP_ACTION = 0
+	EAPACTION_Authenticate               PPP_EAP_ACTION = 1
+	EAPACTION_Done                       PPP_EAP_ACTION = 2
+	EAPACTION_SendAndDone                PPP_EAP_ACTION = 3
+	EAPACTION_Send                       PPP_EAP_ACTION = 4
+	EAPACTION_SendWithTimeout            PPP_EAP_ACTION = 5
+	EAPACTION_SendWithTimeoutInteractive PPP_EAP_ACTION = 6
+	EAPACTION_IndicateTLV                PPP_EAP_ACTION = 7
+	EAPACTION_IndicateIdentity           PPP_EAP_ACTION = 8
 )
-

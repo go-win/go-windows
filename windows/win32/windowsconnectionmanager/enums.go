@@ -7,45 +7,44 @@ package windowsconnectionmanager
 type WCM_PROPERTY int32
 
 const (
-	wcm_global_property_domain_policy = 0
-	wcm_global_property_minimize_policy = 1
-	wcm_global_property_roaming_policy = 2
-	wcm_global_property_powermanagement_policy = 3
-	wcm_intf_property_connection_cost = 4
-	wcm_intf_property_dataplan_status = 5
-	wcm_intf_property_hotspot_profile = 6
+	wcm_global_property_domain_policy          WCM_PROPERTY = 0
+	wcm_global_property_minimize_policy        WCM_PROPERTY = 1
+	wcm_global_property_roaming_policy         WCM_PROPERTY = 2
+	wcm_global_property_powermanagement_policy WCM_PROPERTY = 3
+	wcm_intf_property_connection_cost          WCM_PROPERTY = 4
+	wcm_intf_property_dataplan_status          WCM_PROPERTY = 5
+	wcm_intf_property_hotspot_profile          WCM_PROPERTY = 6
 )
 
 type WCM_MEDIA_TYPE int32
 
 const (
-	wcm_media_unknown = 0
-	wcm_media_ethernet = 1
-	wcm_media_wlan = 2
-	wcm_media_mbn = 3
-	wcm_media_invalid = 4
-	wcm_media_max = 5
+	wcm_media_unknown  WCM_MEDIA_TYPE = 0
+	wcm_media_ethernet WCM_MEDIA_TYPE = 1
+	wcm_media_wlan     WCM_MEDIA_TYPE = 2
+	wcm_media_mbn      WCM_MEDIA_TYPE = 3
+	wcm_media_invalid  WCM_MEDIA_TYPE = 4
+	wcm_media_max      WCM_MEDIA_TYPE = 5
 )
 
 type WCM_CONNECTION_COST int32
 
 const (
-	WCM_CONNECTION_COST_UNKNOWN = 0
-	WCM_CONNECTION_COST_UNRESTRICTED = 1
-	WCM_CONNECTION_COST_FIXED = 2
-	WCM_CONNECTION_COST_VARIABLE = 4
-	WCM_CONNECTION_COST_OVERDATALIMIT = 65536
-	WCM_CONNECTION_COST_CONGESTED = 131072
-	WCM_CONNECTION_COST_ROAMING = 262144
-	WCM_CONNECTION_COST_APPROACHINGDATALIMIT = 524288
+	WCM_CONNECTION_COST_UNKNOWN              WCM_CONNECTION_COST = 0
+	WCM_CONNECTION_COST_UNRESTRICTED         WCM_CONNECTION_COST = 1
+	WCM_CONNECTION_COST_FIXED                WCM_CONNECTION_COST = 2
+	WCM_CONNECTION_COST_VARIABLE             WCM_CONNECTION_COST = 4
+	WCM_CONNECTION_COST_OVERDATALIMIT        WCM_CONNECTION_COST = 65536
+	WCM_CONNECTION_COST_CONGESTED            WCM_CONNECTION_COST = 131072
+	WCM_CONNECTION_COST_ROAMING              WCM_CONNECTION_COST = 262144
+	WCM_CONNECTION_COST_APPROACHINGDATALIMIT WCM_CONNECTION_COST = 524288
 )
 
 type WCM_CONNECTION_COST_SOURCE int32
 
 const (
-	WCM_CONNECTION_COST_SOURCE_DEFAULT = 0
-	WCM_CONNECTION_COST_SOURCE_GP = 1
-	WCM_CONNECTION_COST_SOURCE_USER = 2
-	WCM_CONNECTION_COST_SOURCE_OPERATOR = 3
+	WCM_CONNECTION_COST_SOURCE_DEFAULT  WCM_CONNECTION_COST_SOURCE = 0
+	WCM_CONNECTION_COST_SOURCE_GP       WCM_CONNECTION_COST_SOURCE = 1
+	WCM_CONNECTION_COST_SOURCE_USER     WCM_CONNECTION_COST_SOURCE = 2
+	WCM_CONNECTION_COST_SOURCE_OPERATOR WCM_CONNECTION_COST_SOURCE = 3
 )
-

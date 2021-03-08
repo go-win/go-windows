@@ -7,227 +7,226 @@ package dhcp
 type StatusCode int32
 
 const (
-	STATUS_NO_ERROR = 0
-	STATUS_UNSPECIFIED_FAILURE = 1
-	STATUS_NO_BINDING = 3
-	STATUS_NOPREFIX_AVAIL = 6
+	STATUS_NO_ERROR            StatusCode = 0
+	STATUS_UNSPECIFIED_FAILURE StatusCode = 1
+	STATUS_NO_BINDING          StatusCode = 3
+	STATUS_NOPREFIX_AVAIL      StatusCode = 6
 )
 
 type DHCP_FORCE_FLAG int32
 
 const (
-	DhcpFullForce = 0
-	DhcpNoForce = 1
-	DhcpFailoverForce = 2
+	DhcpFullForce     DHCP_FORCE_FLAG = 0
+	DhcpNoForce       DHCP_FORCE_FLAG = 1
+	DhcpFailoverForce DHCP_FORCE_FLAG = 2
 )
 
 type DHCP_SUBNET_STATE int32
 
 const (
-	DhcpSubnetEnabled = 0
-	DhcpSubnetDisabled = 1
-	DhcpSubnetEnabledSwitched = 2
-	DhcpSubnetDisabledSwitched = 3
-	DhcpSubnetInvalidState = 4
+	DhcpSubnetEnabled          DHCP_SUBNET_STATE = 0
+	DhcpSubnetDisabled         DHCP_SUBNET_STATE = 1
+	DhcpSubnetEnabledSwitched  DHCP_SUBNET_STATE = 2
+	DhcpSubnetDisabledSwitched DHCP_SUBNET_STATE = 3
+	DhcpSubnetInvalidState     DHCP_SUBNET_STATE = 4
 )
 
 type DHCP_SUBNET_ELEMENT_TYPE int32
 
 const (
-	DhcpIpRanges = 0
-	DhcpSecondaryHosts = 1
-	DhcpReservedIps = 2
-	DhcpExcludedIpRanges = 3
-	DhcpIpUsedClusters = 4
-	DhcpIpRangesDhcpOnly = 5
-	DhcpIpRangesDhcpBootp = 6
-	DhcpIpRangesBootpOnly = 7
+	DhcpIpRanges          DHCP_SUBNET_ELEMENT_TYPE = 0
+	DhcpSecondaryHosts    DHCP_SUBNET_ELEMENT_TYPE = 1
+	DhcpReservedIps       DHCP_SUBNET_ELEMENT_TYPE = 2
+	DhcpExcludedIpRanges  DHCP_SUBNET_ELEMENT_TYPE = 3
+	DhcpIpUsedClusters    DHCP_SUBNET_ELEMENT_TYPE = 4
+	DhcpIpRangesDhcpOnly  DHCP_SUBNET_ELEMENT_TYPE = 5
+	DhcpIpRangesDhcpBootp DHCP_SUBNET_ELEMENT_TYPE = 6
+	DhcpIpRangesBootpOnly DHCP_SUBNET_ELEMENT_TYPE = 7
 )
 
 type DHCP_FILTER_LIST_TYPE int32
 
 const (
-	Deny = 0
-	Allow = 1
+	Deny  DHCP_FILTER_LIST_TYPE = 0
+	Allow DHCP_FILTER_LIST_TYPE = 1
 )
 
 type DHCP_OPTION_DATA_TYPE int32
 
 const (
-	DhcpByteOption = 0
-	DhcpWordOption = 1
-	DhcpDWordOption = 2
-	DhcpDWordDWordOption = 3
-	DhcpIpAddressOption = 4
-	DhcpStringDataOption = 5
-	DhcpBinaryDataOption = 6
-	DhcpEncapsulatedDataOption = 7
-	DhcpIpv6AddressOption = 8
+	DhcpByteOption             DHCP_OPTION_DATA_TYPE = 0
+	DhcpWordOption             DHCP_OPTION_DATA_TYPE = 1
+	DhcpDWordOption            DHCP_OPTION_DATA_TYPE = 2
+	DhcpDWordDWordOption       DHCP_OPTION_DATA_TYPE = 3
+	DhcpIpAddressOption        DHCP_OPTION_DATA_TYPE = 4
+	DhcpStringDataOption       DHCP_OPTION_DATA_TYPE = 5
+	DhcpBinaryDataOption       DHCP_OPTION_DATA_TYPE = 6
+	DhcpEncapsulatedDataOption DHCP_OPTION_DATA_TYPE = 7
+	DhcpIpv6AddressOption      DHCP_OPTION_DATA_TYPE = 8
 )
 
 type DHCP_OPTION_TYPE int32
 
 const (
-	DhcpUnaryElementTypeOption = 0
-	DhcpArrayTypeOption = 1
+	DhcpUnaryElementTypeOption DHCP_OPTION_TYPE = 0
+	DhcpArrayTypeOption        DHCP_OPTION_TYPE = 1
 )
 
 type DHCP_OPTION_SCOPE_TYPE int32
 
 const (
-	DhcpDefaultOptions = 0
-	DhcpGlobalOptions = 1
-	DhcpSubnetOptions = 2
-	DhcpReservedOptions = 3
-	DhcpMScopeOptions = 4
+	DhcpDefaultOptions  DHCP_OPTION_SCOPE_TYPE = 0
+	DhcpGlobalOptions   DHCP_OPTION_SCOPE_TYPE = 1
+	DhcpSubnetOptions   DHCP_OPTION_SCOPE_TYPE = 2
+	DhcpReservedOptions DHCP_OPTION_SCOPE_TYPE = 3
+	DhcpMScopeOptions   DHCP_OPTION_SCOPE_TYPE = 4
 )
 
 type DHCP_OPTION_SCOPE_TYPE6 int32
 
 const (
-	DhcpDefaultOptions6 = 0
-	DhcpScopeOptions6 = 1
-	DhcpReservedOptions6 = 2
-	DhcpGlobalOptions6 = 3
+	DhcpDefaultOptions6  DHCP_OPTION_SCOPE_TYPE6 = 0
+	DhcpScopeOptions6    DHCP_OPTION_SCOPE_TYPE6 = 1
+	DhcpReservedOptions6 DHCP_OPTION_SCOPE_TYPE6 = 2
+	DhcpGlobalOptions6   DHCP_OPTION_SCOPE_TYPE6 = 3
 )
 
 type QuarantineStatus int32
 
 const (
-	NOQUARANTINE = 0
-	RESTRICTEDACCESS = 1
-	DROPPACKET = 2
-	PROBATION = 3
-	EXEMPT = 4
-	DEFAULTQUARSETTING = 5
-	NOQUARINFO = 6
+	NOQUARANTINE       QuarantineStatus = 0
+	RESTRICTEDACCESS   QuarantineStatus = 1
+	DROPPACKET         QuarantineStatus = 2
+	PROBATION          QuarantineStatus = 3
+	EXEMPT             QuarantineStatus = 4
+	DEFAULTQUARSETTING QuarantineStatus = 5
+	NOQUARINFO         QuarantineStatus = 6
 )
 
 type DHCP_SEARCH_INFO_TYPE int32
 
 const (
-	DhcpClientIpAddress = 0
-	DhcpClientHardwareAddress = 1
-	DhcpClientName = 2
+	DhcpClientIpAddress       DHCP_SEARCH_INFO_TYPE = 0
+	DhcpClientHardwareAddress DHCP_SEARCH_INFO_TYPE = 1
+	DhcpClientName            DHCP_SEARCH_INFO_TYPE = 2
 )
 
 type DHCP_PROPERTY_TYPE int32
 
 const (
-	DhcpPropTypeByte = 0
-	DhcpPropTypeWord = 1
-	DhcpPropTypeDword = 2
-	DhcpPropTypeString = 3
-	DhcpPropTypeBinary = 4
+	DhcpPropTypeByte   DHCP_PROPERTY_TYPE = 0
+	DhcpPropTypeWord   DHCP_PROPERTY_TYPE = 1
+	DhcpPropTypeDword  DHCP_PROPERTY_TYPE = 2
+	DhcpPropTypeString DHCP_PROPERTY_TYPE = 3
+	DhcpPropTypeBinary DHCP_PROPERTY_TYPE = 4
 )
 
 type DHCP_PROPERTY_ID int32
 
 const (
-	DhcpPropIdPolicyDnsSuffix = 0
-	DhcpPropIdClientAddressStateEx = 1
+	DhcpPropIdPolicyDnsSuffix      DHCP_PROPERTY_ID = 0
+	DhcpPropIdClientAddressStateEx DHCP_PROPERTY_ID = 1
 )
 
 type DHCP_SCAN_FLAG int32
 
 const (
-	DhcpRegistryFix = 0
-	DhcpDatabaseFix = 1
+	DhcpRegistryFix DHCP_SCAN_FLAG = 0
+	DhcpDatabaseFix DHCP_SCAN_FLAG = 1
 )
 
 type DHCP_SUBNET_ELEMENT_TYPE_V6 int32
 
 const (
-	Dhcpv6IpRanges = 0
-	Dhcpv6ReservedIps = 1
-	Dhcpv6ExcludedIpRanges = 2
+	Dhcpv6IpRanges         DHCP_SUBNET_ELEMENT_TYPE_V6 = 0
+	Dhcpv6ReservedIps      DHCP_SUBNET_ELEMENT_TYPE_V6 = 1
+	Dhcpv6ExcludedIpRanges DHCP_SUBNET_ELEMENT_TYPE_V6 = 2
 )
 
 type DHCP_SEARCH_INFO_TYPE_V6 int32
 
 const (
-	Dhcpv6ClientIpAddress = 0
-	Dhcpv6ClientDUID = 1
-	Dhcpv6ClientName = 2
+	Dhcpv6ClientIpAddress DHCP_SEARCH_INFO_TYPE_V6 = 0
+	Dhcpv6ClientDUID      DHCP_SEARCH_INFO_TYPE_V6 = 1
+	Dhcpv6ClientName      DHCP_SEARCH_INFO_TYPE_V6 = 2
 )
 
 type DHCP_POL_ATTR_TYPE int32
 
 const (
-	DhcpAttrHWAddr = 0
-	DhcpAttrOption = 1
-	DhcpAttrSubOption = 2
-	DhcpAttrFqdn = 3
-	DhcpAttrFqdnSingleLabel = 4
+	DhcpAttrHWAddr          DHCP_POL_ATTR_TYPE = 0
+	DhcpAttrOption          DHCP_POL_ATTR_TYPE = 1
+	DhcpAttrSubOption       DHCP_POL_ATTR_TYPE = 2
+	DhcpAttrFqdn            DHCP_POL_ATTR_TYPE = 3
+	DhcpAttrFqdnSingleLabel DHCP_POL_ATTR_TYPE = 4
 )
 
 type DHCP_POL_COMPARATOR int32
 
 const (
-	DhcpCompEqual = 0
-	DhcpCompNotEqual = 1
-	DhcpCompBeginsWith = 2
-	DhcpCompNotBeginWith = 3
-	DhcpCompEndsWith = 4
-	DhcpCompNotEndWith = 5
+	DhcpCompEqual        DHCP_POL_COMPARATOR = 0
+	DhcpCompNotEqual     DHCP_POL_COMPARATOR = 1
+	DhcpCompBeginsWith   DHCP_POL_COMPARATOR = 2
+	DhcpCompNotBeginWith DHCP_POL_COMPARATOR = 3
+	DhcpCompEndsWith     DHCP_POL_COMPARATOR = 4
+	DhcpCompNotEndWith   DHCP_POL_COMPARATOR = 5
 )
 
 type DHCP_POL_LOGIC_OPER int32
 
 const (
-	DhcpLogicalOr = 0
-	DhcpLogicalAnd = 1
+	DhcpLogicalOr  DHCP_POL_LOGIC_OPER = 0
+	DhcpLogicalAnd DHCP_POL_LOGIC_OPER = 1
 )
 
 type DHCP_POLICY_FIELDS_TO_UPDATE int32
 
 const (
-	DhcpUpdatePolicyName = 1
-	DhcpUpdatePolicyOrder = 2
-	DhcpUpdatePolicyExpr = 4
-	DhcpUpdatePolicyRanges = 8
-	DhcpUpdatePolicyDescr = 16
-	DhcpUpdatePolicyStatus = 32
-	DhcpUpdatePolicyDnsSuffix = 64
+	DhcpUpdatePolicyName      DHCP_POLICY_FIELDS_TO_UPDATE = 1
+	DhcpUpdatePolicyOrder     DHCP_POLICY_FIELDS_TO_UPDATE = 2
+	DhcpUpdatePolicyExpr      DHCP_POLICY_FIELDS_TO_UPDATE = 4
+	DhcpUpdatePolicyRanges    DHCP_POLICY_FIELDS_TO_UPDATE = 8
+	DhcpUpdatePolicyDescr     DHCP_POLICY_FIELDS_TO_UPDATE = 16
+	DhcpUpdatePolicyStatus    DHCP_POLICY_FIELDS_TO_UPDATE = 32
+	DhcpUpdatePolicyDnsSuffix DHCP_POLICY_FIELDS_TO_UPDATE = 64
 )
 
 type DHCPV6_STATELESS_PARAM_TYPE int32
 
 const (
-	DhcpStatelessPurgeInterval = 1
-	DhcpStatelessStatus = 2
+	DhcpStatelessPurgeInterval DHCPV6_STATELESS_PARAM_TYPE = 1
+	DhcpStatelessStatus        DHCPV6_STATELESS_PARAM_TYPE = 2
 )
 
 type DHCP_FAILOVER_MODE int32
 
 const (
-	LoadBalance = 0
-	HotStandby = 1
+	LoadBalance DHCP_FAILOVER_MODE = 0
+	HotStandby  DHCP_FAILOVER_MODE = 1
 )
 
 type DHCP_FAILOVER_SERVER int32
 
 const (
-	PrimaryServer = 0
-	SecondaryServer = 1
+	PrimaryServer   DHCP_FAILOVER_SERVER = 0
+	SecondaryServer DHCP_FAILOVER_SERVER = 1
 )
 
 type FSM_STATE int32
 
 const (
-	NO_STATE = 0
-	INIT = 1
-	STARTUP = 2
-	NORMAL = 3
-	COMMUNICATION_INT = 4
-	PARTNER_DOWN = 5
-	POTENTIAL_CONFLICT = 6
-	CONFLICT_DONE = 7
-	RESOLUTION_INT = 8
-	RECOVER = 9
-	RECOVER_WAIT = 10
-	RECOVER_DONE = 11
-	PAUSED = 12
-	SHUTDOWN = 13
+	NO_STATE           FSM_STATE = 0
+	INIT               FSM_STATE = 1
+	STARTUP            FSM_STATE = 2
+	NORMAL             FSM_STATE = 3
+	COMMUNICATION_INT  FSM_STATE = 4
+	PARTNER_DOWN       FSM_STATE = 5
+	POTENTIAL_CONFLICT FSM_STATE = 6
+	CONFLICT_DONE      FSM_STATE = 7
+	RESOLUTION_INT     FSM_STATE = 8
+	RECOVER            FSM_STATE = 9
+	RECOVER_WAIT       FSM_STATE = 10
+	RECOVER_DONE       FSM_STATE = 11
+	PAUSED             FSM_STATE = 12
+	SHUTDOWN           FSM_STATE = 13
 )
-

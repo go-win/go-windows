@@ -7,99 +7,98 @@ package usbdrivers
 type USB_DEVICE_SPEED int32
 
 const (
-	UsbLowSpeed = 0
-	UsbFullSpeed = 1
-	UsbHighSpeed = 2
-	UsbSuperSpeed = 3
+	UsbLowSpeed   USB_DEVICE_SPEED = 0
+	UsbFullSpeed  USB_DEVICE_SPEED = 1
+	UsbHighSpeed  USB_DEVICE_SPEED = 2
+	UsbSuperSpeed USB_DEVICE_SPEED = 3
 )
 
 type USB_DEVICE_TYPE int32
 
 const (
-	Usb11Device = 0
-	Usb20Device = 1
+	Usb11Device USB_DEVICE_TYPE = 0
+	Usb20Device USB_DEVICE_TYPE = 1
 )
 
 type USB_CONTROLLER_FLAVOR int32
 
 const (
-	USB_HcGeneric = 0
-	OHCI_Generic = 100
-	OHCI_Hydra = 101
-	OHCI_NEC = 102
-	UHCI_Generic = 200
-	UHCI_Piix4 = 201
-	UHCI_Piix3 = 202
-	UHCI_Ich2 = 203
-	UHCI_Reserved204 = 204
-	UHCI_Ich1 = 205
-	UHCI_Ich3m = 206
-	UHCI_Ich4 = 207
-	UHCI_Ich5 = 208
-	UHCI_Ich6 = 209
-	UHCI_Intel = 249
-	UHCI_VIA = 250
-	UHCI_VIA_x01 = 251
-	UHCI_VIA_x02 = 252
-	UHCI_VIA_x03 = 253
-	UHCI_VIA_x04 = 254
-	UHCI_VIA_x0E_FIFO = 264
-	EHCI_Generic = 1000
-	EHCI_NEC = 2000
-	EHCI_Lucent = 3000
-	EHCI_NVIDIA_Tegra2 = 4000
-	EHCI_NVIDIA_Tegra3 = 4001
-	EHCI_Intel_Medfield = 5001
+	USB_HcGeneric       USB_CONTROLLER_FLAVOR = 0
+	OHCI_Generic        USB_CONTROLLER_FLAVOR = 100
+	OHCI_Hydra          USB_CONTROLLER_FLAVOR = 101
+	OHCI_NEC            USB_CONTROLLER_FLAVOR = 102
+	UHCI_Generic        USB_CONTROLLER_FLAVOR = 200
+	UHCI_Piix4          USB_CONTROLLER_FLAVOR = 201
+	UHCI_Piix3          USB_CONTROLLER_FLAVOR = 202
+	UHCI_Ich2           USB_CONTROLLER_FLAVOR = 203
+	UHCI_Reserved204    USB_CONTROLLER_FLAVOR = 204
+	UHCI_Ich1           USB_CONTROLLER_FLAVOR = 205
+	UHCI_Ich3m          USB_CONTROLLER_FLAVOR = 206
+	UHCI_Ich4           USB_CONTROLLER_FLAVOR = 207
+	UHCI_Ich5           USB_CONTROLLER_FLAVOR = 208
+	UHCI_Ich6           USB_CONTROLLER_FLAVOR = 209
+	UHCI_Intel          USB_CONTROLLER_FLAVOR = 249
+	UHCI_VIA            USB_CONTROLLER_FLAVOR = 250
+	UHCI_VIA_x01        USB_CONTROLLER_FLAVOR = 251
+	UHCI_VIA_x02        USB_CONTROLLER_FLAVOR = 252
+	UHCI_VIA_x03        USB_CONTROLLER_FLAVOR = 253
+	UHCI_VIA_x04        USB_CONTROLLER_FLAVOR = 254
+	UHCI_VIA_x0E_FIFO   USB_CONTROLLER_FLAVOR = 264
+	EHCI_Generic        USB_CONTROLLER_FLAVOR = 1000
+	EHCI_NEC            USB_CONTROLLER_FLAVOR = 2000
+	EHCI_Lucent         USB_CONTROLLER_FLAVOR = 3000
+	EHCI_NVIDIA_Tegra2  USB_CONTROLLER_FLAVOR = 4000
+	EHCI_NVIDIA_Tegra3  USB_CONTROLLER_FLAVOR = 4001
+	EHCI_Intel_Medfield USB_CONTROLLER_FLAVOR = 5001
 )
 
 type USBD_PIPE_TYPE int32
 
 const (
-	UsbdPipeTypeControl = 0
-	UsbdPipeTypeIsochronous = 1
-	UsbdPipeTypeBulk = 2
-	UsbdPipeTypeInterrupt = 3
+	UsbdPipeTypeControl     USBD_PIPE_TYPE = 0
+	UsbdPipeTypeIsochronous USBD_PIPE_TYPE = 1
+	UsbdPipeTypeBulk        USBD_PIPE_TYPE = 2
+	UsbdPipeTypeInterrupt   USBD_PIPE_TYPE = 3
 )
 
 type USBD_ENDPOINT_OFFLOAD_MODE int32
 
 const (
-	UsbdEndpointOffloadModeNotSupported = 0
-	UsbdEndpointOffloadSoftwareAssisted = 1
-	UsbdEndpointOffloadHardwareAssisted = 2
+	UsbdEndpointOffloadModeNotSupported USBD_ENDPOINT_OFFLOAD_MODE = 0
+	UsbdEndpointOffloadSoftwareAssisted USBD_ENDPOINT_OFFLOAD_MODE = 1
+	UsbdEndpointOffloadHardwareAssisted USBD_ENDPOINT_OFFLOAD_MODE = 2
 )
 
 type USB_USER_ERROR_CODE int32
 
 const (
-	UsbUserSuccess = 0
-	UsbUserNotSupported = 1
-	UsbUserInvalidRequestCode = 2
-	UsbUserFeatureDisabled = 3
-	UsbUserInvalidHeaderParameter = 4
-	UsbUserInvalidParameter = 5
-	UsbUserMiniportError = 6
-	UsbUserBufferTooSmall = 7
-	UsbUserErrorNotMapped = 8
-	UsbUserDeviceNotStarted = 9
-	UsbUserNoDeviceConnected = 10
+	UsbUserSuccess                USB_USER_ERROR_CODE = 0
+	UsbUserNotSupported           USB_USER_ERROR_CODE = 1
+	UsbUserInvalidRequestCode     USB_USER_ERROR_CODE = 2
+	UsbUserFeatureDisabled        USB_USER_ERROR_CODE = 3
+	UsbUserInvalidHeaderParameter USB_USER_ERROR_CODE = 4
+	UsbUserInvalidParameter       USB_USER_ERROR_CODE = 5
+	UsbUserMiniportError          USB_USER_ERROR_CODE = 6
+	UsbUserBufferTooSmall         USB_USER_ERROR_CODE = 7
+	UsbUserErrorNotMapped         USB_USER_ERROR_CODE = 8
+	UsbUserDeviceNotStarted       USB_USER_ERROR_CODE = 9
+	UsbUserNoDeviceConnected      USB_USER_ERROR_CODE = 10
 )
 
 type WDMUSB_POWER_STATE int32
 
 const (
-	WdmUsbPowerNotMapped = 0
-	WdmUsbPowerSystemUnspecified = 100
-	WdmUsbPowerSystemWorking = 101
-	WdmUsbPowerSystemSleeping1 = 102
-	WdmUsbPowerSystemSleeping2 = 103
-	WdmUsbPowerSystemSleeping3 = 104
-	WdmUsbPowerSystemHibernate = 105
-	WdmUsbPowerSystemShutdown = 106
-	WdmUsbPowerDeviceUnspecified = 200
-	WdmUsbPowerDeviceD0 = 201
-	WdmUsbPowerDeviceD1 = 202
-	WdmUsbPowerDeviceD2 = 203
-	WdmUsbPowerDeviceD3 = 204
+	WdmUsbPowerNotMapped         WDMUSB_POWER_STATE = 0
+	WdmUsbPowerSystemUnspecified WDMUSB_POWER_STATE = 100
+	WdmUsbPowerSystemWorking     WDMUSB_POWER_STATE = 101
+	WdmUsbPowerSystemSleeping1   WDMUSB_POWER_STATE = 102
+	WdmUsbPowerSystemSleeping2   WDMUSB_POWER_STATE = 103
+	WdmUsbPowerSystemSleeping3   WDMUSB_POWER_STATE = 104
+	WdmUsbPowerSystemHibernate   WDMUSB_POWER_STATE = 105
+	WdmUsbPowerSystemShutdown    WDMUSB_POWER_STATE = 106
+	WdmUsbPowerDeviceUnspecified WDMUSB_POWER_STATE = 200
+	WdmUsbPowerDeviceD0          WDMUSB_POWER_STATE = 201
+	WdmUsbPowerDeviceD1          WDMUSB_POWER_STATE = 202
+	WdmUsbPowerDeviceD2          WDMUSB_POWER_STATE = 203
+	WdmUsbPowerDeviceD3          WDMUSB_POWER_STATE = 204
 )
-

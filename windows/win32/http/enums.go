@@ -7,466 +7,465 @@ package http
 type HTTP_SERVER_PROPERTY int32
 
 const (
-	HttpServerAuthenticationProperty = 0
-	HttpServerLoggingProperty = 1
-	HttpServerQosProperty = 2
-	HttpServerTimeoutsProperty = 3
-	HttpServerQueueLengthProperty = 4
-	HttpServerStateProperty = 5
-	HttpServer503VerbosityProperty = 6
-	HttpServerBindingProperty = 7
-	HttpServerExtendedAuthenticationProperty = 8
-	HttpServerListenEndpointProperty = 9
-	HttpServerChannelBindProperty = 10
-	HttpServerProtectionLevelProperty = 11
+	HttpServerAuthenticationProperty         HTTP_SERVER_PROPERTY = 0
+	HttpServerLoggingProperty                HTTP_SERVER_PROPERTY = 1
+	HttpServerQosProperty                    HTTP_SERVER_PROPERTY = 2
+	HttpServerTimeoutsProperty               HTTP_SERVER_PROPERTY = 3
+	HttpServerQueueLengthProperty            HTTP_SERVER_PROPERTY = 4
+	HttpServerStateProperty                  HTTP_SERVER_PROPERTY = 5
+	HttpServer503VerbosityProperty           HTTP_SERVER_PROPERTY = 6
+	HttpServerBindingProperty                HTTP_SERVER_PROPERTY = 7
+	HttpServerExtendedAuthenticationProperty HTTP_SERVER_PROPERTY = 8
+	HttpServerListenEndpointProperty         HTTP_SERVER_PROPERTY = 9
+	HttpServerChannelBindProperty            HTTP_SERVER_PROPERTY = 10
+	HttpServerProtectionLevelProperty        HTTP_SERVER_PROPERTY = 11
 )
 
 type HTTP_ENABLED_STATE int32
 
 const (
-	HttpEnabledStateActive = 0
-	HttpEnabledStateInactive = 1
+	HttpEnabledStateActive   HTTP_ENABLED_STATE = 0
+	HttpEnabledStateInactive HTTP_ENABLED_STATE = 1
 )
 
 type HTTP_503_RESPONSE_VERBOSITY int32
 
 const (
-	Http503ResponseVerbosityBasic = 0
-	Http503ResponseVerbosityLimited = 1
-	Http503ResponseVerbosityFull = 2
+	Http503ResponseVerbosityBasic   HTTP_503_RESPONSE_VERBOSITY = 0
+	Http503ResponseVerbosityLimited HTTP_503_RESPONSE_VERBOSITY = 1
+	Http503ResponseVerbosityFull    HTTP_503_RESPONSE_VERBOSITY = 2
 )
 
 type HTTP_QOS_SETTING_TYPE int32
 
 const (
-	HttpQosSettingTypeBandwidth = 0
-	HttpQosSettingTypeConnectionLimit = 1
-	HttpQosSettingTypeFlowRate = 2
+	HttpQosSettingTypeBandwidth       HTTP_QOS_SETTING_TYPE = 0
+	HttpQosSettingTypeConnectionLimit HTTP_QOS_SETTING_TYPE = 1
+	HttpQosSettingTypeFlowRate        HTTP_QOS_SETTING_TYPE = 2
 )
 
 type HTTP_SERVICE_CONFIG_TIMEOUT_KEY int32
 
 const (
-	IdleConnectionTimeout = 0
-	HeaderWaitTimeout = 1
+	IdleConnectionTimeout HTTP_SERVICE_CONFIG_TIMEOUT_KEY = 0
+	HeaderWaitTimeout     HTTP_SERVICE_CONFIG_TIMEOUT_KEY = 1
 )
 
 type HTTP_SERVICE_CONFIG_SETTING_KEY int32
 
 const (
-	HttpNone = 0
-	HttpTlsThrottle = 1
+	HttpNone        HTTP_SERVICE_CONFIG_SETTING_KEY = 0
+	HttpTlsThrottle HTTP_SERVICE_CONFIG_SETTING_KEY = 1
 )
 
 type HTTP_SERVICE_BINDING_TYPE int32
 
 const (
-	HttpServiceBindingTypeNone = 0
-	HttpServiceBindingTypeW = 1
-	HttpServiceBindingTypeA = 2
+	HttpServiceBindingTypeNone HTTP_SERVICE_BINDING_TYPE = 0
+	HttpServiceBindingTypeW    HTTP_SERVICE_BINDING_TYPE = 1
+	HttpServiceBindingTypeA    HTTP_SERVICE_BINDING_TYPE = 2
 )
 
 type HTTP_AUTHENTICATION_HARDENING_LEVELS int32
 
 const (
-	HttpAuthenticationHardeningLegacy = 0
-	HttpAuthenticationHardeningMedium = 1
-	HttpAuthenticationHardeningStrict = 2
+	HttpAuthenticationHardeningLegacy HTTP_AUTHENTICATION_HARDENING_LEVELS = 0
+	HttpAuthenticationHardeningMedium HTTP_AUTHENTICATION_HARDENING_LEVELS = 1
+	HttpAuthenticationHardeningStrict HTTP_AUTHENTICATION_HARDENING_LEVELS = 2
 )
 
 type HTTP_LOGGING_TYPE int32
 
 const (
-	HttpLoggingTypeW3C = 0
-	HttpLoggingTypeIIS = 1
-	HttpLoggingTypeNCSA = 2
-	HttpLoggingTypeRaw = 3
+	HttpLoggingTypeW3C  HTTP_LOGGING_TYPE = 0
+	HttpLoggingTypeIIS  HTTP_LOGGING_TYPE = 1
+	HttpLoggingTypeNCSA HTTP_LOGGING_TYPE = 2
+	HttpLoggingTypeRaw  HTTP_LOGGING_TYPE = 3
 )
 
 type HTTP_LOGGING_ROLLOVER_TYPE int32
 
 const (
-	HttpLoggingRolloverSize = 0
-	HttpLoggingRolloverDaily = 1
-	HttpLoggingRolloverWeekly = 2
-	HttpLoggingRolloverMonthly = 3
-	HttpLoggingRolloverHourly = 4
+	HttpLoggingRolloverSize    HTTP_LOGGING_ROLLOVER_TYPE = 0
+	HttpLoggingRolloverDaily   HTTP_LOGGING_ROLLOVER_TYPE = 1
+	HttpLoggingRolloverWeekly  HTTP_LOGGING_ROLLOVER_TYPE = 2
+	HttpLoggingRolloverMonthly HTTP_LOGGING_ROLLOVER_TYPE = 3
+	HttpLoggingRolloverHourly  HTTP_LOGGING_ROLLOVER_TYPE = 4
 )
 
 type HTTP_PROTECTION_LEVEL_TYPE int32
 
 const (
-	HttpProtectionLevelUnrestricted = 0
-	HttpProtectionLevelEdgeRestricted = 1
-	HttpProtectionLevelRestricted = 2
+	HttpProtectionLevelUnrestricted   HTTP_PROTECTION_LEVEL_TYPE = 0
+	HttpProtectionLevelEdgeRestricted HTTP_PROTECTION_LEVEL_TYPE = 1
+	HttpProtectionLevelRestricted     HTTP_PROTECTION_LEVEL_TYPE = 2
 )
 
 type _HTTP_URI_SCHEME int32
 
 const (
-	HttpSchemeHttp = 0
-	HttpSchemeHttps = 1
-	HttpSchemeMaximum = 2
+	HttpSchemeHttp    _HTTP_URI_SCHEME = 0
+	HttpSchemeHttps   _HTTP_URI_SCHEME = 1
+	HttpSchemeMaximum _HTTP_URI_SCHEME = 2
 )
 
 type HTTP_VERB int32
 
 const (
-	HttpVerbUnparsed = 0
-	HttpVerbUnknown = 1
-	HttpVerbInvalid = 2
-	HttpVerbOPTIONS = 3
-	HttpVerbGET = 4
-	HttpVerbHEAD = 5
-	HttpVerbPOST = 6
-	HttpVerbPUT = 7
-	HttpVerbDELETE = 8
-	HttpVerbTRACE = 9
-	HttpVerbCONNECT = 10
-	HttpVerbTRACK = 11
-	HttpVerbMOVE = 12
-	HttpVerbCOPY = 13
-	HttpVerbPROPFIND = 14
-	HttpVerbPROPPATCH = 15
-	HttpVerbMKCOL = 16
-	HttpVerbLOCK = 17
-	HttpVerbUNLOCK = 18
-	HttpVerbSEARCH = 19
-	HttpVerbMaximum = 20
+	HttpVerbUnparsed  HTTP_VERB = 0
+	HttpVerbUnknown   HTTP_VERB = 1
+	HttpVerbInvalid   HTTP_VERB = 2
+	HttpVerbOPTIONS   HTTP_VERB = 3
+	HttpVerbGET       HTTP_VERB = 4
+	HttpVerbHEAD      HTTP_VERB = 5
+	HttpVerbPOST      HTTP_VERB = 6
+	HttpVerbPUT       HTTP_VERB = 7
+	HttpVerbDELETE    HTTP_VERB = 8
+	HttpVerbTRACE     HTTP_VERB = 9
+	HttpVerbCONNECT   HTTP_VERB = 10
+	HttpVerbTRACK     HTTP_VERB = 11
+	HttpVerbMOVE      HTTP_VERB = 12
+	HttpVerbCOPY      HTTP_VERB = 13
+	HttpVerbPROPFIND  HTTP_VERB = 14
+	HttpVerbPROPPATCH HTTP_VERB = 15
+	HttpVerbMKCOL     HTTP_VERB = 16
+	HttpVerbLOCK      HTTP_VERB = 17
+	HttpVerbUNLOCK    HTTP_VERB = 18
+	HttpVerbSEARCH    HTTP_VERB = 19
+	HttpVerbMaximum   HTTP_VERB = 20
 )
 
 type HTTP_HEADER_ID int32
 
 const (
-	HttpHeaderCacheControl = 0
-	HttpHeaderConnection = 1
-	HttpHeaderDate = 2
-	HttpHeaderKeepAlive = 3
-	HttpHeaderPragma = 4
-	HttpHeaderTrailer = 5
-	HttpHeaderTransferEncoding = 6
-	HttpHeaderUpgrade = 7
-	HttpHeaderVia = 8
-	HttpHeaderWarning = 9
-	HttpHeaderAllow = 10
-	HttpHeaderContentLength = 11
-	HttpHeaderContentType = 12
-	HttpHeaderContentEncoding = 13
-	HttpHeaderContentLanguage = 14
-	HttpHeaderContentLocation = 15
-	HttpHeaderContentMd5 = 16
-	HttpHeaderContentRange = 17
-	HttpHeaderExpires = 18
-	HttpHeaderLastModified = 19
-	HttpHeaderAccept = 20
-	HttpHeaderAcceptCharset = 21
-	HttpHeaderAcceptEncoding = 22
-	HttpHeaderAcceptLanguage = 23
-	HttpHeaderAuthorization = 24
-	HttpHeaderCookie = 25
-	HttpHeaderExpect = 26
-	HttpHeaderFrom = 27
-	HttpHeaderHost = 28
-	HttpHeaderIfMatch = 29
-	HttpHeaderIfModifiedSince = 30
-	HttpHeaderIfNoneMatch = 31
-	HttpHeaderIfRange = 32
-	HttpHeaderIfUnmodifiedSince = 33
-	HttpHeaderMaxForwards = 34
-	HttpHeaderProxyAuthorization = 35
-	HttpHeaderReferer = 36
-	HttpHeaderRange = 37
-	HttpHeaderTe = 38
-	HttpHeaderTranslate = 39
-	HttpHeaderUserAgent = 40
-	HttpHeaderRequestMaximum = 41
-	HttpHeaderAcceptRanges = 20
-	HttpHeaderAge = 21
-	HttpHeaderEtag = 22
-	HttpHeaderLocation = 23
-	HttpHeaderProxyAuthenticate = 24
-	HttpHeaderRetryAfter = 25
-	HttpHeaderServer = 26
-	HttpHeaderSetCookie = 27
-	HttpHeaderVary = 28
-	HttpHeaderWwwAuthenticate = 29
-	HttpHeaderResponseMaximum = 30
-	HttpHeaderMaximum = 41
+	HttpHeaderCacheControl       HTTP_HEADER_ID = 0
+	HttpHeaderConnection         HTTP_HEADER_ID = 1
+	HttpHeaderDate               HTTP_HEADER_ID = 2
+	HttpHeaderKeepAlive          HTTP_HEADER_ID = 3
+	HttpHeaderPragma             HTTP_HEADER_ID = 4
+	HttpHeaderTrailer            HTTP_HEADER_ID = 5
+	HttpHeaderTransferEncoding   HTTP_HEADER_ID = 6
+	HttpHeaderUpgrade            HTTP_HEADER_ID = 7
+	HttpHeaderVia                HTTP_HEADER_ID = 8
+	HttpHeaderWarning            HTTP_HEADER_ID = 9
+	HttpHeaderAllow              HTTP_HEADER_ID = 10
+	HttpHeaderContentLength      HTTP_HEADER_ID = 11
+	HttpHeaderContentType        HTTP_HEADER_ID = 12
+	HttpHeaderContentEncoding    HTTP_HEADER_ID = 13
+	HttpHeaderContentLanguage    HTTP_HEADER_ID = 14
+	HttpHeaderContentLocation    HTTP_HEADER_ID = 15
+	HttpHeaderContentMd5         HTTP_HEADER_ID = 16
+	HttpHeaderContentRange       HTTP_HEADER_ID = 17
+	HttpHeaderExpires            HTTP_HEADER_ID = 18
+	HttpHeaderLastModified       HTTP_HEADER_ID = 19
+	HttpHeaderAccept             HTTP_HEADER_ID = 20
+	HttpHeaderAcceptCharset      HTTP_HEADER_ID = 21
+	HttpHeaderAcceptEncoding     HTTP_HEADER_ID = 22
+	HttpHeaderAcceptLanguage     HTTP_HEADER_ID = 23
+	HttpHeaderAuthorization      HTTP_HEADER_ID = 24
+	HttpHeaderCookie             HTTP_HEADER_ID = 25
+	HttpHeaderExpect             HTTP_HEADER_ID = 26
+	HttpHeaderFrom               HTTP_HEADER_ID = 27
+	HttpHeaderHost               HTTP_HEADER_ID = 28
+	HttpHeaderIfMatch            HTTP_HEADER_ID = 29
+	HttpHeaderIfModifiedSince    HTTP_HEADER_ID = 30
+	HttpHeaderIfNoneMatch        HTTP_HEADER_ID = 31
+	HttpHeaderIfRange            HTTP_HEADER_ID = 32
+	HttpHeaderIfUnmodifiedSince  HTTP_HEADER_ID = 33
+	HttpHeaderMaxForwards        HTTP_HEADER_ID = 34
+	HttpHeaderProxyAuthorization HTTP_HEADER_ID = 35
+	HttpHeaderReferer            HTTP_HEADER_ID = 36
+	HttpHeaderRange              HTTP_HEADER_ID = 37
+	HttpHeaderTe                 HTTP_HEADER_ID = 38
+	HttpHeaderTranslate          HTTP_HEADER_ID = 39
+	HttpHeaderUserAgent          HTTP_HEADER_ID = 40
+	HttpHeaderRequestMaximum     HTTP_HEADER_ID = 41
+	HttpHeaderAcceptRanges       HTTP_HEADER_ID = 20
+	HttpHeaderAge                HTTP_HEADER_ID = 21
+	HttpHeaderEtag               HTTP_HEADER_ID = 22
+	HttpHeaderLocation           HTTP_HEADER_ID = 23
+	HttpHeaderProxyAuthenticate  HTTP_HEADER_ID = 24
+	HttpHeaderRetryAfter         HTTP_HEADER_ID = 25
+	HttpHeaderServer             HTTP_HEADER_ID = 26
+	HttpHeaderSetCookie          HTTP_HEADER_ID = 27
+	HttpHeaderVary               HTTP_HEADER_ID = 28
+	HttpHeaderWwwAuthenticate    HTTP_HEADER_ID = 29
+	HttpHeaderResponseMaximum    HTTP_HEADER_ID = 30
+	HttpHeaderMaximum            HTTP_HEADER_ID = 41
 )
 
 type HTTP_LOG_DATA_TYPE int32
 
 const (
-	HttpLogDataTypeFields = 0
+	HttpLogDataTypeFields HTTP_LOG_DATA_TYPE = 0
 )
 
 type HTTP_DATA_CHUNK_TYPE int32
 
 const (
-	HttpDataChunkFromMemory = 0
-	HttpDataChunkFromFileHandle = 1
-	HttpDataChunkFromFragmentCache = 2
-	HttpDataChunkFromFragmentCacheEx = 3
-	HttpDataChunkMaximum = 4
+	HttpDataChunkFromMemory          HTTP_DATA_CHUNK_TYPE = 0
+	HttpDataChunkFromFileHandle      HTTP_DATA_CHUNK_TYPE = 1
+	HttpDataChunkFromFragmentCache   HTTP_DATA_CHUNK_TYPE = 2
+	HttpDataChunkFromFragmentCacheEx HTTP_DATA_CHUNK_TYPE = 3
+	HttpDataChunkMaximum             HTTP_DATA_CHUNK_TYPE = 4
 )
 
 type HTTP_DELEGATE_REQUEST_PROPERTY_ID int32
 
 const (
-	DelegateRequestReservedProperty = 0
+	DelegateRequestReservedProperty HTTP_DELEGATE_REQUEST_PROPERTY_ID = 0
 )
 
 type HTTP_AUTH_STATUS int32
 
 const (
-	HttpAuthStatusSuccess = 0
-	HttpAuthStatusNotAuthenticated = 1
-	HttpAuthStatusFailure = 2
+	HttpAuthStatusSuccess          HTTP_AUTH_STATUS = 0
+	HttpAuthStatusNotAuthenticated HTTP_AUTH_STATUS = 1
+	HttpAuthStatusFailure          HTTP_AUTH_STATUS = 2
 )
 
 type HTTP_REQUEST_AUTH_TYPE int32
 
 const (
-	HttpRequestAuthTypeNone = 0
-	HttpRequestAuthTypeBasic = 1
-	HttpRequestAuthTypeDigest = 2
-	HttpRequestAuthTypeNTLM = 3
-	HttpRequestAuthTypeNegotiate = 4
-	HttpRequestAuthTypeKerberos = 5
+	HttpRequestAuthTypeNone      HTTP_REQUEST_AUTH_TYPE = 0
+	HttpRequestAuthTypeBasic     HTTP_REQUEST_AUTH_TYPE = 1
+	HttpRequestAuthTypeDigest    HTTP_REQUEST_AUTH_TYPE = 2
+	HttpRequestAuthTypeNTLM      HTTP_REQUEST_AUTH_TYPE = 3
+	HttpRequestAuthTypeNegotiate HTTP_REQUEST_AUTH_TYPE = 4
+	HttpRequestAuthTypeKerberos  HTTP_REQUEST_AUTH_TYPE = 5
 )
 
 type HTTP_REQUEST_SIZING_TYPE int32
 
 const (
-	HttpRequestSizingTypeTlsHandshakeLeg1ClientData = 0
-	HttpRequestSizingTypeTlsHandshakeLeg1ServerData = 1
-	HttpRequestSizingTypeTlsHandshakeLeg2ClientData = 2
-	HttpRequestSizingTypeTlsHandshakeLeg2ServerData = 3
-	HttpRequestSizingTypeHeaders = 4
-	HttpRequestSizingTypeMax = 5
+	HttpRequestSizingTypeTlsHandshakeLeg1ClientData HTTP_REQUEST_SIZING_TYPE = 0
+	HttpRequestSizingTypeTlsHandshakeLeg1ServerData HTTP_REQUEST_SIZING_TYPE = 1
+	HttpRequestSizingTypeTlsHandshakeLeg2ClientData HTTP_REQUEST_SIZING_TYPE = 2
+	HttpRequestSizingTypeTlsHandshakeLeg2ServerData HTTP_REQUEST_SIZING_TYPE = 3
+	HttpRequestSizingTypeHeaders                    HTTP_REQUEST_SIZING_TYPE = 4
+	HttpRequestSizingTypeMax                        HTTP_REQUEST_SIZING_TYPE = 5
 )
 
 type HTTP_REQUEST_TIMING_TYPE int32
 
 const (
-	HttpRequestTimingTypeConnectionStart = 0
-	HttpRequestTimingTypeDataStart = 1
-	HttpRequestTimingTypeTlsCertificateLoadStart = 2
-	HttpRequestTimingTypeTlsCertificateLoadEnd = 3
-	HttpRequestTimingTypeTlsHandshakeLeg1Start = 4
-	HttpRequestTimingTypeTlsHandshakeLeg1End = 5
-	HttpRequestTimingTypeTlsHandshakeLeg2Start = 6
-	HttpRequestTimingTypeTlsHandshakeLeg2End = 7
-	HttpRequestTimingTypeTlsAttributesQueryStart = 8
-	HttpRequestTimingTypeTlsAttributesQueryEnd = 9
-	HttpRequestTimingTypeTlsClientCertQueryStart = 10
-	HttpRequestTimingTypeTlsClientCertQueryEnd = 11
-	HttpRequestTimingTypeHttp2StreamStart = 12
-	HttpRequestTimingTypeHttp2HeaderDecodeStart = 13
-	HttpRequestTimingTypeHttp2HeaderDecodeEnd = 14
-	HttpRequestTimingTypeRequestHeaderParseStart = 15
-	HttpRequestTimingTypeRequestHeaderParseEnd = 16
-	HttpRequestTimingTypeRequestRoutingStart = 17
-	HttpRequestTimingTypeRequestRoutingEnd = 18
-	HttpRequestTimingTypeRequestQueuedForInspection = 19
-	HttpRequestTimingTypeRequestDeliveredForInspection = 20
-	HttpRequestTimingTypeRequestReturnedAfterInspection = 21
-	HttpRequestTimingTypeRequestQueuedForDelegation = 22
-	HttpRequestTimingTypeRequestDeliveredForDelegation = 23
-	HttpRequestTimingTypeRequestReturnedAfterDelegation = 24
-	HttpRequestTimingTypeRequestQueuedForIO = 25
-	HttpRequestTimingTypeRequestDeliveredForIO = 26
-	HttpRequestTimingTypeHttp3StreamStart = 27
-	HttpRequestTimingTypeHttp3HeaderDecodeStart = 28
-	HttpRequestTimingTypeHttp3HeaderDecodeEnd = 29
-	HttpRequestTimingTypeMax = 30
+	HttpRequestTimingTypeConnectionStart                HTTP_REQUEST_TIMING_TYPE = 0
+	HttpRequestTimingTypeDataStart                      HTTP_REQUEST_TIMING_TYPE = 1
+	HttpRequestTimingTypeTlsCertificateLoadStart        HTTP_REQUEST_TIMING_TYPE = 2
+	HttpRequestTimingTypeTlsCertificateLoadEnd          HTTP_REQUEST_TIMING_TYPE = 3
+	HttpRequestTimingTypeTlsHandshakeLeg1Start          HTTP_REQUEST_TIMING_TYPE = 4
+	HttpRequestTimingTypeTlsHandshakeLeg1End            HTTP_REQUEST_TIMING_TYPE = 5
+	HttpRequestTimingTypeTlsHandshakeLeg2Start          HTTP_REQUEST_TIMING_TYPE = 6
+	HttpRequestTimingTypeTlsHandshakeLeg2End            HTTP_REQUEST_TIMING_TYPE = 7
+	HttpRequestTimingTypeTlsAttributesQueryStart        HTTP_REQUEST_TIMING_TYPE = 8
+	HttpRequestTimingTypeTlsAttributesQueryEnd          HTTP_REQUEST_TIMING_TYPE = 9
+	HttpRequestTimingTypeTlsClientCertQueryStart        HTTP_REQUEST_TIMING_TYPE = 10
+	HttpRequestTimingTypeTlsClientCertQueryEnd          HTTP_REQUEST_TIMING_TYPE = 11
+	HttpRequestTimingTypeHttp2StreamStart               HTTP_REQUEST_TIMING_TYPE = 12
+	HttpRequestTimingTypeHttp2HeaderDecodeStart         HTTP_REQUEST_TIMING_TYPE = 13
+	HttpRequestTimingTypeHttp2HeaderDecodeEnd           HTTP_REQUEST_TIMING_TYPE = 14
+	HttpRequestTimingTypeRequestHeaderParseStart        HTTP_REQUEST_TIMING_TYPE = 15
+	HttpRequestTimingTypeRequestHeaderParseEnd          HTTP_REQUEST_TIMING_TYPE = 16
+	HttpRequestTimingTypeRequestRoutingStart            HTTP_REQUEST_TIMING_TYPE = 17
+	HttpRequestTimingTypeRequestRoutingEnd              HTTP_REQUEST_TIMING_TYPE = 18
+	HttpRequestTimingTypeRequestQueuedForInspection     HTTP_REQUEST_TIMING_TYPE = 19
+	HttpRequestTimingTypeRequestDeliveredForInspection  HTTP_REQUEST_TIMING_TYPE = 20
+	HttpRequestTimingTypeRequestReturnedAfterInspection HTTP_REQUEST_TIMING_TYPE = 21
+	HttpRequestTimingTypeRequestQueuedForDelegation     HTTP_REQUEST_TIMING_TYPE = 22
+	HttpRequestTimingTypeRequestDeliveredForDelegation  HTTP_REQUEST_TIMING_TYPE = 23
+	HttpRequestTimingTypeRequestReturnedAfterDelegation HTTP_REQUEST_TIMING_TYPE = 24
+	HttpRequestTimingTypeRequestQueuedForIO             HTTP_REQUEST_TIMING_TYPE = 25
+	HttpRequestTimingTypeRequestDeliveredForIO          HTTP_REQUEST_TIMING_TYPE = 26
+	HttpRequestTimingTypeHttp3StreamStart               HTTP_REQUEST_TIMING_TYPE = 27
+	HttpRequestTimingTypeHttp3HeaderDecodeStart         HTTP_REQUEST_TIMING_TYPE = 28
+	HttpRequestTimingTypeHttp3HeaderDecodeEnd           HTTP_REQUEST_TIMING_TYPE = 29
+	HttpRequestTimingTypeMax                            HTTP_REQUEST_TIMING_TYPE = 30
 )
 
 type HTTP_REQUEST_INFO_TYPE int32
 
 const (
-	HttpRequestInfoTypeAuth = 0
-	HttpRequestInfoTypeChannelBind = 1
-	HttpRequestInfoTypeSslProtocol = 2
-	HttpRequestInfoTypeSslTokenBindingDraft = 3
-	HttpRequestInfoTypeSslTokenBinding = 4
-	HttpRequestInfoTypeRequestTiming = 5
-	HttpRequestInfoTypeTcpInfoV0 = 6
-	HttpRequestInfoTypeRequestSizing = 7
-	HttpRequestInfoTypeQuicStats = 8
-	HttpRequestInfoTypeTcpInfoV1 = 9
+	HttpRequestInfoTypeAuth                 HTTP_REQUEST_INFO_TYPE = 0
+	HttpRequestInfoTypeChannelBind          HTTP_REQUEST_INFO_TYPE = 1
+	HttpRequestInfoTypeSslProtocol          HTTP_REQUEST_INFO_TYPE = 2
+	HttpRequestInfoTypeSslTokenBindingDraft HTTP_REQUEST_INFO_TYPE = 3
+	HttpRequestInfoTypeSslTokenBinding      HTTP_REQUEST_INFO_TYPE = 4
+	HttpRequestInfoTypeRequestTiming        HTTP_REQUEST_INFO_TYPE = 5
+	HttpRequestInfoTypeTcpInfoV0            HTTP_REQUEST_INFO_TYPE = 6
+	HttpRequestInfoTypeRequestSizing        HTTP_REQUEST_INFO_TYPE = 7
+	HttpRequestInfoTypeQuicStats            HTTP_REQUEST_INFO_TYPE = 8
+	HttpRequestInfoTypeTcpInfoV1            HTTP_REQUEST_INFO_TYPE = 9
 )
 
 type HTTP_RESPONSE_INFO_TYPE int32
 
 const (
-	HttpResponseInfoTypeMultipleKnownHeaders = 0
-	HttpResponseInfoTypeAuthenticationProperty = 1
-	HttpResponseInfoTypeQoSProperty = 2
-	HttpResponseInfoTypeChannelBind = 3
+	HttpResponseInfoTypeMultipleKnownHeaders   HTTP_RESPONSE_INFO_TYPE = 0
+	HttpResponseInfoTypeAuthenticationProperty HTTP_RESPONSE_INFO_TYPE = 1
+	HttpResponseInfoTypeQoSProperty            HTTP_RESPONSE_INFO_TYPE = 2
+	HttpResponseInfoTypeChannelBind            HTTP_RESPONSE_INFO_TYPE = 3
 )
 
 type HTTP_CACHE_POLICY_TYPE int32
 
 const (
-	HttpCachePolicyNocache = 0
-	HttpCachePolicyUserInvalidates = 1
-	HttpCachePolicyTimeToLive = 2
-	HttpCachePolicyMaximum = 3
+	HttpCachePolicyNocache         HTTP_CACHE_POLICY_TYPE = 0
+	HttpCachePolicyUserInvalidates HTTP_CACHE_POLICY_TYPE = 1
+	HttpCachePolicyTimeToLive      HTTP_CACHE_POLICY_TYPE = 2
+	HttpCachePolicyMaximum         HTTP_CACHE_POLICY_TYPE = 3
 )
 
 type HTTP_SERVICE_CONFIG_ID int32
 
 const (
-	HttpServiceConfigIPListenList = 0
-	HttpServiceConfigSSLCertInfo = 1
-	HttpServiceConfigUrlAclInfo = 2
-	HttpServiceConfigTimeout = 3
-	HttpServiceConfigCache = 4
-	HttpServiceConfigSslSniCertInfo = 5
-	HttpServiceConfigSslCcsCertInfo = 6
-	HttpServiceConfigSetting = 7
-	HttpServiceConfigSslCertInfoEx = 8
-	HttpServiceConfigSslSniCertInfoEx = 9
-	HttpServiceConfigSslCcsCertInfoEx = 10
-	HttpServiceConfigSslScopedCcsCertInfo = 11
-	HttpServiceConfigSslScopedCcsCertInfoEx = 12
-	HttpServiceConfigMax = 13
+	HttpServiceConfigIPListenList           HTTP_SERVICE_CONFIG_ID = 0
+	HttpServiceConfigSSLCertInfo            HTTP_SERVICE_CONFIG_ID = 1
+	HttpServiceConfigUrlAclInfo             HTTP_SERVICE_CONFIG_ID = 2
+	HttpServiceConfigTimeout                HTTP_SERVICE_CONFIG_ID = 3
+	HttpServiceConfigCache                  HTTP_SERVICE_CONFIG_ID = 4
+	HttpServiceConfigSslSniCertInfo         HTTP_SERVICE_CONFIG_ID = 5
+	HttpServiceConfigSslCcsCertInfo         HTTP_SERVICE_CONFIG_ID = 6
+	HttpServiceConfigSetting                HTTP_SERVICE_CONFIG_ID = 7
+	HttpServiceConfigSslCertInfoEx          HTTP_SERVICE_CONFIG_ID = 8
+	HttpServiceConfigSslSniCertInfoEx       HTTP_SERVICE_CONFIG_ID = 9
+	HttpServiceConfigSslCcsCertInfoEx       HTTP_SERVICE_CONFIG_ID = 10
+	HttpServiceConfigSslScopedCcsCertInfo   HTTP_SERVICE_CONFIG_ID = 11
+	HttpServiceConfigSslScopedCcsCertInfoEx HTTP_SERVICE_CONFIG_ID = 12
+	HttpServiceConfigMax                    HTTP_SERVICE_CONFIG_ID = 13
 )
 
 type HTTP_SERVICE_CONFIG_QUERY_TYPE int32
 
 const (
-	HttpServiceConfigQueryExact = 0
-	HttpServiceConfigQueryNext = 1
-	HttpServiceConfigQueryMax = 2
+	HttpServiceConfigQueryExact HTTP_SERVICE_CONFIG_QUERY_TYPE = 0
+	HttpServiceConfigQueryNext  HTTP_SERVICE_CONFIG_QUERY_TYPE = 1
+	HttpServiceConfigQueryMax   HTTP_SERVICE_CONFIG_QUERY_TYPE = 2
 )
 
 type HTTP_SSL_SERVICE_CONFIG_EX_PARAM_TYPE int32
 
 const (
-	ExParamTypeHttp2Window = 0
-	ExParamTypeHttp2SettingsLimits = 1
-	ExParamTypeHttpPerformance = 2
-	ExParamTypeMax = 3
+	ExParamTypeHttp2Window         HTTP_SSL_SERVICE_CONFIG_EX_PARAM_TYPE = 0
+	ExParamTypeHttp2SettingsLimits HTTP_SSL_SERVICE_CONFIG_EX_PARAM_TYPE = 1
+	ExParamTypeHttpPerformance     HTTP_SSL_SERVICE_CONFIG_EX_PARAM_TYPE = 2
+	ExParamTypeMax                 HTTP_SSL_SERVICE_CONFIG_EX_PARAM_TYPE = 3
 )
 
 type HTTP_SERVICE_CONFIG_CACHE_KEY int32
 
 const (
-	MaxCacheResponseSize = 0
-	CacheRangeChunkSize = 1
+	MaxCacheResponseSize HTTP_SERVICE_CONFIG_CACHE_KEY = 0
+	CacheRangeChunkSize  HTTP_SERVICE_CONFIG_CACHE_KEY = 1
 )
 
 type HTTP_REQUEST_PROPERTY int32
 
 const (
-	HttpRequestPropertyIsb = 0
-	HttpRequestPropertyTcpInfoV0 = 1
-	HttpRequestPropertyQuicStats = 2
-	HttpRequestPropertyTcpInfoV1 = 3
-	HttpRequestPropertySni = 4
+	HttpRequestPropertyIsb       HTTP_REQUEST_PROPERTY = 0
+	HttpRequestPropertyTcpInfoV0 HTTP_REQUEST_PROPERTY = 1
+	HttpRequestPropertyQuicStats HTTP_REQUEST_PROPERTY = 2
+	HttpRequestPropertyTcpInfoV1 HTTP_REQUEST_PROPERTY = 3
+	HttpRequestPropertySni       HTTP_REQUEST_PROPERTY = 4
 )
 
 type WINHTTP_REQUEST_TIME_ENTRY int32
 
 const (
-	WinHttpProxyDetectionStart = 0
-	WinHttpProxyDetectionEnd = 1
-	WinHttpConnectionAcquireStart = 2
-	WinHttpConnectionAcquireWaitEnd = 3
-	WinHttpConnectionAcquireEnd = 4
-	WinHttpNameResolutionStart = 5
-	WinHttpNameResolutionEnd = 6
-	WinHttpConnectionEstablishmentStart = 7
-	WinHttpConnectionEstablishmentEnd = 8
-	WinHttpTlsHandshakeClientLeg1Start = 9
-	WinHttpTlsHandshakeClientLeg1End = 10
-	WinHttpTlsHandshakeClientLeg2Start = 11
-	WinHttpTlsHandshakeClientLeg2End = 12
-	WinHttpTlsHandshakeClientLeg3Start = 13
-	WinHttpTlsHandshakeClientLeg3End = 14
-	WinHttpStreamWaitStart = 15
-	WinHttpStreamWaitEnd = 16
-	WinHttpSendRequestStart = 17
-	WinHttpSendRequestHeadersCompressionStart = 18
-	WinHttpSendRequestHeadersCompressionEnd = 19
-	WinHttpSendRequestHeadersEnd = 20
-	WinHttpSendRequestEnd = 21
-	WinHttpReceiveResponseStart = 22
-	WinHttpReceiveResponseHeadersDecompressionStart = 23
-	WinHttpReceiveResponseHeadersDecompressionEnd = 24
-	WinHttpReceiveResponseHeadersEnd = 25
-	WinHttpReceiveResponseBodyDecompressionDelta = 26
-	WinHttpReceiveResponseEnd = 27
-	WinHttpProxyTunnelStart = 28
-	WinHttpProxyTunnelEnd = 29
-	WinHttpProxyTlsHandshakeClientLeg1Start = 30
-	WinHttpProxyTlsHandshakeClientLeg1End = 31
-	WinHttpProxyTlsHandshakeClientLeg2Start = 32
-	WinHttpProxyTlsHandshakeClientLeg2End = 33
-	WinHttpProxyTlsHandshakeClientLeg3Start = 34
-	WinHttpProxyTlsHandshakeClientLeg3End = 35
-	WinHttpRequestTimeLast = 36
-	WinHttpRequestTimeMax = 64
+	WinHttpProxyDetectionStart                      WINHTTP_REQUEST_TIME_ENTRY = 0
+	WinHttpProxyDetectionEnd                        WINHTTP_REQUEST_TIME_ENTRY = 1
+	WinHttpConnectionAcquireStart                   WINHTTP_REQUEST_TIME_ENTRY = 2
+	WinHttpConnectionAcquireWaitEnd                 WINHTTP_REQUEST_TIME_ENTRY = 3
+	WinHttpConnectionAcquireEnd                     WINHTTP_REQUEST_TIME_ENTRY = 4
+	WinHttpNameResolutionStart                      WINHTTP_REQUEST_TIME_ENTRY = 5
+	WinHttpNameResolutionEnd                        WINHTTP_REQUEST_TIME_ENTRY = 6
+	WinHttpConnectionEstablishmentStart             WINHTTP_REQUEST_TIME_ENTRY = 7
+	WinHttpConnectionEstablishmentEnd               WINHTTP_REQUEST_TIME_ENTRY = 8
+	WinHttpTlsHandshakeClientLeg1Start              WINHTTP_REQUEST_TIME_ENTRY = 9
+	WinHttpTlsHandshakeClientLeg1End                WINHTTP_REQUEST_TIME_ENTRY = 10
+	WinHttpTlsHandshakeClientLeg2Start              WINHTTP_REQUEST_TIME_ENTRY = 11
+	WinHttpTlsHandshakeClientLeg2End                WINHTTP_REQUEST_TIME_ENTRY = 12
+	WinHttpTlsHandshakeClientLeg3Start              WINHTTP_REQUEST_TIME_ENTRY = 13
+	WinHttpTlsHandshakeClientLeg3End                WINHTTP_REQUEST_TIME_ENTRY = 14
+	WinHttpStreamWaitStart                          WINHTTP_REQUEST_TIME_ENTRY = 15
+	WinHttpStreamWaitEnd                            WINHTTP_REQUEST_TIME_ENTRY = 16
+	WinHttpSendRequestStart                         WINHTTP_REQUEST_TIME_ENTRY = 17
+	WinHttpSendRequestHeadersCompressionStart       WINHTTP_REQUEST_TIME_ENTRY = 18
+	WinHttpSendRequestHeadersCompressionEnd         WINHTTP_REQUEST_TIME_ENTRY = 19
+	WinHttpSendRequestHeadersEnd                    WINHTTP_REQUEST_TIME_ENTRY = 20
+	WinHttpSendRequestEnd                           WINHTTP_REQUEST_TIME_ENTRY = 21
+	WinHttpReceiveResponseStart                     WINHTTP_REQUEST_TIME_ENTRY = 22
+	WinHttpReceiveResponseHeadersDecompressionStart WINHTTP_REQUEST_TIME_ENTRY = 23
+	WinHttpReceiveResponseHeadersDecompressionEnd   WINHTTP_REQUEST_TIME_ENTRY = 24
+	WinHttpReceiveResponseHeadersEnd                WINHTTP_REQUEST_TIME_ENTRY = 25
+	WinHttpReceiveResponseBodyDecompressionDelta    WINHTTP_REQUEST_TIME_ENTRY = 26
+	WinHttpReceiveResponseEnd                       WINHTTP_REQUEST_TIME_ENTRY = 27
+	WinHttpProxyTunnelStart                         WINHTTP_REQUEST_TIME_ENTRY = 28
+	WinHttpProxyTunnelEnd                           WINHTTP_REQUEST_TIME_ENTRY = 29
+	WinHttpProxyTlsHandshakeClientLeg1Start         WINHTTP_REQUEST_TIME_ENTRY = 30
+	WinHttpProxyTlsHandshakeClientLeg1End           WINHTTP_REQUEST_TIME_ENTRY = 31
+	WinHttpProxyTlsHandshakeClientLeg2Start         WINHTTP_REQUEST_TIME_ENTRY = 32
+	WinHttpProxyTlsHandshakeClientLeg2End           WINHTTP_REQUEST_TIME_ENTRY = 33
+	WinHttpProxyTlsHandshakeClientLeg3Start         WINHTTP_REQUEST_TIME_ENTRY = 34
+	WinHttpProxyTlsHandshakeClientLeg3End           WINHTTP_REQUEST_TIME_ENTRY = 35
+	WinHttpRequestTimeLast                          WINHTTP_REQUEST_TIME_ENTRY = 36
+	WinHttpRequestTimeMax                           WINHTTP_REQUEST_TIME_ENTRY = 64
 )
 
 type WINHTTP_REQUEST_STAT_ENTRY int32
 
 const (
-	WinHttpConnectFailureCount = 0
-	WinHttpProxyFailureCount = 1
-	WinHttpTlsHandshakeClientLeg1Size = 2
-	WinHttpTlsHandshakeServerLeg1Size = 3
-	WinHttpTlsHandshakeClientLeg2Size = 4
-	WinHttpTlsHandshakeServerLeg2Size = 5
-	WinHttpRequestHeadersSize = 6
-	WinHttpRequestHeadersCompressedSize = 7
-	WinHttpResponseHeadersSize = 8
-	WinHttpResponseHeadersCompressedSize = 9
-	WinHttpResponseBodySize = 10
-	WinHttpResponseBodyCompressedSize = 11
-	WinHttpProxyTlsHandshakeClientLeg1Size = 12
-	WinHttpProxyTlsHandshakeServerLeg1Size = 13
-	WinHttpProxyTlsHandshakeClientLeg2Size = 14
-	WinHttpProxyTlsHandshakeServerLeg2Size = 15
-	WinHttpRequestStatLast = 16
-	WinHttpRequestStatMax = 32
+	WinHttpConnectFailureCount             WINHTTP_REQUEST_STAT_ENTRY = 0
+	WinHttpProxyFailureCount               WINHTTP_REQUEST_STAT_ENTRY = 1
+	WinHttpTlsHandshakeClientLeg1Size      WINHTTP_REQUEST_STAT_ENTRY = 2
+	WinHttpTlsHandshakeServerLeg1Size      WINHTTP_REQUEST_STAT_ENTRY = 3
+	WinHttpTlsHandshakeClientLeg2Size      WINHTTP_REQUEST_STAT_ENTRY = 4
+	WinHttpTlsHandshakeServerLeg2Size      WINHTTP_REQUEST_STAT_ENTRY = 5
+	WinHttpRequestHeadersSize              WINHTTP_REQUEST_STAT_ENTRY = 6
+	WinHttpRequestHeadersCompressedSize    WINHTTP_REQUEST_STAT_ENTRY = 7
+	WinHttpResponseHeadersSize             WINHTTP_REQUEST_STAT_ENTRY = 8
+	WinHttpResponseHeadersCompressedSize   WINHTTP_REQUEST_STAT_ENTRY = 9
+	WinHttpResponseBodySize                WINHTTP_REQUEST_STAT_ENTRY = 10
+	WinHttpResponseBodyCompressedSize      WINHTTP_REQUEST_STAT_ENTRY = 11
+	WinHttpProxyTlsHandshakeClientLeg1Size WINHTTP_REQUEST_STAT_ENTRY = 12
+	WinHttpProxyTlsHandshakeServerLeg1Size WINHTTP_REQUEST_STAT_ENTRY = 13
+	WinHttpProxyTlsHandshakeClientLeg2Size WINHTTP_REQUEST_STAT_ENTRY = 14
+	WinHttpProxyTlsHandshakeServerLeg2Size WINHTTP_REQUEST_STAT_ENTRY = 15
+	WinHttpRequestStatLast                 WINHTTP_REQUEST_STAT_ENTRY = 16
+	WinHttpRequestStatMax                  WINHTTP_REQUEST_STAT_ENTRY = 32
 )
 
 type WINHTTP_WEB_SOCKET_OPERATION int32
 
 const (
-	WINHTTP_WEB_SOCKET_SEND_OPERATION = 0
-	WINHTTP_WEB_SOCKET_RECEIVE_OPERATION = 1
-	WINHTTP_WEB_SOCKET_CLOSE_OPERATION = 2
-	WINHTTP_WEB_SOCKET_SHUTDOWN_OPERATION = 3
+	WINHTTP_WEB_SOCKET_SEND_OPERATION     WINHTTP_WEB_SOCKET_OPERATION = 0
+	WINHTTP_WEB_SOCKET_RECEIVE_OPERATION  WINHTTP_WEB_SOCKET_OPERATION = 1
+	WINHTTP_WEB_SOCKET_CLOSE_OPERATION    WINHTTP_WEB_SOCKET_OPERATION = 2
+	WINHTTP_WEB_SOCKET_SHUTDOWN_OPERATION WINHTTP_WEB_SOCKET_OPERATION = 3
 )
 
 type WINHTTP_WEB_SOCKET_BUFFER_TYPE int32
 
 const (
-	WINHTTP_WEB_SOCKET_BINARY_MESSAGE_BUFFER_TYPE = 0
-	WINHTTP_WEB_SOCKET_BINARY_FRAGMENT_BUFFER_TYPE = 1
-	WINHTTP_WEB_SOCKET_UTF8_MESSAGE_BUFFER_TYPE = 2
-	WINHTTP_WEB_SOCKET_UTF8_FRAGMENT_BUFFER_TYPE = 3
-	WINHTTP_WEB_SOCKET_CLOSE_BUFFER_TYPE = 4
+	WINHTTP_WEB_SOCKET_BINARY_MESSAGE_BUFFER_TYPE  WINHTTP_WEB_SOCKET_BUFFER_TYPE = 0
+	WINHTTP_WEB_SOCKET_BINARY_FRAGMENT_BUFFER_TYPE WINHTTP_WEB_SOCKET_BUFFER_TYPE = 1
+	WINHTTP_WEB_SOCKET_UTF8_MESSAGE_BUFFER_TYPE    WINHTTP_WEB_SOCKET_BUFFER_TYPE = 2
+	WINHTTP_WEB_SOCKET_UTF8_FRAGMENT_BUFFER_TYPE   WINHTTP_WEB_SOCKET_BUFFER_TYPE = 3
+	WINHTTP_WEB_SOCKET_CLOSE_BUFFER_TYPE           WINHTTP_WEB_SOCKET_BUFFER_TYPE = 4
 )
 
 type WINHTTP_WEB_SOCKET_CLOSE_STATUS int32
 
 const (
-	WINHTTP_WEB_SOCKET_SUCCESS_CLOSE_STATUS = 1000
-	WINHTTP_WEB_SOCKET_ENDPOINT_TERMINATED_CLOSE_STATUS = 1001
-	WINHTTP_WEB_SOCKET_PROTOCOL_ERROR_CLOSE_STATUS = 1002
-	WINHTTP_WEB_SOCKET_INVALID_DATA_TYPE_CLOSE_STATUS = 1003
-	WINHTTP_WEB_SOCKET_EMPTY_CLOSE_STATUS = 1005
-	WINHTTP_WEB_SOCKET_ABORTED_CLOSE_STATUS = 1006
-	WINHTTP_WEB_SOCKET_INVALID_PAYLOAD_CLOSE_STATUS = 1007
-	WINHTTP_WEB_SOCKET_POLICY_VIOLATION_CLOSE_STATUS = 1008
-	WINHTTP_WEB_SOCKET_MESSAGE_TOO_BIG_CLOSE_STATUS = 1009
-	WINHTTP_WEB_SOCKET_UNSUPPORTED_EXTENSIONS_CLOSE_STATUS = 1010
-	WINHTTP_WEB_SOCKET_SERVER_ERROR_CLOSE_STATUS = 1011
-	WINHTTP_WEB_SOCKET_SECURE_HANDSHAKE_ERROR_CLOSE_STATUS = 1015
+	WINHTTP_WEB_SOCKET_SUCCESS_CLOSE_STATUS                WINHTTP_WEB_SOCKET_CLOSE_STATUS = 1000
+	WINHTTP_WEB_SOCKET_ENDPOINT_TERMINATED_CLOSE_STATUS    WINHTTP_WEB_SOCKET_CLOSE_STATUS = 1001
+	WINHTTP_WEB_SOCKET_PROTOCOL_ERROR_CLOSE_STATUS         WINHTTP_WEB_SOCKET_CLOSE_STATUS = 1002
+	WINHTTP_WEB_SOCKET_INVALID_DATA_TYPE_CLOSE_STATUS      WINHTTP_WEB_SOCKET_CLOSE_STATUS = 1003
+	WINHTTP_WEB_SOCKET_EMPTY_CLOSE_STATUS                  WINHTTP_WEB_SOCKET_CLOSE_STATUS = 1005
+	WINHTTP_WEB_SOCKET_ABORTED_CLOSE_STATUS                WINHTTP_WEB_SOCKET_CLOSE_STATUS = 1006
+	WINHTTP_WEB_SOCKET_INVALID_PAYLOAD_CLOSE_STATUS        WINHTTP_WEB_SOCKET_CLOSE_STATUS = 1007
+	WINHTTP_WEB_SOCKET_POLICY_VIOLATION_CLOSE_STATUS       WINHTTP_WEB_SOCKET_CLOSE_STATUS = 1008
+	WINHTTP_WEB_SOCKET_MESSAGE_TOO_BIG_CLOSE_STATUS        WINHTTP_WEB_SOCKET_CLOSE_STATUS = 1009
+	WINHTTP_WEB_SOCKET_UNSUPPORTED_EXTENSIONS_CLOSE_STATUS WINHTTP_WEB_SOCKET_CLOSE_STATUS = 1010
+	WINHTTP_WEB_SOCKET_SERVER_ERROR_CLOSE_STATUS           WINHTTP_WEB_SOCKET_CLOSE_STATUS = 1011
+	WINHTTP_WEB_SOCKET_SECURE_HANDSHAKE_ERROR_CLOSE_STATUS WINHTTP_WEB_SOCKET_CLOSE_STATUS = 1015
 )
-

@@ -7,7 +7,6 @@ package hardwarecounterprofiling
 type HARDWARE_COUNTER_TYPE int32
 
 const (
-	PMCCounter = 0
-	MaxHardwareCounterType = 1
+	PMCCounter             HARDWARE_COUNTER_TYPE = 0
+	MaxHardwareCounterType HARDWARE_COUNTER_TYPE = 1
 )
-

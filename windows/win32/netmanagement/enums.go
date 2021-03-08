@@ -7,53 +7,52 @@ package netmanagement
 type NET_VALIDATE_PASSWORD_TYPE int32
 
 const (
-	NetValidateAuthentication = 1
-	NetValidatePasswordChange = 2
-	NetValidatePasswordReset = 3
+	NetValidateAuthentication NET_VALIDATE_PASSWORD_TYPE = 1
+	NetValidatePasswordChange NET_VALIDATE_PASSWORD_TYPE = 2
+	NetValidatePasswordReset  NET_VALIDATE_PASSWORD_TYPE = 3
 )
 
 type NETSETUP_NAME_TYPE int32
 
 const (
-	NetSetupUnknown = 0
-	NetSetupMachine = 1
-	NetSetupWorkgroup = 2
-	NetSetupDomain = 3
-	NetSetupNonExistentDomain = 4
-	NetSetupDnsMachine = 5
+	NetSetupUnknown           NETSETUP_NAME_TYPE = 0
+	NetSetupMachine           NETSETUP_NAME_TYPE = 1
+	NetSetupWorkgroup         NETSETUP_NAME_TYPE = 2
+	NetSetupDomain            NETSETUP_NAME_TYPE = 3
+	NetSetupNonExistentDomain NETSETUP_NAME_TYPE = 4
+	NetSetupDnsMachine        NETSETUP_NAME_TYPE = 5
 )
 
 type DSREG_JOIN_TYPE int32
 
 const (
-	DSREG_UNKNOWN_JOIN = 0
-	DSREG_DEVICE_JOIN = 1
-	DSREG_WORKPLACE_JOIN = 2
+	DSREG_UNKNOWN_JOIN   DSREG_JOIN_TYPE = 0
+	DSREG_DEVICE_JOIN    DSREG_JOIN_TYPE = 1
+	DSREG_WORKPLACE_JOIN DSREG_JOIN_TYPE = 2
 )
 
 type NET_COMPUTER_NAME_TYPE int32
 
 const (
-	NetPrimaryComputerName = 0
-	NetAlternateComputerNames = 1
-	NetAllComputerNames = 2
-	NetComputerNameTypeMax = 3
+	NetPrimaryComputerName    NET_COMPUTER_NAME_TYPE = 0
+	NetAlternateComputerNames NET_COMPUTER_NAME_TYPE = 1
+	NetAllComputerNames       NET_COMPUTER_NAME_TYPE = 2
+	NetComputerNameTypeMax    NET_COMPUTER_NAME_TYPE = 3
 )
 
 type NETSETUP_JOIN_STATUS int32
 
 const (
-	NetSetupUnknownStatus = 0
-	NetSetupUnjoined = 1
-	NetSetupWorkgroupName = 2
-	NetSetupDomainName = 3
+	NetSetupUnknownStatus NETSETUP_JOIN_STATUS = 0
+	NetSetupUnjoined      NETSETUP_JOIN_STATUS = 1
+	NetSetupWorkgroupName NETSETUP_JOIN_STATUS = 2
+	NetSetupDomainName    NETSETUP_JOIN_STATUS = 3
 )
 
 type TRANSPORT_TYPE int32
 
 const (
-	UseTransportType_None = 0
-	UseTransportType_Wsk = 1
-	UseTransportType_Quic = 2
+	UseTransportType_None TRANSPORT_TYPE = 0
+	UseTransportType_Wsk  TRANSPORT_TYPE = 1
+	UseTransportType_Quic TRANSPORT_TYPE = 2
 )
-

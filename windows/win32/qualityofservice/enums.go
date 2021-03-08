@@ -7,64 +7,63 @@ package qualityofservice
 type int_serv_wkp int32
 
 const (
-	IS_WKP_HOP_CNT = 4
-	IS_WKP_PATH_BW = 6
-	IS_WKP_MIN_LATENCY = 8
-	IS_WKP_COMPOSED_MTU = 10
-	IS_WKP_TB_TSPEC = 127
-	IS_WKP_Q_TSPEC = 128
+	IS_WKP_HOP_CNT      int_serv_wkp = 4
+	IS_WKP_PATH_BW      int_serv_wkp = 6
+	IS_WKP_MIN_LATENCY  int_serv_wkp = 8
+	IS_WKP_COMPOSED_MTU int_serv_wkp = 10
+	IS_WKP_TB_TSPEC     int_serv_wkp = 127
+	IS_WKP_Q_TSPEC      int_serv_wkp = 128
 )
 
 type QOS_TRAFFIC_TYPE int32
 
 const (
-	QOSTrafficTypeBestEffort = 0
-	QOSTrafficTypeBackground = 1
-	QOSTrafficTypeExcellentEffort = 2
-	QOSTrafficTypeAudioVideo = 3
-	QOSTrafficTypeVoice = 4
-	QOSTrafficTypeControl = 5
+	QOSTrafficTypeBestEffort      QOS_TRAFFIC_TYPE = 0
+	QOSTrafficTypeBackground      QOS_TRAFFIC_TYPE = 1
+	QOSTrafficTypeExcellentEffort QOS_TRAFFIC_TYPE = 2
+	QOSTrafficTypeAudioVideo      QOS_TRAFFIC_TYPE = 3
+	QOSTrafficTypeVoice           QOS_TRAFFIC_TYPE = 4
+	QOSTrafficTypeControl         QOS_TRAFFIC_TYPE = 5
 )
 
 type QOS_SET_FLOW int32
 
 const (
-	QOSSetTrafficType = 0
-	QOSSetOutgoingRate = 1
-	QOSSetOutgoingDSCPValue = 2
+	QOSSetTrafficType       QOS_SET_FLOW = 0
+	QOSSetOutgoingRate      QOS_SET_FLOW = 1
+	QOSSetOutgoingDSCPValue QOS_SET_FLOW = 2
 )
 
 type QOS_FLOWRATE_REASON int32
 
 const (
-	QOSFlowRateNotApplicable = 0
-	QOSFlowRateContentChange = 1
-	QOSFlowRateCongestion = 2
-	QOSFlowRateHigherContentEncoding = 3
-	QOSFlowRateUserCaused = 4
+	QOSFlowRateNotApplicable         QOS_FLOWRATE_REASON = 0
+	QOSFlowRateContentChange         QOS_FLOWRATE_REASON = 1
+	QOSFlowRateCongestion            QOS_FLOWRATE_REASON = 2
+	QOSFlowRateHigherContentEncoding QOS_FLOWRATE_REASON = 3
+	QOSFlowRateUserCaused            QOS_FLOWRATE_REASON = 4
 )
 
 type QOS_SHAPING int32
 
 const (
-	QOSShapeOnly = 0
-	QOSShapeAndMark = 1
-	QOSUseNonConformantMarkings = 2
+	QOSShapeOnly                QOS_SHAPING = 0
+	QOSShapeAndMark             QOS_SHAPING = 1
+	QOSUseNonConformantMarkings QOS_SHAPING = 2
 )
 
 type QOS_QUERY_FLOW int32
 
 const (
-	QOSQueryFlowFundamentals = 0
-	QOSQueryPacketPriority = 1
-	QOSQueryOutgoingRate = 2
+	QOSQueryFlowFundamentals QOS_QUERY_FLOW = 0
+	QOSQueryPacketPriority   QOS_QUERY_FLOW = 1
+	QOSQueryOutgoingRate     QOS_QUERY_FLOW = 2
 )
 
 type QOS_NOTIFY_FLOW int32
 
 const (
-	QOSNotifyCongested = 0
-	QOSNotifyUncongested = 1
-	QOSNotifyAvailable = 2
+	QOSNotifyCongested   QOS_NOTIFY_FLOW = 0
+	QOSNotifyUncongested QOS_NOTIFY_FLOW = 1
+	QOSNotifyAvailable   QOS_NOTIFY_FLOW = 2
 )
-

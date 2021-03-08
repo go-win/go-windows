@@ -7,15 +7,14 @@ package hid
 type HIDP_REPORT_TYPE int32
 
 const (
-	HidP_Input = 0
-	HidP_Output = 1
-	HidP_Feature = 2
+	HidP_Input   HIDP_REPORT_TYPE = 0
+	HidP_Output  HIDP_REPORT_TYPE = 1
+	HidP_Feature HIDP_REPORT_TYPE = 2
 )
 
 type HIDP_KEYBOARD_DIRECTION int32
 
 const (
-	HidP_Keyboard_Break = 0
-	HidP_Keyboard_Make = 1
+	HidP_Keyboard_Break HIDP_KEYBOARD_DIRECTION = 0
+	HidP_Keyboard_Make  HIDP_KEYBOARD_DIRECTION = 1
 )
-

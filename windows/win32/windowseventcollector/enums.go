@@ -7,111 +7,110 @@ package windowseventcollector
 type EC_SUBSCRIPTION_PROPERTY_ID int32
 
 const (
-	EcSubscriptionEnabled = 0
-	EcSubscriptionEventSources = 1
-	EcSubscriptionEventSourceAddress = 2
-	EcSubscriptionEventSourceEnabled = 3
-	EcSubscriptionEventSourceUserName = 4
-	EcSubscriptionEventSourcePassword = 5
-	EcSubscriptionDescription = 6
-	EcSubscriptionURI = 7
-	EcSubscriptionConfigurationMode = 8
-	EcSubscriptionExpires = 9
-	EcSubscriptionQuery = 10
-	EcSubscriptionTransportName = 11
-	EcSubscriptionTransportPort = 12
-	EcSubscriptionDeliveryMode = 13
-	EcSubscriptionDeliveryMaxItems = 14
-	EcSubscriptionDeliveryMaxLatencyTime = 15
-	EcSubscriptionHeartbeatInterval = 16
-	EcSubscriptionLocale = 17
-	EcSubscriptionContentFormat = 18
-	EcSubscriptionLogFile = 19
-	EcSubscriptionPublisherName = 20
-	EcSubscriptionCredentialsType = 21
-	EcSubscriptionCommonUserName = 22
-	EcSubscriptionCommonPassword = 23
-	EcSubscriptionHostName = 24
-	EcSubscriptionReadExistingEvents = 25
-	EcSubscriptionDialect = 26
-	EcSubscriptionType = 27
-	EcSubscriptionAllowedIssuerCAs = 28
-	EcSubscriptionAllowedSubjects = 29
-	EcSubscriptionDeniedSubjects = 30
-	EcSubscriptionAllowedSourceDomainComputers = 31
-	EcSubscriptionPropertyIdEND = 32
+	EcSubscriptionEnabled                      EC_SUBSCRIPTION_PROPERTY_ID = 0
+	EcSubscriptionEventSources                 EC_SUBSCRIPTION_PROPERTY_ID = 1
+	EcSubscriptionEventSourceAddress           EC_SUBSCRIPTION_PROPERTY_ID = 2
+	EcSubscriptionEventSourceEnabled           EC_SUBSCRIPTION_PROPERTY_ID = 3
+	EcSubscriptionEventSourceUserName          EC_SUBSCRIPTION_PROPERTY_ID = 4
+	EcSubscriptionEventSourcePassword          EC_SUBSCRIPTION_PROPERTY_ID = 5
+	EcSubscriptionDescription                  EC_SUBSCRIPTION_PROPERTY_ID = 6
+	EcSubscriptionURI                          EC_SUBSCRIPTION_PROPERTY_ID = 7
+	EcSubscriptionConfigurationMode            EC_SUBSCRIPTION_PROPERTY_ID = 8
+	EcSubscriptionExpires                      EC_SUBSCRIPTION_PROPERTY_ID = 9
+	EcSubscriptionQuery                        EC_SUBSCRIPTION_PROPERTY_ID = 10
+	EcSubscriptionTransportName                EC_SUBSCRIPTION_PROPERTY_ID = 11
+	EcSubscriptionTransportPort                EC_SUBSCRIPTION_PROPERTY_ID = 12
+	EcSubscriptionDeliveryMode                 EC_SUBSCRIPTION_PROPERTY_ID = 13
+	EcSubscriptionDeliveryMaxItems             EC_SUBSCRIPTION_PROPERTY_ID = 14
+	EcSubscriptionDeliveryMaxLatencyTime       EC_SUBSCRIPTION_PROPERTY_ID = 15
+	EcSubscriptionHeartbeatInterval            EC_SUBSCRIPTION_PROPERTY_ID = 16
+	EcSubscriptionLocale                       EC_SUBSCRIPTION_PROPERTY_ID = 17
+	EcSubscriptionContentFormat                EC_SUBSCRIPTION_PROPERTY_ID = 18
+	EcSubscriptionLogFile                      EC_SUBSCRIPTION_PROPERTY_ID = 19
+	EcSubscriptionPublisherName                EC_SUBSCRIPTION_PROPERTY_ID = 20
+	EcSubscriptionCredentialsType              EC_SUBSCRIPTION_PROPERTY_ID = 21
+	EcSubscriptionCommonUserName               EC_SUBSCRIPTION_PROPERTY_ID = 22
+	EcSubscriptionCommonPassword               EC_SUBSCRIPTION_PROPERTY_ID = 23
+	EcSubscriptionHostName                     EC_SUBSCRIPTION_PROPERTY_ID = 24
+	EcSubscriptionReadExistingEvents           EC_SUBSCRIPTION_PROPERTY_ID = 25
+	EcSubscriptionDialect                      EC_SUBSCRIPTION_PROPERTY_ID = 26
+	EcSubscriptionType                         EC_SUBSCRIPTION_PROPERTY_ID = 27
+	EcSubscriptionAllowedIssuerCAs             EC_SUBSCRIPTION_PROPERTY_ID = 28
+	EcSubscriptionAllowedSubjects              EC_SUBSCRIPTION_PROPERTY_ID = 29
+	EcSubscriptionDeniedSubjects               EC_SUBSCRIPTION_PROPERTY_ID = 30
+	EcSubscriptionAllowedSourceDomainComputers EC_SUBSCRIPTION_PROPERTY_ID = 31
+	EcSubscriptionPropertyIdEND                EC_SUBSCRIPTION_PROPERTY_ID = 32
 )
 
 type EC_SUBSCRIPTION_CREDENTIALS_TYPE int32
 
 const (
-	EcSubscriptionCredDefault = 0
-	EcSubscriptionCredNegotiate = 1
-	EcSubscriptionCredDigest = 2
-	EcSubscriptionCredBasic = 3
-	EcSubscriptionCredLocalMachine = 4
+	EcSubscriptionCredDefault      EC_SUBSCRIPTION_CREDENTIALS_TYPE = 0
+	EcSubscriptionCredNegotiate    EC_SUBSCRIPTION_CREDENTIALS_TYPE = 1
+	EcSubscriptionCredDigest       EC_SUBSCRIPTION_CREDENTIALS_TYPE = 2
+	EcSubscriptionCredBasic        EC_SUBSCRIPTION_CREDENTIALS_TYPE = 3
+	EcSubscriptionCredLocalMachine EC_SUBSCRIPTION_CREDENTIALS_TYPE = 4
 )
 
 type EC_SUBSCRIPTION_TYPE int32
 
 const (
-	EcSubscriptionTypeSourceInitiated = 0
-	EcSubscriptionTypeCollectorInitiated = 1
+	EcSubscriptionTypeSourceInitiated    EC_SUBSCRIPTION_TYPE = 0
+	EcSubscriptionTypeCollectorInitiated EC_SUBSCRIPTION_TYPE = 1
 )
 
 type EC_SUBSCRIPTION_RUNTIME_STATUS_INFO_ID int32
 
 const (
-	EcSubscriptionRunTimeStatusActive = 0
-	EcSubscriptionRunTimeStatusLastError = 1
-	EcSubscriptionRunTimeStatusLastErrorMessage = 2
-	EcSubscriptionRunTimeStatusLastErrorTime = 3
-	EcSubscriptionRunTimeStatusNextRetryTime = 4
-	EcSubscriptionRunTimeStatusEventSources = 5
-	EcSubscriptionRunTimeStatusLastHeartbeatTime = 6
-	EcSubscriptionRunTimeStatusInfoIdEND = 7
+	EcSubscriptionRunTimeStatusActive            EC_SUBSCRIPTION_RUNTIME_STATUS_INFO_ID = 0
+	EcSubscriptionRunTimeStatusLastError         EC_SUBSCRIPTION_RUNTIME_STATUS_INFO_ID = 1
+	EcSubscriptionRunTimeStatusLastErrorMessage  EC_SUBSCRIPTION_RUNTIME_STATUS_INFO_ID = 2
+	EcSubscriptionRunTimeStatusLastErrorTime     EC_SUBSCRIPTION_RUNTIME_STATUS_INFO_ID = 3
+	EcSubscriptionRunTimeStatusNextRetryTime     EC_SUBSCRIPTION_RUNTIME_STATUS_INFO_ID = 4
+	EcSubscriptionRunTimeStatusEventSources      EC_SUBSCRIPTION_RUNTIME_STATUS_INFO_ID = 5
+	EcSubscriptionRunTimeStatusLastHeartbeatTime EC_SUBSCRIPTION_RUNTIME_STATUS_INFO_ID = 6
+	EcSubscriptionRunTimeStatusInfoIdEND         EC_SUBSCRIPTION_RUNTIME_STATUS_INFO_ID = 7
 )
 
 type EC_VARIANT_TYPE int32
 
 const (
-	EcVarTypeNull = 0
-	EcVarTypeBoolean = 1
-	EcVarTypeUInt32 = 2
-	EcVarTypeDateTime = 3
-	EcVarTypeString = 4
-	EcVarObjectArrayPropertyHandle = 5
+	EcVarTypeNull                  EC_VARIANT_TYPE = 0
+	EcVarTypeBoolean               EC_VARIANT_TYPE = 1
+	EcVarTypeUInt32                EC_VARIANT_TYPE = 2
+	EcVarTypeDateTime              EC_VARIANT_TYPE = 3
+	EcVarTypeString                EC_VARIANT_TYPE = 4
+	EcVarObjectArrayPropertyHandle EC_VARIANT_TYPE = 5
 )
 
 type EC_SUBSCRIPTION_CONFIGURATION_MODE int32
 
 const (
-	EcConfigurationModeNormal = 0
-	EcConfigurationModeCustom = 1
-	EcConfigurationModeMinLatency = 2
-	EcConfigurationModeMinBandwidth = 3
+	EcConfigurationModeNormal       EC_SUBSCRIPTION_CONFIGURATION_MODE = 0
+	EcConfigurationModeCustom       EC_SUBSCRIPTION_CONFIGURATION_MODE = 1
+	EcConfigurationModeMinLatency   EC_SUBSCRIPTION_CONFIGURATION_MODE = 2
+	EcConfigurationModeMinBandwidth EC_SUBSCRIPTION_CONFIGURATION_MODE = 3
 )
 
 type EC_SUBSCRIPTION_DELIVERY_MODE int32
 
 const (
-	EcDeliveryModePull = 1
-	EcDeliveryModePush = 2
+	EcDeliveryModePull EC_SUBSCRIPTION_DELIVERY_MODE = 1
+	EcDeliveryModePush EC_SUBSCRIPTION_DELIVERY_MODE = 2
 )
 
 type EC_SUBSCRIPTION_CONTENT_FORMAT int32
 
 const (
-	EcContentFormatEvents = 1
-	EcContentFormatRenderedText = 2
+	EcContentFormatEvents       EC_SUBSCRIPTION_CONTENT_FORMAT = 1
+	EcContentFormatRenderedText EC_SUBSCRIPTION_CONTENT_FORMAT = 2
 )
 
 type EC_SUBSCRIPTION_RUNTIME_STATUS_ACTIVE_STATUS int32
 
 const (
-	EcRuntimeStatusActiveStatusDisabled = 1
-	EcRuntimeStatusActiveStatusActive = 2
-	EcRuntimeStatusActiveStatusInactive = 3
-	EcRuntimeStatusActiveStatusTrying = 4
+	EcRuntimeStatusActiveStatusDisabled EC_SUBSCRIPTION_RUNTIME_STATUS_ACTIVE_STATUS = 1
+	EcRuntimeStatusActiveStatusActive   EC_SUBSCRIPTION_RUNTIME_STATUS_ACTIVE_STATUS = 2
+	EcRuntimeStatusActiveStatusInactive EC_SUBSCRIPTION_RUNTIME_STATUS_ACTIVE_STATUS = 3
+	EcRuntimeStatusActiveStatusTrying   EC_SUBSCRIPTION_RUNTIME_STATUS_ACTIVE_STATUS = 4
 )
-

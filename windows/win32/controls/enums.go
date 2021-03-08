@@ -7,1004 +7,1003 @@ package controls
 type POINTER_FEEDBACK_MODE int32
 
 const (
-	POINTER_FEEDBACK_DEFAULT = 1
-	POINTER_FEEDBACK_INDIRECT = 2
-	POINTER_FEEDBACK_NONE = 3
+	POINTER_FEEDBACK_DEFAULT  POINTER_FEEDBACK_MODE = 1
+	POINTER_FEEDBACK_INDIRECT POINTER_FEEDBACK_MODE = 2
+	POINTER_FEEDBACK_NONE     POINTER_FEEDBACK_MODE = 3
 )
 
 type FEEDBACK_TYPE int32
 
 const (
-	FEEDBACK_TOUCH_CONTACTVISUALIZATION = 1
-	FEEDBACK_PEN_BARRELVISUALIZATION = 2
-	FEEDBACK_PEN_TAP = 3
-	FEEDBACK_PEN_DOUBLETAP = 4
-	FEEDBACK_PEN_PRESSANDHOLD = 5
-	FEEDBACK_PEN_RIGHTTAP = 6
-	FEEDBACK_TOUCH_TAP = 7
-	FEEDBACK_TOUCH_DOUBLETAP = 8
-	FEEDBACK_TOUCH_PRESSANDHOLD = 9
-	FEEDBACK_TOUCH_RIGHTTAP = 10
-	FEEDBACK_GESTURE_PRESSANDTAP = 11
-	FEEDBACK_MAX = -1
+	FEEDBACK_TOUCH_CONTACTVISUALIZATION FEEDBACK_TYPE = 1
+	FEEDBACK_PEN_BARRELVISUALIZATION    FEEDBACK_TYPE = 2
+	FEEDBACK_PEN_TAP                    FEEDBACK_TYPE = 3
+	FEEDBACK_PEN_DOUBLETAP              FEEDBACK_TYPE = 4
+	FEEDBACK_PEN_PRESSANDHOLD           FEEDBACK_TYPE = 5
+	FEEDBACK_PEN_RIGHTTAP               FEEDBACK_TYPE = 6
+	FEEDBACK_TOUCH_TAP                  FEEDBACK_TYPE = 7
+	FEEDBACK_TOUCH_DOUBLETAP            FEEDBACK_TYPE = 8
+	FEEDBACK_TOUCH_PRESSANDHOLD         FEEDBACK_TYPE = 9
+	FEEDBACK_TOUCH_RIGHTTAP             FEEDBACK_TYPE = 10
+	FEEDBACK_GESTURE_PRESSANDTAP        FEEDBACK_TYPE = 11
+	FEEDBACK_MAX                        FEEDBACK_TYPE = -1
 )
 
 type POINTER_DEVICE_TYPE int32
 
 const (
-	POINTER_DEVICE_TYPE_INTEGRATED_PEN = 1
-	POINTER_DEVICE_TYPE_EXTERNAL_PEN = 2
-	POINTER_DEVICE_TYPE_TOUCH = 3
-	POINTER_DEVICE_TYPE_TOUCH_PAD = 4
-	POINTER_DEVICE_TYPE_MAX = -1
+	POINTER_DEVICE_TYPE_INTEGRATED_PEN POINTER_DEVICE_TYPE = 1
+	POINTER_DEVICE_TYPE_EXTERNAL_PEN   POINTER_DEVICE_TYPE = 2
+	POINTER_DEVICE_TYPE_TOUCH          POINTER_DEVICE_TYPE = 3
+	POINTER_DEVICE_TYPE_TOUCH_PAD      POINTER_DEVICE_TYPE = 4
+	POINTER_DEVICE_TYPE_MAX            POINTER_DEVICE_TYPE = -1
 )
 
 type POINTER_DEVICE_CURSOR_TYPE int32
 
 const (
-	POINTER_DEVICE_CURSOR_TYPE_UNKNOWN = 0
-	POINTER_DEVICE_CURSOR_TYPE_TIP = 1
-	POINTER_DEVICE_CURSOR_TYPE_ERASER = 2
-	POINTER_DEVICE_CURSOR_TYPE_MAX = -1
+	POINTER_DEVICE_CURSOR_TYPE_UNKNOWN POINTER_DEVICE_CURSOR_TYPE = 0
+	POINTER_DEVICE_CURSOR_TYPE_TIP     POINTER_DEVICE_CURSOR_TYPE = 1
+	POINTER_DEVICE_CURSOR_TYPE_ERASER  POINTER_DEVICE_CURSOR_TYPE = 2
+	POINTER_DEVICE_CURSOR_TYPE_MAX     POINTER_DEVICE_CURSOR_TYPE = -1
 )
 
 type INPUT_MESSAGE_DEVICE_TYPE int32
 
 const (
-	IMDT_UNAVAILABLE = 0
-	IMDT_KEYBOARD = 1
-	IMDT_MOUSE = 2
-	IMDT_TOUCH = 4
-	IMDT_PEN = 8
-	IMDT_TOUCHPAD = 16
+	IMDT_UNAVAILABLE INPUT_MESSAGE_DEVICE_TYPE = 0
+	IMDT_KEYBOARD    INPUT_MESSAGE_DEVICE_TYPE = 1
+	IMDT_MOUSE       INPUT_MESSAGE_DEVICE_TYPE = 2
+	IMDT_TOUCH       INPUT_MESSAGE_DEVICE_TYPE = 4
+	IMDT_PEN         INPUT_MESSAGE_DEVICE_TYPE = 8
+	IMDT_TOUCHPAD    INPUT_MESSAGE_DEVICE_TYPE = 16
 )
 
 type INPUT_MESSAGE_ORIGIN_ID int32
 
 const (
-	IMO_UNAVAILABLE = 0
-	IMO_HARDWARE = 1
-	IMO_INJECTED = 2
-	IMO_SYSTEM = 4
+	IMO_UNAVAILABLE INPUT_MESSAGE_ORIGIN_ID = 0
+	IMO_HARDWARE    INPUT_MESSAGE_ORIGIN_ID = 1
+	IMO_INJECTED    INPUT_MESSAGE_ORIGIN_ID = 2
+	IMO_SYSTEM      INPUT_MESSAGE_ORIGIN_ID = 4
 )
 
 type TVITEMPART int32
 
 const (
-	TVGIPR_BUTTON = 1
+	TVGIPR_BUTTON TVITEMPART = 1
 )
 
 type EC_ENDOFLINE int32
 
 const (
-	EC_ENDOFLINE_DETECTFROMCONTENT = 0
-	EC_ENDOFLINE_CRLF = 1
-	EC_ENDOFLINE_CR = 2
-	EC_ENDOFLINE_LF = 3
+	EC_ENDOFLINE_DETECTFROMCONTENT EC_ENDOFLINE = 0
+	EC_ENDOFLINE_CRLF              EC_ENDOFLINE = 1
+	EC_ENDOFLINE_CR                EC_ENDOFLINE = 2
+	EC_ENDOFLINE_LF                EC_ENDOFLINE = 3
 )
 
 type EC_SEARCHWEB_ENTRYPOINT int32
 
 const (
-	EC_SEARCHWEB_ENTRYPOINT_EXTERNAL = 0
-	EC_SEARCHWEB_ENTRYPOINT_CONTEXTMENU = 1
+	EC_SEARCHWEB_ENTRYPOINT_EXTERNAL    EC_SEARCHWEB_ENTRYPOINT = 0
+	EC_SEARCHWEB_ENTRYPOINT_CONTEXTMENU EC_SEARCHWEB_ENTRYPOINT = 1
 )
 
 type _TASKDIALOG_FLAGS int32
 
 const (
-	TDF_ENABLE_HYPERLINKS = 1
-	TDF_USE_HICON_MAIN = 2
-	TDF_USE_HICON_FOOTER = 4
-	TDF_ALLOW_DIALOG_CANCELLATION = 8
-	TDF_USE_COMMAND_LINKS = 16
-	TDF_USE_COMMAND_LINKS_NO_ICON = 32
-	TDF_EXPAND_FOOTER_AREA = 64
-	TDF_EXPANDED_BY_DEFAULT = 128
-	TDF_VERIFICATION_FLAG_CHECKED = 256
-	TDF_SHOW_PROGRESS_BAR = 512
-	TDF_SHOW_MARQUEE_PROGRESS_BAR = 1024
-	TDF_CALLBACK_TIMER = 2048
-	TDF_POSITION_RELATIVE_TO_WINDOW = 4096
-	TDF_RTL_LAYOUT = 8192
-	TDF_NO_DEFAULT_RADIO_BUTTON = 16384
-	TDF_CAN_BE_MINIMIZED = 32768
-	TDF_NO_SET_FOREGROUND = 65536
-	TDF_SIZE_TO_CONTENT = 16777216
+	TDF_ENABLE_HYPERLINKS           _TASKDIALOG_FLAGS = 1
+	TDF_USE_HICON_MAIN              _TASKDIALOG_FLAGS = 2
+	TDF_USE_HICON_FOOTER            _TASKDIALOG_FLAGS = 4
+	TDF_ALLOW_DIALOG_CANCELLATION   _TASKDIALOG_FLAGS = 8
+	TDF_USE_COMMAND_LINKS           _TASKDIALOG_FLAGS = 16
+	TDF_USE_COMMAND_LINKS_NO_ICON   _TASKDIALOG_FLAGS = 32
+	TDF_EXPAND_FOOTER_AREA          _TASKDIALOG_FLAGS = 64
+	TDF_EXPANDED_BY_DEFAULT         _TASKDIALOG_FLAGS = 128
+	TDF_VERIFICATION_FLAG_CHECKED   _TASKDIALOG_FLAGS = 256
+	TDF_SHOW_PROGRESS_BAR           _TASKDIALOG_FLAGS = 512
+	TDF_SHOW_MARQUEE_PROGRESS_BAR   _TASKDIALOG_FLAGS = 1024
+	TDF_CALLBACK_TIMER              _TASKDIALOG_FLAGS = 2048
+	TDF_POSITION_RELATIVE_TO_WINDOW _TASKDIALOG_FLAGS = 4096
+	TDF_RTL_LAYOUT                  _TASKDIALOG_FLAGS = 8192
+	TDF_NO_DEFAULT_RADIO_BUTTON     _TASKDIALOG_FLAGS = 16384
+	TDF_CAN_BE_MINIMIZED            _TASKDIALOG_FLAGS = 32768
+	TDF_NO_SET_FOREGROUND           _TASKDIALOG_FLAGS = 65536
+	TDF_SIZE_TO_CONTENT             _TASKDIALOG_FLAGS = 16777216
 )
 
 type TASKDIALOG_MESSAGES int32
 
 const (
-	TDM_NAVIGATE_PAGE = 1125
-	TDM_CLICK_BUTTON = 1126
-	TDM_SET_MARQUEE_PROGRESS_BAR = 1127
-	TDM_SET_PROGRESS_BAR_STATE = 1128
-	TDM_SET_PROGRESS_BAR_RANGE = 1129
-	TDM_SET_PROGRESS_BAR_POS = 1130
-	TDM_SET_PROGRESS_BAR_MARQUEE = 1131
-	TDM_SET_ELEMENT_TEXT = 1132
-	TDM_CLICK_RADIO_BUTTON = 1134
-	TDM_ENABLE_BUTTON = 1135
-	TDM_ENABLE_RADIO_BUTTON = 1136
-	TDM_CLICK_VERIFICATION = 1137
-	TDM_UPDATE_ELEMENT_TEXT = 1138
-	TDM_SET_BUTTON_ELEVATION_REQUIRED_STATE = 1139
-	TDM_UPDATE_ICON = 1140
+	TDM_NAVIGATE_PAGE                       TASKDIALOG_MESSAGES = 1125
+	TDM_CLICK_BUTTON                        TASKDIALOG_MESSAGES = 1126
+	TDM_SET_MARQUEE_PROGRESS_BAR            TASKDIALOG_MESSAGES = 1127
+	TDM_SET_PROGRESS_BAR_STATE              TASKDIALOG_MESSAGES = 1128
+	TDM_SET_PROGRESS_BAR_RANGE              TASKDIALOG_MESSAGES = 1129
+	TDM_SET_PROGRESS_BAR_POS                TASKDIALOG_MESSAGES = 1130
+	TDM_SET_PROGRESS_BAR_MARQUEE            TASKDIALOG_MESSAGES = 1131
+	TDM_SET_ELEMENT_TEXT                    TASKDIALOG_MESSAGES = 1132
+	TDM_CLICK_RADIO_BUTTON                  TASKDIALOG_MESSAGES = 1134
+	TDM_ENABLE_BUTTON                       TASKDIALOG_MESSAGES = 1135
+	TDM_ENABLE_RADIO_BUTTON                 TASKDIALOG_MESSAGES = 1136
+	TDM_CLICK_VERIFICATION                  TASKDIALOG_MESSAGES = 1137
+	TDM_UPDATE_ELEMENT_TEXT                 TASKDIALOG_MESSAGES = 1138
+	TDM_SET_BUTTON_ELEVATION_REQUIRED_STATE TASKDIALOG_MESSAGES = 1139
+	TDM_UPDATE_ICON                         TASKDIALOG_MESSAGES = 1140
 )
 
 type TASKDIALOG_NOTIFICATIONS int32
 
 const (
-	TDN_CREATED = 0
-	TDN_NAVIGATED = 1
-	TDN_BUTTON_CLICKED = 2
-	TDN_HYPERLINK_CLICKED = 3
-	TDN_TIMER = 4
-	TDN_DESTROYED = 5
-	TDN_RADIO_BUTTON_CLICKED = 6
-	TDN_DIALOG_CONSTRUCTED = 7
-	TDN_VERIFICATION_CLICKED = 8
-	TDN_HELP = 9
-	TDN_EXPANDO_BUTTON_CLICKED = 10
+	TDN_CREATED                TASKDIALOG_NOTIFICATIONS = 0
+	TDN_NAVIGATED              TASKDIALOG_NOTIFICATIONS = 1
+	TDN_BUTTON_CLICKED         TASKDIALOG_NOTIFICATIONS = 2
+	TDN_HYPERLINK_CLICKED      TASKDIALOG_NOTIFICATIONS = 3
+	TDN_TIMER                  TASKDIALOG_NOTIFICATIONS = 4
+	TDN_DESTROYED              TASKDIALOG_NOTIFICATIONS = 5
+	TDN_RADIO_BUTTON_CLICKED   TASKDIALOG_NOTIFICATIONS = 6
+	TDN_DIALOG_CONSTRUCTED     TASKDIALOG_NOTIFICATIONS = 7
+	TDN_VERIFICATION_CLICKED   TASKDIALOG_NOTIFICATIONS = 8
+	TDN_HELP                   TASKDIALOG_NOTIFICATIONS = 9
+	TDN_EXPANDO_BUTTON_CLICKED TASKDIALOG_NOTIFICATIONS = 10
 )
 
 type TASKDIALOG_ELEMENTS int32
 
 const (
-	TDE_CONTENT = 0
-	TDE_EXPANDED_INFORMATION = 1
-	TDE_FOOTER = 2
-	TDE_MAIN_INSTRUCTION = 3
+	TDE_CONTENT              TASKDIALOG_ELEMENTS = 0
+	TDE_EXPANDED_INFORMATION TASKDIALOG_ELEMENTS = 1
+	TDE_FOOTER               TASKDIALOG_ELEMENTS = 2
+	TDE_MAIN_INSTRUCTION     TASKDIALOG_ELEMENTS = 3
 )
 
 type TASKDIALOG_ICON_ELEMENTS int32
 
 const (
-	TDIE_ICON_MAIN = 0
-	TDIE_ICON_FOOTER = 1
+	TDIE_ICON_MAIN   TASKDIALOG_ICON_ELEMENTS = 0
+	TDIE_ICON_FOOTER TASKDIALOG_ICON_ELEMENTS = 1
 )
 
 type _TASKDIALOG_COMMON_BUTTON_FLAGS int32
 
 const (
-	TDCBF_OK_BUTTON = 1
-	TDCBF_YES_BUTTON = 2
-	TDCBF_NO_BUTTON = 4
-	TDCBF_CANCEL_BUTTON = 8
-	TDCBF_RETRY_BUTTON = 16
-	TDCBF_CLOSE_BUTTON = 32
+	TDCBF_OK_BUTTON     _TASKDIALOG_COMMON_BUTTON_FLAGS = 1
+	TDCBF_YES_BUTTON    _TASKDIALOG_COMMON_BUTTON_FLAGS = 2
+	TDCBF_NO_BUTTON     _TASKDIALOG_COMMON_BUTTON_FLAGS = 4
+	TDCBF_CANCEL_BUTTON _TASKDIALOG_COMMON_BUTTON_FLAGS = 8
+	TDCBF_RETRY_BUTTON  _TASKDIALOG_COMMON_BUTTON_FLAGS = 16
+	TDCBF_CLOSE_BUTTON  _TASKDIALOG_COMMON_BUTTON_FLAGS = 32
 )
 
 type _LI_METRIC int32
 
 const (
-	LIM_SMALL = 0
-	LIM_LARGE = 1
+	LIM_SMALL _LI_METRIC = 0
+	LIM_LARGE _LI_METRIC = 1
 )
 
 type TEXTMODE int32
 
 const (
-	TM_PLAINTEXT = 1
-	TM_RICHTEXT = 2
-	TM_SINGLELEVELUNDO = 4
-	TM_MULTILEVELUNDO = 8
-	TM_SINGLECODEPAGE = 16
-	TM_MULTICODEPAGE = 32
+	TM_PLAINTEXT       TEXTMODE = 1
+	TM_RICHTEXT        TEXTMODE = 2
+	TM_SINGLELEVELUNDO TEXTMODE = 4
+	TM_MULTILEVELUNDO  TEXTMODE = 8
+	TM_SINGLECODEPAGE  TEXTMODE = 16
+	TM_MULTICODEPAGE   TEXTMODE = 32
 )
 
 type UNDONAMEID int32
 
 const (
-	UID_UNKNOWN = 0
-	UID_TYPING = 1
-	UID_DELETE = 2
-	UID_DRAGDROP = 3
-	UID_CUT = 4
-	UID_PASTE = 5
-	UID_AUTOTABLE = 6
+	UID_UNKNOWN   UNDONAMEID = 0
+	UID_TYPING    UNDONAMEID = 1
+	UID_DELETE    UNDONAMEID = 2
+	UID_DRAGDROP  UNDONAMEID = 3
+	UID_CUT       UNDONAMEID = 4
+	UID_PASTE     UNDONAMEID = 5
+	UID_AUTOTABLE UNDONAMEID = 6
 )
 
 type KHYPH int32
 
 const (
-	khyphNil = 0
-	khyphNormal = 1
-	khyphAddBefore = 2
-	khyphChangeBefore = 3
-	khyphDeleteBefore = 4
-	khyphChangeAfter = 5
-	khyphDelAndChange = 6
+	khyphNil          KHYPH = 0
+	khyphNormal       KHYPH = 1
+	khyphAddBefore    KHYPH = 2
+	khyphChangeBefore KHYPH = 3
+	khyphDeleteBefore KHYPH = 4
+	khyphChangeAfter  KHYPH = 5
+	khyphDelAndChange KHYPH = 6
 )
 
 type tomConstants int32
 
 const (
-	tomFalse = 0
-	tomTrue = -1
-	tomUndefined = -9999999
-	tomToggle = -9999998
-	tomAutoColor = -9999997
-	tomDefault = -9999996
-	tomSuspend = -9999995
-	tomResume = -9999994
-	tomApplyNow = 0
-	tomApplyLater = 1
-	tomTrackParms = 2
-	tomCacheParms = 3
-	tomApplyTmp = 4
-	tomDisableSmartFont = 8
-	tomEnableSmartFont = 9
-	tomUsePoints = 10
-	tomUseTwips = 11
-	tomBackward = -1073741823
-	tomForward = 1073741823
-	tomMove = 0
-	tomExtend = 1
-	tomNoSelection = 0
-	tomSelectionIP = 1
-	tomSelectionNormal = 2
-	tomSelectionFrame = 3
-	tomSelectionColumn = 4
-	tomSelectionRow = 5
-	tomSelectionBlock = 6
-	tomSelectionInlineShape = 7
-	tomSelectionShape = 8
-	tomSelStartActive = 1
-	tomSelAtEOL = 2
-	tomSelOvertype = 4
-	tomSelActive = 8
-	tomSelReplace = 16
-	tomEnd = 0
-	tomStart = 32
-	tomCollapseEnd = 0
-	tomCollapseStart = 1
-	tomClientCoord = 256
-	tomAllowOffClient = 512
-	tomTransform = 1024
-	tomObjectArg = 2048
-	tomAtEnd = 4096
-	tomNone = 0
-	tomSingle = 1
-	tomWords = 2
-	tomDouble = 3
-	tomDotted = 4
-	tomDash = 5
-	tomDashDot = 6
-	tomDashDotDot = 7
-	tomWave = 8
-	tomThick = 9
-	tomHair = 10
-	tomDoubleWave = 11
-	tomHeavyWave = 12
-	tomLongDash = 13
-	tomThickDash = 14
-	tomThickDashDot = 15
-	tomThickDashDotDot = 16
-	tomThickDotted = 17
-	tomThickLongDash = 18
-	tomLineSpaceSingle = 0
-	tomLineSpace1pt5 = 1
-	tomLineSpaceDouble = 2
-	tomLineSpaceAtLeast = 3
-	tomLineSpaceExactly = 4
-	tomLineSpaceMultiple = 5
-	tomLineSpacePercent = 6
-	tomAlignLeft = 0
-	tomAlignCenter = 1
-	tomAlignRight = 2
-	tomAlignJustify = 3
-	tomAlignDecimal = 3
-	tomAlignBar = 4
-	tomDefaultTab = 5
-	tomAlignInterWord = 3
-	tomAlignNewspaper = 4
-	tomAlignInterLetter = 5
-	tomAlignScaled = 6
-	tomSpaces = 0
-	tomDots = 1
-	tomDashes = 2
-	tomLines = 3
-	tomThickLines = 4
-	tomEquals = 5
-	tomTabBack = -3
-	tomTabNext = -2
-	tomTabHere = -1
-	tomListNone = 0
-	tomListBullet = 1
-	tomListNumberAsArabic = 2
-	tomListNumberAsLCLetter = 3
-	tomListNumberAsUCLetter = 4
-	tomListNumberAsLCRoman = 5
-	tomListNumberAsUCRoman = 6
-	tomListNumberAsSequence = 7
-	tomListNumberedCircle = 8
-	tomListNumberedBlackCircleWingding = 9
-	tomListNumberedWhiteCircleWingding = 10
-	tomListNumberedArabicWide = 11
-	tomListNumberedChS = 12
-	tomListNumberedChT = 13
-	tomListNumberedJpnChS = 14
-	tomListNumberedJpnKor = 15
-	tomListNumberedArabic1 = 16
-	tomListNumberedArabic2 = 17
-	tomListNumberedHebrew = 18
-	tomListNumberedThaiAlpha = 19
-	tomListNumberedThaiNum = 20
-	tomListNumberedHindiAlpha = 21
-	tomListNumberedHindiAlpha1 = 22
-	tomListNumberedHindiNum = 23
-	tomListParentheses = 65536
-	tomListPeriod = 131072
-	tomListPlain = 196608
-	tomListNoNumber = 262144
-	tomListMinus = 524288
-	tomIgnoreNumberStyle = 16777216
-	tomParaStyleNormal = -1
-	tomParaStyleHeading1 = -2
-	tomParaStyleHeading2 = -3
-	tomParaStyleHeading3 = -4
-	tomParaStyleHeading4 = -5
-	tomParaStyleHeading5 = -6
-	tomParaStyleHeading6 = -7
-	tomParaStyleHeading7 = -8
-	tomParaStyleHeading8 = -9
-	tomParaStyleHeading9 = -10
-	tomCharacter = 1
-	tomWord = 2
-	tomSentence = 3
-	tomParagraph = 4
-	tomLine = 5
-	tomStory = 6
-	tomScreen = 7
-	tomSection = 8
-	tomTableColumn = 9
-	tomColumn = 9
-	tomRow = 10
-	tomWindow = 11
-	tomCell = 12
-	tomCharFormat = 13
-	tomParaFormat = 14
-	tomTable = 15
-	tomObject = 16
-	tomPage = 17
-	tomHardParagraph = 18
-	tomCluster = 19
-	tomInlineObject = 20
-	tomInlineObjectArg = 21
-	tomLeafLine = 22
-	tomLayoutColumn = 23
-	tomProcessId = 1073741825
-	tomMatchWord = 2
-	tomMatchCase = 4
-	tomMatchPattern = 8
-	tomUnknownStory = 0
-	tomMainTextStory = 1
-	tomFootnotesStory = 2
-	tomEndnotesStory = 3
-	tomCommentsStory = 4
-	tomTextFrameStory = 5
-	tomEvenPagesHeaderStory = 6
-	tomPrimaryHeaderStory = 7
-	tomEvenPagesFooterStory = 8
-	tomPrimaryFooterStory = 9
-	tomFirstPageHeaderStory = 10
-	tomFirstPageFooterStory = 11
-	tomScratchStory = 127
-	tomFindStory = 128
-	tomReplaceStory = 129
-	tomStoryInactive = 0
-	tomStoryActiveDisplay = 1
-	tomStoryActiveUI = 2
-	tomStoryActiveDisplayUI = 3
-	tomNoAnimation = 0
-	tomLasVegasLights = 1
-	tomBlinkingBackground = 2
-	tomSparkleText = 3
-	tomMarchingBlackAnts = 4
-	tomMarchingRedAnts = 5
-	tomShimmer = 6
-	tomWipeDown = 7
-	tomWipeRight = 8
-	tomAnimationMax = 8
-	tomLowerCase = 0
-	tomUpperCase = 1
-	tomTitleCase = 2
-	tomSentenceCase = 4
-	tomToggleCase = 5
-	tomReadOnly = 256
-	tomShareDenyRead = 512
-	tomShareDenyWrite = 1024
-	tomPasteFile = 4096
-	tomCreateNew = 16
-	tomCreateAlways = 32
-	tomOpenExisting = 48
-	tomOpenAlways = 64
-	tomTruncateExisting = 80
-	tomRTF = 1
-	tomText = 2
-	tomHTML = 3
-	tomWordDocument = 4
-	tomBold = -2147483647
-	tomItalic = -2147483646
-	tomUnderline = -2147483644
-	tomStrikeout = -2147483640
-	tomProtected = -2147483632
-	tomLink = -2147483616
-	tomSmallCaps = -2147483584
-	tomAllCaps = -2147483520
-	tomHidden = -2147483392
-	tomOutline = -2147483136
-	tomShadow = -2147482624
-	tomEmboss = -2147481600
-	tomImprint = -2147479552
-	tomDisabled = -2147475456
-	tomRevised = -2147467264
-	tomSubscriptCF = -2147418112
-	tomSuperscriptCF = -2147352576
-	tomFontBound = -2146435072
-	tomLinkProtected = -2139095040
-	tomInlineObjectStart = -2130706432
-	tomExtendedChar = -2113929216
-	tomAutoBackColor = -2080374784
-	tomMathZoneNoBuildUp = -2013265920
-	tomMathZone = -1879048192
-	tomMathZoneOrdinary = -1610612736
-	tomAutoTextColor = -1073741824
-	tomMathZoneDisplay = 262144
-	tomParaEffectRTL = 1
-	tomParaEffectKeep = 2
-	tomParaEffectKeepNext = 4
-	tomParaEffectPageBreakBefore = 8
-	tomParaEffectNoLineNumber = 16
-	tomParaEffectNoWidowControl = 32
-	tomParaEffectDoNotHyphen = 64
-	tomParaEffectSideBySide = 128
-	tomParaEffectCollapsed = 256
-	tomParaEffectOutlineLevel = 512
-	tomParaEffectBox = 1024
-	tomParaEffectTableRowDelimiter = 4096
-	tomParaEffectTable = 16384
-	tomModWidthPairs = 1
-	tomModWidthSpace = 2
-	tomAutoSpaceAlpha = 4
-	tomAutoSpaceNumeric = 8
-	tomAutoSpaceParens = 16
-	tomEmbeddedFont = 32
-	tomDoublestrike = 64
-	tomOverlapping = 128
-	tomNormalCaret = 0
-	tomKoreanBlockCaret = 1
-	tomNullCaret = 2
-	tomIncludeInset = 1
-	tomUnicodeBiDi = 1
-	tomMathCFCheck = 4
-	tomUnlink = 8
-	tomUnhide = 16
-	tomCheckTextLimit = 32
-	tomIgnoreCurrentFont = 0
-	tomMatchCharRep = 1
-	tomMatchFontSignature = 2
-	tomMatchAscii = 4
-	tomGetHeightOnly = 8
-	tomMatchMathFont = 16
-	tomCharset = -2147483648
-	tomCharRepFromLcid = 1073741824
-	tomAnsi = 0
-	tomEastEurope = 1
-	tomCyrillic = 2
-	tomGreek = 3
-	tomTurkish = 4
-	tomHebrew = 5
-	tomArabic = 6
-	tomBaltic = 7
-	tomVietnamese = 8
-	tomDefaultCharRep = 9
-	tomSymbol = 10
-	tomThai = 11
-	tomShiftJIS = 12
-	tomGB2312 = 13
-	tomHangul = 14
-	tomBIG5 = 15
-	tomPC437 = 16
-	tomOEM = 17
-	tomMac = 18
-	tomArmenian = 19
-	tomSyriac = 20
-	tomThaana = 21
-	tomDevanagari = 22
-	tomBengali = 23
-	tomGurmukhi = 24
-	tomGujarati = 25
-	tomOriya = 26
-	tomTamil = 27
-	tomTelugu = 28
-	tomKannada = 29
-	tomMalayalam = 30
-	tomSinhala = 31
-	tomLao = 32
-	tomTibetan = 33
-	tomMyanmar = 34
-	tomGeorgian = 35
-	tomJamo = 36
-	tomEthiopic = 37
-	tomCherokee = 38
-	tomAboriginal = 39
-	tomOgham = 40
-	tomRunic = 41
-	tomKhmer = 42
-	tomMongolian = 43
-	tomBraille = 44
-	tomYi = 45
-	tomLimbu = 46
-	tomTaiLe = 47
-	tomNewTaiLue = 48
-	tomSylotiNagri = 49
-	tomKharoshthi = 50
-	tomKayahli = 51
-	tomUsymbol = 52
-	tomEmoji = 53
-	tomGlagolitic = 54
-	tomLisu = 55
-	tomVai = 56
-	tomNKo = 57
-	tomOsmanya = 58
-	tomPhagsPa = 59
-	tomGothic = 60
-	tomDeseret = 61
-	tomTifinagh = 62
-	tomCharRepMax = 63
-	tomRE10Mode = 1
-	tomUseAtFont = 2
-	tomTextFlowMask = 12
-	tomTextFlowES = 0
-	tomTextFlowSW = 4
-	tomTextFlowWN = 8
-	tomTextFlowNE = 12
-	tomNoIME = 524288
-	tomSelfIME = 262144
-	tomNoUpScroll = 65536
-	tomNoVpScroll = 262144
-	tomNoLink = 0
-	tomClientLink = 1
-	tomFriendlyLinkName = 2
-	tomFriendlyLinkAddress = 3
-	tomAutoLinkURL = 4
-	tomAutoLinkEmail = 5
-	tomAutoLinkPhone = 6
-	tomAutoLinkPath = 7
-	tomCompressNone = 0
-	tomCompressPunctuation = 1
-	tomCompressPunctuationAndKana = 2
-	tomCompressMax = 2
-	tomUnderlinePositionAuto = 0
-	tomUnderlinePositionBelow = 1
-	tomUnderlinePositionAbove = 2
-	tomUnderlinePositionMax = 2
-	tomFontAlignmentAuto = 0
-	tomFontAlignmentTop = 1
-	tomFontAlignmentBaseline = 2
-	tomFontAlignmentBottom = 3
-	tomFontAlignmentCenter = 4
-	tomFontAlignmentMax = 4
-	tomRubyBelow = 128
-	tomRubyAlignCenter = 0
-	tomRubyAlign010 = 1
-	tomRubyAlign121 = 2
-	tomRubyAlignLeft = 3
-	tomRubyAlignRight = 4
-	tomLimitsDefault = 0
-	tomLimitsUnderOver = 1
-	tomLimitsSubSup = 2
-	tomUpperLimitAsSuperScript = 3
-	tomLimitsOpposite = 4
-	tomShowLLimPlaceHldr = 8
-	tomShowULimPlaceHldr = 16
-	tomDontGrowWithContent = 64
-	tomGrowWithContent = 128
-	tomSubSupAlign = 1
-	tomLimitAlignMask = 3
-	tomLimitAlignCenter = 0
-	tomLimitAlignLeft = 1
-	tomLimitAlignRight = 2
-	tomShowDegPlaceHldr = 8
-	tomAlignDefault = 0
-	tomAlignMatchAscentDescent = 2
-	tomMathVariant = 32
-	tomStyleDefault = 0
-	tomStyleScriptScriptCramped = 1
-	tomStyleScriptScript = 2
-	tomStyleScriptCramped = 3
-	tomStyleScript = 4
-	tomStyleTextCramped = 5
-	tomStyleText = 6
-	tomStyleDisplayCramped = 7
-	tomStyleDisplay = 8
-	tomMathRelSize = 64
-	tomDecDecSize = 254
-	tomDecSize = 255
-	tomIncSize = 65
-	tomIncIncSize = 66
-	tomGravityUI = 0
-	tomGravityBack = 1
-	tomGravityFore = 2
-	tomGravityIn = 3
-	tomGravityOut = 4
-	tomGravityBackward = 536870912
-	tomGravityForward = 1073741824
-	tomAdjustCRLF = 1
-	tomUseCRLF = 2
-	tomTextize = 4
-	tomAllowFinalEOP = 8
-	tomFoldMathAlpha = 16
-	tomNoHidden = 32
-	tomIncludeNumbering = 64
-	tomTranslateTableCell = 128
-	tomNoMathZoneBrackets = 256
-	tomConvertMathChar = 512
-	tomNoUCGreekItalic = 1024
-	tomAllowMathBold = 2048
-	tomLanguageTag = 4096
-	tomConvertRTF = 8192
-	tomApplyRtfDocProps = 16384
-	tomPhantomShow = 1
-	tomPhantomZeroWidth = 2
-	tomPhantomZeroAscent = 4
-	tomPhantomZeroDescent = 8
-	tomPhantomTransparent = 16
-	tomPhantomASmash = 5
-	tomPhantomDSmash = 9
-	tomPhantomHSmash = 3
-	tomPhantomSmash = 13
-	tomPhantomHorz = 12
-	tomPhantomVert = 2
-	tomBoxHideTop = 1
-	tomBoxHideBottom = 2
-	tomBoxHideLeft = 4
-	tomBoxHideRight = 8
-	tomBoxStrikeH = 16
-	tomBoxStrikeV = 32
-	tomBoxStrikeTLBR = 64
-	tomBoxStrikeBLTR = 128
-	tomBoxAlignCenter = 1
-	tomSpaceMask = 28
-	tomSpaceDefault = 0
-	tomSpaceUnary = 4
-	tomSpaceBinary = 8
-	tomSpaceRelational = 12
-	tomSpaceSkip = 16
-	tomSpaceOrd = 20
-	tomSpaceDifferential = 24
-	tomSizeText = 32
-	tomSizeScript = 64
-	tomSizeScriptScript = 96
-	tomNoBreak = 128
-	tomTransparentForPositioning = 256
-	tomTransparentForSpacing = 512
-	tomStretchCharBelow = 0
-	tomStretchCharAbove = 1
-	tomStretchBaseBelow = 2
-	tomStretchBaseAbove = 3
-	tomMatrixAlignMask = 3
-	tomMatrixAlignCenter = 0
-	tomMatrixAlignTopRow = 1
-	tomMatrixAlignBottomRow = 3
-	tomShowMatPlaceHldr = 8
-	tomEqArrayLayoutWidth = 1
-	tomEqArrayAlignMask = 12
-	tomEqArrayAlignCenter = 0
-	tomEqArrayAlignTopRow = 4
-	tomEqArrayAlignBottomRow = 12
-	tomMathManualBreakMask = 127
-	tomMathBreakLeft = 125
-	tomMathBreakCenter = 126
-	tomMathBreakRight = 127
-	tomMathEqAlign = 128
-	tomMathArgShadingStart = 593
-	tomMathArgShadingEnd = 594
-	tomMathObjShadingStart = 595
-	tomMathObjShadingEnd = 596
-	tomFunctionTypeNone = 0
-	tomFunctionTypeTakesArg = 1
-	tomFunctionTypeTakesLim = 2
-	tomFunctionTypeTakesLim2 = 3
-	tomFunctionTypeIsLim = 4
-	tomMathParaAlignDefault = 0
-	tomMathParaAlignCenterGroup = 1
-	tomMathParaAlignCenter = 2
-	tomMathParaAlignLeft = 3
-	tomMathParaAlignRight = 4
-	tomMathDispAlignMask = 3
-	tomMathDispAlignCenterGroup = 0
-	tomMathDispAlignCenter = 1
-	tomMathDispAlignLeft = 2
-	tomMathDispAlignRight = 3
-	tomMathDispIntUnderOver = 4
-	tomMathDispFracTeX = 8
-	tomMathDispNaryGrow = 16
-	tomMathDocEmptyArgMask = 96
-	tomMathDocEmptyArgAuto = 0
-	tomMathDocEmptyArgAlways = 32
-	tomMathDocEmptyArgNever = 64
-	tomMathDocSbSpOpUnchanged = 128
-	tomMathDocDiffMask = 768
-	tomMathDocDiffDefault = 0
-	tomMathDocDiffUpright = 256
-	tomMathDocDiffItalic = 512
-	tomMathDocDiffOpenItalic = 768
-	tomMathDispNarySubSup = 1024
-	tomMathDispDef = 2048
-	tomMathEnableRtl = 4096
-	tomMathBrkBinMask = 196608
-	tomMathBrkBinBefore = 0
-	tomMathBrkBinAfter = 65536
-	tomMathBrkBinDup = 131072
-	tomMathBrkBinSubMask = 786432
-	tomMathBrkBinSubMM = 0
-	tomMathBrkBinSubPM = 262144
-	tomMathBrkBinSubMP = 524288
-	tomSelRange = 597
-	tomHstring = 596
-	tomFontPropTeXStyle = 828
-	tomFontPropAlign = 829
-	tomFontStretch = 830
-	tomFontStyle = 831
-	tomFontStyleUpright = 0
-	tomFontStyleOblique = 1
-	tomFontStyleItalic = 2
-	tomFontStretchDefault = 0
-	tomFontStretchUltraCondensed = 1
-	tomFontStretchExtraCondensed = 2
-	tomFontStretchCondensed = 3
-	tomFontStretchSemiCondensed = 4
-	tomFontStretchNormal = 5
-	tomFontStretchSemiExpanded = 6
-	tomFontStretchExpanded = 7
-	tomFontStretchExtraExpanded = 8
-	tomFontStretchUltraExpanded = 9
-	tomFontWeightDefault = 0
-	tomFontWeightThin = 100
-	tomFontWeightExtraLight = 200
-	tomFontWeightLight = 300
-	tomFontWeightNormal = 400
-	tomFontWeightRegular = 400
-	tomFontWeightMedium = 500
-	tomFontWeightSemiBold = 600
-	tomFontWeightBold = 700
-	tomFontWeightExtraBold = 800
-	tomFontWeightBlack = 900
-	tomFontWeightHeavy = 900
-	tomFontWeightExtraBlack = 950
-	tomParaPropMathAlign = 1079
-	tomDocMathBuild = 128
-	tomMathLMargin = 129
-	tomMathRMargin = 130
-	tomMathWrapIndent = 131
-	tomMathWrapRight = 132
-	tomMathPostSpace = 134
-	tomMathPreSpace = 133
-	tomMathInterSpace = 135
-	tomMathIntraSpace = 136
-	tomCanCopy = 137
-	tomCanRedo = 138
-	tomCanUndo = 139
-	tomUndoLimit = 140
-	tomDocAutoLink = 141
-	tomEllipsisMode = 142
-	tomEllipsisState = 143
-	tomEllipsisNone = 0
-	tomEllipsisEnd = 1
-	tomEllipsisWord = 3
-	tomEllipsisPresent = 1
-	tomVTopCell = 1
-	tomVLowCell = 2
-	tomHStartCell = 4
-	tomHContCell = 8
-	tomRowUpdate = 1
-	tomRowApplyDefault = 0
-	tomCellStructureChangeOnly = 1
-	tomRowHeightActual = 2059
+	tomFalse                           tomConstants = 0
+	tomTrue                            tomConstants = -1
+	tomUndefined                       tomConstants = -9999999
+	tomToggle                          tomConstants = -9999998
+	tomAutoColor                       tomConstants = -9999997
+	tomDefault                         tomConstants = -9999996
+	tomSuspend                         tomConstants = -9999995
+	tomResume                          tomConstants = -9999994
+	tomApplyNow                        tomConstants = 0
+	tomApplyLater                      tomConstants = 1
+	tomTrackParms                      tomConstants = 2
+	tomCacheParms                      tomConstants = 3
+	tomApplyTmp                        tomConstants = 4
+	tomDisableSmartFont                tomConstants = 8
+	tomEnableSmartFont                 tomConstants = 9
+	tomUsePoints                       tomConstants = 10
+	tomUseTwips                        tomConstants = 11
+	tomBackward                        tomConstants = -1073741823
+	tomForward                         tomConstants = 1073741823
+	tomMove                            tomConstants = 0
+	tomExtend                          tomConstants = 1
+	tomNoSelection                     tomConstants = 0
+	tomSelectionIP                     tomConstants = 1
+	tomSelectionNormal                 tomConstants = 2
+	tomSelectionFrame                  tomConstants = 3
+	tomSelectionColumn                 tomConstants = 4
+	tomSelectionRow                    tomConstants = 5
+	tomSelectionBlock                  tomConstants = 6
+	tomSelectionInlineShape            tomConstants = 7
+	tomSelectionShape                  tomConstants = 8
+	tomSelStartActive                  tomConstants = 1
+	tomSelAtEOL                        tomConstants = 2
+	tomSelOvertype                     tomConstants = 4
+	tomSelActive                       tomConstants = 8
+	tomSelReplace                      tomConstants = 16
+	tomEnd                             tomConstants = 0
+	tomStart                           tomConstants = 32
+	tomCollapseEnd                     tomConstants = 0
+	tomCollapseStart                   tomConstants = 1
+	tomClientCoord                     tomConstants = 256
+	tomAllowOffClient                  tomConstants = 512
+	tomTransform                       tomConstants = 1024
+	tomObjectArg                       tomConstants = 2048
+	tomAtEnd                           tomConstants = 4096
+	tomNone                            tomConstants = 0
+	tomSingle                          tomConstants = 1
+	tomWords                           tomConstants = 2
+	tomDouble                          tomConstants = 3
+	tomDotted                          tomConstants = 4
+	tomDash                            tomConstants = 5
+	tomDashDot                         tomConstants = 6
+	tomDashDotDot                      tomConstants = 7
+	tomWave                            tomConstants = 8
+	tomThick                           tomConstants = 9
+	tomHair                            tomConstants = 10
+	tomDoubleWave                      tomConstants = 11
+	tomHeavyWave                       tomConstants = 12
+	tomLongDash                        tomConstants = 13
+	tomThickDash                       tomConstants = 14
+	tomThickDashDot                    tomConstants = 15
+	tomThickDashDotDot                 tomConstants = 16
+	tomThickDotted                     tomConstants = 17
+	tomThickLongDash                   tomConstants = 18
+	tomLineSpaceSingle                 tomConstants = 0
+	tomLineSpace1pt5                   tomConstants = 1
+	tomLineSpaceDouble                 tomConstants = 2
+	tomLineSpaceAtLeast                tomConstants = 3
+	tomLineSpaceExactly                tomConstants = 4
+	tomLineSpaceMultiple               tomConstants = 5
+	tomLineSpacePercent                tomConstants = 6
+	tomAlignLeft                       tomConstants = 0
+	tomAlignCenter                     tomConstants = 1
+	tomAlignRight                      tomConstants = 2
+	tomAlignJustify                    tomConstants = 3
+	tomAlignDecimal                    tomConstants = 3
+	tomAlignBar                        tomConstants = 4
+	tomDefaultTab                      tomConstants = 5
+	tomAlignInterWord                  tomConstants = 3
+	tomAlignNewspaper                  tomConstants = 4
+	tomAlignInterLetter                tomConstants = 5
+	tomAlignScaled                     tomConstants = 6
+	tomSpaces                          tomConstants = 0
+	tomDots                            tomConstants = 1
+	tomDashes                          tomConstants = 2
+	tomLines                           tomConstants = 3
+	tomThickLines                      tomConstants = 4
+	tomEquals                          tomConstants = 5
+	tomTabBack                         tomConstants = -3
+	tomTabNext                         tomConstants = -2
+	tomTabHere                         tomConstants = -1
+	tomListNone                        tomConstants = 0
+	tomListBullet                      tomConstants = 1
+	tomListNumberAsArabic              tomConstants = 2
+	tomListNumberAsLCLetter            tomConstants = 3
+	tomListNumberAsUCLetter            tomConstants = 4
+	tomListNumberAsLCRoman             tomConstants = 5
+	tomListNumberAsUCRoman             tomConstants = 6
+	tomListNumberAsSequence            tomConstants = 7
+	tomListNumberedCircle              tomConstants = 8
+	tomListNumberedBlackCircleWingding tomConstants = 9
+	tomListNumberedWhiteCircleWingding tomConstants = 10
+	tomListNumberedArabicWide          tomConstants = 11
+	tomListNumberedChS                 tomConstants = 12
+	tomListNumberedChT                 tomConstants = 13
+	tomListNumberedJpnChS              tomConstants = 14
+	tomListNumberedJpnKor              tomConstants = 15
+	tomListNumberedArabic1             tomConstants = 16
+	tomListNumberedArabic2             tomConstants = 17
+	tomListNumberedHebrew              tomConstants = 18
+	tomListNumberedThaiAlpha           tomConstants = 19
+	tomListNumberedThaiNum             tomConstants = 20
+	tomListNumberedHindiAlpha          tomConstants = 21
+	tomListNumberedHindiAlpha1         tomConstants = 22
+	tomListNumberedHindiNum            tomConstants = 23
+	tomListParentheses                 tomConstants = 65536
+	tomListPeriod                      tomConstants = 131072
+	tomListPlain                       tomConstants = 196608
+	tomListNoNumber                    tomConstants = 262144
+	tomListMinus                       tomConstants = 524288
+	tomIgnoreNumberStyle               tomConstants = 16777216
+	tomParaStyleNormal                 tomConstants = -1
+	tomParaStyleHeading1               tomConstants = -2
+	tomParaStyleHeading2               tomConstants = -3
+	tomParaStyleHeading3               tomConstants = -4
+	tomParaStyleHeading4               tomConstants = -5
+	tomParaStyleHeading5               tomConstants = -6
+	tomParaStyleHeading6               tomConstants = -7
+	tomParaStyleHeading7               tomConstants = -8
+	tomParaStyleHeading8               tomConstants = -9
+	tomParaStyleHeading9               tomConstants = -10
+	tomCharacter                       tomConstants = 1
+	tomWord                            tomConstants = 2
+	tomSentence                        tomConstants = 3
+	tomParagraph                       tomConstants = 4
+	tomLine                            tomConstants = 5
+	tomStory                           tomConstants = 6
+	tomScreen                          tomConstants = 7
+	tomSection                         tomConstants = 8
+	tomTableColumn                     tomConstants = 9
+	tomColumn                          tomConstants = 9
+	tomRow                             tomConstants = 10
+	tomWindow                          tomConstants = 11
+	tomCell                            tomConstants = 12
+	tomCharFormat                      tomConstants = 13
+	tomParaFormat                      tomConstants = 14
+	tomTable                           tomConstants = 15
+	tomObject                          tomConstants = 16
+	tomPage                            tomConstants = 17
+	tomHardParagraph                   tomConstants = 18
+	tomCluster                         tomConstants = 19
+	tomInlineObject                    tomConstants = 20
+	tomInlineObjectArg                 tomConstants = 21
+	tomLeafLine                        tomConstants = 22
+	tomLayoutColumn                    tomConstants = 23
+	tomProcessId                       tomConstants = 1073741825
+	tomMatchWord                       tomConstants = 2
+	tomMatchCase                       tomConstants = 4
+	tomMatchPattern                    tomConstants = 8
+	tomUnknownStory                    tomConstants = 0
+	tomMainTextStory                   tomConstants = 1
+	tomFootnotesStory                  tomConstants = 2
+	tomEndnotesStory                   tomConstants = 3
+	tomCommentsStory                   tomConstants = 4
+	tomTextFrameStory                  tomConstants = 5
+	tomEvenPagesHeaderStory            tomConstants = 6
+	tomPrimaryHeaderStory              tomConstants = 7
+	tomEvenPagesFooterStory            tomConstants = 8
+	tomPrimaryFooterStory              tomConstants = 9
+	tomFirstPageHeaderStory            tomConstants = 10
+	tomFirstPageFooterStory            tomConstants = 11
+	tomScratchStory                    tomConstants = 127
+	tomFindStory                       tomConstants = 128
+	tomReplaceStory                    tomConstants = 129
+	tomStoryInactive                   tomConstants = 0
+	tomStoryActiveDisplay              tomConstants = 1
+	tomStoryActiveUI                   tomConstants = 2
+	tomStoryActiveDisplayUI            tomConstants = 3
+	tomNoAnimation                     tomConstants = 0
+	tomLasVegasLights                  tomConstants = 1
+	tomBlinkingBackground              tomConstants = 2
+	tomSparkleText                     tomConstants = 3
+	tomMarchingBlackAnts               tomConstants = 4
+	tomMarchingRedAnts                 tomConstants = 5
+	tomShimmer                         tomConstants = 6
+	tomWipeDown                        tomConstants = 7
+	tomWipeRight                       tomConstants = 8
+	tomAnimationMax                    tomConstants = 8
+	tomLowerCase                       tomConstants = 0
+	tomUpperCase                       tomConstants = 1
+	tomTitleCase                       tomConstants = 2
+	tomSentenceCase                    tomConstants = 4
+	tomToggleCase                      tomConstants = 5
+	tomReadOnly                        tomConstants = 256
+	tomShareDenyRead                   tomConstants = 512
+	tomShareDenyWrite                  tomConstants = 1024
+	tomPasteFile                       tomConstants = 4096
+	tomCreateNew                       tomConstants = 16
+	tomCreateAlways                    tomConstants = 32
+	tomOpenExisting                    tomConstants = 48
+	tomOpenAlways                      tomConstants = 64
+	tomTruncateExisting                tomConstants = 80
+	tomRTF                             tomConstants = 1
+	tomText                            tomConstants = 2
+	tomHTML                            tomConstants = 3
+	tomWordDocument                    tomConstants = 4
+	tomBold                            tomConstants = -2147483647
+	tomItalic                          tomConstants = -2147483646
+	tomUnderline                       tomConstants = -2147483644
+	tomStrikeout                       tomConstants = -2147483640
+	tomProtected                       tomConstants = -2147483632
+	tomLink                            tomConstants = -2147483616
+	tomSmallCaps                       tomConstants = -2147483584
+	tomAllCaps                         tomConstants = -2147483520
+	tomHidden                          tomConstants = -2147483392
+	tomOutline                         tomConstants = -2147483136
+	tomShadow                          tomConstants = -2147482624
+	tomEmboss                          tomConstants = -2147481600
+	tomImprint                         tomConstants = -2147479552
+	tomDisabled                        tomConstants = -2147475456
+	tomRevised                         tomConstants = -2147467264
+	tomSubscriptCF                     tomConstants = -2147418112
+	tomSuperscriptCF                   tomConstants = -2147352576
+	tomFontBound                       tomConstants = -2146435072
+	tomLinkProtected                   tomConstants = -2139095040
+	tomInlineObjectStart               tomConstants = -2130706432
+	tomExtendedChar                    tomConstants = -2113929216
+	tomAutoBackColor                   tomConstants = -2080374784
+	tomMathZoneNoBuildUp               tomConstants = -2013265920
+	tomMathZone                        tomConstants = -1879048192
+	tomMathZoneOrdinary                tomConstants = -1610612736
+	tomAutoTextColor                   tomConstants = -1073741824
+	tomMathZoneDisplay                 tomConstants = 262144
+	tomParaEffectRTL                   tomConstants = 1
+	tomParaEffectKeep                  tomConstants = 2
+	tomParaEffectKeepNext              tomConstants = 4
+	tomParaEffectPageBreakBefore       tomConstants = 8
+	tomParaEffectNoLineNumber          tomConstants = 16
+	tomParaEffectNoWidowControl        tomConstants = 32
+	tomParaEffectDoNotHyphen           tomConstants = 64
+	tomParaEffectSideBySide            tomConstants = 128
+	tomParaEffectCollapsed             tomConstants = 256
+	tomParaEffectOutlineLevel          tomConstants = 512
+	tomParaEffectBox                   tomConstants = 1024
+	tomParaEffectTableRowDelimiter     tomConstants = 4096
+	tomParaEffectTable                 tomConstants = 16384
+	tomModWidthPairs                   tomConstants = 1
+	tomModWidthSpace                   tomConstants = 2
+	tomAutoSpaceAlpha                  tomConstants = 4
+	tomAutoSpaceNumeric                tomConstants = 8
+	tomAutoSpaceParens                 tomConstants = 16
+	tomEmbeddedFont                    tomConstants = 32
+	tomDoublestrike                    tomConstants = 64
+	tomOverlapping                     tomConstants = 128
+	tomNormalCaret                     tomConstants = 0
+	tomKoreanBlockCaret                tomConstants = 1
+	tomNullCaret                       tomConstants = 2
+	tomIncludeInset                    tomConstants = 1
+	tomUnicodeBiDi                     tomConstants = 1
+	tomMathCFCheck                     tomConstants = 4
+	tomUnlink                          tomConstants = 8
+	tomUnhide                          tomConstants = 16
+	tomCheckTextLimit                  tomConstants = 32
+	tomIgnoreCurrentFont               tomConstants = 0
+	tomMatchCharRep                    tomConstants = 1
+	tomMatchFontSignature              tomConstants = 2
+	tomMatchAscii                      tomConstants = 4
+	tomGetHeightOnly                   tomConstants = 8
+	tomMatchMathFont                   tomConstants = 16
+	tomCharset                         tomConstants = -2147483648
+	tomCharRepFromLcid                 tomConstants = 1073741824
+	tomAnsi                            tomConstants = 0
+	tomEastEurope                      tomConstants = 1
+	tomCyrillic                        tomConstants = 2
+	tomGreek                           tomConstants = 3
+	tomTurkish                         tomConstants = 4
+	tomHebrew                          tomConstants = 5
+	tomArabic                          tomConstants = 6
+	tomBaltic                          tomConstants = 7
+	tomVietnamese                      tomConstants = 8
+	tomDefaultCharRep                  tomConstants = 9
+	tomSymbol                          tomConstants = 10
+	tomThai                            tomConstants = 11
+	tomShiftJIS                        tomConstants = 12
+	tomGB2312                          tomConstants = 13
+	tomHangul                          tomConstants = 14
+	tomBIG5                            tomConstants = 15
+	tomPC437                           tomConstants = 16
+	tomOEM                             tomConstants = 17
+	tomMac                             tomConstants = 18
+	tomArmenian                        tomConstants = 19
+	tomSyriac                          tomConstants = 20
+	tomThaana                          tomConstants = 21
+	tomDevanagari                      tomConstants = 22
+	tomBengali                         tomConstants = 23
+	tomGurmukhi                        tomConstants = 24
+	tomGujarati                        tomConstants = 25
+	tomOriya                           tomConstants = 26
+	tomTamil                           tomConstants = 27
+	tomTelugu                          tomConstants = 28
+	tomKannada                         tomConstants = 29
+	tomMalayalam                       tomConstants = 30
+	tomSinhala                         tomConstants = 31
+	tomLao                             tomConstants = 32
+	tomTibetan                         tomConstants = 33
+	tomMyanmar                         tomConstants = 34
+	tomGeorgian                        tomConstants = 35
+	tomJamo                            tomConstants = 36
+	tomEthiopic                        tomConstants = 37
+	tomCherokee                        tomConstants = 38
+	tomAboriginal                      tomConstants = 39
+	tomOgham                           tomConstants = 40
+	tomRunic                           tomConstants = 41
+	tomKhmer                           tomConstants = 42
+	tomMongolian                       tomConstants = 43
+	tomBraille                         tomConstants = 44
+	tomYi                              tomConstants = 45
+	tomLimbu                           tomConstants = 46
+	tomTaiLe                           tomConstants = 47
+	tomNewTaiLue                       tomConstants = 48
+	tomSylotiNagri                     tomConstants = 49
+	tomKharoshthi                      tomConstants = 50
+	tomKayahli                         tomConstants = 51
+	tomUsymbol                         tomConstants = 52
+	tomEmoji                           tomConstants = 53
+	tomGlagolitic                      tomConstants = 54
+	tomLisu                            tomConstants = 55
+	tomVai                             tomConstants = 56
+	tomNKo                             tomConstants = 57
+	tomOsmanya                         tomConstants = 58
+	tomPhagsPa                         tomConstants = 59
+	tomGothic                          tomConstants = 60
+	tomDeseret                         tomConstants = 61
+	tomTifinagh                        tomConstants = 62
+	tomCharRepMax                      tomConstants = 63
+	tomRE10Mode                        tomConstants = 1
+	tomUseAtFont                       tomConstants = 2
+	tomTextFlowMask                    tomConstants = 12
+	tomTextFlowES                      tomConstants = 0
+	tomTextFlowSW                      tomConstants = 4
+	tomTextFlowWN                      tomConstants = 8
+	tomTextFlowNE                      tomConstants = 12
+	tomNoIME                           tomConstants = 524288
+	tomSelfIME                         tomConstants = 262144
+	tomNoUpScroll                      tomConstants = 65536
+	tomNoVpScroll                      tomConstants = 262144
+	tomNoLink                          tomConstants = 0
+	tomClientLink                      tomConstants = 1
+	tomFriendlyLinkName                tomConstants = 2
+	tomFriendlyLinkAddress             tomConstants = 3
+	tomAutoLinkURL                     tomConstants = 4
+	tomAutoLinkEmail                   tomConstants = 5
+	tomAutoLinkPhone                   tomConstants = 6
+	tomAutoLinkPath                    tomConstants = 7
+	tomCompressNone                    tomConstants = 0
+	tomCompressPunctuation             tomConstants = 1
+	tomCompressPunctuationAndKana      tomConstants = 2
+	tomCompressMax                     tomConstants = 2
+	tomUnderlinePositionAuto           tomConstants = 0
+	tomUnderlinePositionBelow          tomConstants = 1
+	tomUnderlinePositionAbove          tomConstants = 2
+	tomUnderlinePositionMax            tomConstants = 2
+	tomFontAlignmentAuto               tomConstants = 0
+	tomFontAlignmentTop                tomConstants = 1
+	tomFontAlignmentBaseline           tomConstants = 2
+	tomFontAlignmentBottom             tomConstants = 3
+	tomFontAlignmentCenter             tomConstants = 4
+	tomFontAlignmentMax                tomConstants = 4
+	tomRubyBelow                       tomConstants = 128
+	tomRubyAlignCenter                 tomConstants = 0
+	tomRubyAlign010                    tomConstants = 1
+	tomRubyAlign121                    tomConstants = 2
+	tomRubyAlignLeft                   tomConstants = 3
+	tomRubyAlignRight                  tomConstants = 4
+	tomLimitsDefault                   tomConstants = 0
+	tomLimitsUnderOver                 tomConstants = 1
+	tomLimitsSubSup                    tomConstants = 2
+	tomUpperLimitAsSuperScript         tomConstants = 3
+	tomLimitsOpposite                  tomConstants = 4
+	tomShowLLimPlaceHldr               tomConstants = 8
+	tomShowULimPlaceHldr               tomConstants = 16
+	tomDontGrowWithContent             tomConstants = 64
+	tomGrowWithContent                 tomConstants = 128
+	tomSubSupAlign                     tomConstants = 1
+	tomLimitAlignMask                  tomConstants = 3
+	tomLimitAlignCenter                tomConstants = 0
+	tomLimitAlignLeft                  tomConstants = 1
+	tomLimitAlignRight                 tomConstants = 2
+	tomShowDegPlaceHldr                tomConstants = 8
+	tomAlignDefault                    tomConstants = 0
+	tomAlignMatchAscentDescent         tomConstants = 2
+	tomMathVariant                     tomConstants = 32
+	tomStyleDefault                    tomConstants = 0
+	tomStyleScriptScriptCramped        tomConstants = 1
+	tomStyleScriptScript               tomConstants = 2
+	tomStyleScriptCramped              tomConstants = 3
+	tomStyleScript                     tomConstants = 4
+	tomStyleTextCramped                tomConstants = 5
+	tomStyleText                       tomConstants = 6
+	tomStyleDisplayCramped             tomConstants = 7
+	tomStyleDisplay                    tomConstants = 8
+	tomMathRelSize                     tomConstants = 64
+	tomDecDecSize                      tomConstants = 254
+	tomDecSize                         tomConstants = 255
+	tomIncSize                         tomConstants = 65
+	tomIncIncSize                      tomConstants = 66
+	tomGravityUI                       tomConstants = 0
+	tomGravityBack                     tomConstants = 1
+	tomGravityFore                     tomConstants = 2
+	tomGravityIn                       tomConstants = 3
+	tomGravityOut                      tomConstants = 4
+	tomGravityBackward                 tomConstants = 536870912
+	tomGravityForward                  tomConstants = 1073741824
+	tomAdjustCRLF                      tomConstants = 1
+	tomUseCRLF                         tomConstants = 2
+	tomTextize                         tomConstants = 4
+	tomAllowFinalEOP                   tomConstants = 8
+	tomFoldMathAlpha                   tomConstants = 16
+	tomNoHidden                        tomConstants = 32
+	tomIncludeNumbering                tomConstants = 64
+	tomTranslateTableCell              tomConstants = 128
+	tomNoMathZoneBrackets              tomConstants = 256
+	tomConvertMathChar                 tomConstants = 512
+	tomNoUCGreekItalic                 tomConstants = 1024
+	tomAllowMathBold                   tomConstants = 2048
+	tomLanguageTag                     tomConstants = 4096
+	tomConvertRTF                      tomConstants = 8192
+	tomApplyRtfDocProps                tomConstants = 16384
+	tomPhantomShow                     tomConstants = 1
+	tomPhantomZeroWidth                tomConstants = 2
+	tomPhantomZeroAscent               tomConstants = 4
+	tomPhantomZeroDescent              tomConstants = 8
+	tomPhantomTransparent              tomConstants = 16
+	tomPhantomASmash                   tomConstants = 5
+	tomPhantomDSmash                   tomConstants = 9
+	tomPhantomHSmash                   tomConstants = 3
+	tomPhantomSmash                    tomConstants = 13
+	tomPhantomHorz                     tomConstants = 12
+	tomPhantomVert                     tomConstants = 2
+	tomBoxHideTop                      tomConstants = 1
+	tomBoxHideBottom                   tomConstants = 2
+	tomBoxHideLeft                     tomConstants = 4
+	tomBoxHideRight                    tomConstants = 8
+	tomBoxStrikeH                      tomConstants = 16
+	tomBoxStrikeV                      tomConstants = 32
+	tomBoxStrikeTLBR                   tomConstants = 64
+	tomBoxStrikeBLTR                   tomConstants = 128
+	tomBoxAlignCenter                  tomConstants = 1
+	tomSpaceMask                       tomConstants = 28
+	tomSpaceDefault                    tomConstants = 0
+	tomSpaceUnary                      tomConstants = 4
+	tomSpaceBinary                     tomConstants = 8
+	tomSpaceRelational                 tomConstants = 12
+	tomSpaceSkip                       tomConstants = 16
+	tomSpaceOrd                        tomConstants = 20
+	tomSpaceDifferential               tomConstants = 24
+	tomSizeText                        tomConstants = 32
+	tomSizeScript                      tomConstants = 64
+	tomSizeScriptScript                tomConstants = 96
+	tomNoBreak                         tomConstants = 128
+	tomTransparentForPositioning       tomConstants = 256
+	tomTransparentForSpacing           tomConstants = 512
+	tomStretchCharBelow                tomConstants = 0
+	tomStretchCharAbove                tomConstants = 1
+	tomStretchBaseBelow                tomConstants = 2
+	tomStretchBaseAbove                tomConstants = 3
+	tomMatrixAlignMask                 tomConstants = 3
+	tomMatrixAlignCenter               tomConstants = 0
+	tomMatrixAlignTopRow               tomConstants = 1
+	tomMatrixAlignBottomRow            tomConstants = 3
+	tomShowMatPlaceHldr                tomConstants = 8
+	tomEqArrayLayoutWidth              tomConstants = 1
+	tomEqArrayAlignMask                tomConstants = 12
+	tomEqArrayAlignCenter              tomConstants = 0
+	tomEqArrayAlignTopRow              tomConstants = 4
+	tomEqArrayAlignBottomRow           tomConstants = 12
+	tomMathManualBreakMask             tomConstants = 127
+	tomMathBreakLeft                   tomConstants = 125
+	tomMathBreakCenter                 tomConstants = 126
+	tomMathBreakRight                  tomConstants = 127
+	tomMathEqAlign                     tomConstants = 128
+	tomMathArgShadingStart             tomConstants = 593
+	tomMathArgShadingEnd               tomConstants = 594
+	tomMathObjShadingStart             tomConstants = 595
+	tomMathObjShadingEnd               tomConstants = 596
+	tomFunctionTypeNone                tomConstants = 0
+	tomFunctionTypeTakesArg            tomConstants = 1
+	tomFunctionTypeTakesLim            tomConstants = 2
+	tomFunctionTypeTakesLim2           tomConstants = 3
+	tomFunctionTypeIsLim               tomConstants = 4
+	tomMathParaAlignDefault            tomConstants = 0
+	tomMathParaAlignCenterGroup        tomConstants = 1
+	tomMathParaAlignCenter             tomConstants = 2
+	tomMathParaAlignLeft               tomConstants = 3
+	tomMathParaAlignRight              tomConstants = 4
+	tomMathDispAlignMask               tomConstants = 3
+	tomMathDispAlignCenterGroup        tomConstants = 0
+	tomMathDispAlignCenter             tomConstants = 1
+	tomMathDispAlignLeft               tomConstants = 2
+	tomMathDispAlignRight              tomConstants = 3
+	tomMathDispIntUnderOver            tomConstants = 4
+	tomMathDispFracTeX                 tomConstants = 8
+	tomMathDispNaryGrow                tomConstants = 16
+	tomMathDocEmptyArgMask             tomConstants = 96
+	tomMathDocEmptyArgAuto             tomConstants = 0
+	tomMathDocEmptyArgAlways           tomConstants = 32
+	tomMathDocEmptyArgNever            tomConstants = 64
+	tomMathDocSbSpOpUnchanged          tomConstants = 128
+	tomMathDocDiffMask                 tomConstants = 768
+	tomMathDocDiffDefault              tomConstants = 0
+	tomMathDocDiffUpright              tomConstants = 256
+	tomMathDocDiffItalic               tomConstants = 512
+	tomMathDocDiffOpenItalic           tomConstants = 768
+	tomMathDispNarySubSup              tomConstants = 1024
+	tomMathDispDef                     tomConstants = 2048
+	tomMathEnableRtl                   tomConstants = 4096
+	tomMathBrkBinMask                  tomConstants = 196608
+	tomMathBrkBinBefore                tomConstants = 0
+	tomMathBrkBinAfter                 tomConstants = 65536
+	tomMathBrkBinDup                   tomConstants = 131072
+	tomMathBrkBinSubMask               tomConstants = 786432
+	tomMathBrkBinSubMM                 tomConstants = 0
+	tomMathBrkBinSubPM                 tomConstants = 262144
+	tomMathBrkBinSubMP                 tomConstants = 524288
+	tomSelRange                        tomConstants = 597
+	tomHstring                         tomConstants = 596
+	tomFontPropTeXStyle                tomConstants = 828
+	tomFontPropAlign                   tomConstants = 829
+	tomFontStretch                     tomConstants = 830
+	tomFontStyle                       tomConstants = 831
+	tomFontStyleUpright                tomConstants = 0
+	tomFontStyleOblique                tomConstants = 1
+	tomFontStyleItalic                 tomConstants = 2
+	tomFontStretchDefault              tomConstants = 0
+	tomFontStretchUltraCondensed       tomConstants = 1
+	tomFontStretchExtraCondensed       tomConstants = 2
+	tomFontStretchCondensed            tomConstants = 3
+	tomFontStretchSemiCondensed        tomConstants = 4
+	tomFontStretchNormal               tomConstants = 5
+	tomFontStretchSemiExpanded         tomConstants = 6
+	tomFontStretchExpanded             tomConstants = 7
+	tomFontStretchExtraExpanded        tomConstants = 8
+	tomFontStretchUltraExpanded        tomConstants = 9
+	tomFontWeightDefault               tomConstants = 0
+	tomFontWeightThin                  tomConstants = 100
+	tomFontWeightExtraLight            tomConstants = 200
+	tomFontWeightLight                 tomConstants = 300
+	tomFontWeightNormal                tomConstants = 400
+	tomFontWeightRegular               tomConstants = 400
+	tomFontWeightMedium                tomConstants = 500
+	tomFontWeightSemiBold              tomConstants = 600
+	tomFontWeightBold                  tomConstants = 700
+	tomFontWeightExtraBold             tomConstants = 800
+	tomFontWeightBlack                 tomConstants = 900
+	tomFontWeightHeavy                 tomConstants = 900
+	tomFontWeightExtraBlack            tomConstants = 950
+	tomParaPropMathAlign               tomConstants = 1079
+	tomDocMathBuild                    tomConstants = 128
+	tomMathLMargin                     tomConstants = 129
+	tomMathRMargin                     tomConstants = 130
+	tomMathWrapIndent                  tomConstants = 131
+	tomMathWrapRight                   tomConstants = 132
+	tomMathPostSpace                   tomConstants = 134
+	tomMathPreSpace                    tomConstants = 133
+	tomMathInterSpace                  tomConstants = 135
+	tomMathIntraSpace                  tomConstants = 136
+	tomCanCopy                         tomConstants = 137
+	tomCanRedo                         tomConstants = 138
+	tomCanUndo                         tomConstants = 139
+	tomUndoLimit                       tomConstants = 140
+	tomDocAutoLink                     tomConstants = 141
+	tomEllipsisMode                    tomConstants = 142
+	tomEllipsisState                   tomConstants = 143
+	tomEllipsisNone                    tomConstants = 0
+	tomEllipsisEnd                     tomConstants = 1
+	tomEllipsisWord                    tomConstants = 3
+	tomEllipsisPresent                 tomConstants = 1
+	tomVTopCell                        tomConstants = 1
+	tomVLowCell                        tomConstants = 2
+	tomHStartCell                      tomConstants = 4
+	tomHContCell                       tomConstants = 8
+	tomRowUpdate                       tomConstants = 1
+	tomRowApplyDefault                 tomConstants = 0
+	tomCellStructureChangeOnly         tomConstants = 1
+	tomRowHeightActual                 tomConstants = 2059
 )
 
 type OBJECTTYPE int32
 
 const (
-	tomSimpleText = 0
-	tomRuby = 1
-	tomHorzVert = 2
-	tomWarichu = 3
-	tomEq = 9
-	tomMath = 10
-	tomAccent = 10
-	tomBox = 11
-	tomBoxedFormula = 12
-	tomBrackets = 13
-	tomBracketsWithSeps = 14
-	tomEquationArray = 15
-	tomFraction = 16
-	tomFunctionApply = 17
-	tomLeftSubSup = 18
-	tomLowerLimit = 19
-	tomMatrix = 20
-	tomNary = 21
-	tomOpChar = 22
-	tomOverbar = 23
-	tomPhantom = 24
-	tomRadical = 25
-	tomSlashedFraction = 26
-	tomStack = 27
-	tomStretchStack = 28
-	tomSubscript = 29
-	tomSubSup = 30
-	tomSuperscript = 31
-	tomUnderbar = 32
-	tomUpperLimit = 33
-	tomObjectMax = 33
+	tomSimpleText       OBJECTTYPE = 0
+	tomRuby             OBJECTTYPE = 1
+	tomHorzVert         OBJECTTYPE = 2
+	tomWarichu          OBJECTTYPE = 3
+	tomEq               OBJECTTYPE = 9
+	tomMath             OBJECTTYPE = 10
+	tomAccent           OBJECTTYPE = 10
+	tomBox              OBJECTTYPE = 11
+	tomBoxedFormula     OBJECTTYPE = 12
+	tomBrackets         OBJECTTYPE = 13
+	tomBracketsWithSeps OBJECTTYPE = 14
+	tomEquationArray    OBJECTTYPE = 15
+	tomFraction         OBJECTTYPE = 16
+	tomFunctionApply    OBJECTTYPE = 17
+	tomLeftSubSup       OBJECTTYPE = 18
+	tomLowerLimit       OBJECTTYPE = 19
+	tomMatrix           OBJECTTYPE = 20
+	tomNary             OBJECTTYPE = 21
+	tomOpChar           OBJECTTYPE = 22
+	tomOverbar          OBJECTTYPE = 23
+	tomPhantom          OBJECTTYPE = 24
+	tomRadical          OBJECTTYPE = 25
+	tomSlashedFraction  OBJECTTYPE = 26
+	tomStack            OBJECTTYPE = 27
+	tomStretchStack     OBJECTTYPE = 28
+	tomSubscript        OBJECTTYPE = 29
+	tomSubSup           OBJECTTYPE = 30
+	tomSuperscript      OBJECTTYPE = 31
+	tomUnderbar         OBJECTTYPE = 32
+	tomUpperLimit       OBJECTTYPE = 33
+	tomObjectMax        OBJECTTYPE = 33
 )
 
 type MANCODE int32
 
 const (
-	MBOLD = 16
-	MITAL = 32
-	MGREEK = 64
-	MROMN = 0
-	MSCRP = 1
-	MFRAK = 2
-	MOPEN = 3
-	MSANS = 4
-	MMONO = 5
-	MMATH = 6
-	MISOL = 7
-	MINIT = 8
-	MTAIL = 9
-	MSTRCH = 10
-	MLOOP = 11
-	MOPENA = 12
+	MBOLD  MANCODE = 16
+	MITAL  MANCODE = 32
+	MGREEK MANCODE = 64
+	MROMN  MANCODE = 0
+	MSCRP  MANCODE = 1
+	MFRAK  MANCODE = 2
+	MOPEN  MANCODE = 3
+	MSANS  MANCODE = 4
+	MMONO  MANCODE = 5
+	MMATH  MANCODE = 6
+	MISOL  MANCODE = 7
+	MINIT  MANCODE = 8
+	MTAIL  MANCODE = 9
+	MSTRCH MANCODE = 10
+	MLOOP  MANCODE = 11
+	MOPENA MANCODE = 12
 )
 
 type TXTBACKSTYLE int32
 
 const (
-	TXTBACK_TRANSPARENT = 0
-	TXTBACK_OPAQUE = 1
+	TXTBACK_TRANSPARENT TXTBACKSTYLE = 0
+	TXTBACK_OPAQUE      TXTBACKSTYLE = 1
 )
 
 type TXTHITRESULT int32
 
 const (
-	TXTHITRESULT_NOHIT = 0
-	TXTHITRESULT_TRANSPARENT = 1
-	TXTHITRESULT_CLOSE = 2
-	TXTHITRESULT_HIT = 3
+	TXTHITRESULT_NOHIT       TXTHITRESULT = 0
+	TXTHITRESULT_TRANSPARENT TXTHITRESULT = 1
+	TXTHITRESULT_CLOSE       TXTHITRESULT = 2
+	TXTHITRESULT_HIT         TXTHITRESULT = 3
 )
 
 type TXTNATURALSIZE int32
 
 const (
-	TXTNS_FITTOCONTENT2 = 0
-	TXTNS_FITTOCONTENT = 1
-	TXTNS_ROUNDTOLINE = 2
-	TXTNS_FITTOCONTENT3 = 3
-	TXTNS_FITTOCONTENTWSP = 4
-	TXTNS_INCLUDELASTLINE = 1073741824
-	TXTNS_EMU = -2147483648
+	TXTNS_FITTOCONTENT2   TXTNATURALSIZE = 0
+	TXTNS_FITTOCONTENT    TXTNATURALSIZE = 1
+	TXTNS_ROUNDTOLINE     TXTNATURALSIZE = 2
+	TXTNS_FITTOCONTENT3   TXTNATURALSIZE = 3
+	TXTNS_FITTOCONTENTWSP TXTNATURALSIZE = 4
+	TXTNS_INCLUDELASTLINE TXTNATURALSIZE = 1073741824
+	TXTNS_EMU             TXTNATURALSIZE = -2147483648
 )
 
 type TXTVIEW int32
 
 const (
-	TXTVIEW_ACTIVE = 0
-	TXTVIEW_INACTIVE = -1
+	TXTVIEW_ACTIVE   TXTVIEW = 0
+	TXTVIEW_INACTIVE TXTVIEW = -1
 )
 
 type CHANGETYPE int32
 
 const (
-	CN_GENERIC = 0
-	CN_TEXTCHANGED = 1
-	CN_NEWUNDO = 2
-	CN_NEWREDO = 4
+	CN_GENERIC     CHANGETYPE = 0
+	CN_TEXTCHANGED CHANGETYPE = 1
+	CN_NEWUNDO     CHANGETYPE = 2
+	CN_NEWREDO     CHANGETYPE = 4
 )
 
 type CARET_FLAGS int32
 
 const (
-	CARET_NONE = 0
-	CARET_CUSTOM = 1
-	CARET_RTL = 2
-	CARET_ITALIC = 32
-	CARET_NULL = 64
-	CARET_ROTATE90 = 128
+	CARET_NONE     CARET_FLAGS = 0
+	CARET_CUSTOM   CARET_FLAGS = 1
+	CARET_RTL      CARET_FLAGS = 2
+	CARET_ITALIC   CARET_FLAGS = 32
+	CARET_NULL     CARET_FLAGS = 64
+	CARET_ROTATE90 CARET_FLAGS = 128
 )
 
 type TA_PROPERTY int32
 
 const (
-	TAP_FLAGS = 0
-	TAP_TRANSFORMCOUNT = 1
-	TAP_STAGGERDELAY = 2
-	TAP_STAGGERDELAYCAP = 3
-	TAP_STAGGERDELAYFACTOR = 4
-	TAP_ZORDER = 5
+	TAP_FLAGS              TA_PROPERTY = 0
+	TAP_TRANSFORMCOUNT     TA_PROPERTY = 1
+	TAP_STAGGERDELAY       TA_PROPERTY = 2
+	TAP_STAGGERDELAYCAP    TA_PROPERTY = 3
+	TAP_STAGGERDELAYFACTOR TA_PROPERTY = 4
+	TAP_ZORDER             TA_PROPERTY = 5
 )
 
 type TA_PROPERTY_FLAG int32
 
 const (
-	TAPF_NONE = 0
-	TAPF_HASSTAGGER = 1
-	TAPF_ISRTLAWARE = 2
-	TAPF_ALLOWCOLLECTION = 4
-	TAPF_HASBACKGROUND = 8
-	TAPF_HASPERSPECTIVE = 16
+	TAPF_NONE            TA_PROPERTY_FLAG = 0
+	TAPF_HASSTAGGER      TA_PROPERTY_FLAG = 1
+	TAPF_ISRTLAWARE      TA_PROPERTY_FLAG = 2
+	TAPF_ALLOWCOLLECTION TA_PROPERTY_FLAG = 4
+	TAPF_HASBACKGROUND   TA_PROPERTY_FLAG = 8
+	TAPF_HASPERSPECTIVE  TA_PROPERTY_FLAG = 16
 )
 
 type TA_TRANSFORM_TYPE int32
 
 const (
-	TATT_TRANSLATE_2D = 0
-	TATT_SCALE_2D = 1
-	TATT_OPACITY = 2
-	TATT_CLIP = 3
+	TATT_TRANSLATE_2D TA_TRANSFORM_TYPE = 0
+	TATT_SCALE_2D     TA_TRANSFORM_TYPE = 1
+	TATT_OPACITY      TA_TRANSFORM_TYPE = 2
+	TATT_CLIP         TA_TRANSFORM_TYPE = 3
 )
 
 type TA_TRANSFORM_FLAG int32
 
 const (
-	TATF_NONE = 0
-	TATF_TARGETVALUES_USER = 1
-	TATF_HASINITIALVALUES = 2
-	TATF_HASORIGINVALUES = 4
+	TATF_NONE              TA_TRANSFORM_FLAG = 0
+	TATF_TARGETVALUES_USER TA_TRANSFORM_FLAG = 1
+	TATF_HASINITIALVALUES  TA_TRANSFORM_FLAG = 2
+	TATF_HASORIGINVALUES   TA_TRANSFORM_FLAG = 4
 )
 
 type TA_TIMINGFUNCTION_TYPE int32
 
 const (
-	TTFT_UNDEFINED = 0
-	TTFT_CUBIC_BEZIER = 1
+	TTFT_UNDEFINED    TA_TIMINGFUNCTION_TYPE = 0
+	TTFT_CUBIC_BEZIER TA_TIMINGFUNCTION_TYPE = 1
 )
 
 type THEMESIZE int32
 
 const (
-	TS_MIN = 0
-	TS_TRUE = 1
-	TS_DRAW = 2
+	TS_MIN  THEMESIZE = 0
+	TS_TRUE THEMESIZE = 1
+	TS_DRAW THEMESIZE = 2
 )
 
 type PROPERTYORIGIN int32
 
 const (
-	PO_STATE = 0
-	PO_PART = 1
-	PO_CLASS = 2
-	PO_GLOBAL = 3
-	PO_NOTFOUND = 4
+	PO_STATE    PROPERTYORIGIN = 0
+	PO_PART     PROPERTYORIGIN = 1
+	PO_CLASS    PROPERTYORIGIN = 2
+	PO_GLOBAL   PROPERTYORIGIN = 3
+	PO_NOTFOUND PROPERTYORIGIN = 4
 )
 
 type WINDOWTHEMEATTRIBUTETYPE int32
 
 const (
-	WTA_NONCLIENT = 1
+	WTA_NONCLIENT WINDOWTHEMEATTRIBUTETYPE = 1
 )
 
 type BP_BUFFERFORMAT int32
 
 const (
-	BPBF_COMPATIBLEBITMAP = 0
-	BPBF_DIB = 1
-	BPBF_TOPDOWNDIB = 2
-	BPBF_TOPDOWNMONODIB = 3
+	BPBF_COMPATIBLEBITMAP BP_BUFFERFORMAT = 0
+	BPBF_DIB              BP_BUFFERFORMAT = 1
+	BPBF_TOPDOWNDIB       BP_BUFFERFORMAT = 2
+	BPBF_TOPDOWNMONODIB   BP_BUFFERFORMAT = 3
 )
 
 type BP_ANIMATIONSTYLE int32
 
 const (
-	BPAS_NONE = 0
-	BPAS_LINEAR = 1
-	BPAS_CUBIC = 2
-	BPAS_SINE = 3
+	BPAS_NONE   BP_ANIMATIONSTYLE = 0
+	BPAS_LINEAR BP_ANIMATIONSTYLE = 1
+	BPAS_CUBIC  BP_ANIMATIONSTYLE = 2
+	BPAS_SINE   BP_ANIMATIONSTYLE = 3
 )
-

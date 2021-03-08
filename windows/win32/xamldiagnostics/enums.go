@@ -7,62 +7,61 @@ package xamldiagnostics
 type VisualMutationType int32
 
 const (
-	Add = 0
-	Remove = 1
+	Add    VisualMutationType = 0
+	Remove VisualMutationType = 1
 )
 
 type BaseValueSource int32
 
 const (
-	BaseValueSourceUnknown = 0
-	BaseValueSourceDefault = 1
-	BaseValueSourceBuiltInStyle = 2
-	BaseValueSourceStyle = 3
-	BaseValueSourceLocal = 4
-	Inherited = 5
-	DefaultStyleTrigger = 6
-	TemplateTrigger = 7
-	StyleTrigger = 8
-	ImplicitStyleReference = 9
-	ParentTemplate = 10
-	ParentTemplateTrigger = 11
-	Animation = 12
-	Coercion = 13
-	BaseValueSourceVisualState = 14
+	BaseValueSourceUnknown      BaseValueSource = 0
+	BaseValueSourceDefault      BaseValueSource = 1
+	BaseValueSourceBuiltInStyle BaseValueSource = 2
+	BaseValueSourceStyle        BaseValueSource = 3
+	BaseValueSourceLocal        BaseValueSource = 4
+	Inherited                   BaseValueSource = 5
+	DefaultStyleTrigger         BaseValueSource = 6
+	TemplateTrigger             BaseValueSource = 7
+	StyleTrigger                BaseValueSource = 8
+	ImplicitStyleReference      BaseValueSource = 9
+	ParentTemplate              BaseValueSource = 10
+	ParentTemplateTrigger       BaseValueSource = 11
+	Animation                   BaseValueSource = 12
+	Coercion                    BaseValueSource = 13
+	BaseValueSourceVisualState  BaseValueSource = 14
 )
 
 type MetadataBit int32
 
 const (
-	None = 0
-	IsValueHandle = 1
-	IsPropertyReadOnly = 2
-	IsValueCollection = 4
-	IsValueCollectionReadOnly = 8
-	IsValueBindingExpression = 16
-	IsValueNull = 32
-	IsValueHandleAndEvaluatedValue = 64
+	None                           MetadataBit = 0
+	IsValueHandle                  MetadataBit = 1
+	IsPropertyReadOnly             MetadataBit = 2
+	IsValueCollection              MetadataBit = 4
+	IsValueCollectionReadOnly      MetadataBit = 8
+	IsValueBindingExpression       MetadataBit = 16
+	IsValueNull                    MetadataBit = 32
+	IsValueHandleAndEvaluatedValue MetadataBit = 64
 )
 
 type RenderTargetBitmapOptions int32
 
 const (
-	RenderTarget = 0
-	RenderTargetAndChildren = 1
+	RenderTarget            RenderTargetBitmapOptions = 0
+	RenderTargetAndChildren RenderTargetBitmapOptions = 1
 )
 
 type ResourceType int32
 
 const (
-	ResourceTypeStatic = 0
-	ResourceTypeTheme = 1
+	ResourceTypeStatic ResourceType = 0
+	ResourceTypeTheme  ResourceType = 1
 )
 
 type VisualElementState int32
 
 const (
-	ErrorResolved = 0
-	ErrorResourceNotFound = 1
-	ErrorInvalidResource = 2
+	ErrorResolved         VisualElementState = 0
+	ErrorResourceNotFound VisualElementState = 1
+	ErrorInvalidResource  VisualElementState = 2
 )
-

@@ -7,97 +7,96 @@ package dns
 type DNS_CONFIG_TYPE int32
 
 const (
-	DnsConfigPrimaryDomainName_W = 0
-	DnsConfigPrimaryDomainName_A = 1
-	DnsConfigPrimaryDomainName_UTF8 = 2
-	DnsConfigAdapterDomainName_W = 3
-	DnsConfigAdapterDomainName_A = 4
-	DnsConfigAdapterDomainName_UTF8 = 5
-	DnsConfigDnsServerList = 6
-	DnsConfigSearchList = 7
-	DnsConfigAdapterInfo = 8
-	DnsConfigPrimaryHostNameRegistrationEnabled = 9
-	DnsConfigAdapterHostNameRegistrationEnabled = 10
-	DnsConfigAddressRegistrationMaxCount = 11
-	DnsConfigHostName_W = 12
-	DnsConfigHostName_A = 13
-	DnsConfigHostName_UTF8 = 14
-	DnsConfigFullHostName_W = 15
-	DnsConfigFullHostName_A = 16
-	DnsConfigFullHostName_UTF8 = 17
-	DnsConfigNameServer = 18
+	DnsConfigPrimaryDomainName_W                DNS_CONFIG_TYPE = 0
+	DnsConfigPrimaryDomainName_A                DNS_CONFIG_TYPE = 1
+	DnsConfigPrimaryDomainName_UTF8             DNS_CONFIG_TYPE = 2
+	DnsConfigAdapterDomainName_W                DNS_CONFIG_TYPE = 3
+	DnsConfigAdapterDomainName_A                DNS_CONFIG_TYPE = 4
+	DnsConfigAdapterDomainName_UTF8             DNS_CONFIG_TYPE = 5
+	DnsConfigDnsServerList                      DNS_CONFIG_TYPE = 6
+	DnsConfigSearchList                         DNS_CONFIG_TYPE = 7
+	DnsConfigAdapterInfo                        DNS_CONFIG_TYPE = 8
+	DnsConfigPrimaryHostNameRegistrationEnabled DNS_CONFIG_TYPE = 9
+	DnsConfigAdapterHostNameRegistrationEnabled DNS_CONFIG_TYPE = 10
+	DnsConfigAddressRegistrationMaxCount        DNS_CONFIG_TYPE = 11
+	DnsConfigHostName_W                         DNS_CONFIG_TYPE = 12
+	DnsConfigHostName_A                         DNS_CONFIG_TYPE = 13
+	DnsConfigHostName_UTF8                      DNS_CONFIG_TYPE = 14
+	DnsConfigFullHostName_W                     DNS_CONFIG_TYPE = 15
+	DnsConfigFullHostName_A                     DNS_CONFIG_TYPE = 16
+	DnsConfigFullHostName_UTF8                  DNS_CONFIG_TYPE = 17
+	DnsConfigNameServer                         DNS_CONFIG_TYPE = 18
 )
 
 type DNS_SECTION int32
 
 const (
-	DnsSectionQuestion = 0
-	DnsSectionAnswer = 1
-	DnsSectionAuthority = 2
-	DnsSectionAddtional = 3
+	DnsSectionQuestion  DNS_SECTION = 0
+	DnsSectionAnswer    DNS_SECTION = 1
+	DnsSectionAuthority DNS_SECTION = 2
+	DnsSectionAddtional DNS_SECTION = 3
 )
 
 type DNS_PROXY_INFORMATION_TYPE int32
 
 const (
-	DNS_PROXY_INFORMATION_DIRECT = 0
-	DNS_PROXY_INFORMATION_DEFAULT_SETTINGS = 1
-	DNS_PROXY_INFORMATION_PROXY_NAME = 2
-	DNS_PROXY_INFORMATION_DOES_NOT_EXIST = 3
+	DNS_PROXY_INFORMATION_DIRECT           DNS_PROXY_INFORMATION_TYPE = 0
+	DNS_PROXY_INFORMATION_DEFAULT_SETTINGS DNS_PROXY_INFORMATION_TYPE = 1
+	DNS_PROXY_INFORMATION_PROXY_NAME       DNS_PROXY_INFORMATION_TYPE = 2
+	DNS_PROXY_INFORMATION_DOES_NOT_EXIST   DNS_PROXY_INFORMATION_TYPE = 3
 )
 
 type DNS_CHARSET int32
 
 const (
-	DnsCharSetUnknown = 0
-	DnsCharSetUnicode = 1
-	DnsCharSetUtf8 = 2
-	DnsCharSetAnsi = 3
+	DnsCharSetUnknown DNS_CHARSET = 0
+	DnsCharSetUnicode DNS_CHARSET = 1
+	DnsCharSetUtf8    DNS_CHARSET = 2
+	DnsCharSetAnsi    DNS_CHARSET = 3
 )
 
 type DNS_FREE_TYPE int32
 
 const (
-	DnsFreeFlat = 0
-	DnsFreeRecordList = 1
-	DnsFreeParsedMessageFields = 2
+	DnsFreeFlat                DNS_FREE_TYPE = 0
+	DnsFreeRecordList          DNS_FREE_TYPE = 1
+	DnsFreeParsedMessageFields DNS_FREE_TYPE = 2
 )
 
 type DNS_NAME_FORMAT int32
 
 const (
-	DnsNameDomain = 0
-	DnsNameDomainLabel = 1
-	DnsNameHostnameFull = 2
-	DnsNameHostnameLabel = 3
-	DnsNameWildcard = 4
-	DnsNameSrvRecord = 5
-	DnsNameValidateTld = 6
+	DnsNameDomain        DNS_NAME_FORMAT = 0
+	DnsNameDomainLabel   DNS_NAME_FORMAT = 1
+	DnsNameHostnameFull  DNS_NAME_FORMAT = 2
+	DnsNameHostnameLabel DNS_NAME_FORMAT = 3
+	DnsNameWildcard      DNS_NAME_FORMAT = 4
+	DnsNameSrvRecord     DNS_NAME_FORMAT = 5
+	DnsNameValidateTld   DNS_NAME_FORMAT = 6
 )
 
 type DNS_CONNECTION_PROXY_TYPE int32
 
 const (
-	DNS_CONNECTION_PROXY_TYPE_NULL = 0
-	DNS_CONNECTION_PROXY_TYPE_HTTP = 1
-	DNS_CONNECTION_PROXY_TYPE_WAP = 2
-	DNS_CONNECTION_PROXY_TYPE_SOCKS4 = 4
-	DNS_CONNECTION_PROXY_TYPE_SOCKS5 = 5
+	DNS_CONNECTION_PROXY_TYPE_NULL   DNS_CONNECTION_PROXY_TYPE = 0
+	DNS_CONNECTION_PROXY_TYPE_HTTP   DNS_CONNECTION_PROXY_TYPE = 1
+	DNS_CONNECTION_PROXY_TYPE_WAP    DNS_CONNECTION_PROXY_TYPE = 2
+	DNS_CONNECTION_PROXY_TYPE_SOCKS4 DNS_CONNECTION_PROXY_TYPE = 4
+	DNS_CONNECTION_PROXY_TYPE_SOCKS5 DNS_CONNECTION_PROXY_TYPE = 5
 )
 
 type DNS_CONNECTION_PROXY_INFO_SWITCH int32
 
 const (
-	DNS_CONNECTION_PROXY_INFO_SWITCH_CONFIG = 0
-	DNS_CONNECTION_PROXY_INFO_SWITCH_SCRIPT = 1
-	DNS_CONNECTION_PROXY_INFO_SWITCH_WPAD = 2
+	DNS_CONNECTION_PROXY_INFO_SWITCH_CONFIG DNS_CONNECTION_PROXY_INFO_SWITCH = 0
+	DNS_CONNECTION_PROXY_INFO_SWITCH_SCRIPT DNS_CONNECTION_PROXY_INFO_SWITCH = 1
+	DNS_CONNECTION_PROXY_INFO_SWITCH_WPAD   DNS_CONNECTION_PROXY_INFO_SWITCH = 2
 )
 
 type DNS_CONNECTION_POLICY_TAG int32
 
 const (
-	TAG_DNS_CONNECTION_POLICY_TAG_DEFAULT = 0
-	TAG_DNS_CONNECTION_POLICY_TAG_CONNECTION_MANAGER = 1
-	TAG_DNS_CONNECTION_POLICY_TAG_WWWPT = 2
+	TAG_DNS_CONNECTION_POLICY_TAG_DEFAULT            DNS_CONNECTION_POLICY_TAG = 0
+	TAG_DNS_CONNECTION_POLICY_TAG_CONNECTION_MANAGER DNS_CONNECTION_POLICY_TAG = 1
+	TAG_DNS_CONNECTION_POLICY_TAG_WWWPT              DNS_CONNECTION_POLICY_TAG = 2
 )
-

@@ -7,296 +7,295 @@ package windowseventlog
 type EVT_VARIANT_TYPE int32
 
 const (
-	EvtVarTypeNull = 0
-	EvtVarTypeString = 1
-	EvtVarTypeAnsiString = 2
-	EvtVarTypeSByte = 3
-	EvtVarTypeByte = 4
-	EvtVarTypeInt16 = 5
-	EvtVarTypeUInt16 = 6
-	EvtVarTypeInt32 = 7
-	EvtVarTypeUInt32 = 8
-	EvtVarTypeInt64 = 9
-	EvtVarTypeUInt64 = 10
-	EvtVarTypeSingle = 11
-	EvtVarTypeDouble = 12
-	EvtVarTypeBoolean = 13
-	EvtVarTypeBinary = 14
-	EvtVarTypeGuid = 15
-	EvtVarTypeSizeT = 16
-	EvtVarTypeFileTime = 17
-	EvtVarTypeSysTime = 18
-	EvtVarTypeSid = 19
-	EvtVarTypeHexInt32 = 20
-	EvtVarTypeHexInt64 = 21
-	EvtVarTypeEvtHandle = 32
-	EvtVarTypeEvtXml = 35
+	EvtVarTypeNull       EVT_VARIANT_TYPE = 0
+	EvtVarTypeString     EVT_VARIANT_TYPE = 1
+	EvtVarTypeAnsiString EVT_VARIANT_TYPE = 2
+	EvtVarTypeSByte      EVT_VARIANT_TYPE = 3
+	EvtVarTypeByte       EVT_VARIANT_TYPE = 4
+	EvtVarTypeInt16      EVT_VARIANT_TYPE = 5
+	EvtVarTypeUInt16     EVT_VARIANT_TYPE = 6
+	EvtVarTypeInt32      EVT_VARIANT_TYPE = 7
+	EvtVarTypeUInt32     EVT_VARIANT_TYPE = 8
+	EvtVarTypeInt64      EVT_VARIANT_TYPE = 9
+	EvtVarTypeUInt64     EVT_VARIANT_TYPE = 10
+	EvtVarTypeSingle     EVT_VARIANT_TYPE = 11
+	EvtVarTypeDouble     EVT_VARIANT_TYPE = 12
+	EvtVarTypeBoolean    EVT_VARIANT_TYPE = 13
+	EvtVarTypeBinary     EVT_VARIANT_TYPE = 14
+	EvtVarTypeGuid       EVT_VARIANT_TYPE = 15
+	EvtVarTypeSizeT      EVT_VARIANT_TYPE = 16
+	EvtVarTypeFileTime   EVT_VARIANT_TYPE = 17
+	EvtVarTypeSysTime    EVT_VARIANT_TYPE = 18
+	EvtVarTypeSid        EVT_VARIANT_TYPE = 19
+	EvtVarTypeHexInt32   EVT_VARIANT_TYPE = 20
+	EvtVarTypeHexInt64   EVT_VARIANT_TYPE = 21
+	EvtVarTypeEvtHandle  EVT_VARIANT_TYPE = 32
+	EvtVarTypeEvtXml     EVT_VARIANT_TYPE = 35
 )
 
 type EVT_LOGIN_CLASS int32
 
 const (
-	EvtRpcLogin = 1
+	EvtRpcLogin EVT_LOGIN_CLASS = 1
 )
 
 type EVT_RPC_LOGIN_FLAGS int32
 
 const (
-	EvtRpcLoginAuthDefault = 0
-	EvtRpcLoginAuthNegotiate = 1
-	EvtRpcLoginAuthKerberos = 2
-	EvtRpcLoginAuthNTLM = 3
+	EvtRpcLoginAuthDefault   EVT_RPC_LOGIN_FLAGS = 0
+	EvtRpcLoginAuthNegotiate EVT_RPC_LOGIN_FLAGS = 1
+	EvtRpcLoginAuthKerberos  EVT_RPC_LOGIN_FLAGS = 2
+	EvtRpcLoginAuthNTLM      EVT_RPC_LOGIN_FLAGS = 3
 )
 
 type EVT_QUERY_FLAGS int32
 
 const (
-	EvtQueryChannelPath = 1
-	EvtQueryFilePath = 2
-	EvtQueryForwardDirection = 256
-	EvtQueryReverseDirection = 512
-	EvtQueryTolerateQueryErrors = 4096
+	EvtQueryChannelPath         EVT_QUERY_FLAGS = 1
+	EvtQueryFilePath            EVT_QUERY_FLAGS = 2
+	EvtQueryForwardDirection    EVT_QUERY_FLAGS = 256
+	EvtQueryReverseDirection    EVT_QUERY_FLAGS = 512
+	EvtQueryTolerateQueryErrors EVT_QUERY_FLAGS = 4096
 )
 
 type EVT_SEEK_FLAGS int32
 
 const (
-	EvtSeekRelativeToFirst = 1
-	EvtSeekRelativeToLast = 2
-	EvtSeekRelativeToCurrent = 3
-	EvtSeekRelativeToBookmark = 4
-	EvtSeekOriginMask = 7
-	EvtSeekStrict = 65536
+	EvtSeekRelativeToFirst    EVT_SEEK_FLAGS = 1
+	EvtSeekRelativeToLast     EVT_SEEK_FLAGS = 2
+	EvtSeekRelativeToCurrent  EVT_SEEK_FLAGS = 3
+	EvtSeekRelativeToBookmark EVT_SEEK_FLAGS = 4
+	EvtSeekOriginMask         EVT_SEEK_FLAGS = 7
+	EvtSeekStrict             EVT_SEEK_FLAGS = 65536
 )
 
 type EVT_SUBSCRIBE_FLAGS int32
 
 const (
-	EvtSubscribeToFutureEvents = 1
-	EvtSubscribeStartAtOldestRecord = 2
-	EvtSubscribeStartAfterBookmark = 3
-	EvtSubscribeOriginMask = 3
-	EvtSubscribeTolerateQueryErrors = 4096
-	EvtSubscribeStrict = 65536
+	EvtSubscribeToFutureEvents      EVT_SUBSCRIBE_FLAGS = 1
+	EvtSubscribeStartAtOldestRecord EVT_SUBSCRIBE_FLAGS = 2
+	EvtSubscribeStartAfterBookmark  EVT_SUBSCRIBE_FLAGS = 3
+	EvtSubscribeOriginMask          EVT_SUBSCRIBE_FLAGS = 3
+	EvtSubscribeTolerateQueryErrors EVT_SUBSCRIBE_FLAGS = 4096
+	EvtSubscribeStrict              EVT_SUBSCRIBE_FLAGS = 65536
 )
 
 type EVT_SUBSCRIBE_NOTIFY_ACTION int32
 
 const (
-	EvtSubscribeActionError = 0
-	EvtSubscribeActionDeliver = 1
+	EvtSubscribeActionError   EVT_SUBSCRIBE_NOTIFY_ACTION = 0
+	EvtSubscribeActionDeliver EVT_SUBSCRIBE_NOTIFY_ACTION = 1
 )
 
 type EVT_SYSTEM_PROPERTY_ID int32
 
 const (
-	EvtSystemProviderName = 0
-	EvtSystemProviderGuid = 1
-	EvtSystemEventID = 2
-	EvtSystemQualifiers = 3
-	EvtSystemLevel = 4
-	EvtSystemTask = 5
-	EvtSystemOpcode = 6
-	EvtSystemKeywords = 7
-	EvtSystemTimeCreated = 8
-	EvtSystemEventRecordId = 9
-	EvtSystemActivityID = 10
-	EvtSystemRelatedActivityID = 11
-	EvtSystemProcessID = 12
-	EvtSystemThreadID = 13
-	EvtSystemChannel = 14
-	EvtSystemComputer = 15
-	EvtSystemUserID = 16
-	EvtSystemVersion = 17
-	EvtSystemPropertyIdEND = 18
+	EvtSystemProviderName      EVT_SYSTEM_PROPERTY_ID = 0
+	EvtSystemProviderGuid      EVT_SYSTEM_PROPERTY_ID = 1
+	EvtSystemEventID           EVT_SYSTEM_PROPERTY_ID = 2
+	EvtSystemQualifiers        EVT_SYSTEM_PROPERTY_ID = 3
+	EvtSystemLevel             EVT_SYSTEM_PROPERTY_ID = 4
+	EvtSystemTask              EVT_SYSTEM_PROPERTY_ID = 5
+	EvtSystemOpcode            EVT_SYSTEM_PROPERTY_ID = 6
+	EvtSystemKeywords          EVT_SYSTEM_PROPERTY_ID = 7
+	EvtSystemTimeCreated       EVT_SYSTEM_PROPERTY_ID = 8
+	EvtSystemEventRecordId     EVT_SYSTEM_PROPERTY_ID = 9
+	EvtSystemActivityID        EVT_SYSTEM_PROPERTY_ID = 10
+	EvtSystemRelatedActivityID EVT_SYSTEM_PROPERTY_ID = 11
+	EvtSystemProcessID         EVT_SYSTEM_PROPERTY_ID = 12
+	EvtSystemThreadID          EVT_SYSTEM_PROPERTY_ID = 13
+	EvtSystemChannel           EVT_SYSTEM_PROPERTY_ID = 14
+	EvtSystemComputer          EVT_SYSTEM_PROPERTY_ID = 15
+	EvtSystemUserID            EVT_SYSTEM_PROPERTY_ID = 16
+	EvtSystemVersion           EVT_SYSTEM_PROPERTY_ID = 17
+	EvtSystemPropertyIdEND     EVT_SYSTEM_PROPERTY_ID = 18
 )
 
 type EVT_RENDER_CONTEXT_FLAGS int32
 
 const (
-	EvtRenderContextValues = 0
-	EvtRenderContextSystem = 1
-	EvtRenderContextUser = 2
+	EvtRenderContextValues EVT_RENDER_CONTEXT_FLAGS = 0
+	EvtRenderContextSystem EVT_RENDER_CONTEXT_FLAGS = 1
+	EvtRenderContextUser   EVT_RENDER_CONTEXT_FLAGS = 2
 )
 
 type EVT_RENDER_FLAGS int32
 
 const (
-	EvtRenderEventValues = 0
-	EvtRenderEventXml = 1
-	EvtRenderBookmark = 2
+	EvtRenderEventValues EVT_RENDER_FLAGS = 0
+	EvtRenderEventXml    EVT_RENDER_FLAGS = 1
+	EvtRenderBookmark    EVT_RENDER_FLAGS = 2
 )
 
 type EVT_FORMAT_MESSAGE_FLAGS int32
 
 const (
-	EvtFormatMessageEvent = 1
-	EvtFormatMessageLevel = 2
-	EvtFormatMessageTask = 3
-	EvtFormatMessageOpcode = 4
-	EvtFormatMessageKeyword = 5
-	EvtFormatMessageChannel = 6
-	EvtFormatMessageProvider = 7
-	EvtFormatMessageId = 8
-	EvtFormatMessageXml = 9
+	EvtFormatMessageEvent    EVT_FORMAT_MESSAGE_FLAGS = 1
+	EvtFormatMessageLevel    EVT_FORMAT_MESSAGE_FLAGS = 2
+	EvtFormatMessageTask     EVT_FORMAT_MESSAGE_FLAGS = 3
+	EvtFormatMessageOpcode   EVT_FORMAT_MESSAGE_FLAGS = 4
+	EvtFormatMessageKeyword  EVT_FORMAT_MESSAGE_FLAGS = 5
+	EvtFormatMessageChannel  EVT_FORMAT_MESSAGE_FLAGS = 6
+	EvtFormatMessageProvider EVT_FORMAT_MESSAGE_FLAGS = 7
+	EvtFormatMessageId       EVT_FORMAT_MESSAGE_FLAGS = 8
+	EvtFormatMessageXml      EVT_FORMAT_MESSAGE_FLAGS = 9
 )
 
 type EVT_OPEN_LOG_FLAGS int32
 
 const (
-	EvtOpenChannelPath = 1
-	EvtOpenFilePath = 2
+	EvtOpenChannelPath EVT_OPEN_LOG_FLAGS = 1
+	EvtOpenFilePath    EVT_OPEN_LOG_FLAGS = 2
 )
 
 type EVT_LOG_PROPERTY_ID int32
 
 const (
-	EvtLogCreationTime = 0
-	EvtLogLastAccessTime = 1
-	EvtLogLastWriteTime = 2
-	EvtLogFileSize = 3
-	EvtLogAttributes = 4
-	EvtLogNumberOfLogRecords = 5
-	EvtLogOldestRecordNumber = 6
-	EvtLogFull = 7
+	EvtLogCreationTime       EVT_LOG_PROPERTY_ID = 0
+	EvtLogLastAccessTime     EVT_LOG_PROPERTY_ID = 1
+	EvtLogLastWriteTime      EVT_LOG_PROPERTY_ID = 2
+	EvtLogFileSize           EVT_LOG_PROPERTY_ID = 3
+	EvtLogAttributes         EVT_LOG_PROPERTY_ID = 4
+	EvtLogNumberOfLogRecords EVT_LOG_PROPERTY_ID = 5
+	EvtLogOldestRecordNumber EVT_LOG_PROPERTY_ID = 6
+	EvtLogFull               EVT_LOG_PROPERTY_ID = 7
 )
 
 type EVT_EXPORTLOG_FLAGS int32
 
 const (
-	EvtExportLogChannelPath = 1
-	EvtExportLogFilePath = 2
-	EvtExportLogTolerateQueryErrors = 4096
-	EvtExportLogOverwrite = 8192
+	EvtExportLogChannelPath         EVT_EXPORTLOG_FLAGS = 1
+	EvtExportLogFilePath            EVT_EXPORTLOG_FLAGS = 2
+	EvtExportLogTolerateQueryErrors EVT_EXPORTLOG_FLAGS = 4096
+	EvtExportLogOverwrite           EVT_EXPORTLOG_FLAGS = 8192
 )
 
 type EVT_CHANNEL_CONFIG_PROPERTY_ID int32
 
 const (
-	EvtChannelConfigEnabled = 0
-	EvtChannelConfigIsolation = 1
-	EvtChannelConfigType = 2
-	EvtChannelConfigOwningPublisher = 3
-	EvtChannelConfigClassicEventlog = 4
-	EvtChannelConfigAccess = 5
-	EvtChannelLoggingConfigRetention = 6
-	EvtChannelLoggingConfigAutoBackup = 7
-	EvtChannelLoggingConfigMaxSize = 8
-	EvtChannelLoggingConfigLogFilePath = 9
-	EvtChannelPublishingConfigLevel = 10
-	EvtChannelPublishingConfigKeywords = 11
-	EvtChannelPublishingConfigControlGuid = 12
-	EvtChannelPublishingConfigBufferSize = 13
-	EvtChannelPublishingConfigMinBuffers = 14
-	EvtChannelPublishingConfigMaxBuffers = 15
-	EvtChannelPublishingConfigLatency = 16
-	EvtChannelPublishingConfigClockType = 17
-	EvtChannelPublishingConfigSidType = 18
-	EvtChannelPublisherList = 19
-	EvtChannelPublishingConfigFileMax = 20
-	EvtChannelConfigPropertyIdEND = 21
+	EvtChannelConfigEnabled               EVT_CHANNEL_CONFIG_PROPERTY_ID = 0
+	EvtChannelConfigIsolation             EVT_CHANNEL_CONFIG_PROPERTY_ID = 1
+	EvtChannelConfigType                  EVT_CHANNEL_CONFIG_PROPERTY_ID = 2
+	EvtChannelConfigOwningPublisher       EVT_CHANNEL_CONFIG_PROPERTY_ID = 3
+	EvtChannelConfigClassicEventlog       EVT_CHANNEL_CONFIG_PROPERTY_ID = 4
+	EvtChannelConfigAccess                EVT_CHANNEL_CONFIG_PROPERTY_ID = 5
+	EvtChannelLoggingConfigRetention      EVT_CHANNEL_CONFIG_PROPERTY_ID = 6
+	EvtChannelLoggingConfigAutoBackup     EVT_CHANNEL_CONFIG_PROPERTY_ID = 7
+	EvtChannelLoggingConfigMaxSize        EVT_CHANNEL_CONFIG_PROPERTY_ID = 8
+	EvtChannelLoggingConfigLogFilePath    EVT_CHANNEL_CONFIG_PROPERTY_ID = 9
+	EvtChannelPublishingConfigLevel       EVT_CHANNEL_CONFIG_PROPERTY_ID = 10
+	EvtChannelPublishingConfigKeywords    EVT_CHANNEL_CONFIG_PROPERTY_ID = 11
+	EvtChannelPublishingConfigControlGuid EVT_CHANNEL_CONFIG_PROPERTY_ID = 12
+	EvtChannelPublishingConfigBufferSize  EVT_CHANNEL_CONFIG_PROPERTY_ID = 13
+	EvtChannelPublishingConfigMinBuffers  EVT_CHANNEL_CONFIG_PROPERTY_ID = 14
+	EvtChannelPublishingConfigMaxBuffers  EVT_CHANNEL_CONFIG_PROPERTY_ID = 15
+	EvtChannelPublishingConfigLatency     EVT_CHANNEL_CONFIG_PROPERTY_ID = 16
+	EvtChannelPublishingConfigClockType   EVT_CHANNEL_CONFIG_PROPERTY_ID = 17
+	EvtChannelPublishingConfigSidType     EVT_CHANNEL_CONFIG_PROPERTY_ID = 18
+	EvtChannelPublisherList               EVT_CHANNEL_CONFIG_PROPERTY_ID = 19
+	EvtChannelPublishingConfigFileMax     EVT_CHANNEL_CONFIG_PROPERTY_ID = 20
+	EvtChannelConfigPropertyIdEND         EVT_CHANNEL_CONFIG_PROPERTY_ID = 21
 )
 
 type EVT_CHANNEL_TYPE int32
 
 const (
-	EvtChannelTypeAdmin = 0
-	EvtChannelTypeOperational = 1
-	EvtChannelTypeAnalytic = 2
-	EvtChannelTypeDebug = 3
+	EvtChannelTypeAdmin       EVT_CHANNEL_TYPE = 0
+	EvtChannelTypeOperational EVT_CHANNEL_TYPE = 1
+	EvtChannelTypeAnalytic    EVT_CHANNEL_TYPE = 2
+	EvtChannelTypeDebug       EVT_CHANNEL_TYPE = 3
 )
 
 type EVT_CHANNEL_ISOLATION_TYPE int32
 
 const (
-	EvtChannelIsolationTypeApplication = 0
-	EvtChannelIsolationTypeSystem = 1
-	EvtChannelIsolationTypeCustom = 2
+	EvtChannelIsolationTypeApplication EVT_CHANNEL_ISOLATION_TYPE = 0
+	EvtChannelIsolationTypeSystem      EVT_CHANNEL_ISOLATION_TYPE = 1
+	EvtChannelIsolationTypeCustom      EVT_CHANNEL_ISOLATION_TYPE = 2
 )
 
 type EVT_CHANNEL_CLOCK_TYPE int32
 
 const (
-	EvtChannelClockTypeSystemTime = 0
-	EvtChannelClockTypeQPC = 1
+	EvtChannelClockTypeSystemTime EVT_CHANNEL_CLOCK_TYPE = 0
+	EvtChannelClockTypeQPC        EVT_CHANNEL_CLOCK_TYPE = 1
 )
 
 type EVT_CHANNEL_SID_TYPE int32
 
 const (
-	EvtChannelSidTypeNone = 0
-	EvtChannelSidTypePublishing = 1
+	EvtChannelSidTypeNone       EVT_CHANNEL_SID_TYPE = 0
+	EvtChannelSidTypePublishing EVT_CHANNEL_SID_TYPE = 1
 )
 
 type EVT_CHANNEL_REFERENCE_FLAGS int32
 
 const (
-	EvtChannelReferenceImported = 1
+	EvtChannelReferenceImported EVT_CHANNEL_REFERENCE_FLAGS = 1
 )
 
 type EVT_PUBLISHER_METADATA_PROPERTY_ID int32
 
 const (
-	EvtPublisherMetadataPublisherGuid = 0
-	EvtPublisherMetadataResourceFilePath = 1
-	EvtPublisherMetadataParameterFilePath = 2
-	EvtPublisherMetadataMessageFilePath = 3
-	EvtPublisherMetadataHelpLink = 4
-	EvtPublisherMetadataPublisherMessageID = 5
-	EvtPublisherMetadataChannelReferences = 6
-	EvtPublisherMetadataChannelReferencePath = 7
-	EvtPublisherMetadataChannelReferenceIndex = 8
-	EvtPublisherMetadataChannelReferenceID = 9
-	EvtPublisherMetadataChannelReferenceFlags = 10
-	EvtPublisherMetadataChannelReferenceMessageID = 11
-	EvtPublisherMetadataLevels = 12
-	EvtPublisherMetadataLevelName = 13
-	EvtPublisherMetadataLevelValue = 14
-	EvtPublisherMetadataLevelMessageID = 15
-	EvtPublisherMetadataTasks = 16
-	EvtPublisherMetadataTaskName = 17
-	EvtPublisherMetadataTaskEventGuid = 18
-	EvtPublisherMetadataTaskValue = 19
-	EvtPublisherMetadataTaskMessageID = 20
-	EvtPublisherMetadataOpcodes = 21
-	EvtPublisherMetadataOpcodeName = 22
-	EvtPublisherMetadataOpcodeValue = 23
-	EvtPublisherMetadataOpcodeMessageID = 24
-	EvtPublisherMetadataKeywords = 25
-	EvtPublisherMetadataKeywordName = 26
-	EvtPublisherMetadataKeywordValue = 27
-	EvtPublisherMetadataKeywordMessageID = 28
-	EvtPublisherMetadataPropertyIdEND = 29
+	EvtPublisherMetadataPublisherGuid             EVT_PUBLISHER_METADATA_PROPERTY_ID = 0
+	EvtPublisherMetadataResourceFilePath          EVT_PUBLISHER_METADATA_PROPERTY_ID = 1
+	EvtPublisherMetadataParameterFilePath         EVT_PUBLISHER_METADATA_PROPERTY_ID = 2
+	EvtPublisherMetadataMessageFilePath           EVT_PUBLISHER_METADATA_PROPERTY_ID = 3
+	EvtPublisherMetadataHelpLink                  EVT_PUBLISHER_METADATA_PROPERTY_ID = 4
+	EvtPublisherMetadataPublisherMessageID        EVT_PUBLISHER_METADATA_PROPERTY_ID = 5
+	EvtPublisherMetadataChannelReferences         EVT_PUBLISHER_METADATA_PROPERTY_ID = 6
+	EvtPublisherMetadataChannelReferencePath      EVT_PUBLISHER_METADATA_PROPERTY_ID = 7
+	EvtPublisherMetadataChannelReferenceIndex     EVT_PUBLISHER_METADATA_PROPERTY_ID = 8
+	EvtPublisherMetadataChannelReferenceID        EVT_PUBLISHER_METADATA_PROPERTY_ID = 9
+	EvtPublisherMetadataChannelReferenceFlags     EVT_PUBLISHER_METADATA_PROPERTY_ID = 10
+	EvtPublisherMetadataChannelReferenceMessageID EVT_PUBLISHER_METADATA_PROPERTY_ID = 11
+	EvtPublisherMetadataLevels                    EVT_PUBLISHER_METADATA_PROPERTY_ID = 12
+	EvtPublisherMetadataLevelName                 EVT_PUBLISHER_METADATA_PROPERTY_ID = 13
+	EvtPublisherMetadataLevelValue                EVT_PUBLISHER_METADATA_PROPERTY_ID = 14
+	EvtPublisherMetadataLevelMessageID            EVT_PUBLISHER_METADATA_PROPERTY_ID = 15
+	EvtPublisherMetadataTasks                     EVT_PUBLISHER_METADATA_PROPERTY_ID = 16
+	EvtPublisherMetadataTaskName                  EVT_PUBLISHER_METADATA_PROPERTY_ID = 17
+	EvtPublisherMetadataTaskEventGuid             EVT_PUBLISHER_METADATA_PROPERTY_ID = 18
+	EvtPublisherMetadataTaskValue                 EVT_PUBLISHER_METADATA_PROPERTY_ID = 19
+	EvtPublisherMetadataTaskMessageID             EVT_PUBLISHER_METADATA_PROPERTY_ID = 20
+	EvtPublisherMetadataOpcodes                   EVT_PUBLISHER_METADATA_PROPERTY_ID = 21
+	EvtPublisherMetadataOpcodeName                EVT_PUBLISHER_METADATA_PROPERTY_ID = 22
+	EvtPublisherMetadataOpcodeValue               EVT_PUBLISHER_METADATA_PROPERTY_ID = 23
+	EvtPublisherMetadataOpcodeMessageID           EVT_PUBLISHER_METADATA_PROPERTY_ID = 24
+	EvtPublisherMetadataKeywords                  EVT_PUBLISHER_METADATA_PROPERTY_ID = 25
+	EvtPublisherMetadataKeywordName               EVT_PUBLISHER_METADATA_PROPERTY_ID = 26
+	EvtPublisherMetadataKeywordValue              EVT_PUBLISHER_METADATA_PROPERTY_ID = 27
+	EvtPublisherMetadataKeywordMessageID          EVT_PUBLISHER_METADATA_PROPERTY_ID = 28
+	EvtPublisherMetadataPropertyIdEND             EVT_PUBLISHER_METADATA_PROPERTY_ID = 29
 )
 
 type EVT_EVENT_METADATA_PROPERTY_ID int32
 
 const (
-	EventMetadataEventID = 0
-	EventMetadataEventVersion = 1
-	EventMetadataEventChannel = 2
-	EventMetadataEventLevel = 3
-	EventMetadataEventOpcode = 4
-	EventMetadataEventTask = 5
-	EventMetadataEventKeyword = 6
-	EventMetadataEventMessageID = 7
-	EventMetadataEventTemplate = 8
-	EvtEventMetadataPropertyIdEND = 9
+	EventMetadataEventID          EVT_EVENT_METADATA_PROPERTY_ID = 0
+	EventMetadataEventVersion     EVT_EVENT_METADATA_PROPERTY_ID = 1
+	EventMetadataEventChannel     EVT_EVENT_METADATA_PROPERTY_ID = 2
+	EventMetadataEventLevel       EVT_EVENT_METADATA_PROPERTY_ID = 3
+	EventMetadataEventOpcode      EVT_EVENT_METADATA_PROPERTY_ID = 4
+	EventMetadataEventTask        EVT_EVENT_METADATA_PROPERTY_ID = 5
+	EventMetadataEventKeyword     EVT_EVENT_METADATA_PROPERTY_ID = 6
+	EventMetadataEventMessageID   EVT_EVENT_METADATA_PROPERTY_ID = 7
+	EventMetadataEventTemplate    EVT_EVENT_METADATA_PROPERTY_ID = 8
+	EvtEventMetadataPropertyIdEND EVT_EVENT_METADATA_PROPERTY_ID = 9
 )
 
 type EVT_QUERY_PROPERTY_ID int32
 
 const (
-	EvtQueryNames = 0
-	EvtQueryStatuses = 1
-	EvtQueryPropertyIdEND = 2
+	EvtQueryNames         EVT_QUERY_PROPERTY_ID = 0
+	EvtQueryStatuses      EVT_QUERY_PROPERTY_ID = 1
+	EvtQueryPropertyIdEND EVT_QUERY_PROPERTY_ID = 2
 )
 
 type EVT_EVENT_PROPERTY_ID int32
 
 const (
-	EvtEventQueryIDs = 0
-	EvtEventPath = 1
-	EvtEventPropertyIdEND = 2
+	EvtEventQueryIDs      EVT_EVENT_PROPERTY_ID = 0
+	EvtEventPath          EVT_EVENT_PROPERTY_ID = 1
+	EvtEventPropertyIdEND EVT_EVENT_PROPERTY_ID = 2
 )
-

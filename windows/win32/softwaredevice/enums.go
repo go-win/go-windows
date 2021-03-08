@@ -7,18 +7,17 @@ package softwaredevice
 type SW_DEVICE_CAPABILITIES int32
 
 const (
-	SWDeviceCapabilitiesNone = 0
-	SWDeviceCapabilitiesRemovable = 1
-	SWDeviceCapabilitiesSilentInstall = 2
-	SWDeviceCapabilitiesNoDisplayInUI = 4
-	SWDeviceCapabilitiesDriverRequired = 8
+	SWDeviceCapabilitiesNone           SW_DEVICE_CAPABILITIES = 0
+	SWDeviceCapabilitiesRemovable      SW_DEVICE_CAPABILITIES = 1
+	SWDeviceCapabilitiesSilentInstall  SW_DEVICE_CAPABILITIES = 2
+	SWDeviceCapabilitiesNoDisplayInUI  SW_DEVICE_CAPABILITIES = 4
+	SWDeviceCapabilitiesDriverRequired SW_DEVICE_CAPABILITIES = 8
 )
 
 type SW_DEVICE_LIFETIME int32
 
 const (
-	SWDeviceLifetimeHandle = 0
-	SWDeviceLifetimeParentPresent = 1
-	SWDeviceLifetimeMax = 2
+	SWDeviceLifetimeHandle        SW_DEVICE_LIFETIME = 0
+	SWDeviceLifetimeParentPresent SW_DEVICE_LIFETIME = 1
+	SWDeviceLifetimeMax           SW_DEVICE_LIFETIME = 2
 )
-

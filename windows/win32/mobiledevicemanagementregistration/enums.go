@@ -7,7 +7,6 @@ package mobiledevicemanagementregistration
 type REGISTRATION_INFORMATION_CLASS int32
 
 const (
-	DeviceRegistrationBasicInfo = 1
-	MaxDeviceInfoClass = 2
+	DeviceRegistrationBasicInfo REGISTRATION_INFORMATION_CLASS = 1
+	MaxDeviceInfoClass          REGISTRATION_INFORMATION_CLASS = 2
 )
-

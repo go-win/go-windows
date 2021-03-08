@@ -7,20 +7,19 @@ package legacywindowsenvironmentfeatures
 type _ColumnSortOrder int32
 
 const (
-	SortOrder_Ascending = 0
-	SortOrder_Descending = 1
+	SortOrder_Ascending  _ColumnSortOrder = 0
+	SortOrder_Descending _ColumnSortOrder = 1
 )
 
 type _reconcilef int32
 
 const (
-	RECONCILEF_MAYBOTHERUSER = 1
-	RECONCILEF_FEEDBACKWINDOWVALID = 2
-	RECONCILEF_NORESIDUESOK = 4
-	RECONCILEF_OMITSELFRESIDUE = 8
-	RECONCILEF_RESUMERECONCILIATION = 16
-	RECONCILEF_YOUMAYDOTHEUPDATES = 32
-	RECONCILEF_ONLYYOUWERECHANGED = 64
-	ALL_RECONCILE_FLAGS = 127
+	RECONCILEF_MAYBOTHERUSER        _reconcilef = 1
+	RECONCILEF_FEEDBACKWINDOWVALID  _reconcilef = 2
+	RECONCILEF_NORESIDUESOK         _reconcilef = 4
+	RECONCILEF_OMITSELFRESIDUE      _reconcilef = 8
+	RECONCILEF_RESUMERECONCILIATION _reconcilef = 16
+	RECONCILEF_YOUMAYDOTHEUPDATES   _reconcilef = 32
+	RECONCILEF_ONLYYOUWERECHANGED   _reconcilef = 64
+	ALL_RECONCILE_FLAGS             _reconcilef = 127
 )
-

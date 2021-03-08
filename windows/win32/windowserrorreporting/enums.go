@@ -7,115 +7,114 @@ package windowserrorreporting
 type WER_REPORT_UI int32
 
 const (
-	WerUIAdditionalDataDlgHeader = 1
-	WerUIIconFilePath = 2
-	WerUIConsentDlgHeader = 3
-	WerUIConsentDlgBody = 4
-	WerUIOnlineSolutionCheckText = 5
-	WerUIOfflineSolutionCheckText = 6
-	WerUICloseText = 7
-	WerUICloseDlgHeader = 8
-	WerUICloseDlgBody = 9
-	WerUICloseDlgButtonText = 10
-	WerUIMax = 11
+	WerUIAdditionalDataDlgHeader  WER_REPORT_UI = 1
+	WerUIIconFilePath             WER_REPORT_UI = 2
+	WerUIConsentDlgHeader         WER_REPORT_UI = 3
+	WerUIConsentDlgBody           WER_REPORT_UI = 4
+	WerUIOnlineSolutionCheckText  WER_REPORT_UI = 5
+	WerUIOfflineSolutionCheckText WER_REPORT_UI = 6
+	WerUICloseText                WER_REPORT_UI = 7
+	WerUICloseDlgHeader           WER_REPORT_UI = 8
+	WerUICloseDlgBody             WER_REPORT_UI = 9
+	WerUICloseDlgButtonText       WER_REPORT_UI = 10
+	WerUIMax                      WER_REPORT_UI = 11
 )
 
 type WER_REGISTER_FILE_TYPE int32
 
 const (
-	WerRegFileTypeUserDocument = 1
-	WerRegFileTypeOther = 2
-	WerRegFileTypeMax = 3
+	WerRegFileTypeUserDocument WER_REGISTER_FILE_TYPE = 1
+	WerRegFileTypeOther        WER_REGISTER_FILE_TYPE = 2
+	WerRegFileTypeMax          WER_REGISTER_FILE_TYPE = 3
 )
 
 type WER_FILE_TYPE int32
 
 const (
-	WerFileTypeMicrodump = 1
-	WerFileTypeMinidump = 2
-	WerFileTypeHeapdump = 3
-	WerFileTypeUserDocument = 4
-	WerFileTypeOther = 5
-	WerFileTypeTriagedump = 6
-	WerFileTypeCustomDump = 7
-	WerFileTypeAuxiliaryDump = 8
-	WerFileTypeEtlTrace = 9
-	WerFileTypeMax = 10
+	WerFileTypeMicrodump     WER_FILE_TYPE = 1
+	WerFileTypeMinidump      WER_FILE_TYPE = 2
+	WerFileTypeHeapdump      WER_FILE_TYPE = 3
+	WerFileTypeUserDocument  WER_FILE_TYPE = 4
+	WerFileTypeOther         WER_FILE_TYPE = 5
+	WerFileTypeTriagedump    WER_FILE_TYPE = 6
+	WerFileTypeCustomDump    WER_FILE_TYPE = 7
+	WerFileTypeAuxiliaryDump WER_FILE_TYPE = 8
+	WerFileTypeEtlTrace      WER_FILE_TYPE = 9
+	WerFileTypeMax           WER_FILE_TYPE = 10
 )
 
 type WER_SUBMIT_RESULT int32
 
 const (
-	WerReportQueued = 1
-	WerReportUploaded = 2
-	WerReportDebug = 3
-	WerReportFailed = 4
-	WerDisabled = 5
-	WerReportCancelled = 6
-	WerDisabledQueue = 7
-	WerReportAsync = 8
-	WerCustomAction = 9
-	WerThrottled = 10
-	WerReportUploadedCab = 11
-	WerStorageLocationNotFound = 12
-	WerSubmitResultMax = 13
+	WerReportQueued            WER_SUBMIT_RESULT = 1
+	WerReportUploaded          WER_SUBMIT_RESULT = 2
+	WerReportDebug             WER_SUBMIT_RESULT = 3
+	WerReportFailed            WER_SUBMIT_RESULT = 4
+	WerDisabled                WER_SUBMIT_RESULT = 5
+	WerReportCancelled         WER_SUBMIT_RESULT = 6
+	WerDisabledQueue           WER_SUBMIT_RESULT = 7
+	WerReportAsync             WER_SUBMIT_RESULT = 8
+	WerCustomAction            WER_SUBMIT_RESULT = 9
+	WerThrottled               WER_SUBMIT_RESULT = 10
+	WerReportUploadedCab       WER_SUBMIT_RESULT = 11
+	WerStorageLocationNotFound WER_SUBMIT_RESULT = 12
+	WerSubmitResultMax         WER_SUBMIT_RESULT = 13
 )
 
 type WER_REPORT_TYPE int32
 
 const (
-	WerReportNonCritical = 0
-	WerReportCritical = 1
-	WerReportApplicationCrash = 2
-	WerReportApplicationHang = 3
-	WerReportKernel = 4
-	WerReportInvalid = 5
+	WerReportNonCritical      WER_REPORT_TYPE = 0
+	WerReportCritical         WER_REPORT_TYPE = 1
+	WerReportApplicationCrash WER_REPORT_TYPE = 2
+	WerReportApplicationHang  WER_REPORT_TYPE = 3
+	WerReportKernel           WER_REPORT_TYPE = 4
+	WerReportInvalid          WER_REPORT_TYPE = 5
 )
 
 type WER_CONSENT int32
 
 const (
-	WerConsentNotAsked = 1
-	WerConsentApproved = 2
-	WerConsentDenied = 3
-	WerConsentAlwaysPrompt = 4
-	WerConsentMax = 5
+	WerConsentNotAsked     WER_CONSENT = 1
+	WerConsentApproved     WER_CONSENT = 2
+	WerConsentDenied       WER_CONSENT = 3
+	WerConsentAlwaysPrompt WER_CONSENT = 4
+	WerConsentMax          WER_CONSENT = 5
 )
 
 type WER_DUMP_TYPE int32
 
 const (
-	WerDumpTypeNone = 0
-	WerDumpTypeMicroDump = 1
-	WerDumpTypeMiniDump = 2
-	WerDumpTypeHeapDump = 3
-	WerDumpTypeTriageDump = 4
-	WerDumpTypeMax = 5
+	WerDumpTypeNone       WER_DUMP_TYPE = 0
+	WerDumpTypeMicroDump  WER_DUMP_TYPE = 1
+	WerDumpTypeMiniDump   WER_DUMP_TYPE = 2
+	WerDumpTypeHeapDump   WER_DUMP_TYPE = 3
+	WerDumpTypeTriageDump WER_DUMP_TYPE = 4
+	WerDumpTypeMax        WER_DUMP_TYPE = 5
 )
 
 type REPORT_STORE_TYPES int32
 
 const (
-	E_STORE_USER_ARCHIVE = 0
-	E_STORE_USER_QUEUE = 1
-	E_STORE_MACHINE_ARCHIVE = 2
-	E_STORE_MACHINE_QUEUE = 3
-	E_STORE_INVALID = 4
+	E_STORE_USER_ARCHIVE    REPORT_STORE_TYPES = 0
+	E_STORE_USER_QUEUE      REPORT_STORE_TYPES = 1
+	E_STORE_MACHINE_ARCHIVE REPORT_STORE_TYPES = 2
+	E_STORE_MACHINE_QUEUE   REPORT_STORE_TYPES = 3
+	E_STORE_INVALID         REPORT_STORE_TYPES = 4
 )
 
 type EFaultRepRetVal int32
 
 const (
-	frrvOk = 0
-	frrvOkManifest = 1
-	frrvOkQueued = 2
-	frrvErr = 3
-	frrvErrNoDW = 4
-	frrvErrTimeout = 5
-	frrvLaunchDebugger = 6
-	frrvOkHeadless = 7
-	frrvErrAnotherInstance = 8
-	frrvErrNoMemory = 9
-	frrvErrDoubleFault = 10
+	frrvOk                 EFaultRepRetVal = 0
+	frrvOkManifest         EFaultRepRetVal = 1
+	frrvOkQueued           EFaultRepRetVal = 2
+	frrvErr                EFaultRepRetVal = 3
+	frrvErrNoDW            EFaultRepRetVal = 4
+	frrvErrTimeout         EFaultRepRetVal = 5
+	frrvLaunchDebugger     EFaultRepRetVal = 6
+	frrvOkHeadless         EFaultRepRetVal = 7
+	frrvErrAnotherInstance EFaultRepRetVal = 8
+	frrvErrNoMemory        EFaultRepRetVal = 9
+	frrvErrDoubleFault     EFaultRepRetVal = 10
 )
-

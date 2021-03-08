@@ -7,2826 +7,2825 @@ package security
 type CREDUI_FLAGS int32
 
 const (
-	CREDUI_FLAGS_ALWAYS_SHOW_UI = 128
-	CREDUI_FLAGS_COMPLETE_USERNAME = 2048
-	CREDUI_FLAGS_DO_NOT_PERSIST = 2
-	CREDUI_FLAGS_EXCLUDE_CERTIFICATES = 8
-	CREDUI_FLAGS_EXPECT_CONFIRMATION = 131072
-	CREDUI_FLAGS_GENERIC_CREDENTIALS = 262144
-	CREDUI_FLAGS_INCORRECT_PASSWORD = 1
-	CREDUI_FLAGS_KEEP_USERNAME = 1048576
-	CREDUI_FLAGS_PASSWORD_ONLY_OK = 512
-	CREDUI_FLAGS_PERSIST = 4096
-	CREDUI_FLAGS_REQUEST_ADMINISTRATOR = 4
-	CREDUI_FLAGS_REQUIRE_CERTIFICATE = 16
-	CREDUI_FLAGS_REQUIRE_SMARTCARD = 256
-	CREDUI_FLAGS_SERVER_CREDENTIAL = 16384
-	CREDUI_FLAGS_SHOW_SAVE_CHECK_BOX = 64
-	CREDUI_FLAGS_USERNAME_TARGET_CREDENTIALS = 524288
-	CREDUI_FLAGS_VALIDATE_USERNAME = 1024
+	CREDUI_FLAGS_ALWAYS_SHOW_UI              CREDUI_FLAGS = 128
+	CREDUI_FLAGS_COMPLETE_USERNAME           CREDUI_FLAGS = 2048
+	CREDUI_FLAGS_DO_NOT_PERSIST              CREDUI_FLAGS = 2
+	CREDUI_FLAGS_EXCLUDE_CERTIFICATES        CREDUI_FLAGS = 8
+	CREDUI_FLAGS_EXPECT_CONFIRMATION         CREDUI_FLAGS = 131072
+	CREDUI_FLAGS_GENERIC_CREDENTIALS         CREDUI_FLAGS = 262144
+	CREDUI_FLAGS_INCORRECT_PASSWORD          CREDUI_FLAGS = 1
+	CREDUI_FLAGS_KEEP_USERNAME               CREDUI_FLAGS = 1048576
+	CREDUI_FLAGS_PASSWORD_ONLY_OK            CREDUI_FLAGS = 512
+	CREDUI_FLAGS_PERSIST                     CREDUI_FLAGS = 4096
+	CREDUI_FLAGS_REQUEST_ADMINISTRATOR       CREDUI_FLAGS = 4
+	CREDUI_FLAGS_REQUIRE_CERTIFICATE         CREDUI_FLAGS = 16
+	CREDUI_FLAGS_REQUIRE_SMARTCARD           CREDUI_FLAGS = 256
+	CREDUI_FLAGS_SERVER_CREDENTIAL           CREDUI_FLAGS = 16384
+	CREDUI_FLAGS_SHOW_SAVE_CHECK_BOX         CREDUI_FLAGS = 64
+	CREDUI_FLAGS_USERNAME_TARGET_CREDENTIALS CREDUI_FLAGS = 524288
+	CREDUI_FLAGS_VALIDATE_USERNAME           CREDUI_FLAGS = 1024
 )
 
 type CREDUIWIN int32
 
 const (
-	CREDUIWIN_GENERIC = 1
-	CREDUIWIN_CHECKBOX = 2
-	CREDUIWIN_AUTHPACKAGE_ONLY = 16
-	CREDUIWIN_IN_CRED_ONLY = 32
-	CREDUIWIN_ENUMERATE_ADMINS = 256
-	CREDUIWIN_ENUMERATE_CURRENT_USER = 512
-	CREDUIWIN_SECURE_PROMPT = 4096
-	CREDUIWIN_PREPROMPTING = 8192
-	CREDUIWIN_PACK_32_WOW = 268435456
+	CREDUIWIN_GENERIC                CREDUIWIN = 1
+	CREDUIWIN_CHECKBOX               CREDUIWIN = 2
+	CREDUIWIN_AUTHPACKAGE_ONLY       CREDUIWIN = 16
+	CREDUIWIN_IN_CRED_ONLY           CREDUIWIN = 32
+	CREDUIWIN_ENUMERATE_ADMINS       CREDUIWIN = 256
+	CREDUIWIN_ENUMERATE_CURRENT_USER CREDUIWIN = 512
+	CREDUIWIN_SECURE_PROMPT          CREDUIWIN = 4096
+	CREDUIWIN_PREPROMPTING           CREDUIWIN = 8192
+	CREDUIWIN_PACK_32_WOW            CREDUIWIN = 268435456
 )
 
 type MSA_INFO_LEVEL int32
 
 const (
-	MsaInfoLevel0 = 0
-	MsaInfoLevelMax = 1
+	MsaInfoLevel0   MSA_INFO_LEVEL = 0
+	MsaInfoLevelMax MSA_INFO_LEVEL = 1
 )
 
 type MSA_INFO_STATE int32
 
 const (
-	MsaInfoNotExist = 1
-	MsaInfoNotService = 2
-	MsaInfoCannotInstall = 3
-	MsaInfoCanInstall = 4
-	MsaInfoInstalled = 5
+	MsaInfoNotExist      MSA_INFO_STATE = 1
+	MsaInfoNotService    MSA_INFO_STATE = 2
+	MsaInfoCannotInstall MSA_INFO_STATE = 3
+	MsaInfoCanInstall    MSA_INFO_STATE = 4
+	MsaInfoInstalled     MSA_INFO_STATE = 5
 )
 
 type SID_NAME_USE int32
 
 const (
-	SidTypeUser = 1
-	SidTypeGroup = 2
-	SidTypeDomain = 3
-	SidTypeAlias = 4
-	SidTypeWellKnownGroup = 5
-	SidTypeDeletedAccount = 6
-	SidTypeInvalid = 7
-	SidTypeUnknown = 8
-	SidTypeComputer = 9
-	SidTypeLabel = 10
-	SidTypeLogonSession = 11
+	SidTypeUser           SID_NAME_USE = 1
+	SidTypeGroup          SID_NAME_USE = 2
+	SidTypeDomain         SID_NAME_USE = 3
+	SidTypeAlias          SID_NAME_USE = 4
+	SidTypeWellKnownGroup SID_NAME_USE = 5
+	SidTypeDeletedAccount SID_NAME_USE = 6
+	SidTypeInvalid        SID_NAME_USE = 7
+	SidTypeUnknown        SID_NAME_USE = 8
+	SidTypeComputer       SID_NAME_USE = 9
+	SidTypeLabel          SID_NAME_USE = 10
+	SidTypeLogonSession   SID_NAME_USE = 11
 )
 
 type WELL_KNOWN_SID_TYPE int32
 
 const (
-	WinNullSid = 0
-	WinWorldSid = 1
-	WinLocalSid = 2
-	WinCreatorOwnerSid = 3
-	WinCreatorGroupSid = 4
-	WinCreatorOwnerServerSid = 5
-	WinCreatorGroupServerSid = 6
-	WinNtAuthoritySid = 7
-	WinDialupSid = 8
-	WinNetworkSid = 9
-	WinBatchSid = 10
-	WinInteractiveSid = 11
-	WinServiceSid = 12
-	WinAnonymousSid = 13
-	WinProxySid = 14
-	WinEnterpriseControllersSid = 15
-	WinSelfSid = 16
-	WinAuthenticatedUserSid = 17
-	WinRestrictedCodeSid = 18
-	WinTerminalServerSid = 19
-	WinRemoteLogonIdSid = 20
-	WinLogonIdsSid = 21
-	WinLocalSystemSid = 22
-	WinLocalServiceSid = 23
-	WinNetworkServiceSid = 24
-	WinBuiltinDomainSid = 25
-	WinBuiltinAdministratorsSid = 26
-	WinBuiltinUsersSid = 27
-	WinBuiltinGuestsSid = 28
-	WinBuiltinPowerUsersSid = 29
-	WinBuiltinAccountOperatorsSid = 30
-	WinBuiltinSystemOperatorsSid = 31
-	WinBuiltinPrintOperatorsSid = 32
-	WinBuiltinBackupOperatorsSid = 33
-	WinBuiltinReplicatorSid = 34
-	WinBuiltinPreWindows2000CompatibleAccessSid = 35
-	WinBuiltinRemoteDesktopUsersSid = 36
-	WinBuiltinNetworkConfigurationOperatorsSid = 37
-	WinAccountAdministratorSid = 38
-	WinAccountGuestSid = 39
-	WinAccountKrbtgtSid = 40
-	WinAccountDomainAdminsSid = 41
-	WinAccountDomainUsersSid = 42
-	WinAccountDomainGuestsSid = 43
-	WinAccountComputersSid = 44
-	WinAccountControllersSid = 45
-	WinAccountCertAdminsSid = 46
-	WinAccountSchemaAdminsSid = 47
-	WinAccountEnterpriseAdminsSid = 48
-	WinAccountPolicyAdminsSid = 49
-	WinAccountRasAndIasServersSid = 50
-	WinNTLMAuthenticationSid = 51
-	WinDigestAuthenticationSid = 52
-	WinSChannelAuthenticationSid = 53
-	WinThisOrganizationSid = 54
-	WinOtherOrganizationSid = 55
-	WinBuiltinIncomingForestTrustBuildersSid = 56
-	WinBuiltinPerfMonitoringUsersSid = 57
-	WinBuiltinPerfLoggingUsersSid = 58
-	WinBuiltinAuthorizationAccessSid = 59
-	WinBuiltinTerminalServerLicenseServersSid = 60
-	WinBuiltinDCOMUsersSid = 61
-	WinBuiltinIUsersSid = 62
-	WinIUserSid = 63
-	WinBuiltinCryptoOperatorsSid = 64
-	WinUntrustedLabelSid = 65
-	WinLowLabelSid = 66
-	WinMediumLabelSid = 67
-	WinHighLabelSid = 68
-	WinSystemLabelSid = 69
-	WinWriteRestrictedCodeSid = 70
-	WinCreatorOwnerRightsSid = 71
-	WinCacheablePrincipalsGroupSid = 72
-	WinNonCacheablePrincipalsGroupSid = 73
-	WinEnterpriseReadonlyControllersSid = 74
-	WinAccountReadonlyControllersSid = 75
-	WinBuiltinEventLogReadersGroup = 76
-	WinNewEnterpriseReadonlyControllersSid = 77
-	WinBuiltinCertSvcDComAccessGroup = 78
-	WinMediumPlusLabelSid = 79
-	WinLocalLogonSid = 80
-	WinConsoleLogonSid = 81
-	WinThisOrganizationCertificateSid = 82
-	WinApplicationPackageAuthoritySid = 83
-	WinBuiltinAnyPackageSid = 84
-	WinCapabilityInternetClientSid = 85
-	WinCapabilityInternetClientServerSid = 86
-	WinCapabilityPrivateNetworkClientServerSid = 87
-	WinCapabilityPicturesLibrarySid = 88
-	WinCapabilityVideosLibrarySid = 89
-	WinCapabilityMusicLibrarySid = 90
-	WinCapabilityDocumentsLibrarySid = 91
-	WinCapabilitySharedUserCertificatesSid = 92
-	WinCapabilityEnterpriseAuthenticationSid = 93
-	WinCapabilityRemovableStorageSid = 94
-	WinBuiltinRDSRemoteAccessServersSid = 95
-	WinBuiltinRDSEndpointServersSid = 96
-	WinBuiltinRDSManagementServersSid = 97
-	WinUserModeDriversSid = 98
-	WinBuiltinHyperVAdminsSid = 99
-	WinAccountCloneableControllersSid = 100
-	WinBuiltinAccessControlAssistanceOperatorsSid = 101
-	WinBuiltinRemoteManagementUsersSid = 102
-	WinAuthenticationAuthorityAssertedSid = 103
-	WinAuthenticationServiceAssertedSid = 104
-	WinLocalAccountSid = 105
-	WinLocalAccountAndAdministratorSid = 106
-	WinAccountProtectedUsersSid = 107
-	WinCapabilityAppointmentsSid = 108
-	WinCapabilityContactsSid = 109
-	WinAccountDefaultSystemManagedSid = 110
-	WinBuiltinDefaultSystemManagedGroupSid = 111
-	WinBuiltinStorageReplicaAdminsSid = 112
-	WinAccountKeyAdminsSid = 113
-	WinAccountEnterpriseKeyAdminsSid = 114
-	WinAuthenticationKeyTrustSid = 115
-	WinAuthenticationKeyPropertyMFASid = 116
-	WinAuthenticationKeyPropertyAttestationSid = 117
-	WinAuthenticationFreshKeyAuthSid = 118
-	WinBuiltinDeviceOwnersSid = 119
+	WinNullSid                                    WELL_KNOWN_SID_TYPE = 0
+	WinWorldSid                                   WELL_KNOWN_SID_TYPE = 1
+	WinLocalSid                                   WELL_KNOWN_SID_TYPE = 2
+	WinCreatorOwnerSid                            WELL_KNOWN_SID_TYPE = 3
+	WinCreatorGroupSid                            WELL_KNOWN_SID_TYPE = 4
+	WinCreatorOwnerServerSid                      WELL_KNOWN_SID_TYPE = 5
+	WinCreatorGroupServerSid                      WELL_KNOWN_SID_TYPE = 6
+	WinNtAuthoritySid                             WELL_KNOWN_SID_TYPE = 7
+	WinDialupSid                                  WELL_KNOWN_SID_TYPE = 8
+	WinNetworkSid                                 WELL_KNOWN_SID_TYPE = 9
+	WinBatchSid                                   WELL_KNOWN_SID_TYPE = 10
+	WinInteractiveSid                             WELL_KNOWN_SID_TYPE = 11
+	WinServiceSid                                 WELL_KNOWN_SID_TYPE = 12
+	WinAnonymousSid                               WELL_KNOWN_SID_TYPE = 13
+	WinProxySid                                   WELL_KNOWN_SID_TYPE = 14
+	WinEnterpriseControllersSid                   WELL_KNOWN_SID_TYPE = 15
+	WinSelfSid                                    WELL_KNOWN_SID_TYPE = 16
+	WinAuthenticatedUserSid                       WELL_KNOWN_SID_TYPE = 17
+	WinRestrictedCodeSid                          WELL_KNOWN_SID_TYPE = 18
+	WinTerminalServerSid                          WELL_KNOWN_SID_TYPE = 19
+	WinRemoteLogonIdSid                           WELL_KNOWN_SID_TYPE = 20
+	WinLogonIdsSid                                WELL_KNOWN_SID_TYPE = 21
+	WinLocalSystemSid                             WELL_KNOWN_SID_TYPE = 22
+	WinLocalServiceSid                            WELL_KNOWN_SID_TYPE = 23
+	WinNetworkServiceSid                          WELL_KNOWN_SID_TYPE = 24
+	WinBuiltinDomainSid                           WELL_KNOWN_SID_TYPE = 25
+	WinBuiltinAdministratorsSid                   WELL_KNOWN_SID_TYPE = 26
+	WinBuiltinUsersSid                            WELL_KNOWN_SID_TYPE = 27
+	WinBuiltinGuestsSid                           WELL_KNOWN_SID_TYPE = 28
+	WinBuiltinPowerUsersSid                       WELL_KNOWN_SID_TYPE = 29
+	WinBuiltinAccountOperatorsSid                 WELL_KNOWN_SID_TYPE = 30
+	WinBuiltinSystemOperatorsSid                  WELL_KNOWN_SID_TYPE = 31
+	WinBuiltinPrintOperatorsSid                   WELL_KNOWN_SID_TYPE = 32
+	WinBuiltinBackupOperatorsSid                  WELL_KNOWN_SID_TYPE = 33
+	WinBuiltinReplicatorSid                       WELL_KNOWN_SID_TYPE = 34
+	WinBuiltinPreWindows2000CompatibleAccessSid   WELL_KNOWN_SID_TYPE = 35
+	WinBuiltinRemoteDesktopUsersSid               WELL_KNOWN_SID_TYPE = 36
+	WinBuiltinNetworkConfigurationOperatorsSid    WELL_KNOWN_SID_TYPE = 37
+	WinAccountAdministratorSid                    WELL_KNOWN_SID_TYPE = 38
+	WinAccountGuestSid                            WELL_KNOWN_SID_TYPE = 39
+	WinAccountKrbtgtSid                           WELL_KNOWN_SID_TYPE = 40
+	WinAccountDomainAdminsSid                     WELL_KNOWN_SID_TYPE = 41
+	WinAccountDomainUsersSid                      WELL_KNOWN_SID_TYPE = 42
+	WinAccountDomainGuestsSid                     WELL_KNOWN_SID_TYPE = 43
+	WinAccountComputersSid                        WELL_KNOWN_SID_TYPE = 44
+	WinAccountControllersSid                      WELL_KNOWN_SID_TYPE = 45
+	WinAccountCertAdminsSid                       WELL_KNOWN_SID_TYPE = 46
+	WinAccountSchemaAdminsSid                     WELL_KNOWN_SID_TYPE = 47
+	WinAccountEnterpriseAdminsSid                 WELL_KNOWN_SID_TYPE = 48
+	WinAccountPolicyAdminsSid                     WELL_KNOWN_SID_TYPE = 49
+	WinAccountRasAndIasServersSid                 WELL_KNOWN_SID_TYPE = 50
+	WinNTLMAuthenticationSid                      WELL_KNOWN_SID_TYPE = 51
+	WinDigestAuthenticationSid                    WELL_KNOWN_SID_TYPE = 52
+	WinSChannelAuthenticationSid                  WELL_KNOWN_SID_TYPE = 53
+	WinThisOrganizationSid                        WELL_KNOWN_SID_TYPE = 54
+	WinOtherOrganizationSid                       WELL_KNOWN_SID_TYPE = 55
+	WinBuiltinIncomingForestTrustBuildersSid      WELL_KNOWN_SID_TYPE = 56
+	WinBuiltinPerfMonitoringUsersSid              WELL_KNOWN_SID_TYPE = 57
+	WinBuiltinPerfLoggingUsersSid                 WELL_KNOWN_SID_TYPE = 58
+	WinBuiltinAuthorizationAccessSid              WELL_KNOWN_SID_TYPE = 59
+	WinBuiltinTerminalServerLicenseServersSid     WELL_KNOWN_SID_TYPE = 60
+	WinBuiltinDCOMUsersSid                        WELL_KNOWN_SID_TYPE = 61
+	WinBuiltinIUsersSid                           WELL_KNOWN_SID_TYPE = 62
+	WinIUserSid                                   WELL_KNOWN_SID_TYPE = 63
+	WinBuiltinCryptoOperatorsSid                  WELL_KNOWN_SID_TYPE = 64
+	WinUntrustedLabelSid                          WELL_KNOWN_SID_TYPE = 65
+	WinLowLabelSid                                WELL_KNOWN_SID_TYPE = 66
+	WinMediumLabelSid                             WELL_KNOWN_SID_TYPE = 67
+	WinHighLabelSid                               WELL_KNOWN_SID_TYPE = 68
+	WinSystemLabelSid                             WELL_KNOWN_SID_TYPE = 69
+	WinWriteRestrictedCodeSid                     WELL_KNOWN_SID_TYPE = 70
+	WinCreatorOwnerRightsSid                      WELL_KNOWN_SID_TYPE = 71
+	WinCacheablePrincipalsGroupSid                WELL_KNOWN_SID_TYPE = 72
+	WinNonCacheablePrincipalsGroupSid             WELL_KNOWN_SID_TYPE = 73
+	WinEnterpriseReadonlyControllersSid           WELL_KNOWN_SID_TYPE = 74
+	WinAccountReadonlyControllersSid              WELL_KNOWN_SID_TYPE = 75
+	WinBuiltinEventLogReadersGroup                WELL_KNOWN_SID_TYPE = 76
+	WinNewEnterpriseReadonlyControllersSid        WELL_KNOWN_SID_TYPE = 77
+	WinBuiltinCertSvcDComAccessGroup              WELL_KNOWN_SID_TYPE = 78
+	WinMediumPlusLabelSid                         WELL_KNOWN_SID_TYPE = 79
+	WinLocalLogonSid                              WELL_KNOWN_SID_TYPE = 80
+	WinConsoleLogonSid                            WELL_KNOWN_SID_TYPE = 81
+	WinThisOrganizationCertificateSid             WELL_KNOWN_SID_TYPE = 82
+	WinApplicationPackageAuthoritySid             WELL_KNOWN_SID_TYPE = 83
+	WinBuiltinAnyPackageSid                       WELL_KNOWN_SID_TYPE = 84
+	WinCapabilityInternetClientSid                WELL_KNOWN_SID_TYPE = 85
+	WinCapabilityInternetClientServerSid          WELL_KNOWN_SID_TYPE = 86
+	WinCapabilityPrivateNetworkClientServerSid    WELL_KNOWN_SID_TYPE = 87
+	WinCapabilityPicturesLibrarySid               WELL_KNOWN_SID_TYPE = 88
+	WinCapabilityVideosLibrarySid                 WELL_KNOWN_SID_TYPE = 89
+	WinCapabilityMusicLibrarySid                  WELL_KNOWN_SID_TYPE = 90
+	WinCapabilityDocumentsLibrarySid              WELL_KNOWN_SID_TYPE = 91
+	WinCapabilitySharedUserCertificatesSid        WELL_KNOWN_SID_TYPE = 92
+	WinCapabilityEnterpriseAuthenticationSid      WELL_KNOWN_SID_TYPE = 93
+	WinCapabilityRemovableStorageSid              WELL_KNOWN_SID_TYPE = 94
+	WinBuiltinRDSRemoteAccessServersSid           WELL_KNOWN_SID_TYPE = 95
+	WinBuiltinRDSEndpointServersSid               WELL_KNOWN_SID_TYPE = 96
+	WinBuiltinRDSManagementServersSid             WELL_KNOWN_SID_TYPE = 97
+	WinUserModeDriversSid                         WELL_KNOWN_SID_TYPE = 98
+	WinBuiltinHyperVAdminsSid                     WELL_KNOWN_SID_TYPE = 99
+	WinAccountCloneableControllersSid             WELL_KNOWN_SID_TYPE = 100
+	WinBuiltinAccessControlAssistanceOperatorsSid WELL_KNOWN_SID_TYPE = 101
+	WinBuiltinRemoteManagementUsersSid            WELL_KNOWN_SID_TYPE = 102
+	WinAuthenticationAuthorityAssertedSid         WELL_KNOWN_SID_TYPE = 103
+	WinAuthenticationServiceAssertedSid           WELL_KNOWN_SID_TYPE = 104
+	WinLocalAccountSid                            WELL_KNOWN_SID_TYPE = 105
+	WinLocalAccountAndAdministratorSid            WELL_KNOWN_SID_TYPE = 106
+	WinAccountProtectedUsersSid                   WELL_KNOWN_SID_TYPE = 107
+	WinCapabilityAppointmentsSid                  WELL_KNOWN_SID_TYPE = 108
+	WinCapabilityContactsSid                      WELL_KNOWN_SID_TYPE = 109
+	WinAccountDefaultSystemManagedSid             WELL_KNOWN_SID_TYPE = 110
+	WinBuiltinDefaultSystemManagedGroupSid        WELL_KNOWN_SID_TYPE = 111
+	WinBuiltinStorageReplicaAdminsSid             WELL_KNOWN_SID_TYPE = 112
+	WinAccountKeyAdminsSid                        WELL_KNOWN_SID_TYPE = 113
+	WinAccountEnterpriseKeyAdminsSid              WELL_KNOWN_SID_TYPE = 114
+	WinAuthenticationKeyTrustSid                  WELL_KNOWN_SID_TYPE = 115
+	WinAuthenticationKeyPropertyMFASid            WELL_KNOWN_SID_TYPE = 116
+	WinAuthenticationKeyPropertyAttestationSid    WELL_KNOWN_SID_TYPE = 117
+	WinAuthenticationFreshKeyAuthSid              WELL_KNOWN_SID_TYPE = 118
+	WinBuiltinDeviceOwnersSid                     WELL_KNOWN_SID_TYPE = 119
 )
 
 type ACL_INFORMATION_CLASS int32
 
 const (
-	AclRevisionInformation = 1
-	AclSizeInformation = 2
+	AclRevisionInformation ACL_INFORMATION_CLASS = 1
+	AclSizeInformation     ACL_INFORMATION_CLASS = 2
 )
 
 type AUDIT_EVENT_TYPE int32
 
 const (
-	AuditEventObjectAccess = 0
-	AuditEventDirectoryServiceAccess = 1
+	AuditEventObjectAccess           AUDIT_EVENT_TYPE = 0
+	AuditEventDirectoryServiceAccess AUDIT_EVENT_TYPE = 1
 )
 
 type SECURITY_IMPERSONATION_LEVEL int32
 
 const (
-	SecurityAnonymous = 0
-	SecurityIdentification = 1
-	SecurityImpersonation = 2
-	SecurityDelegation = 3
+	SecurityAnonymous      SECURITY_IMPERSONATION_LEVEL = 0
+	SecurityIdentification SECURITY_IMPERSONATION_LEVEL = 1
+	SecurityImpersonation  SECURITY_IMPERSONATION_LEVEL = 2
+	SecurityDelegation     SECURITY_IMPERSONATION_LEVEL = 3
 )
 
 type TOKEN_TYPE int32
 
 const (
-	TokenPrimary = 1
-	TokenImpersonation = 2
+	TokenPrimary       TOKEN_TYPE = 1
+	TokenImpersonation TOKEN_TYPE = 2
 )
 
 type TOKEN_ELEVATION_TYPE int32
 
 const (
-	TokenElevationTypeDefault = 1
-	TokenElevationTypeFull = 2
-	TokenElevationTypeLimited = 3
+	TokenElevationTypeDefault TOKEN_ELEVATION_TYPE = 1
+	TokenElevationTypeFull    TOKEN_ELEVATION_TYPE = 2
+	TokenElevationTypeLimited TOKEN_ELEVATION_TYPE = 3
 )
 
 type TOKEN_INFORMATION_CLASS int32
 
 const (
-	TokenUser = 1
-	TokenGroups = 2
-	TokenPrivileges = 3
-	TokenOwner = 4
-	TokenPrimaryGroup = 5
-	TokenDefaultDacl = 6
-	TokenSource = 7
-	TokenType = 8
-	TokenImpersonationLevel = 9
-	TokenStatistics = 10
-	TokenRestrictedSids = 11
-	TokenSessionId = 12
-	TokenGroupsAndPrivileges = 13
-	TokenSessionReference = 14
-	TokenSandBoxInert = 15
-	TokenAuditPolicy = 16
-	TokenOrigin = 17
-	TokenElevationType = 18
-	TokenLinkedToken = 19
-	TokenElevation = 20
-	TokenHasRestrictions = 21
-	TokenAccessInformation = 22
-	TokenVirtualizationAllowed = 23
-	TokenVirtualizationEnabled = 24
-	TokenIntegrityLevel = 25
-	TokenUIAccess = 26
-	TokenMandatoryPolicy = 27
-	TokenLogonSid = 28
-	TokenIsAppContainer = 29
-	TokenCapabilities = 30
-	TokenAppContainerSid = 31
-	TokenAppContainerNumber = 32
-	TokenUserClaimAttributes = 33
-	TokenDeviceClaimAttributes = 34
-	TokenRestrictedUserClaimAttributes = 35
-	TokenRestrictedDeviceClaimAttributes = 36
-	TokenDeviceGroups = 37
-	TokenRestrictedDeviceGroups = 38
-	TokenSecurityAttributes = 39
-	TokenIsRestricted = 40
-	TokenProcessTrustLevel = 41
-	TokenPrivateNameSpace = 42
-	TokenSingletonAttributes = 43
-	TokenBnoIsolation = 44
-	TokenChildProcessFlags = 45
-	TokenIsLessPrivilegedAppContainer = 46
-	TokenIsSandboxed = 47
-	TokenOriginatingProcessTrustLevel = 48
-	MaxTokenInfoClass = 49
+	TokenUser                            TOKEN_INFORMATION_CLASS = 1
+	TokenGroups                          TOKEN_INFORMATION_CLASS = 2
+	TokenPrivileges                      TOKEN_INFORMATION_CLASS = 3
+	TokenOwner                           TOKEN_INFORMATION_CLASS = 4
+	TokenPrimaryGroup                    TOKEN_INFORMATION_CLASS = 5
+	TokenDefaultDacl                     TOKEN_INFORMATION_CLASS = 6
+	TokenSource                          TOKEN_INFORMATION_CLASS = 7
+	TokenType                            TOKEN_INFORMATION_CLASS = 8
+	TokenImpersonationLevel              TOKEN_INFORMATION_CLASS = 9
+	TokenStatistics                      TOKEN_INFORMATION_CLASS = 10
+	TokenRestrictedSids                  TOKEN_INFORMATION_CLASS = 11
+	TokenSessionId                       TOKEN_INFORMATION_CLASS = 12
+	TokenGroupsAndPrivileges             TOKEN_INFORMATION_CLASS = 13
+	TokenSessionReference                TOKEN_INFORMATION_CLASS = 14
+	TokenSandBoxInert                    TOKEN_INFORMATION_CLASS = 15
+	TokenAuditPolicy                     TOKEN_INFORMATION_CLASS = 16
+	TokenOrigin                          TOKEN_INFORMATION_CLASS = 17
+	TokenElevationType                   TOKEN_INFORMATION_CLASS = 18
+	TokenLinkedToken                     TOKEN_INFORMATION_CLASS = 19
+	TokenElevation                       TOKEN_INFORMATION_CLASS = 20
+	TokenHasRestrictions                 TOKEN_INFORMATION_CLASS = 21
+	TokenAccessInformation               TOKEN_INFORMATION_CLASS = 22
+	TokenVirtualizationAllowed           TOKEN_INFORMATION_CLASS = 23
+	TokenVirtualizationEnabled           TOKEN_INFORMATION_CLASS = 24
+	TokenIntegrityLevel                  TOKEN_INFORMATION_CLASS = 25
+	TokenUIAccess                        TOKEN_INFORMATION_CLASS = 26
+	TokenMandatoryPolicy                 TOKEN_INFORMATION_CLASS = 27
+	TokenLogonSid                        TOKEN_INFORMATION_CLASS = 28
+	TokenIsAppContainer                  TOKEN_INFORMATION_CLASS = 29
+	TokenCapabilities                    TOKEN_INFORMATION_CLASS = 30
+	TokenAppContainerSid                 TOKEN_INFORMATION_CLASS = 31
+	TokenAppContainerNumber              TOKEN_INFORMATION_CLASS = 32
+	TokenUserClaimAttributes             TOKEN_INFORMATION_CLASS = 33
+	TokenDeviceClaimAttributes           TOKEN_INFORMATION_CLASS = 34
+	TokenRestrictedUserClaimAttributes   TOKEN_INFORMATION_CLASS = 35
+	TokenRestrictedDeviceClaimAttributes TOKEN_INFORMATION_CLASS = 36
+	TokenDeviceGroups                    TOKEN_INFORMATION_CLASS = 37
+	TokenRestrictedDeviceGroups          TOKEN_INFORMATION_CLASS = 38
+	TokenSecurityAttributes              TOKEN_INFORMATION_CLASS = 39
+	TokenIsRestricted                    TOKEN_INFORMATION_CLASS = 40
+	TokenProcessTrustLevel               TOKEN_INFORMATION_CLASS = 41
+	TokenPrivateNameSpace                TOKEN_INFORMATION_CLASS = 42
+	TokenSingletonAttributes             TOKEN_INFORMATION_CLASS = 43
+	TokenBnoIsolation                    TOKEN_INFORMATION_CLASS = 44
+	TokenChildProcessFlags               TOKEN_INFORMATION_CLASS = 45
+	TokenIsLessPrivilegedAppContainer    TOKEN_INFORMATION_CLASS = 46
+	TokenIsSandboxed                     TOKEN_INFORMATION_CLASS = 47
+	TokenOriginatingProcessTrustLevel    TOKEN_INFORMATION_CLASS = 48
+	MaxTokenInfoClass                    TOKEN_INFORMATION_CLASS = 49
 )
 
 type MANDATORY_LEVEL int32
 
 const (
-	MandatoryLevelUntrusted = 0
-	MandatoryLevelLow = 1
-	MandatoryLevelMedium = 2
-	MandatoryLevelHigh = 3
-	MandatoryLevelSystem = 4
-	MandatoryLevelSecureProcess = 5
-	MandatoryLevelCount = 6
+	MandatoryLevelUntrusted     MANDATORY_LEVEL = 0
+	MandatoryLevelLow           MANDATORY_LEVEL = 1
+	MandatoryLevelMedium        MANDATORY_LEVEL = 2
+	MandatoryLevelHigh          MANDATORY_LEVEL = 3
+	MandatoryLevelSystem        MANDATORY_LEVEL = 4
+	MandatoryLevelSecureProcess MANDATORY_LEVEL = 5
+	MandatoryLevelCount         MANDATORY_LEVEL = 6
 )
 
 type PROCESS_INFORMATION_CLASS int32
 
 const (
-	ProcessMemoryPriority = 0
-	ProcessMemoryExhaustionInfo = 1
-	ProcessAppMemoryInfo = 2
-	ProcessInPrivateInfo = 3
-	ProcessPowerThrottling = 4
-	ProcessReservedValue1 = 5
-	ProcessTelemetryCoverageInfo = 6
-	ProcessProtectionLevelInfo = 7
-	ProcessLeapSecondInfo = 8
-	ProcessInformationClassMax = 9
+	ProcessMemoryPriority        PROCESS_INFORMATION_CLASS = 0
+	ProcessMemoryExhaustionInfo  PROCESS_INFORMATION_CLASS = 1
+	ProcessAppMemoryInfo         PROCESS_INFORMATION_CLASS = 2
+	ProcessInPrivateInfo         PROCESS_INFORMATION_CLASS = 3
+	ProcessPowerThrottling       PROCESS_INFORMATION_CLASS = 4
+	ProcessReservedValue1        PROCESS_INFORMATION_CLASS = 5
+	ProcessTelemetryCoverageInfo PROCESS_INFORMATION_CLASS = 6
+	ProcessProtectionLevelInfo   PROCESS_INFORMATION_CLASS = 7
+	ProcessLeapSecondInfo        PROCESS_INFORMATION_CLASS = 8
+	ProcessInformationClassMax   PROCESS_INFORMATION_CLASS = 9
 )
 
 type ECC_CURVE_TYPE_ENUM int32
 
 const (
-	BCRYPT_ECC_PRIME_SHORT_WEIERSTRASS_CURVE = 1
-	BCRYPT_ECC_PRIME_TWISTED_EDWARDS_CURVE = 2
-	BCRYPT_ECC_PRIME_MONTGOMERY_CURVE = 3
+	BCRYPT_ECC_PRIME_SHORT_WEIERSTRASS_CURVE ECC_CURVE_TYPE_ENUM = 1
+	BCRYPT_ECC_PRIME_TWISTED_EDWARDS_CURVE   ECC_CURVE_TYPE_ENUM = 2
+	BCRYPT_ECC_PRIME_MONTGOMERY_CURVE        ECC_CURVE_TYPE_ENUM = 3
 )
 
 type ECC_CURVE_ALG_ID_ENUM int32
 
 const (
-	BCRYPT_NO_CURVE_GENERATION_ALG_ID = 0
+	BCRYPT_NO_CURVE_GENERATION_ALG_ID ECC_CURVE_ALG_ID_ENUM = 0
 )
 
 type HASHALGORITHM_ENUM int32
 
 const (
-	DSA_HASH_ALGORITHM_SHA1 = 0
-	DSA_HASH_ALGORITHM_SHA256 = 1
-	DSA_HASH_ALGORITHM_SHA512 = 2
+	DSA_HASH_ALGORITHM_SHA1   HASHALGORITHM_ENUM = 0
+	DSA_HASH_ALGORITHM_SHA256 HASHALGORITHM_ENUM = 1
+	DSA_HASH_ALGORITHM_SHA512 HASHALGORITHM_ENUM = 2
 )
 
 type DSAFIPSVERSION_ENUM int32
 
 const (
-	DSA_FIPS186_2 = 0
-	DSA_FIPS186_3 = 1
+	DSA_FIPS186_2 DSAFIPSVERSION_ENUM = 0
+	DSA_FIPS186_3 DSAFIPSVERSION_ENUM = 1
 )
 
 type BCRYPT_HASH_OPERATION_TYPE int32
 
 const (
-	BCRYPT_HASH_OPERATION_HASH_DATA = 1
-	BCRYPT_HASH_OPERATION_FINISH_HASH = 2
+	BCRYPT_HASH_OPERATION_HASH_DATA   BCRYPT_HASH_OPERATION_TYPE = 1
+	BCRYPT_HASH_OPERATION_FINISH_HASH BCRYPT_HASH_OPERATION_TYPE = 2
 )
 
 type BCRYPT_MULTI_OPERATION_TYPE int32
 
 const (
-	BCRYPT_OPERATION_TYPE_HASH = 1
+	BCRYPT_OPERATION_TYPE_HASH BCRYPT_MULTI_OPERATION_TYPE = 1
 )
 
 type CertKeyType uint32
 
 const (
-	KeyTypeOther = 0
-	KeyTypeVirtualSmartCard = 1
-	KeyTypePhysicalSmartCard = 2
-	KeyTypePassport = 3
-	KeyTypePassportRemote = 4
-	KeyTypePassportSmartCard = 5
-	KeyTypeHardware = 6
-	KeyTypeSoftware = 7
-	KeyTypeSelfSigned = 8
+	KeyTypeOther             CertKeyType = 0
+	KeyTypeVirtualSmartCard  CertKeyType = 1
+	KeyTypePhysicalSmartCard CertKeyType = 2
+	KeyTypePassport          CertKeyType = 3
+	KeyTypePassportRemote    CertKeyType = 4
+	KeyTypePassportSmartCard CertKeyType = 5
+	KeyTypeHardware          CertKeyType = 6
+	KeyTypeSoftware          CertKeyType = 7
+	KeyTypeSelfSigned        CertKeyType = 8
 )
 
 type READER_SEL_REQUEST_MATCH_TYPE int32
 
 const (
-	RSR_MATCH_TYPE_READER_AND_CONTAINER = 1
-	RSR_MATCH_TYPE_SERIAL_NUMBER = 2
-	RSR_MATCH_TYPE_ALL_CARDS = 3
+	RSR_MATCH_TYPE_READER_AND_CONTAINER READER_SEL_REQUEST_MATCH_TYPE = 1
+	RSR_MATCH_TYPE_SERIAL_NUMBER        READER_SEL_REQUEST_MATCH_TYPE = 2
+	RSR_MATCH_TYPE_ALL_CARDS            READER_SEL_REQUEST_MATCH_TYPE = 3
 )
 
 type SC_ACTION_TYPE int32
 
 const (
-	SC_ACTION_NONE = 0
-	SC_ACTION_RESTART = 1
-	SC_ACTION_REBOOT = 2
-	SC_ACTION_RUN_COMMAND = 3
-	SC_ACTION_OWN_RESTART = 4
+	SC_ACTION_NONE        SC_ACTION_TYPE = 0
+	SC_ACTION_RESTART     SC_ACTION_TYPE = 1
+	SC_ACTION_REBOOT      SC_ACTION_TYPE = 2
+	SC_ACTION_RUN_COMMAND SC_ACTION_TYPE = 3
+	SC_ACTION_OWN_RESTART SC_ACTION_TYPE = 4
 )
 
 type SC_STATUS_TYPE int32
 
 const (
-	SC_STATUS_PROCESS_INFO = 0
+	SC_STATUS_PROCESS_INFO SC_STATUS_TYPE = 0
 )
 
 type SC_ENUM_TYPE int32
 
 const (
-	SC_ENUM_PROCESS_INFO = 0
+	SC_ENUM_PROCESS_INFO SC_ENUM_TYPE = 0
 )
 
 type SC_EVENT_TYPE int32
 
 const (
-	SC_EVENT_DATABASE_CHANGE = 0
-	SC_EVENT_PROPERTY_CHANGE = 1
-	SC_EVENT_STATUS_CHANGE = 2
+	SC_EVENT_DATABASE_CHANGE SC_EVENT_TYPE = 0
+	SC_EVENT_PROPERTY_CHANGE SC_EVENT_TYPE = 1
+	SC_EVENT_STATUS_CHANGE   SC_EVENT_TYPE = 2
 )
 
 type SERVICE_REGISTRY_STATE_TYPE int32
 
 const (
-	ServiceRegistryStateParameters = 0
-	ServiceRegistryStatePersistent = 1
-	MaxServiceRegistryStateType = 2
+	ServiceRegistryStateParameters SERVICE_REGISTRY_STATE_TYPE = 0
+	ServiceRegistryStatePersistent SERVICE_REGISTRY_STATE_TYPE = 1
+	MaxServiceRegistryStateType    SERVICE_REGISTRY_STATE_TYPE = 2
 )
 
 type SERVICE_DIRECTORY_TYPE int32
 
 const (
-	ServiceDirectoryPersistentState = 0
-	ServiceDirectoryTypeMax = 1
+	ServiceDirectoryPersistentState SERVICE_DIRECTORY_TYPE = 0
+	ServiceDirectoryTypeMax         SERVICE_DIRECTORY_TYPE = 1
 )
 
 type LSA_LOOKUP_DOMAIN_INFO_CLASS int32
 
 const (
-	AccountDomainInformation = 5
-	DnsDomainInformation = 12
+	AccountDomainInformation LSA_LOOKUP_DOMAIN_INFO_CLASS = 5
+	DnsDomainInformation     LSA_LOOKUP_DOMAIN_INFO_CLASS = 12
 )
 
 type SECURITY_LOGON_TYPE int32
 
 const (
-	UndefinedLogonType = 0
-	Interactive = 2
-	Network = 3
-	Batch = 4
-	Service = 5
-	Proxy = 6
-	Unlock = 7
-	NetworkCleartext = 8
-	NewCredentials = 9
-	RemoteInteractive = 10
-	CachedInteractive = 11
-	CachedRemoteInteractive = 12
-	CachedUnlock = 13
+	UndefinedLogonType      SECURITY_LOGON_TYPE = 0
+	Interactive             SECURITY_LOGON_TYPE = 2
+	Network                 SECURITY_LOGON_TYPE = 3
+	Batch                   SECURITY_LOGON_TYPE = 4
+	Service                 SECURITY_LOGON_TYPE = 5
+	Proxy                   SECURITY_LOGON_TYPE = 6
+	Unlock                  SECURITY_LOGON_TYPE = 7
+	NetworkCleartext        SECURITY_LOGON_TYPE = 8
+	NewCredentials          SECURITY_LOGON_TYPE = 9
+	RemoteInteractive       SECURITY_LOGON_TYPE = 10
+	CachedInteractive       SECURITY_LOGON_TYPE = 11
+	CachedRemoteInteractive SECURITY_LOGON_TYPE = 12
+	CachedUnlock            SECURITY_LOGON_TYPE = 13
 )
 
 type SE_ADT_PARAMETER_TYPE int32
 
 const (
-	SeAdtParmTypeNone = 0
-	SeAdtParmTypeString = 1
-	SeAdtParmTypeFileSpec = 2
-	SeAdtParmTypeUlong = 3
-	SeAdtParmTypeSid = 4
-	SeAdtParmTypeLogonId = 5
-	SeAdtParmTypeNoLogonId = 6
-	SeAdtParmTypeAccessMask = 7
-	SeAdtParmTypePrivs = 8
-	SeAdtParmTypeObjectTypes = 9
-	SeAdtParmTypeHexUlong = 10
-	SeAdtParmTypePtr = 11
-	SeAdtParmTypeTime = 12
-	SeAdtParmTypeGuid = 13
-	SeAdtParmTypeLuid = 14
-	SeAdtParmTypeHexInt64 = 15
-	SeAdtParmTypeStringList = 16
-	SeAdtParmTypeSidList = 17
-	SeAdtParmTypeDuration = 18
-	SeAdtParmTypeUserAccountControl = 19
-	SeAdtParmTypeNoUac = 20
-	SeAdtParmTypeMessage = 21
-	SeAdtParmTypeDateTime = 22
-	SeAdtParmTypeSockAddr = 23
-	SeAdtParmTypeSD = 24
-	SeAdtParmTypeLogonHours = 25
-	SeAdtParmTypeLogonIdNoSid = 26
-	SeAdtParmTypeUlongNoConv = 27
-	SeAdtParmTypeSockAddrNoPort = 28
-	SeAdtParmTypeAccessReason = 29
-	SeAdtParmTypeStagingReason = 30
-	SeAdtParmTypeResourceAttribute = 31
-	SeAdtParmTypeClaims = 32
-	SeAdtParmTypeLogonIdAsSid = 33
-	SeAdtParmTypeMultiSzString = 34
-	SeAdtParmTypeLogonIdEx = 35
+	SeAdtParmTypeNone               SE_ADT_PARAMETER_TYPE = 0
+	SeAdtParmTypeString             SE_ADT_PARAMETER_TYPE = 1
+	SeAdtParmTypeFileSpec           SE_ADT_PARAMETER_TYPE = 2
+	SeAdtParmTypeUlong              SE_ADT_PARAMETER_TYPE = 3
+	SeAdtParmTypeSid                SE_ADT_PARAMETER_TYPE = 4
+	SeAdtParmTypeLogonId            SE_ADT_PARAMETER_TYPE = 5
+	SeAdtParmTypeNoLogonId          SE_ADT_PARAMETER_TYPE = 6
+	SeAdtParmTypeAccessMask         SE_ADT_PARAMETER_TYPE = 7
+	SeAdtParmTypePrivs              SE_ADT_PARAMETER_TYPE = 8
+	SeAdtParmTypeObjectTypes        SE_ADT_PARAMETER_TYPE = 9
+	SeAdtParmTypeHexUlong           SE_ADT_PARAMETER_TYPE = 10
+	SeAdtParmTypePtr                SE_ADT_PARAMETER_TYPE = 11
+	SeAdtParmTypeTime               SE_ADT_PARAMETER_TYPE = 12
+	SeAdtParmTypeGuid               SE_ADT_PARAMETER_TYPE = 13
+	SeAdtParmTypeLuid               SE_ADT_PARAMETER_TYPE = 14
+	SeAdtParmTypeHexInt64           SE_ADT_PARAMETER_TYPE = 15
+	SeAdtParmTypeStringList         SE_ADT_PARAMETER_TYPE = 16
+	SeAdtParmTypeSidList            SE_ADT_PARAMETER_TYPE = 17
+	SeAdtParmTypeDuration           SE_ADT_PARAMETER_TYPE = 18
+	SeAdtParmTypeUserAccountControl SE_ADT_PARAMETER_TYPE = 19
+	SeAdtParmTypeNoUac              SE_ADT_PARAMETER_TYPE = 20
+	SeAdtParmTypeMessage            SE_ADT_PARAMETER_TYPE = 21
+	SeAdtParmTypeDateTime           SE_ADT_PARAMETER_TYPE = 22
+	SeAdtParmTypeSockAddr           SE_ADT_PARAMETER_TYPE = 23
+	SeAdtParmTypeSD                 SE_ADT_PARAMETER_TYPE = 24
+	SeAdtParmTypeLogonHours         SE_ADT_PARAMETER_TYPE = 25
+	SeAdtParmTypeLogonIdNoSid       SE_ADT_PARAMETER_TYPE = 26
+	SeAdtParmTypeUlongNoConv        SE_ADT_PARAMETER_TYPE = 27
+	SeAdtParmTypeSockAddrNoPort     SE_ADT_PARAMETER_TYPE = 28
+	SeAdtParmTypeAccessReason       SE_ADT_PARAMETER_TYPE = 29
+	SeAdtParmTypeStagingReason      SE_ADT_PARAMETER_TYPE = 30
+	SeAdtParmTypeResourceAttribute  SE_ADT_PARAMETER_TYPE = 31
+	SeAdtParmTypeClaims             SE_ADT_PARAMETER_TYPE = 32
+	SeAdtParmTypeLogonIdAsSid       SE_ADT_PARAMETER_TYPE = 33
+	SeAdtParmTypeMultiSzString      SE_ADT_PARAMETER_TYPE = 34
+	SeAdtParmTypeLogonIdEx          SE_ADT_PARAMETER_TYPE = 35
 )
 
 type POLICY_AUDIT_EVENT_TYPE int32
 
 const (
-	AuditCategorySystem = 0
-	AuditCategoryLogon = 1
-	AuditCategoryObjectAccess = 2
-	AuditCategoryPrivilegeUse = 3
-	AuditCategoryDetailedTracking = 4
-	AuditCategoryPolicyChange = 5
-	AuditCategoryAccountManagement = 6
-	AuditCategoryDirectoryServiceAccess = 7
-	AuditCategoryAccountLogon = 8
+	AuditCategorySystem                 POLICY_AUDIT_EVENT_TYPE = 0
+	AuditCategoryLogon                  POLICY_AUDIT_EVENT_TYPE = 1
+	AuditCategoryObjectAccess           POLICY_AUDIT_EVENT_TYPE = 2
+	AuditCategoryPrivilegeUse           POLICY_AUDIT_EVENT_TYPE = 3
+	AuditCategoryDetailedTracking       POLICY_AUDIT_EVENT_TYPE = 4
+	AuditCategoryPolicyChange           POLICY_AUDIT_EVENT_TYPE = 5
+	AuditCategoryAccountManagement      POLICY_AUDIT_EVENT_TYPE = 6
+	AuditCategoryDirectoryServiceAccess POLICY_AUDIT_EVENT_TYPE = 7
+	AuditCategoryAccountLogon           POLICY_AUDIT_EVENT_TYPE = 8
 )
 
 type POLICY_LSA_SERVER_ROLE int32
 
 const (
-	PolicyServerRoleBackup = 2
-	PolicyServerRolePrimary = 3
+	PolicyServerRoleBackup  POLICY_LSA_SERVER_ROLE = 2
+	PolicyServerRolePrimary POLICY_LSA_SERVER_ROLE = 3
 )
 
 type POLICY_INFORMATION_CLASS int32
 
 const (
-	PolicyAuditLogInformation = 1
-	PolicyAuditEventsInformation = 2
-	PolicyPrimaryDomainInformation = 3
-	PolicyPdAccountInformation = 4
-	PolicyAccountDomainInformation = 5
-	PolicyLsaServerRoleInformation = 6
-	PolicyReplicaSourceInformation = 7
-	PolicyDefaultQuotaInformation = 8
-	PolicyModificationInformation = 9
-	PolicyAuditFullSetInformation = 10
-	PolicyAuditFullQueryInformation = 11
-	PolicyDnsDomainInformation = 12
-	PolicyDnsDomainInformationInt = 13
-	PolicyLocalAccountDomainInformation = 14
-	PolicyMachineAccountInformation = 15
-	PolicyLastEntry = 16
+	PolicyAuditLogInformation           POLICY_INFORMATION_CLASS = 1
+	PolicyAuditEventsInformation        POLICY_INFORMATION_CLASS = 2
+	PolicyPrimaryDomainInformation      POLICY_INFORMATION_CLASS = 3
+	PolicyPdAccountInformation          POLICY_INFORMATION_CLASS = 4
+	PolicyAccountDomainInformation      POLICY_INFORMATION_CLASS = 5
+	PolicyLsaServerRoleInformation      POLICY_INFORMATION_CLASS = 6
+	PolicyReplicaSourceInformation      POLICY_INFORMATION_CLASS = 7
+	PolicyDefaultQuotaInformation       POLICY_INFORMATION_CLASS = 8
+	PolicyModificationInformation       POLICY_INFORMATION_CLASS = 9
+	PolicyAuditFullSetInformation       POLICY_INFORMATION_CLASS = 10
+	PolicyAuditFullQueryInformation     POLICY_INFORMATION_CLASS = 11
+	PolicyDnsDomainInformation          POLICY_INFORMATION_CLASS = 12
+	PolicyDnsDomainInformationInt       POLICY_INFORMATION_CLASS = 13
+	PolicyLocalAccountDomainInformation POLICY_INFORMATION_CLASS = 14
+	PolicyMachineAccountInformation     POLICY_INFORMATION_CLASS = 15
+	PolicyLastEntry                     POLICY_INFORMATION_CLASS = 16
 )
 
 type POLICY_DOMAIN_INFORMATION_CLASS int32
 
 const (
-	PolicyDomainEfsInformation = 2
-	PolicyDomainKerberosTicketInformation = 3
+	PolicyDomainEfsInformation            POLICY_DOMAIN_INFORMATION_CLASS = 2
+	PolicyDomainKerberosTicketInformation POLICY_DOMAIN_INFORMATION_CLASS = 3
 )
 
 type POLICY_NOTIFICATION_INFORMATION_CLASS int32
 
 const (
-	PolicyNotifyAuditEventsInformation = 1
-	PolicyNotifyAccountDomainInformation = 2
-	PolicyNotifyServerRoleInformation = 3
-	PolicyNotifyDnsDomainInformation = 4
-	PolicyNotifyDomainEfsInformation = 5
-	PolicyNotifyDomainKerberosTicketInformation = 6
-	PolicyNotifyMachineAccountPasswordInformation = 7
-	PolicyNotifyGlobalSaclInformation = 8
-	PolicyNotifyMax = 9
+	PolicyNotifyAuditEventsInformation            POLICY_NOTIFICATION_INFORMATION_CLASS = 1
+	PolicyNotifyAccountDomainInformation          POLICY_NOTIFICATION_INFORMATION_CLASS = 2
+	PolicyNotifyServerRoleInformation             POLICY_NOTIFICATION_INFORMATION_CLASS = 3
+	PolicyNotifyDnsDomainInformation              POLICY_NOTIFICATION_INFORMATION_CLASS = 4
+	PolicyNotifyDomainEfsInformation              POLICY_NOTIFICATION_INFORMATION_CLASS = 5
+	PolicyNotifyDomainKerberosTicketInformation   POLICY_NOTIFICATION_INFORMATION_CLASS = 6
+	PolicyNotifyMachineAccountPasswordInformation POLICY_NOTIFICATION_INFORMATION_CLASS = 7
+	PolicyNotifyGlobalSaclInformation             POLICY_NOTIFICATION_INFORMATION_CLASS = 8
+	PolicyNotifyMax                               POLICY_NOTIFICATION_INFORMATION_CLASS = 9
 )
 
 type TRUSTED_INFORMATION_CLASS int32
 
 const (
-	TrustedDomainNameInformation = 1
-	TrustedControllersInformation = 2
-	TrustedPosixOffsetInformation = 3
-	TrustedPasswordInformation = 4
-	TrustedDomainInformationBasic = 5
-	TrustedDomainInformationEx = 6
-	TrustedDomainAuthInformation = 7
-	TrustedDomainFullInformation = 8
-	TrustedDomainAuthInformationInternal = 9
-	TrustedDomainFullInformationInternal = 10
-	TrustedDomainInformationEx2Internal = 11
-	TrustedDomainFullInformation2Internal = 12
-	TrustedDomainSupportedEncryptionTypes = 13
+	TrustedDomainNameInformation          TRUSTED_INFORMATION_CLASS = 1
+	TrustedControllersInformation         TRUSTED_INFORMATION_CLASS = 2
+	TrustedPosixOffsetInformation         TRUSTED_INFORMATION_CLASS = 3
+	TrustedPasswordInformation            TRUSTED_INFORMATION_CLASS = 4
+	TrustedDomainInformationBasic         TRUSTED_INFORMATION_CLASS = 5
+	TrustedDomainInformationEx            TRUSTED_INFORMATION_CLASS = 6
+	TrustedDomainAuthInformation          TRUSTED_INFORMATION_CLASS = 7
+	TrustedDomainFullInformation          TRUSTED_INFORMATION_CLASS = 8
+	TrustedDomainAuthInformationInternal  TRUSTED_INFORMATION_CLASS = 9
+	TrustedDomainFullInformationInternal  TRUSTED_INFORMATION_CLASS = 10
+	TrustedDomainInformationEx2Internal   TRUSTED_INFORMATION_CLASS = 11
+	TrustedDomainFullInformation2Internal TRUSTED_INFORMATION_CLASS = 12
+	TrustedDomainSupportedEncryptionTypes TRUSTED_INFORMATION_CLASS = 13
 )
 
 type LSA_FOREST_TRUST_RECORD_TYPE int32
 
 const (
-	ForestTrustTopLevelName = 0
-	ForestTrustTopLevelNameEx = 1
-	ForestTrustDomainInfo = 2
-	ForestTrustRecordTypeLast = 2
+	ForestTrustTopLevelName   LSA_FOREST_TRUST_RECORD_TYPE = 0
+	ForestTrustTopLevelNameEx LSA_FOREST_TRUST_RECORD_TYPE = 1
+	ForestTrustDomainInfo     LSA_FOREST_TRUST_RECORD_TYPE = 2
+	ForestTrustRecordTypeLast LSA_FOREST_TRUST_RECORD_TYPE = 2
 )
 
 type LSA_FOREST_TRUST_COLLISION_RECORD_TYPE int32
 
 const (
-	CollisionTdo = 0
-	CollisionXref = 1
-	CollisionOther = 2
+	CollisionTdo   LSA_FOREST_TRUST_COLLISION_RECORD_TYPE = 0
+	CollisionXref  LSA_FOREST_TRUST_COLLISION_RECORD_TYPE = 1
+	CollisionOther LSA_FOREST_TRUST_COLLISION_RECORD_TYPE = 2
 )
 
 type NEGOTIATE_MESSAGES int32
 
 const (
-	NegEnumPackagePrefixes = 0
-	NegGetCallerName = 1
-	NegTransferCredentials = 2
-	NegMsgReserved1 = 3
-	NegCallPackageMax = 4
+	NegEnumPackagePrefixes NEGOTIATE_MESSAGES = 0
+	NegGetCallerName       NEGOTIATE_MESSAGES = 1
+	NegTransferCredentials NEGOTIATE_MESSAGES = 2
+	NegMsgReserved1        NEGOTIATE_MESSAGES = 3
+	NegCallPackageMax      NEGOTIATE_MESSAGES = 4
 )
 
 type MSV1_0_LOGON_SUBMIT_TYPE int32
 
 const (
-	MsV1_0InteractiveLogon = 2
-	MsV1_0Lm20Logon = 3
-	MsV1_0NetworkLogon = 4
-	MsV1_0SubAuthLogon = 5
-	MsV1_0WorkstationUnlockLogon = 7
-	MsV1_0S4ULogon = 12
-	MsV1_0VirtualLogon = 82
-	MsV1_0NoElevationLogon = 83
-	MsV1_0LuidLogon = 84
+	MsV1_0InteractiveLogon       MSV1_0_LOGON_SUBMIT_TYPE = 2
+	MsV1_0Lm20Logon              MSV1_0_LOGON_SUBMIT_TYPE = 3
+	MsV1_0NetworkLogon           MSV1_0_LOGON_SUBMIT_TYPE = 4
+	MsV1_0SubAuthLogon           MSV1_0_LOGON_SUBMIT_TYPE = 5
+	MsV1_0WorkstationUnlockLogon MSV1_0_LOGON_SUBMIT_TYPE = 7
+	MsV1_0S4ULogon               MSV1_0_LOGON_SUBMIT_TYPE = 12
+	MsV1_0VirtualLogon           MSV1_0_LOGON_SUBMIT_TYPE = 82
+	MsV1_0NoElevationLogon       MSV1_0_LOGON_SUBMIT_TYPE = 83
+	MsV1_0LuidLogon              MSV1_0_LOGON_SUBMIT_TYPE = 84
 )
 
 type MSV1_0_PROFILE_BUFFER_TYPE int32
 
 const (
-	MsV1_0InteractiveProfile = 2
-	MsV1_0Lm20LogonProfile = 3
-	MsV1_0SmartCardProfile = 4
+	MsV1_0InteractiveProfile MSV1_0_PROFILE_BUFFER_TYPE = 2
+	MsV1_0Lm20LogonProfile   MSV1_0_PROFILE_BUFFER_TYPE = 3
+	MsV1_0SmartCardProfile   MSV1_0_PROFILE_BUFFER_TYPE = 4
 )
 
 type MSV1_0_CREDENTIAL_KEY_TYPE int32
 
 const (
-	InvalidCredKey = 0
-	DeprecatedIUMCredKey = 1
-	DomainUserCredKey = 2
-	LocalUserCredKey = 3
-	ExternallySuppliedCredKey = 4
+	InvalidCredKey            MSV1_0_CREDENTIAL_KEY_TYPE = 0
+	DeprecatedIUMCredKey      MSV1_0_CREDENTIAL_KEY_TYPE = 1
+	DomainUserCredKey         MSV1_0_CREDENTIAL_KEY_TYPE = 2
+	LocalUserCredKey          MSV1_0_CREDENTIAL_KEY_TYPE = 3
+	ExternallySuppliedCredKey MSV1_0_CREDENTIAL_KEY_TYPE = 4
 )
 
 type MSV1_0_AVID int32
 
 const (
-	MsvAvEOL = 0
-	MsvAvNbComputerName = 1
-	MsvAvNbDomainName = 2
-	MsvAvDnsComputerName = 3
-	MsvAvDnsDomainName = 4
-	MsvAvDnsTreeName = 5
-	MsvAvFlags = 6
-	MsvAvTimestamp = 7
-	MsvAvRestrictions = 8
-	MsvAvTargetName = 9
-	MsvAvChannelBindings = 10
+	MsvAvEOL             MSV1_0_AVID = 0
+	MsvAvNbComputerName  MSV1_0_AVID = 1
+	MsvAvNbDomainName    MSV1_0_AVID = 2
+	MsvAvDnsComputerName MSV1_0_AVID = 3
+	MsvAvDnsDomainName   MSV1_0_AVID = 4
+	MsvAvDnsTreeName     MSV1_0_AVID = 5
+	MsvAvFlags           MSV1_0_AVID = 6
+	MsvAvTimestamp       MSV1_0_AVID = 7
+	MsvAvRestrictions    MSV1_0_AVID = 8
+	MsvAvTargetName      MSV1_0_AVID = 9
+	MsvAvChannelBindings MSV1_0_AVID = 10
 )
 
 type MSV1_0_PROTOCOL_MESSAGE_TYPE int32
 
 const (
-	MsV1_0Lm20ChallengeRequest = 0
-	MsV1_0Lm20GetChallengeResponse = 1
-	MsV1_0EnumerateUsers = 2
-	MsV1_0GetUserInfo = 3
-	MsV1_0ReLogonUsers = 4
-	MsV1_0ChangePassword = 5
-	MsV1_0ChangeCachedPassword = 6
-	MsV1_0GenericPassthrough = 7
-	MsV1_0CacheLogon = 8
-	MsV1_0SubAuth = 9
-	MsV1_0DeriveCredential = 10
-	MsV1_0CacheLookup = 11
-	MsV1_0SetProcessOption = 12
-	MsV1_0ConfigLocalAliases = 13
-	MsV1_0ClearCachedCredentials = 14
-	MsV1_0LookupToken = 15
-	MsV1_0ValidateAuth = 16
-	MsV1_0CacheLookupEx = 17
-	MsV1_0GetCredentialKey = 18
-	MsV1_0SetThreadOption = 19
-	MsV1_0DecryptDpapiMasterKey = 20
-	MsV1_0GetStrongCredentialKey = 21
-	MsV1_0TransferCred = 22
-	MsV1_0ProvisionTbal = 23
-	MsV1_0DeleteTbalSecrets = 24
+	MsV1_0Lm20ChallengeRequest     MSV1_0_PROTOCOL_MESSAGE_TYPE = 0
+	MsV1_0Lm20GetChallengeResponse MSV1_0_PROTOCOL_MESSAGE_TYPE = 1
+	MsV1_0EnumerateUsers           MSV1_0_PROTOCOL_MESSAGE_TYPE = 2
+	MsV1_0GetUserInfo              MSV1_0_PROTOCOL_MESSAGE_TYPE = 3
+	MsV1_0ReLogonUsers             MSV1_0_PROTOCOL_MESSAGE_TYPE = 4
+	MsV1_0ChangePassword           MSV1_0_PROTOCOL_MESSAGE_TYPE = 5
+	MsV1_0ChangeCachedPassword     MSV1_0_PROTOCOL_MESSAGE_TYPE = 6
+	MsV1_0GenericPassthrough       MSV1_0_PROTOCOL_MESSAGE_TYPE = 7
+	MsV1_0CacheLogon               MSV1_0_PROTOCOL_MESSAGE_TYPE = 8
+	MsV1_0SubAuth                  MSV1_0_PROTOCOL_MESSAGE_TYPE = 9
+	MsV1_0DeriveCredential         MSV1_0_PROTOCOL_MESSAGE_TYPE = 10
+	MsV1_0CacheLookup              MSV1_0_PROTOCOL_MESSAGE_TYPE = 11
+	MsV1_0SetProcessOption         MSV1_0_PROTOCOL_MESSAGE_TYPE = 12
+	MsV1_0ConfigLocalAliases       MSV1_0_PROTOCOL_MESSAGE_TYPE = 13
+	MsV1_0ClearCachedCredentials   MSV1_0_PROTOCOL_MESSAGE_TYPE = 14
+	MsV1_0LookupToken              MSV1_0_PROTOCOL_MESSAGE_TYPE = 15
+	MsV1_0ValidateAuth             MSV1_0_PROTOCOL_MESSAGE_TYPE = 16
+	MsV1_0CacheLookupEx            MSV1_0_PROTOCOL_MESSAGE_TYPE = 17
+	MsV1_0GetCredentialKey         MSV1_0_PROTOCOL_MESSAGE_TYPE = 18
+	MsV1_0SetThreadOption          MSV1_0_PROTOCOL_MESSAGE_TYPE = 19
+	MsV1_0DecryptDpapiMasterKey    MSV1_0_PROTOCOL_MESSAGE_TYPE = 20
+	MsV1_0GetStrongCredentialKey   MSV1_0_PROTOCOL_MESSAGE_TYPE = 21
+	MsV1_0TransferCred             MSV1_0_PROTOCOL_MESSAGE_TYPE = 22
+	MsV1_0ProvisionTbal            MSV1_0_PROTOCOL_MESSAGE_TYPE = 23
+	MsV1_0DeleteTbalSecrets        MSV1_0_PROTOCOL_MESSAGE_TYPE = 24
 )
 
 type KERB_LOGON_SUBMIT_TYPE int32
 
 const (
-	KerbInteractiveLogon = 2
-	KerbSmartCardLogon = 6
-	KerbWorkstationUnlockLogon = 7
-	KerbSmartCardUnlockLogon = 8
-	KerbProxyLogon = 9
-	KerbTicketLogon = 10
-	KerbTicketUnlockLogon = 11
-	KerbS4ULogon = 12
-	KerbCertificateLogon = 13
-	KerbCertificateS4ULogon = 14
-	KerbCertificateUnlockLogon = 15
-	KerbNoElevationLogon = 83
-	KerbLuidLogon = 84
+	KerbInteractiveLogon       KERB_LOGON_SUBMIT_TYPE = 2
+	KerbSmartCardLogon         KERB_LOGON_SUBMIT_TYPE = 6
+	KerbWorkstationUnlockLogon KERB_LOGON_SUBMIT_TYPE = 7
+	KerbSmartCardUnlockLogon   KERB_LOGON_SUBMIT_TYPE = 8
+	KerbProxyLogon             KERB_LOGON_SUBMIT_TYPE = 9
+	KerbTicketLogon            KERB_LOGON_SUBMIT_TYPE = 10
+	KerbTicketUnlockLogon      KERB_LOGON_SUBMIT_TYPE = 11
+	KerbS4ULogon               KERB_LOGON_SUBMIT_TYPE = 12
+	KerbCertificateLogon       KERB_LOGON_SUBMIT_TYPE = 13
+	KerbCertificateS4ULogon    KERB_LOGON_SUBMIT_TYPE = 14
+	KerbCertificateUnlockLogon KERB_LOGON_SUBMIT_TYPE = 15
+	KerbNoElevationLogon       KERB_LOGON_SUBMIT_TYPE = 83
+	KerbLuidLogon              KERB_LOGON_SUBMIT_TYPE = 84
 )
 
 type KERB_PROFILE_BUFFER_TYPE int32
 
 const (
-	KerbInteractiveProfile = 2
-	KerbSmartCardProfile = 4
-	KerbTicketProfile = 6
+	KerbInteractiveProfile KERB_PROFILE_BUFFER_TYPE = 2
+	KerbSmartCardProfile   KERB_PROFILE_BUFFER_TYPE = 4
+	KerbTicketProfile      KERB_PROFILE_BUFFER_TYPE = 6
 )
 
 type KERB_PROTOCOL_MESSAGE_TYPE int32
 
 const (
-	KerbDebugRequestMessage = 0
-	KerbQueryTicketCacheMessage = 1
-	KerbChangeMachinePasswordMessage = 2
-	KerbVerifyPacMessage = 3
-	KerbRetrieveTicketMessage = 4
-	KerbUpdateAddressesMessage = 5
-	KerbPurgeTicketCacheMessage = 6
-	KerbChangePasswordMessage = 7
-	KerbRetrieveEncodedTicketMessage = 8
-	KerbDecryptDataMessage = 9
-	KerbAddBindingCacheEntryMessage = 10
-	KerbSetPasswordMessage = 11
-	KerbSetPasswordExMessage = 12
-	KerbVerifyCredentialsMessage = 13
-	KerbQueryTicketCacheExMessage = 14
-	KerbPurgeTicketCacheExMessage = 15
-	KerbRefreshSmartcardCredentialsMessage = 16
-	KerbAddExtraCredentialsMessage = 17
-	KerbQuerySupplementalCredentialsMessage = 18
-	KerbTransferCredentialsMessage = 19
-	KerbQueryTicketCacheEx2Message = 20
-	KerbSubmitTicketMessage = 21
-	KerbAddExtraCredentialsExMessage = 22
-	KerbQueryKdcProxyCacheMessage = 23
-	KerbPurgeKdcProxyCacheMessage = 24
-	KerbQueryTicketCacheEx3Message = 25
-	KerbCleanupMachinePkinitCredsMessage = 26
-	KerbAddBindingCacheEntryExMessage = 27
-	KerbQueryBindingCacheMessage = 28
-	KerbPurgeBindingCacheMessage = 29
-	KerbPinKdcMessage = 30
-	KerbUnpinAllKdcsMessage = 31
-	KerbQueryDomainExtendedPoliciesMessage = 32
-	KerbQueryS4U2ProxyCacheMessage = 33
-	KerbRetrieveKeyTabMessage = 34
+	KerbDebugRequestMessage                 KERB_PROTOCOL_MESSAGE_TYPE = 0
+	KerbQueryTicketCacheMessage             KERB_PROTOCOL_MESSAGE_TYPE = 1
+	KerbChangeMachinePasswordMessage        KERB_PROTOCOL_MESSAGE_TYPE = 2
+	KerbVerifyPacMessage                    KERB_PROTOCOL_MESSAGE_TYPE = 3
+	KerbRetrieveTicketMessage               KERB_PROTOCOL_MESSAGE_TYPE = 4
+	KerbUpdateAddressesMessage              KERB_PROTOCOL_MESSAGE_TYPE = 5
+	KerbPurgeTicketCacheMessage             KERB_PROTOCOL_MESSAGE_TYPE = 6
+	KerbChangePasswordMessage               KERB_PROTOCOL_MESSAGE_TYPE = 7
+	KerbRetrieveEncodedTicketMessage        KERB_PROTOCOL_MESSAGE_TYPE = 8
+	KerbDecryptDataMessage                  KERB_PROTOCOL_MESSAGE_TYPE = 9
+	KerbAddBindingCacheEntryMessage         KERB_PROTOCOL_MESSAGE_TYPE = 10
+	KerbSetPasswordMessage                  KERB_PROTOCOL_MESSAGE_TYPE = 11
+	KerbSetPasswordExMessage                KERB_PROTOCOL_MESSAGE_TYPE = 12
+	KerbVerifyCredentialsMessage            KERB_PROTOCOL_MESSAGE_TYPE = 13
+	KerbQueryTicketCacheExMessage           KERB_PROTOCOL_MESSAGE_TYPE = 14
+	KerbPurgeTicketCacheExMessage           KERB_PROTOCOL_MESSAGE_TYPE = 15
+	KerbRefreshSmartcardCredentialsMessage  KERB_PROTOCOL_MESSAGE_TYPE = 16
+	KerbAddExtraCredentialsMessage          KERB_PROTOCOL_MESSAGE_TYPE = 17
+	KerbQuerySupplementalCredentialsMessage KERB_PROTOCOL_MESSAGE_TYPE = 18
+	KerbTransferCredentialsMessage          KERB_PROTOCOL_MESSAGE_TYPE = 19
+	KerbQueryTicketCacheEx2Message          KERB_PROTOCOL_MESSAGE_TYPE = 20
+	KerbSubmitTicketMessage                 KERB_PROTOCOL_MESSAGE_TYPE = 21
+	KerbAddExtraCredentialsExMessage        KERB_PROTOCOL_MESSAGE_TYPE = 22
+	KerbQueryKdcProxyCacheMessage           KERB_PROTOCOL_MESSAGE_TYPE = 23
+	KerbPurgeKdcProxyCacheMessage           KERB_PROTOCOL_MESSAGE_TYPE = 24
+	KerbQueryTicketCacheEx3Message          KERB_PROTOCOL_MESSAGE_TYPE = 25
+	KerbCleanupMachinePkinitCredsMessage    KERB_PROTOCOL_MESSAGE_TYPE = 26
+	KerbAddBindingCacheEntryExMessage       KERB_PROTOCOL_MESSAGE_TYPE = 27
+	KerbQueryBindingCacheMessage            KERB_PROTOCOL_MESSAGE_TYPE = 28
+	KerbPurgeBindingCacheMessage            KERB_PROTOCOL_MESSAGE_TYPE = 29
+	KerbPinKdcMessage                       KERB_PROTOCOL_MESSAGE_TYPE = 30
+	KerbUnpinAllKdcsMessage                 KERB_PROTOCOL_MESSAGE_TYPE = 31
+	KerbQueryDomainExtendedPoliciesMessage  KERB_PROTOCOL_MESSAGE_TYPE = 32
+	KerbQueryS4U2ProxyCacheMessage          KERB_PROTOCOL_MESSAGE_TYPE = 33
+	KerbRetrieveKeyTabMessage               KERB_PROTOCOL_MESSAGE_TYPE = 34
 )
 
 type KERB_CERTIFICATE_INFO_TYPE int32
 
 const (
-	CertHashInfo = 1
+	CertHashInfo KERB_CERTIFICATE_INFO_TYPE = 1
 )
 
 type PKU2U_LOGON_SUBMIT_TYPE int32
 
 const (
-	Pku2uCertificateS4ULogon = 14
+	Pku2uCertificateS4ULogon PKU2U_LOGON_SUBMIT_TYPE = 14
 )
 
 type SEC_APPLICATION_PROTOCOL_NEGOTIATION_EXT int32
 
 const (
-	SecApplicationProtocolNegotiationExt_None = 0
-	SecApplicationProtocolNegotiationExt_NPN = 1
-	SecApplicationProtocolNegotiationExt_ALPN = 2
+	SecApplicationProtocolNegotiationExt_None SEC_APPLICATION_PROTOCOL_NEGOTIATION_EXT = 0
+	SecApplicationProtocolNegotiationExt_NPN  SEC_APPLICATION_PROTOCOL_NEGOTIATION_EXT = 1
+	SecApplicationProtocolNegotiationExt_ALPN SEC_APPLICATION_PROTOCOL_NEGOTIATION_EXT = 2
 )
 
 type SEC_TRAFFIC_SECRET_TYPE int32
 
 const (
-	SecTrafficSecret_None = 0
-	SecTrafficSecret_Client = 1
-	SecTrafficSecret_Server = 2
+	SecTrafficSecret_None   SEC_TRAFFIC_SECRET_TYPE = 0
+	SecTrafficSecret_Client SEC_TRAFFIC_SECRET_TYPE = 1
+	SecTrafficSecret_Server SEC_TRAFFIC_SECRET_TYPE = 2
 )
 
 type SECPKG_CRED_CLASS int32
 
 const (
-	SecPkgCredClass_None = 0
-	SecPkgCredClass_Ephemeral = 10
-	SecPkgCredClass_PersistedGeneric = 20
-	SecPkgCredClass_PersistedSpecific = 30
-	SecPkgCredClass_Explicit = 40
+	SecPkgCredClass_None              SECPKG_CRED_CLASS = 0
+	SecPkgCredClass_Ephemeral         SECPKG_CRED_CLASS = 10
+	SecPkgCredClass_PersistedGeneric  SECPKG_CRED_CLASS = 20
+	SecPkgCredClass_PersistedSpecific SECPKG_CRED_CLASS = 30
+	SecPkgCredClass_Explicit          SECPKG_CRED_CLASS = 40
 )
 
 type SECPKG_ATTR_LCT_STATUS int32
 
 const (
-	SecPkgAttrLastClientTokenYes = 0
-	SecPkgAttrLastClientTokenNo = 1
-	SecPkgAttrLastClientTokenMaybe = 2
+	SecPkgAttrLastClientTokenYes   SECPKG_ATTR_LCT_STATUS = 0
+	SecPkgAttrLastClientTokenNo    SECPKG_ATTR_LCT_STATUS = 1
+	SecPkgAttrLastClientTokenMaybe SECPKG_ATTR_LCT_STATUS = 2
 )
 
 type SEC_APPLICATION_PROTOCOL_NEGOTIATION_STATUS int32
 
 const (
-	SecApplicationProtocolNegotiationStatus_None = 0
-	SecApplicationProtocolNegotiationStatus_Success = 1
-	SecApplicationProtocolNegotiationStatus_SelectedClientOnly = 2
+	SecApplicationProtocolNegotiationStatus_None               SEC_APPLICATION_PROTOCOL_NEGOTIATION_STATUS = 0
+	SecApplicationProtocolNegotiationStatus_Success            SEC_APPLICATION_PROTOCOL_NEGOTIATION_STATUS = 1
+	SecApplicationProtocolNegotiationStatus_SelectedClientOnly SEC_APPLICATION_PROTOCOL_NEGOTIATION_STATUS = 2
 )
 
 type SecDelegationType int32
 
 const (
-	SecFull = 0
-	SecService = 1
-	SecTree = 2
-	SecDirectory = 3
-	SecObject = 4
+	SecFull      SecDelegationType = 0
+	SecService   SecDelegationType = 1
+	SecTree      SecDelegationType = 2
+	SecDirectory SecDelegationType = 3
+	SecObject    SecDelegationType = 4
 )
 
 type SASL_AUTHZID_STATE int32
 
 const (
-	Sasl_AuthZIDForbidden = 0
-	Sasl_AuthZIDProcessed = 1
+	Sasl_AuthZIDForbidden SASL_AUTHZID_STATE = 0
+	Sasl_AuthZIDProcessed SASL_AUTHZID_STATE = 1
 )
 
 type CRED_MARSHAL_TYPE int32
 
 const (
-	CertCredential = 1
-	UsernameTargetCredential = 2
-	BinaryBlobCredential = 3
-	UsernameForPackedCredentials = 4
-	BinaryBlobForSystem = 5
+	CertCredential               CRED_MARSHAL_TYPE = 1
+	UsernameTargetCredential     CRED_MARSHAL_TYPE = 2
+	BinaryBlobCredential         CRED_MARSHAL_TYPE = 3
+	UsernameForPackedCredentials CRED_MARSHAL_TYPE = 4
+	BinaryBlobForSystem          CRED_MARSHAL_TYPE = 5
 )
 
 type CRED_PROTECTION_TYPE int32
 
 const (
-	CredUnprotected = 0
-	CredUserProtection = 1
-	CredTrustedProtection = 2
-	CredForSystemProtection = 3
+	CredUnprotected         CRED_PROTECTION_TYPE = 0
+	CredUserProtection      CRED_PROTECTION_TYPE = 1
+	CredTrustedProtection   CRED_PROTECTION_TYPE = 2
+	CredForSystemProtection CRED_PROTECTION_TYPE = 3
 )
 
 type LSA_TOKEN_INFORMATION_TYPE int32
 
 const (
-	LsaTokenInformationNull = 0
-	LsaTokenInformationV1 = 1
-	LsaTokenInformationV2 = 2
-	LsaTokenInformationV3 = 3
+	LsaTokenInformationNull LSA_TOKEN_INFORMATION_TYPE = 0
+	LsaTokenInformationV1   LSA_TOKEN_INFORMATION_TYPE = 1
+	LsaTokenInformationV2   LSA_TOKEN_INFORMATION_TYPE = 2
+	LsaTokenInformationV3   LSA_TOKEN_INFORMATION_TYPE = 3
 )
 
 type SECPKG_EXTENDED_INFORMATION_CLASS int32
 
 const (
-	SecpkgGssInfo = 1
-	SecpkgContextThunks = 2
-	SecpkgMutualAuthLevel = 3
-	SecpkgWowClientDll = 4
-	SecpkgExtraOids = 5
-	SecpkgMaxInfo = 6
-	SecpkgNego2Info = 7
+	SecpkgGssInfo         SECPKG_EXTENDED_INFORMATION_CLASS = 1
+	SecpkgContextThunks   SECPKG_EXTENDED_INFORMATION_CLASS = 2
+	SecpkgMutualAuthLevel SECPKG_EXTENDED_INFORMATION_CLASS = 3
+	SecpkgWowClientDll    SECPKG_EXTENDED_INFORMATION_CLASS = 4
+	SecpkgExtraOids       SECPKG_EXTENDED_INFORMATION_CLASS = 5
+	SecpkgMaxInfo         SECPKG_EXTENDED_INFORMATION_CLASS = 6
+	SecpkgNego2Info       SECPKG_EXTENDED_INFORMATION_CLASS = 7
 )
 
 type SECPKG_CALL_PACKAGE_MESSAGE_TYPE int32
 
 const (
-	SecPkgCallPackageMinMessage = 1024
-	SecPkgCallPackagePinDcMessage = 1024
-	SecPkgCallPackageUnpinAllDcsMessage = 1025
-	SecPkgCallPackageTransferCredMessage = 1026
-	SecPkgCallPackageMaxMessage = 1026
+	SecPkgCallPackageMinMessage          SECPKG_CALL_PACKAGE_MESSAGE_TYPE = 1024
+	SecPkgCallPackagePinDcMessage        SECPKG_CALL_PACKAGE_MESSAGE_TYPE = 1024
+	SecPkgCallPackageUnpinAllDcsMessage  SECPKG_CALL_PACKAGE_MESSAGE_TYPE = 1025
+	SecPkgCallPackageTransferCredMessage SECPKG_CALL_PACKAGE_MESSAGE_TYPE = 1026
+	SecPkgCallPackageMaxMessage          SECPKG_CALL_PACKAGE_MESSAGE_TYPE = 1026
 )
 
 type SECPKG_SESSIONINFO_TYPE int32
 
 const (
-	SecSessionPrimaryCred = 0
+	SecSessionPrimaryCred SECPKG_SESSIONINFO_TYPE = 0
 )
 
 type SECPKG_NAME_TYPE int32
 
 const (
-	SecNameSamCompatible = 0
-	SecNameAlternateId = 1
-	SecNameFlat = 2
-	SecNameDN = 3
-	SecNameSPN = 4
+	SecNameSamCompatible SECPKG_NAME_TYPE = 0
+	SecNameAlternateId   SECPKG_NAME_TYPE = 1
+	SecNameFlat          SECPKG_NAME_TYPE = 2
+	SecNameDN            SECPKG_NAME_TYPE = 3
+	SecNameSPN           SECPKG_NAME_TYPE = 4
 )
 
 type CRED_FETCH int32
 
 const (
-	CredFetchDefault = 0
-	CredFetchDPAPI = 1
-	CredFetchForced = 2
+	CredFetchDefault CRED_FETCH = 0
+	CredFetchDPAPI   CRED_FETCH = 1
+	CredFetchForced  CRED_FETCH = 2
 )
 
 type KSEC_CONTEXT_TYPE int32
 
 const (
-	KSecPaged = 0
-	KSecNonPaged = 1
+	KSecPaged    KSEC_CONTEXT_TYPE = 0
+	KSecNonPaged KSEC_CONTEXT_TYPE = 1
 )
 
 type eTlsSignatureAlgorithm int32
 
 const (
-	TlsSignatureAlgorithm_Anonymous = 0
-	TlsSignatureAlgorithm_Rsa = 1
-	TlsSignatureAlgorithm_Dsa = 2
-	TlsSignatureAlgorithm_Ecdsa = 3
+	TlsSignatureAlgorithm_Anonymous eTlsSignatureAlgorithm = 0
+	TlsSignatureAlgorithm_Rsa       eTlsSignatureAlgorithm = 1
+	TlsSignatureAlgorithm_Dsa       eTlsSignatureAlgorithm = 2
+	TlsSignatureAlgorithm_Ecdsa     eTlsSignatureAlgorithm = 3
 )
 
 type eTlsHashAlgorithm int32
 
 const (
-	TlsHashAlgorithm_None = 0
-	TlsHashAlgorithm_Md5 = 1
-	TlsHashAlgorithm_Sha1 = 2
-	TlsHashAlgorithm_Sha224 = 3
-	TlsHashAlgorithm_Sha256 = 4
-	TlsHashAlgorithm_Sha384 = 5
-	TlsHashAlgorithm_Sha512 = 6
+	TlsHashAlgorithm_None   eTlsHashAlgorithm = 0
+	TlsHashAlgorithm_Md5    eTlsHashAlgorithm = 1
+	TlsHashAlgorithm_Sha1   eTlsHashAlgorithm = 2
+	TlsHashAlgorithm_Sha224 eTlsHashAlgorithm = 3
+	TlsHashAlgorithm_Sha256 eTlsHashAlgorithm = 4
+	TlsHashAlgorithm_Sha384 eTlsHashAlgorithm = 5
+	TlsHashAlgorithm_Sha512 eTlsHashAlgorithm = 6
 )
 
 type SchGetExtensionsOptions int32
 
 const (
-	SCH_EXTENSIONS_OPTIONS_NONE = 0
-	SCH_NO_RECORD_HEADER = 1
+	SCH_EXTENSIONS_OPTIONS_NONE SchGetExtensionsOptions = 0
+	SCH_NO_RECORD_HEADER        SchGetExtensionsOptions = 1
 )
 
 type SE_OBJECT_TYPE int32
 
 const (
-	SE_UNKNOWN_OBJECT_TYPE = 0
-	SE_FILE_OBJECT = 1
-	SE_SERVICE = 2
-	SE_PRINTER = 3
-	SE_REGISTRY_KEY = 4
-	SE_LMSHARE = 5
-	SE_KERNEL_OBJECT = 6
-	SE_WINDOW_OBJECT = 7
-	SE_DS_OBJECT = 8
-	SE_DS_OBJECT_ALL = 9
-	SE_PROVIDER_DEFINED_OBJECT = 10
-	SE_WMIGUID_OBJECT = 11
-	SE_REGISTRY_WOW64_32KEY = 12
-	SE_REGISTRY_WOW64_64KEY = 13
+	SE_UNKNOWN_OBJECT_TYPE     SE_OBJECT_TYPE = 0
+	SE_FILE_OBJECT             SE_OBJECT_TYPE = 1
+	SE_SERVICE                 SE_OBJECT_TYPE = 2
+	SE_PRINTER                 SE_OBJECT_TYPE = 3
+	SE_REGISTRY_KEY            SE_OBJECT_TYPE = 4
+	SE_LMSHARE                 SE_OBJECT_TYPE = 5
+	SE_KERNEL_OBJECT           SE_OBJECT_TYPE = 6
+	SE_WINDOW_OBJECT           SE_OBJECT_TYPE = 7
+	SE_DS_OBJECT               SE_OBJECT_TYPE = 8
+	SE_DS_OBJECT_ALL           SE_OBJECT_TYPE = 9
+	SE_PROVIDER_DEFINED_OBJECT SE_OBJECT_TYPE = 10
+	SE_WMIGUID_OBJECT          SE_OBJECT_TYPE = 11
+	SE_REGISTRY_WOW64_32KEY    SE_OBJECT_TYPE = 12
+	SE_REGISTRY_WOW64_64KEY    SE_OBJECT_TYPE = 13
 )
 
 type TRUSTEE_TYPE int32
 
 const (
-	TRUSTEE_IS_UNKNOWN = 0
-	TRUSTEE_IS_USER = 1
-	TRUSTEE_IS_GROUP = 2
-	TRUSTEE_IS_DOMAIN = 3
-	TRUSTEE_IS_ALIAS = 4
-	TRUSTEE_IS_WELL_KNOWN_GROUP = 5
-	TRUSTEE_IS_DELETED = 6
-	TRUSTEE_IS_INVALID = 7
-	TRUSTEE_IS_COMPUTER = 8
+	TRUSTEE_IS_UNKNOWN          TRUSTEE_TYPE = 0
+	TRUSTEE_IS_USER             TRUSTEE_TYPE = 1
+	TRUSTEE_IS_GROUP            TRUSTEE_TYPE = 2
+	TRUSTEE_IS_DOMAIN           TRUSTEE_TYPE = 3
+	TRUSTEE_IS_ALIAS            TRUSTEE_TYPE = 4
+	TRUSTEE_IS_WELL_KNOWN_GROUP TRUSTEE_TYPE = 5
+	TRUSTEE_IS_DELETED          TRUSTEE_TYPE = 6
+	TRUSTEE_IS_INVALID          TRUSTEE_TYPE = 7
+	TRUSTEE_IS_COMPUTER         TRUSTEE_TYPE = 8
 )
 
 type TRUSTEE_FORM int32
 
 const (
-	TRUSTEE_IS_SID = 0
-	TRUSTEE_IS_NAME = 1
-	TRUSTEE_BAD_FORM = 2
-	TRUSTEE_IS_OBJECTS_AND_SID = 3
-	TRUSTEE_IS_OBJECTS_AND_NAME = 4
+	TRUSTEE_IS_SID              TRUSTEE_FORM = 0
+	TRUSTEE_IS_NAME             TRUSTEE_FORM = 1
+	TRUSTEE_BAD_FORM            TRUSTEE_FORM = 2
+	TRUSTEE_IS_OBJECTS_AND_SID  TRUSTEE_FORM = 3
+	TRUSTEE_IS_OBJECTS_AND_NAME TRUSTEE_FORM = 4
 )
 
 type MULTIPLE_TRUSTEE_OPERATION int32
 
 const (
-	NO_MULTIPLE_TRUSTEE = 0
-	TRUSTEE_IS_IMPERSONATE = 1
+	NO_MULTIPLE_TRUSTEE    MULTIPLE_TRUSTEE_OPERATION = 0
+	TRUSTEE_IS_IMPERSONATE MULTIPLE_TRUSTEE_OPERATION = 1
 )
 
 type ACCESS_MODE int32
 
 const (
-	NOT_USED_ACCESS = 0
-	GRANT_ACCESS = 1
-	SET_ACCESS = 2
-	DENY_ACCESS = 3
-	REVOKE_ACCESS = 4
-	SET_AUDIT_SUCCESS = 5
-	SET_AUDIT_FAILURE = 6
+	NOT_USED_ACCESS   ACCESS_MODE = 0
+	GRANT_ACCESS      ACCESS_MODE = 1
+	SET_ACCESS        ACCESS_MODE = 2
+	DENY_ACCESS       ACCESS_MODE = 3
+	REVOKE_ACCESS     ACCESS_MODE = 4
+	SET_AUDIT_SUCCESS ACCESS_MODE = 5
+	SET_AUDIT_FAILURE ACCESS_MODE = 6
 )
 
 type PROG_INVOKE_SETTING int32
 
 const (
-	ProgressInvokeNever = 1
-	ProgressInvokeEveryObject = 2
-	ProgressInvokeOnError = 3
-	ProgressCancelOperation = 4
-	ProgressRetryOperation = 5
-	ProgressInvokePrePostError = 6
+	ProgressInvokeNever        PROG_INVOKE_SETTING = 1
+	ProgressInvokeEveryObject  PROG_INVOKE_SETTING = 2
+	ProgressInvokeOnError      PROG_INVOKE_SETTING = 3
+	ProgressCancelOperation    PROG_INVOKE_SETTING = 4
+	ProgressRetryOperation     PROG_INVOKE_SETTING = 5
+	ProgressInvokePrePostError PROG_INVOKE_SETTING = 6
 )
 
 type TPMVSC_ATTESTATION_TYPE int32
 
 const (
-	TPMVSC_ATTESTATION_NONE = 0
-	TPMVSC_ATTESTATION_AIK_ONLY = 1
-	TPMVSC_ATTESTATION_AIK_AND_CERTIFICATE = 2
+	TPMVSC_ATTESTATION_NONE                TPMVSC_ATTESTATION_TYPE = 0
+	TPMVSC_ATTESTATION_AIK_ONLY            TPMVSC_ATTESTATION_TYPE = 1
+	TPMVSC_ATTESTATION_AIK_AND_CERTIFICATE TPMVSC_ATTESTATION_TYPE = 2
 )
 
 type TPMVSCMGR_STATUS int32
 
 const (
-	TPMVSCMGR_STATUS_VTPMSMARTCARD_INITIALIZING = 0
-	TPMVSCMGR_STATUS_VTPMSMARTCARD_CREATING = 1
-	TPMVSCMGR_STATUS_VTPMSMARTCARD_DESTROYING = 2
-	TPMVSCMGR_STATUS_VGIDSSIMULATOR_INITIALIZING = 3
-	TPMVSCMGR_STATUS_VGIDSSIMULATOR_CREATING = 4
-	TPMVSCMGR_STATUS_VGIDSSIMULATOR_DESTROYING = 5
-	TPMVSCMGR_STATUS_VREADER_INITIALIZING = 6
-	TPMVSCMGR_STATUS_VREADER_CREATING = 7
-	TPMVSCMGR_STATUS_VREADER_DESTROYING = 8
-	TPMVSCMGR_STATUS_GENERATE_WAITING = 9
-	TPMVSCMGR_STATUS_GENERATE_AUTHENTICATING = 10
-	TPMVSCMGR_STATUS_GENERATE_RUNNING = 11
-	TPMVSCMGR_STATUS_CARD_CREATED = 12
-	TPMVSCMGR_STATUS_CARD_DESTROYED = 13
+	TPMVSCMGR_STATUS_VTPMSMARTCARD_INITIALIZING  TPMVSCMGR_STATUS = 0
+	TPMVSCMGR_STATUS_VTPMSMARTCARD_CREATING      TPMVSCMGR_STATUS = 1
+	TPMVSCMGR_STATUS_VTPMSMARTCARD_DESTROYING    TPMVSCMGR_STATUS = 2
+	TPMVSCMGR_STATUS_VGIDSSIMULATOR_INITIALIZING TPMVSCMGR_STATUS = 3
+	TPMVSCMGR_STATUS_VGIDSSIMULATOR_CREATING     TPMVSCMGR_STATUS = 4
+	TPMVSCMGR_STATUS_VGIDSSIMULATOR_DESTROYING   TPMVSCMGR_STATUS = 5
+	TPMVSCMGR_STATUS_VREADER_INITIALIZING        TPMVSCMGR_STATUS = 6
+	TPMVSCMGR_STATUS_VREADER_CREATING            TPMVSCMGR_STATUS = 7
+	TPMVSCMGR_STATUS_VREADER_DESTROYING          TPMVSCMGR_STATUS = 8
+	TPMVSCMGR_STATUS_GENERATE_WAITING            TPMVSCMGR_STATUS = 9
+	TPMVSCMGR_STATUS_GENERATE_AUTHENTICATING     TPMVSCMGR_STATUS = 10
+	TPMVSCMGR_STATUS_GENERATE_RUNNING            TPMVSCMGR_STATUS = 11
+	TPMVSCMGR_STATUS_CARD_CREATED                TPMVSCMGR_STATUS = 12
+	TPMVSCMGR_STATUS_CARD_DESTROYED              TPMVSCMGR_STATUS = 13
 )
 
 type TPMVSCMGR_ERROR int32
 
 const (
-	TPMVSCMGR_ERROR_IMPERSONATION = 0
-	TPMVSCMGR_ERROR_PIN_COMPLEXITY = 1
-	TPMVSCMGR_ERROR_READER_COUNT_LIMIT = 2
-	TPMVSCMGR_ERROR_TERMINAL_SERVICES_SESSION = 3
-	TPMVSCMGR_ERROR_VTPMSMARTCARD_INITIALIZE = 4
-	TPMVSCMGR_ERROR_VTPMSMARTCARD_CREATE = 5
-	TPMVSCMGR_ERROR_VTPMSMARTCARD_DESTROY = 6
-	TPMVSCMGR_ERROR_VGIDSSIMULATOR_INITIALIZE = 7
-	TPMVSCMGR_ERROR_VGIDSSIMULATOR_CREATE = 8
-	TPMVSCMGR_ERROR_VGIDSSIMULATOR_DESTROY = 9
-	TPMVSCMGR_ERROR_VGIDSSIMULATOR_WRITE_PROPERTY = 10
-	TPMVSCMGR_ERROR_VGIDSSIMULATOR_READ_PROPERTY = 11
-	TPMVSCMGR_ERROR_VREADER_INITIALIZE = 12
-	TPMVSCMGR_ERROR_VREADER_CREATE = 13
-	TPMVSCMGR_ERROR_VREADER_DESTROY = 14
-	TPMVSCMGR_ERROR_GENERATE_LOCATE_READER = 15
-	TPMVSCMGR_ERROR_GENERATE_FILESYSTEM = 16
-	TPMVSCMGR_ERROR_CARD_CREATE = 17
-	TPMVSCMGR_ERROR_CARD_DESTROY = 18
+	TPMVSCMGR_ERROR_IMPERSONATION                 TPMVSCMGR_ERROR = 0
+	TPMVSCMGR_ERROR_PIN_COMPLEXITY                TPMVSCMGR_ERROR = 1
+	TPMVSCMGR_ERROR_READER_COUNT_LIMIT            TPMVSCMGR_ERROR = 2
+	TPMVSCMGR_ERROR_TERMINAL_SERVICES_SESSION     TPMVSCMGR_ERROR = 3
+	TPMVSCMGR_ERROR_VTPMSMARTCARD_INITIALIZE      TPMVSCMGR_ERROR = 4
+	TPMVSCMGR_ERROR_VTPMSMARTCARD_CREATE          TPMVSCMGR_ERROR = 5
+	TPMVSCMGR_ERROR_VTPMSMARTCARD_DESTROY         TPMVSCMGR_ERROR = 6
+	TPMVSCMGR_ERROR_VGIDSSIMULATOR_INITIALIZE     TPMVSCMGR_ERROR = 7
+	TPMVSCMGR_ERROR_VGIDSSIMULATOR_CREATE         TPMVSCMGR_ERROR = 8
+	TPMVSCMGR_ERROR_VGIDSSIMULATOR_DESTROY        TPMVSCMGR_ERROR = 9
+	TPMVSCMGR_ERROR_VGIDSSIMULATOR_WRITE_PROPERTY TPMVSCMGR_ERROR = 10
+	TPMVSCMGR_ERROR_VGIDSSIMULATOR_READ_PROPERTY  TPMVSCMGR_ERROR = 11
+	TPMVSCMGR_ERROR_VREADER_INITIALIZE            TPMVSCMGR_ERROR = 12
+	TPMVSCMGR_ERROR_VREADER_CREATE                TPMVSCMGR_ERROR = 13
+	TPMVSCMGR_ERROR_VREADER_DESTROY               TPMVSCMGR_ERROR = 14
+	TPMVSCMGR_ERROR_GENERATE_LOCATE_READER        TPMVSCMGR_ERROR = 15
+	TPMVSCMGR_ERROR_GENERATE_FILESYSTEM           TPMVSCMGR_ERROR = 16
+	TPMVSCMGR_ERROR_CARD_CREATE                   TPMVSCMGR_ERROR = 17
+	TPMVSCMGR_ERROR_CARD_DESTROY                  TPMVSCMGR_ERROR = 18
 )
 
 type KeyCredentialManagerOperationErrorStates int32
 
 const (
-	KeyCredentialManagerOperationErrorStateNone = 0
-	KeyCredentialManagerOperationErrorStateDeviceJoinFailure = 1
-	KeyCredentialManagerOperationErrorStateTokenFailure = 2
-	KeyCredentialManagerOperationErrorStateCertificateFailure = 4
-	KeyCredentialManagerOperationErrorStateRemoteSessionFailure = 8
-	KeyCredentialManagerOperationErrorStatePolicyFailure = 16
-	KeyCredentialManagerOperationErrorStateHardwareFailure = 32
-	KeyCredentialManagerOperationErrorStatePinExistsFailure = 64
+	KeyCredentialManagerOperationErrorStateNone                 KeyCredentialManagerOperationErrorStates = 0
+	KeyCredentialManagerOperationErrorStateDeviceJoinFailure    KeyCredentialManagerOperationErrorStates = 1
+	KeyCredentialManagerOperationErrorStateTokenFailure         KeyCredentialManagerOperationErrorStates = 2
+	KeyCredentialManagerOperationErrorStateCertificateFailure   KeyCredentialManagerOperationErrorStates = 4
+	KeyCredentialManagerOperationErrorStateRemoteSessionFailure KeyCredentialManagerOperationErrorStates = 8
+	KeyCredentialManagerOperationErrorStatePolicyFailure        KeyCredentialManagerOperationErrorStates = 16
+	KeyCredentialManagerOperationErrorStateHardwareFailure      KeyCredentialManagerOperationErrorStates = 32
+	KeyCredentialManagerOperationErrorStatePinExistsFailure     KeyCredentialManagerOperationErrorStates = 64
 )
 
 type KeyCredentialManagerOperationType int32
 
 const (
-	KeyCredentialManagerProvisioning = 0
-	KeyCredentialManagerPinChange = 1
-	KeyCredentialManagerPinReset = 2
+	KeyCredentialManagerProvisioning KeyCredentialManagerOperationType = 0
+	KeyCredentialManagerPinChange    KeyCredentialManagerOperationType = 1
+	KeyCredentialManagerPinReset     KeyCredentialManagerOperationType = 2
 )
 
 type IDENTITY_TYPE int32
 
 const (
-	IDENTITIES_ALL = 0
-	IDENTITIES_ME_ONLY = 1
+	IDENTITIES_ALL     IDENTITY_TYPE = 0
+	IDENTITIES_ME_ONLY IDENTITY_TYPE = 1
 )
 
 type NETLOGON_LOGON_INFO_CLASS int32
 
 const (
-	NetlogonInteractiveInformation = 1
-	NetlogonNetworkInformation = 2
-	NetlogonServiceInformation = 3
-	NetlogonGenericInformation = 4
-	NetlogonInteractiveTransitiveInformation = 5
-	NetlogonNetworkTransitiveInformation = 6
-	NetlogonServiceTransitiveInformation = 7
+	NetlogonInteractiveInformation           NETLOGON_LOGON_INFO_CLASS = 1
+	NetlogonNetworkInformation               NETLOGON_LOGON_INFO_CLASS = 2
+	NetlogonServiceInformation               NETLOGON_LOGON_INFO_CLASS = 3
+	NetlogonGenericInformation               NETLOGON_LOGON_INFO_CLASS = 4
+	NetlogonInteractiveTransitiveInformation NETLOGON_LOGON_INFO_CLASS = 5
+	NetlogonNetworkTransitiveInformation     NETLOGON_LOGON_INFO_CLASS = 6
+	NetlogonServiceTransitiveInformation     NETLOGON_LOGON_INFO_CLASS = 7
 )
 
 type tag_IdentityUpdateEvent int32
 
 const (
-	IDENTITY_ASSOCIATED = 1
-	IDENTITY_DISASSOCIATED = 2
-	IDENTITY_CREATED = 4
-	IDENTITY_IMPORTED = 8
-	IDENTITY_DELETED = 16
-	IDENTITY_PROPCHANGED = 32
-	IDENTITY_CONNECTED = 64
-	IDENTITY_DISCONNECTED = 128
+	IDENTITY_ASSOCIATED    tag_IdentityUpdateEvent = 1
+	IDENTITY_DISASSOCIATED tag_IdentityUpdateEvent = 2
+	IDENTITY_CREATED       tag_IdentityUpdateEvent = 4
+	IDENTITY_IMPORTED      tag_IdentityUpdateEvent = 8
+	IDENTITY_DELETED       tag_IdentityUpdateEvent = 16
+	IDENTITY_PROPCHANGED   tag_IdentityUpdateEvent = 32
+	IDENTITY_CONNECTED     tag_IdentityUpdateEvent = 64
+	IDENTITY_DISCONNECTED  tag_IdentityUpdateEvent = 128
 )
 
 type __MIDL___MIDL_itf_identityprovider_0000_0003_0001 int32
 
 const (
-	IDENTITY_URL_CREATE_ACCOUNT_WIZARD = 0
-	IDENTITY_URL_SIGN_IN_WIZARD = 1
-	IDENTITY_URL_CHANGE_PASSWORD_WIZARD = 2
-	IDENTITY_URL_IFEXISTS_WIZARD = 3
-	IDENTITY_URL_ACCOUNT_SETTINGS = 4
-	IDENTITY_URL_RESTORE_WIZARD = 5
-	IDENTITY_URL_CONNECT_WIZARD = 6
+	IDENTITY_URL_CREATE_ACCOUNT_WIZARD  __MIDL___MIDL_itf_identityprovider_0000_0003_0001 = 0
+	IDENTITY_URL_SIGN_IN_WIZARD         __MIDL___MIDL_itf_identityprovider_0000_0003_0001 = 1
+	IDENTITY_URL_CHANGE_PASSWORD_WIZARD __MIDL___MIDL_itf_identityprovider_0000_0003_0001 = 2
+	IDENTITY_URL_IFEXISTS_WIZARD        __MIDL___MIDL_itf_identityprovider_0000_0003_0001 = 3
+	IDENTITY_URL_ACCOUNT_SETTINGS       __MIDL___MIDL_itf_identityprovider_0000_0003_0001 = 4
+	IDENTITY_URL_RESTORE_WIZARD         __MIDL___MIDL_itf_identityprovider_0000_0003_0001 = 5
+	IDENTITY_URL_CONNECT_WIZARD         __MIDL___MIDL_itf_identityprovider_0000_0003_0001 = 6
 )
 
 type __MIDL___MIDL_itf_identityprovider_0000_0003_0002 int32
 
 const (
-	NOT_CONNECTED = 0
-	CONNECTING = 1
-	CONNECT_COMPLETED = 2
+	NOT_CONNECTED     __MIDL___MIDL_itf_identityprovider_0000_0003_0002 = 0
+	CONNECTING        __MIDL___MIDL_itf_identityprovider_0000_0003_0002 = 1
+	CONNECT_COMPLETED __MIDL___MIDL_itf_identityprovider_0000_0003_0002 = 2
 )
 
 type AUDIT_PARAM_TYPE int32
 
 const (
-	APT_None = 1
-	APT_String = 2
-	APT_Ulong = 3
-	APT_Pointer = 4
-	APT_Sid = 5
-	APT_LogonId = 6
-	APT_ObjectTypeList = 7
-	APT_Luid = 8
-	APT_Guid = 9
-	APT_Time = 10
-	APT_Int64 = 11
-	APT_IpAddress = 12
-	APT_LogonIdWithSid = 13
+	APT_None           AUDIT_PARAM_TYPE = 1
+	APT_String         AUDIT_PARAM_TYPE = 2
+	APT_Ulong          AUDIT_PARAM_TYPE = 3
+	APT_Pointer        AUDIT_PARAM_TYPE = 4
+	APT_Sid            AUDIT_PARAM_TYPE = 5
+	APT_LogonId        AUDIT_PARAM_TYPE = 6
+	APT_ObjectTypeList AUDIT_PARAM_TYPE = 7
+	APT_Luid           AUDIT_PARAM_TYPE = 8
+	APT_Guid           AUDIT_PARAM_TYPE = 9
+	APT_Time           AUDIT_PARAM_TYPE = 10
+	APT_Int64          AUDIT_PARAM_TYPE = 11
+	APT_IpAddress      AUDIT_PARAM_TYPE = 12
+	APT_LogonIdWithSid AUDIT_PARAM_TYPE = 13
 )
 
 type AUTHZ_SECURITY_ATTRIBUTE_OPERATION int32
 
 const (
-	AUTHZ_SECURITY_ATTRIBUTE_OPERATION_NONE = 0
-	AUTHZ_SECURITY_ATTRIBUTE_OPERATION_REPLACE_ALL = 1
-	AUTHZ_SECURITY_ATTRIBUTE_OPERATION_ADD = 2
-	AUTHZ_SECURITY_ATTRIBUTE_OPERATION_DELETE = 3
-	AUTHZ_SECURITY_ATTRIBUTE_OPERATION_REPLACE = 4
+	AUTHZ_SECURITY_ATTRIBUTE_OPERATION_NONE        AUTHZ_SECURITY_ATTRIBUTE_OPERATION = 0
+	AUTHZ_SECURITY_ATTRIBUTE_OPERATION_REPLACE_ALL AUTHZ_SECURITY_ATTRIBUTE_OPERATION = 1
+	AUTHZ_SECURITY_ATTRIBUTE_OPERATION_ADD         AUTHZ_SECURITY_ATTRIBUTE_OPERATION = 2
+	AUTHZ_SECURITY_ATTRIBUTE_OPERATION_DELETE      AUTHZ_SECURITY_ATTRIBUTE_OPERATION = 3
+	AUTHZ_SECURITY_ATTRIBUTE_OPERATION_REPLACE     AUTHZ_SECURITY_ATTRIBUTE_OPERATION = 4
 )
 
 type AUTHZ_SID_OPERATION int32
 
 const (
-	AUTHZ_SID_OPERATION_NONE = 0
-	AUTHZ_SID_OPERATION_REPLACE_ALL = 1
-	AUTHZ_SID_OPERATION_ADD = 2
-	AUTHZ_SID_OPERATION_DELETE = 3
-	AUTHZ_SID_OPERATION_REPLACE = 4
+	AUTHZ_SID_OPERATION_NONE        AUTHZ_SID_OPERATION = 0
+	AUTHZ_SID_OPERATION_REPLACE_ALL AUTHZ_SID_OPERATION = 1
+	AUTHZ_SID_OPERATION_ADD         AUTHZ_SID_OPERATION = 2
+	AUTHZ_SID_OPERATION_DELETE      AUTHZ_SID_OPERATION = 3
+	AUTHZ_SID_OPERATION_REPLACE     AUTHZ_SID_OPERATION = 4
 )
 
 type AUTHZ_CONTEXT_INFORMATION_CLASS int32
 
 const (
-	AuthzContextInfoUserSid = 1
-	AuthzContextInfoGroupsSids = 2
-	AuthzContextInfoRestrictedSids = 3
-	AuthzContextInfoPrivileges = 4
-	AuthzContextInfoExpirationTime = 5
-	AuthzContextInfoServerContext = 6
-	AuthzContextInfoIdentifier = 7
-	AuthzContextInfoSource = 8
-	AuthzContextInfoAll = 9
-	AuthzContextInfoAuthenticationId = 10
-	AuthzContextInfoSecurityAttributes = 11
-	AuthzContextInfoDeviceSids = 12
-	AuthzContextInfoUserClaims = 13
-	AuthzContextInfoDeviceClaims = 14
-	AuthzContextInfoAppContainerSid = 15
-	AuthzContextInfoCapabilitySids = 16
+	AuthzContextInfoUserSid            AUTHZ_CONTEXT_INFORMATION_CLASS = 1
+	AuthzContextInfoGroupsSids         AUTHZ_CONTEXT_INFORMATION_CLASS = 2
+	AuthzContextInfoRestrictedSids     AUTHZ_CONTEXT_INFORMATION_CLASS = 3
+	AuthzContextInfoPrivileges         AUTHZ_CONTEXT_INFORMATION_CLASS = 4
+	AuthzContextInfoExpirationTime     AUTHZ_CONTEXT_INFORMATION_CLASS = 5
+	AuthzContextInfoServerContext      AUTHZ_CONTEXT_INFORMATION_CLASS = 6
+	AuthzContextInfoIdentifier         AUTHZ_CONTEXT_INFORMATION_CLASS = 7
+	AuthzContextInfoSource             AUTHZ_CONTEXT_INFORMATION_CLASS = 8
+	AuthzContextInfoAll                AUTHZ_CONTEXT_INFORMATION_CLASS = 9
+	AuthzContextInfoAuthenticationId   AUTHZ_CONTEXT_INFORMATION_CLASS = 10
+	AuthzContextInfoSecurityAttributes AUTHZ_CONTEXT_INFORMATION_CLASS = 11
+	AuthzContextInfoDeviceSids         AUTHZ_CONTEXT_INFORMATION_CLASS = 12
+	AuthzContextInfoUserClaims         AUTHZ_CONTEXT_INFORMATION_CLASS = 13
+	AuthzContextInfoDeviceClaims       AUTHZ_CONTEXT_INFORMATION_CLASS = 14
+	AuthzContextInfoAppContainerSid    AUTHZ_CONTEXT_INFORMATION_CLASS = 15
+	AuthzContextInfoCapabilitySids     AUTHZ_CONTEXT_INFORMATION_CLASS = 16
 )
 
 type AUTHZ_AUDIT_EVENT_INFORMATION_CLASS int32
 
 const (
-	AuthzAuditEventInfoFlags = 1
-	AuthzAuditEventInfoOperationType = 2
-	AuthzAuditEventInfoObjectType = 3
-	AuthzAuditEventInfoObjectName = 4
-	AuthzAuditEventInfoAdditionalInfo = 5
+	AuthzAuditEventInfoFlags          AUTHZ_AUDIT_EVENT_INFORMATION_CLASS = 1
+	AuthzAuditEventInfoOperationType  AUTHZ_AUDIT_EVENT_INFORMATION_CLASS = 2
+	AuthzAuditEventInfoObjectType     AUTHZ_AUDIT_EVENT_INFORMATION_CLASS = 3
+	AuthzAuditEventInfoObjectName     AUTHZ_AUDIT_EVENT_INFORMATION_CLASS = 4
+	AuthzAuditEventInfoAdditionalInfo AUTHZ_AUDIT_EVENT_INFORMATION_CLASS = 5
 )
 
 type AZ_PROP_CONSTANTS int32
 
 const (
-	AZ_PROP_NAME = 1
-	AZ_PROP_DESCRIPTION = 2
-	AZ_PROP_WRITABLE = 3
-	AZ_PROP_APPLICATION_DATA = 4
-	AZ_PROP_CHILD_CREATE = 5
-	AZ_MAX_APPLICATION_NAME_LENGTH = 512
-	AZ_MAX_OPERATION_NAME_LENGTH = 64
-	AZ_MAX_TASK_NAME_LENGTH = 64
-	AZ_MAX_SCOPE_NAME_LENGTH = 65536
-	AZ_MAX_GROUP_NAME_LENGTH = 64
-	AZ_MAX_ROLE_NAME_LENGTH = 64
-	AZ_MAX_NAME_LENGTH = 65536
-	AZ_MAX_DESCRIPTION_LENGTH = 1024
-	AZ_MAX_APPLICATION_DATA_LENGTH = 4096
-	AZ_SUBMIT_FLAG_ABORT = 1
-	AZ_SUBMIT_FLAG_FLUSH = 2
-	AZ_MAX_POLICY_URL_LENGTH = 65536
-	AZ_AZSTORE_FLAG_CREATE = 1
-	AZ_AZSTORE_FLAG_MANAGE_STORE_ONLY = 2
-	AZ_AZSTORE_FLAG_BATCH_UPDATE = 4
-	AZ_AZSTORE_FLAG_AUDIT_IS_CRITICAL = 8
-	AZ_AZSTORE_FORCE_APPLICATION_CLOSE = 16
-	AZ_AZSTORE_NT6_FUNCTION_LEVEL = 32
-	AZ_AZSTORE_FLAG_MANAGE_ONLY_PASSIVE_SUBMIT = 32768
-	AZ_PROP_AZSTORE_DOMAIN_TIMEOUT = 100
-	AZ_AZSTORE_DEFAULT_DOMAIN_TIMEOUT = 15000
-	AZ_PROP_AZSTORE_SCRIPT_ENGINE_TIMEOUT = 101
-	AZ_AZSTORE_MIN_DOMAIN_TIMEOUT = 500
-	AZ_AZSTORE_MIN_SCRIPT_ENGINE_TIMEOUT = 5000
-	AZ_AZSTORE_DEFAULT_SCRIPT_ENGINE_TIMEOUT = 45000
-	AZ_PROP_AZSTORE_MAX_SCRIPT_ENGINES = 102
-	AZ_AZSTORE_DEFAULT_MAX_SCRIPT_ENGINES = 120
-	AZ_PROP_AZSTORE_MAJOR_VERSION = 103
-	AZ_PROP_AZSTORE_MINOR_VERSION = 104
-	AZ_PROP_AZSTORE_TARGET_MACHINE = 105
-	AZ_PROP_AZTORE_IS_ADAM_INSTANCE = 106
-	AZ_PROP_OPERATION_ID = 200
-	AZ_PROP_TASK_OPERATIONS = 300
-	AZ_PROP_TASK_BIZRULE = 301
-	AZ_PROP_TASK_BIZRULE_LANGUAGE = 302
-	AZ_PROP_TASK_TASKS = 303
-	AZ_PROP_TASK_BIZRULE_IMPORTED_PATH = 304
-	AZ_PROP_TASK_IS_ROLE_DEFINITION = 305
-	AZ_MAX_TASK_BIZRULE_LENGTH = 65536
-	AZ_MAX_TASK_BIZRULE_LANGUAGE_LENGTH = 64
-	AZ_MAX_TASK_BIZRULE_IMPORTED_PATH_LENGTH = 512
-	AZ_MAX_BIZRULE_STRING = 65536
-	AZ_PROP_GROUP_TYPE = 400
-	AZ_GROUPTYPE_LDAP_QUERY = 1
-	AZ_GROUPTYPE_BASIC = 2
-	AZ_GROUPTYPE_BIZRULE = 3
-	AZ_PROP_GROUP_APP_MEMBERS = 401
-	AZ_PROP_GROUP_APP_NON_MEMBERS = 402
-	AZ_PROP_GROUP_LDAP_QUERY = 403
-	AZ_MAX_GROUP_LDAP_QUERY_LENGTH = 4096
-	AZ_PROP_GROUP_MEMBERS = 404
-	AZ_PROP_GROUP_NON_MEMBERS = 405
-	AZ_PROP_GROUP_MEMBERS_NAME = 406
-	AZ_PROP_GROUP_NON_MEMBERS_NAME = 407
-	AZ_PROP_GROUP_BIZRULE = 408
-	AZ_PROP_GROUP_BIZRULE_LANGUAGE = 409
-	AZ_PROP_GROUP_BIZRULE_IMPORTED_PATH = 410
-	AZ_MAX_GROUP_BIZRULE_LENGTH = 65536
-	AZ_MAX_GROUP_BIZRULE_LANGUAGE_LENGTH = 64
-	AZ_MAX_GROUP_BIZRULE_IMPORTED_PATH_LENGTH = 512
-	AZ_PROP_ROLE_APP_MEMBERS = 500
-	AZ_PROP_ROLE_MEMBERS = 501
-	AZ_PROP_ROLE_OPERATIONS = 502
-	AZ_PROP_ROLE_TASKS = 504
-	AZ_PROP_ROLE_MEMBERS_NAME = 505
-	AZ_PROP_SCOPE_BIZRULES_WRITABLE = 600
-	AZ_PROP_SCOPE_CAN_BE_DELEGATED = 601
-	AZ_PROP_CLIENT_CONTEXT_USER_DN = 700
-	AZ_PROP_CLIENT_CONTEXT_USER_SAM_COMPAT = 701
-	AZ_PROP_CLIENT_CONTEXT_USER_DISPLAY = 702
-	AZ_PROP_CLIENT_CONTEXT_USER_GUID = 703
-	AZ_PROP_CLIENT_CONTEXT_USER_CANONICAL = 704
-	AZ_PROP_CLIENT_CONTEXT_USER_UPN = 705
-	AZ_PROP_CLIENT_CONTEXT_USER_DNS_SAM_COMPAT = 707
-	AZ_PROP_CLIENT_CONTEXT_ROLE_FOR_ACCESS_CHECK = 708
-	AZ_PROP_CLIENT_CONTEXT_LDAP_QUERY_DN = 709
-	AZ_PROP_APPLICATION_AUTHZ_INTERFACE_CLSID = 800
-	AZ_PROP_APPLICATION_VERSION = 801
-	AZ_MAX_APPLICATION_VERSION_LENGTH = 512
-	AZ_PROP_APPLICATION_NAME = 802
-	AZ_PROP_APPLICATION_BIZRULE_ENABLED = 803
-	AZ_PROP_APPLY_STORE_SACL = 900
-	AZ_PROP_GENERATE_AUDITS = 901
-	AZ_PROP_POLICY_ADMINS = 902
-	AZ_PROP_POLICY_READERS = 903
-	AZ_PROP_DELEGATED_POLICY_USERS = 904
-	AZ_PROP_POLICY_ADMINS_NAME = 905
-	AZ_PROP_POLICY_READERS_NAME = 906
-	AZ_PROP_DELEGATED_POLICY_USERS_NAME = 907
-	AZ_CLIENT_CONTEXT_SKIP_GROUP = 1
-	AZ_CLIENT_CONTEXT_SKIP_LDAP_QUERY = 1
-	AZ_CLIENT_CONTEXT_GET_GROUP_RECURSIVE = 2
-	AZ_CLIENT_CONTEXT_GET_GROUPS_STORE_LEVEL_ONLY = 2
+	AZ_PROP_NAME                                  AZ_PROP_CONSTANTS = 1
+	AZ_PROP_DESCRIPTION                           AZ_PROP_CONSTANTS = 2
+	AZ_PROP_WRITABLE                              AZ_PROP_CONSTANTS = 3
+	AZ_PROP_APPLICATION_DATA                      AZ_PROP_CONSTANTS = 4
+	AZ_PROP_CHILD_CREATE                          AZ_PROP_CONSTANTS = 5
+	AZ_MAX_APPLICATION_NAME_LENGTH                AZ_PROP_CONSTANTS = 512
+	AZ_MAX_OPERATION_NAME_LENGTH                  AZ_PROP_CONSTANTS = 64
+	AZ_MAX_TASK_NAME_LENGTH                       AZ_PROP_CONSTANTS = 64
+	AZ_MAX_SCOPE_NAME_LENGTH                      AZ_PROP_CONSTANTS = 65536
+	AZ_MAX_GROUP_NAME_LENGTH                      AZ_PROP_CONSTANTS = 64
+	AZ_MAX_ROLE_NAME_LENGTH                       AZ_PROP_CONSTANTS = 64
+	AZ_MAX_NAME_LENGTH                            AZ_PROP_CONSTANTS = 65536
+	AZ_MAX_DESCRIPTION_LENGTH                     AZ_PROP_CONSTANTS = 1024
+	AZ_MAX_APPLICATION_DATA_LENGTH                AZ_PROP_CONSTANTS = 4096
+	AZ_SUBMIT_FLAG_ABORT                          AZ_PROP_CONSTANTS = 1
+	AZ_SUBMIT_FLAG_FLUSH                          AZ_PROP_CONSTANTS = 2
+	AZ_MAX_POLICY_URL_LENGTH                      AZ_PROP_CONSTANTS = 65536
+	AZ_AZSTORE_FLAG_CREATE                        AZ_PROP_CONSTANTS = 1
+	AZ_AZSTORE_FLAG_MANAGE_STORE_ONLY             AZ_PROP_CONSTANTS = 2
+	AZ_AZSTORE_FLAG_BATCH_UPDATE                  AZ_PROP_CONSTANTS = 4
+	AZ_AZSTORE_FLAG_AUDIT_IS_CRITICAL             AZ_PROP_CONSTANTS = 8
+	AZ_AZSTORE_FORCE_APPLICATION_CLOSE            AZ_PROP_CONSTANTS = 16
+	AZ_AZSTORE_NT6_FUNCTION_LEVEL                 AZ_PROP_CONSTANTS = 32
+	AZ_AZSTORE_FLAG_MANAGE_ONLY_PASSIVE_SUBMIT    AZ_PROP_CONSTANTS = 32768
+	AZ_PROP_AZSTORE_DOMAIN_TIMEOUT                AZ_PROP_CONSTANTS = 100
+	AZ_AZSTORE_DEFAULT_DOMAIN_TIMEOUT             AZ_PROP_CONSTANTS = 15000
+	AZ_PROP_AZSTORE_SCRIPT_ENGINE_TIMEOUT         AZ_PROP_CONSTANTS = 101
+	AZ_AZSTORE_MIN_DOMAIN_TIMEOUT                 AZ_PROP_CONSTANTS = 500
+	AZ_AZSTORE_MIN_SCRIPT_ENGINE_TIMEOUT          AZ_PROP_CONSTANTS = 5000
+	AZ_AZSTORE_DEFAULT_SCRIPT_ENGINE_TIMEOUT      AZ_PROP_CONSTANTS = 45000
+	AZ_PROP_AZSTORE_MAX_SCRIPT_ENGINES            AZ_PROP_CONSTANTS = 102
+	AZ_AZSTORE_DEFAULT_MAX_SCRIPT_ENGINES         AZ_PROP_CONSTANTS = 120
+	AZ_PROP_AZSTORE_MAJOR_VERSION                 AZ_PROP_CONSTANTS = 103
+	AZ_PROP_AZSTORE_MINOR_VERSION                 AZ_PROP_CONSTANTS = 104
+	AZ_PROP_AZSTORE_TARGET_MACHINE                AZ_PROP_CONSTANTS = 105
+	AZ_PROP_AZTORE_IS_ADAM_INSTANCE               AZ_PROP_CONSTANTS = 106
+	AZ_PROP_OPERATION_ID                          AZ_PROP_CONSTANTS = 200
+	AZ_PROP_TASK_OPERATIONS                       AZ_PROP_CONSTANTS = 300
+	AZ_PROP_TASK_BIZRULE                          AZ_PROP_CONSTANTS = 301
+	AZ_PROP_TASK_BIZRULE_LANGUAGE                 AZ_PROP_CONSTANTS = 302
+	AZ_PROP_TASK_TASKS                            AZ_PROP_CONSTANTS = 303
+	AZ_PROP_TASK_BIZRULE_IMPORTED_PATH            AZ_PROP_CONSTANTS = 304
+	AZ_PROP_TASK_IS_ROLE_DEFINITION               AZ_PROP_CONSTANTS = 305
+	AZ_MAX_TASK_BIZRULE_LENGTH                    AZ_PROP_CONSTANTS = 65536
+	AZ_MAX_TASK_BIZRULE_LANGUAGE_LENGTH           AZ_PROP_CONSTANTS = 64
+	AZ_MAX_TASK_BIZRULE_IMPORTED_PATH_LENGTH      AZ_PROP_CONSTANTS = 512
+	AZ_MAX_BIZRULE_STRING                         AZ_PROP_CONSTANTS = 65536
+	AZ_PROP_GROUP_TYPE                            AZ_PROP_CONSTANTS = 400
+	AZ_GROUPTYPE_LDAP_QUERY                       AZ_PROP_CONSTANTS = 1
+	AZ_GROUPTYPE_BASIC                            AZ_PROP_CONSTANTS = 2
+	AZ_GROUPTYPE_BIZRULE                          AZ_PROP_CONSTANTS = 3
+	AZ_PROP_GROUP_APP_MEMBERS                     AZ_PROP_CONSTANTS = 401
+	AZ_PROP_GROUP_APP_NON_MEMBERS                 AZ_PROP_CONSTANTS = 402
+	AZ_PROP_GROUP_LDAP_QUERY                      AZ_PROP_CONSTANTS = 403
+	AZ_MAX_GROUP_LDAP_QUERY_LENGTH                AZ_PROP_CONSTANTS = 4096
+	AZ_PROP_GROUP_MEMBERS                         AZ_PROP_CONSTANTS = 404
+	AZ_PROP_GROUP_NON_MEMBERS                     AZ_PROP_CONSTANTS = 405
+	AZ_PROP_GROUP_MEMBERS_NAME                    AZ_PROP_CONSTANTS = 406
+	AZ_PROP_GROUP_NON_MEMBERS_NAME                AZ_PROP_CONSTANTS = 407
+	AZ_PROP_GROUP_BIZRULE                         AZ_PROP_CONSTANTS = 408
+	AZ_PROP_GROUP_BIZRULE_LANGUAGE                AZ_PROP_CONSTANTS = 409
+	AZ_PROP_GROUP_BIZRULE_IMPORTED_PATH           AZ_PROP_CONSTANTS = 410
+	AZ_MAX_GROUP_BIZRULE_LENGTH                   AZ_PROP_CONSTANTS = 65536
+	AZ_MAX_GROUP_BIZRULE_LANGUAGE_LENGTH          AZ_PROP_CONSTANTS = 64
+	AZ_MAX_GROUP_BIZRULE_IMPORTED_PATH_LENGTH     AZ_PROP_CONSTANTS = 512
+	AZ_PROP_ROLE_APP_MEMBERS                      AZ_PROP_CONSTANTS = 500
+	AZ_PROP_ROLE_MEMBERS                          AZ_PROP_CONSTANTS = 501
+	AZ_PROP_ROLE_OPERATIONS                       AZ_PROP_CONSTANTS = 502
+	AZ_PROP_ROLE_TASKS                            AZ_PROP_CONSTANTS = 504
+	AZ_PROP_ROLE_MEMBERS_NAME                     AZ_PROP_CONSTANTS = 505
+	AZ_PROP_SCOPE_BIZRULES_WRITABLE               AZ_PROP_CONSTANTS = 600
+	AZ_PROP_SCOPE_CAN_BE_DELEGATED                AZ_PROP_CONSTANTS = 601
+	AZ_PROP_CLIENT_CONTEXT_USER_DN                AZ_PROP_CONSTANTS = 700
+	AZ_PROP_CLIENT_CONTEXT_USER_SAM_COMPAT        AZ_PROP_CONSTANTS = 701
+	AZ_PROP_CLIENT_CONTEXT_USER_DISPLAY           AZ_PROP_CONSTANTS = 702
+	AZ_PROP_CLIENT_CONTEXT_USER_GUID              AZ_PROP_CONSTANTS = 703
+	AZ_PROP_CLIENT_CONTEXT_USER_CANONICAL         AZ_PROP_CONSTANTS = 704
+	AZ_PROP_CLIENT_CONTEXT_USER_UPN               AZ_PROP_CONSTANTS = 705
+	AZ_PROP_CLIENT_CONTEXT_USER_DNS_SAM_COMPAT    AZ_PROP_CONSTANTS = 707
+	AZ_PROP_CLIENT_CONTEXT_ROLE_FOR_ACCESS_CHECK  AZ_PROP_CONSTANTS = 708
+	AZ_PROP_CLIENT_CONTEXT_LDAP_QUERY_DN          AZ_PROP_CONSTANTS = 709
+	AZ_PROP_APPLICATION_AUTHZ_INTERFACE_CLSID     AZ_PROP_CONSTANTS = 800
+	AZ_PROP_APPLICATION_VERSION                   AZ_PROP_CONSTANTS = 801
+	AZ_MAX_APPLICATION_VERSION_LENGTH             AZ_PROP_CONSTANTS = 512
+	AZ_PROP_APPLICATION_NAME                      AZ_PROP_CONSTANTS = 802
+	AZ_PROP_APPLICATION_BIZRULE_ENABLED           AZ_PROP_CONSTANTS = 803
+	AZ_PROP_APPLY_STORE_SACL                      AZ_PROP_CONSTANTS = 900
+	AZ_PROP_GENERATE_AUDITS                       AZ_PROP_CONSTANTS = 901
+	AZ_PROP_POLICY_ADMINS                         AZ_PROP_CONSTANTS = 902
+	AZ_PROP_POLICY_READERS                        AZ_PROP_CONSTANTS = 903
+	AZ_PROP_DELEGATED_POLICY_USERS                AZ_PROP_CONSTANTS = 904
+	AZ_PROP_POLICY_ADMINS_NAME                    AZ_PROP_CONSTANTS = 905
+	AZ_PROP_POLICY_READERS_NAME                   AZ_PROP_CONSTANTS = 906
+	AZ_PROP_DELEGATED_POLICY_USERS_NAME           AZ_PROP_CONSTANTS = 907
+	AZ_CLIENT_CONTEXT_SKIP_GROUP                  AZ_PROP_CONSTANTS = 1
+	AZ_CLIENT_CONTEXT_SKIP_LDAP_QUERY             AZ_PROP_CONSTANTS = 1
+	AZ_CLIENT_CONTEXT_GET_GROUP_RECURSIVE         AZ_PROP_CONSTANTS = 2
+	AZ_CLIENT_CONTEXT_GET_GROUPS_STORE_LEVEL_ONLY AZ_PROP_CONSTANTS = 2
 )
 
 type SI_PAGE_TYPE int32
 
 const (
-	SI_PAGE_PERM = 0
-	SI_PAGE_ADVPERM = 1
-	SI_PAGE_AUDIT = 2
-	SI_PAGE_OWNER = 3
-	SI_PAGE_EFFECTIVE = 4
-	SI_PAGE_TAKEOWNERSHIP = 5
-	SI_PAGE_SHARE = 6
+	SI_PAGE_PERM          SI_PAGE_TYPE = 0
+	SI_PAGE_ADVPERM       SI_PAGE_TYPE = 1
+	SI_PAGE_AUDIT         SI_PAGE_TYPE = 2
+	SI_PAGE_OWNER         SI_PAGE_TYPE = 3
+	SI_PAGE_EFFECTIVE     SI_PAGE_TYPE = 4
+	SI_PAGE_TAKEOWNERSHIP SI_PAGE_TYPE = 5
+	SI_PAGE_SHARE         SI_PAGE_TYPE = 6
 )
 
 type SI_PAGE_ACTIVATED int32
 
 const (
-	SI_SHOW_DEFAULT = 0
-	SI_SHOW_PERM_ACTIVATED = 1
-	SI_SHOW_AUDIT_ACTIVATED = 2
-	SI_SHOW_OWNER_ACTIVATED = 3
-	SI_SHOW_EFFECTIVE_ACTIVATED = 4
-	SI_SHOW_SHARE_ACTIVATED = 5
-	SI_SHOW_CENTRAL_POLICY_ACTIVATED = 6
+	SI_SHOW_DEFAULT                  SI_PAGE_ACTIVATED = 0
+	SI_SHOW_PERM_ACTIVATED           SI_PAGE_ACTIVATED = 1
+	SI_SHOW_AUDIT_ACTIVATED          SI_PAGE_ACTIVATED = 2
+	SI_SHOW_OWNER_ACTIVATED          SI_PAGE_ACTIVATED = 3
+	SI_SHOW_EFFECTIVE_ACTIVATED      SI_PAGE_ACTIVATED = 4
+	SI_SHOW_SHARE_ACTIVATED          SI_PAGE_ACTIVATED = 5
+	SI_SHOW_CENTRAL_POLICY_ACTIVATED SI_PAGE_ACTIVATED = 6
 )
 
 type X509EnrollmentAuthFlags int32
 
 const (
-	X509AuthNone = 0
-	X509AuthAnonymous = 1
-	X509AuthKerberos = 2
-	X509AuthUsername = 4
-	X509AuthCertificate = 8
+	X509AuthNone        X509EnrollmentAuthFlags = 0
+	X509AuthAnonymous   X509EnrollmentAuthFlags = 1
+	X509AuthKerberos    X509EnrollmentAuthFlags = 2
+	X509AuthUsername    X509EnrollmentAuthFlags = 4
+	X509AuthCertificate X509EnrollmentAuthFlags = 8
 )
 
 type X509SCEPMessageType int32
 
 const (
-	SCEPMessageUnknown = -1
-	SCEPMessageCertResponse = 3
-	SCEPMessagePKCSRequest = 19
-	SCEPMessageGetCertInitial = 20
-	SCEPMessageGetCert = 21
-	SCEPMessageGetCRL = 22
-	SCEPMessageClaimChallengeAnswer = 41
+	SCEPMessageUnknown              X509SCEPMessageType = -1
+	SCEPMessageCertResponse         X509SCEPMessageType = 3
+	SCEPMessagePKCSRequest          X509SCEPMessageType = 19
+	SCEPMessageGetCertInitial       X509SCEPMessageType = 20
+	SCEPMessageGetCert              X509SCEPMessageType = 21
+	SCEPMessageGetCRL               X509SCEPMessageType = 22
+	SCEPMessageClaimChallengeAnswer X509SCEPMessageType = 41
 )
 
 type X509SCEPDisposition int32
 
 const (
-	SCEPDispositionUnknown = -1
-	SCEPDispositionSuccess = 0
-	SCEPDispositionFailure = 2
-	SCEPDispositionPending = 3
-	SCEPDispositionPendingChallenge = 11
+	SCEPDispositionUnknown          X509SCEPDisposition = -1
+	SCEPDispositionSuccess          X509SCEPDisposition = 0
+	SCEPDispositionFailure          X509SCEPDisposition = 2
+	SCEPDispositionPending          X509SCEPDisposition = 3
+	SCEPDispositionPendingChallenge X509SCEPDisposition = 11
 )
 
 type X509SCEPFailInfo int32
 
 const (
-	SCEPFailUnknown = -1
-	SCEPFailBadAlgorithm = 0
-	SCEPFailBadMessageCheck = 1
-	SCEPFailBadRequest = 2
-	SCEPFailBadTime = 3
-	SCEPFailBadCertId = 4
+	SCEPFailUnknown         X509SCEPFailInfo = -1
+	SCEPFailBadAlgorithm    X509SCEPFailInfo = 0
+	SCEPFailBadMessageCheck X509SCEPFailInfo = 1
+	SCEPFailBadRequest      X509SCEPFailInfo = 2
+	SCEPFailBadTime         X509SCEPFailInfo = 3
+	SCEPFailBadCertId       X509SCEPFailInfo = 4
 )
 
 type CERTENROLL_OBJECTID int32
 
 const (
-	XCN_OID_NONE = 0
-	XCN_OID_RSA = 1
-	XCN_OID_PKCS = 2
-	XCN_OID_RSA_HASH = 3
-	XCN_OID_RSA_ENCRYPT = 4
-	XCN_OID_PKCS_1 = 5
-	XCN_OID_PKCS_2 = 6
-	XCN_OID_PKCS_3 = 7
-	XCN_OID_PKCS_4 = 8
-	XCN_OID_PKCS_5 = 9
-	XCN_OID_PKCS_6 = 10
-	XCN_OID_PKCS_7 = 11
-	XCN_OID_PKCS_8 = 12
-	XCN_OID_PKCS_9 = 13
-	XCN_OID_PKCS_10 = 14
-	XCN_OID_PKCS_12 = 15
-	XCN_OID_RSA_RSA = 16
-	XCN_OID_RSA_MD2RSA = 17
-	XCN_OID_RSA_MD4RSA = 18
-	XCN_OID_RSA_MD5RSA = 19
-	XCN_OID_RSA_SHA1RSA = 20
-	XCN_OID_RSA_SETOAEP_RSA = 21
-	XCN_OID_RSA_DH = 22
-	XCN_OID_RSA_data = 23
-	XCN_OID_RSA_signedData = 24
-	XCN_OID_RSA_envelopedData = 25
-	XCN_OID_RSA_signEnvData = 26
-	XCN_OID_RSA_digestedData = 27
-	XCN_OID_RSA_hashedData = 28
-	XCN_OID_RSA_encryptedData = 29
-	XCN_OID_RSA_emailAddr = 30
-	XCN_OID_RSA_unstructName = 31
-	XCN_OID_RSA_contentType = 32
-	XCN_OID_RSA_messageDigest = 33
-	XCN_OID_RSA_signingTime = 34
-	XCN_OID_RSA_counterSign = 35
-	XCN_OID_RSA_challengePwd = 36
-	XCN_OID_RSA_unstructAddr = 37
-	XCN_OID_RSA_extCertAttrs = 38
-	XCN_OID_RSA_certExtensions = 39
-	XCN_OID_RSA_SMIMECapabilities = 40
-	XCN_OID_RSA_preferSignedData = 41
-	XCN_OID_RSA_SMIMEalg = 42
-	XCN_OID_RSA_SMIMEalgESDH = 43
-	XCN_OID_RSA_SMIMEalgCMS3DESwrap = 44
-	XCN_OID_RSA_SMIMEalgCMSRC2wrap = 45
-	XCN_OID_RSA_MD2 = 46
-	XCN_OID_RSA_MD4 = 47
-	XCN_OID_RSA_MD5 = 48
-	XCN_OID_RSA_RC2CBC = 49
-	XCN_OID_RSA_RC4 = 50
-	XCN_OID_RSA_DES_EDE3_CBC = 51
-	XCN_OID_RSA_RC5_CBCPad = 52
-	XCN_OID_ANSI_X942 = 53
-	XCN_OID_ANSI_X942_DH = 54
-	XCN_OID_X957 = 55
-	XCN_OID_X957_DSA = 56
-	XCN_OID_X957_SHA1DSA = 57
-	XCN_OID_DS = 58
-	XCN_OID_DSALG = 59
-	XCN_OID_DSALG_CRPT = 60
-	XCN_OID_DSALG_HASH = 61
-	XCN_OID_DSALG_SIGN = 62
-	XCN_OID_DSALG_RSA = 63
-	XCN_OID_OIW = 64
-	XCN_OID_OIWSEC = 65
-	XCN_OID_OIWSEC_md4RSA = 66
-	XCN_OID_OIWSEC_md5RSA = 67
-	XCN_OID_OIWSEC_md4RSA2 = 68
-	XCN_OID_OIWSEC_desECB = 69
-	XCN_OID_OIWSEC_desCBC = 70
-	XCN_OID_OIWSEC_desOFB = 71
-	XCN_OID_OIWSEC_desCFB = 72
-	XCN_OID_OIWSEC_desMAC = 73
-	XCN_OID_OIWSEC_rsaSign = 74
-	XCN_OID_OIWSEC_dsa = 75
-	XCN_OID_OIWSEC_shaDSA = 76
-	XCN_OID_OIWSEC_mdc2RSA = 77
-	XCN_OID_OIWSEC_shaRSA = 78
-	XCN_OID_OIWSEC_dhCommMod = 79
-	XCN_OID_OIWSEC_desEDE = 80
-	XCN_OID_OIWSEC_sha = 81
-	XCN_OID_OIWSEC_mdc2 = 82
-	XCN_OID_OIWSEC_dsaComm = 83
-	XCN_OID_OIWSEC_dsaCommSHA = 84
-	XCN_OID_OIWSEC_rsaXchg = 85
-	XCN_OID_OIWSEC_keyHashSeal = 86
-	XCN_OID_OIWSEC_md2RSASign = 87
-	XCN_OID_OIWSEC_md5RSASign = 88
-	XCN_OID_OIWSEC_sha1 = 89
-	XCN_OID_OIWSEC_dsaSHA1 = 90
-	XCN_OID_OIWSEC_dsaCommSHA1 = 91
-	XCN_OID_OIWSEC_sha1RSASign = 92
-	XCN_OID_OIWDIR = 93
-	XCN_OID_OIWDIR_CRPT = 94
-	XCN_OID_OIWDIR_HASH = 95
-	XCN_OID_OIWDIR_SIGN = 96
-	XCN_OID_OIWDIR_md2 = 97
-	XCN_OID_OIWDIR_md2RSA = 98
-	XCN_OID_INFOSEC = 99
-	XCN_OID_INFOSEC_sdnsSignature = 100
-	XCN_OID_INFOSEC_mosaicSignature = 101
-	XCN_OID_INFOSEC_sdnsConfidentiality = 102
-	XCN_OID_INFOSEC_mosaicConfidentiality = 103
-	XCN_OID_INFOSEC_sdnsIntegrity = 104
-	XCN_OID_INFOSEC_mosaicIntegrity = 105
-	XCN_OID_INFOSEC_sdnsTokenProtection = 106
-	XCN_OID_INFOSEC_mosaicTokenProtection = 107
-	XCN_OID_INFOSEC_sdnsKeyManagement = 108
-	XCN_OID_INFOSEC_mosaicKeyManagement = 109
-	XCN_OID_INFOSEC_sdnsKMandSig = 110
-	XCN_OID_INFOSEC_mosaicKMandSig = 111
-	XCN_OID_INFOSEC_SuiteASignature = 112
-	XCN_OID_INFOSEC_SuiteAConfidentiality = 113
-	XCN_OID_INFOSEC_SuiteAIntegrity = 114
-	XCN_OID_INFOSEC_SuiteATokenProtection = 115
-	XCN_OID_INFOSEC_SuiteAKeyManagement = 116
-	XCN_OID_INFOSEC_SuiteAKMandSig = 117
-	XCN_OID_INFOSEC_mosaicUpdatedSig = 118
-	XCN_OID_INFOSEC_mosaicKMandUpdSig = 119
-	XCN_OID_INFOSEC_mosaicUpdatedInteg = 120
-	XCN_OID_COMMON_NAME = 121
-	XCN_OID_SUR_NAME = 122
-	XCN_OID_DEVICE_SERIAL_NUMBER = 123
-	XCN_OID_COUNTRY_NAME = 124
-	XCN_OID_LOCALITY_NAME = 125
-	XCN_OID_STATE_OR_PROVINCE_NAME = 126
-	XCN_OID_STREET_ADDRESS = 127
-	XCN_OID_ORGANIZATION_NAME = 128
-	XCN_OID_ORGANIZATIONAL_UNIT_NAME = 129
-	XCN_OID_TITLE = 130
-	XCN_OID_DESCRIPTION = 131
-	XCN_OID_SEARCH_GUIDE = 132
-	XCN_OID_BUSINESS_CATEGORY = 133
-	XCN_OID_POSTAL_ADDRESS = 134
-	XCN_OID_POSTAL_CODE = 135
-	XCN_OID_POST_OFFICE_BOX = 136
-	XCN_OID_PHYSICAL_DELIVERY_OFFICE_NAME = 137
-	XCN_OID_TELEPHONE_NUMBER = 138
-	XCN_OID_TELEX_NUMBER = 139
-	XCN_OID_TELETEXT_TERMINAL_IDENTIFIER = 140
-	XCN_OID_FACSIMILE_TELEPHONE_NUMBER = 141
-	XCN_OID_X21_ADDRESS = 142
-	XCN_OID_INTERNATIONAL_ISDN_NUMBER = 143
-	XCN_OID_REGISTERED_ADDRESS = 144
-	XCN_OID_DESTINATION_INDICATOR = 145
-	XCN_OID_PREFERRED_DELIVERY_METHOD = 146
-	XCN_OID_PRESENTATION_ADDRESS = 147
-	XCN_OID_SUPPORTED_APPLICATION_CONTEXT = 148
-	XCN_OID_MEMBER = 149
-	XCN_OID_OWNER = 150
-	XCN_OID_ROLE_OCCUPANT = 151
-	XCN_OID_SEE_ALSO = 152
-	XCN_OID_USER_PASSWORD = 153
-	XCN_OID_USER_CERTIFICATE = 154
-	XCN_OID_CA_CERTIFICATE = 155
-	XCN_OID_AUTHORITY_REVOCATION_LIST = 156
-	XCN_OID_CERTIFICATE_REVOCATION_LIST = 157
-	XCN_OID_CROSS_CERTIFICATE_PAIR = 158
-	XCN_OID_GIVEN_NAME = 159
-	XCN_OID_INITIALS = 160
-	XCN_OID_DN_QUALIFIER = 161
-	XCN_OID_DOMAIN_COMPONENT = 162
-	XCN_OID_PKCS_12_FRIENDLY_NAME_ATTR = 163
-	XCN_OID_PKCS_12_LOCAL_KEY_ID = 164
-	XCN_OID_PKCS_12_KEY_PROVIDER_NAME_ATTR = 165
-	XCN_OID_LOCAL_MACHINE_KEYSET = 166
-	XCN_OID_PKCS_12_EXTENDED_ATTRIBUTES = 167
-	XCN_OID_KEYID_RDN = 168
-	XCN_OID_AUTHORITY_KEY_IDENTIFIER = 169
-	XCN_OID_KEY_ATTRIBUTES = 170
-	XCN_OID_CERT_POLICIES_95 = 171
-	XCN_OID_KEY_USAGE_RESTRICTION = 172
-	XCN_OID_SUBJECT_ALT_NAME = 173
-	XCN_OID_ISSUER_ALT_NAME = 174
-	XCN_OID_BASIC_CONSTRAINTS = 175
-	XCN_OID_KEY_USAGE = 176
-	XCN_OID_PRIVATEKEY_USAGE_PERIOD = 177
-	XCN_OID_BASIC_CONSTRAINTS2 = 178
-	XCN_OID_CERT_POLICIES = 179
-	XCN_OID_ANY_CERT_POLICY = 180
-	XCN_OID_AUTHORITY_KEY_IDENTIFIER2 = 181
-	XCN_OID_SUBJECT_KEY_IDENTIFIER = 182
-	XCN_OID_SUBJECT_ALT_NAME2 = 183
-	XCN_OID_ISSUER_ALT_NAME2 = 184
-	XCN_OID_CRL_REASON_CODE = 185
-	XCN_OID_REASON_CODE_HOLD = 186
-	XCN_OID_CRL_DIST_POINTS = 187
-	XCN_OID_ENHANCED_KEY_USAGE = 188
-	XCN_OID_CRL_NUMBER = 189
-	XCN_OID_DELTA_CRL_INDICATOR = 190
-	XCN_OID_ISSUING_DIST_POINT = 191
-	XCN_OID_FRESHEST_CRL = 192
-	XCN_OID_NAME_CONSTRAINTS = 193
-	XCN_OID_POLICY_MAPPINGS = 194
-	XCN_OID_LEGACY_POLICY_MAPPINGS = 195
-	XCN_OID_POLICY_CONSTRAINTS = 196
-	XCN_OID_RENEWAL_CERTIFICATE = 197
-	XCN_OID_ENROLLMENT_NAME_VALUE_PAIR = 198
-	XCN_OID_ENROLLMENT_CSP_PROVIDER = 199
-	XCN_OID_OS_VERSION = 200
-	XCN_OID_ENROLLMENT_AGENT = 201
-	XCN_OID_PKIX = 202
-	XCN_OID_PKIX_PE = 203
-	XCN_OID_AUTHORITY_INFO_ACCESS = 204
-	XCN_OID_BIOMETRIC_EXT = 205
-	XCN_OID_LOGOTYPE_EXT = 206
-	XCN_OID_CERT_EXTENSIONS = 207
-	XCN_OID_NEXT_UPDATE_LOCATION = 208
-	XCN_OID_REMOVE_CERTIFICATE = 209
-	XCN_OID_CROSS_CERT_DIST_POINTS = 210
-	XCN_OID_CTL = 211
-	XCN_OID_SORTED_CTL = 212
-	XCN_OID_SERIALIZED = 213
-	XCN_OID_NT_PRINCIPAL_NAME = 214
-	XCN_OID_PRODUCT_UPDATE = 215
-	XCN_OID_ANY_APPLICATION_POLICY = 216
-	XCN_OID_AUTO_ENROLL_CTL_USAGE = 217
-	XCN_OID_ENROLL_CERTTYPE_EXTENSION = 218
-	XCN_OID_CERT_MANIFOLD = 219
-	XCN_OID_CERTSRV_CA_VERSION = 220
-	XCN_OID_CERTSRV_PREVIOUS_CERT_HASH = 221
-	XCN_OID_CRL_VIRTUAL_BASE = 222
-	XCN_OID_CRL_NEXT_PUBLISH = 223
-	XCN_OID_KP_CA_EXCHANGE = 224
-	XCN_OID_KP_KEY_RECOVERY_AGENT = 225
-	XCN_OID_CERTIFICATE_TEMPLATE = 226
-	XCN_OID_ENTERPRISE_OID_ROOT = 227
-	XCN_OID_RDN_DUMMY_SIGNER = 228
-	XCN_OID_APPLICATION_CERT_POLICIES = 229
-	XCN_OID_APPLICATION_POLICY_MAPPINGS = 230
-	XCN_OID_APPLICATION_POLICY_CONSTRAINTS = 231
-	XCN_OID_ARCHIVED_KEY_ATTR = 232
-	XCN_OID_CRL_SELF_CDP = 233
-	XCN_OID_REQUIRE_CERT_CHAIN_POLICY = 234
-	XCN_OID_ARCHIVED_KEY_CERT_HASH = 235
-	XCN_OID_ISSUED_CERT_HASH = 236
-	XCN_OID_DS_EMAIL_REPLICATION = 237
-	XCN_OID_REQUEST_CLIENT_INFO = 238
-	XCN_OID_ENCRYPTED_KEY_HASH = 239
-	XCN_OID_CERTSRV_CROSSCA_VERSION = 240
-	XCN_OID_NTDS_REPLICATION = 241
-	XCN_OID_SUBJECT_DIR_ATTRS = 242
-	XCN_OID_PKIX_KP = 243
-	XCN_OID_PKIX_KP_SERVER_AUTH = 244
-	XCN_OID_PKIX_KP_CLIENT_AUTH = 245
-	XCN_OID_PKIX_KP_CODE_SIGNING = 246
-	XCN_OID_PKIX_KP_EMAIL_PROTECTION = 247
-	XCN_OID_PKIX_KP_IPSEC_END_SYSTEM = 248
-	XCN_OID_PKIX_KP_IPSEC_TUNNEL = 249
-	XCN_OID_PKIX_KP_IPSEC_USER = 250
-	XCN_OID_PKIX_KP_TIMESTAMP_SIGNING = 251
-	XCN_OID_PKIX_KP_OCSP_SIGNING = 252
-	XCN_OID_PKIX_OCSP_NOCHECK = 253
-	XCN_OID_IPSEC_KP_IKE_INTERMEDIATE = 254
-	XCN_OID_KP_CTL_USAGE_SIGNING = 255
-	XCN_OID_KP_TIME_STAMP_SIGNING = 256
-	XCN_OID_SERVER_GATED_CRYPTO = 257
-	XCN_OID_SGC_NETSCAPE = 258
-	XCN_OID_KP_EFS = 259
-	XCN_OID_EFS_RECOVERY = 260
-	XCN_OID_WHQL_CRYPTO = 261
-	XCN_OID_NT5_CRYPTO = 262
-	XCN_OID_OEM_WHQL_CRYPTO = 263
-	XCN_OID_EMBEDDED_NT_CRYPTO = 264
-	XCN_OID_ROOT_LIST_SIGNER = 265
-	XCN_OID_KP_QUALIFIED_SUBORDINATION = 266
-	XCN_OID_KP_KEY_RECOVERY = 267
-	XCN_OID_KP_DOCUMENT_SIGNING = 268
-	XCN_OID_KP_LIFETIME_SIGNING = 269
-	XCN_OID_KP_MOBILE_DEVICE_SOFTWARE = 270
-	XCN_OID_KP_SMART_DISPLAY = 271
-	XCN_OID_KP_CSP_SIGNATURE = 272
-	XCN_OID_DRM = 273
-	XCN_OID_DRM_INDIVIDUALIZATION = 274
-	XCN_OID_LICENSES = 275
-	XCN_OID_LICENSE_SERVER = 276
-	XCN_OID_KP_SMARTCARD_LOGON = 277
-	XCN_OID_YESNO_TRUST_ATTR = 278
-	XCN_OID_PKIX_POLICY_QUALIFIER_CPS = 279
-	XCN_OID_PKIX_POLICY_QUALIFIER_USERNOTICE = 280
-	XCN_OID_CERT_POLICIES_95_QUALIFIER1 = 281
-	XCN_OID_PKIX_ACC_DESCR = 282
-	XCN_OID_PKIX_OCSP = 283
-	XCN_OID_PKIX_CA_ISSUERS = 284
-	XCN_OID_VERISIGN_PRIVATE_6_9 = 285
-	XCN_OID_VERISIGN_ONSITE_JURISDICTION_HASH = 286
-	XCN_OID_VERISIGN_BITSTRING_6_13 = 287
-	XCN_OID_VERISIGN_ISS_STRONG_CRYPTO = 288
-	XCN_OID_NETSCAPE = 289
-	XCN_OID_NETSCAPE_CERT_EXTENSION = 290
-	XCN_OID_NETSCAPE_CERT_TYPE = 291
-	XCN_OID_NETSCAPE_BASE_URL = 292
-	XCN_OID_NETSCAPE_REVOCATION_URL = 293
-	XCN_OID_NETSCAPE_CA_REVOCATION_URL = 294
-	XCN_OID_NETSCAPE_CERT_RENEWAL_URL = 295
-	XCN_OID_NETSCAPE_CA_POLICY_URL = 296
-	XCN_OID_NETSCAPE_SSL_SERVER_NAME = 297
-	XCN_OID_NETSCAPE_COMMENT = 298
-	XCN_OID_NETSCAPE_DATA_TYPE = 299
-	XCN_OID_NETSCAPE_CERT_SEQUENCE = 300
-	XCN_OID_CT_PKI_DATA = 301
-	XCN_OID_CT_PKI_RESPONSE = 302
-	XCN_OID_PKIX_NO_SIGNATURE = 303
-	XCN_OID_CMC = 304
-	XCN_OID_CMC_STATUS_INFO = 305
-	XCN_OID_CMC_IDENTIFICATION = 306
-	XCN_OID_CMC_IDENTITY_PROOF = 307
-	XCN_OID_CMC_DATA_RETURN = 308
-	XCN_OID_CMC_TRANSACTION_ID = 309
-	XCN_OID_CMC_SENDER_NONCE = 310
-	XCN_OID_CMC_RECIPIENT_NONCE = 311
-	XCN_OID_CMC_ADD_EXTENSIONS = 312
-	XCN_OID_CMC_ENCRYPTED_POP = 313
-	XCN_OID_CMC_DECRYPTED_POP = 314
-	XCN_OID_CMC_LRA_POP_WITNESS = 315
-	XCN_OID_CMC_GET_CERT = 316
-	XCN_OID_CMC_GET_CRL = 317
-	XCN_OID_CMC_REVOKE_REQUEST = 318
-	XCN_OID_CMC_REG_INFO = 319
-	XCN_OID_CMC_RESPONSE_INFO = 320
-	XCN_OID_CMC_QUERY_PENDING = 321
-	XCN_OID_CMC_ID_POP_LINK_RANDOM = 322
-	XCN_OID_CMC_ID_POP_LINK_WITNESS = 323
-	XCN_OID_CMC_ID_CONFIRM_CERT_ACCEPTANCE = 324
-	XCN_OID_CMC_ADD_ATTRIBUTES = 325
-	XCN_OID_LOYALTY_OTHER_LOGOTYPE = 326
-	XCN_OID_BACKGROUND_OTHER_LOGOTYPE = 327
-	XCN_OID_PKIX_OCSP_BASIC_SIGNED_RESPONSE = 328
-	XCN_OID_PKCS_7_DATA = 329
-	XCN_OID_PKCS_7_SIGNED = 330
-	XCN_OID_PKCS_7_ENVELOPED = 331
-	XCN_OID_PKCS_7_SIGNEDANDENVELOPED = 332
-	XCN_OID_PKCS_7_DIGESTED = 333
-	XCN_OID_PKCS_7_ENCRYPTED = 334
-	XCN_OID_PKCS_9_CONTENT_TYPE = 335
-	XCN_OID_PKCS_9_MESSAGE_DIGEST = 336
-	XCN_OID_CERT_PROP_ID_PREFIX = 337
-	XCN_OID_CERT_KEY_IDENTIFIER_PROP_ID = 338
-	XCN_OID_CERT_ISSUER_SERIAL_NUMBER_MD5_HASH_PROP_ID = 339
-	XCN_OID_CERT_SUBJECT_NAME_MD5_HASH_PROP_ID = 340
-	XCN_OID_CERT_MD5_HASH_PROP_ID = 341
-	XCN_OID_RSA_SHA256RSA = 342
-	XCN_OID_RSA_SHA384RSA = 343
-	XCN_OID_RSA_SHA512RSA = 344
-	XCN_OID_NIST_sha256 = 345
-	XCN_OID_NIST_sha384 = 346
-	XCN_OID_NIST_sha512 = 347
-	XCN_OID_RSA_MGF1 = 348
-	XCN_OID_ECC_PUBLIC_KEY = 349
-	XCN_OID_ECDSA_SHA1 = 350
-	XCN_OID_ECDSA_SPECIFIED = 351
-	XCN_OID_ANY_ENHANCED_KEY_USAGE = 352
-	XCN_OID_RSA_SSA_PSS = 353
-	XCN_OID_ATTR_SUPPORTED_ALGORITHMS = 355
-	XCN_OID_ATTR_TPM_SECURITY_ASSERTIONS = 356
-	XCN_OID_ATTR_TPM_SPECIFICATION = 357
-	XCN_OID_CERT_DISALLOWED_FILETIME_PROP_ID = 358
-	XCN_OID_CERT_SIGNATURE_HASH_PROP_ID = 359
-	XCN_OID_CERT_STRONG_KEY_OS_1 = 360
-	XCN_OID_CERT_STRONG_KEY_OS_CURRENT = 361
-	XCN_OID_CERT_STRONG_KEY_OS_PREFIX = 362
-	XCN_OID_CERT_STRONG_SIGN_OS_1 = 363
-	XCN_OID_CERT_STRONG_SIGN_OS_CURRENT = 364
-	XCN_OID_CERT_STRONG_SIGN_OS_PREFIX = 365
-	XCN_OID_DH_SINGLE_PASS_STDDH_SHA1_KDF = 366
-	XCN_OID_DH_SINGLE_PASS_STDDH_SHA256_KDF = 367
-	XCN_OID_DH_SINGLE_PASS_STDDH_SHA384_KDF = 368
-	XCN_OID_DISALLOWED_HASH = 369
-	XCN_OID_DISALLOWED_LIST = 370
-	XCN_OID_ECC_CURVE_P256 = 371
-	XCN_OID_ECC_CURVE_P384 = 372
-	XCN_OID_ECC_CURVE_P521 = 373
-	XCN_OID_ECDSA_SHA256 = 374
-	XCN_OID_ECDSA_SHA384 = 375
-	XCN_OID_ECDSA_SHA512 = 376
-	XCN_OID_ENROLL_CAXCHGCERT_HASH = 377
-	XCN_OID_ENROLL_EK_INFO = 378
-	XCN_OID_ENROLL_EKPUB_CHALLENGE = 379
-	XCN_OID_ENROLL_EKVERIFYCERT = 380
-	XCN_OID_ENROLL_EKVERIFYCREDS = 381
-	XCN_OID_ENROLL_EKVERIFYKEY = 382
-	XCN_OID_EV_RDN_COUNTRY = 383
-	XCN_OID_EV_RDN_LOCALE = 384
-	XCN_OID_EV_RDN_STATE_OR_PROVINCE = 385
-	XCN_OID_INHIBIT_ANY_POLICY = 386
-	XCN_OID_INTERNATIONALIZED_EMAIL_ADDRESS = 387
-	XCN_OID_KP_KERNEL_MODE_CODE_SIGNING = 388
-	XCN_OID_KP_KERNEL_MODE_HAL_EXTENSION_SIGNING = 389
-	XCN_OID_KP_KERNEL_MODE_TRUSTED_BOOT_SIGNING = 390
-	XCN_OID_KP_TPM_AIK_CERTIFICATE = 391
-	XCN_OID_KP_TPM_EK_CERTIFICATE = 392
-	XCN_OID_KP_TPM_PLATFORM_CERTIFICATE = 393
-	XCN_OID_NIST_AES128_CBC = 394
-	XCN_OID_NIST_AES128_WRAP = 395
-	XCN_OID_NIST_AES192_CBC = 396
-	XCN_OID_NIST_AES192_WRAP = 397
-	XCN_OID_NIST_AES256_CBC = 398
-	XCN_OID_NIST_AES256_WRAP = 399
-	XCN_OID_PKCS_12_PbeIds = 400
-	XCN_OID_PKCS_12_pbeWithSHA1And128BitRC2 = 401
-	XCN_OID_PKCS_12_pbeWithSHA1And128BitRC4 = 402
-	XCN_OID_PKCS_12_pbeWithSHA1And2KeyTripleDES = 403
-	XCN_OID_PKCS_12_pbeWithSHA1And3KeyTripleDES = 404
-	XCN_OID_PKCS_12_pbeWithSHA1And40BitRC2 = 405
-	XCN_OID_PKCS_12_pbeWithSHA1And40BitRC4 = 406
-	XCN_OID_PKCS_12_PROTECTED_PASSWORD_SECRET_BAG_TYPE_ID = 407
-	XCN_OID_PKINIT_KP_KDC = 408
-	XCN_OID_PKIX_CA_REPOSITORY = 409
-	XCN_OID_PKIX_OCSP_NONCE = 410
-	XCN_OID_PKIX_TIME_STAMPING = 411
-	XCN_OID_QC_EU_COMPLIANCE = 412
-	XCN_OID_QC_SSCD = 413
-	XCN_OID_QC_STATEMENTS_EXT = 414
-	XCN_OID_RDN_TPM_MANUFACTURER = 415
-	XCN_OID_RDN_TPM_MODEL = 416
-	XCN_OID_RDN_TPM_VERSION = 417
-	XCN_OID_REVOKED_LIST_SIGNER = 418
-	XCN_OID_RFC3161_counterSign = 419
-	XCN_OID_ROOT_PROGRAM_AUTO_UPDATE_CA_REVOCATION = 420
-	XCN_OID_ROOT_PROGRAM_AUTO_UPDATE_END_REVOCATION = 421
-	XCN_OID_ROOT_PROGRAM_FLAGS = 422
-	XCN_OID_ROOT_PROGRAM_NO_OCSP_FAILOVER_TO_CRL = 423
-	XCN_OID_RSA_PSPECIFIED = 424
-	XCN_OID_RSAES_OAEP = 425
-	XCN_OID_SUBJECT_INFO_ACCESS = 426
-	XCN_OID_TIMESTAMP_TOKEN = 427
-	XCN_OID_ENROLL_SCEP_ERROR = 428
-	XCN_OIDVerisign_MessageType = 429
-	XCN_OIDVerisign_PkiStatus = 430
-	XCN_OIDVerisign_FailInfo = 431
-	XCN_OIDVerisign_SenderNonce = 432
-	XCN_OIDVerisign_RecipientNonce = 433
-	XCN_OIDVerisign_TransactionID = 434
-	XCN_OID_ENROLL_ATTESTATION_CHALLENGE = 435
-	XCN_OID_ENROLL_ATTESTATION_STATEMENT = 436
-	XCN_OID_ENROLL_ENCRYPTION_ALGORITHM = 437
-	XCN_OID_ENROLL_KSP_NAME = 438
+	XCN_OID_NONE                                          CERTENROLL_OBJECTID = 0
+	XCN_OID_RSA                                           CERTENROLL_OBJECTID = 1
+	XCN_OID_PKCS                                          CERTENROLL_OBJECTID = 2
+	XCN_OID_RSA_HASH                                      CERTENROLL_OBJECTID = 3
+	XCN_OID_RSA_ENCRYPT                                   CERTENROLL_OBJECTID = 4
+	XCN_OID_PKCS_1                                        CERTENROLL_OBJECTID = 5
+	XCN_OID_PKCS_2                                        CERTENROLL_OBJECTID = 6
+	XCN_OID_PKCS_3                                        CERTENROLL_OBJECTID = 7
+	XCN_OID_PKCS_4                                        CERTENROLL_OBJECTID = 8
+	XCN_OID_PKCS_5                                        CERTENROLL_OBJECTID = 9
+	XCN_OID_PKCS_6                                        CERTENROLL_OBJECTID = 10
+	XCN_OID_PKCS_7                                        CERTENROLL_OBJECTID = 11
+	XCN_OID_PKCS_8                                        CERTENROLL_OBJECTID = 12
+	XCN_OID_PKCS_9                                        CERTENROLL_OBJECTID = 13
+	XCN_OID_PKCS_10                                       CERTENROLL_OBJECTID = 14
+	XCN_OID_PKCS_12                                       CERTENROLL_OBJECTID = 15
+	XCN_OID_RSA_RSA                                       CERTENROLL_OBJECTID = 16
+	XCN_OID_RSA_MD2RSA                                    CERTENROLL_OBJECTID = 17
+	XCN_OID_RSA_MD4RSA                                    CERTENROLL_OBJECTID = 18
+	XCN_OID_RSA_MD5RSA                                    CERTENROLL_OBJECTID = 19
+	XCN_OID_RSA_SHA1RSA                                   CERTENROLL_OBJECTID = 20
+	XCN_OID_RSA_SETOAEP_RSA                               CERTENROLL_OBJECTID = 21
+	XCN_OID_RSA_DH                                        CERTENROLL_OBJECTID = 22
+	XCN_OID_RSA_data                                      CERTENROLL_OBJECTID = 23
+	XCN_OID_RSA_signedData                                CERTENROLL_OBJECTID = 24
+	XCN_OID_RSA_envelopedData                             CERTENROLL_OBJECTID = 25
+	XCN_OID_RSA_signEnvData                               CERTENROLL_OBJECTID = 26
+	XCN_OID_RSA_digestedData                              CERTENROLL_OBJECTID = 27
+	XCN_OID_RSA_hashedData                                CERTENROLL_OBJECTID = 28
+	XCN_OID_RSA_encryptedData                             CERTENROLL_OBJECTID = 29
+	XCN_OID_RSA_emailAddr                                 CERTENROLL_OBJECTID = 30
+	XCN_OID_RSA_unstructName                              CERTENROLL_OBJECTID = 31
+	XCN_OID_RSA_contentType                               CERTENROLL_OBJECTID = 32
+	XCN_OID_RSA_messageDigest                             CERTENROLL_OBJECTID = 33
+	XCN_OID_RSA_signingTime                               CERTENROLL_OBJECTID = 34
+	XCN_OID_RSA_counterSign                               CERTENROLL_OBJECTID = 35
+	XCN_OID_RSA_challengePwd                              CERTENROLL_OBJECTID = 36
+	XCN_OID_RSA_unstructAddr                              CERTENROLL_OBJECTID = 37
+	XCN_OID_RSA_extCertAttrs                              CERTENROLL_OBJECTID = 38
+	XCN_OID_RSA_certExtensions                            CERTENROLL_OBJECTID = 39
+	XCN_OID_RSA_SMIMECapabilities                         CERTENROLL_OBJECTID = 40
+	XCN_OID_RSA_preferSignedData                          CERTENROLL_OBJECTID = 41
+	XCN_OID_RSA_SMIMEalg                                  CERTENROLL_OBJECTID = 42
+	XCN_OID_RSA_SMIMEalgESDH                              CERTENROLL_OBJECTID = 43
+	XCN_OID_RSA_SMIMEalgCMS3DESwrap                       CERTENROLL_OBJECTID = 44
+	XCN_OID_RSA_SMIMEalgCMSRC2wrap                        CERTENROLL_OBJECTID = 45
+	XCN_OID_RSA_MD2                                       CERTENROLL_OBJECTID = 46
+	XCN_OID_RSA_MD4                                       CERTENROLL_OBJECTID = 47
+	XCN_OID_RSA_MD5                                       CERTENROLL_OBJECTID = 48
+	XCN_OID_RSA_RC2CBC                                    CERTENROLL_OBJECTID = 49
+	XCN_OID_RSA_RC4                                       CERTENROLL_OBJECTID = 50
+	XCN_OID_RSA_DES_EDE3_CBC                              CERTENROLL_OBJECTID = 51
+	XCN_OID_RSA_RC5_CBCPad                                CERTENROLL_OBJECTID = 52
+	XCN_OID_ANSI_X942                                     CERTENROLL_OBJECTID = 53
+	XCN_OID_ANSI_X942_DH                                  CERTENROLL_OBJECTID = 54
+	XCN_OID_X957                                          CERTENROLL_OBJECTID = 55
+	XCN_OID_X957_DSA                                      CERTENROLL_OBJECTID = 56
+	XCN_OID_X957_SHA1DSA                                  CERTENROLL_OBJECTID = 57
+	XCN_OID_DS                                            CERTENROLL_OBJECTID = 58
+	XCN_OID_DSALG                                         CERTENROLL_OBJECTID = 59
+	XCN_OID_DSALG_CRPT                                    CERTENROLL_OBJECTID = 60
+	XCN_OID_DSALG_HASH                                    CERTENROLL_OBJECTID = 61
+	XCN_OID_DSALG_SIGN                                    CERTENROLL_OBJECTID = 62
+	XCN_OID_DSALG_RSA                                     CERTENROLL_OBJECTID = 63
+	XCN_OID_OIW                                           CERTENROLL_OBJECTID = 64
+	XCN_OID_OIWSEC                                        CERTENROLL_OBJECTID = 65
+	XCN_OID_OIWSEC_md4RSA                                 CERTENROLL_OBJECTID = 66
+	XCN_OID_OIWSEC_md5RSA                                 CERTENROLL_OBJECTID = 67
+	XCN_OID_OIWSEC_md4RSA2                                CERTENROLL_OBJECTID = 68
+	XCN_OID_OIWSEC_desECB                                 CERTENROLL_OBJECTID = 69
+	XCN_OID_OIWSEC_desCBC                                 CERTENROLL_OBJECTID = 70
+	XCN_OID_OIWSEC_desOFB                                 CERTENROLL_OBJECTID = 71
+	XCN_OID_OIWSEC_desCFB                                 CERTENROLL_OBJECTID = 72
+	XCN_OID_OIWSEC_desMAC                                 CERTENROLL_OBJECTID = 73
+	XCN_OID_OIWSEC_rsaSign                                CERTENROLL_OBJECTID = 74
+	XCN_OID_OIWSEC_dsa                                    CERTENROLL_OBJECTID = 75
+	XCN_OID_OIWSEC_shaDSA                                 CERTENROLL_OBJECTID = 76
+	XCN_OID_OIWSEC_mdc2RSA                                CERTENROLL_OBJECTID = 77
+	XCN_OID_OIWSEC_shaRSA                                 CERTENROLL_OBJECTID = 78
+	XCN_OID_OIWSEC_dhCommMod                              CERTENROLL_OBJECTID = 79
+	XCN_OID_OIWSEC_desEDE                                 CERTENROLL_OBJECTID = 80
+	XCN_OID_OIWSEC_sha                                    CERTENROLL_OBJECTID = 81
+	XCN_OID_OIWSEC_mdc2                                   CERTENROLL_OBJECTID = 82
+	XCN_OID_OIWSEC_dsaComm                                CERTENROLL_OBJECTID = 83
+	XCN_OID_OIWSEC_dsaCommSHA                             CERTENROLL_OBJECTID = 84
+	XCN_OID_OIWSEC_rsaXchg                                CERTENROLL_OBJECTID = 85
+	XCN_OID_OIWSEC_keyHashSeal                            CERTENROLL_OBJECTID = 86
+	XCN_OID_OIWSEC_md2RSASign                             CERTENROLL_OBJECTID = 87
+	XCN_OID_OIWSEC_md5RSASign                             CERTENROLL_OBJECTID = 88
+	XCN_OID_OIWSEC_sha1                                   CERTENROLL_OBJECTID = 89
+	XCN_OID_OIWSEC_dsaSHA1                                CERTENROLL_OBJECTID = 90
+	XCN_OID_OIWSEC_dsaCommSHA1                            CERTENROLL_OBJECTID = 91
+	XCN_OID_OIWSEC_sha1RSASign                            CERTENROLL_OBJECTID = 92
+	XCN_OID_OIWDIR                                        CERTENROLL_OBJECTID = 93
+	XCN_OID_OIWDIR_CRPT                                   CERTENROLL_OBJECTID = 94
+	XCN_OID_OIWDIR_HASH                                   CERTENROLL_OBJECTID = 95
+	XCN_OID_OIWDIR_SIGN                                   CERTENROLL_OBJECTID = 96
+	XCN_OID_OIWDIR_md2                                    CERTENROLL_OBJECTID = 97
+	XCN_OID_OIWDIR_md2RSA                                 CERTENROLL_OBJECTID = 98
+	XCN_OID_INFOSEC                                       CERTENROLL_OBJECTID = 99
+	XCN_OID_INFOSEC_sdnsSignature                         CERTENROLL_OBJECTID = 100
+	XCN_OID_INFOSEC_mosaicSignature                       CERTENROLL_OBJECTID = 101
+	XCN_OID_INFOSEC_sdnsConfidentiality                   CERTENROLL_OBJECTID = 102
+	XCN_OID_INFOSEC_mosaicConfidentiality                 CERTENROLL_OBJECTID = 103
+	XCN_OID_INFOSEC_sdnsIntegrity                         CERTENROLL_OBJECTID = 104
+	XCN_OID_INFOSEC_mosaicIntegrity                       CERTENROLL_OBJECTID = 105
+	XCN_OID_INFOSEC_sdnsTokenProtection                   CERTENROLL_OBJECTID = 106
+	XCN_OID_INFOSEC_mosaicTokenProtection                 CERTENROLL_OBJECTID = 107
+	XCN_OID_INFOSEC_sdnsKeyManagement                     CERTENROLL_OBJECTID = 108
+	XCN_OID_INFOSEC_mosaicKeyManagement                   CERTENROLL_OBJECTID = 109
+	XCN_OID_INFOSEC_sdnsKMandSig                          CERTENROLL_OBJECTID = 110
+	XCN_OID_INFOSEC_mosaicKMandSig                        CERTENROLL_OBJECTID = 111
+	XCN_OID_INFOSEC_SuiteASignature                       CERTENROLL_OBJECTID = 112
+	XCN_OID_INFOSEC_SuiteAConfidentiality                 CERTENROLL_OBJECTID = 113
+	XCN_OID_INFOSEC_SuiteAIntegrity                       CERTENROLL_OBJECTID = 114
+	XCN_OID_INFOSEC_SuiteATokenProtection                 CERTENROLL_OBJECTID = 115
+	XCN_OID_INFOSEC_SuiteAKeyManagement                   CERTENROLL_OBJECTID = 116
+	XCN_OID_INFOSEC_SuiteAKMandSig                        CERTENROLL_OBJECTID = 117
+	XCN_OID_INFOSEC_mosaicUpdatedSig                      CERTENROLL_OBJECTID = 118
+	XCN_OID_INFOSEC_mosaicKMandUpdSig                     CERTENROLL_OBJECTID = 119
+	XCN_OID_INFOSEC_mosaicUpdatedInteg                    CERTENROLL_OBJECTID = 120
+	XCN_OID_COMMON_NAME                                   CERTENROLL_OBJECTID = 121
+	XCN_OID_SUR_NAME                                      CERTENROLL_OBJECTID = 122
+	XCN_OID_DEVICE_SERIAL_NUMBER                          CERTENROLL_OBJECTID = 123
+	XCN_OID_COUNTRY_NAME                                  CERTENROLL_OBJECTID = 124
+	XCN_OID_LOCALITY_NAME                                 CERTENROLL_OBJECTID = 125
+	XCN_OID_STATE_OR_PROVINCE_NAME                        CERTENROLL_OBJECTID = 126
+	XCN_OID_STREET_ADDRESS                                CERTENROLL_OBJECTID = 127
+	XCN_OID_ORGANIZATION_NAME                             CERTENROLL_OBJECTID = 128
+	XCN_OID_ORGANIZATIONAL_UNIT_NAME                      CERTENROLL_OBJECTID = 129
+	XCN_OID_TITLE                                         CERTENROLL_OBJECTID = 130
+	XCN_OID_DESCRIPTION                                   CERTENROLL_OBJECTID = 131
+	XCN_OID_SEARCH_GUIDE                                  CERTENROLL_OBJECTID = 132
+	XCN_OID_BUSINESS_CATEGORY                             CERTENROLL_OBJECTID = 133
+	XCN_OID_POSTAL_ADDRESS                                CERTENROLL_OBJECTID = 134
+	XCN_OID_POSTAL_CODE                                   CERTENROLL_OBJECTID = 135
+	XCN_OID_POST_OFFICE_BOX                               CERTENROLL_OBJECTID = 136
+	XCN_OID_PHYSICAL_DELIVERY_OFFICE_NAME                 CERTENROLL_OBJECTID = 137
+	XCN_OID_TELEPHONE_NUMBER                              CERTENROLL_OBJECTID = 138
+	XCN_OID_TELEX_NUMBER                                  CERTENROLL_OBJECTID = 139
+	XCN_OID_TELETEXT_TERMINAL_IDENTIFIER                  CERTENROLL_OBJECTID = 140
+	XCN_OID_FACSIMILE_TELEPHONE_NUMBER                    CERTENROLL_OBJECTID = 141
+	XCN_OID_X21_ADDRESS                                   CERTENROLL_OBJECTID = 142
+	XCN_OID_INTERNATIONAL_ISDN_NUMBER                     CERTENROLL_OBJECTID = 143
+	XCN_OID_REGISTERED_ADDRESS                            CERTENROLL_OBJECTID = 144
+	XCN_OID_DESTINATION_INDICATOR                         CERTENROLL_OBJECTID = 145
+	XCN_OID_PREFERRED_DELIVERY_METHOD                     CERTENROLL_OBJECTID = 146
+	XCN_OID_PRESENTATION_ADDRESS                          CERTENROLL_OBJECTID = 147
+	XCN_OID_SUPPORTED_APPLICATION_CONTEXT                 CERTENROLL_OBJECTID = 148
+	XCN_OID_MEMBER                                        CERTENROLL_OBJECTID = 149
+	XCN_OID_OWNER                                         CERTENROLL_OBJECTID = 150
+	XCN_OID_ROLE_OCCUPANT                                 CERTENROLL_OBJECTID = 151
+	XCN_OID_SEE_ALSO                                      CERTENROLL_OBJECTID = 152
+	XCN_OID_USER_PASSWORD                                 CERTENROLL_OBJECTID = 153
+	XCN_OID_USER_CERTIFICATE                              CERTENROLL_OBJECTID = 154
+	XCN_OID_CA_CERTIFICATE                                CERTENROLL_OBJECTID = 155
+	XCN_OID_AUTHORITY_REVOCATION_LIST                     CERTENROLL_OBJECTID = 156
+	XCN_OID_CERTIFICATE_REVOCATION_LIST                   CERTENROLL_OBJECTID = 157
+	XCN_OID_CROSS_CERTIFICATE_PAIR                        CERTENROLL_OBJECTID = 158
+	XCN_OID_GIVEN_NAME                                    CERTENROLL_OBJECTID = 159
+	XCN_OID_INITIALS                                      CERTENROLL_OBJECTID = 160
+	XCN_OID_DN_QUALIFIER                                  CERTENROLL_OBJECTID = 161
+	XCN_OID_DOMAIN_COMPONENT                              CERTENROLL_OBJECTID = 162
+	XCN_OID_PKCS_12_FRIENDLY_NAME_ATTR                    CERTENROLL_OBJECTID = 163
+	XCN_OID_PKCS_12_LOCAL_KEY_ID                          CERTENROLL_OBJECTID = 164
+	XCN_OID_PKCS_12_KEY_PROVIDER_NAME_ATTR                CERTENROLL_OBJECTID = 165
+	XCN_OID_LOCAL_MACHINE_KEYSET                          CERTENROLL_OBJECTID = 166
+	XCN_OID_PKCS_12_EXTENDED_ATTRIBUTES                   CERTENROLL_OBJECTID = 167
+	XCN_OID_KEYID_RDN                                     CERTENROLL_OBJECTID = 168
+	XCN_OID_AUTHORITY_KEY_IDENTIFIER                      CERTENROLL_OBJECTID = 169
+	XCN_OID_KEY_ATTRIBUTES                                CERTENROLL_OBJECTID = 170
+	XCN_OID_CERT_POLICIES_95                              CERTENROLL_OBJECTID = 171
+	XCN_OID_KEY_USAGE_RESTRICTION                         CERTENROLL_OBJECTID = 172
+	XCN_OID_SUBJECT_ALT_NAME                              CERTENROLL_OBJECTID = 173
+	XCN_OID_ISSUER_ALT_NAME                               CERTENROLL_OBJECTID = 174
+	XCN_OID_BASIC_CONSTRAINTS                             CERTENROLL_OBJECTID = 175
+	XCN_OID_KEY_USAGE                                     CERTENROLL_OBJECTID = 176
+	XCN_OID_PRIVATEKEY_USAGE_PERIOD                       CERTENROLL_OBJECTID = 177
+	XCN_OID_BASIC_CONSTRAINTS2                            CERTENROLL_OBJECTID = 178
+	XCN_OID_CERT_POLICIES                                 CERTENROLL_OBJECTID = 179
+	XCN_OID_ANY_CERT_POLICY                               CERTENROLL_OBJECTID = 180
+	XCN_OID_AUTHORITY_KEY_IDENTIFIER2                     CERTENROLL_OBJECTID = 181
+	XCN_OID_SUBJECT_KEY_IDENTIFIER                        CERTENROLL_OBJECTID = 182
+	XCN_OID_SUBJECT_ALT_NAME2                             CERTENROLL_OBJECTID = 183
+	XCN_OID_ISSUER_ALT_NAME2                              CERTENROLL_OBJECTID = 184
+	XCN_OID_CRL_REASON_CODE                               CERTENROLL_OBJECTID = 185
+	XCN_OID_REASON_CODE_HOLD                              CERTENROLL_OBJECTID = 186
+	XCN_OID_CRL_DIST_POINTS                               CERTENROLL_OBJECTID = 187
+	XCN_OID_ENHANCED_KEY_USAGE                            CERTENROLL_OBJECTID = 188
+	XCN_OID_CRL_NUMBER                                    CERTENROLL_OBJECTID = 189
+	XCN_OID_DELTA_CRL_INDICATOR                           CERTENROLL_OBJECTID = 190
+	XCN_OID_ISSUING_DIST_POINT                            CERTENROLL_OBJECTID = 191
+	XCN_OID_FRESHEST_CRL                                  CERTENROLL_OBJECTID = 192
+	XCN_OID_NAME_CONSTRAINTS                              CERTENROLL_OBJECTID = 193
+	XCN_OID_POLICY_MAPPINGS                               CERTENROLL_OBJECTID = 194
+	XCN_OID_LEGACY_POLICY_MAPPINGS                        CERTENROLL_OBJECTID = 195
+	XCN_OID_POLICY_CONSTRAINTS                            CERTENROLL_OBJECTID = 196
+	XCN_OID_RENEWAL_CERTIFICATE                           CERTENROLL_OBJECTID = 197
+	XCN_OID_ENROLLMENT_NAME_VALUE_PAIR                    CERTENROLL_OBJECTID = 198
+	XCN_OID_ENROLLMENT_CSP_PROVIDER                       CERTENROLL_OBJECTID = 199
+	XCN_OID_OS_VERSION                                    CERTENROLL_OBJECTID = 200
+	XCN_OID_ENROLLMENT_AGENT                              CERTENROLL_OBJECTID = 201
+	XCN_OID_PKIX                                          CERTENROLL_OBJECTID = 202
+	XCN_OID_PKIX_PE                                       CERTENROLL_OBJECTID = 203
+	XCN_OID_AUTHORITY_INFO_ACCESS                         CERTENROLL_OBJECTID = 204
+	XCN_OID_BIOMETRIC_EXT                                 CERTENROLL_OBJECTID = 205
+	XCN_OID_LOGOTYPE_EXT                                  CERTENROLL_OBJECTID = 206
+	XCN_OID_CERT_EXTENSIONS                               CERTENROLL_OBJECTID = 207
+	XCN_OID_NEXT_UPDATE_LOCATION                          CERTENROLL_OBJECTID = 208
+	XCN_OID_REMOVE_CERTIFICATE                            CERTENROLL_OBJECTID = 209
+	XCN_OID_CROSS_CERT_DIST_POINTS                        CERTENROLL_OBJECTID = 210
+	XCN_OID_CTL                                           CERTENROLL_OBJECTID = 211
+	XCN_OID_SORTED_CTL                                    CERTENROLL_OBJECTID = 212
+	XCN_OID_SERIALIZED                                    CERTENROLL_OBJECTID = 213
+	XCN_OID_NT_PRINCIPAL_NAME                             CERTENROLL_OBJECTID = 214
+	XCN_OID_PRODUCT_UPDATE                                CERTENROLL_OBJECTID = 215
+	XCN_OID_ANY_APPLICATION_POLICY                        CERTENROLL_OBJECTID = 216
+	XCN_OID_AUTO_ENROLL_CTL_USAGE                         CERTENROLL_OBJECTID = 217
+	XCN_OID_ENROLL_CERTTYPE_EXTENSION                     CERTENROLL_OBJECTID = 218
+	XCN_OID_CERT_MANIFOLD                                 CERTENROLL_OBJECTID = 219
+	XCN_OID_CERTSRV_CA_VERSION                            CERTENROLL_OBJECTID = 220
+	XCN_OID_CERTSRV_PREVIOUS_CERT_HASH                    CERTENROLL_OBJECTID = 221
+	XCN_OID_CRL_VIRTUAL_BASE                              CERTENROLL_OBJECTID = 222
+	XCN_OID_CRL_NEXT_PUBLISH                              CERTENROLL_OBJECTID = 223
+	XCN_OID_KP_CA_EXCHANGE                                CERTENROLL_OBJECTID = 224
+	XCN_OID_KP_KEY_RECOVERY_AGENT                         CERTENROLL_OBJECTID = 225
+	XCN_OID_CERTIFICATE_TEMPLATE                          CERTENROLL_OBJECTID = 226
+	XCN_OID_ENTERPRISE_OID_ROOT                           CERTENROLL_OBJECTID = 227
+	XCN_OID_RDN_DUMMY_SIGNER                              CERTENROLL_OBJECTID = 228
+	XCN_OID_APPLICATION_CERT_POLICIES                     CERTENROLL_OBJECTID = 229
+	XCN_OID_APPLICATION_POLICY_MAPPINGS                   CERTENROLL_OBJECTID = 230
+	XCN_OID_APPLICATION_POLICY_CONSTRAINTS                CERTENROLL_OBJECTID = 231
+	XCN_OID_ARCHIVED_KEY_ATTR                             CERTENROLL_OBJECTID = 232
+	XCN_OID_CRL_SELF_CDP                                  CERTENROLL_OBJECTID = 233
+	XCN_OID_REQUIRE_CERT_CHAIN_POLICY                     CERTENROLL_OBJECTID = 234
+	XCN_OID_ARCHIVED_KEY_CERT_HASH                        CERTENROLL_OBJECTID = 235
+	XCN_OID_ISSUED_CERT_HASH                              CERTENROLL_OBJECTID = 236
+	XCN_OID_DS_EMAIL_REPLICATION                          CERTENROLL_OBJECTID = 237
+	XCN_OID_REQUEST_CLIENT_INFO                           CERTENROLL_OBJECTID = 238
+	XCN_OID_ENCRYPTED_KEY_HASH                            CERTENROLL_OBJECTID = 239
+	XCN_OID_CERTSRV_CROSSCA_VERSION                       CERTENROLL_OBJECTID = 240
+	XCN_OID_NTDS_REPLICATION                              CERTENROLL_OBJECTID = 241
+	XCN_OID_SUBJECT_DIR_ATTRS                             CERTENROLL_OBJECTID = 242
+	XCN_OID_PKIX_KP                                       CERTENROLL_OBJECTID = 243
+	XCN_OID_PKIX_KP_SERVER_AUTH                           CERTENROLL_OBJECTID = 244
+	XCN_OID_PKIX_KP_CLIENT_AUTH                           CERTENROLL_OBJECTID = 245
+	XCN_OID_PKIX_KP_CODE_SIGNING                          CERTENROLL_OBJECTID = 246
+	XCN_OID_PKIX_KP_EMAIL_PROTECTION                      CERTENROLL_OBJECTID = 247
+	XCN_OID_PKIX_KP_IPSEC_END_SYSTEM                      CERTENROLL_OBJECTID = 248
+	XCN_OID_PKIX_KP_IPSEC_TUNNEL                          CERTENROLL_OBJECTID = 249
+	XCN_OID_PKIX_KP_IPSEC_USER                            CERTENROLL_OBJECTID = 250
+	XCN_OID_PKIX_KP_TIMESTAMP_SIGNING                     CERTENROLL_OBJECTID = 251
+	XCN_OID_PKIX_KP_OCSP_SIGNING                          CERTENROLL_OBJECTID = 252
+	XCN_OID_PKIX_OCSP_NOCHECK                             CERTENROLL_OBJECTID = 253
+	XCN_OID_IPSEC_KP_IKE_INTERMEDIATE                     CERTENROLL_OBJECTID = 254
+	XCN_OID_KP_CTL_USAGE_SIGNING                          CERTENROLL_OBJECTID = 255
+	XCN_OID_KP_TIME_STAMP_SIGNING                         CERTENROLL_OBJECTID = 256
+	XCN_OID_SERVER_GATED_CRYPTO                           CERTENROLL_OBJECTID = 257
+	XCN_OID_SGC_NETSCAPE                                  CERTENROLL_OBJECTID = 258
+	XCN_OID_KP_EFS                                        CERTENROLL_OBJECTID = 259
+	XCN_OID_EFS_RECOVERY                                  CERTENROLL_OBJECTID = 260
+	XCN_OID_WHQL_CRYPTO                                   CERTENROLL_OBJECTID = 261
+	XCN_OID_NT5_CRYPTO                                    CERTENROLL_OBJECTID = 262
+	XCN_OID_OEM_WHQL_CRYPTO                               CERTENROLL_OBJECTID = 263
+	XCN_OID_EMBEDDED_NT_CRYPTO                            CERTENROLL_OBJECTID = 264
+	XCN_OID_ROOT_LIST_SIGNER                              CERTENROLL_OBJECTID = 265
+	XCN_OID_KP_QUALIFIED_SUBORDINATION                    CERTENROLL_OBJECTID = 266
+	XCN_OID_KP_KEY_RECOVERY                               CERTENROLL_OBJECTID = 267
+	XCN_OID_KP_DOCUMENT_SIGNING                           CERTENROLL_OBJECTID = 268
+	XCN_OID_KP_LIFETIME_SIGNING                           CERTENROLL_OBJECTID = 269
+	XCN_OID_KP_MOBILE_DEVICE_SOFTWARE                     CERTENROLL_OBJECTID = 270
+	XCN_OID_KP_SMART_DISPLAY                              CERTENROLL_OBJECTID = 271
+	XCN_OID_KP_CSP_SIGNATURE                              CERTENROLL_OBJECTID = 272
+	XCN_OID_DRM                                           CERTENROLL_OBJECTID = 273
+	XCN_OID_DRM_INDIVIDUALIZATION                         CERTENROLL_OBJECTID = 274
+	XCN_OID_LICENSES                                      CERTENROLL_OBJECTID = 275
+	XCN_OID_LICENSE_SERVER                                CERTENROLL_OBJECTID = 276
+	XCN_OID_KP_SMARTCARD_LOGON                            CERTENROLL_OBJECTID = 277
+	XCN_OID_YESNO_TRUST_ATTR                              CERTENROLL_OBJECTID = 278
+	XCN_OID_PKIX_POLICY_QUALIFIER_CPS                     CERTENROLL_OBJECTID = 279
+	XCN_OID_PKIX_POLICY_QUALIFIER_USERNOTICE              CERTENROLL_OBJECTID = 280
+	XCN_OID_CERT_POLICIES_95_QUALIFIER1                   CERTENROLL_OBJECTID = 281
+	XCN_OID_PKIX_ACC_DESCR                                CERTENROLL_OBJECTID = 282
+	XCN_OID_PKIX_OCSP                                     CERTENROLL_OBJECTID = 283
+	XCN_OID_PKIX_CA_ISSUERS                               CERTENROLL_OBJECTID = 284
+	XCN_OID_VERISIGN_PRIVATE_6_9                          CERTENROLL_OBJECTID = 285
+	XCN_OID_VERISIGN_ONSITE_JURISDICTION_HASH             CERTENROLL_OBJECTID = 286
+	XCN_OID_VERISIGN_BITSTRING_6_13                       CERTENROLL_OBJECTID = 287
+	XCN_OID_VERISIGN_ISS_STRONG_CRYPTO                    CERTENROLL_OBJECTID = 288
+	XCN_OID_NETSCAPE                                      CERTENROLL_OBJECTID = 289
+	XCN_OID_NETSCAPE_CERT_EXTENSION                       CERTENROLL_OBJECTID = 290
+	XCN_OID_NETSCAPE_CERT_TYPE                            CERTENROLL_OBJECTID = 291
+	XCN_OID_NETSCAPE_BASE_URL                             CERTENROLL_OBJECTID = 292
+	XCN_OID_NETSCAPE_REVOCATION_URL                       CERTENROLL_OBJECTID = 293
+	XCN_OID_NETSCAPE_CA_REVOCATION_URL                    CERTENROLL_OBJECTID = 294
+	XCN_OID_NETSCAPE_CERT_RENEWAL_URL                     CERTENROLL_OBJECTID = 295
+	XCN_OID_NETSCAPE_CA_POLICY_URL                        CERTENROLL_OBJECTID = 296
+	XCN_OID_NETSCAPE_SSL_SERVER_NAME                      CERTENROLL_OBJECTID = 297
+	XCN_OID_NETSCAPE_COMMENT                              CERTENROLL_OBJECTID = 298
+	XCN_OID_NETSCAPE_DATA_TYPE                            CERTENROLL_OBJECTID = 299
+	XCN_OID_NETSCAPE_CERT_SEQUENCE                        CERTENROLL_OBJECTID = 300
+	XCN_OID_CT_PKI_DATA                                   CERTENROLL_OBJECTID = 301
+	XCN_OID_CT_PKI_RESPONSE                               CERTENROLL_OBJECTID = 302
+	XCN_OID_PKIX_NO_SIGNATURE                             CERTENROLL_OBJECTID = 303
+	XCN_OID_CMC                                           CERTENROLL_OBJECTID = 304
+	XCN_OID_CMC_STATUS_INFO                               CERTENROLL_OBJECTID = 305
+	XCN_OID_CMC_IDENTIFICATION                            CERTENROLL_OBJECTID = 306
+	XCN_OID_CMC_IDENTITY_PROOF                            CERTENROLL_OBJECTID = 307
+	XCN_OID_CMC_DATA_RETURN                               CERTENROLL_OBJECTID = 308
+	XCN_OID_CMC_TRANSACTION_ID                            CERTENROLL_OBJECTID = 309
+	XCN_OID_CMC_SENDER_NONCE                              CERTENROLL_OBJECTID = 310
+	XCN_OID_CMC_RECIPIENT_NONCE                           CERTENROLL_OBJECTID = 311
+	XCN_OID_CMC_ADD_EXTENSIONS                            CERTENROLL_OBJECTID = 312
+	XCN_OID_CMC_ENCRYPTED_POP                             CERTENROLL_OBJECTID = 313
+	XCN_OID_CMC_DECRYPTED_POP                             CERTENROLL_OBJECTID = 314
+	XCN_OID_CMC_LRA_POP_WITNESS                           CERTENROLL_OBJECTID = 315
+	XCN_OID_CMC_GET_CERT                                  CERTENROLL_OBJECTID = 316
+	XCN_OID_CMC_GET_CRL                                   CERTENROLL_OBJECTID = 317
+	XCN_OID_CMC_REVOKE_REQUEST                            CERTENROLL_OBJECTID = 318
+	XCN_OID_CMC_REG_INFO                                  CERTENROLL_OBJECTID = 319
+	XCN_OID_CMC_RESPONSE_INFO                             CERTENROLL_OBJECTID = 320
+	XCN_OID_CMC_QUERY_PENDING                             CERTENROLL_OBJECTID = 321
+	XCN_OID_CMC_ID_POP_LINK_RANDOM                        CERTENROLL_OBJECTID = 322
+	XCN_OID_CMC_ID_POP_LINK_WITNESS                       CERTENROLL_OBJECTID = 323
+	XCN_OID_CMC_ID_CONFIRM_CERT_ACCEPTANCE                CERTENROLL_OBJECTID = 324
+	XCN_OID_CMC_ADD_ATTRIBUTES                            CERTENROLL_OBJECTID = 325
+	XCN_OID_LOYALTY_OTHER_LOGOTYPE                        CERTENROLL_OBJECTID = 326
+	XCN_OID_BACKGROUND_OTHER_LOGOTYPE                     CERTENROLL_OBJECTID = 327
+	XCN_OID_PKIX_OCSP_BASIC_SIGNED_RESPONSE               CERTENROLL_OBJECTID = 328
+	XCN_OID_PKCS_7_DATA                                   CERTENROLL_OBJECTID = 329
+	XCN_OID_PKCS_7_SIGNED                                 CERTENROLL_OBJECTID = 330
+	XCN_OID_PKCS_7_ENVELOPED                              CERTENROLL_OBJECTID = 331
+	XCN_OID_PKCS_7_SIGNEDANDENVELOPED                     CERTENROLL_OBJECTID = 332
+	XCN_OID_PKCS_7_DIGESTED                               CERTENROLL_OBJECTID = 333
+	XCN_OID_PKCS_7_ENCRYPTED                              CERTENROLL_OBJECTID = 334
+	XCN_OID_PKCS_9_CONTENT_TYPE                           CERTENROLL_OBJECTID = 335
+	XCN_OID_PKCS_9_MESSAGE_DIGEST                         CERTENROLL_OBJECTID = 336
+	XCN_OID_CERT_PROP_ID_PREFIX                           CERTENROLL_OBJECTID = 337
+	XCN_OID_CERT_KEY_IDENTIFIER_PROP_ID                   CERTENROLL_OBJECTID = 338
+	XCN_OID_CERT_ISSUER_SERIAL_NUMBER_MD5_HASH_PROP_ID    CERTENROLL_OBJECTID = 339
+	XCN_OID_CERT_SUBJECT_NAME_MD5_HASH_PROP_ID            CERTENROLL_OBJECTID = 340
+	XCN_OID_CERT_MD5_HASH_PROP_ID                         CERTENROLL_OBJECTID = 341
+	XCN_OID_RSA_SHA256RSA                                 CERTENROLL_OBJECTID = 342
+	XCN_OID_RSA_SHA384RSA                                 CERTENROLL_OBJECTID = 343
+	XCN_OID_RSA_SHA512RSA                                 CERTENROLL_OBJECTID = 344
+	XCN_OID_NIST_sha256                                   CERTENROLL_OBJECTID = 345
+	XCN_OID_NIST_sha384                                   CERTENROLL_OBJECTID = 346
+	XCN_OID_NIST_sha512                                   CERTENROLL_OBJECTID = 347
+	XCN_OID_RSA_MGF1                                      CERTENROLL_OBJECTID = 348
+	XCN_OID_ECC_PUBLIC_KEY                                CERTENROLL_OBJECTID = 349
+	XCN_OID_ECDSA_SHA1                                    CERTENROLL_OBJECTID = 350
+	XCN_OID_ECDSA_SPECIFIED                               CERTENROLL_OBJECTID = 351
+	XCN_OID_ANY_ENHANCED_KEY_USAGE                        CERTENROLL_OBJECTID = 352
+	XCN_OID_RSA_SSA_PSS                                   CERTENROLL_OBJECTID = 353
+	XCN_OID_ATTR_SUPPORTED_ALGORITHMS                     CERTENROLL_OBJECTID = 355
+	XCN_OID_ATTR_TPM_SECURITY_ASSERTIONS                  CERTENROLL_OBJECTID = 356
+	XCN_OID_ATTR_TPM_SPECIFICATION                        CERTENROLL_OBJECTID = 357
+	XCN_OID_CERT_DISALLOWED_FILETIME_PROP_ID              CERTENROLL_OBJECTID = 358
+	XCN_OID_CERT_SIGNATURE_HASH_PROP_ID                   CERTENROLL_OBJECTID = 359
+	XCN_OID_CERT_STRONG_KEY_OS_1                          CERTENROLL_OBJECTID = 360
+	XCN_OID_CERT_STRONG_KEY_OS_CURRENT                    CERTENROLL_OBJECTID = 361
+	XCN_OID_CERT_STRONG_KEY_OS_PREFIX                     CERTENROLL_OBJECTID = 362
+	XCN_OID_CERT_STRONG_SIGN_OS_1                         CERTENROLL_OBJECTID = 363
+	XCN_OID_CERT_STRONG_SIGN_OS_CURRENT                   CERTENROLL_OBJECTID = 364
+	XCN_OID_CERT_STRONG_SIGN_OS_PREFIX                    CERTENROLL_OBJECTID = 365
+	XCN_OID_DH_SINGLE_PASS_STDDH_SHA1_KDF                 CERTENROLL_OBJECTID = 366
+	XCN_OID_DH_SINGLE_PASS_STDDH_SHA256_KDF               CERTENROLL_OBJECTID = 367
+	XCN_OID_DH_SINGLE_PASS_STDDH_SHA384_KDF               CERTENROLL_OBJECTID = 368
+	XCN_OID_DISALLOWED_HASH                               CERTENROLL_OBJECTID = 369
+	XCN_OID_DISALLOWED_LIST                               CERTENROLL_OBJECTID = 370
+	XCN_OID_ECC_CURVE_P256                                CERTENROLL_OBJECTID = 371
+	XCN_OID_ECC_CURVE_P384                                CERTENROLL_OBJECTID = 372
+	XCN_OID_ECC_CURVE_P521                                CERTENROLL_OBJECTID = 373
+	XCN_OID_ECDSA_SHA256                                  CERTENROLL_OBJECTID = 374
+	XCN_OID_ECDSA_SHA384                                  CERTENROLL_OBJECTID = 375
+	XCN_OID_ECDSA_SHA512                                  CERTENROLL_OBJECTID = 376
+	XCN_OID_ENROLL_CAXCHGCERT_HASH                        CERTENROLL_OBJECTID = 377
+	XCN_OID_ENROLL_EK_INFO                                CERTENROLL_OBJECTID = 378
+	XCN_OID_ENROLL_EKPUB_CHALLENGE                        CERTENROLL_OBJECTID = 379
+	XCN_OID_ENROLL_EKVERIFYCERT                           CERTENROLL_OBJECTID = 380
+	XCN_OID_ENROLL_EKVERIFYCREDS                          CERTENROLL_OBJECTID = 381
+	XCN_OID_ENROLL_EKVERIFYKEY                            CERTENROLL_OBJECTID = 382
+	XCN_OID_EV_RDN_COUNTRY                                CERTENROLL_OBJECTID = 383
+	XCN_OID_EV_RDN_LOCALE                                 CERTENROLL_OBJECTID = 384
+	XCN_OID_EV_RDN_STATE_OR_PROVINCE                      CERTENROLL_OBJECTID = 385
+	XCN_OID_INHIBIT_ANY_POLICY                            CERTENROLL_OBJECTID = 386
+	XCN_OID_INTERNATIONALIZED_EMAIL_ADDRESS               CERTENROLL_OBJECTID = 387
+	XCN_OID_KP_KERNEL_MODE_CODE_SIGNING                   CERTENROLL_OBJECTID = 388
+	XCN_OID_KP_KERNEL_MODE_HAL_EXTENSION_SIGNING          CERTENROLL_OBJECTID = 389
+	XCN_OID_KP_KERNEL_MODE_TRUSTED_BOOT_SIGNING           CERTENROLL_OBJECTID = 390
+	XCN_OID_KP_TPM_AIK_CERTIFICATE                        CERTENROLL_OBJECTID = 391
+	XCN_OID_KP_TPM_EK_CERTIFICATE                         CERTENROLL_OBJECTID = 392
+	XCN_OID_KP_TPM_PLATFORM_CERTIFICATE                   CERTENROLL_OBJECTID = 393
+	XCN_OID_NIST_AES128_CBC                               CERTENROLL_OBJECTID = 394
+	XCN_OID_NIST_AES128_WRAP                              CERTENROLL_OBJECTID = 395
+	XCN_OID_NIST_AES192_CBC                               CERTENROLL_OBJECTID = 396
+	XCN_OID_NIST_AES192_WRAP                              CERTENROLL_OBJECTID = 397
+	XCN_OID_NIST_AES256_CBC                               CERTENROLL_OBJECTID = 398
+	XCN_OID_NIST_AES256_WRAP                              CERTENROLL_OBJECTID = 399
+	XCN_OID_PKCS_12_PbeIds                                CERTENROLL_OBJECTID = 400
+	XCN_OID_PKCS_12_pbeWithSHA1And128BitRC2               CERTENROLL_OBJECTID = 401
+	XCN_OID_PKCS_12_pbeWithSHA1And128BitRC4               CERTENROLL_OBJECTID = 402
+	XCN_OID_PKCS_12_pbeWithSHA1And2KeyTripleDES           CERTENROLL_OBJECTID = 403
+	XCN_OID_PKCS_12_pbeWithSHA1And3KeyTripleDES           CERTENROLL_OBJECTID = 404
+	XCN_OID_PKCS_12_pbeWithSHA1And40BitRC2                CERTENROLL_OBJECTID = 405
+	XCN_OID_PKCS_12_pbeWithSHA1And40BitRC4                CERTENROLL_OBJECTID = 406
+	XCN_OID_PKCS_12_PROTECTED_PASSWORD_SECRET_BAG_TYPE_ID CERTENROLL_OBJECTID = 407
+	XCN_OID_PKINIT_KP_KDC                                 CERTENROLL_OBJECTID = 408
+	XCN_OID_PKIX_CA_REPOSITORY                            CERTENROLL_OBJECTID = 409
+	XCN_OID_PKIX_OCSP_NONCE                               CERTENROLL_OBJECTID = 410
+	XCN_OID_PKIX_TIME_STAMPING                            CERTENROLL_OBJECTID = 411
+	XCN_OID_QC_EU_COMPLIANCE                              CERTENROLL_OBJECTID = 412
+	XCN_OID_QC_SSCD                                       CERTENROLL_OBJECTID = 413
+	XCN_OID_QC_STATEMENTS_EXT                             CERTENROLL_OBJECTID = 414
+	XCN_OID_RDN_TPM_MANUFACTURER                          CERTENROLL_OBJECTID = 415
+	XCN_OID_RDN_TPM_MODEL                                 CERTENROLL_OBJECTID = 416
+	XCN_OID_RDN_TPM_VERSION                               CERTENROLL_OBJECTID = 417
+	XCN_OID_REVOKED_LIST_SIGNER                           CERTENROLL_OBJECTID = 418
+	XCN_OID_RFC3161_counterSign                           CERTENROLL_OBJECTID = 419
+	XCN_OID_ROOT_PROGRAM_AUTO_UPDATE_CA_REVOCATION        CERTENROLL_OBJECTID = 420
+	XCN_OID_ROOT_PROGRAM_AUTO_UPDATE_END_REVOCATION       CERTENROLL_OBJECTID = 421
+	XCN_OID_ROOT_PROGRAM_FLAGS                            CERTENROLL_OBJECTID = 422
+	XCN_OID_ROOT_PROGRAM_NO_OCSP_FAILOVER_TO_CRL          CERTENROLL_OBJECTID = 423
+	XCN_OID_RSA_PSPECIFIED                                CERTENROLL_OBJECTID = 424
+	XCN_OID_RSAES_OAEP                                    CERTENROLL_OBJECTID = 425
+	XCN_OID_SUBJECT_INFO_ACCESS                           CERTENROLL_OBJECTID = 426
+	XCN_OID_TIMESTAMP_TOKEN                               CERTENROLL_OBJECTID = 427
+	XCN_OID_ENROLL_SCEP_ERROR                             CERTENROLL_OBJECTID = 428
+	XCN_OIDVerisign_MessageType                           CERTENROLL_OBJECTID = 429
+	XCN_OIDVerisign_PkiStatus                             CERTENROLL_OBJECTID = 430
+	XCN_OIDVerisign_FailInfo                              CERTENROLL_OBJECTID = 431
+	XCN_OIDVerisign_SenderNonce                           CERTENROLL_OBJECTID = 432
+	XCN_OIDVerisign_RecipientNonce                        CERTENROLL_OBJECTID = 433
+	XCN_OIDVerisign_TransactionID                         CERTENROLL_OBJECTID = 434
+	XCN_OID_ENROLL_ATTESTATION_CHALLENGE                  CERTENROLL_OBJECTID = 435
+	XCN_OID_ENROLL_ATTESTATION_STATEMENT                  CERTENROLL_OBJECTID = 436
+	XCN_OID_ENROLL_ENCRYPTION_ALGORITHM                   CERTENROLL_OBJECTID = 437
+	XCN_OID_ENROLL_KSP_NAME                               CERTENROLL_OBJECTID = 438
 )
 
 type WebSecurityLevel int32
 
 const (
-	LevelUnsafe = 0
-	LevelSafe = 1
+	LevelUnsafe WebSecurityLevel = 0
+	LevelSafe   WebSecurityLevel = 1
 )
 
 type EncodingType int32
 
 const (
-	XCN_CRYPT_STRING_BASE64HEADER = 0
-	XCN_CRYPT_STRING_BASE64 = 1
-	XCN_CRYPT_STRING_BINARY = 2
-	XCN_CRYPT_STRING_BASE64REQUESTHEADER = 3
-	XCN_CRYPT_STRING_HEX = 4
-	XCN_CRYPT_STRING_HEXASCII = 5
-	XCN_CRYPT_STRING_BASE64_ANY = 6
-	XCN_CRYPT_STRING_ANY = 7
-	XCN_CRYPT_STRING_HEX_ANY = 8
-	XCN_CRYPT_STRING_BASE64X509CRLHEADER = 9
-	XCN_CRYPT_STRING_HEXADDR = 10
-	XCN_CRYPT_STRING_HEXASCIIADDR = 11
-	XCN_CRYPT_STRING_HEXRAW = 12
-	XCN_CRYPT_STRING_BASE64URI = 13
-	XCN_CRYPT_STRING_ENCODEMASK = 255
-	XCN_CRYPT_STRING_CHAIN = 256
-	XCN_CRYPT_STRING_TEXT = 512
-	XCN_CRYPT_STRING_PERCENTESCAPE = 134217728
-	XCN_CRYPT_STRING_HASHDATA = 268435456
-	XCN_CRYPT_STRING_STRICT = 536870912
-	XCN_CRYPT_STRING_NOCRLF = 1073741824
-	XCN_CRYPT_STRING_NOCR = -2147483648
+	XCN_CRYPT_STRING_BASE64HEADER        EncodingType = 0
+	XCN_CRYPT_STRING_BASE64              EncodingType = 1
+	XCN_CRYPT_STRING_BINARY              EncodingType = 2
+	XCN_CRYPT_STRING_BASE64REQUESTHEADER EncodingType = 3
+	XCN_CRYPT_STRING_HEX                 EncodingType = 4
+	XCN_CRYPT_STRING_HEXASCII            EncodingType = 5
+	XCN_CRYPT_STRING_BASE64_ANY          EncodingType = 6
+	XCN_CRYPT_STRING_ANY                 EncodingType = 7
+	XCN_CRYPT_STRING_HEX_ANY             EncodingType = 8
+	XCN_CRYPT_STRING_BASE64X509CRLHEADER EncodingType = 9
+	XCN_CRYPT_STRING_HEXADDR             EncodingType = 10
+	XCN_CRYPT_STRING_HEXASCIIADDR        EncodingType = 11
+	XCN_CRYPT_STRING_HEXRAW              EncodingType = 12
+	XCN_CRYPT_STRING_BASE64URI           EncodingType = 13
+	XCN_CRYPT_STRING_ENCODEMASK          EncodingType = 255
+	XCN_CRYPT_STRING_CHAIN               EncodingType = 256
+	XCN_CRYPT_STRING_TEXT                EncodingType = 512
+	XCN_CRYPT_STRING_PERCENTESCAPE       EncodingType = 134217728
+	XCN_CRYPT_STRING_HASHDATA            EncodingType = 268435456
+	XCN_CRYPT_STRING_STRICT              EncodingType = 536870912
+	XCN_CRYPT_STRING_NOCRLF              EncodingType = 1073741824
+	XCN_CRYPT_STRING_NOCR                EncodingType = -2147483648
 )
 
 type PFXExportOptions int32
 
 const (
-	PFXExportEEOnly = 0
-	PFXExportChainNoRoot = 1
-	PFXExportChainWithRoot = 2
+	PFXExportEEOnly        PFXExportOptions = 0
+	PFXExportChainNoRoot   PFXExportOptions = 1
+	PFXExportChainWithRoot PFXExportOptions = 2
 )
 
 type ObjectIdGroupId int32
 
 const (
-	XCN_CRYPT_ANY_GROUP_ID = 0
-	XCN_CRYPT_HASH_ALG_OID_GROUP_ID = 1
-	XCN_CRYPT_ENCRYPT_ALG_OID_GROUP_ID = 2
-	XCN_CRYPT_PUBKEY_ALG_OID_GROUP_ID = 3
-	XCN_CRYPT_SIGN_ALG_OID_GROUP_ID = 4
-	XCN_CRYPT_RDN_ATTR_OID_GROUP_ID = 5
-	XCN_CRYPT_EXT_OR_ATTR_OID_GROUP_ID = 6
-	XCN_CRYPT_ENHKEY_USAGE_OID_GROUP_ID = 7
-	XCN_CRYPT_POLICY_OID_GROUP_ID = 8
-	XCN_CRYPT_TEMPLATE_OID_GROUP_ID = 9
-	XCN_CRYPT_KDF_OID_GROUP_ID = 10
-	XCN_CRYPT_LAST_OID_GROUP_ID = 10
-	XCN_CRYPT_FIRST_ALG_OID_GROUP_ID = 1
-	XCN_CRYPT_LAST_ALG_OID_GROUP_ID = 4
-	XCN_CRYPT_GROUP_ID_MASK = 65535
-	XCN_CRYPT_OID_PREFER_CNG_ALGID_FLAG = 1073741824
-	XCN_CRYPT_OID_DISABLE_SEARCH_DS_FLAG = -2147483648
-	XCN_CRYPT_OID_INFO_OID_GROUP_BIT_LEN_MASK = 268369920
-	XCN_CRYPT_OID_INFO_OID_GROUP_BIT_LEN_SHIFT = 16
-	XCN_CRYPT_KEY_LENGTH_MASK = 268369920
+	XCN_CRYPT_ANY_GROUP_ID                     ObjectIdGroupId = 0
+	XCN_CRYPT_HASH_ALG_OID_GROUP_ID            ObjectIdGroupId = 1
+	XCN_CRYPT_ENCRYPT_ALG_OID_GROUP_ID         ObjectIdGroupId = 2
+	XCN_CRYPT_PUBKEY_ALG_OID_GROUP_ID          ObjectIdGroupId = 3
+	XCN_CRYPT_SIGN_ALG_OID_GROUP_ID            ObjectIdGroupId = 4
+	XCN_CRYPT_RDN_ATTR_OID_GROUP_ID            ObjectIdGroupId = 5
+	XCN_CRYPT_EXT_OR_ATTR_OID_GROUP_ID         ObjectIdGroupId = 6
+	XCN_CRYPT_ENHKEY_USAGE_OID_GROUP_ID        ObjectIdGroupId = 7
+	XCN_CRYPT_POLICY_OID_GROUP_ID              ObjectIdGroupId = 8
+	XCN_CRYPT_TEMPLATE_OID_GROUP_ID            ObjectIdGroupId = 9
+	XCN_CRYPT_KDF_OID_GROUP_ID                 ObjectIdGroupId = 10
+	XCN_CRYPT_LAST_OID_GROUP_ID                ObjectIdGroupId = 10
+	XCN_CRYPT_FIRST_ALG_OID_GROUP_ID           ObjectIdGroupId = 1
+	XCN_CRYPT_LAST_ALG_OID_GROUP_ID            ObjectIdGroupId = 4
+	XCN_CRYPT_GROUP_ID_MASK                    ObjectIdGroupId = 65535
+	XCN_CRYPT_OID_PREFER_CNG_ALGID_FLAG        ObjectIdGroupId = 1073741824
+	XCN_CRYPT_OID_DISABLE_SEARCH_DS_FLAG       ObjectIdGroupId = -2147483648
+	XCN_CRYPT_OID_INFO_OID_GROUP_BIT_LEN_MASK  ObjectIdGroupId = 268369920
+	XCN_CRYPT_OID_INFO_OID_GROUP_BIT_LEN_SHIFT ObjectIdGroupId = 16
+	XCN_CRYPT_KEY_LENGTH_MASK                  ObjectIdGroupId = 268369920
 )
 
 type ObjectIdPublicKeyFlags int32
 
 const (
-	XCN_CRYPT_OID_INFO_PUBKEY_ANY = 0
-	XCN_CRYPT_OID_INFO_PUBKEY_SIGN_KEY_FLAG = -2147483648
-	XCN_CRYPT_OID_INFO_PUBKEY_ENCRYPT_KEY_FLAG = 1073741824
+	XCN_CRYPT_OID_INFO_PUBKEY_ANY              ObjectIdPublicKeyFlags = 0
+	XCN_CRYPT_OID_INFO_PUBKEY_SIGN_KEY_FLAG    ObjectIdPublicKeyFlags = -2147483648
+	XCN_CRYPT_OID_INFO_PUBKEY_ENCRYPT_KEY_FLAG ObjectIdPublicKeyFlags = 1073741824
 )
 
 type AlgorithmFlags int32
 
 const (
-	AlgorithmFlagsNone = 0
-	AlgorithmFlagsWrap = 1
+	AlgorithmFlagsNone AlgorithmFlags = 0
+	AlgorithmFlagsWrap AlgorithmFlags = 1
 )
 
 type X500NameFlags int32
 
 const (
-	XCN_CERT_NAME_STR_NONE = 0
-	XCN_CERT_SIMPLE_NAME_STR = 1
-	XCN_CERT_OID_NAME_STR = 2
-	XCN_CERT_X500_NAME_STR = 3
-	XCN_CERT_XML_NAME_STR = 4
-	XCN_CERT_NAME_STR_SEMICOLON_FLAG = 1073741824
-	XCN_CERT_NAME_STR_NO_PLUS_FLAG = 536870912
-	XCN_CERT_NAME_STR_NO_QUOTING_FLAG = 268435456
-	XCN_CERT_NAME_STR_CRLF_FLAG = 134217728
-	XCN_CERT_NAME_STR_COMMA_FLAG = 67108864
-	XCN_CERT_NAME_STR_REVERSE_FLAG = 33554432
-	XCN_CERT_NAME_STR_FORWARD_FLAG = 16777216
-	XCN_CERT_NAME_STR_AMBIGUOUS_SEPARATOR_FLAGS = 1275068416
-	XCN_CERT_NAME_STR_DISABLE_IE4_UTF8_FLAG = 65536
-	XCN_CERT_NAME_STR_ENABLE_T61_UNICODE_FLAG = 131072
-	XCN_CERT_NAME_STR_ENABLE_UTF8_UNICODE_FLAG = 262144
-	XCN_CERT_NAME_STR_FORCE_UTF8_DIR_STR_FLAG = 524288
-	XCN_CERT_NAME_STR_DISABLE_UTF8_DIR_STR_FLAG = 1048576
-	XCN_CERT_NAME_STR_ENABLE_PUNYCODE_FLAG = 2097152
-	XCN_CERT_NAME_STR_DS_ESCAPED = 8388608
+	XCN_CERT_NAME_STR_NONE                      X500NameFlags = 0
+	XCN_CERT_SIMPLE_NAME_STR                    X500NameFlags = 1
+	XCN_CERT_OID_NAME_STR                       X500NameFlags = 2
+	XCN_CERT_X500_NAME_STR                      X500NameFlags = 3
+	XCN_CERT_XML_NAME_STR                       X500NameFlags = 4
+	XCN_CERT_NAME_STR_SEMICOLON_FLAG            X500NameFlags = 1073741824
+	XCN_CERT_NAME_STR_NO_PLUS_FLAG              X500NameFlags = 536870912
+	XCN_CERT_NAME_STR_NO_QUOTING_FLAG           X500NameFlags = 268435456
+	XCN_CERT_NAME_STR_CRLF_FLAG                 X500NameFlags = 134217728
+	XCN_CERT_NAME_STR_COMMA_FLAG                X500NameFlags = 67108864
+	XCN_CERT_NAME_STR_REVERSE_FLAG              X500NameFlags = 33554432
+	XCN_CERT_NAME_STR_FORWARD_FLAG              X500NameFlags = 16777216
+	XCN_CERT_NAME_STR_AMBIGUOUS_SEPARATOR_FLAGS X500NameFlags = 1275068416
+	XCN_CERT_NAME_STR_DISABLE_IE4_UTF8_FLAG     X500NameFlags = 65536
+	XCN_CERT_NAME_STR_ENABLE_T61_UNICODE_FLAG   X500NameFlags = 131072
+	XCN_CERT_NAME_STR_ENABLE_UTF8_UNICODE_FLAG  X500NameFlags = 262144
+	XCN_CERT_NAME_STR_FORCE_UTF8_DIR_STR_FLAG   X500NameFlags = 524288
+	XCN_CERT_NAME_STR_DISABLE_UTF8_DIR_STR_FLAG X500NameFlags = 1048576
+	XCN_CERT_NAME_STR_ENABLE_PUNYCODE_FLAG      X500NameFlags = 2097152
+	XCN_CERT_NAME_STR_DS_ESCAPED                X500NameFlags = 8388608
 )
 
 type X509CertificateEnrollmentContext int32
 
 const (
-	ContextNone = 0
-	ContextUser = 1
-	ContextMachine = 2
-	ContextAdministratorForceMachine = 3
+	ContextNone                      X509CertificateEnrollmentContext = 0
+	ContextUser                      X509CertificateEnrollmentContext = 1
+	ContextMachine                   X509CertificateEnrollmentContext = 2
+	ContextAdministratorForceMachine X509CertificateEnrollmentContext = 3
 )
 
 type EnrollmentEnrollStatus int32
 
 const (
-	Enrolled = 1
-	EnrollPended = 2
-	EnrollUIDeferredEnrollmentRequired = 4
-	EnrollError = 16
-	EnrollUnknown = 32
-	EnrollSkipped = 64
-	EnrollDenied = 256
+	Enrolled                           EnrollmentEnrollStatus = 1
+	EnrollPended                       EnrollmentEnrollStatus = 2
+	EnrollUIDeferredEnrollmentRequired EnrollmentEnrollStatus = 4
+	EnrollError                        EnrollmentEnrollStatus = 16
+	EnrollUnknown                      EnrollmentEnrollStatus = 32
+	EnrollSkipped                      EnrollmentEnrollStatus = 64
+	EnrollDenied                       EnrollmentEnrollStatus = 256
 )
 
 type EnrollmentSelectionStatus int32
 
 const (
-	SelectedNo = 0
-	SelectedYes = 1
+	SelectedNo  EnrollmentSelectionStatus = 0
+	SelectedYes EnrollmentSelectionStatus = 1
 )
 
 type EnrollmentDisplayStatus int32
 
 const (
-	DisplayNo = 0
-	DisplayYes = 1
+	DisplayNo  EnrollmentDisplayStatus = 0
+	DisplayYes EnrollmentDisplayStatus = 1
 )
 
 type X509ProviderType int32
 
 const (
-	XCN_PROV_NONE = 0
-	XCN_PROV_RSA_FULL = 1
-	XCN_PROV_RSA_SIG = 2
-	XCN_PROV_DSS = 3
-	XCN_PROV_FORTEZZA = 4
-	XCN_PROV_MS_EXCHANGE = 5
-	XCN_PROV_SSL = 6
-	XCN_PROV_RSA_SCHANNEL = 12
-	XCN_PROV_DSS_DH = 13
-	XCN_PROV_EC_ECDSA_SIG = 14
-	XCN_PROV_EC_ECNRA_SIG = 15
-	XCN_PROV_EC_ECDSA_FULL = 16
-	XCN_PROV_EC_ECNRA_FULL = 17
-	XCN_PROV_DH_SCHANNEL = 18
-	XCN_PROV_SPYRUS_LYNKS = 20
-	XCN_PROV_RNG = 21
-	XCN_PROV_INTEL_SEC = 22
-	XCN_PROV_REPLACE_OWF = 23
-	XCN_PROV_RSA_AES = 24
+	XCN_PROV_NONE          X509ProviderType = 0
+	XCN_PROV_RSA_FULL      X509ProviderType = 1
+	XCN_PROV_RSA_SIG       X509ProviderType = 2
+	XCN_PROV_DSS           X509ProviderType = 3
+	XCN_PROV_FORTEZZA      X509ProviderType = 4
+	XCN_PROV_MS_EXCHANGE   X509ProviderType = 5
+	XCN_PROV_SSL           X509ProviderType = 6
+	XCN_PROV_RSA_SCHANNEL  X509ProviderType = 12
+	XCN_PROV_DSS_DH        X509ProviderType = 13
+	XCN_PROV_EC_ECDSA_SIG  X509ProviderType = 14
+	XCN_PROV_EC_ECNRA_SIG  X509ProviderType = 15
+	XCN_PROV_EC_ECDSA_FULL X509ProviderType = 16
+	XCN_PROV_EC_ECNRA_FULL X509ProviderType = 17
+	XCN_PROV_DH_SCHANNEL   X509ProviderType = 18
+	XCN_PROV_SPYRUS_LYNKS  X509ProviderType = 20
+	XCN_PROV_RNG           X509ProviderType = 21
+	XCN_PROV_INTEL_SEC     X509ProviderType = 22
+	XCN_PROV_REPLACE_OWF   X509ProviderType = 23
+	XCN_PROV_RSA_AES       X509ProviderType = 24
 )
 
 type AlgorithmType int32
 
 const (
-	XCN_BCRYPT_UNKNOWN_INTERFACE = 0
-	XCN_BCRYPT_CIPHER_INTERFACE = 1
-	XCN_BCRYPT_HASH_INTERFACE = 2
-	XCN_BCRYPT_ASYMMETRIC_ENCRYPTION_INTERFACE = 3
-	XCN_BCRYPT_SIGNATURE_INTERFACE = 5
-	XCN_BCRYPT_SECRET_AGREEMENT_INTERFACE = 4
-	XCN_BCRYPT_RNG_INTERFACE = 6
-	XCN_BCRYPT_KEY_DERIVATION_INTERFACE = 7
+	XCN_BCRYPT_UNKNOWN_INTERFACE               AlgorithmType = 0
+	XCN_BCRYPT_CIPHER_INTERFACE                AlgorithmType = 1
+	XCN_BCRYPT_HASH_INTERFACE                  AlgorithmType = 2
+	XCN_BCRYPT_ASYMMETRIC_ENCRYPTION_INTERFACE AlgorithmType = 3
+	XCN_BCRYPT_SIGNATURE_INTERFACE             AlgorithmType = 5
+	XCN_BCRYPT_SECRET_AGREEMENT_INTERFACE      AlgorithmType = 4
+	XCN_BCRYPT_RNG_INTERFACE                   AlgorithmType = 6
+	XCN_BCRYPT_KEY_DERIVATION_INTERFACE        AlgorithmType = 7
 )
 
 type AlgorithmOperationFlags int32
 
 const (
-	XCN_NCRYPT_NO_OPERATION = 0
-	XCN_NCRYPT_CIPHER_OPERATION = 1
-	XCN_NCRYPT_HASH_OPERATION = 2
-	XCN_NCRYPT_ASYMMETRIC_ENCRYPTION_OPERATION = 4
-	XCN_NCRYPT_SECRET_AGREEMENT_OPERATION = 8
-	XCN_NCRYPT_SIGNATURE_OPERATION = 16
-	XCN_NCRYPT_RNG_OPERATION = 32
-	XCN_NCRYPT_KEY_DERIVATION_OPERATION = 64
-	XCN_NCRYPT_ANY_ASYMMETRIC_OPERATION = 28
-	XCN_NCRYPT_PREFER_SIGNATURE_ONLY_OPERATION = 2097152
-	XCN_NCRYPT_PREFER_NON_SIGNATURE_OPERATION = 4194304
-	XCN_NCRYPT_EXACT_MATCH_OPERATION = 8388608
-	XCN_NCRYPT_PREFERENCE_MASK_OPERATION = 14680064
+	XCN_NCRYPT_NO_OPERATION                    AlgorithmOperationFlags = 0
+	XCN_NCRYPT_CIPHER_OPERATION                AlgorithmOperationFlags = 1
+	XCN_NCRYPT_HASH_OPERATION                  AlgorithmOperationFlags = 2
+	XCN_NCRYPT_ASYMMETRIC_ENCRYPTION_OPERATION AlgorithmOperationFlags = 4
+	XCN_NCRYPT_SECRET_AGREEMENT_OPERATION      AlgorithmOperationFlags = 8
+	XCN_NCRYPT_SIGNATURE_OPERATION             AlgorithmOperationFlags = 16
+	XCN_NCRYPT_RNG_OPERATION                   AlgorithmOperationFlags = 32
+	XCN_NCRYPT_KEY_DERIVATION_OPERATION        AlgorithmOperationFlags = 64
+	XCN_NCRYPT_ANY_ASYMMETRIC_OPERATION        AlgorithmOperationFlags = 28
+	XCN_NCRYPT_PREFER_SIGNATURE_ONLY_OPERATION AlgorithmOperationFlags = 2097152
+	XCN_NCRYPT_PREFER_NON_SIGNATURE_OPERATION  AlgorithmOperationFlags = 4194304
+	XCN_NCRYPT_EXACT_MATCH_OPERATION           AlgorithmOperationFlags = 8388608
+	XCN_NCRYPT_PREFERENCE_MASK_OPERATION       AlgorithmOperationFlags = 14680064
 )
 
 type X509KeySpec int32
 
 const (
-	XCN_AT_NONE = 0
-	XCN_AT_KEYEXCHANGE = 1
-	XCN_AT_SIGNATURE = 2
+	XCN_AT_NONE        X509KeySpec = 0
+	XCN_AT_KEYEXCHANGE X509KeySpec = 1
+	XCN_AT_SIGNATURE   X509KeySpec = 2
 )
 
 type KeyIdentifierHashAlgorithm int32
 
 const (
-	SKIHashDefault = 0
-	SKIHashSha1 = 1
-	SKIHashCapiSha1 = 2
-	SKIHashSha256 = 3
-	SKIHashHPKP = 5
+	SKIHashDefault  KeyIdentifierHashAlgorithm = 0
+	SKIHashSha1     KeyIdentifierHashAlgorithm = 1
+	SKIHashCapiSha1 KeyIdentifierHashAlgorithm = 2
+	SKIHashSha256   KeyIdentifierHashAlgorithm = 3
+	SKIHashHPKP     KeyIdentifierHashAlgorithm = 5
 )
 
 type X509PrivateKeyExportFlags int32
 
 const (
-	XCN_NCRYPT_ALLOW_EXPORT_NONE = 0
-	XCN_NCRYPT_ALLOW_EXPORT_FLAG = 1
-	XCN_NCRYPT_ALLOW_PLAINTEXT_EXPORT_FLAG = 2
-	XCN_NCRYPT_ALLOW_ARCHIVING_FLAG = 4
-	XCN_NCRYPT_ALLOW_PLAINTEXT_ARCHIVING_FLAG = 8
+	XCN_NCRYPT_ALLOW_EXPORT_NONE              X509PrivateKeyExportFlags = 0
+	XCN_NCRYPT_ALLOW_EXPORT_FLAG              X509PrivateKeyExportFlags = 1
+	XCN_NCRYPT_ALLOW_PLAINTEXT_EXPORT_FLAG    X509PrivateKeyExportFlags = 2
+	XCN_NCRYPT_ALLOW_ARCHIVING_FLAG           X509PrivateKeyExportFlags = 4
+	XCN_NCRYPT_ALLOW_PLAINTEXT_ARCHIVING_FLAG X509PrivateKeyExportFlags = 8
 )
 
 type X509PrivateKeyUsageFlags int32
 
 const (
-	XCN_NCRYPT_ALLOW_USAGES_NONE = 0
-	XCN_NCRYPT_ALLOW_DECRYPT_FLAG = 1
-	XCN_NCRYPT_ALLOW_SIGNING_FLAG = 2
-	XCN_NCRYPT_ALLOW_KEY_AGREEMENT_FLAG = 4
-	XCN_NCRYPT_ALLOW_KEY_IMPORT_FLAG = 8
-	XCN_NCRYPT_ALLOW_ALL_USAGES = 16777215
+	XCN_NCRYPT_ALLOW_USAGES_NONE        X509PrivateKeyUsageFlags = 0
+	XCN_NCRYPT_ALLOW_DECRYPT_FLAG       X509PrivateKeyUsageFlags = 1
+	XCN_NCRYPT_ALLOW_SIGNING_FLAG       X509PrivateKeyUsageFlags = 2
+	XCN_NCRYPT_ALLOW_KEY_AGREEMENT_FLAG X509PrivateKeyUsageFlags = 4
+	XCN_NCRYPT_ALLOW_KEY_IMPORT_FLAG    X509PrivateKeyUsageFlags = 8
+	XCN_NCRYPT_ALLOW_ALL_USAGES         X509PrivateKeyUsageFlags = 16777215
 )
 
 type X509PrivateKeyProtection int32
 
 const (
-	XCN_NCRYPT_UI_NO_PROTECTION_FLAG = 0
-	XCN_NCRYPT_UI_PROTECT_KEY_FLAG = 1
-	XCN_NCRYPT_UI_FORCE_HIGH_PROTECTION_FLAG = 2
-	XCN_NCRYPT_UI_FINGERPRINT_PROTECTION_FLAG = 4
-	XCN_NCRYPT_UI_APPCONTAINER_ACCESS_MEDIUM_FLAG = 8
+	XCN_NCRYPT_UI_NO_PROTECTION_FLAG              X509PrivateKeyProtection = 0
+	XCN_NCRYPT_UI_PROTECT_KEY_FLAG                X509PrivateKeyProtection = 1
+	XCN_NCRYPT_UI_FORCE_HIGH_PROTECTION_FLAG      X509PrivateKeyProtection = 2
+	XCN_NCRYPT_UI_FINGERPRINT_PROTECTION_FLAG     X509PrivateKeyProtection = 4
+	XCN_NCRYPT_UI_APPCONTAINER_ACCESS_MEDIUM_FLAG X509PrivateKeyProtection = 8
 )
 
 type X509PrivateKeyVerify int32
 
 const (
-	VerifyNone = 0
-	VerifySilent = 1
-	VerifySmartCardNone = 2
-	VerifySmartCardSilent = 3
-	VerifyAllowUI = 4
+	VerifyNone            X509PrivateKeyVerify = 0
+	VerifySilent          X509PrivateKeyVerify = 1
+	VerifySmartCardNone   X509PrivateKeyVerify = 2
+	VerifySmartCardSilent X509PrivateKeyVerify = 3
+	VerifyAllowUI         X509PrivateKeyVerify = 4
 )
 
 type X509HardwareKeyUsageFlags int32
 
 const (
-	XCN_NCRYPT_PCP_NONE = 0
-	XCN_NCRYPT_TPM12_PROVIDER = 65536
-	XCN_NCRYPT_PCP_SIGNATURE_KEY = 1
-	XCN_NCRYPT_PCP_ENCRYPTION_KEY = 2
-	XCN_NCRYPT_PCP_GENERIC_KEY = 3
-	XCN_NCRYPT_PCP_STORAGE_KEY = 4
-	XCN_NCRYPT_PCP_IDENTITY_KEY = 8
+	XCN_NCRYPT_PCP_NONE           X509HardwareKeyUsageFlags = 0
+	XCN_NCRYPT_TPM12_PROVIDER     X509HardwareKeyUsageFlags = 65536
+	XCN_NCRYPT_PCP_SIGNATURE_KEY  X509HardwareKeyUsageFlags = 1
+	XCN_NCRYPT_PCP_ENCRYPTION_KEY X509HardwareKeyUsageFlags = 2
+	XCN_NCRYPT_PCP_GENERIC_KEY    X509HardwareKeyUsageFlags = 3
+	XCN_NCRYPT_PCP_STORAGE_KEY    X509HardwareKeyUsageFlags = 4
+	XCN_NCRYPT_PCP_IDENTITY_KEY   X509HardwareKeyUsageFlags = 8
 )
 
 type X509KeyParametersExportType int32
 
 const (
-	XCN_CRYPT_OID_USE_CURVE_NONE = 0
-	XCN_CRYPT_OID_USE_CURVE_NAME_FOR_ENCODE_FLAG = 536870912
-	XCN_CRYPT_OID_USE_CURVE_PARAMETERS_FOR_ENCODE_FLAG = 268435456
+	XCN_CRYPT_OID_USE_CURVE_NONE                       X509KeyParametersExportType = 0
+	XCN_CRYPT_OID_USE_CURVE_NAME_FOR_ENCODE_FLAG       X509KeyParametersExportType = 536870912
+	XCN_CRYPT_OID_USE_CURVE_PARAMETERS_FOR_ENCODE_FLAG X509KeyParametersExportType = 268435456
 )
 
 type X509KeyUsageFlags int32
 
 const (
-	XCN_CERT_NO_KEY_USAGE = 0
-	XCN_CERT_DIGITAL_SIGNATURE_KEY_USAGE = 128
-	XCN_CERT_NON_REPUDIATION_KEY_USAGE = 64
-	XCN_CERT_KEY_ENCIPHERMENT_KEY_USAGE = 32
-	XCN_CERT_DATA_ENCIPHERMENT_KEY_USAGE = 16
-	XCN_CERT_KEY_AGREEMENT_KEY_USAGE = 8
-	XCN_CERT_KEY_CERT_SIGN_KEY_USAGE = 4
-	XCN_CERT_OFFLINE_CRL_SIGN_KEY_USAGE = 2
-	XCN_CERT_CRL_SIGN_KEY_USAGE = 2
-	XCN_CERT_ENCIPHER_ONLY_KEY_USAGE = 1
-	XCN_CERT_DECIPHER_ONLY_KEY_USAGE = 32768
+	XCN_CERT_NO_KEY_USAGE                X509KeyUsageFlags = 0
+	XCN_CERT_DIGITAL_SIGNATURE_KEY_USAGE X509KeyUsageFlags = 128
+	XCN_CERT_NON_REPUDIATION_KEY_USAGE   X509KeyUsageFlags = 64
+	XCN_CERT_KEY_ENCIPHERMENT_KEY_USAGE  X509KeyUsageFlags = 32
+	XCN_CERT_DATA_ENCIPHERMENT_KEY_USAGE X509KeyUsageFlags = 16
+	XCN_CERT_KEY_AGREEMENT_KEY_USAGE     X509KeyUsageFlags = 8
+	XCN_CERT_KEY_CERT_SIGN_KEY_USAGE     X509KeyUsageFlags = 4
+	XCN_CERT_OFFLINE_CRL_SIGN_KEY_USAGE  X509KeyUsageFlags = 2
+	XCN_CERT_CRL_SIGN_KEY_USAGE          X509KeyUsageFlags = 2
+	XCN_CERT_ENCIPHER_ONLY_KEY_USAGE     X509KeyUsageFlags = 1
+	XCN_CERT_DECIPHER_ONLY_KEY_USAGE     X509KeyUsageFlags = 32768
 )
 
 type AlternativeNameType int32
 
 const (
-	XCN_CERT_ALT_NAME_UNKNOWN = 0
-	XCN_CERT_ALT_NAME_OTHER_NAME = 1
-	XCN_CERT_ALT_NAME_RFC822_NAME = 2
-	XCN_CERT_ALT_NAME_DNS_NAME = 3
-	XCN_CERT_ALT_NAME_X400_ADDRESS = 4
-	XCN_CERT_ALT_NAME_DIRECTORY_NAME = 5
-	XCN_CERT_ALT_NAME_EDI_PARTY_NAME = 6
-	XCN_CERT_ALT_NAME_URL = 7
-	XCN_CERT_ALT_NAME_IP_ADDRESS = 8
-	XCN_CERT_ALT_NAME_REGISTERED_ID = 9
-	XCN_CERT_ALT_NAME_GUID = 10
-	XCN_CERT_ALT_NAME_USER_PRINCIPLE_NAME = 11
+	XCN_CERT_ALT_NAME_UNKNOWN             AlternativeNameType = 0
+	XCN_CERT_ALT_NAME_OTHER_NAME          AlternativeNameType = 1
+	XCN_CERT_ALT_NAME_RFC822_NAME         AlternativeNameType = 2
+	XCN_CERT_ALT_NAME_DNS_NAME            AlternativeNameType = 3
+	XCN_CERT_ALT_NAME_X400_ADDRESS        AlternativeNameType = 4
+	XCN_CERT_ALT_NAME_DIRECTORY_NAME      AlternativeNameType = 5
+	XCN_CERT_ALT_NAME_EDI_PARTY_NAME      AlternativeNameType = 6
+	XCN_CERT_ALT_NAME_URL                 AlternativeNameType = 7
+	XCN_CERT_ALT_NAME_IP_ADDRESS          AlternativeNameType = 8
+	XCN_CERT_ALT_NAME_REGISTERED_ID       AlternativeNameType = 9
+	XCN_CERT_ALT_NAME_GUID                AlternativeNameType = 10
+	XCN_CERT_ALT_NAME_USER_PRINCIPLE_NAME AlternativeNameType = 11
 )
 
 type PolicyQualifierType int32
 
 const (
-	PolicyQualifierTypeUnknown = 0
-	PolicyQualifierTypeUrl = 1
-	PolicyQualifierTypeUserNotice = 2
-	PolicyQualifierTypeFlags = 3
+	PolicyQualifierTypeUnknown    PolicyQualifierType = 0
+	PolicyQualifierTypeUrl        PolicyQualifierType = 1
+	PolicyQualifierTypeUserNotice PolicyQualifierType = 2
+	PolicyQualifierTypeFlags      PolicyQualifierType = 3
 )
 
 type RequestClientInfoClientId int32
 
 const (
-	ClientIdNone = 0
-	ClientIdXEnroll2003 = 1
-	ClientIdAutoEnroll2003 = 2
-	ClientIdWizard2003 = 3
-	ClientIdCertReq2003 = 4
-	ClientIdDefaultRequest = 5
-	ClientIdAutoEnroll = 6
-	ClientIdRequestWizard = 7
-	ClientIdEOBO = 8
-	ClientIdCertReq = 9
-	ClientIdTest = 10
-	ClientIdWinRT = 11
-	ClientIdUserStart = 1000
+	ClientIdNone           RequestClientInfoClientId = 0
+	ClientIdXEnroll2003    RequestClientInfoClientId = 1
+	ClientIdAutoEnroll2003 RequestClientInfoClientId = 2
+	ClientIdWizard2003     RequestClientInfoClientId = 3
+	ClientIdCertReq2003    RequestClientInfoClientId = 4
+	ClientIdDefaultRequest RequestClientInfoClientId = 5
+	ClientIdAutoEnroll     RequestClientInfoClientId = 6
+	ClientIdRequestWizard  RequestClientInfoClientId = 7
+	ClientIdEOBO           RequestClientInfoClientId = 8
+	ClientIdCertReq        RequestClientInfoClientId = 9
+	ClientIdTest           RequestClientInfoClientId = 10
+	ClientIdWinRT          RequestClientInfoClientId = 11
+	ClientIdUserStart      RequestClientInfoClientId = 1000
 )
 
 type CERTENROLL_PROPERTYID int32
 
 const (
-	XCN_PROPERTYID_NONE = 0
-	XCN_CERT_KEY_PROV_HANDLE_PROP_ID = 1
-	XCN_CERT_KEY_PROV_INFO_PROP_ID = 2
-	XCN_CERT_SHA1_HASH_PROP_ID = 3
-	XCN_CERT_MD5_HASH_PROP_ID = 4
-	XCN_CERT_HASH_PROP_ID = 3
-	XCN_CERT_KEY_CONTEXT_PROP_ID = 5
-	XCN_CERT_KEY_SPEC_PROP_ID = 6
-	XCN_CERT_IE30_RESERVED_PROP_ID = 7
-	XCN_CERT_PUBKEY_HASH_RESERVED_PROP_ID = 8
-	XCN_CERT_ENHKEY_USAGE_PROP_ID = 9
-	XCN_CERT_CTL_USAGE_PROP_ID = 9
-	XCN_CERT_NEXT_UPDATE_LOCATION_PROP_ID = 10
-	XCN_CERT_FRIENDLY_NAME_PROP_ID = 11
-	XCN_CERT_PVK_FILE_PROP_ID = 12
-	XCN_CERT_DESCRIPTION_PROP_ID = 13
-	XCN_CERT_ACCESS_STATE_PROP_ID = 14
-	XCN_CERT_SIGNATURE_HASH_PROP_ID = 15
-	XCN_CERT_SMART_CARD_DATA_PROP_ID = 16
-	XCN_CERT_EFS_PROP_ID = 17
-	XCN_CERT_FORTEZZA_DATA_PROP_ID = 18
-	XCN_CERT_ARCHIVED_PROP_ID = 19
-	XCN_CERT_KEY_IDENTIFIER_PROP_ID = 20
-	XCN_CERT_AUTO_ENROLL_PROP_ID = 21
-	XCN_CERT_PUBKEY_ALG_PARA_PROP_ID = 22
-	XCN_CERT_CROSS_CERT_DIST_POINTS_PROP_ID = 23
-	XCN_CERT_ISSUER_PUBLIC_KEY_MD5_HASH_PROP_ID = 24
-	XCN_CERT_SUBJECT_PUBLIC_KEY_MD5_HASH_PROP_ID = 25
-	XCN_CERT_ENROLLMENT_PROP_ID = 26
-	XCN_CERT_DATE_STAMP_PROP_ID = 27
-	XCN_CERT_ISSUER_SERIAL_NUMBER_MD5_HASH_PROP_ID = 28
-	XCN_CERT_SUBJECT_NAME_MD5_HASH_PROP_ID = 29
-	XCN_CERT_EXTENDED_ERROR_INFO_PROP_ID = 30
-	XCN_CERT_RENEWAL_PROP_ID = 64
-	XCN_CERT_ARCHIVED_KEY_HASH_PROP_ID = 65
-	XCN_CERT_AUTO_ENROLL_RETRY_PROP_ID = 66
-	XCN_CERT_AIA_URL_RETRIEVED_PROP_ID = 67
-	XCN_CERT_AUTHORITY_INFO_ACCESS_PROP_ID = 68
-	XCN_CERT_BACKED_UP_PROP_ID = 69
-	XCN_CERT_OCSP_RESPONSE_PROP_ID = 70
-	XCN_CERT_REQUEST_ORIGINATOR_PROP_ID = 71
-	XCN_CERT_SOURCE_LOCATION_PROP_ID = 72
-	XCN_CERT_SOURCE_URL_PROP_ID = 73
-	XCN_CERT_NEW_KEY_PROP_ID = 74
-	XCN_CERT_OCSP_CACHE_PREFIX_PROP_ID = 75
-	XCN_CERT_SMART_CARD_ROOT_INFO_PROP_ID = 76
-	XCN_CERT_NO_AUTO_EXPIRE_CHECK_PROP_ID = 77
-	XCN_CERT_NCRYPT_KEY_HANDLE_PROP_ID = 78
-	XCN_CERT_HCRYPTPROV_OR_NCRYPT_KEY_HANDLE_PROP_ID = 79
-	XCN_CERT_SUBJECT_INFO_ACCESS_PROP_ID = 80
-	XCN_CERT_CA_OCSP_AUTHORITY_INFO_ACCESS_PROP_ID = 81
-	XCN_CERT_CA_DISABLE_CRL_PROP_ID = 82
-	XCN_CERT_ROOT_PROGRAM_CERT_POLICIES_PROP_ID = 83
-	XCN_CERT_ROOT_PROGRAM_NAME_CONSTRAINTS_PROP_ID = 84
-	XCN_CERT_SUBJECT_OCSP_AUTHORITY_INFO_ACCESS_PROP_ID = 85
-	XCN_CERT_SUBJECT_DISABLE_CRL_PROP_ID = 86
-	XCN_CERT_CEP_PROP_ID = 87
-	XCN_CERT_SIGN_HASH_CNG_ALG_PROP_ID = 89
-	XCN_CERT_SCARD_PIN_ID_PROP_ID = 90
-	XCN_CERT_SCARD_PIN_INFO_PROP_ID = 91
-	XCN_CERT_SUBJECT_PUB_KEY_BIT_LENGTH_PROP_ID = 92
-	XCN_CERT_PUB_KEY_CNG_ALG_BIT_LENGTH_PROP_ID = 93
-	XCN_CERT_ISSUER_PUB_KEY_BIT_LENGTH_PROP_ID = 94
-	XCN_CERT_ISSUER_CHAIN_SIGN_HASH_CNG_ALG_PROP_ID = 95
-	XCN_CERT_ISSUER_CHAIN_PUB_KEY_CNG_ALG_BIT_LENGTH_PROP_ID = 96
-	XCN_CERT_NO_EXPIRE_NOTIFICATION_PROP_ID = 97
-	XCN_CERT_AUTH_ROOT_SHA256_HASH_PROP_ID = 98
-	XCN_CERT_NCRYPT_KEY_HANDLE_TRANSFER_PROP_ID = 99
-	XCN_CERT_HCRYPTPROV_TRANSFER_PROP_ID = 100
-	XCN_CERT_SMART_CARD_READER_PROP_ID = 101
-	XCN_CERT_SEND_AS_TRUSTED_ISSUER_PROP_ID = 102
-	XCN_CERT_KEY_REPAIR_ATTEMPTED_PROP_ID = 103
-	XCN_CERT_DISALLOWED_FILETIME_PROP_ID = 104
-	XCN_CERT_ROOT_PROGRAM_CHAIN_POLICIES_PROP_ID = 105
-	XCN_CERT_SMART_CARD_READER_NON_REMOVABLE_PROP_ID = 106
-	XCN_CERT_SHA256_HASH_PROP_ID = 107
-	XCN_CERT_SCEP_SERVER_CERTS_PROP_ID = 108
-	XCN_CERT_SCEP_RA_SIGNATURE_CERT_PROP_ID = 109
-	XCN_CERT_SCEP_RA_ENCRYPTION_CERT_PROP_ID = 110
-	XCN_CERT_SCEP_CA_CERT_PROP_ID = 111
-	XCN_CERT_SCEP_SIGNER_CERT_PROP_ID = 112
-	XCN_CERT_SCEP_NONCE_PROP_ID = 113
-	XCN_CERT_SCEP_ENCRYPT_HASH_CNG_ALG_PROP_ID = 114
-	XCN_CERT_SCEP_FLAGS_PROP_ID = 115
-	XCN_CERT_SCEP_GUID_PROP_ID = 116
-	XCN_CERT_SERIALIZABLE_KEY_CONTEXT_PROP_ID = 117
-	XCN_CERT_ISOLATED_KEY_PROP_ID = 118
-	XCN_CERT_SERIAL_CHAIN_PROP_ID = 119
-	XCN_CERT_KEY_CLASSIFICATION_PROP_ID = 120
-	XCN_CERT_DISALLOWED_ENHKEY_USAGE_PROP_ID = 122
-	XCN_CERT_NONCOMPLIANT_ROOT_URL_PROP_ID = 123
-	XCN_CERT_PIN_SHA256_HASH_PROP_ID = 124
-	XCN_CERT_CLR_DELETE_KEY_PROP_ID = 125
-	XCN_CERT_NOT_BEFORE_FILETIME_PROP_ID = 126
-	XCN_CERT_CERT_NOT_BEFORE_ENHKEY_USAGE_PROP_ID = 127
-	XCN_CERT_FIRST_RESERVED_PROP_ID = 128
-	XCN_CERT_LAST_RESERVED_PROP_ID = 32767
-	XCN_CERT_FIRST_USER_PROP_ID = 32768
-	XCN_CERT_LAST_USER_PROP_ID = 65535
-	XCN_CERT_STORE_LOCALIZED_NAME_PROP_ID = 4096
+	XCN_PROPERTYID_NONE                                      CERTENROLL_PROPERTYID = 0
+	XCN_CERT_KEY_PROV_HANDLE_PROP_ID                         CERTENROLL_PROPERTYID = 1
+	XCN_CERT_KEY_PROV_INFO_PROP_ID                           CERTENROLL_PROPERTYID = 2
+	XCN_CERT_SHA1_HASH_PROP_ID                               CERTENROLL_PROPERTYID = 3
+	XCN_CERT_MD5_HASH_PROP_ID                                CERTENROLL_PROPERTYID = 4
+	XCN_CERT_HASH_PROP_ID                                    CERTENROLL_PROPERTYID = 3
+	XCN_CERT_KEY_CONTEXT_PROP_ID                             CERTENROLL_PROPERTYID = 5
+	XCN_CERT_KEY_SPEC_PROP_ID                                CERTENROLL_PROPERTYID = 6
+	XCN_CERT_IE30_RESERVED_PROP_ID                           CERTENROLL_PROPERTYID = 7
+	XCN_CERT_PUBKEY_HASH_RESERVED_PROP_ID                    CERTENROLL_PROPERTYID = 8
+	XCN_CERT_ENHKEY_USAGE_PROP_ID                            CERTENROLL_PROPERTYID = 9
+	XCN_CERT_CTL_USAGE_PROP_ID                               CERTENROLL_PROPERTYID = 9
+	XCN_CERT_NEXT_UPDATE_LOCATION_PROP_ID                    CERTENROLL_PROPERTYID = 10
+	XCN_CERT_FRIENDLY_NAME_PROP_ID                           CERTENROLL_PROPERTYID = 11
+	XCN_CERT_PVK_FILE_PROP_ID                                CERTENROLL_PROPERTYID = 12
+	XCN_CERT_DESCRIPTION_PROP_ID                             CERTENROLL_PROPERTYID = 13
+	XCN_CERT_ACCESS_STATE_PROP_ID                            CERTENROLL_PROPERTYID = 14
+	XCN_CERT_SIGNATURE_HASH_PROP_ID                          CERTENROLL_PROPERTYID = 15
+	XCN_CERT_SMART_CARD_DATA_PROP_ID                         CERTENROLL_PROPERTYID = 16
+	XCN_CERT_EFS_PROP_ID                                     CERTENROLL_PROPERTYID = 17
+	XCN_CERT_FORTEZZA_DATA_PROP_ID                           CERTENROLL_PROPERTYID = 18
+	XCN_CERT_ARCHIVED_PROP_ID                                CERTENROLL_PROPERTYID = 19
+	XCN_CERT_KEY_IDENTIFIER_PROP_ID                          CERTENROLL_PROPERTYID = 20
+	XCN_CERT_AUTO_ENROLL_PROP_ID                             CERTENROLL_PROPERTYID = 21
+	XCN_CERT_PUBKEY_ALG_PARA_PROP_ID                         CERTENROLL_PROPERTYID = 22
+	XCN_CERT_CROSS_CERT_DIST_POINTS_PROP_ID                  CERTENROLL_PROPERTYID = 23
+	XCN_CERT_ISSUER_PUBLIC_KEY_MD5_HASH_PROP_ID              CERTENROLL_PROPERTYID = 24
+	XCN_CERT_SUBJECT_PUBLIC_KEY_MD5_HASH_PROP_ID             CERTENROLL_PROPERTYID = 25
+	XCN_CERT_ENROLLMENT_PROP_ID                              CERTENROLL_PROPERTYID = 26
+	XCN_CERT_DATE_STAMP_PROP_ID                              CERTENROLL_PROPERTYID = 27
+	XCN_CERT_ISSUER_SERIAL_NUMBER_MD5_HASH_PROP_ID           CERTENROLL_PROPERTYID = 28
+	XCN_CERT_SUBJECT_NAME_MD5_HASH_PROP_ID                   CERTENROLL_PROPERTYID = 29
+	XCN_CERT_EXTENDED_ERROR_INFO_PROP_ID                     CERTENROLL_PROPERTYID = 30
+	XCN_CERT_RENEWAL_PROP_ID                                 CERTENROLL_PROPERTYID = 64
+	XCN_CERT_ARCHIVED_KEY_HASH_PROP_ID                       CERTENROLL_PROPERTYID = 65
+	XCN_CERT_AUTO_ENROLL_RETRY_PROP_ID                       CERTENROLL_PROPERTYID = 66
+	XCN_CERT_AIA_URL_RETRIEVED_PROP_ID                       CERTENROLL_PROPERTYID = 67
+	XCN_CERT_AUTHORITY_INFO_ACCESS_PROP_ID                   CERTENROLL_PROPERTYID = 68
+	XCN_CERT_BACKED_UP_PROP_ID                               CERTENROLL_PROPERTYID = 69
+	XCN_CERT_OCSP_RESPONSE_PROP_ID                           CERTENROLL_PROPERTYID = 70
+	XCN_CERT_REQUEST_ORIGINATOR_PROP_ID                      CERTENROLL_PROPERTYID = 71
+	XCN_CERT_SOURCE_LOCATION_PROP_ID                         CERTENROLL_PROPERTYID = 72
+	XCN_CERT_SOURCE_URL_PROP_ID                              CERTENROLL_PROPERTYID = 73
+	XCN_CERT_NEW_KEY_PROP_ID                                 CERTENROLL_PROPERTYID = 74
+	XCN_CERT_OCSP_CACHE_PREFIX_PROP_ID                       CERTENROLL_PROPERTYID = 75
+	XCN_CERT_SMART_CARD_ROOT_INFO_PROP_ID                    CERTENROLL_PROPERTYID = 76
+	XCN_CERT_NO_AUTO_EXPIRE_CHECK_PROP_ID                    CERTENROLL_PROPERTYID = 77
+	XCN_CERT_NCRYPT_KEY_HANDLE_PROP_ID                       CERTENROLL_PROPERTYID = 78
+	XCN_CERT_HCRYPTPROV_OR_NCRYPT_KEY_HANDLE_PROP_ID         CERTENROLL_PROPERTYID = 79
+	XCN_CERT_SUBJECT_INFO_ACCESS_PROP_ID                     CERTENROLL_PROPERTYID = 80
+	XCN_CERT_CA_OCSP_AUTHORITY_INFO_ACCESS_PROP_ID           CERTENROLL_PROPERTYID = 81
+	XCN_CERT_CA_DISABLE_CRL_PROP_ID                          CERTENROLL_PROPERTYID = 82
+	XCN_CERT_ROOT_PROGRAM_CERT_POLICIES_PROP_ID              CERTENROLL_PROPERTYID = 83
+	XCN_CERT_ROOT_PROGRAM_NAME_CONSTRAINTS_PROP_ID           CERTENROLL_PROPERTYID = 84
+	XCN_CERT_SUBJECT_OCSP_AUTHORITY_INFO_ACCESS_PROP_ID      CERTENROLL_PROPERTYID = 85
+	XCN_CERT_SUBJECT_DISABLE_CRL_PROP_ID                     CERTENROLL_PROPERTYID = 86
+	XCN_CERT_CEP_PROP_ID                                     CERTENROLL_PROPERTYID = 87
+	XCN_CERT_SIGN_HASH_CNG_ALG_PROP_ID                       CERTENROLL_PROPERTYID = 89
+	XCN_CERT_SCARD_PIN_ID_PROP_ID                            CERTENROLL_PROPERTYID = 90
+	XCN_CERT_SCARD_PIN_INFO_PROP_ID                          CERTENROLL_PROPERTYID = 91
+	XCN_CERT_SUBJECT_PUB_KEY_BIT_LENGTH_PROP_ID              CERTENROLL_PROPERTYID = 92
+	XCN_CERT_PUB_KEY_CNG_ALG_BIT_LENGTH_PROP_ID              CERTENROLL_PROPERTYID = 93
+	XCN_CERT_ISSUER_PUB_KEY_BIT_LENGTH_PROP_ID               CERTENROLL_PROPERTYID = 94
+	XCN_CERT_ISSUER_CHAIN_SIGN_HASH_CNG_ALG_PROP_ID          CERTENROLL_PROPERTYID = 95
+	XCN_CERT_ISSUER_CHAIN_PUB_KEY_CNG_ALG_BIT_LENGTH_PROP_ID CERTENROLL_PROPERTYID = 96
+	XCN_CERT_NO_EXPIRE_NOTIFICATION_PROP_ID                  CERTENROLL_PROPERTYID = 97
+	XCN_CERT_AUTH_ROOT_SHA256_HASH_PROP_ID                   CERTENROLL_PROPERTYID = 98
+	XCN_CERT_NCRYPT_KEY_HANDLE_TRANSFER_PROP_ID              CERTENROLL_PROPERTYID = 99
+	XCN_CERT_HCRYPTPROV_TRANSFER_PROP_ID                     CERTENROLL_PROPERTYID = 100
+	XCN_CERT_SMART_CARD_READER_PROP_ID                       CERTENROLL_PROPERTYID = 101
+	XCN_CERT_SEND_AS_TRUSTED_ISSUER_PROP_ID                  CERTENROLL_PROPERTYID = 102
+	XCN_CERT_KEY_REPAIR_ATTEMPTED_PROP_ID                    CERTENROLL_PROPERTYID = 103
+	XCN_CERT_DISALLOWED_FILETIME_PROP_ID                     CERTENROLL_PROPERTYID = 104
+	XCN_CERT_ROOT_PROGRAM_CHAIN_POLICIES_PROP_ID             CERTENROLL_PROPERTYID = 105
+	XCN_CERT_SMART_CARD_READER_NON_REMOVABLE_PROP_ID         CERTENROLL_PROPERTYID = 106
+	XCN_CERT_SHA256_HASH_PROP_ID                             CERTENROLL_PROPERTYID = 107
+	XCN_CERT_SCEP_SERVER_CERTS_PROP_ID                       CERTENROLL_PROPERTYID = 108
+	XCN_CERT_SCEP_RA_SIGNATURE_CERT_PROP_ID                  CERTENROLL_PROPERTYID = 109
+	XCN_CERT_SCEP_RA_ENCRYPTION_CERT_PROP_ID                 CERTENROLL_PROPERTYID = 110
+	XCN_CERT_SCEP_CA_CERT_PROP_ID                            CERTENROLL_PROPERTYID = 111
+	XCN_CERT_SCEP_SIGNER_CERT_PROP_ID                        CERTENROLL_PROPERTYID = 112
+	XCN_CERT_SCEP_NONCE_PROP_ID                              CERTENROLL_PROPERTYID = 113
+	XCN_CERT_SCEP_ENCRYPT_HASH_CNG_ALG_PROP_ID               CERTENROLL_PROPERTYID = 114
+	XCN_CERT_SCEP_FLAGS_PROP_ID                              CERTENROLL_PROPERTYID = 115
+	XCN_CERT_SCEP_GUID_PROP_ID                               CERTENROLL_PROPERTYID = 116
+	XCN_CERT_SERIALIZABLE_KEY_CONTEXT_PROP_ID                CERTENROLL_PROPERTYID = 117
+	XCN_CERT_ISOLATED_KEY_PROP_ID                            CERTENROLL_PROPERTYID = 118
+	XCN_CERT_SERIAL_CHAIN_PROP_ID                            CERTENROLL_PROPERTYID = 119
+	XCN_CERT_KEY_CLASSIFICATION_PROP_ID                      CERTENROLL_PROPERTYID = 120
+	XCN_CERT_DISALLOWED_ENHKEY_USAGE_PROP_ID                 CERTENROLL_PROPERTYID = 122
+	XCN_CERT_NONCOMPLIANT_ROOT_URL_PROP_ID                   CERTENROLL_PROPERTYID = 123
+	XCN_CERT_PIN_SHA256_HASH_PROP_ID                         CERTENROLL_PROPERTYID = 124
+	XCN_CERT_CLR_DELETE_KEY_PROP_ID                          CERTENROLL_PROPERTYID = 125
+	XCN_CERT_NOT_BEFORE_FILETIME_PROP_ID                     CERTENROLL_PROPERTYID = 126
+	XCN_CERT_CERT_NOT_BEFORE_ENHKEY_USAGE_PROP_ID            CERTENROLL_PROPERTYID = 127
+	XCN_CERT_FIRST_RESERVED_PROP_ID                          CERTENROLL_PROPERTYID = 128
+	XCN_CERT_LAST_RESERVED_PROP_ID                           CERTENROLL_PROPERTYID = 32767
+	XCN_CERT_FIRST_USER_PROP_ID                              CERTENROLL_PROPERTYID = 32768
+	XCN_CERT_LAST_USER_PROP_ID                               CERTENROLL_PROPERTYID = 65535
+	XCN_CERT_STORE_LOCALIZED_NAME_PROP_ID                    CERTENROLL_PROPERTYID = 4096
 )
 
 type EnrollmentPolicyServerPropertyFlags int32
 
 const (
-	DefaultNone = 0
-	DefaultPolicyServer = 1
+	DefaultNone         EnrollmentPolicyServerPropertyFlags = 0
+	DefaultPolicyServer EnrollmentPolicyServerPropertyFlags = 1
 )
 
 type PolicyServerUrlFlags int32
 
 const (
-	PsfNone = 0
-	PsfLocationGroupPolicy = 1
-	PsfLocationRegistry = 2
-	PsfUseClientId = 4
-	PsfAutoEnrollmentEnabled = 16
-	PsfAllowUnTrustedCA = 32
+	PsfNone                  PolicyServerUrlFlags = 0
+	PsfLocationGroupPolicy   PolicyServerUrlFlags = 1
+	PsfLocationRegistry      PolicyServerUrlFlags = 2
+	PsfUseClientId           PolicyServerUrlFlags = 4
+	PsfAutoEnrollmentEnabled PolicyServerUrlFlags = 16
+	PsfAllowUnTrustedCA      PolicyServerUrlFlags = 32
 )
 
 type EnrollmentTemplateProperty int32
 
 const (
-	TemplatePropCommonName = 1
-	TemplatePropFriendlyName = 2
-	TemplatePropEKUs = 3
-	TemplatePropCryptoProviders = 4
-	TemplatePropMajorRevision = 5
-	TemplatePropDescription = 6
-	TemplatePropKeySpec = 7
-	TemplatePropSchemaVersion = 8
-	TemplatePropMinorRevision = 9
-	TemplatePropRASignatureCount = 10
-	TemplatePropMinimumKeySize = 11
-	TemplatePropOID = 12
-	TemplatePropSupersede = 13
-	TemplatePropRACertificatePolicies = 14
-	TemplatePropRAEKUs = 15
-	TemplatePropCertificatePolicies = 16
-	TemplatePropV1ApplicationPolicy = 17
-	TemplatePropAsymmetricAlgorithm = 18
-	TemplatePropKeySecurityDescriptor = 19
-	TemplatePropSymmetricAlgorithm = 20
-	TemplatePropSymmetricKeyLength = 21
-	TemplatePropHashAlgorithm = 22
-	TemplatePropKeyUsage = 23
-	TemplatePropEnrollmentFlags = 24
-	TemplatePropSubjectNameFlags = 25
-	TemplatePropPrivateKeyFlags = 26
-	TemplatePropGeneralFlags = 27
-	TemplatePropSecurityDescriptor = 28
-	TemplatePropExtensions = 29
-	TemplatePropValidityPeriod = 30
-	TemplatePropRenewalPeriod = 31
+	TemplatePropCommonName            EnrollmentTemplateProperty = 1
+	TemplatePropFriendlyName          EnrollmentTemplateProperty = 2
+	TemplatePropEKUs                  EnrollmentTemplateProperty = 3
+	TemplatePropCryptoProviders       EnrollmentTemplateProperty = 4
+	TemplatePropMajorRevision         EnrollmentTemplateProperty = 5
+	TemplatePropDescription           EnrollmentTemplateProperty = 6
+	TemplatePropKeySpec               EnrollmentTemplateProperty = 7
+	TemplatePropSchemaVersion         EnrollmentTemplateProperty = 8
+	TemplatePropMinorRevision         EnrollmentTemplateProperty = 9
+	TemplatePropRASignatureCount      EnrollmentTemplateProperty = 10
+	TemplatePropMinimumKeySize        EnrollmentTemplateProperty = 11
+	TemplatePropOID                   EnrollmentTemplateProperty = 12
+	TemplatePropSupersede             EnrollmentTemplateProperty = 13
+	TemplatePropRACertificatePolicies EnrollmentTemplateProperty = 14
+	TemplatePropRAEKUs                EnrollmentTemplateProperty = 15
+	TemplatePropCertificatePolicies   EnrollmentTemplateProperty = 16
+	TemplatePropV1ApplicationPolicy   EnrollmentTemplateProperty = 17
+	TemplatePropAsymmetricAlgorithm   EnrollmentTemplateProperty = 18
+	TemplatePropKeySecurityDescriptor EnrollmentTemplateProperty = 19
+	TemplatePropSymmetricAlgorithm    EnrollmentTemplateProperty = 20
+	TemplatePropSymmetricKeyLength    EnrollmentTemplateProperty = 21
+	TemplatePropHashAlgorithm         EnrollmentTemplateProperty = 22
+	TemplatePropKeyUsage              EnrollmentTemplateProperty = 23
+	TemplatePropEnrollmentFlags       EnrollmentTemplateProperty = 24
+	TemplatePropSubjectNameFlags      EnrollmentTemplateProperty = 25
+	TemplatePropPrivateKeyFlags       EnrollmentTemplateProperty = 26
+	TemplatePropGeneralFlags          EnrollmentTemplateProperty = 27
+	TemplatePropSecurityDescriptor    EnrollmentTemplateProperty = 28
+	TemplatePropExtensions            EnrollmentTemplateProperty = 29
+	TemplatePropValidityPeriod        EnrollmentTemplateProperty = 30
+	TemplatePropRenewalPeriod         EnrollmentTemplateProperty = 31
 )
 
 type CommitTemplateFlags int32
 
 const (
-	CommitFlagSaveTemplateGenerateOID = 1
-	CommitFlagSaveTemplateUseCurrentOID = 2
-	CommitFlagSaveTemplateOverwrite = 3
-	CommitFlagDeleteTemplate = 4
+	CommitFlagSaveTemplateGenerateOID   CommitTemplateFlags = 1
+	CommitFlagSaveTemplateUseCurrentOID CommitTemplateFlags = 2
+	CommitFlagSaveTemplateOverwrite     CommitTemplateFlags = 3
+	CommitFlagDeleteTemplate            CommitTemplateFlags = 4
 )
 
 type EnrollmentCAProperty int32
 
 const (
-	CAPropCommonName = 1
-	CAPropDistinguishedName = 2
-	CAPropSanitizedName = 3
-	CAPropSanitizedShortName = 4
-	CAPropDNSName = 5
-	CAPropCertificateTypes = 6
-	CAPropCertificate = 7
-	CAPropDescription = 8
-	CAPropWebServers = 9
-	CAPropSiteName = 10
-	CAPropSecurity = 11
-	CAPropRenewalOnly = 12
+	CAPropCommonName         EnrollmentCAProperty = 1
+	CAPropDistinguishedName  EnrollmentCAProperty = 2
+	CAPropSanitizedName      EnrollmentCAProperty = 3
+	CAPropSanitizedShortName EnrollmentCAProperty = 4
+	CAPropDNSName            EnrollmentCAProperty = 5
+	CAPropCertificateTypes   EnrollmentCAProperty = 6
+	CAPropCertificate        EnrollmentCAProperty = 7
+	CAPropDescription        EnrollmentCAProperty = 8
+	CAPropWebServers         EnrollmentCAProperty = 9
+	CAPropSiteName           EnrollmentCAProperty = 10
+	CAPropSecurity           EnrollmentCAProperty = 11
+	CAPropRenewalOnly        EnrollmentCAProperty = 12
 )
 
 type X509EnrollmentPolicyLoadOption int32
 
 const (
-	LoadOptionDefault = 0
-	LoadOptionCacheOnly = 1
-	LoadOptionReload = 2
-	LoadOptionRegisterForADChanges = 4
+	LoadOptionDefault              X509EnrollmentPolicyLoadOption = 0
+	LoadOptionCacheOnly            X509EnrollmentPolicyLoadOption = 1
+	LoadOptionReload               X509EnrollmentPolicyLoadOption = 2
+	LoadOptionRegisterForADChanges X509EnrollmentPolicyLoadOption = 4
 )
 
 type EnrollmentPolicyFlags int32
 
 const (
-	DisableGroupPolicyList = 2
-	DisableUserServerList = 4
+	DisableGroupPolicyList EnrollmentPolicyFlags = 2
+	DisableUserServerList  EnrollmentPolicyFlags = 4
 )
 
 type PolicyServerUrlPropertyID int32
 
 const (
-	PsPolicyID = 0
-	PsFriendlyName = 1
+	PsPolicyID     PolicyServerUrlPropertyID = 0
+	PsFriendlyName PolicyServerUrlPropertyID = 1
 )
 
 type X509EnrollmentPolicyExportFlags int32
 
 const (
-	ExportTemplates = 1
-	ExportOIDs = 2
-	ExportCAs = 4
+	ExportTemplates X509EnrollmentPolicyExportFlags = 1
+	ExportOIDs      X509EnrollmentPolicyExportFlags = 2
+	ExportCAs       X509EnrollmentPolicyExportFlags = 4
 )
 
 type X509RequestType int32
 
 const (
-	TypeAny = 0
-	TypePkcs10 = 1
-	TypePkcs7 = 2
-	TypeCmc = 3
-	TypeCertificate = 4
+	TypeAny         X509RequestType = 0
+	TypePkcs10      X509RequestType = 1
+	TypePkcs7       X509RequestType = 2
+	TypeCmc         X509RequestType = 3
+	TypeCertificate X509RequestType = 4
 )
 
 type X509RequestInheritOptions int32
 
 const (
-	InheritDefault = 0
-	InheritNewDefaultKey = 1
-	InheritNewSimilarKey = 2
-	InheritPrivateKey = 3
-	InheritPublicKey = 4
-	InheritKeyMask = 15
-	InheritNone = 16
-	InheritRenewalCertificateFlag = 32
-	InheritTemplateFlag = 64
-	InheritSubjectFlag = 128
-	InheritExtensionsFlag = 256
-	InheritSubjectAltNameFlag = 512
-	InheritValidityPeriodFlag = 1024
-	InheritReserved80000000 = -2147483648
+	InheritDefault                X509RequestInheritOptions = 0
+	InheritNewDefaultKey          X509RequestInheritOptions = 1
+	InheritNewSimilarKey          X509RequestInheritOptions = 2
+	InheritPrivateKey             X509RequestInheritOptions = 3
+	InheritPublicKey              X509RequestInheritOptions = 4
+	InheritKeyMask                X509RequestInheritOptions = 15
+	InheritNone                   X509RequestInheritOptions = 16
+	InheritRenewalCertificateFlag X509RequestInheritOptions = 32
+	InheritTemplateFlag           X509RequestInheritOptions = 64
+	InheritSubjectFlag            X509RequestInheritOptions = 128
+	InheritExtensionsFlag         X509RequestInheritOptions = 256
+	InheritSubjectAltNameFlag     X509RequestInheritOptions = 512
+	InheritValidityPeriodFlag     X509RequestInheritOptions = 1024
+	InheritReserved80000000       X509RequestInheritOptions = -2147483648
 )
 
 type InnerRequestLevel int32
 
 const (
-	LevelInnermost = 0
-	LevelNext = 1
+	LevelInnermost InnerRequestLevel = 0
+	LevelNext      InnerRequestLevel = 1
 )
 
 type Pkcs10AllowedSignatureTypes int32
 
 const (
-	AllowedKeySignature = 1
-	AllowedNullSignature = 2
+	AllowedKeySignature  Pkcs10AllowedSignatureTypes = 1
+	AllowedNullSignature Pkcs10AllowedSignatureTypes = 2
 )
 
 type KeyAttestationClaimType int32
 
 const (
-	XCN_NCRYPT_CLAIM_NONE = 0
-	XCN_NCRYPT_CLAIM_AUTHORITY_AND_SUBJECT = 3
-	XCN_NCRYPT_CLAIM_AUTHORITY_ONLY = 1
-	XCN_NCRYPT_CLAIM_SUBJECT_ONLY = 2
-	XCN_NCRYPT_CLAIM_UNKNOWN = 4096
+	XCN_NCRYPT_CLAIM_NONE                  KeyAttestationClaimType = 0
+	XCN_NCRYPT_CLAIM_AUTHORITY_AND_SUBJECT KeyAttestationClaimType = 3
+	XCN_NCRYPT_CLAIM_AUTHORITY_ONLY        KeyAttestationClaimType = 1
+	XCN_NCRYPT_CLAIM_SUBJECT_ONLY          KeyAttestationClaimType = 2
+	XCN_NCRYPT_CLAIM_UNKNOWN               KeyAttestationClaimType = 4096
 )
 
 type InstallResponseRestrictionFlags int32
 
 const (
-	AllowNone = 0
-	AllowNoOutstandingRequest = 1
-	AllowUntrustedCertificate = 2
-	AllowUntrustedRoot = 4
+	AllowNone                 InstallResponseRestrictionFlags = 0
+	AllowNoOutstandingRequest InstallResponseRestrictionFlags = 1
+	AllowUntrustedCertificate InstallResponseRestrictionFlags = 2
+	AllowUntrustedRoot        InstallResponseRestrictionFlags = 4
 )
 
 type WebEnrollmentFlags int32
 
 const (
-	EnrollPrompt = 1
+	EnrollPrompt WebEnrollmentFlags = 1
 )
 
 type CRLRevocationReason int32
 
 const (
-	XCN_CRL_REASON_UNSPECIFIED = 0
-	XCN_CRL_REASON_KEY_COMPROMISE = 1
-	XCN_CRL_REASON_CA_COMPROMISE = 2
-	XCN_CRL_REASON_AFFILIATION_CHANGED = 3
-	XCN_CRL_REASON_SUPERSEDED = 4
-	XCN_CRL_REASON_CESSATION_OF_OPERATION = 5
-	XCN_CRL_REASON_CERTIFICATE_HOLD = 6
-	XCN_CRL_REASON_REMOVE_FROM_CRL = 8
-	XCN_CRL_REASON_PRIVILEGE_WITHDRAWN = 9
-	XCN_CRL_REASON_AA_COMPROMISE = 10
+	XCN_CRL_REASON_UNSPECIFIED            CRLRevocationReason = 0
+	XCN_CRL_REASON_KEY_COMPROMISE         CRLRevocationReason = 1
+	XCN_CRL_REASON_CA_COMPROMISE          CRLRevocationReason = 2
+	XCN_CRL_REASON_AFFILIATION_CHANGED    CRLRevocationReason = 3
+	XCN_CRL_REASON_SUPERSEDED             CRLRevocationReason = 4
+	XCN_CRL_REASON_CESSATION_OF_OPERATION CRLRevocationReason = 5
+	XCN_CRL_REASON_CERTIFICATE_HOLD       CRLRevocationReason = 6
+	XCN_CRL_REASON_REMOVE_FROM_CRL        CRLRevocationReason = 8
+	XCN_CRL_REASON_PRIVILEGE_WITHDRAWN    CRLRevocationReason = 9
+	XCN_CRL_REASON_AA_COMPROMISE          CRLRevocationReason = 10
 )
 
 type X509SCEPProcessMessageFlags int32
 
 const (
-	SCEPProcessDefault = 0
-	SCEPProcessSkipCertInstall = 1
+	SCEPProcessDefault         X509SCEPProcessMessageFlags = 0
+	SCEPProcessSkipCertInstall X509SCEPProcessMessageFlags = 1
 )
 
 type DelayRetryAction int32
 
 const (
-	DelayRetryUnknown = 0
-	DelayRetryNone = 1
-	DelayRetryShort = 2
-	DelayRetryLong = 3
-	DelayRetrySuccess = 4
-	DelayRetryPastSuccess = 5
+	DelayRetryUnknown     DelayRetryAction = 0
+	DelayRetryNone        DelayRetryAction = 1
+	DelayRetryShort       DelayRetryAction = 2
+	DelayRetryLong        DelayRetryAction = 3
+	DelayRetrySuccess     DelayRetryAction = 4
+	DelayRetryPastSuccess DelayRetryAction = 5
 )
 
 type X509CertificateTemplateGeneralFlag int32
 
 const (
-	GeneralMachineType = 64
-	GeneralCA = 128
-	GeneralCrossCA = 2048
-	GeneralDefault = 65536
-	GeneralModified = 131072
-	GeneralDonotPersist = 4096
+	GeneralMachineType  X509CertificateTemplateGeneralFlag = 64
+	GeneralCA           X509CertificateTemplateGeneralFlag = 128
+	GeneralCrossCA      X509CertificateTemplateGeneralFlag = 2048
+	GeneralDefault      X509CertificateTemplateGeneralFlag = 65536
+	GeneralModified     X509CertificateTemplateGeneralFlag = 131072
+	GeneralDonotPersist X509CertificateTemplateGeneralFlag = 4096
 )
 
 type X509CertificateTemplateEnrollmentFlag int32
 
 const (
-	EnrollmentIncludeSymmetricAlgorithms = 1
-	EnrollmentPendAllRequests = 2
-	EnrollmentPublishToKRAContainer = 4
-	EnrollmentPublishToDS = 8
-	EnrollmentAutoEnrollmentCheckUserDSCertificate = 16
-	EnrollmentAutoEnrollment = 32
-	EnrollmentDomainAuthenticationNotRequired = 128
-	EnrollmentPreviousApprovalValidateReenrollment = 64
-	EnrollmentUserInteractionRequired = 256
-	EnrollmentAddTemplateName = 512
-	EnrollmentRemoveInvalidCertificateFromPersonalStore = 1024
-	EnrollmentAllowEnrollOnBehalfOf = 2048
-	EnrollmentAddOCSPNoCheck = 4096
-	EnrollmentReuseKeyOnFullSmartCard = 8192
-	EnrollmentNoRevocationInfoInCerts = 16384
-	EnrollmentIncludeBasicConstraintsForEECerts = 32768
-	EnrollmentPreviousApprovalKeyBasedValidateReenrollment = 65536
-	EnrollmentCertificateIssuancePoliciesFromRequest = 131072
-	EnrollmentSkipAutoRenewal = 262144
+	EnrollmentIncludeSymmetricAlgorithms                   X509CertificateTemplateEnrollmentFlag = 1
+	EnrollmentPendAllRequests                              X509CertificateTemplateEnrollmentFlag = 2
+	EnrollmentPublishToKRAContainer                        X509CertificateTemplateEnrollmentFlag = 4
+	EnrollmentPublishToDS                                  X509CertificateTemplateEnrollmentFlag = 8
+	EnrollmentAutoEnrollmentCheckUserDSCertificate         X509CertificateTemplateEnrollmentFlag = 16
+	EnrollmentAutoEnrollment                               X509CertificateTemplateEnrollmentFlag = 32
+	EnrollmentDomainAuthenticationNotRequired              X509CertificateTemplateEnrollmentFlag = 128
+	EnrollmentPreviousApprovalValidateReenrollment         X509CertificateTemplateEnrollmentFlag = 64
+	EnrollmentUserInteractionRequired                      X509CertificateTemplateEnrollmentFlag = 256
+	EnrollmentAddTemplateName                              X509CertificateTemplateEnrollmentFlag = 512
+	EnrollmentRemoveInvalidCertificateFromPersonalStore    X509CertificateTemplateEnrollmentFlag = 1024
+	EnrollmentAllowEnrollOnBehalfOf                        X509CertificateTemplateEnrollmentFlag = 2048
+	EnrollmentAddOCSPNoCheck                               X509CertificateTemplateEnrollmentFlag = 4096
+	EnrollmentReuseKeyOnFullSmartCard                      X509CertificateTemplateEnrollmentFlag = 8192
+	EnrollmentNoRevocationInfoInCerts                      X509CertificateTemplateEnrollmentFlag = 16384
+	EnrollmentIncludeBasicConstraintsForEECerts            X509CertificateTemplateEnrollmentFlag = 32768
+	EnrollmentPreviousApprovalKeyBasedValidateReenrollment X509CertificateTemplateEnrollmentFlag = 65536
+	EnrollmentCertificateIssuancePoliciesFromRequest       X509CertificateTemplateEnrollmentFlag = 131072
+	EnrollmentSkipAutoRenewal                              X509CertificateTemplateEnrollmentFlag = 262144
 )
 
 type X509CertificateTemplateSubjectNameFlag int32
 
 const (
-	SubjectNameEnrolleeSupplies = 1
-	SubjectNameRequireDirectoryPath = -2147483648
-	SubjectNameRequireCommonName = 1073741824
-	SubjectNameRequireEmail = 536870912
-	SubjectNameRequireDNS = 268435456
-	SubjectNameAndAlternativeNameOldCertSupplies = 8
-	SubjectAlternativeNameEnrolleeSupplies = 65536
-	SubjectAlternativeNameRequireDirectoryGUID = 16777216
-	SubjectAlternativeNameRequireUPN = 33554432
-	SubjectAlternativeNameRequireEmail = 67108864
-	SubjectAlternativeNameRequireSPN = 8388608
-	SubjectAlternativeNameRequireDNS = 134217728
-	SubjectAlternativeNameRequireDomainDNS = 4194304
+	SubjectNameEnrolleeSupplies                  X509CertificateTemplateSubjectNameFlag = 1
+	SubjectNameRequireDirectoryPath              X509CertificateTemplateSubjectNameFlag = -2147483648
+	SubjectNameRequireCommonName                 X509CertificateTemplateSubjectNameFlag = 1073741824
+	SubjectNameRequireEmail                      X509CertificateTemplateSubjectNameFlag = 536870912
+	SubjectNameRequireDNS                        X509CertificateTemplateSubjectNameFlag = 268435456
+	SubjectNameAndAlternativeNameOldCertSupplies X509CertificateTemplateSubjectNameFlag = 8
+	SubjectAlternativeNameEnrolleeSupplies       X509CertificateTemplateSubjectNameFlag = 65536
+	SubjectAlternativeNameRequireDirectoryGUID   X509CertificateTemplateSubjectNameFlag = 16777216
+	SubjectAlternativeNameRequireUPN             X509CertificateTemplateSubjectNameFlag = 33554432
+	SubjectAlternativeNameRequireEmail           X509CertificateTemplateSubjectNameFlag = 67108864
+	SubjectAlternativeNameRequireSPN             X509CertificateTemplateSubjectNameFlag = 8388608
+	SubjectAlternativeNameRequireDNS             X509CertificateTemplateSubjectNameFlag = 134217728
+	SubjectAlternativeNameRequireDomainDNS       X509CertificateTemplateSubjectNameFlag = 4194304
 )
 
 type X509CertificateTemplatePrivateKeyFlag int32
 
 const (
-	PrivateKeyRequireArchival = 1
-	PrivateKeyExportable = 16
-	PrivateKeyRequireStrongKeyProtection = 32
-	PrivateKeyRequireAlternateSignatureAlgorithm = 64
-	PrivateKeyRequireSameKeyRenewal = 128
-	PrivateKeyUseLegacyProvider = 256
-	PrivateKeyEKTrustOnUse = 512
-	PrivateKeyEKValidateCert = 1024
-	PrivateKeyEKValidateKey = 2048
-	PrivateKeyAttestNone = 0
-	PrivateKeyAttestPreferred = 4096
-	PrivateKeyAttestRequired = 8192
-	PrivateKeyAttestMask = 12288
-	PrivateKeyAttestWithoutPolicy = 16384
-	PrivateKeyServerVersionMask = 983040
-	PrivateKeyServerVersionShift = 16
-	PrivateKeyHelloKspKey = 1048576
-	PrivateKeyHelloLogonKey = 2097152
-	PrivateKeyClientVersionMask = 251658240
-	PrivateKeyClientVersionShift = 24
+	PrivateKeyRequireArchival                    X509CertificateTemplatePrivateKeyFlag = 1
+	PrivateKeyExportable                         X509CertificateTemplatePrivateKeyFlag = 16
+	PrivateKeyRequireStrongKeyProtection         X509CertificateTemplatePrivateKeyFlag = 32
+	PrivateKeyRequireAlternateSignatureAlgorithm X509CertificateTemplatePrivateKeyFlag = 64
+	PrivateKeyRequireSameKeyRenewal              X509CertificateTemplatePrivateKeyFlag = 128
+	PrivateKeyUseLegacyProvider                  X509CertificateTemplatePrivateKeyFlag = 256
+	PrivateKeyEKTrustOnUse                       X509CertificateTemplatePrivateKeyFlag = 512
+	PrivateKeyEKValidateCert                     X509CertificateTemplatePrivateKeyFlag = 1024
+	PrivateKeyEKValidateKey                      X509CertificateTemplatePrivateKeyFlag = 2048
+	PrivateKeyAttestNone                         X509CertificateTemplatePrivateKeyFlag = 0
+	PrivateKeyAttestPreferred                    X509CertificateTemplatePrivateKeyFlag = 4096
+	PrivateKeyAttestRequired                     X509CertificateTemplatePrivateKeyFlag = 8192
+	PrivateKeyAttestMask                         X509CertificateTemplatePrivateKeyFlag = 12288
+	PrivateKeyAttestWithoutPolicy                X509CertificateTemplatePrivateKeyFlag = 16384
+	PrivateKeyServerVersionMask                  X509CertificateTemplatePrivateKeyFlag = 983040
+	PrivateKeyServerVersionShift                 X509CertificateTemplatePrivateKeyFlag = 16
+	PrivateKeyHelloKspKey                        X509CertificateTemplatePrivateKeyFlag = 1048576
+	PrivateKeyHelloLogonKey                      X509CertificateTemplatePrivateKeyFlag = 2097152
+	PrivateKeyClientVersionMask                  X509CertificateTemplatePrivateKeyFlag = 251658240
+	PrivateKeyClientVersionShift                 X509CertificateTemplatePrivateKeyFlag = 24
 )
 
 type ImportPFXFlags int32
 
 const (
-	ImportNone = 0
-	ImportMachineContext = 1
-	ImportForceOverwrite = 2
-	ImportSilent = 4
-	ImportSaveProperties = 8
-	ImportExportable = 16
-	ImportExportableEncrypted = 32
-	ImportNoUserProtected = 64
-	ImportUserProtected = 128
-	ImportUserProtectedHigh = 256
-	ImportInstallCertificate = 512
-	ImportInstallChain = 1024
-	ImportInstallChainAndRoot = 2048
+	ImportNone                ImportPFXFlags = 0
+	ImportMachineContext      ImportPFXFlags = 1
+	ImportForceOverwrite      ImportPFXFlags = 2
+	ImportSilent              ImportPFXFlags = 4
+	ImportSaveProperties      ImportPFXFlags = 8
+	ImportExportable          ImportPFXFlags = 16
+	ImportExportableEncrypted ImportPFXFlags = 32
+	ImportNoUserProtected     ImportPFXFlags = 64
+	ImportUserProtected       ImportPFXFlags = 128
+	ImportUserProtectedHigh   ImportPFXFlags = 256
+	ImportInstallCertificate  ImportPFXFlags = 512
+	ImportInstallChain        ImportPFXFlags = 1024
+	ImportInstallChainAndRoot ImportPFXFlags = 2048
 )
 
 type TOKENBINDING_TYPE int32
 
 const (
-	TOKENBINDING_TYPE_PROVIDED = 0
-	TOKENBINDING_TYPE_REFERRED = 1
+	TOKENBINDING_TYPE_PROVIDED TOKENBINDING_TYPE = 0
+	TOKENBINDING_TYPE_REFERRED TOKENBINDING_TYPE = 1
 )
 
 type TOKENBINDING_EXTENSION_FORMAT int32
 
 const (
-	TOKENBINDING_EXTENSION_FORMAT_UNDEFINED = 0
+	TOKENBINDING_EXTENSION_FORMAT_UNDEFINED TOKENBINDING_EXTENSION_FORMAT = 0
 )
 
 type TOKENBINDING_KEY_PARAMETERS_TYPE int32
 
 const (
-	TOKENBINDING_KEY_PARAMETERS_TYPE_RSA2048_PKCS = 0
-	TOKENBINDING_KEY_PARAMETERS_TYPE_RSA2048_PSS = 1
-	TOKENBINDING_KEY_PARAMETERS_TYPE_ECDSAP256 = 2
-	TOKENBINDING_KEY_PARAMETERS_TYPE_ANYEXISTING = 255
+	TOKENBINDING_KEY_PARAMETERS_TYPE_RSA2048_PKCS TOKENBINDING_KEY_PARAMETERS_TYPE = 0
+	TOKENBINDING_KEY_PARAMETERS_TYPE_RSA2048_PSS  TOKENBINDING_KEY_PARAMETERS_TYPE = 1
+	TOKENBINDING_KEY_PARAMETERS_TYPE_ECDSAP256    TOKENBINDING_KEY_PARAMETERS_TYPE = 2
+	TOKENBINDING_KEY_PARAMETERS_TYPE_ANYEXISTING  TOKENBINDING_KEY_PARAMETERS_TYPE = 255
 )
 
 type CRYPT_XML_CHARSET int32
 
 const (
-	CRYPT_XML_CHARSET_AUTO = 0
-	CRYPT_XML_CHARSET_UTF8 = 1
-	CRYPT_XML_CHARSET_UTF16LE = 2
-	CRYPT_XML_CHARSET_UTF16BE = 3
+	CRYPT_XML_CHARSET_AUTO    CRYPT_XML_CHARSET = 0
+	CRYPT_XML_CHARSET_UTF8    CRYPT_XML_CHARSET = 1
+	CRYPT_XML_CHARSET_UTF16LE CRYPT_XML_CHARSET = 2
+	CRYPT_XML_CHARSET_UTF16BE CRYPT_XML_CHARSET = 3
 )
 
 type CRYPT_XML_PROPERTY_ID int32
 
 const (
-	CRYPT_XML_PROPERTY_MAX_HEAP_SIZE = 1
-	CRYPT_XML_PROPERTY_SIGNATURE_LOCATION = 2
-	CRYPT_XML_PROPERTY_MAX_SIGNATURES = 3
-	CRYPT_XML_PROPERTY_DOC_DECLARATION = 4
-	CRYPT_XML_PROPERTY_XML_OUTPUT_CHARSET = 5
+	CRYPT_XML_PROPERTY_MAX_HEAP_SIZE      CRYPT_XML_PROPERTY_ID = 1
+	CRYPT_XML_PROPERTY_SIGNATURE_LOCATION CRYPT_XML_PROPERTY_ID = 2
+	CRYPT_XML_PROPERTY_MAX_SIGNATURES     CRYPT_XML_PROPERTY_ID = 3
+	CRYPT_XML_PROPERTY_DOC_DECLARATION    CRYPT_XML_PROPERTY_ID = 4
+	CRYPT_XML_PROPERTY_XML_OUTPUT_CHARSET CRYPT_XML_PROPERTY_ID = 5
 )
 
 type CRYPT_XML_KEYINFO_SPEC int32
 
 const (
-	CRYPT_XML_KEYINFO_SPEC_NONE = 0
-	CRYPT_XML_KEYINFO_SPEC_ENCODED = 1
-	CRYPT_XML_KEYINFO_SPEC_PARAM = 2
+	CRYPT_XML_KEYINFO_SPEC_NONE    CRYPT_XML_KEYINFO_SPEC = 0
+	CRYPT_XML_KEYINFO_SPEC_ENCODED CRYPT_XML_KEYINFO_SPEC = 1
+	CRYPT_XML_KEYINFO_SPEC_PARAM   CRYPT_XML_KEYINFO_SPEC = 2
 )
 
 type CASetupProperty int32
 
 const (
-	ENUM_SETUPPROP_INVALID = -1
-	ENUM_SETUPPROP_CATYPE = 0
-	ENUM_SETUPPROP_CAKEYINFORMATION = 1
-	ENUM_SETUPPROP_INTERACTIVE = 2
-	ENUM_SETUPPROP_CANAME = 3
-	ENUM_SETUPPROP_CADSSUFFIX = 4
-	ENUM_SETUPPROP_VALIDITYPERIOD = 5
-	ENUM_SETUPPROP_VALIDITYPERIODUNIT = 6
-	ENUM_SETUPPROP_EXPIRATIONDATE = 7
-	ENUM_SETUPPROP_PRESERVEDATABASE = 8
-	ENUM_SETUPPROP_DATABASEDIRECTORY = 9
-	ENUM_SETUPPROP_LOGDIRECTORY = 10
-	ENUM_SETUPPROP_SHAREDFOLDER = 11
-	ENUM_SETUPPROP_PARENTCAMACHINE = 12
-	ENUM_SETUPPROP_PARENTCANAME = 13
-	ENUM_SETUPPROP_REQUESTFILE = 14
-	ENUM_SETUPPROP_WEBCAMACHINE = 15
-	ENUM_SETUPPROP_WEBCANAME = 16
+	ENUM_SETUPPROP_INVALID            CASetupProperty = -1
+	ENUM_SETUPPROP_CATYPE             CASetupProperty = 0
+	ENUM_SETUPPROP_CAKEYINFORMATION   CASetupProperty = 1
+	ENUM_SETUPPROP_INTERACTIVE        CASetupProperty = 2
+	ENUM_SETUPPROP_CANAME             CASetupProperty = 3
+	ENUM_SETUPPROP_CADSSUFFIX         CASetupProperty = 4
+	ENUM_SETUPPROP_VALIDITYPERIOD     CASetupProperty = 5
+	ENUM_SETUPPROP_VALIDITYPERIODUNIT CASetupProperty = 6
+	ENUM_SETUPPROP_EXPIRATIONDATE     CASetupProperty = 7
+	ENUM_SETUPPROP_PRESERVEDATABASE   CASetupProperty = 8
+	ENUM_SETUPPROP_DATABASEDIRECTORY  CASetupProperty = 9
+	ENUM_SETUPPROP_LOGDIRECTORY       CASetupProperty = 10
+	ENUM_SETUPPROP_SHAREDFOLDER       CASetupProperty = 11
+	ENUM_SETUPPROP_PARENTCAMACHINE    CASetupProperty = 12
+	ENUM_SETUPPROP_PARENTCANAME       CASetupProperty = 13
+	ENUM_SETUPPROP_REQUESTFILE        CASetupProperty = 14
+	ENUM_SETUPPROP_WEBCAMACHINE       CASetupProperty = 15
+	ENUM_SETUPPROP_WEBCANAME          CASetupProperty = 16
 )
 
 type MSCEPSetupProperty int32
 
 const (
-	ENUM_CEPSETUPPROP_USELOCALSYSTEM = 0
-	ENUM_CEPSETUPPROP_USECHALLENGE = 1
-	ENUM_CEPSETUPPROP_RANAME_CN = 2
-	ENUM_CEPSETUPPROP_RANAME_EMAIL = 3
-	ENUM_CEPSETUPPROP_RANAME_COMPANY = 4
-	ENUM_CEPSETUPPROP_RANAME_DEPT = 5
-	ENUM_CEPSETUPPROP_RANAME_CITY = 6
-	ENUM_CEPSETUPPROP_RANAME_STATE = 7
-	ENUM_CEPSETUPPROP_RANAME_COUNTRY = 8
-	ENUM_CEPSETUPPROP_SIGNINGKEYINFORMATION = 9
-	ENUM_CEPSETUPPROP_EXCHANGEKEYINFORMATION = 10
-	ENUM_CEPSETUPPROP_CAINFORMATION = 11
-	ENUM_CEPSETUPPROP_MSCEPURL = 12
-	ENUM_CEPSETUPPROP_CHALLENGEURL = 13
+	ENUM_CEPSETUPPROP_USELOCALSYSTEM         MSCEPSetupProperty = 0
+	ENUM_CEPSETUPPROP_USECHALLENGE           MSCEPSetupProperty = 1
+	ENUM_CEPSETUPPROP_RANAME_CN              MSCEPSetupProperty = 2
+	ENUM_CEPSETUPPROP_RANAME_EMAIL           MSCEPSetupProperty = 3
+	ENUM_CEPSETUPPROP_RANAME_COMPANY         MSCEPSetupProperty = 4
+	ENUM_CEPSETUPPROP_RANAME_DEPT            MSCEPSetupProperty = 5
+	ENUM_CEPSETUPPROP_RANAME_CITY            MSCEPSetupProperty = 6
+	ENUM_CEPSETUPPROP_RANAME_STATE           MSCEPSetupProperty = 7
+	ENUM_CEPSETUPPROP_RANAME_COUNTRY         MSCEPSetupProperty = 8
+	ENUM_CEPSETUPPROP_SIGNINGKEYINFORMATION  MSCEPSetupProperty = 9
+	ENUM_CEPSETUPPROP_EXCHANGEKEYINFORMATION MSCEPSetupProperty = 10
+	ENUM_CEPSETUPPROP_CAINFORMATION          MSCEPSetupProperty = 11
+	ENUM_CEPSETUPPROP_MSCEPURL               MSCEPSetupProperty = 12
+	ENUM_CEPSETUPPROP_CHALLENGEURL           MSCEPSetupProperty = 13
 )
 
 type CESSetupProperty int32
 
 const (
-	ENUM_CESSETUPPROP_USE_IISAPPPOOLIDENTITY = 0
-	ENUM_CESSETUPPROP_CACONFIG = 1
-	ENUM_CESSETUPPROP_AUTHENTICATION = 2
-	ENUM_CESSETUPPROP_SSLCERTHASH = 3
-	ENUM_CESSETUPPROP_URL = 4
-	ENUM_CESSETUPPROP_RENEWALONLY = 5
-	ENUM_CESSETUPPROP_ALLOW_KEYBASED_RENEWAL = 6
+	ENUM_CESSETUPPROP_USE_IISAPPPOOLIDENTITY CESSetupProperty = 0
+	ENUM_CESSETUPPROP_CACONFIG               CESSetupProperty = 1
+	ENUM_CESSETUPPROP_AUTHENTICATION         CESSetupProperty = 2
+	ENUM_CESSETUPPROP_SSLCERTHASH            CESSetupProperty = 3
+	ENUM_CESSETUPPROP_URL                    CESSetupProperty = 4
+	ENUM_CESSETUPPROP_RENEWALONLY            CESSetupProperty = 5
+	ENUM_CESSETUPPROP_ALLOW_KEYBASED_RENEWAL CESSetupProperty = 6
 )
 
 type CEPSetupProperty int32
 
 const (
-	ENUM_CEPSETUPPROP_AUTHENTICATION = 0
-	ENUM_CEPSETUPPROP_SSLCERTHASH = 1
-	ENUM_CEPSETUPPROP_URL = 2
-	ENUM_CEPSETUPPROP_KEYBASED_RENEWAL = 3
+	ENUM_CEPSETUPPROP_AUTHENTICATION   CEPSetupProperty = 0
+	ENUM_CEPSETUPPROP_SSLCERTHASH      CEPSetupProperty = 1
+	ENUM_CEPSETUPPROP_URL              CEPSetupProperty = 2
+	ENUM_CEPSETUPPROP_KEYBASED_RENEWAL CEPSetupProperty = 3
 )
 
 type OCSPSigningFlag int32
 
 const (
-	OCSP_SF_SILENT = 1
-	OCSP_SF_USE_CACERT = 2
-	OCSP_SF_ALLOW_SIGNINGCERT_AUTORENEWAL = 4
-	OCSP_SF_FORCE_SIGNINGCERT_ISSUER_ISCA = 8
-	OCSP_SF_AUTODISCOVER_SIGNINGCERT = 16
-	OCSP_SF_MANUAL_ASSIGN_SIGNINGCERT = 32
-	OCSP_SF_RESPONDER_ID_KEYHASH = 64
-	OCSP_SF_RESPONDER_ID_NAME = 128
-	OCSP_SF_ALLOW_NONCE_EXTENSION = 256
-	OCSP_SF_ALLOW_SIGNINGCERT_AUTOENROLLMENT = 512
+	OCSP_SF_SILENT                           OCSPSigningFlag = 1
+	OCSP_SF_USE_CACERT                       OCSPSigningFlag = 2
+	OCSP_SF_ALLOW_SIGNINGCERT_AUTORENEWAL    OCSPSigningFlag = 4
+	OCSP_SF_FORCE_SIGNINGCERT_ISSUER_ISCA    OCSPSigningFlag = 8
+	OCSP_SF_AUTODISCOVER_SIGNINGCERT         OCSPSigningFlag = 16
+	OCSP_SF_MANUAL_ASSIGN_SIGNINGCERT        OCSPSigningFlag = 32
+	OCSP_SF_RESPONDER_ID_KEYHASH             OCSPSigningFlag = 64
+	OCSP_SF_RESPONDER_ID_NAME                OCSPSigningFlag = 128
+	OCSP_SF_ALLOW_NONCE_EXTENSION            OCSPSigningFlag = 256
+	OCSP_SF_ALLOW_SIGNINGCERT_AUTOENROLLMENT OCSPSigningFlag = 512
 )
 
 type OCSPRequestFlag int32
 
 const (
-	OCSP_RF_REJECT_SIGNED_REQUESTS = 1
+	OCSP_RF_REJECT_SIGNED_REQUESTS OCSPRequestFlag = 1
 )
 
 type ENUM_CATYPES int32
 
 const (
-	ENUM_ENTERPRISE_ROOTCA = 0
-	ENUM_ENTERPRISE_SUBCA = 1
-	ENUM_STANDALONE_ROOTCA = 3
-	ENUM_STANDALONE_SUBCA = 4
-	ENUM_UNKNOWN_CA = 5
+	ENUM_ENTERPRISE_ROOTCA ENUM_CATYPES = 0
+	ENUM_ENTERPRISE_SUBCA  ENUM_CATYPES = 1
+	ENUM_STANDALONE_ROOTCA ENUM_CATYPES = 3
+	ENUM_STANDALONE_SUBCA  ENUM_CATYPES = 4
+	ENUM_UNKNOWN_CA        ENUM_CATYPES = 5
 )
 
 type ENUM_PERIOD int32
 
 const (
-	ENUM_PERIOD_INVALID = -1
-	ENUM_PERIOD_SECONDS = 0
-	ENUM_PERIOD_MINUTES = 1
-	ENUM_PERIOD_HOURS = 2
-	ENUM_PERIOD_DAYS = 3
-	ENUM_PERIOD_WEEKS = 4
-	ENUM_PERIOD_MONTHS = 5
-	ENUM_PERIOD_YEARS = 6
+	ENUM_PERIOD_INVALID ENUM_PERIOD = -1
+	ENUM_PERIOD_SECONDS ENUM_PERIOD = 0
+	ENUM_PERIOD_MINUTES ENUM_PERIOD = 1
+	ENUM_PERIOD_HOURS   ENUM_PERIOD = 2
+	ENUM_PERIOD_DAYS    ENUM_PERIOD = 3
+	ENUM_PERIOD_WEEKS   ENUM_PERIOD = 4
+	ENUM_PERIOD_MONTHS  ENUM_PERIOD = 5
+	ENUM_PERIOD_YEARS   ENUM_PERIOD = 6
 )
 
 type SCESVC_INFO_TYPE int32
 
 const (
-	SceSvcConfigurationInfo = 0
-	SceSvcMergedPolicyInfo = 1
-	SceSvcAnalysisInfo = 2
-	SceSvcInternalUse = 3
+	SceSvcConfigurationInfo SCESVC_INFO_TYPE = 0
+	SceSvcMergedPolicyInfo  SCESVC_INFO_TYPE = 1
+	SceSvcAnalysisInfo      SCESVC_INFO_TYPE = 2
+	SceSvcInternalUse       SCESVC_INFO_TYPE = 3
 )
 
 type SAFER_POLICY_INFO_CLASS int32
 
 const (
-	SaferPolicyLevelList = 1
-	SaferPolicyEnableTransparentEnforcement = 2
-	SaferPolicyDefaultLevel = 3
-	SaferPolicyEvaluateUserScope = 4
-	SaferPolicyScopeFlags = 5
-	SaferPolicyDefaultLevelFlags = 6
-	SaferPolicyAuthenticodeEnabled = 7
+	SaferPolicyLevelList                    SAFER_POLICY_INFO_CLASS = 1
+	SaferPolicyEnableTransparentEnforcement SAFER_POLICY_INFO_CLASS = 2
+	SaferPolicyDefaultLevel                 SAFER_POLICY_INFO_CLASS = 3
+	SaferPolicyEvaluateUserScope            SAFER_POLICY_INFO_CLASS = 4
+	SaferPolicyScopeFlags                   SAFER_POLICY_INFO_CLASS = 5
+	SaferPolicyDefaultLevelFlags            SAFER_POLICY_INFO_CLASS = 6
+	SaferPolicyAuthenticodeEnabled          SAFER_POLICY_INFO_CLASS = 7
 )
 
 type SAFER_OBJECT_INFO_CLASS int32
 
 const (
-	SaferObjectLevelId = 1
-	SaferObjectScopeId = 2
-	SaferObjectFriendlyName = 3
-	SaferObjectDescription = 4
-	SaferObjectBuiltin = 5
-	SaferObjectDisallowed = 6
-	SaferObjectDisableMaxPrivilege = 7
-	SaferObjectInvertDeletedPrivileges = 8
-	SaferObjectDeletedPrivileges = 9
-	SaferObjectDefaultOwner = 10
-	SaferObjectSidsToDisable = 11
-	SaferObjectRestrictedSidsInverted = 12
-	SaferObjectRestrictedSidsAdded = 13
-	SaferObjectAllIdentificationGuids = 14
-	SaferObjectSingleIdentification = 15
-	SaferObjectExtendedError = 16
+	SaferObjectLevelId                 SAFER_OBJECT_INFO_CLASS = 1
+	SaferObjectScopeId                 SAFER_OBJECT_INFO_CLASS = 2
+	SaferObjectFriendlyName            SAFER_OBJECT_INFO_CLASS = 3
+	SaferObjectDescription             SAFER_OBJECT_INFO_CLASS = 4
+	SaferObjectBuiltin                 SAFER_OBJECT_INFO_CLASS = 5
+	SaferObjectDisallowed              SAFER_OBJECT_INFO_CLASS = 6
+	SaferObjectDisableMaxPrivilege     SAFER_OBJECT_INFO_CLASS = 7
+	SaferObjectInvertDeletedPrivileges SAFER_OBJECT_INFO_CLASS = 8
+	SaferObjectDeletedPrivileges       SAFER_OBJECT_INFO_CLASS = 9
+	SaferObjectDefaultOwner            SAFER_OBJECT_INFO_CLASS = 10
+	SaferObjectSidsToDisable           SAFER_OBJECT_INFO_CLASS = 11
+	SaferObjectRestrictedSidsInverted  SAFER_OBJECT_INFO_CLASS = 12
+	SaferObjectRestrictedSidsAdded     SAFER_OBJECT_INFO_CLASS = 13
+	SaferObjectAllIdentificationGuids  SAFER_OBJECT_INFO_CLASS = 14
+	SaferObjectSingleIdentification    SAFER_OBJECT_INFO_CLASS = 15
+	SaferObjectExtendedError           SAFER_OBJECT_INFO_CLASS = 16
 )
 
 type SAFER_IDENTIFICATION_TYPES int32
 
 const (
-	SaferIdentityDefault = 0
-	SaferIdentityTypeImageName = 1
-	SaferIdentityTypeImageHash = 2
-	SaferIdentityTypeUrlZone = 3
-	SaferIdentityTypeCertificate = 4
+	SaferIdentityDefault         SAFER_IDENTIFICATION_TYPES = 0
+	SaferIdentityTypeImageName   SAFER_IDENTIFICATION_TYPES = 1
+	SaferIdentityTypeImageHash   SAFER_IDENTIFICATION_TYPES = 2
+	SaferIdentityTypeUrlZone     SAFER_IDENTIFICATION_TYPES = 3
+	SaferIdentityTypeCertificate SAFER_IDENTIFICATION_TYPES = 4
 )
 
 type SLDATATYPE uint32
 
 const (
-	SL_DATA_NONE = 0
-	SL_DATA_SZ = 1
-	SL_DATA_DWORD = 4
-	SL_DATA_BINARY = 3
-	SL_DATA_MULTI_SZ = 7
-	SL_DATA_SUM = 100
+	SL_DATA_NONE     SLDATATYPE = 0
+	SL_DATA_SZ       SLDATATYPE = 1
+	SL_DATA_DWORD    SLDATATYPE = 4
+	SL_DATA_BINARY   SLDATATYPE = 3
+	SL_DATA_MULTI_SZ SLDATATYPE = 7
+	SL_DATA_SUM      SLDATATYPE = 100
 )
 
 type SLIDTYPE int32
 
 const (
-	SL_ID_APPLICATION = 0
-	SL_ID_PRODUCT_SKU = 1
-	SL_ID_LICENSE_FILE = 2
-	SL_ID_LICENSE = 3
-	SL_ID_PKEY = 4
-	SL_ID_ALL_LICENSES = 5
-	SL_ID_ALL_LICENSE_FILES = 6
-	SL_ID_STORE_TOKEN = 7
-	SL_ID_LAST = 8
+	SL_ID_APPLICATION       SLIDTYPE = 0
+	SL_ID_PRODUCT_SKU       SLIDTYPE = 1
+	SL_ID_LICENSE_FILE      SLIDTYPE = 2
+	SL_ID_LICENSE           SLIDTYPE = 3
+	SL_ID_PKEY              SLIDTYPE = 4
+	SL_ID_ALL_LICENSES      SLIDTYPE = 5
+	SL_ID_ALL_LICENSE_FILES SLIDTYPE = 6
+	SL_ID_STORE_TOKEN       SLIDTYPE = 7
+	SL_ID_LAST              SLIDTYPE = 8
 )
 
 type SLLICENSINGSTATUS int32
 
 const (
-	SL_LICENSING_STATUS_UNLICENSED = 0
-	SL_LICENSING_STATUS_LICENSED = 1
-	SL_LICENSING_STATUS_IN_GRACE_PERIOD = 2
-	SL_LICENSING_STATUS_NOTIFICATION = 3
-	SL_LICENSING_STATUS_LAST = 4
+	SL_LICENSING_STATUS_UNLICENSED      SLLICENSINGSTATUS = 0
+	SL_LICENSING_STATUS_LICENSED        SLLICENSINGSTATUS = 1
+	SL_LICENSING_STATUS_IN_GRACE_PERIOD SLLICENSINGSTATUS = 2
+	SL_LICENSING_STATUS_NOTIFICATION    SLLICENSINGSTATUS = 3
+	SL_LICENSING_STATUS_LAST            SLLICENSINGSTATUS = 4
 )
 
 type SL_ACTIVATION_TYPE int32
 
 const (
-	SL_ACTIVATION_TYPE_DEFAULT = 0
-	SL_ACTIVATION_TYPE_ACTIVE_DIRECTORY = 1
+	SL_ACTIVATION_TYPE_DEFAULT          SL_ACTIVATION_TYPE = 0
+	SL_ACTIVATION_TYPE_ACTIVE_DIRECTORY SL_ACTIVATION_TYPE = 1
 )
 
 type SLREFERRALTYPE int32
 
 const (
-	SL_REFERRALTYPE_SKUID = 0
-	SL_REFERRALTYPE_APPID = 1
-	SL_REFERRALTYPE_OVERRIDE_SKUID = 2
-	SL_REFERRALTYPE_OVERRIDE_APPID = 3
-	SL_REFERRALTYPE_BEST_MATCH = 4
+	SL_REFERRALTYPE_SKUID          SLREFERRALTYPE = 0
+	SL_REFERRALTYPE_APPID          SLREFERRALTYPE = 1
+	SL_REFERRALTYPE_OVERRIDE_SKUID SLREFERRALTYPE = 2
+	SL_REFERRALTYPE_OVERRIDE_APPID SLREFERRALTYPE = 3
+	SL_REFERRALTYPE_BEST_MATCH     SLREFERRALTYPE = 4
 )
 
 type SL_GENUINE_STATE int32
 
 const (
-	SL_GEN_STATE_IS_GENUINE = 0
-	SL_GEN_STATE_INVALID_LICENSE = 1
-	SL_GEN_STATE_TAMPERED = 2
-	SL_GEN_STATE_OFFLINE = 3
-	SL_GEN_STATE_LAST = 4
+	SL_GEN_STATE_IS_GENUINE      SL_GENUINE_STATE = 0
+	SL_GEN_STATE_INVALID_LICENSE SL_GENUINE_STATE = 1
+	SL_GEN_STATE_TAMPERED        SL_GENUINE_STATE = 2
+	SL_GEN_STATE_OFFLINE         SL_GENUINE_STATE = 3
+	SL_GEN_STATE_LAST            SL_GENUINE_STATE = 4
 )
 
 type DdqAccessLevel int32
 
 const (
-	NoData = 0
-	CurrentUserData = 1
-	AllUserData = 2
+	NoData          DdqAccessLevel = 0
+	CurrentUserData DdqAccessLevel = 1
+	AllUserData     DdqAccessLevel = 2
 )
-

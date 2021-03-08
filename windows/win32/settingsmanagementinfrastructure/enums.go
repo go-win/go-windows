@@ -7,65 +7,64 @@ package settingsmanagementinfrastructure
 type WcmTargetMode int32
 
 const (
-	OfflineMode = 1
-	OnlineMode = 2
+	OfflineMode WcmTargetMode = 1
+	OnlineMode  WcmTargetMode = 2
 )
 
 type WcmNamespaceEnumerationFlags int32
 
 const (
-	SharedEnumeration = 1
-	UserEnumeration = 2
-	AllEnumeration = 3
+	SharedEnumeration WcmNamespaceEnumerationFlags = 1
+	UserEnumeration   WcmNamespaceEnumerationFlags = 2
+	AllEnumeration    WcmNamespaceEnumerationFlags = 3
 )
 
 type WcmDataType int32
 
 const (
-	dataTypeByte = 1
-	dataTypeSByte = 2
-	dataTypeUInt16 = 3
-	dataTypeInt16 = 4
-	dataTypeUInt32 = 5
-	dataTypeInt32 = 6
-	dataTypeUInt64 = 7
-	dataTypeInt64 = 8
-	dataTypeBoolean = 11
-	dataTypeString = 12
-	dataTypeFlagArray = 32768
+	dataTypeByte      WcmDataType = 1
+	dataTypeSByte     WcmDataType = 2
+	dataTypeUInt16    WcmDataType = 3
+	dataTypeInt16     WcmDataType = 4
+	dataTypeUInt32    WcmDataType = 5
+	dataTypeInt32     WcmDataType = 6
+	dataTypeUInt64    WcmDataType = 7
+	dataTypeInt64     WcmDataType = 8
+	dataTypeBoolean   WcmDataType = 11
+	dataTypeString    WcmDataType = 12
+	dataTypeFlagArray WcmDataType = 32768
 )
 
 type WcmSettingType int32
 
 const (
-	settingTypeScalar = 1
-	settingTypeComplex = 2
-	settingTypeList = 3
+	settingTypeScalar  WcmSettingType = 1
+	settingTypeComplex WcmSettingType = 2
+	settingTypeList    WcmSettingType = 3
 )
 
 type WcmRestrictionFacets int32
 
 const (
-	restrictionFacetMaxLength = 1
-	restrictionFacetEnumeration = 2
-	restrictionFacetMaxInclusive = 4
-	restrictionFacetMinInclusive = 8
+	restrictionFacetMaxLength    WcmRestrictionFacets = 1
+	restrictionFacetEnumeration  WcmRestrictionFacets = 2
+	restrictionFacetMaxInclusive WcmRestrictionFacets = 4
+	restrictionFacetMinInclusive WcmRestrictionFacets = 8
 )
 
 type WcmUserStatus int32
 
 const (
-	UnknownStatus = 0
-	UserRegistered = 1
-	UserUnregistered = 2
-	UserLoaded = 3
-	UserUnloaded = 4
+	UnknownStatus    WcmUserStatus = 0
+	UserRegistered   WcmUserStatus = 1
+	UserUnregistered WcmUserStatus = 2
+	UserLoaded       WcmUserStatus = 3
+	UserUnloaded     WcmUserStatus = 4
 )
 
 type WcmNamespaceAccess int32
 
 const (
-	ReadOnlyAccess = 1
-	ReadWriteAccess = 2
+	ReadOnlyAccess  WcmNamespaceAccess = 1
+	ReadWriteAccess WcmNamespaceAccess = 2
 )
-

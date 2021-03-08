@@ -134,11 +134,11 @@ func gen(f *winmd.File) error {
 			for _, value := range enum.Values {
 				switch value.Type {
 				case winmd.U16:
-					fmt.Fprintf(f, "\t%s = %d\n", prefix+value.Name, binary.LittleEndian.Uint16(value.Data))
+					fmt.Fprintf(f, "\t%s %s = %d\n", prefix+value.Name, enum.Name, binary.LittleEndian.Uint16(value.Data))
 				case winmd.U32:
-					fmt.Fprintf(f, "\t%s = %d\n", prefix+value.Name, binary.LittleEndian.Uint32(value.Data))
+					fmt.Fprintf(f, "\t%s %s = %d\n", prefix+value.Name, enum.Name, binary.LittleEndian.Uint32(value.Data))
 				case winmd.I32:
-					fmt.Fprintf(f, "\t%s = %d\n", prefix+value.Name, int32(binary.LittleEndian.Uint32(value.Data)))
+					fmt.Fprintf(f, "\t%s %s = %d\n", prefix+value.Name, enum.Name, int32(binary.LittleEndian.Uint32(value.Data)))
 				}
 			}
 			fmt.Fprintf(f, ")\n\n")

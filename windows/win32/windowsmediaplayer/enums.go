@@ -7,365 +7,364 @@ package windowsmediaplayer
 type WMPOpenState int32
 
 const (
-	wmposUndefined = 0
-	wmposPlaylistChanging = 1
-	wmposPlaylistLocating = 2
-	wmposPlaylistConnecting = 3
-	wmposPlaylistLoading = 4
-	wmposPlaylistOpening = 5
-	wmposPlaylistOpenNoMedia = 6
-	wmposPlaylistChanged = 7
-	wmposMediaChanging = 8
-	wmposMediaLocating = 9
-	wmposMediaConnecting = 10
-	wmposMediaLoading = 11
-	wmposMediaOpening = 12
-	wmposMediaOpen = 13
-	wmposBeginCodecAcquisition = 14
-	wmposEndCodecAcquisition = 15
-	wmposBeginLicenseAcquisition = 16
-	wmposEndLicenseAcquisition = 17
-	wmposBeginIndividualization = 18
-	wmposEndIndividualization = 19
-	wmposMediaWaiting = 20
-	wmposOpeningUnknownURL = 21
+	wmposUndefined               WMPOpenState = 0
+	wmposPlaylistChanging        WMPOpenState = 1
+	wmposPlaylistLocating        WMPOpenState = 2
+	wmposPlaylistConnecting      WMPOpenState = 3
+	wmposPlaylistLoading         WMPOpenState = 4
+	wmposPlaylistOpening         WMPOpenState = 5
+	wmposPlaylistOpenNoMedia     WMPOpenState = 6
+	wmposPlaylistChanged         WMPOpenState = 7
+	wmposMediaChanging           WMPOpenState = 8
+	wmposMediaLocating           WMPOpenState = 9
+	wmposMediaConnecting         WMPOpenState = 10
+	wmposMediaLoading            WMPOpenState = 11
+	wmposMediaOpening            WMPOpenState = 12
+	wmposMediaOpen               WMPOpenState = 13
+	wmposBeginCodecAcquisition   WMPOpenState = 14
+	wmposEndCodecAcquisition     WMPOpenState = 15
+	wmposBeginLicenseAcquisition WMPOpenState = 16
+	wmposEndLicenseAcquisition   WMPOpenState = 17
+	wmposBeginIndividualization  WMPOpenState = 18
+	wmposEndIndividualization    WMPOpenState = 19
+	wmposMediaWaiting            WMPOpenState = 20
+	wmposOpeningUnknownURL       WMPOpenState = 21
 )
 
 type WMPPlayState int32
 
 const (
-	wmppsUndefined = 0
-	wmppsStopped = 1
-	wmppsPaused = 2
-	wmppsPlaying = 3
-	wmppsScanForward = 4
-	wmppsScanReverse = 5
-	wmppsBuffering = 6
-	wmppsWaiting = 7
-	wmppsMediaEnded = 8
-	wmppsTransitioning = 9
-	wmppsReady = 10
-	wmppsReconnecting = 11
-	wmppsLast = 12
+	wmppsUndefined     WMPPlayState = 0
+	wmppsStopped       WMPPlayState = 1
+	wmppsPaused        WMPPlayState = 2
+	wmppsPlaying       WMPPlayState = 3
+	wmppsScanForward   WMPPlayState = 4
+	wmppsScanReverse   WMPPlayState = 5
+	wmppsBuffering     WMPPlayState = 6
+	wmppsWaiting       WMPPlayState = 7
+	wmppsMediaEnded    WMPPlayState = 8
+	wmppsTransitioning WMPPlayState = 9
+	wmppsReady         WMPPlayState = 10
+	wmppsReconnecting  WMPPlayState = 11
+	wmppsLast          WMPPlayState = 12
 )
 
 type WMPPlaylistChangeEventType int32
 
 const (
-	wmplcUnknown = 0
-	wmplcClear = 1
-	wmplcInfoChange = 2
-	wmplcMove = 3
-	wmplcDelete = 4
-	wmplcInsert = 5
-	wmplcAppend = 6
-	wmplcPrivate = 7
-	wmplcNameChange = 8
-	wmplcMorph = 9
-	wmplcSort = 10
-	wmplcLast = 11
+	wmplcUnknown    WMPPlaylistChangeEventType = 0
+	wmplcClear      WMPPlaylistChangeEventType = 1
+	wmplcInfoChange WMPPlaylistChangeEventType = 2
+	wmplcMove       WMPPlaylistChangeEventType = 3
+	wmplcDelete     WMPPlaylistChangeEventType = 4
+	wmplcInsert     WMPPlaylistChangeEventType = 5
+	wmplcAppend     WMPPlaylistChangeEventType = 6
+	wmplcPrivate    WMPPlaylistChangeEventType = 7
+	wmplcNameChange WMPPlaylistChangeEventType = 8
+	wmplcMorph      WMPPlaylistChangeEventType = 9
+	wmplcSort       WMPPlaylistChangeEventType = 10
+	wmplcLast       WMPPlaylistChangeEventType = 11
 )
 
 type WMPSyncState int32
 
 const (
-	wmpssUnknown = 0
-	wmpssSynchronizing = 1
-	wmpssStopped = 2
-	wmpssEstimating = 3
-	wmpssLast = 4
+	wmpssUnknown       WMPSyncState = 0
+	wmpssSynchronizing WMPSyncState = 1
+	wmpssStopped       WMPSyncState = 2
+	wmpssEstimating    WMPSyncState = 3
+	wmpssLast          WMPSyncState = 4
 )
 
 type WMPDeviceStatus int32
 
 const (
-	wmpdsUnknown = 0
-	wmpdsPartnershipExists = 1
-	wmpdsPartnershipDeclined = 2
-	wmpdsPartnershipAnother = 3
-	wmpdsManualDevice = 4
-	wmpdsNewDevice = 5
-	wmpdsLast = 6
+	wmpdsUnknown             WMPDeviceStatus = 0
+	wmpdsPartnershipExists   WMPDeviceStatus = 1
+	wmpdsPartnershipDeclined WMPDeviceStatus = 2
+	wmpdsPartnershipAnother  WMPDeviceStatus = 3
+	wmpdsManualDevice        WMPDeviceStatus = 4
+	wmpdsNewDevice           WMPDeviceStatus = 5
+	wmpdsLast                WMPDeviceStatus = 6
 )
 
 type WMPRipState int32
 
 const (
-	wmprsUnknown = 0
-	wmprsRipping = 1
-	wmprsStopped = 2
+	wmprsUnknown WMPRipState = 0
+	wmprsRipping WMPRipState = 1
+	wmprsStopped WMPRipState = 2
 )
 
 type WMPBurnFormat int32
 
 const (
-	wmpbfAudioCD = 0
-	wmpbfDataCD = 1
+	wmpbfAudioCD WMPBurnFormat = 0
+	wmpbfDataCD  WMPBurnFormat = 1
 )
 
 type WMPBurnState int32
 
 const (
-	wmpbsUnknown = 0
-	wmpbsBusy = 1
-	wmpbsReady = 2
-	wmpbsWaitingForDisc = 3
-	wmpbsRefreshStatusPending = 4
-	wmpbsPreparingToBurn = 5
-	wmpbsBurning = 6
-	wmpbsStopped = 7
-	wmpbsErasing = 8
-	wmpbsDownloading = 9
+	wmpbsUnknown              WMPBurnState = 0
+	wmpbsBusy                 WMPBurnState = 1
+	wmpbsReady                WMPBurnState = 2
+	wmpbsWaitingForDisc       WMPBurnState = 3
+	wmpbsRefreshStatusPending WMPBurnState = 4
+	wmpbsPreparingToBurn      WMPBurnState = 5
+	wmpbsBurning              WMPBurnState = 6
+	wmpbsStopped              WMPBurnState = 7
+	wmpbsErasing              WMPBurnState = 8
+	wmpbsDownloading          WMPBurnState = 9
 )
 
 type WMPStringCollectionChangeEventType int32
 
 const (
-	wmpsccetUnknown = 0
-	wmpsccetInsert = 1
-	wmpsccetChange = 2
-	wmpsccetDelete = 3
-	wmpsccetClear = 4
-	wmpsccetBeginUpdates = 5
-	wmpsccetEndUpdates = 6
+	wmpsccetUnknown      WMPStringCollectionChangeEventType = 0
+	wmpsccetInsert       WMPStringCollectionChangeEventType = 1
+	wmpsccetChange       WMPStringCollectionChangeEventType = 2
+	wmpsccetDelete       WMPStringCollectionChangeEventType = 3
+	wmpsccetClear        WMPStringCollectionChangeEventType = 4
+	wmpsccetBeginUpdates WMPStringCollectionChangeEventType = 5
+	wmpsccetEndUpdates   WMPStringCollectionChangeEventType = 6
 )
 
 type WMPLibraryType int32
 
 const (
-	wmpltUnknown = 0
-	wmpltAll = 1
-	wmpltLocal = 2
-	wmpltRemote = 3
-	wmpltDisc = 4
-	wmpltPortableDevice = 5
+	wmpltUnknown        WMPLibraryType = 0
+	wmpltAll            WMPLibraryType = 1
+	wmpltLocal          WMPLibraryType = 2
+	wmpltRemote         WMPLibraryType = 3
+	wmpltDisc           WMPLibraryType = 4
+	wmpltPortableDevice WMPLibraryType = 5
 )
 
 type WMPFolderScanState int32
 
 const (
-	wmpfssUnknown = 0
-	wmpfssScanning = 1
-	wmpfssUpdating = 2
-	wmpfssStopped = 3
+	wmpfssUnknown  WMPFolderScanState = 0
+	wmpfssScanning WMPFolderScanState = 1
+	wmpfssUpdating WMPFolderScanState = 2
+	wmpfssStopped  WMPFolderScanState = 3
 )
 
 type WMPServices_StreamState int32
 
 const (
-	WMPServices_StreamState_Stop = 0
-	WMPServices_StreamState_Pause = 1
-	WMPServices_StreamState_Play = 2
+	WMPServices_StreamState_Stop  WMPServices_StreamState = 0
+	WMPServices_StreamState_Pause WMPServices_StreamState = 1
+	WMPServices_StreamState_Play  WMPServices_StreamState = 2
 )
 
 type WMPPlugin_Caps int32
 
 const (
-	WMPPlugin_Caps_CannotConvertFormats = 1
+	WMPPlugin_Caps_CannotConvertFormats WMPPlugin_Caps = 1
 )
 
 type FEEDS_BACKGROUNDSYNC_ACTION int32
 
 const (
-	FBSA_DISABLE = 0
-	FBSA_ENABLE = 1
-	FBSA_RUNNOW = 2
+	FBSA_DISABLE FEEDS_BACKGROUNDSYNC_ACTION = 0
+	FBSA_ENABLE  FEEDS_BACKGROUNDSYNC_ACTION = 1
+	FBSA_RUNNOW  FEEDS_BACKGROUNDSYNC_ACTION = 2
 )
 
 type FEEDS_BACKGROUNDSYNC_STATUS int32
 
 const (
-	FBSS_DISABLED = 0
-	FBSS_ENABLED = 1
+	FBSS_DISABLED FEEDS_BACKGROUNDSYNC_STATUS = 0
+	FBSS_ENABLED  FEEDS_BACKGROUNDSYNC_STATUS = 1
 )
 
 type FEEDS_EVENTS_SCOPE int32
 
 const (
-	FES_ALL = 0
-	FES_SELF_ONLY = 1
-	FES_SELF_AND_CHILDREN_ONLY = 2
+	FES_ALL                    FEEDS_EVENTS_SCOPE = 0
+	FES_SELF_ONLY              FEEDS_EVENTS_SCOPE = 1
+	FES_SELF_AND_CHILDREN_ONLY FEEDS_EVENTS_SCOPE = 2
 )
 
 type FEEDS_EVENTS_MASK int32
 
 const (
-	FEM_FOLDEREVENTS = 1
-	FEM_FEEDEVENTS = 2
+	FEM_FOLDEREVENTS FEEDS_EVENTS_MASK = 1
+	FEM_FEEDEVENTS   FEEDS_EVENTS_MASK = 2
 )
 
 type FEEDS_XML_SORT_PROPERTY int32
 
 const (
-	FXSP_NONE = 0
-	FXSP_PUBDATE = 1
-	FXSP_DOWNLOADTIME = 2
+	FXSP_NONE         FEEDS_XML_SORT_PROPERTY = 0
+	FXSP_PUBDATE      FEEDS_XML_SORT_PROPERTY = 1
+	FXSP_DOWNLOADTIME FEEDS_XML_SORT_PROPERTY = 2
 )
 
 type FEEDS_XML_SORT_ORDER int32
 
 const (
-	FXSO_NONE = 0
-	FXSO_ASCENDING = 1
-	FXSO_DESCENDING = 2
+	FXSO_NONE       FEEDS_XML_SORT_ORDER = 0
+	FXSO_ASCENDING  FEEDS_XML_SORT_ORDER = 1
+	FXSO_DESCENDING FEEDS_XML_SORT_ORDER = 2
 )
 
 type FEEDS_XML_FILTER_FLAGS int32
 
 const (
-	FXFF_ALL = 0
-	FXFF_UNREAD = 1
-	FXFF_READ = 2
+	FXFF_ALL    FEEDS_XML_FILTER_FLAGS = 0
+	FXFF_UNREAD FEEDS_XML_FILTER_FLAGS = 1
+	FXFF_READ   FEEDS_XML_FILTER_FLAGS = 2
 )
 
 type FEEDS_XML_INCLUDE_FLAGS int32
 
 const (
-	FXIF_NONE = 0
-	FXIF_CF_EXTENSIONS = 1
+	FXIF_NONE          FEEDS_XML_INCLUDE_FLAGS = 0
+	FXIF_CF_EXTENSIONS FEEDS_XML_INCLUDE_FLAGS = 1
 )
 
 type FEEDS_DOWNLOAD_STATUS int32
 
 const (
-	FDS_NONE = 0
-	FDS_PENDING = 1
-	FDS_DOWNLOADING = 2
-	FDS_DOWNLOADED = 3
-	FDS_DOWNLOAD_FAILED = 4
+	FDS_NONE            FEEDS_DOWNLOAD_STATUS = 0
+	FDS_PENDING         FEEDS_DOWNLOAD_STATUS = 1
+	FDS_DOWNLOADING     FEEDS_DOWNLOAD_STATUS = 2
+	FDS_DOWNLOADED      FEEDS_DOWNLOAD_STATUS = 3
+	FDS_DOWNLOAD_FAILED FEEDS_DOWNLOAD_STATUS = 4
 )
 
 type FEEDS_SYNC_SETTING int32
 
 const (
-	FSS_DEFAULT = 0
-	FSS_INTERVAL = 1
-	FSS_MANUAL = 2
-	FSS_SUGGESTED = 3
+	FSS_DEFAULT   FEEDS_SYNC_SETTING = 0
+	FSS_INTERVAL  FEEDS_SYNC_SETTING = 1
+	FSS_MANUAL    FEEDS_SYNC_SETTING = 2
+	FSS_SUGGESTED FEEDS_SYNC_SETTING = 3
 )
 
 type FEEDS_DOWNLOAD_ERROR int32
 
 const (
-	FDE_NONE = 0
-	FDE_DOWNLOAD_FAILED = 1
-	FDE_INVALID_FEED_FORMAT = 2
-	FDE_NORMALIZATION_FAILED = 3
-	FDE_PERSISTENCE_FAILED = 4
-	FDE_DOWNLOAD_BLOCKED = 5
-	FDE_CANCELED = 6
-	FDE_UNSUPPORTED_AUTH = 7
-	FDE_BACKGROUND_DOWNLOAD_DISABLED = 8
-	FDE_NOT_EXIST = 9
-	FDE_UNSUPPORTED_MSXML = 10
-	FDE_UNSUPPORTED_DTD = 11
-	FDE_DOWNLOAD_SIZE_LIMIT_EXCEEDED = 12
-	FDE_ACCESS_DENIED = 13
-	FDE_AUTH_FAILED = 14
-	FDE_INVALID_AUTH = 15
+	FDE_NONE                         FEEDS_DOWNLOAD_ERROR = 0
+	FDE_DOWNLOAD_FAILED              FEEDS_DOWNLOAD_ERROR = 1
+	FDE_INVALID_FEED_FORMAT          FEEDS_DOWNLOAD_ERROR = 2
+	FDE_NORMALIZATION_FAILED         FEEDS_DOWNLOAD_ERROR = 3
+	FDE_PERSISTENCE_FAILED           FEEDS_DOWNLOAD_ERROR = 4
+	FDE_DOWNLOAD_BLOCKED             FEEDS_DOWNLOAD_ERROR = 5
+	FDE_CANCELED                     FEEDS_DOWNLOAD_ERROR = 6
+	FDE_UNSUPPORTED_AUTH             FEEDS_DOWNLOAD_ERROR = 7
+	FDE_BACKGROUND_DOWNLOAD_DISABLED FEEDS_DOWNLOAD_ERROR = 8
+	FDE_NOT_EXIST                    FEEDS_DOWNLOAD_ERROR = 9
+	FDE_UNSUPPORTED_MSXML            FEEDS_DOWNLOAD_ERROR = 10
+	FDE_UNSUPPORTED_DTD              FEEDS_DOWNLOAD_ERROR = 11
+	FDE_DOWNLOAD_SIZE_LIMIT_EXCEEDED FEEDS_DOWNLOAD_ERROR = 12
+	FDE_ACCESS_DENIED                FEEDS_DOWNLOAD_ERROR = 13
+	FDE_AUTH_FAILED                  FEEDS_DOWNLOAD_ERROR = 14
+	FDE_INVALID_AUTH                 FEEDS_DOWNLOAD_ERROR = 15
 )
 
 type FEEDS_EVENTS_ITEM_COUNT_FLAGS int32
 
 const (
-	FEICF_READ_ITEM_COUNT_CHANGED = 1
-	FEICF_UNREAD_ITEM_COUNT_CHANGED = 2
+	FEICF_READ_ITEM_COUNT_CHANGED   FEEDS_EVENTS_ITEM_COUNT_FLAGS = 1
+	FEICF_UNREAD_ITEM_COUNT_CHANGED FEEDS_EVENTS_ITEM_COUNT_FLAGS = 2
 )
 
 type FEEDS_ERROR_CODE int32
 
 const (
-	FEC_E_ERRORBASE = -1073479168
-	FEC_E_INVALIDMSXMLPROPERTY = -1073479168
-	FEC_E_DOWNLOADSIZELIMITEXCEEDED = -1073479167
+	FEC_E_ERRORBASE                 FEEDS_ERROR_CODE = -1073479168
+	FEC_E_INVALIDMSXMLPROPERTY      FEEDS_ERROR_CODE = -1073479168
+	FEC_E_DOWNLOADSIZELIMITEXCEEDED FEEDS_ERROR_CODE = -1073479167
 )
 
 type PlayerState int32
 
 const (
-	stop_state = 0
-	pause_state = 1
-	play_state = 2
+	stop_state  PlayerState = 0
+	pause_state PlayerState = 1
+	play_state  PlayerState = 2
 )
 
 type WMPPartnerNotification int32
 
 const (
-	wmpsnBackgroundProcessingBegin = 1
-	wmpsnBackgroundProcessingEnd = 2
-	wmpsnCatalogDownloadFailure = 3
-	wmpsnCatalogDownloadComplete = 4
+	wmpsnBackgroundProcessingBegin WMPPartnerNotification = 1
+	wmpsnBackgroundProcessingEnd   WMPPartnerNotification = 2
+	wmpsnCatalogDownloadFailure    WMPPartnerNotification = 3
+	wmpsnCatalogDownloadComplete   WMPPartnerNotification = 4
 )
 
 type WMPCallbackNotification int32
 
 const (
-	wmpcnLoginStateChange = 1
-	wmpcnAuthResult = 2
-	wmpcnLicenseUpdated = 3
-	wmpcnNewCatalogAvailable = 4
-	wmpcnNewPluginAvailable = 5
-	wmpcnDisableRadioSkipping = 6
+	wmpcnLoginStateChange     WMPCallbackNotification = 1
+	wmpcnAuthResult           WMPCallbackNotification = 2
+	wmpcnLicenseUpdated       WMPCallbackNotification = 3
+	wmpcnNewCatalogAvailable  WMPCallbackNotification = 4
+	wmpcnNewPluginAvailable   WMPCallbackNotification = 5
+	wmpcnDisableRadioSkipping WMPCallbackNotification = 6
 )
 
 type WMPTaskType int32
 
 const (
-	wmpttBrowse = 1
-	wmpttSync = 2
-	wmpttBurn = 3
-	wmpttCurrent = 4
+	wmpttBrowse  WMPTaskType = 1
+	wmpttSync    WMPTaskType = 2
+	wmpttBurn    WMPTaskType = 3
+	wmpttCurrent WMPTaskType = 4
 )
 
 type WMPTransactionType int32
 
 const (
-	wmpttNoTransaction = 0
-	wmpttDownload = 1
-	wmpttBuy = 2
+	wmpttNoTransaction WMPTransactionType = 0
+	wmpttDownload      WMPTransactionType = 1
+	wmpttBuy           WMPTransactionType = 2
 )
 
 type WMPTemplateSize int32
 
 const (
-	wmptsSmall = 0
-	wmptsMedium = 1
-	wmptsLarge = 2
+	wmptsSmall  WMPTemplateSize = 0
+	wmptsMedium WMPTemplateSize = 1
+	wmptsLarge  WMPTemplateSize = 2
 )
 
 type WMPStreamingType int32
 
 const (
-	wmpstUnknown = 0
-	wmpstMusic = 1
-	wmpstVideo = 2
-	wmpstRadio = 3
+	wmpstUnknown WMPStreamingType = 0
+	wmpstMusic   WMPStreamingType = 1
+	wmpstVideo   WMPStreamingType = 2
+	wmpstRadio   WMPStreamingType = 3
 )
 
 type WMPAccountType int32
 
 const (
-	wmpatBuyOnly = 1
-	wmpatSubscription = 2
-	wmpatJanus = 3
+	wmpatBuyOnly      WMPAccountType = 1
+	wmpatSubscription WMPAccountType = 2
+	wmpatJanus        WMPAccountType = 3
 )
 
 type WMPSubscriptionServiceEvent int32
 
 const (
-	wmpsseCurrentBegin = 1
-	wmpsseCurrentEnd = 2
-	wmpsseFullBegin = 3
-	wmpsseFullEnd = 4
+	wmpsseCurrentBegin WMPSubscriptionServiceEvent = 1
+	wmpsseCurrentEnd   WMPSubscriptionServiceEvent = 2
+	wmpsseFullBegin    WMPSubscriptionServiceEvent = 3
+	wmpsseFullEnd      WMPSubscriptionServiceEvent = 4
 )
 
 type WMPSubscriptionDownloadState int32
 
 const (
-	wmpsdlsDownloading = 0
-	wmpsdlsPaused = 1
-	wmpsdlsProcessing = 2
-	wmpsdlsCompleted = 3
-	wmpsdlsCancelled = 4
+	wmpsdlsDownloading WMPSubscriptionDownloadState = 0
+	wmpsdlsPaused      WMPSubscriptionDownloadState = 1
+	wmpsdlsProcessing  WMPSubscriptionDownloadState = 2
+	wmpsdlsCompleted   WMPSubscriptionDownloadState = 3
+	wmpsdlsCancelled   WMPSubscriptionDownloadState = 4
 )
-

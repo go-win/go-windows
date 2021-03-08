@@ -7,75 +7,74 @@ package js
 type JsRuntimeVersion int32
 
 const (
-	JsRuntimeVersion10 = 0
-	JsRuntimeVersion11 = 1
-	JsRuntimeVersionEdge = -1
+	JsRuntimeVersion10   JsRuntimeVersion = 0
+	JsRuntimeVersion11   JsRuntimeVersion = 1
+	JsRuntimeVersionEdge JsRuntimeVersion = -1
 )
 
 type JsErrorCode uint32
 
 const (
-	JsNoError = 0
-	JsErrorCategoryUsage = 65536
-	JsErrorInvalidArgument = 65537
-	JsErrorNullArgument = 65538
-	JsErrorNoCurrentContext = 65539
-	JsErrorInExceptionState = 65540
-	JsErrorNotImplemented = 65541
-	JsErrorWrongThread = 65542
-	JsErrorRuntimeInUse = 65543
-	JsErrorBadSerializedScript = 65544
-	JsErrorInDisabledState = 65545
-	JsErrorCannotDisableExecution = 65546
-	JsErrorHeapEnumInProgress = 65547
-	JsErrorArgumentNotObject = 65548
-	JsErrorInProfileCallback = 65549
-	JsErrorInThreadServiceCallback = 65550
-	JsErrorCannotSerializeDebugScript = 65551
-	JsErrorAlreadyDebuggingContext = 65552
-	JsErrorAlreadyProfilingContext = 65553
-	JsErrorIdleNotEnabled = 65554
-	JsErrorCategoryEngine = 131072
-	JsErrorOutOfMemory = 131073
-	JsErrorCategoryScript = 196608
-	JsErrorScriptException = 196609
-	JsErrorScriptCompile = 196610
-	JsErrorScriptTerminated = 196611
-	JsErrorScriptEvalDisabled = 196612
-	JsErrorCategoryFatal = 262144
-	JsErrorFatal = 262145
+	JsNoError                         JsErrorCode = 0
+	JsErrorCategoryUsage              JsErrorCode = 65536
+	JsErrorInvalidArgument            JsErrorCode = 65537
+	JsErrorNullArgument               JsErrorCode = 65538
+	JsErrorNoCurrentContext           JsErrorCode = 65539
+	JsErrorInExceptionState           JsErrorCode = 65540
+	JsErrorNotImplemented             JsErrorCode = 65541
+	JsErrorWrongThread                JsErrorCode = 65542
+	JsErrorRuntimeInUse               JsErrorCode = 65543
+	JsErrorBadSerializedScript        JsErrorCode = 65544
+	JsErrorInDisabledState            JsErrorCode = 65545
+	JsErrorCannotDisableExecution     JsErrorCode = 65546
+	JsErrorHeapEnumInProgress         JsErrorCode = 65547
+	JsErrorArgumentNotObject          JsErrorCode = 65548
+	JsErrorInProfileCallback          JsErrorCode = 65549
+	JsErrorInThreadServiceCallback    JsErrorCode = 65550
+	JsErrorCannotSerializeDebugScript JsErrorCode = 65551
+	JsErrorAlreadyDebuggingContext    JsErrorCode = 65552
+	JsErrorAlreadyProfilingContext    JsErrorCode = 65553
+	JsErrorIdleNotEnabled             JsErrorCode = 65554
+	JsErrorCategoryEngine             JsErrorCode = 131072
+	JsErrorOutOfMemory                JsErrorCode = 131073
+	JsErrorCategoryScript             JsErrorCode = 196608
+	JsErrorScriptException            JsErrorCode = 196609
+	JsErrorScriptCompile              JsErrorCode = 196610
+	JsErrorScriptTerminated           JsErrorCode = 196611
+	JsErrorScriptEvalDisabled         JsErrorCode = 196612
+	JsErrorCategoryFatal              JsErrorCode = 262144
+	JsErrorFatal                      JsErrorCode = 262145
 )
 
 type JsRuntimeAttributes int32
 
 const (
-	JsRuntimeAttributeNone = 0
-	JsRuntimeAttributeDisableBackgroundWork = 1
-	JsRuntimeAttributeAllowScriptInterrupt = 2
-	JsRuntimeAttributeEnableIdleProcessing = 4
-	JsRuntimeAttributeDisableNativeCodeGeneration = 8
-	JsRuntimeAttributeDisableEval = 16
+	JsRuntimeAttributeNone                        JsRuntimeAttributes = 0
+	JsRuntimeAttributeDisableBackgroundWork       JsRuntimeAttributes = 1
+	JsRuntimeAttributeAllowScriptInterrupt        JsRuntimeAttributes = 2
+	JsRuntimeAttributeEnableIdleProcessing        JsRuntimeAttributes = 4
+	JsRuntimeAttributeDisableNativeCodeGeneration JsRuntimeAttributes = 8
+	JsRuntimeAttributeDisableEval                 JsRuntimeAttributes = 16
 )
 
 type JsMemoryEventType int32
 
 const (
-	JsMemoryAllocate = 0
-	JsMemoryFree = 1
-	JsMemoryFailure = 2
+	JsMemoryAllocate JsMemoryEventType = 0
+	JsMemoryFree     JsMemoryEventType = 1
+	JsMemoryFailure  JsMemoryEventType = 2
 )
 
 type JsValueType int32
 
 const (
-	JsUndefined = 0
-	JsNull = 1
-	JsNumber = 2
-	JsString = 3
-	JsBoolean = 4
-	JsObject = 5
-	JsFunction = 6
-	JsError = 7
-	JsArray = 8
+	JsUndefined JsValueType = 0
+	JsNull      JsValueType = 1
+	JsNumber    JsValueType = 2
+	JsString    JsValueType = 3
+	JsBoolean   JsValueType = 4
+	JsObject    JsValueType = 5
+	JsFunction  JsValueType = 6
+	JsError     JsValueType = 7
+	JsArray     JsValueType = 8
 )
-

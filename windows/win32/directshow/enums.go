@@ -7,3617 +7,3616 @@ package directshow
 type READYSTATE int32
 
 const (
-	READYSTATE_UNINITIALIZED = 0
-	READYSTATE_LOADING = 1
-	READYSTATE_LOADED = 2
-	READYSTATE_INTERACTIVE = 3
-	READYSTATE_COMPLETE = 4
+	READYSTATE_UNINITIALIZED READYSTATE = 0
+	READYSTATE_LOADING       READYSTATE = 1
+	READYSTATE_LOADED        READYSTATE = 2
+	READYSTATE_INTERACTIVE   READYSTATE = 3
+	READYSTATE_COMPLETE      READYSTATE = 4
 )
 
 type VIDEOENCODER_BITRATE_MODE int32
 
 const (
-	ConstantBitRate = 0
-	VariableBitRateAverage = 1
-	VariableBitRatePeak = 2
+	ConstantBitRate        VIDEOENCODER_BITRATE_MODE = 0
+	VariableBitRateAverage VIDEOENCODER_BITRATE_MODE = 1
+	VariableBitRatePeak    VIDEOENCODER_BITRATE_MODE = 2
 )
 
 type COPP_HDCP_Protection_Level int32
 
 const (
-	COPP_HDCP_Level0 = 0
-	COPP_HDCP_LevelMin = 0
-	COPP_HDCP_Level1 = 1
-	COPP_HDCP_LevelMax = 1
-	COPP_HDCP_ForceDWORD = 2147483647
+	COPP_HDCP_Level0     COPP_HDCP_Protection_Level = 0
+	COPP_HDCP_LevelMin   COPP_HDCP_Protection_Level = 0
+	COPP_HDCP_Level1     COPP_HDCP_Protection_Level = 1
+	COPP_HDCP_LevelMax   COPP_HDCP_Protection_Level = 1
+	COPP_HDCP_ForceDWORD COPP_HDCP_Protection_Level = 2147483647
 )
 
 type COPP_CGMSA_Protection_Level int32
 
 const (
-	COPP_CGMSA_Disabled = 0
-	COPP_CGMSA_LevelMin = 0
-	COPP_CGMSA_CopyFreely = 1
-	COPP_CGMSA_CopyNoMore = 2
-	COPP_CGMSA_CopyOneGeneration = 3
-	COPP_CGMSA_CopyNever = 4
-	COPP_CGMSA_RedistributionControlRequired = 8
-	COPP_CGMSA_LevelMax = 12
-	COPP_CGMSA_ForceDWORD = 2147483647
+	COPP_CGMSA_Disabled                      COPP_CGMSA_Protection_Level = 0
+	COPP_CGMSA_LevelMin                      COPP_CGMSA_Protection_Level = 0
+	COPP_CGMSA_CopyFreely                    COPP_CGMSA_Protection_Level = 1
+	COPP_CGMSA_CopyNoMore                    COPP_CGMSA_Protection_Level = 2
+	COPP_CGMSA_CopyOneGeneration             COPP_CGMSA_Protection_Level = 3
+	COPP_CGMSA_CopyNever                     COPP_CGMSA_Protection_Level = 4
+	COPP_CGMSA_RedistributionControlRequired COPP_CGMSA_Protection_Level = 8
+	COPP_CGMSA_LevelMax                      COPP_CGMSA_Protection_Level = 12
+	COPP_CGMSA_ForceDWORD                    COPP_CGMSA_Protection_Level = 2147483647
 )
 
 type COPP_ACP_Protection_Level int32
 
 const (
-	COPP_ACP_Level0 = 0
-	COPP_ACP_LevelMin = 0
-	COPP_ACP_Level1 = 1
-	COPP_ACP_Level2 = 2
-	COPP_ACP_Level3 = 3
-	COPP_ACP_LevelMax = 3
-	COPP_ACP_ForceDWORD = 2147483647
+	COPP_ACP_Level0     COPP_ACP_Protection_Level = 0
+	COPP_ACP_LevelMin   COPP_ACP_Protection_Level = 0
+	COPP_ACP_Level1     COPP_ACP_Protection_Level = 1
+	COPP_ACP_Level2     COPP_ACP_Protection_Level = 2
+	COPP_ACP_Level3     COPP_ACP_Protection_Level = 3
+	COPP_ACP_LevelMax   COPP_ACP_Protection_Level = 3
+	COPP_ACP_ForceDWORD COPP_ACP_Protection_Level = 2147483647
 )
 
 type COPP_TVProtectionStandard int32
 
 const (
-	COPP_ProtectionStandard_Unknown = -2147483648
-	COPP_ProtectionStandard_None = 0
-	COPP_ProtectionStandard_IEC61880_525i = 1
-	COPP_ProtectionStandard_IEC61880_2_525i = 2
-	COPP_ProtectionStandard_IEC62375_625p = 4
-	COPP_ProtectionStandard_EIA608B_525 = 8
-	COPP_ProtectionStandard_EN300294_625i = 16
-	COPP_ProtectionStandard_CEA805A_TypeA_525p = 32
-	COPP_ProtectionStandard_CEA805A_TypeA_750p = 64
-	COPP_ProtectionStandard_CEA805A_TypeA_1125i = 128
-	COPP_ProtectionStandard_CEA805A_TypeB_525p = 256
-	COPP_ProtectionStandard_CEA805A_TypeB_750p = 512
-	COPP_ProtectionStandard_CEA805A_TypeB_1125i = 1024
-	COPP_ProtectionStandard_ARIBTRB15_525i = 2048
-	COPP_ProtectionStandard_ARIBTRB15_525p = 4096
-	COPP_ProtectionStandard_ARIBTRB15_750p = 8192
-	COPP_ProtectionStandard_ARIBTRB15_1125i = 16384
-	COPP_ProtectionStandard_Mask = -2147450881
-	COPP_ProtectionStandard_Reserved = 2147450880
+	COPP_ProtectionStandard_Unknown             COPP_TVProtectionStandard = -2147483648
+	COPP_ProtectionStandard_None                COPP_TVProtectionStandard = 0
+	COPP_ProtectionStandard_IEC61880_525i       COPP_TVProtectionStandard = 1
+	COPP_ProtectionStandard_IEC61880_2_525i     COPP_TVProtectionStandard = 2
+	COPP_ProtectionStandard_IEC62375_625p       COPP_TVProtectionStandard = 4
+	COPP_ProtectionStandard_EIA608B_525         COPP_TVProtectionStandard = 8
+	COPP_ProtectionStandard_EN300294_625i       COPP_TVProtectionStandard = 16
+	COPP_ProtectionStandard_CEA805A_TypeA_525p  COPP_TVProtectionStandard = 32
+	COPP_ProtectionStandard_CEA805A_TypeA_750p  COPP_TVProtectionStandard = 64
+	COPP_ProtectionStandard_CEA805A_TypeA_1125i COPP_TVProtectionStandard = 128
+	COPP_ProtectionStandard_CEA805A_TypeB_525p  COPP_TVProtectionStandard = 256
+	COPP_ProtectionStandard_CEA805A_TypeB_750p  COPP_TVProtectionStandard = 512
+	COPP_ProtectionStandard_CEA805A_TypeB_1125i COPP_TVProtectionStandard = 1024
+	COPP_ProtectionStandard_ARIBTRB15_525i      COPP_TVProtectionStandard = 2048
+	COPP_ProtectionStandard_ARIBTRB15_525p      COPP_TVProtectionStandard = 4096
+	COPP_ProtectionStandard_ARIBTRB15_750p      COPP_TVProtectionStandard = 8192
+	COPP_ProtectionStandard_ARIBTRB15_1125i     COPP_TVProtectionStandard = 16384
+	COPP_ProtectionStandard_Mask                COPP_TVProtectionStandard = -2147450881
+	COPP_ProtectionStandard_Reserved            COPP_TVProtectionStandard = 2147450880
 )
 
 type COPP_ImageAspectRatio_EN300294 int32
 
 const (
-	COPP_AspectRatio_EN300294_FullFormat4by3 = 0
-	COPP_AspectRatio_EN300294_Box14by9Center = 1
-	COPP_AspectRatio_EN300294_Box14by9Top = 2
-	COPP_AspectRatio_EN300294_Box16by9Center = 3
-	COPP_AspectRatio_EN300294_Box16by9Top = 4
-	COPP_AspectRatio_EN300294_BoxGT16by9Center = 5
-	COPP_AspectRatio_EN300294_FullFormat4by3ProtectedCenter = 6
-	COPP_AspectRatio_EN300294_FullFormat16by9Anamorphic = 7
-	COPP_AspectRatio_ForceDWORD = 2147483647
+	COPP_AspectRatio_EN300294_FullFormat4by3                COPP_ImageAspectRatio_EN300294 = 0
+	COPP_AspectRatio_EN300294_Box14by9Center                COPP_ImageAspectRatio_EN300294 = 1
+	COPP_AspectRatio_EN300294_Box14by9Top                   COPP_ImageAspectRatio_EN300294 = 2
+	COPP_AspectRatio_EN300294_Box16by9Center                COPP_ImageAspectRatio_EN300294 = 3
+	COPP_AspectRatio_EN300294_Box16by9Top                   COPP_ImageAspectRatio_EN300294 = 4
+	COPP_AspectRatio_EN300294_BoxGT16by9Center              COPP_ImageAspectRatio_EN300294 = 5
+	COPP_AspectRatio_EN300294_FullFormat4by3ProtectedCenter COPP_ImageAspectRatio_EN300294 = 6
+	COPP_AspectRatio_EN300294_FullFormat16by9Anamorphic     COPP_ImageAspectRatio_EN300294 = 7
+	COPP_AspectRatio_ForceDWORD                             COPP_ImageAspectRatio_EN300294 = 2147483647
 )
 
 type COPP_StatusFlags int32
 
 const (
-	COPP_StatusNormal = 0
-	COPP_LinkLost = 1
-	COPP_RenegotiationRequired = 2
-	COPP_StatusFlagsReserved = -4
+	COPP_StatusNormal          COPP_StatusFlags = 0
+	COPP_LinkLost              COPP_StatusFlags = 1
+	COPP_RenegotiationRequired COPP_StatusFlags = 2
+	COPP_StatusFlagsReserved   COPP_StatusFlags = -4
 )
 
 type COPP_StatusHDCPFlags int32
 
 const (
-	COPP_HDCPRepeater = 1
-	COPP_HDCPFlagsReserved = -2
+	COPP_HDCPRepeater      COPP_StatusHDCPFlags = 1
+	COPP_HDCPFlagsReserved COPP_StatusHDCPFlags = -2
 )
 
 type COPP_ConnectorType int32
 
 const (
-	COPP_ConnectorType_Unknown = -1
-	COPP_ConnectorType_VGA = 0
-	COPP_ConnectorType_SVideo = 1
-	COPP_ConnectorType_CompositeVideo = 2
-	COPP_ConnectorType_ComponentVideo = 3
-	COPP_ConnectorType_DVI = 4
-	COPP_ConnectorType_HDMI = 5
-	COPP_ConnectorType_LVDS = 6
-	COPP_ConnectorType_TMDS = 7
-	COPP_ConnectorType_D_JPN = 8
-	COPP_ConnectorType_Internal = -2147483648
-	COPP_ConnectorType_ForceDWORD = 2147483647
+	COPP_ConnectorType_Unknown        COPP_ConnectorType = -1
+	COPP_ConnectorType_VGA            COPP_ConnectorType = 0
+	COPP_ConnectorType_SVideo         COPP_ConnectorType = 1
+	COPP_ConnectorType_CompositeVideo COPP_ConnectorType = 2
+	COPP_ConnectorType_ComponentVideo COPP_ConnectorType = 3
+	COPP_ConnectorType_DVI            COPP_ConnectorType = 4
+	COPP_ConnectorType_HDMI           COPP_ConnectorType = 5
+	COPP_ConnectorType_LVDS           COPP_ConnectorType = 6
+	COPP_ConnectorType_TMDS           COPP_ConnectorType = 7
+	COPP_ConnectorType_D_JPN          COPP_ConnectorType = 8
+	COPP_ConnectorType_Internal       COPP_ConnectorType = -2147483648
+	COPP_ConnectorType_ForceDWORD     COPP_ConnectorType = 2147483647
 )
 
 type COPP_BusType int32
 
 const (
-	COPP_BusType_Unknown = 0
-	COPP_BusType_PCI = 1
-	COPP_BusType_PCIX = 2
-	COPP_BusType_PCIExpress = 3
-	COPP_BusType_AGP = 4
-	COPP_BusType_Integrated = -2147483648
-	COPP_BusType_ForceDWORD = 2147483647
+	COPP_BusType_Unknown    COPP_BusType = 0
+	COPP_BusType_PCI        COPP_BusType = 1
+	COPP_BusType_PCIX       COPP_BusType = 2
+	COPP_BusType_PCIExpress COPP_BusType = 3
+	COPP_BusType_AGP        COPP_BusType = 4
+	COPP_BusType_Integrated COPP_BusType = -2147483648
+	COPP_BusType_ForceDWORD COPP_BusType = 2147483647
 )
 
 type AMVP_SELECT_FORMAT_BY int32
 
 const (
-	AMVP_DO_NOT_CARE = 0
-	AMVP_BEST_BANDWIDTH = 1
-	AMVP_INPUT_SAME_AS_OUTPUT = 2
+	AMVP_DO_NOT_CARE          AMVP_SELECT_FORMAT_BY = 0
+	AMVP_BEST_BANDWIDTH       AMVP_SELECT_FORMAT_BY = 1
+	AMVP_INPUT_SAME_AS_OUTPUT AMVP_SELECT_FORMAT_BY = 2
 )
 
 type AMVP_MODE int32
 
 const (
-	AMVP_MODE_WEAVE = 0
-	AMVP_MODE_BOBINTERLEAVED = 1
-	AMVP_MODE_BOBNONINTERLEAVED = 2
-	AMVP_MODE_SKIPEVEN = 3
-	AMVP_MODE_SKIPODD = 4
+	AMVP_MODE_WEAVE             AMVP_MODE = 0
+	AMVP_MODE_BOBINTERLEAVED    AMVP_MODE = 1
+	AMVP_MODE_BOBNONINTERLEAVED AMVP_MODE = 2
+	AMVP_MODE_SKIPEVEN          AMVP_MODE = 3
+	AMVP_MODE_SKIPODD           AMVP_MODE = 4
 )
 
 type PIN_DIRECTION int32
 
 const (
-	PINDIR_INPUT = 0
-	PINDIR_OUTPUT = 1
+	PINDIR_INPUT  PIN_DIRECTION = 0
+	PINDIR_OUTPUT PIN_DIRECTION = 1
 )
 
 type FILTER_STATE int32
 
 const (
-	State_Stopped = 0
-	State_Paused = 1
-	State_Running = 2
+	State_Stopped FILTER_STATE = 0
+	State_Paused  FILTER_STATE = 1
+	State_Running FILTER_STATE = 2
 )
 
 type tagAM_SAMPLE_PROPERTY_FLAGS int32
 
 const (
-	AM_SAMPLE_SPLICEPOINT = 1
-	AM_SAMPLE_PREROLL = 2
-	AM_SAMPLE_DATADISCONTINUITY = 4
-	AM_SAMPLE_TYPECHANGED = 8
-	AM_SAMPLE_TIMEVALID = 16
-	AM_SAMPLE_TIMEDISCONTINUITY = 64
-	AM_SAMPLE_FLUSH_ON_PAUSE = 128
-	AM_SAMPLE_STOPVALID = 256
-	AM_SAMPLE_ENDOFSTREAM = 512
-	AM_STREAM_MEDIA = 0
-	AM_STREAM_CONTROL = 1
+	AM_SAMPLE_SPLICEPOINT       tagAM_SAMPLE_PROPERTY_FLAGS = 1
+	AM_SAMPLE_PREROLL           tagAM_SAMPLE_PROPERTY_FLAGS = 2
+	AM_SAMPLE_DATADISCONTINUITY tagAM_SAMPLE_PROPERTY_FLAGS = 4
+	AM_SAMPLE_TYPECHANGED       tagAM_SAMPLE_PROPERTY_FLAGS = 8
+	AM_SAMPLE_TIMEVALID         tagAM_SAMPLE_PROPERTY_FLAGS = 16
+	AM_SAMPLE_TIMEDISCONTINUITY tagAM_SAMPLE_PROPERTY_FLAGS = 64
+	AM_SAMPLE_FLUSH_ON_PAUSE    tagAM_SAMPLE_PROPERTY_FLAGS = 128
+	AM_SAMPLE_STOPVALID         tagAM_SAMPLE_PROPERTY_FLAGS = 256
+	AM_SAMPLE_ENDOFSTREAM       tagAM_SAMPLE_PROPERTY_FLAGS = 512
+	AM_STREAM_MEDIA             tagAM_SAMPLE_PROPERTY_FLAGS = 0
+	AM_STREAM_CONTROL           tagAM_SAMPLE_PROPERTY_FLAGS = 1
 )
 
 type AM_SEEKING_SeekingFlags int32
 
 const (
-	AM_SEEKING_NoPositioning = 0
-	AM_SEEKING_AbsolutePositioning = 1
-	AM_SEEKING_RelativePositioning = 2
-	AM_SEEKING_IncrementalPositioning = 3
-	AM_SEEKING_PositioningBitsMask = 3
-	AM_SEEKING_SeekToKeyFrame = 4
-	AM_SEEKING_ReturnTime = 8
-	AM_SEEKING_Segment = 16
-	AM_SEEKING_NoFlush = 32
+	AM_SEEKING_NoPositioning          AM_SEEKING_SeekingFlags = 0
+	AM_SEEKING_AbsolutePositioning    AM_SEEKING_SeekingFlags = 1
+	AM_SEEKING_RelativePositioning    AM_SEEKING_SeekingFlags = 2
+	AM_SEEKING_IncrementalPositioning AM_SEEKING_SeekingFlags = 3
+	AM_SEEKING_PositioningBitsMask    AM_SEEKING_SeekingFlags = 3
+	AM_SEEKING_SeekToKeyFrame         AM_SEEKING_SeekingFlags = 4
+	AM_SEEKING_ReturnTime             AM_SEEKING_SeekingFlags = 8
+	AM_SEEKING_Segment                AM_SEEKING_SeekingFlags = 16
+	AM_SEEKING_NoFlush                AM_SEEKING_SeekingFlags = 32
 )
 
 type AM_SEEKING_SEEKING_CAPABILITIES int32
 
 const (
-	AM_SEEKING_CanSeekAbsolute = 1
-	AM_SEEKING_CanSeekForwards = 2
-	AM_SEEKING_CanSeekBackwards = 4
-	AM_SEEKING_CanGetCurrentPos = 8
-	AM_SEEKING_CanGetStopPos = 16
-	AM_SEEKING_CanGetDuration = 32
-	AM_SEEKING_CanPlayBackwards = 64
-	AM_SEEKING_CanDoSegments = 128
-	AM_SEEKING_Source = 256
+	AM_SEEKING_CanSeekAbsolute  AM_SEEKING_SEEKING_CAPABILITIES = 1
+	AM_SEEKING_CanSeekForwards  AM_SEEKING_SEEKING_CAPABILITIES = 2
+	AM_SEEKING_CanSeekBackwards AM_SEEKING_SEEKING_CAPABILITIES = 4
+	AM_SEEKING_CanGetCurrentPos AM_SEEKING_SEEKING_CAPABILITIES = 8
+	AM_SEEKING_CanGetStopPos    AM_SEEKING_SEEKING_CAPABILITIES = 16
+	AM_SEEKING_CanGetDuration   AM_SEEKING_SEEKING_CAPABILITIES = 32
+	AM_SEEKING_CanPlayBackwards AM_SEEKING_SEEKING_CAPABILITIES = 64
+	AM_SEEKING_CanDoSegments    AM_SEEKING_SEEKING_CAPABILITIES = 128
+	AM_SEEKING_Source           AM_SEEKING_SEEKING_CAPABILITIES = 256
 )
 
 type tagAM_MEDIAEVENT_FLAGS int32
 
 const (
-	AM_MEDIAEVENT_NONOTIFY = 1
+	AM_MEDIAEVENT_NONOTIFY tagAM_MEDIAEVENT_FLAGS = 1
 )
 
 type __MIDL_IFilterMapper_0001 int32
 
 const (
-	MERIT_PREFERRED = 8388608
-	MERIT_NORMAL = 6291456
-	MERIT_UNLIKELY = 4194304
-	MERIT_DO_NOT_USE = 2097152
-	MERIT_SW_COMPRESSOR = 1048576
-	MERIT_HW_COMPRESSOR = 1048656
+	MERIT_PREFERRED     __MIDL_IFilterMapper_0001 = 8388608
+	MERIT_NORMAL        __MIDL_IFilterMapper_0001 = 6291456
+	MERIT_UNLIKELY      __MIDL_IFilterMapper_0001 = 4194304
+	MERIT_DO_NOT_USE    __MIDL_IFilterMapper_0001 = 2097152
+	MERIT_SW_COMPRESSOR __MIDL_IFilterMapper_0001 = 1048576
+	MERIT_HW_COMPRESSOR __MIDL_IFilterMapper_0001 = 1048656
 )
 
 type __MIDL___MIDL_itf_strmif_0000_0023_0001 int32
 
 const (
-	REG_PINFLAG_B_ZERO = 1
-	REG_PINFLAG_B_RENDERER = 2
-	REG_PINFLAG_B_MANY = 4
-	REG_PINFLAG_B_OUTPUT = 8
+	REG_PINFLAG_B_ZERO     __MIDL___MIDL_itf_strmif_0000_0023_0001 = 1
+	REG_PINFLAG_B_RENDERER __MIDL___MIDL_itf_strmif_0000_0023_0001 = 2
+	REG_PINFLAG_B_MANY     __MIDL___MIDL_itf_strmif_0000_0023_0001 = 4
+	REG_PINFLAG_B_OUTPUT   __MIDL___MIDL_itf_strmif_0000_0023_0001 = 8
 )
 
 type QualityMessageType int32
 
 const (
-	Famine = 0
-	Flood = 1
+	Famine QualityMessageType = 0
+	Flood  QualityMessageType = 1
 )
 
 type __MIDL___MIDL_itf_strmif_0000_0026_0001 int32
 
 const (
-	CK_NOCOLORKEY = 0
-	CK_INDEX = 1
-	CK_RGB = 2
+	CK_NOCOLORKEY __MIDL___MIDL_itf_strmif_0000_0026_0001 = 0
+	CK_INDEX      __MIDL___MIDL_itf_strmif_0000_0026_0001 = 1
+	CK_RGB        __MIDL___MIDL_itf_strmif_0000_0026_0001 = 2
 )
 
 type __MIDL___MIDL_itf_strmif_0000_0026_0002 int32
 
 const (
-	ADVISE_NONE = 0
-	ADVISE_CLIPPING = 1
-	ADVISE_PALETTE = 2
-	ADVISE_COLORKEY = 4
-	ADVISE_POSITION = 8
-	ADVISE_DISPLAY_CHANGE = 16
+	ADVISE_NONE           __MIDL___MIDL_itf_strmif_0000_0026_0002 = 0
+	ADVISE_CLIPPING       __MIDL___MIDL_itf_strmif_0000_0026_0002 = 1
+	ADVISE_PALETTE        __MIDL___MIDL_itf_strmif_0000_0026_0002 = 2
+	ADVISE_COLORKEY       __MIDL___MIDL_itf_strmif_0000_0026_0002 = 4
+	ADVISE_POSITION       __MIDL___MIDL_itf_strmif_0000_0026_0002 = 8
+	ADVISE_DISPLAY_CHANGE __MIDL___MIDL_itf_strmif_0000_0026_0002 = 16
 )
 
 type AM_FILESINK_FLAGS int32
 
 const (
-	AM_FILE_OVERWRITE = 1
+	AM_FILE_OVERWRITE AM_FILESINK_FLAGS = 1
 )
 
 type _AM_RENSDEREXFLAGS int32
 
 const (
-	AM_RENDEREX_RENDERTOEXISTINGRENDERERS = 1
+	AM_RENDEREX_RENDERTOEXISTINGRENDERERS _AM_RENSDEREXFLAGS = 1
 )
 
 type AM_STREAM_INFO_FLAGS int32
 
 const (
-	AM_STREAM_INFO_START_DEFINED = 1
-	AM_STREAM_INFO_STOP_DEFINED = 2
-	AM_STREAM_INFO_DISCARDING = 4
-	AM_STREAM_INFO_STOP_SEND_EXTRA = 16
+	AM_STREAM_INFO_START_DEFINED   AM_STREAM_INFO_FLAGS = 1
+	AM_STREAM_INFO_STOP_DEFINED    AM_STREAM_INFO_FLAGS = 2
+	AM_STREAM_INFO_DISCARDING      AM_STREAM_INFO_FLAGS = 4
+	AM_STREAM_INFO_STOP_SEND_EXTRA AM_STREAM_INFO_FLAGS = 16
 )
 
 type InterleavingMode int32
 
 const (
-	INTERLEAVE_NONE = 0
-	INTERLEAVE_CAPTURE = 1
-	INTERLEAVE_FULL = 2
-	INTERLEAVE_NONE_BUFFERED = 3
+	INTERLEAVE_NONE          InterleavingMode = 0
+	INTERLEAVE_CAPTURE       InterleavingMode = 1
+	INTERLEAVE_FULL          InterleavingMode = 2
+	INTERLEAVE_NONE_BUFFERED InterleavingMode = 3
 )
 
 type CompressionCaps int32
 
 const (
-	CompressionCaps_CanQuality = 1
-	CompressionCaps_CanCrunch = 2
-	CompressionCaps_CanKeyFrame = 4
-	CompressionCaps_CanBFrame = 8
-	CompressionCaps_CanWindow = 16
+	CompressionCaps_CanQuality  CompressionCaps = 1
+	CompressionCaps_CanCrunch   CompressionCaps = 2
+	CompressionCaps_CanKeyFrame CompressionCaps = 4
+	CompressionCaps_CanBFrame   CompressionCaps = 8
+	CompressionCaps_CanWindow   CompressionCaps = 16
 )
 
 type VfwCaptureDialogs int32
 
 const (
-	VfwCaptureDialog_Source = 1
-	VfwCaptureDialog_Format = 2
-	VfwCaptureDialog_Display = 4
+	VfwCaptureDialog_Source  VfwCaptureDialogs = 1
+	VfwCaptureDialog_Format  VfwCaptureDialogs = 2
+	VfwCaptureDialog_Display VfwCaptureDialogs = 4
 )
 
 type VfwCompressDialogs int32
 
 const (
-	VfwCompressDialog_Config = 1
-	VfwCompressDialog_About = 2
-	VfwCompressDialog_QueryConfig = 4
-	VfwCompressDialog_QueryAbout = 8
+	VfwCompressDialog_Config      VfwCompressDialogs = 1
+	VfwCompressDialog_About       VfwCompressDialogs = 2
+	VfwCompressDialog_QueryConfig VfwCompressDialogs = 4
+	VfwCompressDialog_QueryAbout  VfwCompressDialogs = 8
 )
 
 type AnalogVideoStandard int32
 
 const (
-	AnalogVideo_None = 0
-	AnalogVideo_NTSC_M = 1
-	AnalogVideo_NTSC_M_J = 2
-	AnalogVideo_NTSC_433 = 4
-	AnalogVideo_PAL_B = 16
-	AnalogVideo_PAL_D = 32
-	AnalogVideo_PAL_G = 64
-	AnalogVideo_PAL_H = 128
-	AnalogVideo_PAL_I = 256
-	AnalogVideo_PAL_M = 512
-	AnalogVideo_PAL_N = 1024
-	AnalogVideo_PAL_60 = 2048
-	AnalogVideo_SECAM_B = 4096
-	AnalogVideo_SECAM_D = 8192
-	AnalogVideo_SECAM_G = 16384
-	AnalogVideo_SECAM_H = 32768
-	AnalogVideo_SECAM_K = 65536
-	AnalogVideo_SECAM_K1 = 131072
-	AnalogVideo_SECAM_L = 262144
-	AnalogVideo_SECAM_L1 = 524288
-	AnalogVideo_PAL_N_COMBO = 1048576
-	AnalogVideoMask_MCE_NTSC = 1052167
-	AnalogVideoMask_MCE_PAL = 496
-	AnalogVideoMask_MCE_SECAM = 1044480
+	AnalogVideo_None          AnalogVideoStandard = 0
+	AnalogVideo_NTSC_M        AnalogVideoStandard = 1
+	AnalogVideo_NTSC_M_J      AnalogVideoStandard = 2
+	AnalogVideo_NTSC_433      AnalogVideoStandard = 4
+	AnalogVideo_PAL_B         AnalogVideoStandard = 16
+	AnalogVideo_PAL_D         AnalogVideoStandard = 32
+	AnalogVideo_PAL_G         AnalogVideoStandard = 64
+	AnalogVideo_PAL_H         AnalogVideoStandard = 128
+	AnalogVideo_PAL_I         AnalogVideoStandard = 256
+	AnalogVideo_PAL_M         AnalogVideoStandard = 512
+	AnalogVideo_PAL_N         AnalogVideoStandard = 1024
+	AnalogVideo_PAL_60        AnalogVideoStandard = 2048
+	AnalogVideo_SECAM_B       AnalogVideoStandard = 4096
+	AnalogVideo_SECAM_D       AnalogVideoStandard = 8192
+	AnalogVideo_SECAM_G       AnalogVideoStandard = 16384
+	AnalogVideo_SECAM_H       AnalogVideoStandard = 32768
+	AnalogVideo_SECAM_K       AnalogVideoStandard = 65536
+	AnalogVideo_SECAM_K1      AnalogVideoStandard = 131072
+	AnalogVideo_SECAM_L       AnalogVideoStandard = 262144
+	AnalogVideo_SECAM_L1      AnalogVideoStandard = 524288
+	AnalogVideo_PAL_N_COMBO   AnalogVideoStandard = 1048576
+	AnalogVideoMask_MCE_NTSC  AnalogVideoStandard = 1052167
+	AnalogVideoMask_MCE_PAL   AnalogVideoStandard = 496
+	AnalogVideoMask_MCE_SECAM AnalogVideoStandard = 1044480
 )
 
 type TunerInputType int32
 
 const (
-	TunerInputCable = 0
-	TunerInputAntenna = 1
+	TunerInputCable   TunerInputType = 0
+	TunerInputAntenna TunerInputType = 1
 )
 
 type VideoCopyProtectionType int32
 
 const (
-	VideoCopyProtectionMacrovisionBasic = 0
-	VideoCopyProtectionMacrovisionCBI = 1
+	VideoCopyProtectionMacrovisionBasic VideoCopyProtectionType = 0
+	VideoCopyProtectionMacrovisionCBI   VideoCopyProtectionType = 1
 )
 
 type PhysicalConnectorType int32
 
 const (
-	PhysConn_Video_Tuner = 1
-	PhysConn_Video_Composite = 2
-	PhysConn_Video_SVideo = 3
-	PhysConn_Video_RGB = 4
-	PhysConn_Video_YRYBY = 5
-	PhysConn_Video_SerialDigital = 6
-	PhysConn_Video_ParallelDigital = 7
-	PhysConn_Video_SCSI = 8
-	PhysConn_Video_AUX = 9
-	PhysConn_Video_1394 = 10
-	PhysConn_Video_USB = 11
-	PhysConn_Video_VideoDecoder = 12
-	PhysConn_Video_VideoEncoder = 13
-	PhysConn_Video_SCART = 14
-	PhysConn_Video_Black = 15
-	PhysConn_Audio_Tuner = 4096
-	PhysConn_Audio_Line = 4097
-	PhysConn_Audio_Mic = 4098
-	PhysConn_Audio_AESDigital = 4099
-	PhysConn_Audio_SPDIFDigital = 4100
-	PhysConn_Audio_SCSI = 4101
-	PhysConn_Audio_AUX = 4102
-	PhysConn_Audio_1394 = 4103
-	PhysConn_Audio_USB = 4104
-	PhysConn_Audio_AudioDecoder = 4105
+	PhysConn_Video_Tuner           PhysicalConnectorType = 1
+	PhysConn_Video_Composite       PhysicalConnectorType = 2
+	PhysConn_Video_SVideo          PhysicalConnectorType = 3
+	PhysConn_Video_RGB             PhysicalConnectorType = 4
+	PhysConn_Video_YRYBY           PhysicalConnectorType = 5
+	PhysConn_Video_SerialDigital   PhysicalConnectorType = 6
+	PhysConn_Video_ParallelDigital PhysicalConnectorType = 7
+	PhysConn_Video_SCSI            PhysicalConnectorType = 8
+	PhysConn_Video_AUX             PhysicalConnectorType = 9
+	PhysConn_Video_1394            PhysicalConnectorType = 10
+	PhysConn_Video_USB             PhysicalConnectorType = 11
+	PhysConn_Video_VideoDecoder    PhysicalConnectorType = 12
+	PhysConn_Video_VideoEncoder    PhysicalConnectorType = 13
+	PhysConn_Video_SCART           PhysicalConnectorType = 14
+	PhysConn_Video_Black           PhysicalConnectorType = 15
+	PhysConn_Audio_Tuner           PhysicalConnectorType = 4096
+	PhysConn_Audio_Line            PhysicalConnectorType = 4097
+	PhysConn_Audio_Mic             PhysicalConnectorType = 4098
+	PhysConn_Audio_AESDigital      PhysicalConnectorType = 4099
+	PhysConn_Audio_SPDIFDigital    PhysicalConnectorType = 4100
+	PhysConn_Audio_SCSI            PhysicalConnectorType = 4101
+	PhysConn_Audio_AUX             PhysicalConnectorType = 4102
+	PhysConn_Audio_1394            PhysicalConnectorType = 4103
+	PhysConn_Audio_USB             PhysicalConnectorType = 4104
+	PhysConn_Audio_AudioDecoder    PhysicalConnectorType = 4105
 )
 
 type VideoProcAmpProperty int32
 
 const (
-	VideoProcAmp_Brightness = 0
-	VideoProcAmp_Contrast = 1
-	VideoProcAmp_Hue = 2
-	VideoProcAmp_Saturation = 3
-	VideoProcAmp_Sharpness = 4
-	VideoProcAmp_Gamma = 5
-	VideoProcAmp_ColorEnable = 6
-	VideoProcAmp_WhiteBalance = 7
-	VideoProcAmp_BacklightCompensation = 8
-	VideoProcAmp_Gain = 9
+	VideoProcAmp_Brightness            VideoProcAmpProperty = 0
+	VideoProcAmp_Contrast              VideoProcAmpProperty = 1
+	VideoProcAmp_Hue                   VideoProcAmpProperty = 2
+	VideoProcAmp_Saturation            VideoProcAmpProperty = 3
+	VideoProcAmp_Sharpness             VideoProcAmpProperty = 4
+	VideoProcAmp_Gamma                 VideoProcAmpProperty = 5
+	VideoProcAmp_ColorEnable           VideoProcAmpProperty = 6
+	VideoProcAmp_WhiteBalance          VideoProcAmpProperty = 7
+	VideoProcAmp_BacklightCompensation VideoProcAmpProperty = 8
+	VideoProcAmp_Gain                  VideoProcAmpProperty = 9
 )
 
 type VideoProcAmpFlags int32
 
 const (
-	VideoProcAmp_Flags_Auto = 1
-	VideoProcAmp_Flags_Manual = 2
+	VideoProcAmp_Flags_Auto   VideoProcAmpFlags = 1
+	VideoProcAmp_Flags_Manual VideoProcAmpFlags = 2
 )
 
 type CameraControlProperty int32
 
 const (
-	CameraControl_Pan = 0
-	CameraControl_Tilt = 1
-	CameraControl_Roll = 2
-	CameraControl_Zoom = 3
-	CameraControl_Exposure = 4
-	CameraControl_Iris = 5
-	CameraControl_Focus = 6
+	CameraControl_Pan      CameraControlProperty = 0
+	CameraControl_Tilt     CameraControlProperty = 1
+	CameraControl_Roll     CameraControlProperty = 2
+	CameraControl_Zoom     CameraControlProperty = 3
+	CameraControl_Exposure CameraControlProperty = 4
+	CameraControl_Iris     CameraControlProperty = 5
+	CameraControl_Focus    CameraControlProperty = 6
 )
 
 type CameraControlFlags int32
 
 const (
-	CameraControl_Flags_Auto = 1
-	CameraControl_Flags_Manual = 2
+	CameraControl_Flags_Auto   CameraControlFlags = 1
+	CameraControl_Flags_Manual CameraControlFlags = 2
 )
 
 type VideoControlFlags int32
 
 const (
-	VideoControlFlag_FlipHorizontal = 1
-	VideoControlFlag_FlipVertical = 2
-	VideoControlFlag_ExternalTriggerEnable = 4
-	VideoControlFlag_Trigger = 8
+	VideoControlFlag_FlipHorizontal        VideoControlFlags = 1
+	VideoControlFlag_FlipVertical          VideoControlFlags = 2
+	VideoControlFlag_ExternalTriggerEnable VideoControlFlags = 4
+	VideoControlFlag_Trigger               VideoControlFlags = 8
 )
 
 type AMTunerSubChannel int32
 
 const (
-	AMTUNER_SUBCHAN_NO_TUNE = -2
-	AMTUNER_SUBCHAN_DEFAULT = -1
+	AMTUNER_SUBCHAN_NO_TUNE AMTunerSubChannel = -2
+	AMTUNER_SUBCHAN_DEFAULT AMTunerSubChannel = -1
 )
 
 type AMTunerSignalStrength int32
 
 const (
-	AMTUNER_HASNOSIGNALSTRENGTH = -1
-	AMTUNER_NOSIGNAL = 0
-	AMTUNER_SIGNALPRESENT = 1
+	AMTUNER_HASNOSIGNALSTRENGTH AMTunerSignalStrength = -1
+	AMTUNER_NOSIGNAL            AMTunerSignalStrength = 0
+	AMTUNER_SIGNALPRESENT       AMTunerSignalStrength = 1
 )
 
 type AMTunerModeType int32
 
 const (
-	AMTUNER_MODE_DEFAULT = 0
-	AMTUNER_MODE_TV = 1
-	AMTUNER_MODE_FM_RADIO = 2
-	AMTUNER_MODE_AM_RADIO = 4
-	AMTUNER_MODE_DSS = 8
+	AMTUNER_MODE_DEFAULT  AMTunerModeType = 0
+	AMTUNER_MODE_TV       AMTunerModeType = 1
+	AMTUNER_MODE_FM_RADIO AMTunerModeType = 2
+	AMTUNER_MODE_AM_RADIO AMTunerModeType = 4
+	AMTUNER_MODE_DSS      AMTunerModeType = 8
 )
 
 type AMTunerEventType int32
 
 const (
-	AMTUNER_EVENT_CHANGED = 1
+	AMTUNER_EVENT_CHANGED AMTunerEventType = 1
 )
 
 type TVAudioMode int32
 
 const (
-	AMTVAUDIO_MODE_MONO = 1
-	AMTVAUDIO_MODE_STEREO = 2
-	AMTVAUDIO_MODE_LANG_A = 16
-	AMTVAUDIO_MODE_LANG_B = 32
-	AMTVAUDIO_MODE_LANG_C = 64
-	AMTVAUDIO_PRESET_STEREO = 512
-	AMTVAUDIO_PRESET_LANG_A = 4096
-	AMTVAUDIO_PRESET_LANG_B = 8192
-	AMTVAUDIO_PRESET_LANG_C = 16384
+	AMTVAUDIO_MODE_MONO     TVAudioMode = 1
+	AMTVAUDIO_MODE_STEREO   TVAudioMode = 2
+	AMTVAUDIO_MODE_LANG_A   TVAudioMode = 16
+	AMTVAUDIO_MODE_LANG_B   TVAudioMode = 32
+	AMTVAUDIO_MODE_LANG_C   TVAudioMode = 64
+	AMTVAUDIO_PRESET_STEREO TVAudioMode = 512
+	AMTVAUDIO_PRESET_LANG_A TVAudioMode = 4096
+	AMTVAUDIO_PRESET_LANG_B TVAudioMode = 8192
+	AMTVAUDIO_PRESET_LANG_C TVAudioMode = 16384
 )
 
 type AMTVAudioEventType int32
 
 const (
-	AMTVAUDIO_EVENT_CHANGED = 1
+	AMTVAUDIO_EVENT_CHANGED AMTVAudioEventType = 1
 )
 
 type AMPROPERTY_PIN int32
 
 const (
-	AMPROPERTY_PIN_CATEGORY = 0
-	AMPROPERTY_PIN_MEDIUM = 1
+	AMPROPERTY_PIN_CATEGORY AMPROPERTY_PIN = 0
+	AMPROPERTY_PIN_MEDIUM   AMPROPERTY_PIN = 1
 )
 
 type _AMSTREAMSELECTINFOFLAGS int32
 
 const (
-	AMSTREAMSELECTINFO_ENABLED = 1
-	AMSTREAMSELECTINFO_EXCLUSIVE = 2
+	AMSTREAMSELECTINFO_ENABLED   _AMSTREAMSELECTINFOFLAGS = 1
+	AMSTREAMSELECTINFO_EXCLUSIVE _AMSTREAMSELECTINFOFLAGS = 2
 )
 
 type _AMSTREAMSELECTENABLEFLAGS int32
 
 const (
-	AMSTREAMSELECTENABLE_ENABLE = 1
-	AMSTREAMSELECTENABLE_ENABLEALL = 2
+	AMSTREAMSELECTENABLE_ENABLE    _AMSTREAMSELECTENABLEFLAGS = 1
+	AMSTREAMSELECTENABLE_ENABLEALL _AMSTREAMSELECTENABLEFLAGS = 2
 )
 
 type _AMRESCTL_RESERVEFLAGS int32
 
 const (
-	AMRESCTL_RESERVEFLAGS_RESERVE = 0
-	AMRESCTL_RESERVEFLAGS_UNRESERVE = 1
+	AMRESCTL_RESERVEFLAGS_RESERVE   _AMRESCTL_RESERVEFLAGS = 0
+	AMRESCTL_RESERVEFLAGS_UNRESERVE _AMRESCTL_RESERVEFLAGS = 1
 )
 
 type _AM_FILTER_MISC_FLAGS int32
 
 const (
-	AM_FILTER_MISC_FLAGS_IS_RENDERER = 1
-	AM_FILTER_MISC_FLAGS_IS_SOURCE = 2
+	AM_FILTER_MISC_FLAGS_IS_RENDERER _AM_FILTER_MISC_FLAGS = 1
+	AM_FILTER_MISC_FLAGS_IS_SOURCE   _AM_FILTER_MISC_FLAGS = 2
 )
 
 type DECIMATION_USAGE int32
 
 const (
-	DECIMATION_LEGACY = 0
-	DECIMATION_USE_DECODER_ONLY = 1
-	DECIMATION_USE_VIDEOPORT_ONLY = 2
-	DECIMATION_USE_OVERLAY_ONLY = 3
-	DECIMATION_DEFAULT = 4
+	DECIMATION_LEGACY             DECIMATION_USAGE = 0
+	DECIMATION_USE_DECODER_ONLY   DECIMATION_USAGE = 1
+	DECIMATION_USE_VIDEOPORT_ONLY DECIMATION_USAGE = 2
+	DECIMATION_USE_OVERLAY_ONLY   DECIMATION_USAGE = 3
+	DECIMATION_DEFAULT            DECIMATION_USAGE = 4
 )
 
 type _AM_PUSHSOURCE_FLAGS int32
 
 const (
-	AM_PUSHSOURCECAPS_INTERNAL_RM = 1
-	AM_PUSHSOURCECAPS_NOT_LIVE = 2
-	AM_PUSHSOURCECAPS_PRIVATE_CLOCK = 4
-	AM_PUSHSOURCEREQS_USE_STREAM_CLOCK = 65536
-	AM_PUSHSOURCEREQS_USE_CLOCK_CHAIN = 131072
+	AM_PUSHSOURCECAPS_INTERNAL_RM      _AM_PUSHSOURCE_FLAGS = 1
+	AM_PUSHSOURCECAPS_NOT_LIVE         _AM_PUSHSOURCE_FLAGS = 2
+	AM_PUSHSOURCECAPS_PRIVATE_CLOCK    _AM_PUSHSOURCE_FLAGS = 4
+	AM_PUSHSOURCEREQS_USE_STREAM_CLOCK _AM_PUSHSOURCE_FLAGS = 65536
+	AM_PUSHSOURCEREQS_USE_CLOCK_CHAIN  _AM_PUSHSOURCE_FLAGS = 131072
 )
 
 type _DVENCODERRESOLUTION int32
 
 const (
-	DVENCODERRESOLUTION_720x480 = 2012
-	DVENCODERRESOLUTION_360x240 = 2013
-	DVENCODERRESOLUTION_180x120 = 2014
-	DVENCODERRESOLUTION_88x60 = 2015
+	DVENCODERRESOLUTION_720x480 _DVENCODERRESOLUTION = 2012
+	DVENCODERRESOLUTION_360x240 _DVENCODERRESOLUTION = 2013
+	DVENCODERRESOLUTION_180x120 _DVENCODERRESOLUTION = 2014
+	DVENCODERRESOLUTION_88x60   _DVENCODERRESOLUTION = 2015
 )
 
 type _DVENCODERVIDEOFORMAT int32
 
 const (
-	DVENCODERVIDEOFORMAT_NTSC = 2000
-	DVENCODERVIDEOFORMAT_PAL = 2001
+	DVENCODERVIDEOFORMAT_NTSC _DVENCODERVIDEOFORMAT = 2000
+	DVENCODERVIDEOFORMAT_PAL  _DVENCODERVIDEOFORMAT = 2001
 )
 
 type _DVENCODERFORMAT int32
 
 const (
-	DVENCODERFORMAT_DVSD = 2007
-	DVENCODERFORMAT_DVHD = 2008
-	DVENCODERFORMAT_DVSL = 2009
+	DVENCODERFORMAT_DVSD _DVENCODERFORMAT = 2007
+	DVENCODERFORMAT_DVHD _DVENCODERFORMAT = 2008
+	DVENCODERFORMAT_DVSL _DVENCODERFORMAT = 2009
 )
 
 type _DVDECODERRESOLUTION int32
 
 const (
-	DVDECODERRESOLUTION_720x480 = 1000
-	DVDECODERRESOLUTION_360x240 = 1001
-	DVDECODERRESOLUTION_180x120 = 1002
-	DVDECODERRESOLUTION_88x60 = 1003
+	DVDECODERRESOLUTION_720x480 _DVDECODERRESOLUTION = 1000
+	DVDECODERRESOLUTION_360x240 _DVDECODERRESOLUTION = 1001
+	DVDECODERRESOLUTION_180x120 _DVDECODERRESOLUTION = 1002
+	DVDECODERRESOLUTION_88x60   _DVDECODERRESOLUTION = 1003
 )
 
 type _DVRESOLUTION int32
 
 const (
-	DVRESOLUTION_FULL = 1000
-	DVRESOLUTION_HALF = 1001
-	DVRESOLUTION_QUARTER = 1002
-	DVRESOLUTION_DC = 1003
+	DVRESOLUTION_FULL    _DVRESOLUTION = 1000
+	DVRESOLUTION_HALF    _DVRESOLUTION = 1001
+	DVRESOLUTION_QUARTER _DVRESOLUTION = 1002
+	DVRESOLUTION_DC      _DVRESOLUTION = 1003
 )
 
 type _AM_AUDIO_RENDERER_STAT_PARAM int32
 
 const (
-	AM_AUDREND_STAT_PARAM_BREAK_COUNT = 1
-	AM_AUDREND_STAT_PARAM_SLAVE_MODE = 2
-	AM_AUDREND_STAT_PARAM_SILENCE_DUR = 3
-	AM_AUDREND_STAT_PARAM_LAST_BUFFER_DUR = 4
-	AM_AUDREND_STAT_PARAM_DISCONTINUITIES = 5
-	AM_AUDREND_STAT_PARAM_SLAVE_RATE = 6
-	AM_AUDREND_STAT_PARAM_SLAVE_DROPWRITE_DUR = 7
-	AM_AUDREND_STAT_PARAM_SLAVE_HIGHLOWERROR = 8
-	AM_AUDREND_STAT_PARAM_SLAVE_LASTHIGHLOWERROR = 9
-	AM_AUDREND_STAT_PARAM_SLAVE_ACCUMERROR = 10
-	AM_AUDREND_STAT_PARAM_BUFFERFULLNESS = 11
-	AM_AUDREND_STAT_PARAM_JITTER = 12
+	AM_AUDREND_STAT_PARAM_BREAK_COUNT            _AM_AUDIO_RENDERER_STAT_PARAM = 1
+	AM_AUDREND_STAT_PARAM_SLAVE_MODE             _AM_AUDIO_RENDERER_STAT_PARAM = 2
+	AM_AUDREND_STAT_PARAM_SILENCE_DUR            _AM_AUDIO_RENDERER_STAT_PARAM = 3
+	AM_AUDREND_STAT_PARAM_LAST_BUFFER_DUR        _AM_AUDIO_RENDERER_STAT_PARAM = 4
+	AM_AUDREND_STAT_PARAM_DISCONTINUITIES        _AM_AUDIO_RENDERER_STAT_PARAM = 5
+	AM_AUDREND_STAT_PARAM_SLAVE_RATE             _AM_AUDIO_RENDERER_STAT_PARAM = 6
+	AM_AUDREND_STAT_PARAM_SLAVE_DROPWRITE_DUR    _AM_AUDIO_RENDERER_STAT_PARAM = 7
+	AM_AUDREND_STAT_PARAM_SLAVE_HIGHLOWERROR     _AM_AUDIO_RENDERER_STAT_PARAM = 8
+	AM_AUDREND_STAT_PARAM_SLAVE_LASTHIGHLOWERROR _AM_AUDIO_RENDERER_STAT_PARAM = 9
+	AM_AUDREND_STAT_PARAM_SLAVE_ACCUMERROR       _AM_AUDIO_RENDERER_STAT_PARAM = 10
+	AM_AUDREND_STAT_PARAM_BUFFERFULLNESS         _AM_AUDIO_RENDERER_STAT_PARAM = 11
+	AM_AUDREND_STAT_PARAM_JITTER                 _AM_AUDIO_RENDERER_STAT_PARAM = 12
 )
 
 type _AM_INTF_SEARCH_FLAGS int32
 
 const (
-	AM_INTF_SEARCH_INPUT_PIN = 1
-	AM_INTF_SEARCH_OUTPUT_PIN = 2
-	AM_INTF_SEARCH_FILTER = 4
+	AM_INTF_SEARCH_INPUT_PIN  _AM_INTF_SEARCH_FLAGS = 1
+	AM_INTF_SEARCH_OUTPUT_PIN _AM_INTF_SEARCH_FLAGS = 2
+	AM_INTF_SEARCH_FILTER     _AM_INTF_SEARCH_FLAGS = 4
 )
 
 type AMOVERLAYFX int32
 
 const (
-	AMOVERFX_NOFX = 0
-	AMOVERFX_MIRRORLEFTRIGHT = 2
-	AMOVERFX_MIRRORUPDOWN = 4
-	AMOVERFX_DEINTERLACE = 8
+	AMOVERFX_NOFX            AMOVERLAYFX = 0
+	AMOVERFX_MIRRORLEFTRIGHT AMOVERLAYFX = 2
+	AMOVERFX_MIRRORUPDOWN    AMOVERLAYFX = 4
+	AMOVERFX_DEINTERLACE     AMOVERLAYFX = 8
 )
 
 type _AM_PIN_FLOW_CONTROL_BLOCK_FLAGS int32
 
 const (
-	AM_PIN_FLOW_CONTROL_BLOCK = 1
+	AM_PIN_FLOW_CONTROL_BLOCK _AM_PIN_FLOW_CONTROL_BLOCK_FLAGS = 1
 )
 
 type AM_GRAPH_CONFIG_RECONNECT_FLAGS int32
 
 const (
-	AM_GRAPH_CONFIG_RECONNECT_DIRECTCONNECT = 1
-	AM_GRAPH_CONFIG_RECONNECT_CACHE_REMOVED_FILTERS = 2
-	AM_GRAPH_CONFIG_RECONNECT_USE_ONLY_CACHED_FILTERS = 4
+	AM_GRAPH_CONFIG_RECONNECT_DIRECTCONNECT           AM_GRAPH_CONFIG_RECONNECT_FLAGS = 1
+	AM_GRAPH_CONFIG_RECONNECT_CACHE_REMOVED_FILTERS   AM_GRAPH_CONFIG_RECONNECT_FLAGS = 2
+	AM_GRAPH_CONFIG_RECONNECT_USE_ONLY_CACHED_FILTERS AM_GRAPH_CONFIG_RECONNECT_FLAGS = 4
 )
 
 type _REM_FILTER_FLAGS int32
 
 const (
-	REMFILTERF_LEAVECONNECTED = 1
+	REMFILTERF_LEAVECONNECTED _REM_FILTER_FLAGS = 1
 )
 
 type AM_FILTER_FLAGS int32
 
 const (
-	AM_FILTER_FLAGS_REMOVABLE = 1
+	AM_FILTER_FLAGS_REMOVABLE AM_FILTER_FLAGS = 1
 )
 
 type VMRPresentationFlags int32
 
 const (
-	VMRSample_SyncPoint = 1
-	VMRSample_Preroll = 2
-	VMRSample_Discontinuity = 4
-	VMRSample_TimeValid = 8
-	VMRSample_SrcDstRectsValid = 16
+	VMRSample_SyncPoint        VMRPresentationFlags = 1
+	VMRSample_Preroll          VMRPresentationFlags = 2
+	VMRSample_Discontinuity    VMRPresentationFlags = 4
+	VMRSample_TimeValid        VMRPresentationFlags = 8
+	VMRSample_SrcDstRectsValid VMRPresentationFlags = 16
 )
 
 type VMRSurfaceAllocationFlags int32
 
 const (
-	AMAP_PIXELFORMAT_VALID = 1
-	AMAP_3D_TARGET = 2
-	AMAP_ALLOW_SYSMEM = 4
-	AMAP_FORCE_SYSMEM = 8
-	AMAP_DIRECTED_FLIP = 16
-	AMAP_DXVA_TARGET = 32
+	AMAP_PIXELFORMAT_VALID VMRSurfaceAllocationFlags = 1
+	AMAP_3D_TARGET         VMRSurfaceAllocationFlags = 2
+	AMAP_ALLOW_SYSMEM      VMRSurfaceAllocationFlags = 4
+	AMAP_FORCE_SYSMEM      VMRSurfaceAllocationFlags = 8
+	AMAP_DIRECTED_FLIP     VMRSurfaceAllocationFlags = 16
+	AMAP_DXVA_TARGET       VMRSurfaceAllocationFlags = 32
 )
 
 type VMR_ASPECT_RATIO_MODE int32
 
 const (
-	VMR_ARMODE_NONE = 0
-	VMR_ARMODE_LETTER_BOX = 1
+	VMR_ARMODE_NONE       VMR_ASPECT_RATIO_MODE = 0
+	VMR_ARMODE_LETTER_BOX VMR_ASPECT_RATIO_MODE = 1
 )
 
 type VMRMixerPrefs int32
 
 const (
-	MixerPref_NoDecimation = 1
-	MixerPref_DecimateOutput = 2
-	MixerPref_ARAdjustXorY = 4
-	MixerPref_DecimationReserved = 8
-	MixerPref_DecimateMask = 15
-	MixerPref_BiLinearFiltering = 16
-	MixerPref_PointFiltering = 32
-	MixerPref_FilteringMask = 240
-	MixerPref_RenderTargetRGB = 256
-	MixerPref_RenderTargetYUV = 4096
-	MixerPref_RenderTargetYUV420 = 512
-	MixerPref_RenderTargetYUV422 = 1024
-	MixerPref_RenderTargetYUV444 = 2048
-	MixerPref_RenderTargetReserved = 57344
-	MixerPref_RenderTargetMask = 65280
-	MixerPref_DynamicSwitchToBOB = 65536
-	MixerPref_DynamicDecimateBy2 = 131072
-	MixerPref_DynamicReserved = 786432
-	MixerPref_DynamicMask = 983040
+	MixerPref_NoDecimation         VMRMixerPrefs = 1
+	MixerPref_DecimateOutput       VMRMixerPrefs = 2
+	MixerPref_ARAdjustXorY         VMRMixerPrefs = 4
+	MixerPref_DecimationReserved   VMRMixerPrefs = 8
+	MixerPref_DecimateMask         VMRMixerPrefs = 15
+	MixerPref_BiLinearFiltering    VMRMixerPrefs = 16
+	MixerPref_PointFiltering       VMRMixerPrefs = 32
+	MixerPref_FilteringMask        VMRMixerPrefs = 240
+	MixerPref_RenderTargetRGB      VMRMixerPrefs = 256
+	MixerPref_RenderTargetYUV      VMRMixerPrefs = 4096
+	MixerPref_RenderTargetYUV420   VMRMixerPrefs = 512
+	MixerPref_RenderTargetYUV422   VMRMixerPrefs = 1024
+	MixerPref_RenderTargetYUV444   VMRMixerPrefs = 2048
+	MixerPref_RenderTargetReserved VMRMixerPrefs = 57344
+	MixerPref_RenderTargetMask     VMRMixerPrefs = 65280
+	MixerPref_DynamicSwitchToBOB   VMRMixerPrefs = 65536
+	MixerPref_DynamicDecimateBy2   VMRMixerPrefs = 131072
+	MixerPref_DynamicReserved      VMRMixerPrefs = 786432
+	MixerPref_DynamicMask          VMRMixerPrefs = 983040
 )
 
 type VMRRenderPrefs int32
 
 const (
-	RenderPrefs_RestrictToInitialMonitor = 0
-	RenderPrefs_ForceOffscreen = 1
-	RenderPrefs_ForceOverlays = 2
-	RenderPrefs_AllowOverlays = 0
-	RenderPrefs_AllowOffscreen = 0
-	RenderPrefs_DoNotRenderColorKeyAndBorder = 8
-	RenderPrefs_Reserved = 16
-	RenderPrefs_PreferAGPMemWhenMixing = 32
-	RenderPrefs_Mask = 63
+	RenderPrefs_RestrictToInitialMonitor     VMRRenderPrefs = 0
+	RenderPrefs_ForceOffscreen               VMRRenderPrefs = 1
+	RenderPrefs_ForceOverlays                VMRRenderPrefs = 2
+	RenderPrefs_AllowOverlays                VMRRenderPrefs = 0
+	RenderPrefs_AllowOffscreen               VMRRenderPrefs = 0
+	RenderPrefs_DoNotRenderColorKeyAndBorder VMRRenderPrefs = 8
+	RenderPrefs_Reserved                     VMRRenderPrefs = 16
+	RenderPrefs_PreferAGPMemWhenMixing       VMRRenderPrefs = 32
+	RenderPrefs_Mask                         VMRRenderPrefs = 63
 )
 
 type VMRMode int32
 
 const (
-	VMRMode_Windowed = 1
-	VMRMode_Windowless = 2
-	VMRMode_Renderless = 4
-	VMRMode_Mask = 7
+	VMRMode_Windowed   VMRMode = 1
+	VMRMode_Windowless VMRMode = 2
+	VMRMode_Renderless VMRMode = 4
+	VMRMode_Mask       VMRMode = 7
 )
 
 type __MIDL___MIDL_itf_strmif_0000_0122_0001 int32
 
 const (
-	MAX_NUMBER_OF_STREAMS = 16
+	MAX_NUMBER_OF_STREAMS __MIDL___MIDL_itf_strmif_0000_0122_0001 = 16
 )
 
 type VMRDeinterlacePrefs int32
 
 const (
-	DeinterlacePref_NextBest = 1
-	DeinterlacePref_BOB = 2
-	DeinterlacePref_Weave = 4
-	DeinterlacePref_Mask = 7
+	DeinterlacePref_NextBest VMRDeinterlacePrefs = 1
+	DeinterlacePref_BOB      VMRDeinterlacePrefs = 2
+	DeinterlacePref_Weave    VMRDeinterlacePrefs = 4
+	DeinterlacePref_Mask     VMRDeinterlacePrefs = 7
 )
 
 type VMRDeinterlaceTech int32
 
 const (
-	DeinterlaceTech_Unknown = 0
-	DeinterlaceTech_BOBLineReplicate = 1
-	DeinterlaceTech_BOBVerticalStretch = 2
-	DeinterlaceTech_MedianFiltering = 4
-	DeinterlaceTech_EdgeFiltering = 16
-	DeinterlaceTech_FieldAdaptive = 32
-	DeinterlaceTech_PixelAdaptive = 64
-	DeinterlaceTech_MotionVectorSteered = 128
+	DeinterlaceTech_Unknown             VMRDeinterlaceTech = 0
+	DeinterlaceTech_BOBLineReplicate    VMRDeinterlaceTech = 1
+	DeinterlaceTech_BOBVerticalStretch  VMRDeinterlaceTech = 2
+	DeinterlaceTech_MedianFiltering     VMRDeinterlaceTech = 4
+	DeinterlaceTech_EdgeFiltering       VMRDeinterlaceTech = 16
+	DeinterlaceTech_FieldAdaptive       VMRDeinterlaceTech = 32
+	DeinterlaceTech_PixelAdaptive       VMRDeinterlaceTech = 64
+	DeinterlaceTech_MotionVectorSteered VMRDeinterlaceTech = 128
 )
 
 type DVD_DOMAIN int32
 
 const (
-	DVD_DOMAIN_FirstPlay = 1
-	DVD_DOMAIN_VideoManagerMenu = 2
-	DVD_DOMAIN_VideoTitleSetMenu = 3
-	DVD_DOMAIN_Title = 4
-	DVD_DOMAIN_Stop = 5
+	DVD_DOMAIN_FirstPlay         DVD_DOMAIN = 1
+	DVD_DOMAIN_VideoManagerMenu  DVD_DOMAIN = 2
+	DVD_DOMAIN_VideoTitleSetMenu DVD_DOMAIN = 3
+	DVD_DOMAIN_Title             DVD_DOMAIN = 4
+	DVD_DOMAIN_Stop              DVD_DOMAIN = 5
 )
 
 type DVD_MENU_ID int32
 
 const (
-	DVD_MENU_Title = 2
-	DVD_MENU_Root = 3
-	DVD_MENU_Subpicture = 4
-	DVD_MENU_Audio = 5
-	DVD_MENU_Angle = 6
-	DVD_MENU_Chapter = 7
+	DVD_MENU_Title      DVD_MENU_ID = 2
+	DVD_MENU_Root       DVD_MENU_ID = 3
+	DVD_MENU_Subpicture DVD_MENU_ID = 4
+	DVD_MENU_Audio      DVD_MENU_ID = 5
+	DVD_MENU_Angle      DVD_MENU_ID = 6
+	DVD_MENU_Chapter    DVD_MENU_ID = 7
 )
 
 type DVD_DISC_SIDE int32
 
 const (
-	DVD_SIDE_A = 1
-	DVD_SIDE_B = 2
+	DVD_SIDE_A DVD_DISC_SIDE = 1
+	DVD_SIDE_B DVD_DISC_SIDE = 2
 )
 
 type DVD_PREFERRED_DISPLAY_MODE int32
 
 const (
-	DISPLAY_CONTENT_DEFAULT = 0
-	DISPLAY_16x9 = 1
-	DISPLAY_4x3_PANSCAN_PREFERRED = 2
-	DISPLAY_4x3_LETTERBOX_PREFERRED = 3
+	DISPLAY_CONTENT_DEFAULT         DVD_PREFERRED_DISPLAY_MODE = 0
+	DISPLAY_16x9                    DVD_PREFERRED_DISPLAY_MODE = 1
+	DISPLAY_4x3_PANSCAN_PREFERRED   DVD_PREFERRED_DISPLAY_MODE = 2
+	DISPLAY_4x3_LETTERBOX_PREFERRED DVD_PREFERRED_DISPLAY_MODE = 3
 )
 
 type DVD_FRAMERATE int32
 
 const (
-	DVD_FPS_25 = 1
-	DVD_FPS_30NonDrop = 3
+	DVD_FPS_25        DVD_FRAMERATE = 1
+	DVD_FPS_30NonDrop DVD_FRAMERATE = 3
 )
 
 type DVD_NavCmdType int32
 
 const (
-	DVD_NavCmdType_Pre = 1
-	DVD_NavCmdType_Post = 2
-	DVD_NavCmdType_Cell = 3
-	DVD_NavCmdType_Button = 4
+	DVD_NavCmdType_Pre    DVD_NavCmdType = 1
+	DVD_NavCmdType_Post   DVD_NavCmdType = 2
+	DVD_NavCmdType_Cell   DVD_NavCmdType = 3
+	DVD_NavCmdType_Button DVD_NavCmdType = 4
 )
 
 type DVD_TIMECODE_FLAGS int32
 
 const (
-	DVD_TC_FLAG_25fps = 1
-	DVD_TC_FLAG_30fps = 2
-	DVD_TC_FLAG_DropFrame = 4
-	DVD_TC_FLAG_Interpolated = 8
+	DVD_TC_FLAG_25fps        DVD_TIMECODE_FLAGS = 1
+	DVD_TC_FLAG_30fps        DVD_TIMECODE_FLAGS = 2
+	DVD_TC_FLAG_DropFrame    DVD_TIMECODE_FLAGS = 4
+	DVD_TC_FLAG_Interpolated DVD_TIMECODE_FLAGS = 8
 )
 
 type VALID_UOP_FLAG int32
 
 const (
-	UOP_FLAG_Play_Title_Or_AtTime = 1
-	UOP_FLAG_Play_Chapter = 2
-	UOP_FLAG_Play_Title = 4
-	UOP_FLAG_Stop = 8
-	UOP_FLAG_ReturnFromSubMenu = 16
-	UOP_FLAG_Play_Chapter_Or_AtTime = 32
-	UOP_FLAG_PlayPrev_Or_Replay_Chapter = 64
-	UOP_FLAG_PlayNext_Chapter = 128
-	UOP_FLAG_Play_Forwards = 256
-	UOP_FLAG_Play_Backwards = 512
-	UOP_FLAG_ShowMenu_Title = 1024
-	UOP_FLAG_ShowMenu_Root = 2048
-	UOP_FLAG_ShowMenu_SubPic = 4096
-	UOP_FLAG_ShowMenu_Audio = 8192
-	UOP_FLAG_ShowMenu_Angle = 16384
-	UOP_FLAG_ShowMenu_Chapter = 32768
-	UOP_FLAG_Resume = 65536
-	UOP_FLAG_Select_Or_Activate_Button = 131072
-	UOP_FLAG_Still_Off = 262144
-	UOP_FLAG_Pause_On = 524288
-	UOP_FLAG_Select_Audio_Stream = 1048576
-	UOP_FLAG_Select_SubPic_Stream = 2097152
-	UOP_FLAG_Select_Angle = 4194304
-	UOP_FLAG_Select_Karaoke_Audio_Presentation_Mode = 8388608
-	UOP_FLAG_Select_Video_Mode_Preference = 16777216
+	UOP_FLAG_Play_Title_Or_AtTime                   VALID_UOP_FLAG = 1
+	UOP_FLAG_Play_Chapter                           VALID_UOP_FLAG = 2
+	UOP_FLAG_Play_Title                             VALID_UOP_FLAG = 4
+	UOP_FLAG_Stop                                   VALID_UOP_FLAG = 8
+	UOP_FLAG_ReturnFromSubMenu                      VALID_UOP_FLAG = 16
+	UOP_FLAG_Play_Chapter_Or_AtTime                 VALID_UOP_FLAG = 32
+	UOP_FLAG_PlayPrev_Or_Replay_Chapter             VALID_UOP_FLAG = 64
+	UOP_FLAG_PlayNext_Chapter                       VALID_UOP_FLAG = 128
+	UOP_FLAG_Play_Forwards                          VALID_UOP_FLAG = 256
+	UOP_FLAG_Play_Backwards                         VALID_UOP_FLAG = 512
+	UOP_FLAG_ShowMenu_Title                         VALID_UOP_FLAG = 1024
+	UOP_FLAG_ShowMenu_Root                          VALID_UOP_FLAG = 2048
+	UOP_FLAG_ShowMenu_SubPic                        VALID_UOP_FLAG = 4096
+	UOP_FLAG_ShowMenu_Audio                         VALID_UOP_FLAG = 8192
+	UOP_FLAG_ShowMenu_Angle                         VALID_UOP_FLAG = 16384
+	UOP_FLAG_ShowMenu_Chapter                       VALID_UOP_FLAG = 32768
+	UOP_FLAG_Resume                                 VALID_UOP_FLAG = 65536
+	UOP_FLAG_Select_Or_Activate_Button              VALID_UOP_FLAG = 131072
+	UOP_FLAG_Still_Off                              VALID_UOP_FLAG = 262144
+	UOP_FLAG_Pause_On                               VALID_UOP_FLAG = 524288
+	UOP_FLAG_Select_Audio_Stream                    VALID_UOP_FLAG = 1048576
+	UOP_FLAG_Select_SubPic_Stream                   VALID_UOP_FLAG = 2097152
+	UOP_FLAG_Select_Angle                           VALID_UOP_FLAG = 4194304
+	UOP_FLAG_Select_Karaoke_Audio_Presentation_Mode VALID_UOP_FLAG = 8388608
+	UOP_FLAG_Select_Video_Mode_Preference           VALID_UOP_FLAG = 16777216
 )
 
 type DVD_CMD_FLAGS int32
 
 const (
-	DVD_CMD_FLAG_None = 0
-	DVD_CMD_FLAG_Flush = 1
-	DVD_CMD_FLAG_SendEvents = 2
-	DVD_CMD_FLAG_Block = 4
-	DVD_CMD_FLAG_StartWhenRendered = 8
-	DVD_CMD_FLAG_EndAfterRendered = 16
+	DVD_CMD_FLAG_None              DVD_CMD_FLAGS = 0
+	DVD_CMD_FLAG_Flush             DVD_CMD_FLAGS = 1
+	DVD_CMD_FLAG_SendEvents        DVD_CMD_FLAGS = 2
+	DVD_CMD_FLAG_Block             DVD_CMD_FLAGS = 4
+	DVD_CMD_FLAG_StartWhenRendered DVD_CMD_FLAGS = 8
+	DVD_CMD_FLAG_EndAfterRendered  DVD_CMD_FLAGS = 16
 )
 
 type DVD_OPTION_FLAG int32
 
 const (
-	DVD_ResetOnStop = 1
-	DVD_NotifyParentalLevelChange = 2
-	DVD_HMSF_TimeCodeEvents = 3
-	DVD_AudioDuringFFwdRew = 4
-	DVD_EnableNonblockingAPIs = 5
-	DVD_CacheSizeInMB = 6
-	DVD_EnablePortableBookmarks = 7
-	DVD_EnableExtendedCopyProtectErrors = 8
-	DVD_NotifyPositionChange = 9
-	DVD_IncreaseOutputControl = 10
-	DVD_EnableStreaming = 11
-	DVD_EnableESOutput = 12
-	DVD_EnableTitleLength = 13
-	DVD_DisableStillThrottle = 14
-	DVD_EnableLoggingEvents = 15
-	DVD_MaxReadBurstInKB = 16
-	DVD_ReadBurstPeriodInMS = 17
-	DVD_RestartDisc = 18
-	DVD_EnableCC = 19
+	DVD_ResetOnStop                     DVD_OPTION_FLAG = 1
+	DVD_NotifyParentalLevelChange       DVD_OPTION_FLAG = 2
+	DVD_HMSF_TimeCodeEvents             DVD_OPTION_FLAG = 3
+	DVD_AudioDuringFFwdRew              DVD_OPTION_FLAG = 4
+	DVD_EnableNonblockingAPIs           DVD_OPTION_FLAG = 5
+	DVD_CacheSizeInMB                   DVD_OPTION_FLAG = 6
+	DVD_EnablePortableBookmarks         DVD_OPTION_FLAG = 7
+	DVD_EnableExtendedCopyProtectErrors DVD_OPTION_FLAG = 8
+	DVD_NotifyPositionChange            DVD_OPTION_FLAG = 9
+	DVD_IncreaseOutputControl           DVD_OPTION_FLAG = 10
+	DVD_EnableStreaming                 DVD_OPTION_FLAG = 11
+	DVD_EnableESOutput                  DVD_OPTION_FLAG = 12
+	DVD_EnableTitleLength               DVD_OPTION_FLAG = 13
+	DVD_DisableStillThrottle            DVD_OPTION_FLAG = 14
+	DVD_EnableLoggingEvents             DVD_OPTION_FLAG = 15
+	DVD_MaxReadBurstInKB                DVD_OPTION_FLAG = 16
+	DVD_ReadBurstPeriodInMS             DVD_OPTION_FLAG = 17
+	DVD_RestartDisc                     DVD_OPTION_FLAG = 18
+	DVD_EnableCC                        DVD_OPTION_FLAG = 19
 )
 
 type DVD_RELATIVE_BUTTON int32
 
 const (
-	DVD_Relative_Upper = 1
-	DVD_Relative_Lower = 2
-	DVD_Relative_Left = 3
-	DVD_Relative_Right = 4
+	DVD_Relative_Upper DVD_RELATIVE_BUTTON = 1
+	DVD_Relative_Lower DVD_RELATIVE_BUTTON = 2
+	DVD_Relative_Left  DVD_RELATIVE_BUTTON = 3
+	DVD_Relative_Right DVD_RELATIVE_BUTTON = 4
 )
 
 type DVD_PARENTAL_LEVEL int32
 
 const (
-	DVD_PARENTAL_LEVEL_8 = 32768
-	DVD_PARENTAL_LEVEL_7 = 16384
-	DVD_PARENTAL_LEVEL_6 = 8192
-	DVD_PARENTAL_LEVEL_5 = 4096
-	DVD_PARENTAL_LEVEL_4 = 2048
-	DVD_PARENTAL_LEVEL_3 = 1024
-	DVD_PARENTAL_LEVEL_2 = 512
-	DVD_PARENTAL_LEVEL_1 = 256
+	DVD_PARENTAL_LEVEL_8 DVD_PARENTAL_LEVEL = 32768
+	DVD_PARENTAL_LEVEL_7 DVD_PARENTAL_LEVEL = 16384
+	DVD_PARENTAL_LEVEL_6 DVD_PARENTAL_LEVEL = 8192
+	DVD_PARENTAL_LEVEL_5 DVD_PARENTAL_LEVEL = 4096
+	DVD_PARENTAL_LEVEL_4 DVD_PARENTAL_LEVEL = 2048
+	DVD_PARENTAL_LEVEL_3 DVD_PARENTAL_LEVEL = 1024
+	DVD_PARENTAL_LEVEL_2 DVD_PARENTAL_LEVEL = 512
+	DVD_PARENTAL_LEVEL_1 DVD_PARENTAL_LEVEL = 256
 )
 
 type DVD_AUDIO_LANG_EXT int32
 
 const (
-	DVD_AUD_EXT_NotSpecified = 0
-	DVD_AUD_EXT_Captions = 1
-	DVD_AUD_EXT_VisuallyImpaired = 2
-	DVD_AUD_EXT_DirectorComments1 = 3
-	DVD_AUD_EXT_DirectorComments2 = 4
+	DVD_AUD_EXT_NotSpecified      DVD_AUDIO_LANG_EXT = 0
+	DVD_AUD_EXT_Captions          DVD_AUDIO_LANG_EXT = 1
+	DVD_AUD_EXT_VisuallyImpaired  DVD_AUDIO_LANG_EXT = 2
+	DVD_AUD_EXT_DirectorComments1 DVD_AUDIO_LANG_EXT = 3
+	DVD_AUD_EXT_DirectorComments2 DVD_AUDIO_LANG_EXT = 4
 )
 
 type DVD_SUBPICTURE_LANG_EXT int32
 
 const (
-	DVD_SP_EXT_NotSpecified = 0
-	DVD_SP_EXT_Caption_Normal = 1
-	DVD_SP_EXT_Caption_Big = 2
-	DVD_SP_EXT_Caption_Children = 3
-	DVD_SP_EXT_CC_Normal = 5
-	DVD_SP_EXT_CC_Big = 6
-	DVD_SP_EXT_CC_Children = 7
-	DVD_SP_EXT_Forced = 9
-	DVD_SP_EXT_DirectorComments_Normal = 13
-	DVD_SP_EXT_DirectorComments_Big = 14
-	DVD_SP_EXT_DirectorComments_Children = 15
+	DVD_SP_EXT_NotSpecified              DVD_SUBPICTURE_LANG_EXT = 0
+	DVD_SP_EXT_Caption_Normal            DVD_SUBPICTURE_LANG_EXT = 1
+	DVD_SP_EXT_Caption_Big               DVD_SUBPICTURE_LANG_EXT = 2
+	DVD_SP_EXT_Caption_Children          DVD_SUBPICTURE_LANG_EXT = 3
+	DVD_SP_EXT_CC_Normal                 DVD_SUBPICTURE_LANG_EXT = 5
+	DVD_SP_EXT_CC_Big                    DVD_SUBPICTURE_LANG_EXT = 6
+	DVD_SP_EXT_CC_Children               DVD_SUBPICTURE_LANG_EXT = 7
+	DVD_SP_EXT_Forced                    DVD_SUBPICTURE_LANG_EXT = 9
+	DVD_SP_EXT_DirectorComments_Normal   DVD_SUBPICTURE_LANG_EXT = 13
+	DVD_SP_EXT_DirectorComments_Big      DVD_SUBPICTURE_LANG_EXT = 14
+	DVD_SP_EXT_DirectorComments_Children DVD_SUBPICTURE_LANG_EXT = 15
 )
 
 type DVD_AUDIO_APPMODE int32
 
 const (
-	DVD_AudioMode_None = 0
-	DVD_AudioMode_Karaoke = 1
-	DVD_AudioMode_Surround = 2
-	DVD_AudioMode_Other = 3
+	DVD_AudioMode_None     DVD_AUDIO_APPMODE = 0
+	DVD_AudioMode_Karaoke  DVD_AUDIO_APPMODE = 1
+	DVD_AudioMode_Surround DVD_AUDIO_APPMODE = 2
+	DVD_AudioMode_Other    DVD_AUDIO_APPMODE = 3
 )
 
 type DVD_AUDIO_FORMAT int32
 
 const (
-	DVD_AudioFormat_AC3 = 0
-	DVD_AudioFormat_MPEG1 = 1
-	DVD_AudioFormat_MPEG1_DRC = 2
-	DVD_AudioFormat_MPEG2 = 3
-	DVD_AudioFormat_MPEG2_DRC = 4
-	DVD_AudioFormat_LPCM = 5
-	DVD_AudioFormat_DTS = 6
-	DVD_AudioFormat_SDDS = 7
-	DVD_AudioFormat_Other = 8
+	DVD_AudioFormat_AC3       DVD_AUDIO_FORMAT = 0
+	DVD_AudioFormat_MPEG1     DVD_AUDIO_FORMAT = 1
+	DVD_AudioFormat_MPEG1_DRC DVD_AUDIO_FORMAT = 2
+	DVD_AudioFormat_MPEG2     DVD_AUDIO_FORMAT = 3
+	DVD_AudioFormat_MPEG2_DRC DVD_AUDIO_FORMAT = 4
+	DVD_AudioFormat_LPCM      DVD_AUDIO_FORMAT = 5
+	DVD_AudioFormat_DTS       DVD_AUDIO_FORMAT = 6
+	DVD_AudioFormat_SDDS      DVD_AUDIO_FORMAT = 7
+	DVD_AudioFormat_Other     DVD_AUDIO_FORMAT = 8
 )
 
 type DVD_KARAOKE_DOWNMIX int32
 
 const (
-	DVD_Mix_0to0 = 1
-	DVD_Mix_1to0 = 2
-	DVD_Mix_2to0 = 4
-	DVD_Mix_3to0 = 8
-	DVD_Mix_4to0 = 16
-	DVD_Mix_Lto0 = 32
-	DVD_Mix_Rto0 = 64
-	DVD_Mix_0to1 = 256
-	DVD_Mix_1to1 = 512
-	DVD_Mix_2to1 = 1024
-	DVD_Mix_3to1 = 2048
-	DVD_Mix_4to1 = 4096
-	DVD_Mix_Lto1 = 8192
-	DVD_Mix_Rto1 = 16384
+	DVD_Mix_0to0 DVD_KARAOKE_DOWNMIX = 1
+	DVD_Mix_1to0 DVD_KARAOKE_DOWNMIX = 2
+	DVD_Mix_2to0 DVD_KARAOKE_DOWNMIX = 4
+	DVD_Mix_3to0 DVD_KARAOKE_DOWNMIX = 8
+	DVD_Mix_4to0 DVD_KARAOKE_DOWNMIX = 16
+	DVD_Mix_Lto0 DVD_KARAOKE_DOWNMIX = 32
+	DVD_Mix_Rto0 DVD_KARAOKE_DOWNMIX = 64
+	DVD_Mix_0to1 DVD_KARAOKE_DOWNMIX = 256
+	DVD_Mix_1to1 DVD_KARAOKE_DOWNMIX = 512
+	DVD_Mix_2to1 DVD_KARAOKE_DOWNMIX = 1024
+	DVD_Mix_3to1 DVD_KARAOKE_DOWNMIX = 2048
+	DVD_Mix_4to1 DVD_KARAOKE_DOWNMIX = 4096
+	DVD_Mix_Lto1 DVD_KARAOKE_DOWNMIX = 8192
+	DVD_Mix_Rto1 DVD_KARAOKE_DOWNMIX = 16384
 )
 
 type DVD_KARAOKE_CONTENTS int32
 
 const (
-	DVD_Karaoke_GuideVocal1 = 1
-	DVD_Karaoke_GuideVocal2 = 2
-	DVD_Karaoke_GuideMelody1 = 4
-	DVD_Karaoke_GuideMelody2 = 8
-	DVD_Karaoke_GuideMelodyA = 16
-	DVD_Karaoke_GuideMelodyB = 32
-	DVD_Karaoke_SoundEffectA = 64
-	DVD_Karaoke_SoundEffectB = 128
+	DVD_Karaoke_GuideVocal1  DVD_KARAOKE_CONTENTS = 1
+	DVD_Karaoke_GuideVocal2  DVD_KARAOKE_CONTENTS = 2
+	DVD_Karaoke_GuideMelody1 DVD_KARAOKE_CONTENTS = 4
+	DVD_Karaoke_GuideMelody2 DVD_KARAOKE_CONTENTS = 8
+	DVD_Karaoke_GuideMelodyA DVD_KARAOKE_CONTENTS = 16
+	DVD_Karaoke_GuideMelodyB DVD_KARAOKE_CONTENTS = 32
+	DVD_Karaoke_SoundEffectA DVD_KARAOKE_CONTENTS = 64
+	DVD_Karaoke_SoundEffectB DVD_KARAOKE_CONTENTS = 128
 )
 
 type DVD_KARAOKE_ASSIGNMENT int32
 
 const (
-	DVD_Assignment_reserved0 = 0
-	DVD_Assignment_reserved1 = 1
-	DVD_Assignment_LR = 2
-	DVD_Assignment_LRM = 3
-	DVD_Assignment_LR1 = 4
-	DVD_Assignment_LRM1 = 5
-	DVD_Assignment_LR12 = 6
-	DVD_Assignment_LRM12 = 7
+	DVD_Assignment_reserved0 DVD_KARAOKE_ASSIGNMENT = 0
+	DVD_Assignment_reserved1 DVD_KARAOKE_ASSIGNMENT = 1
+	DVD_Assignment_LR        DVD_KARAOKE_ASSIGNMENT = 2
+	DVD_Assignment_LRM       DVD_KARAOKE_ASSIGNMENT = 3
+	DVD_Assignment_LR1       DVD_KARAOKE_ASSIGNMENT = 4
+	DVD_Assignment_LRM1      DVD_KARAOKE_ASSIGNMENT = 5
+	DVD_Assignment_LR12      DVD_KARAOKE_ASSIGNMENT = 6
+	DVD_Assignment_LRM12     DVD_KARAOKE_ASSIGNMENT = 7
 )
 
 type DVD_VIDEO_COMPRESSION int32
 
 const (
-	DVD_VideoCompression_Other = 0
-	DVD_VideoCompression_MPEG1 = 1
-	DVD_VideoCompression_MPEG2 = 2
+	DVD_VideoCompression_Other DVD_VIDEO_COMPRESSION = 0
+	DVD_VideoCompression_MPEG1 DVD_VIDEO_COMPRESSION = 1
+	DVD_VideoCompression_MPEG2 DVD_VIDEO_COMPRESSION = 2
 )
 
 type DVD_SUBPICTURE_TYPE int32
 
 const (
-	DVD_SPType_NotSpecified = 0
-	DVD_SPType_Language = 1
-	DVD_SPType_Other = 2
+	DVD_SPType_NotSpecified DVD_SUBPICTURE_TYPE = 0
+	DVD_SPType_Language     DVD_SUBPICTURE_TYPE = 1
+	DVD_SPType_Other        DVD_SUBPICTURE_TYPE = 2
 )
 
 type DVD_SUBPICTURE_CODING int32
 
 const (
-	DVD_SPCoding_RunLength = 0
-	DVD_SPCoding_Extended = 1
-	DVD_SPCoding_Other = 2
+	DVD_SPCoding_RunLength DVD_SUBPICTURE_CODING = 0
+	DVD_SPCoding_Extended  DVD_SUBPICTURE_CODING = 1
+	DVD_SPCoding_Other     DVD_SUBPICTURE_CODING = 2
 )
 
 type DVD_TITLE_APPMODE int32
 
 const (
-	DVD_AppMode_Not_Specified = 0
-	DVD_AppMode_Karaoke = 1
-	DVD_AppMode_Other = 3
+	DVD_AppMode_Not_Specified DVD_TITLE_APPMODE = 0
+	DVD_AppMode_Karaoke       DVD_TITLE_APPMODE = 1
+	DVD_AppMode_Other         DVD_TITLE_APPMODE = 3
 )
 
 type DVD_TextStringType int32
 
 const (
-	DVD_Struct_Volume = 1
-	DVD_Struct_Title = 2
-	DVD_Struct_ParentalID = 3
-	DVD_Struct_PartOfTitle = 4
-	DVD_Struct_Cell = 5
-	DVD_Stream_Audio = 16
-	DVD_Stream_Subpicture = 17
-	DVD_Stream_Angle = 18
-	DVD_Channel_Audio = 32
-	DVD_General_Name = 48
-	DVD_General_Comments = 49
-	DVD_Title_Series = 56
-	DVD_Title_Movie = 57
-	DVD_Title_Video = 58
-	DVD_Title_Album = 59
-	DVD_Title_Song = 60
-	DVD_Title_Other = 63
-	DVD_Title_Sub_Series = 64
-	DVD_Title_Sub_Movie = 65
-	DVD_Title_Sub_Video = 66
-	DVD_Title_Sub_Album = 67
-	DVD_Title_Sub_Song = 68
-	DVD_Title_Sub_Other = 71
-	DVD_Title_Orig_Series = 72
-	DVD_Title_Orig_Movie = 73
-	DVD_Title_Orig_Video = 74
-	DVD_Title_Orig_Album = 75
-	DVD_Title_Orig_Song = 76
-	DVD_Title_Orig_Other = 79
-	DVD_Other_Scene = 80
-	DVD_Other_Cut = 81
-	DVD_Other_Take = 82
+	DVD_Struct_Volume      DVD_TextStringType = 1
+	DVD_Struct_Title       DVD_TextStringType = 2
+	DVD_Struct_ParentalID  DVD_TextStringType = 3
+	DVD_Struct_PartOfTitle DVD_TextStringType = 4
+	DVD_Struct_Cell        DVD_TextStringType = 5
+	DVD_Stream_Audio       DVD_TextStringType = 16
+	DVD_Stream_Subpicture  DVD_TextStringType = 17
+	DVD_Stream_Angle       DVD_TextStringType = 18
+	DVD_Channel_Audio      DVD_TextStringType = 32
+	DVD_General_Name       DVD_TextStringType = 48
+	DVD_General_Comments   DVD_TextStringType = 49
+	DVD_Title_Series       DVD_TextStringType = 56
+	DVD_Title_Movie        DVD_TextStringType = 57
+	DVD_Title_Video        DVD_TextStringType = 58
+	DVD_Title_Album        DVD_TextStringType = 59
+	DVD_Title_Song         DVD_TextStringType = 60
+	DVD_Title_Other        DVD_TextStringType = 63
+	DVD_Title_Sub_Series   DVD_TextStringType = 64
+	DVD_Title_Sub_Movie    DVD_TextStringType = 65
+	DVD_Title_Sub_Video    DVD_TextStringType = 66
+	DVD_Title_Sub_Album    DVD_TextStringType = 67
+	DVD_Title_Sub_Song     DVD_TextStringType = 68
+	DVD_Title_Sub_Other    DVD_TextStringType = 71
+	DVD_Title_Orig_Series  DVD_TextStringType = 72
+	DVD_Title_Orig_Movie   DVD_TextStringType = 73
+	DVD_Title_Orig_Video   DVD_TextStringType = 74
+	DVD_Title_Orig_Album   DVD_TextStringType = 75
+	DVD_Title_Orig_Song    DVD_TextStringType = 76
+	DVD_Title_Orig_Other   DVD_TextStringType = 79
+	DVD_Other_Scene        DVD_TextStringType = 80
+	DVD_Other_Cut          DVD_TextStringType = 81
+	DVD_Other_Take         DVD_TextStringType = 82
 )
 
 type DVD_TextCharSet int32
 
 const (
-	DVD_CharSet_Unicode = 0
-	DVD_CharSet_ISO646 = 1
-	DVD_CharSet_JIS_Roman_Kanji = 2
-	DVD_CharSet_ISO8859_1 = 3
-	DVD_CharSet_ShiftJIS_Kanji_Roman_Katakana = 4
+	DVD_CharSet_Unicode                       DVD_TextCharSet = 0
+	DVD_CharSet_ISO646                        DVD_TextCharSet = 1
+	DVD_CharSet_JIS_Roman_Kanji               DVD_TextCharSet = 2
+	DVD_CharSet_ISO8859_1                     DVD_TextCharSet = 3
+	DVD_CharSet_ShiftJIS_Kanji_Roman_Katakana DVD_TextCharSet = 4
 )
 
 type AM_DVD_GRAPH_FLAGS int32
 
 const (
-	AM_DVD_HWDEC_PREFER = 1
-	AM_DVD_HWDEC_ONLY = 2
-	AM_DVD_SWDEC_PREFER = 4
-	AM_DVD_SWDEC_ONLY = 8
-	AM_DVD_NOVPE = 256
-	AM_DVD_DO_NOT_CLEAR = 512
-	AM_DVD_VMR9_ONLY = 2048
-	AM_DVD_EVR_ONLY = 4096
-	AM_DVD_EVR_QOS = 8192
-	AM_DVD_ADAPT_GRAPH = 16384
-	AM_DVD_MASK = 65535
+	AM_DVD_HWDEC_PREFER AM_DVD_GRAPH_FLAGS = 1
+	AM_DVD_HWDEC_ONLY   AM_DVD_GRAPH_FLAGS = 2
+	AM_DVD_SWDEC_PREFER AM_DVD_GRAPH_FLAGS = 4
+	AM_DVD_SWDEC_ONLY   AM_DVD_GRAPH_FLAGS = 8
+	AM_DVD_NOVPE        AM_DVD_GRAPH_FLAGS = 256
+	AM_DVD_DO_NOT_CLEAR AM_DVD_GRAPH_FLAGS = 512
+	AM_DVD_VMR9_ONLY    AM_DVD_GRAPH_FLAGS = 2048
+	AM_DVD_EVR_ONLY     AM_DVD_GRAPH_FLAGS = 4096
+	AM_DVD_EVR_QOS      AM_DVD_GRAPH_FLAGS = 8192
+	AM_DVD_ADAPT_GRAPH  AM_DVD_GRAPH_FLAGS = 16384
+	AM_DVD_MASK         AM_DVD_GRAPH_FLAGS = 65535
 )
 
 type AM_DVD_STREAM_FLAGS int32
 
 const (
-	AM_DVD_STREAM_VIDEO = 1
-	AM_DVD_STREAM_AUDIO = 2
-	AM_DVD_STREAM_SUBPIC = 4
+	AM_DVD_STREAM_VIDEO  AM_DVD_STREAM_FLAGS = 1
+	AM_DVD_STREAM_AUDIO  AM_DVD_STREAM_FLAGS = 2
+	AM_DVD_STREAM_SUBPIC AM_DVD_STREAM_FLAGS = 4
 )
 
 type _AM_OVERLAY_NOTIFY_FLAGS int32
 
 const (
-	AM_OVERLAY_NOTIFY_VISIBLE_CHANGE = 1
-	AM_OVERLAY_NOTIFY_SOURCE_CHANGE = 2
-	AM_OVERLAY_NOTIFY_DEST_CHANGE = 4
+	AM_OVERLAY_NOTIFY_VISIBLE_CHANGE _AM_OVERLAY_NOTIFY_FLAGS = 1
+	AM_OVERLAY_NOTIFY_SOURCE_CHANGE  _AM_OVERLAY_NOTIFY_FLAGS = 2
+	AM_OVERLAY_NOTIFY_DEST_CHANGE    _AM_OVERLAY_NOTIFY_FLAGS = 4
 )
 
 type BDA_EVENT_ID int32
 
 const (
-	BDA_EVENT_SIGNAL_LOSS = 0
-	BDA_EVENT_SIGNAL_LOCK = 1
-	BDA_EVENT_DATA_START = 2
-	BDA_EVENT_DATA_STOP = 3
-	BDA_EVENT_CHANNEL_ACQUIRED = 4
-	BDA_EVENT_CHANNEL_LOST = 5
-	BDA_EVENT_CHANNEL_SOURCE_CHANGED = 6
-	BDA_EVENT_CHANNEL_ACTIVATED = 7
-	BDA_EVENT_CHANNEL_DEACTIVATED = 8
-	BDA_EVENT_SUBCHANNEL_ACQUIRED = 9
-	BDA_EVENT_SUBCHANNEL_LOST = 10
-	BDA_EVENT_SUBCHANNEL_SOURCE_CHANGED = 11
-	BDA_EVENT_SUBCHANNEL_ACTIVATED = 12
-	BDA_EVENT_SUBCHANNEL_DEACTIVATED = 13
-	BDA_EVENT_ACCESS_GRANTED = 14
-	BDA_EVENT_ACCESS_DENIED = 15
-	BDA_EVENT_OFFER_EXTENDED = 16
-	BDA_EVENT_PURCHASE_COMPLETED = 17
-	BDA_EVENT_SMART_CARD_INSERTED = 18
-	BDA_EVENT_SMART_CARD_REMOVED = 19
+	BDA_EVENT_SIGNAL_LOSS               BDA_EVENT_ID = 0
+	BDA_EVENT_SIGNAL_LOCK               BDA_EVENT_ID = 1
+	BDA_EVENT_DATA_START                BDA_EVENT_ID = 2
+	BDA_EVENT_DATA_STOP                 BDA_EVENT_ID = 3
+	BDA_EVENT_CHANNEL_ACQUIRED          BDA_EVENT_ID = 4
+	BDA_EVENT_CHANNEL_LOST              BDA_EVENT_ID = 5
+	BDA_EVENT_CHANNEL_SOURCE_CHANGED    BDA_EVENT_ID = 6
+	BDA_EVENT_CHANNEL_ACTIVATED         BDA_EVENT_ID = 7
+	BDA_EVENT_CHANNEL_DEACTIVATED       BDA_EVENT_ID = 8
+	BDA_EVENT_SUBCHANNEL_ACQUIRED       BDA_EVENT_ID = 9
+	BDA_EVENT_SUBCHANNEL_LOST           BDA_EVENT_ID = 10
+	BDA_EVENT_SUBCHANNEL_SOURCE_CHANGED BDA_EVENT_ID = 11
+	BDA_EVENT_SUBCHANNEL_ACTIVATED      BDA_EVENT_ID = 12
+	BDA_EVENT_SUBCHANNEL_DEACTIVATED    BDA_EVENT_ID = 13
+	BDA_EVENT_ACCESS_GRANTED            BDA_EVENT_ID = 14
+	BDA_EVENT_ACCESS_DENIED             BDA_EVENT_ID = 15
+	BDA_EVENT_OFFER_EXTENDED            BDA_EVENT_ID = 16
+	BDA_EVENT_PURCHASE_COMPLETED        BDA_EVENT_ID = 17
+	BDA_EVENT_SMART_CARD_INSERTED       BDA_EVENT_ID = 18
+	BDA_EVENT_SMART_CARD_REMOVED        BDA_EVENT_ID = 19
 )
 
 type BDA_MULTICAST_MODE int32
 
 const (
-	BDA_PROMISCUOUS_MULTICAST = 0
-	BDA_FILTERED_MULTICAST = 1
-	BDA_NO_MULTICAST = 2
+	BDA_PROMISCUOUS_MULTICAST BDA_MULTICAST_MODE = 0
+	BDA_FILTERED_MULTICAST    BDA_MULTICAST_MODE = 1
+	BDA_NO_MULTICAST          BDA_MULTICAST_MODE = 2
 )
 
 type BDA_SIGNAL_STATE int32
 
 const (
-	BDA_SIGNAL_UNAVAILABLE = 0
-	BDA_SIGNAL_INACTIVE = 1
-	BDA_SIGNAL_ACTIVE = 2
+	BDA_SIGNAL_UNAVAILABLE BDA_SIGNAL_STATE = 0
+	BDA_SIGNAL_INACTIVE    BDA_SIGNAL_STATE = 1
+	BDA_SIGNAL_ACTIVE      BDA_SIGNAL_STATE = 2
 )
 
 type BDA_CHANGE_STATE int32
 
 const (
-	BDA_CHANGES_COMPLETE = 0
-	BDA_CHANGES_PENDING = 1
+	BDA_CHANGES_COMPLETE BDA_CHANGE_STATE = 0
+	BDA_CHANGES_PENDING  BDA_CHANGE_STATE = 1
 )
 
 type MEDIA_SAMPLE_CONTENT int32
 
 const (
-	MEDIA_TRANSPORT_PACKET = 0
-	MEDIA_ELEMENTARY_STREAM = 1
-	MEDIA_MPEG2_PSI = 2
-	MEDIA_TRANSPORT_PAYLOAD = 3
+	MEDIA_TRANSPORT_PACKET  MEDIA_SAMPLE_CONTENT = 0
+	MEDIA_ELEMENTARY_STREAM MEDIA_SAMPLE_CONTENT = 1
+	MEDIA_MPEG2_PSI         MEDIA_SAMPLE_CONTENT = 2
+	MEDIA_TRANSPORT_PAYLOAD MEDIA_SAMPLE_CONTENT = 3
 )
 
 type ISDBCAS_REQUEST_ID int32
 
 const (
-	ISDBCAS_REQUEST_ID_EMG = 56
-	ISDBCAS_REQUEST_ID_EMD = 58
+	ISDBCAS_REQUEST_ID_EMG ISDBCAS_REQUEST_ID = 56
+	ISDBCAS_REQUEST_ID_EMD ISDBCAS_REQUEST_ID = 58
 )
 
 type MUX_PID_TYPE int32
 
 const (
-	PID_OTHER = -1
-	PID_ELEMENTARY_STREAM = 0
-	PID_MPEG2_SECTION_PSI_SI = 1
+	PID_OTHER                MUX_PID_TYPE = -1
+	PID_ELEMENTARY_STREAM    MUX_PID_TYPE = 0
+	PID_MPEG2_SECTION_PSI_SI MUX_PID_TYPE = 1
 )
 
 type DVBSystemType int32
 
 const (
-	DVB_Cable = 0
-	DVB_Terrestrial = 1
-	DVB_Satellite = 2
-	ISDB_Terrestrial = 3
-	ISDB_Satellite = 4
+	DVB_Cable        DVBSystemType = 0
+	DVB_Terrestrial  DVBSystemType = 1
+	DVB_Satellite    DVBSystemType = 2
+	ISDB_Terrestrial DVBSystemType = 3
+	ISDB_Satellite   DVBSystemType = 4
 )
 
 type BDA_Channel int32
 
 const (
-	BDA_UNDEFINED_CHANNEL = -1
+	BDA_UNDEFINED_CHANNEL BDA_Channel = -1
 )
 
 type ComponentCategory int32
 
 const (
-	CategoryNotSet = -1
-	CategoryOther = 0
-	CategoryVideo = 1
-	CategoryAudio = 2
-	CategoryText = 3
-	CategorySubtitles = 4
-	CategoryCaptions = 5
-	CategorySuperimpose = 6
-	CategoryData = 7
-	CATEGORY_COUNT = 8
+	CategoryNotSet      ComponentCategory = -1
+	CategoryOther       ComponentCategory = 0
+	CategoryVideo       ComponentCategory = 1
+	CategoryAudio       ComponentCategory = 2
+	CategoryText        ComponentCategory = 3
+	CategorySubtitles   ComponentCategory = 4
+	CategoryCaptions    ComponentCategory = 5
+	CategorySuperimpose ComponentCategory = 6
+	CategoryData        ComponentCategory = 7
+	CATEGORY_COUNT      ComponentCategory = 8
 )
 
 type ComponentStatus int32
 
 const (
-	StatusActive = 0
-	StatusInactive = 1
-	StatusUnavailable = 2
+	StatusActive      ComponentStatus = 0
+	StatusInactive    ComponentStatus = 1
+	StatusUnavailable ComponentStatus = 2
 )
 
 type MPEG2StreamType int32
 
 const (
-	BDA_UNITIALIZED_MPEG2STREAMTYPE = -1
-	Reserved1 = 0
-	ISO_IEC_11172_2_VIDEO = 1
-	ISO_IEC_13818_2_VIDEO = 2
-	ISO_IEC_11172_3_AUDIO = 3
-	ISO_IEC_13818_3_AUDIO = 4
-	ISO_IEC_13818_1_PRIVATE_SECTION = 5
-	ISO_IEC_13818_1_PES = 6
-	ISO_IEC_13522_MHEG = 7
-	ANNEX_A_DSM_CC = 8
-	ITU_T_REC_H_222_1 = 9
-	ISO_IEC_13818_6_TYPE_A = 10
-	ISO_IEC_13818_6_TYPE_B = 11
-	ISO_IEC_13818_6_TYPE_C = 12
-	ISO_IEC_13818_6_TYPE_D = 13
-	ISO_IEC_13818_1_AUXILIARY = 14
-	ISO_IEC_13818_7_AUDIO = 15
-	ISO_IEC_14496_2_VISUAL = 16
-	ISO_IEC_14496_3_AUDIO = 17
-	ISO_IEC_14496_1_IN_PES = 18
-	ISO_IEC_14496_1_IN_SECTION = 19
-	ISO_IEC_13818_6_DOWNLOAD = 20
-	METADATA_IN_PES = 21
-	METADATA_IN_SECTION = 22
-	METADATA_IN_DATA_CAROUSEL = 23
-	METADATA_IN_OBJECT_CAROUSEL = 24
-	METADATA_IN_DOWNLOAD_PROTOCOL = 25
-	IRPM_STREAMM = 26
-	ITU_T_H264 = 27
-	ISO_IEC_13818_1_RESERVED = 28
-	USER_PRIVATE = 16
-	HEVC_VIDEO_OR_TEMPORAL_VIDEO = 36
-	HEVC_TEMPORAL_VIDEO_SUBSET = 37
-	ISO_IEC_USER_PRIVATE = 128
-	DOLBY_AC3_AUDIO = 129
-	DOLBY_DIGITAL_PLUS_AUDIO_ATSC = 135
+	BDA_UNITIALIZED_MPEG2STREAMTYPE MPEG2StreamType = -1
+	Reserved1                       MPEG2StreamType = 0
+	ISO_IEC_11172_2_VIDEO           MPEG2StreamType = 1
+	ISO_IEC_13818_2_VIDEO           MPEG2StreamType = 2
+	ISO_IEC_11172_3_AUDIO           MPEG2StreamType = 3
+	ISO_IEC_13818_3_AUDIO           MPEG2StreamType = 4
+	ISO_IEC_13818_1_PRIVATE_SECTION MPEG2StreamType = 5
+	ISO_IEC_13818_1_PES             MPEG2StreamType = 6
+	ISO_IEC_13522_MHEG              MPEG2StreamType = 7
+	ANNEX_A_DSM_CC                  MPEG2StreamType = 8
+	ITU_T_REC_H_222_1               MPEG2StreamType = 9
+	ISO_IEC_13818_6_TYPE_A          MPEG2StreamType = 10
+	ISO_IEC_13818_6_TYPE_B          MPEG2StreamType = 11
+	ISO_IEC_13818_6_TYPE_C          MPEG2StreamType = 12
+	ISO_IEC_13818_6_TYPE_D          MPEG2StreamType = 13
+	ISO_IEC_13818_1_AUXILIARY       MPEG2StreamType = 14
+	ISO_IEC_13818_7_AUDIO           MPEG2StreamType = 15
+	ISO_IEC_14496_2_VISUAL          MPEG2StreamType = 16
+	ISO_IEC_14496_3_AUDIO           MPEG2StreamType = 17
+	ISO_IEC_14496_1_IN_PES          MPEG2StreamType = 18
+	ISO_IEC_14496_1_IN_SECTION      MPEG2StreamType = 19
+	ISO_IEC_13818_6_DOWNLOAD        MPEG2StreamType = 20
+	METADATA_IN_PES                 MPEG2StreamType = 21
+	METADATA_IN_SECTION             MPEG2StreamType = 22
+	METADATA_IN_DATA_CAROUSEL       MPEG2StreamType = 23
+	METADATA_IN_OBJECT_CAROUSEL     MPEG2StreamType = 24
+	METADATA_IN_DOWNLOAD_PROTOCOL   MPEG2StreamType = 25
+	IRPM_STREAMM                    MPEG2StreamType = 26
+	ITU_T_H264                      MPEG2StreamType = 27
+	ISO_IEC_13818_1_RESERVED        MPEG2StreamType = 28
+	USER_PRIVATE                    MPEG2StreamType = 16
+	HEVC_VIDEO_OR_TEMPORAL_VIDEO    MPEG2StreamType = 36
+	HEVC_TEMPORAL_VIDEO_SUBSET      MPEG2StreamType = 37
+	ISO_IEC_USER_PRIVATE            MPEG2StreamType = 128
+	DOLBY_AC3_AUDIO                 MPEG2StreamType = 129
+	DOLBY_DIGITAL_PLUS_AUDIO_ATSC   MPEG2StreamType = 135
 )
 
 type ATSCComponentTypeFlags int32
 
 const (
-	ATSCCT_AC3 = 1
+	ATSCCT_AC3 ATSCComponentTypeFlags = 1
 )
 
 type BinaryConvolutionCodeRate int32
 
 const (
-	BDA_BCC_RATE_NOT_SET = -1
-	BDA_BCC_RATE_NOT_DEFINED = 0
-	BDA_BCC_RATE_1_2 = 1
-	BDA_BCC_RATE_2_3 = 2
-	BDA_BCC_RATE_3_4 = 3
-	BDA_BCC_RATE_3_5 = 4
-	BDA_BCC_RATE_4_5 = 5
-	BDA_BCC_RATE_5_6 = 6
-	BDA_BCC_RATE_5_11 = 7
-	BDA_BCC_RATE_7_8 = 8
-	BDA_BCC_RATE_1_4 = 9
-	BDA_BCC_RATE_1_3 = 10
-	BDA_BCC_RATE_2_5 = 11
-	BDA_BCC_RATE_6_7 = 12
-	BDA_BCC_RATE_8_9 = 13
-	BDA_BCC_RATE_9_10 = 14
-	BDA_BCC_RATE_MAX = 15
+	BDA_BCC_RATE_NOT_SET     BinaryConvolutionCodeRate = -1
+	BDA_BCC_RATE_NOT_DEFINED BinaryConvolutionCodeRate = 0
+	BDA_BCC_RATE_1_2         BinaryConvolutionCodeRate = 1
+	BDA_BCC_RATE_2_3         BinaryConvolutionCodeRate = 2
+	BDA_BCC_RATE_3_4         BinaryConvolutionCodeRate = 3
+	BDA_BCC_RATE_3_5         BinaryConvolutionCodeRate = 4
+	BDA_BCC_RATE_4_5         BinaryConvolutionCodeRate = 5
+	BDA_BCC_RATE_5_6         BinaryConvolutionCodeRate = 6
+	BDA_BCC_RATE_5_11        BinaryConvolutionCodeRate = 7
+	BDA_BCC_RATE_7_8         BinaryConvolutionCodeRate = 8
+	BDA_BCC_RATE_1_4         BinaryConvolutionCodeRate = 9
+	BDA_BCC_RATE_1_3         BinaryConvolutionCodeRate = 10
+	BDA_BCC_RATE_2_5         BinaryConvolutionCodeRate = 11
+	BDA_BCC_RATE_6_7         BinaryConvolutionCodeRate = 12
+	BDA_BCC_RATE_8_9         BinaryConvolutionCodeRate = 13
+	BDA_BCC_RATE_9_10        BinaryConvolutionCodeRate = 14
+	BDA_BCC_RATE_MAX         BinaryConvolutionCodeRate = 15
 )
 
 type FECMethod int32
 
 const (
-	BDA_FEC_METHOD_NOT_SET = -1
-	BDA_FEC_METHOD_NOT_DEFINED = 0
-	BDA_FEC_VITERBI = 1
-	BDA_FEC_RS_204_188 = 2
-	BDA_FEC_LDPC = 3
-	BDA_FEC_BCH = 4
-	BDA_FEC_RS_147_130 = 5
-	BDA_FEC_MAX = 6
+	BDA_FEC_METHOD_NOT_SET     FECMethod = -1
+	BDA_FEC_METHOD_NOT_DEFINED FECMethod = 0
+	BDA_FEC_VITERBI            FECMethod = 1
+	BDA_FEC_RS_204_188         FECMethod = 2
+	BDA_FEC_LDPC               FECMethod = 3
+	BDA_FEC_BCH                FECMethod = 4
+	BDA_FEC_RS_147_130         FECMethod = 5
+	BDA_FEC_MAX                FECMethod = 6
 )
 
 type ModulationType int32
 
 const (
-	BDA_MOD_NOT_SET = -1
-	BDA_MOD_NOT_DEFINED = 0
-	BDA_MOD_16QAM = 1
-	BDA_MOD_32QAM = 2
-	BDA_MOD_64QAM = 3
-	BDA_MOD_80QAM = 4
-	BDA_MOD_96QAM = 5
-	BDA_MOD_112QAM = 6
-	BDA_MOD_128QAM = 7
-	BDA_MOD_160QAM = 8
-	BDA_MOD_192QAM = 9
-	BDA_MOD_224QAM = 10
-	BDA_MOD_256QAM = 11
-	BDA_MOD_320QAM = 12
-	BDA_MOD_384QAM = 13
-	BDA_MOD_448QAM = 14
-	BDA_MOD_512QAM = 15
-	BDA_MOD_640QAM = 16
-	BDA_MOD_768QAM = 17
-	BDA_MOD_896QAM = 18
-	BDA_MOD_1024QAM = 19
-	BDA_MOD_QPSK = 20
-	BDA_MOD_BPSK = 21
-	BDA_MOD_OQPSK = 22
-	BDA_MOD_8VSB = 23
-	BDA_MOD_16VSB = 24
-	BDA_MOD_ANALOG_AMPLITUDE = 25
-	BDA_MOD_ANALOG_FREQUENCY = 26
-	BDA_MOD_8PSK = 27
-	BDA_MOD_RF = 28
-	BDA_MOD_16APSK = 29
-	BDA_MOD_32APSK = 30
-	BDA_MOD_NBC_QPSK = 31
-	BDA_MOD_NBC_8PSK = 32
-	BDA_MOD_DIRECTV = 33
-	BDA_MOD_ISDB_T_TMCC = 34
-	BDA_MOD_ISDB_S_TMCC = 35
-	BDA_MOD_MAX = 36
+	BDA_MOD_NOT_SET          ModulationType = -1
+	BDA_MOD_NOT_DEFINED      ModulationType = 0
+	BDA_MOD_16QAM            ModulationType = 1
+	BDA_MOD_32QAM            ModulationType = 2
+	BDA_MOD_64QAM            ModulationType = 3
+	BDA_MOD_80QAM            ModulationType = 4
+	BDA_MOD_96QAM            ModulationType = 5
+	BDA_MOD_112QAM           ModulationType = 6
+	BDA_MOD_128QAM           ModulationType = 7
+	BDA_MOD_160QAM           ModulationType = 8
+	BDA_MOD_192QAM           ModulationType = 9
+	BDA_MOD_224QAM           ModulationType = 10
+	BDA_MOD_256QAM           ModulationType = 11
+	BDA_MOD_320QAM           ModulationType = 12
+	BDA_MOD_384QAM           ModulationType = 13
+	BDA_MOD_448QAM           ModulationType = 14
+	BDA_MOD_512QAM           ModulationType = 15
+	BDA_MOD_640QAM           ModulationType = 16
+	BDA_MOD_768QAM           ModulationType = 17
+	BDA_MOD_896QAM           ModulationType = 18
+	BDA_MOD_1024QAM          ModulationType = 19
+	BDA_MOD_QPSK             ModulationType = 20
+	BDA_MOD_BPSK             ModulationType = 21
+	BDA_MOD_OQPSK            ModulationType = 22
+	BDA_MOD_8VSB             ModulationType = 23
+	BDA_MOD_16VSB            ModulationType = 24
+	BDA_MOD_ANALOG_AMPLITUDE ModulationType = 25
+	BDA_MOD_ANALOG_FREQUENCY ModulationType = 26
+	BDA_MOD_8PSK             ModulationType = 27
+	BDA_MOD_RF               ModulationType = 28
+	BDA_MOD_16APSK           ModulationType = 29
+	BDA_MOD_32APSK           ModulationType = 30
+	BDA_MOD_NBC_QPSK         ModulationType = 31
+	BDA_MOD_NBC_8PSK         ModulationType = 32
+	BDA_MOD_DIRECTV          ModulationType = 33
+	BDA_MOD_ISDB_T_TMCC      ModulationType = 34
+	BDA_MOD_ISDB_S_TMCC      ModulationType = 35
+	BDA_MOD_MAX              ModulationType = 36
 )
 
 type ScanModulationTypes int32
 
 const (
-	BDA_SCAN_MOD_16QAM = 1
-	BDA_SCAN_MOD_32QAM = 2
-	BDA_SCAN_MOD_64QAM = 4
-	BDA_SCAN_MOD_80QAM = 8
-	BDA_SCAN_MOD_96QAM = 16
-	BDA_SCAN_MOD_112QAM = 32
-	BDA_SCAN_MOD_128QAM = 64
-	BDA_SCAN_MOD_160QAM = 128
-	BDA_SCAN_MOD_192QAM = 256
-	BDA_SCAN_MOD_224QAM = 512
-	BDA_SCAN_MOD_256QAM = 1024
-	BDA_SCAN_MOD_320QAM = 2048
-	BDA_SCAN_MOD_384QAM = 4096
-	BDA_SCAN_MOD_448QAM = 8192
-	BDA_SCAN_MOD_512QAM = 16384
-	BDA_SCAN_MOD_640QAM = 32768
-	BDA_SCAN_MOD_768QAM = 65536
-	BDA_SCAN_MOD_896QAM = 131072
-	BDA_SCAN_MOD_1024QAM = 262144
-	BDA_SCAN_MOD_QPSK = 524288
-	BDA_SCAN_MOD_BPSK = 1048576
-	BDA_SCAN_MOD_OQPSK = 2097152
-	BDA_SCAN_MOD_8VSB = 4194304
-	BDA_SCAN_MOD_16VSB = 8388608
-	BDA_SCAN_MOD_AM_RADIO = 16777216
-	BDA_SCAN_MOD_FM_RADIO = 33554432
-	BDA_SCAN_MOD_8PSK = 67108864
-	BDA_SCAN_MOD_RF = 134217728
-	ScanModulationTypesMask_MCE_DigitalCable = 11
-	ScanModulationTypesMask_MCE_TerrestrialATSC = 23
-	ScanModulationTypesMask_MCE_AnalogTv = 28
-	ScanModulationTypesMask_MCE_All_TV = -1
-	ScanModulationTypesMask_DVBC = 75
-	BDA_SCAN_MOD_16APSK = 268435456
-	BDA_SCAN_MOD_32APSK = 536870912
+	BDA_SCAN_MOD_16QAM                          ScanModulationTypes = 1
+	BDA_SCAN_MOD_32QAM                          ScanModulationTypes = 2
+	BDA_SCAN_MOD_64QAM                          ScanModulationTypes = 4
+	BDA_SCAN_MOD_80QAM                          ScanModulationTypes = 8
+	BDA_SCAN_MOD_96QAM                          ScanModulationTypes = 16
+	BDA_SCAN_MOD_112QAM                         ScanModulationTypes = 32
+	BDA_SCAN_MOD_128QAM                         ScanModulationTypes = 64
+	BDA_SCAN_MOD_160QAM                         ScanModulationTypes = 128
+	BDA_SCAN_MOD_192QAM                         ScanModulationTypes = 256
+	BDA_SCAN_MOD_224QAM                         ScanModulationTypes = 512
+	BDA_SCAN_MOD_256QAM                         ScanModulationTypes = 1024
+	BDA_SCAN_MOD_320QAM                         ScanModulationTypes = 2048
+	BDA_SCAN_MOD_384QAM                         ScanModulationTypes = 4096
+	BDA_SCAN_MOD_448QAM                         ScanModulationTypes = 8192
+	BDA_SCAN_MOD_512QAM                         ScanModulationTypes = 16384
+	BDA_SCAN_MOD_640QAM                         ScanModulationTypes = 32768
+	BDA_SCAN_MOD_768QAM                         ScanModulationTypes = 65536
+	BDA_SCAN_MOD_896QAM                         ScanModulationTypes = 131072
+	BDA_SCAN_MOD_1024QAM                        ScanModulationTypes = 262144
+	BDA_SCAN_MOD_QPSK                           ScanModulationTypes = 524288
+	BDA_SCAN_MOD_BPSK                           ScanModulationTypes = 1048576
+	BDA_SCAN_MOD_OQPSK                          ScanModulationTypes = 2097152
+	BDA_SCAN_MOD_8VSB                           ScanModulationTypes = 4194304
+	BDA_SCAN_MOD_16VSB                          ScanModulationTypes = 8388608
+	BDA_SCAN_MOD_AM_RADIO                       ScanModulationTypes = 16777216
+	BDA_SCAN_MOD_FM_RADIO                       ScanModulationTypes = 33554432
+	BDA_SCAN_MOD_8PSK                           ScanModulationTypes = 67108864
+	BDA_SCAN_MOD_RF                             ScanModulationTypes = 134217728
+	ScanModulationTypesMask_MCE_DigitalCable    ScanModulationTypes = 11
+	ScanModulationTypesMask_MCE_TerrestrialATSC ScanModulationTypes = 23
+	ScanModulationTypesMask_MCE_AnalogTv        ScanModulationTypes = 28
+	ScanModulationTypesMask_MCE_All_TV          ScanModulationTypes = -1
+	ScanModulationTypesMask_DVBC                ScanModulationTypes = 75
+	BDA_SCAN_MOD_16APSK                         ScanModulationTypes = 268435456
+	BDA_SCAN_MOD_32APSK                         ScanModulationTypes = 536870912
 )
 
 type SpectralInversion int32
 
 const (
-	BDA_SPECTRAL_INVERSION_NOT_SET = -1
-	BDA_SPECTRAL_INVERSION_NOT_DEFINED = 0
-	BDA_SPECTRAL_INVERSION_AUTOMATIC = 1
-	BDA_SPECTRAL_INVERSION_NORMAL = 2
-	BDA_SPECTRAL_INVERSION_INVERTED = 3
-	BDA_SPECTRAL_INVERSION_MAX = 4
+	BDA_SPECTRAL_INVERSION_NOT_SET     SpectralInversion = -1
+	BDA_SPECTRAL_INVERSION_NOT_DEFINED SpectralInversion = 0
+	BDA_SPECTRAL_INVERSION_AUTOMATIC   SpectralInversion = 1
+	BDA_SPECTRAL_INVERSION_NORMAL      SpectralInversion = 2
+	BDA_SPECTRAL_INVERSION_INVERTED    SpectralInversion = 3
+	BDA_SPECTRAL_INVERSION_MAX         SpectralInversion = 4
 )
 
 type Polarisation int32
 
 const (
-	BDA_POLARISATION_NOT_SET = -1
-	BDA_POLARISATION_NOT_DEFINED = 0
-	BDA_POLARISATION_LINEAR_H = 1
-	BDA_POLARISATION_LINEAR_V = 2
-	BDA_POLARISATION_CIRCULAR_L = 3
-	BDA_POLARISATION_CIRCULAR_R = 4
-	BDA_POLARISATION_MAX = 5
+	BDA_POLARISATION_NOT_SET     Polarisation = -1
+	BDA_POLARISATION_NOT_DEFINED Polarisation = 0
+	BDA_POLARISATION_LINEAR_H    Polarisation = 1
+	BDA_POLARISATION_LINEAR_V    Polarisation = 2
+	BDA_POLARISATION_CIRCULAR_L  Polarisation = 3
+	BDA_POLARISATION_CIRCULAR_R  Polarisation = 4
+	BDA_POLARISATION_MAX         Polarisation = 5
 )
 
 type LNB_Source int32
 
 const (
-	BDA_LNB_SOURCE_NOT_SET = -1
-	BDA_LNB_SOURCE_NOT_DEFINED = 0
-	BDA_LNB_SOURCE_A = 1
-	BDA_LNB_SOURCE_B = 2
-	BDA_LNB_SOURCE_C = 3
-	BDA_LNB_SOURCE_D = 4
-	BDA_LNB_SOURCE_MAX = 5
+	BDA_LNB_SOURCE_NOT_SET     LNB_Source = -1
+	BDA_LNB_SOURCE_NOT_DEFINED LNB_Source = 0
+	BDA_LNB_SOURCE_A           LNB_Source = 1
+	BDA_LNB_SOURCE_B           LNB_Source = 2
+	BDA_LNB_SOURCE_C           LNB_Source = 3
+	BDA_LNB_SOURCE_D           LNB_Source = 4
+	BDA_LNB_SOURCE_MAX         LNB_Source = 5
 )
 
 type GuardInterval int32
 
 const (
-	BDA_GUARD_NOT_SET = -1
-	BDA_GUARD_NOT_DEFINED = 0
-	BDA_GUARD_1_32 = 1
-	BDA_GUARD_1_16 = 2
-	BDA_GUARD_1_8 = 3
-	BDA_GUARD_1_4 = 4
-	BDA_GUARD_1_128 = 5
-	BDA_GUARD_19_128 = 6
-	BDA_GUARD_19_256 = 7
-	BDA_GUARD_MAX = 8
+	BDA_GUARD_NOT_SET     GuardInterval = -1
+	BDA_GUARD_NOT_DEFINED GuardInterval = 0
+	BDA_GUARD_1_32        GuardInterval = 1
+	BDA_GUARD_1_16        GuardInterval = 2
+	BDA_GUARD_1_8         GuardInterval = 3
+	BDA_GUARD_1_4         GuardInterval = 4
+	BDA_GUARD_1_128       GuardInterval = 5
+	BDA_GUARD_19_128      GuardInterval = 6
+	BDA_GUARD_19_256      GuardInterval = 7
+	BDA_GUARD_MAX         GuardInterval = 8
 )
 
 type HierarchyAlpha int32
 
 const (
-	BDA_HALPHA_NOT_SET = -1
-	BDA_HALPHA_NOT_DEFINED = 0
-	BDA_HALPHA_1 = 1
-	BDA_HALPHA_2 = 2
-	BDA_HALPHA_4 = 3
-	BDA_HALPHA_MAX = 4
+	BDA_HALPHA_NOT_SET     HierarchyAlpha = -1
+	BDA_HALPHA_NOT_DEFINED HierarchyAlpha = 0
+	BDA_HALPHA_1           HierarchyAlpha = 1
+	BDA_HALPHA_2           HierarchyAlpha = 2
+	BDA_HALPHA_4           HierarchyAlpha = 3
+	BDA_HALPHA_MAX         HierarchyAlpha = 4
 )
 
 type TransmissionMode int32
 
 const (
-	BDA_XMIT_MODE_NOT_SET = -1
-	BDA_XMIT_MODE_NOT_DEFINED = 0
-	BDA_XMIT_MODE_2K = 1
-	BDA_XMIT_MODE_8K = 2
-	BDA_XMIT_MODE_4K = 3
-	BDA_XMIT_MODE_2K_INTERLEAVED = 4
-	BDA_XMIT_MODE_4K_INTERLEAVED = 5
-	BDA_XMIT_MODE_1K = 6
-	BDA_XMIT_MODE_16K = 7
-	BDA_XMIT_MODE_32K = 8
-	BDA_XMIT_MODE_MAX = 9
+	BDA_XMIT_MODE_NOT_SET        TransmissionMode = -1
+	BDA_XMIT_MODE_NOT_DEFINED    TransmissionMode = 0
+	BDA_XMIT_MODE_2K             TransmissionMode = 1
+	BDA_XMIT_MODE_8K             TransmissionMode = 2
+	BDA_XMIT_MODE_4K             TransmissionMode = 3
+	BDA_XMIT_MODE_2K_INTERLEAVED TransmissionMode = 4
+	BDA_XMIT_MODE_4K_INTERLEAVED TransmissionMode = 5
+	BDA_XMIT_MODE_1K             TransmissionMode = 6
+	BDA_XMIT_MODE_16K            TransmissionMode = 7
+	BDA_XMIT_MODE_32K            TransmissionMode = 8
+	BDA_XMIT_MODE_MAX            TransmissionMode = 9
 )
 
 type RollOff int32
 
 const (
-	BDA_ROLL_OFF_NOT_SET = -1
-	BDA_ROLL_OFF_NOT_DEFINED = 0
-	BDA_ROLL_OFF_20 = 1
-	BDA_ROLL_OFF_25 = 2
-	BDA_ROLL_OFF_35 = 3
-	BDA_ROLL_OFF_MAX = 4
+	BDA_ROLL_OFF_NOT_SET     RollOff = -1
+	BDA_ROLL_OFF_NOT_DEFINED RollOff = 0
+	BDA_ROLL_OFF_20          RollOff = 1
+	BDA_ROLL_OFF_25          RollOff = 2
+	BDA_ROLL_OFF_35          RollOff = 3
+	BDA_ROLL_OFF_MAX         RollOff = 4
 )
 
 type Pilot int32
 
 const (
-	BDA_PILOT_NOT_SET = -1
-	BDA_PILOT_NOT_DEFINED = 0
-	BDA_PILOT_OFF = 1
-	BDA_PILOT_ON = 2
-	BDA_PILOT_MAX = 3
+	BDA_PILOT_NOT_SET     Pilot = -1
+	BDA_PILOT_NOT_DEFINED Pilot = 0
+	BDA_PILOT_OFF         Pilot = 1
+	BDA_PILOT_ON          Pilot = 2
+	BDA_PILOT_MAX         Pilot = 3
 )
 
 type BDA_Frequency int32
 
 const (
-	BDA_FREQUENCY_NOT_SET = -1
-	BDA_FREQUENCY_NOT_DEFINED = 0
+	BDA_FREQUENCY_NOT_SET     BDA_Frequency = -1
+	BDA_FREQUENCY_NOT_DEFINED BDA_Frequency = 0
 )
 
 type BDA_Range int32
 
 const (
-	BDA_RANGE_NOT_SET = -1
-	BDA_RANGE_NOT_DEFINED = 0
+	BDA_RANGE_NOT_SET     BDA_Range = -1
+	BDA_RANGE_NOT_DEFINED BDA_Range = 0
 )
 
 type BDA_Channel_Bandwidth int32
 
 const (
-	BDA_CHAN_BANDWITH_NOT_SET = -1
-	BDA_CHAN_BANDWITH_NOT_DEFINED = 0
+	BDA_CHAN_BANDWITH_NOT_SET     BDA_Channel_Bandwidth = -1
+	BDA_CHAN_BANDWITH_NOT_DEFINED BDA_Channel_Bandwidth = 0
 )
 
 type BDA_Frequency_Multiplier int32
 
 const (
-	BDA_FREQUENCY_MULTIPLIER_NOT_SET = -1
-	BDA_FREQUENCY_MULTIPLIER_NOT_DEFINED = 0
+	BDA_FREQUENCY_MULTIPLIER_NOT_SET     BDA_Frequency_Multiplier = -1
+	BDA_FREQUENCY_MULTIPLIER_NOT_DEFINED BDA_Frequency_Multiplier = 0
 )
 
 type BDA_Comp_Flags int32
 
 const (
-	BDACOMP_NOT_DEFINED = 0
-	BDACOMP_EXCLUDE_TS_FROM_TR = 1
-	BDACOMP_INCLUDE_LOCATOR_IN_TR = 2
-	BDACOMP_INCLUDE_COMPONENTS_IN_TR = 4
+	BDACOMP_NOT_DEFINED              BDA_Comp_Flags = 0
+	BDACOMP_EXCLUDE_TS_FROM_TR       BDA_Comp_Flags = 1
+	BDACOMP_INCLUDE_LOCATOR_IN_TR    BDA_Comp_Flags = 2
+	BDACOMP_INCLUDE_COMPONENTS_IN_TR BDA_Comp_Flags = 4
 )
 
 type ApplicationTypeType int32
 
 const (
-	SCTE28_ConditionalAccess = 0
-	SCTE28_POD_Host_Binding_Information = 1
-	SCTE28_IPService = 2
-	SCTE28_NetworkInterface_SCTE55_2 = 3
-	SCTE28_NetworkInterface_SCTE55_1 = 4
-	SCTE28_CopyProtection = 5
-	SCTE28_Diagnostic = 6
-	SCTE28_Undesignated = 7
-	SCTE28_Reserved = 8
+	SCTE28_ConditionalAccess            ApplicationTypeType = 0
+	SCTE28_POD_Host_Binding_Information ApplicationTypeType = 1
+	SCTE28_IPService                    ApplicationTypeType = 2
+	SCTE28_NetworkInterface_SCTE55_2    ApplicationTypeType = 3
+	SCTE28_NetworkInterface_SCTE55_1    ApplicationTypeType = 4
+	SCTE28_CopyProtection               ApplicationTypeType = 5
+	SCTE28_Diagnostic                   ApplicationTypeType = 6
+	SCTE28_Undesignated                 ApplicationTypeType = 7
+	SCTE28_Reserved                     ApplicationTypeType = 8
 )
 
 type BDA_CONDITIONALACCESS_REQUESTTYPE int32
 
 const (
-	CONDITIONALACCESS_ACCESS_UNSPECIFIED = 0
-	CONDITIONALACCESS_ACCESS_NOT_POSSIBLE = 1
-	CONDITIONALACCESS_ACCESS_POSSIBLE = 2
-	CONDITIONALACCESS_ACCESS_POSSIBLE_NO_STREAMING_DISRUPTION = 3
+	CONDITIONALACCESS_ACCESS_UNSPECIFIED                      BDA_CONDITIONALACCESS_REQUESTTYPE = 0
+	CONDITIONALACCESS_ACCESS_NOT_POSSIBLE                     BDA_CONDITIONALACCESS_REQUESTTYPE = 1
+	CONDITIONALACCESS_ACCESS_POSSIBLE                         BDA_CONDITIONALACCESS_REQUESTTYPE = 2
+	CONDITIONALACCESS_ACCESS_POSSIBLE_NO_STREAMING_DISRUPTION BDA_CONDITIONALACCESS_REQUESTTYPE = 3
 )
 
 type BDA_CONDITIONALACCESS_MMICLOSEREASON int32
 
 const (
-	CONDITIONALACCESS_UNSPECIFIED = 0
-	CONDITIONALACCESS_CLOSED_ITSELF = 1
-	CONDITIONALACCESS_TUNER_REQUESTED_CLOSE = 2
-	CONDITIONALACCESS_DIALOG_TIMEOUT = 3
-	CONDITIONALACCESS_DIALOG_FOCUS_CHANGE = 4
-	CONDITIONALACCESS_DIALOG_USER_DISMISSED = 5
-	CONDITIONALACCESS_DIALOG_USER_NOT_AVAILABLE = 6
+	CONDITIONALACCESS_UNSPECIFIED               BDA_CONDITIONALACCESS_MMICLOSEREASON = 0
+	CONDITIONALACCESS_CLOSED_ITSELF             BDA_CONDITIONALACCESS_MMICLOSEREASON = 1
+	CONDITIONALACCESS_TUNER_REQUESTED_CLOSE     BDA_CONDITIONALACCESS_MMICLOSEREASON = 2
+	CONDITIONALACCESS_DIALOG_TIMEOUT            BDA_CONDITIONALACCESS_MMICLOSEREASON = 3
+	CONDITIONALACCESS_DIALOG_FOCUS_CHANGE       BDA_CONDITIONALACCESS_MMICLOSEREASON = 4
+	CONDITIONALACCESS_DIALOG_USER_DISMISSED     BDA_CONDITIONALACCESS_MMICLOSEREASON = 5
+	CONDITIONALACCESS_DIALOG_USER_NOT_AVAILABLE BDA_CONDITIONALACCESS_MMICLOSEREASON = 6
 )
 
 type BDA_CONDITIONALACCESS_SESSION_RESULT int32
 
 const (
-	CONDITIONALACCESS_SUCCESSFULL = 0
-	CONDITIONALACCESS_ENDED_NOCHANGE = 1
-	CONDITIONALACCESS_ABORTED = 2
+	CONDITIONALACCESS_SUCCESSFULL    BDA_CONDITIONALACCESS_SESSION_RESULT = 0
+	CONDITIONALACCESS_ENDED_NOCHANGE BDA_CONDITIONALACCESS_SESSION_RESULT = 1
+	CONDITIONALACCESS_ABORTED        BDA_CONDITIONALACCESS_SESSION_RESULT = 2
 )
 
 type BDA_DISCOVERY_STATE int32
 
 const (
-	BDA_DISCOVERY_UNSPECIFIED = 0
-	BDA_DISCOVERY_REQUIRED = 1
-	BDA_DISCOVERY_COMPLETE = 2
+	BDA_DISCOVERY_UNSPECIFIED BDA_DISCOVERY_STATE = 0
+	BDA_DISCOVERY_REQUIRED    BDA_DISCOVERY_STATE = 1
+	BDA_DISCOVERY_COMPLETE    BDA_DISCOVERY_STATE = 2
 )
 
 type SmartCardStatusType int32
 
 const (
-	CardInserted = 0
-	CardRemoved = 1
-	CardError = 2
-	CardDataChanged = 3
-	CardFirmwareUpgrade = 4
+	CardInserted        SmartCardStatusType = 0
+	CardRemoved         SmartCardStatusType = 1
+	CardError           SmartCardStatusType = 2
+	CardDataChanged     SmartCardStatusType = 3
+	CardFirmwareUpgrade SmartCardStatusType = 4
 )
 
 type SmartCardAssociationType int32
 
 const (
-	NotAssociated = 0
-	Associated = 1
-	AssociationUnknown = 2
+	NotAssociated      SmartCardAssociationType = 0
+	Associated         SmartCardAssociationType = 1
+	AssociationUnknown SmartCardAssociationType = 2
 )
 
 type LocationCodeSchemeType int32
 
 const (
-	SCTE_18 = 0
+	SCTE_18 LocationCodeSchemeType = 0
 )
 
 type EntitlementType int32
 
 const (
-	Entitled = 0
-	NotEntitled = 1
-	TechnicalFailure = 2
+	Entitled         EntitlementType = 0
+	NotEntitled      EntitlementType = 1
+	TechnicalFailure EntitlementType = 2
 )
 
 type UICloseReasonType int32
 
 const (
-	NotReady = 0
-	UserClosed = 1
-	SystemClosed = 2
-	DeviceClosed = 3
-	ErrorClosed = 4
+	NotReady     UICloseReasonType = 0
+	UserClosed   UICloseReasonType = 1
+	SystemClosed UICloseReasonType = 2
+	DeviceClosed UICloseReasonType = 3
+	ErrorClosed  UICloseReasonType = 4
 )
 
 type BDA_DrmPairingError int32
 
 const (
-	BDA_DrmPairing_Succeeded = 0
-	BDA_DrmPairing_HardwareFailure = 1
-	BDA_DrmPairing_NeedRevocationData = 2
-	BDA_DrmPairing_NeedIndiv = 3
-	BDA_DrmPairing_Other = 4
-	BDA_DrmPairing_DrmInitFailed = 5
-	BDA_DrmPairing_DrmNotPaired = 6
-	BDA_DrmPairing_DrmRePairSoon = 7
-	BDA_DrmPairing_Aborted = 8
-	BDA_DrmPairing_NeedSDKUpdate = 9
+	BDA_DrmPairing_Succeeded          BDA_DrmPairingError = 0
+	BDA_DrmPairing_HardwareFailure    BDA_DrmPairingError = 1
+	BDA_DrmPairing_NeedRevocationData BDA_DrmPairingError = 2
+	BDA_DrmPairing_NeedIndiv          BDA_DrmPairingError = 3
+	BDA_DrmPairing_Other              BDA_DrmPairingError = 4
+	BDA_DrmPairing_DrmInitFailed      BDA_DrmPairingError = 5
+	BDA_DrmPairing_DrmNotPaired       BDA_DrmPairingError = 6
+	BDA_DrmPairing_DrmRePairSoon      BDA_DrmPairingError = 7
+	BDA_DrmPairing_Aborted            BDA_DrmPairingError = 8
+	BDA_DrmPairing_NeedSDKUpdate      BDA_DrmPairingError = 9
 )
 
 type __MIDL___MIDL_itf_bdaiface_0000_0019_0001 int32
 
 const (
-	KSPROPERTY_IPSINK_MULTICASTLIST = 0
-	KSPROPERTY_IPSINK_ADAPTER_DESCRIPTION = 1
-	KSPROPERTY_IPSINK_ADAPTER_ADDRESS = 2
+	KSPROPERTY_IPSINK_MULTICASTLIST       __MIDL___MIDL_itf_bdaiface_0000_0019_0001 = 0
+	KSPROPERTY_IPSINK_ADAPTER_DESCRIPTION __MIDL___MIDL_itf_bdaiface_0000_0019_0001 = 1
+	KSPROPERTY_IPSINK_ADAPTER_ADDRESS     __MIDL___MIDL_itf_bdaiface_0000_0019_0001 = 2
 )
 
 type AMExtendedSeekingCapabilities int32
 
 const (
-	AM_EXSEEK_CANSEEK = 1
-	AM_EXSEEK_CANSCAN = 2
-	AM_EXSEEK_MARKERSEEK = 4
-	AM_EXSEEK_SCANWITHOUTCLOCK = 8
-	AM_EXSEEK_NOSTANDARDREPAINT = 16
-	AM_EXSEEK_BUFFERING = 32
-	AM_EXSEEK_SENDS_VIDEOFRAMEREADY = 64
+	AM_EXSEEK_CANSEEK               AMExtendedSeekingCapabilities = 1
+	AM_EXSEEK_CANSCAN               AMExtendedSeekingCapabilities = 2
+	AM_EXSEEK_MARKERSEEK            AMExtendedSeekingCapabilities = 4
+	AM_EXSEEK_SCANWITHOUTCLOCK      AMExtendedSeekingCapabilities = 8
+	AM_EXSEEK_NOSTANDARDREPAINT     AMExtendedSeekingCapabilities = 16
+	AM_EXSEEK_BUFFERING             AMExtendedSeekingCapabilities = 32
+	AM_EXSEEK_SENDS_VIDEOFRAMEREADY AMExtendedSeekingCapabilities = 64
 )
 
 type AM_LINE21_CCLEVEL int32
 
 const (
-	AM_L21_CCLEVEL_TC2 = 0
+	AM_L21_CCLEVEL_TC2 AM_LINE21_CCLEVEL = 0
 )
 
 type AM_LINE21_CCSERVICE int32
 
 const (
-	AM_L21_CCSERVICE_None = 0
-	AM_L21_CCSERVICE_Caption1 = 1
-	AM_L21_CCSERVICE_Caption2 = 2
-	AM_L21_CCSERVICE_Text1 = 3
-	AM_L21_CCSERVICE_Text2 = 4
-	AM_L21_CCSERVICE_XDS = 5
-	AM_L21_CCSERVICE_DefChannel = 10
-	AM_L21_CCSERVICE_Invalid = 11
+	AM_L21_CCSERVICE_None       AM_LINE21_CCSERVICE = 0
+	AM_L21_CCSERVICE_Caption1   AM_LINE21_CCSERVICE = 1
+	AM_L21_CCSERVICE_Caption2   AM_LINE21_CCSERVICE = 2
+	AM_L21_CCSERVICE_Text1      AM_LINE21_CCSERVICE = 3
+	AM_L21_CCSERVICE_Text2      AM_LINE21_CCSERVICE = 4
+	AM_L21_CCSERVICE_XDS        AM_LINE21_CCSERVICE = 5
+	AM_L21_CCSERVICE_DefChannel AM_LINE21_CCSERVICE = 10
+	AM_L21_CCSERVICE_Invalid    AM_LINE21_CCSERVICE = 11
 )
 
 type AM_LINE21_CCSTATE int32
 
 const (
-	AM_L21_CCSTATE_Off = 0
-	AM_L21_CCSTATE_On = 1
+	AM_L21_CCSTATE_Off AM_LINE21_CCSTATE = 0
+	AM_L21_CCSTATE_On  AM_LINE21_CCSTATE = 1
 )
 
 type AM_LINE21_CCSTYLE int32
 
 const (
-	AM_L21_CCSTYLE_None = 0
-	AM_L21_CCSTYLE_PopOn = 1
-	AM_L21_CCSTYLE_PaintOn = 2
-	AM_L21_CCSTYLE_RollUp = 3
+	AM_L21_CCSTYLE_None    AM_LINE21_CCSTYLE = 0
+	AM_L21_CCSTYLE_PopOn   AM_LINE21_CCSTYLE = 1
+	AM_L21_CCSTYLE_PaintOn AM_LINE21_CCSTYLE = 2
+	AM_L21_CCSTYLE_RollUp  AM_LINE21_CCSTYLE = 3
 )
 
 type AM_LINE21_DRAWBGMODE int32
 
 const (
-	AM_L21_DRAWBGMODE_Opaque = 0
-	AM_L21_DRAWBGMODE_Transparent = 1
+	AM_L21_DRAWBGMODE_Opaque      AM_LINE21_DRAWBGMODE = 0
+	AM_L21_DRAWBGMODE_Transparent AM_LINE21_DRAWBGMODE = 1
 )
 
 type AM_WST_LEVEL int32
 
 const (
-	AM_WST_LEVEL_1_5 = 0
+	AM_WST_LEVEL_1_5 AM_WST_LEVEL = 0
 )
 
 type AM_WST_SERVICE int32
 
 const (
-	AM_WST_SERVICE_None = 0
-	AM_WST_SERVICE_Text = 1
-	AM_WST_SERVICE_IDS = 2
-	AM_WST_SERVICE_Invalid = 3
+	AM_WST_SERVICE_None    AM_WST_SERVICE = 0
+	AM_WST_SERVICE_Text    AM_WST_SERVICE = 1
+	AM_WST_SERVICE_IDS     AM_WST_SERVICE = 2
+	AM_WST_SERVICE_Invalid AM_WST_SERVICE = 3
 )
 
 type AM_WST_STATE int32
 
 const (
-	AM_WST_STATE_Off = 0
-	AM_WST_STATE_On = 1
+	AM_WST_STATE_Off AM_WST_STATE = 0
+	AM_WST_STATE_On  AM_WST_STATE = 1
 )
 
 type AM_WST_STYLE int32
 
 const (
-	AM_WST_STYLE_None = 0
-	AM_WST_STYLE_Invers = 1
+	AM_WST_STYLE_None   AM_WST_STYLE = 0
+	AM_WST_STYLE_Invers AM_WST_STYLE = 1
 )
 
 type AM_WST_DRAWBGMODE int32
 
 const (
-	AM_WST_DRAWBGMODE_Opaque = 0
-	AM_WST_DRAWBGMODE_Transparent = 1
+	AM_WST_DRAWBGMODE_Opaque      AM_WST_DRAWBGMODE = 0
+	AM_WST_DRAWBGMODE_Transparent AM_WST_DRAWBGMODE = 1
 )
 
 type STREAM_TYPE int32
 
 const (
-	STREAMTYPE_READ = 0
-	STREAMTYPE_WRITE = 1
-	STREAMTYPE_TRANSFORM = 2
+	STREAMTYPE_READ      STREAM_TYPE = 0
+	STREAMTYPE_WRITE     STREAM_TYPE = 1
+	STREAMTYPE_TRANSFORM STREAM_TYPE = 2
 )
 
 type STREAM_STATE int32
 
 const (
-	STREAMSTATE_STOP = 0
-	STREAMSTATE_RUN = 1
+	STREAMSTATE_STOP STREAM_STATE = 0
+	STREAMSTATE_RUN  STREAM_STATE = 1
 )
 
 type __MIDL___MIDL_itf_mmstream_0000_0000_0003 int32
 
 const (
-	COMPSTAT_NOUPDATEOK = 1
-	COMPSTAT_WAIT = 2
-	COMPSTAT_ABORT = 4
+	COMPSTAT_NOUPDATEOK __MIDL___MIDL_itf_mmstream_0000_0000_0003 = 1
+	COMPSTAT_WAIT       __MIDL___MIDL_itf_mmstream_0000_0000_0003 = 2
+	COMPSTAT_ABORT      __MIDL___MIDL_itf_mmstream_0000_0000_0003 = 4
 )
 
 type __MIDL___MIDL_itf_mmstream_0000_0000_0004 int32
 
 const (
-	MMSSF_HASCLOCK = 1
-	MMSSF_SUPPORTSEEK = 2
-	MMSSF_ASYNCHRONOUS = 4
+	MMSSF_HASCLOCK     __MIDL___MIDL_itf_mmstream_0000_0000_0004 = 1
+	MMSSF_SUPPORTSEEK  __MIDL___MIDL_itf_mmstream_0000_0000_0004 = 2
+	MMSSF_ASYNCHRONOUS __MIDL___MIDL_itf_mmstream_0000_0000_0004 = 4
 )
 
 type __MIDL___MIDL_itf_mmstream_0000_0000_0005 int32
 
 const (
-	SSUPDATE_ASYNC = 1
-	SSUPDATE_CONTINUOUS = 2
+	SSUPDATE_ASYNC      __MIDL___MIDL_itf_mmstream_0000_0000_0005 = 1
+	SSUPDATE_CONTINUOUS __MIDL___MIDL_itf_mmstream_0000_0000_0005 = 2
 )
 
 type __MIDL___MIDL_itf_ddstream_0000_0000_0001 int32
 
 const (
-	DDSFF_PROGRESSIVERENDER = 1
+	DDSFF_PROGRESSIVERENDER __MIDL___MIDL_itf_ddstream_0000_0000_0001 = 1
 )
 
 type __MIDL___MIDL_itf_amstream_0000_0000_0001 int32
 
 const (
-	AMMSF_NOGRAPHTHREAD = 1
+	AMMSF_NOGRAPHTHREAD __MIDL___MIDL_itf_amstream_0000_0000_0001 = 1
 )
 
 type __MIDL___MIDL_itf_amstream_0000_0000_0002 int32
 
 const (
-	AMMSF_ADDDEFAULTRENDERER = 1
-	AMMSF_CREATEPEER = 2
-	AMMSF_STOPIFNOSAMPLES = 4
-	AMMSF_NOSTALL = 8
+	AMMSF_ADDDEFAULTRENDERER __MIDL___MIDL_itf_amstream_0000_0000_0002 = 1
+	AMMSF_CREATEPEER         __MIDL___MIDL_itf_amstream_0000_0000_0002 = 2
+	AMMSF_STOPIFNOSAMPLES    __MIDL___MIDL_itf_amstream_0000_0000_0002 = 4
+	AMMSF_NOSTALL            __MIDL___MIDL_itf_amstream_0000_0000_0002 = 8
 )
 
 type __MIDL___MIDL_itf_amstream_0000_0000_0003 int32
 
 const (
-	AMMSF_RENDERTYPEMASK = 3
-	AMMSF_RENDERTOEXISTING = 0
-	AMMSF_RENDERALLSTREAMS = 1
-	AMMSF_NORENDER = 2
-	AMMSF_NOCLOCK = 4
-	AMMSF_RUN = 8
+	AMMSF_RENDERTYPEMASK   __MIDL___MIDL_itf_amstream_0000_0000_0003 = 3
+	AMMSF_RENDERTOEXISTING __MIDL___MIDL_itf_amstream_0000_0000_0003 = 0
+	AMMSF_RENDERALLSTREAMS __MIDL___MIDL_itf_amstream_0000_0000_0003 = 1
+	AMMSF_NORENDER         __MIDL___MIDL_itf_amstream_0000_0000_0003 = 2
+	AMMSF_NOCLOCK          __MIDL___MIDL_itf_amstream_0000_0000_0003 = 4
+	AMMSF_RUN              __MIDL___MIDL_itf_amstream_0000_0000_0003 = 8
 )
 
 type __MIDL___MIDL_itf_amstream_0000_0000_0004 int32
 
 const (
-	Disabled = 0
-	ReadData = 1
-	RenderData = 2
+	Disabled   __MIDL___MIDL_itf_amstream_0000_0000_0004 = 0
+	ReadData   __MIDL___MIDL_itf_amstream_0000_0000_0004 = 1
+	RenderData __MIDL___MIDL_itf_amstream_0000_0000_0004 = 2
 )
 
 type AM_PROPERTY_FRAMESTEP int32
 
 const (
-	AM_PROPERTY_FRAMESTEP_STEP = 1
-	AM_PROPERTY_FRAMESTEP_CANCEL = 2
-	AM_PROPERTY_FRAMESTEP_CANSTEP = 3
-	AM_PROPERTY_FRAMESTEP_CANSTEPMULTIPLE = 4
+	AM_PROPERTY_FRAMESTEP_STEP            AM_PROPERTY_FRAMESTEP = 1
+	AM_PROPERTY_FRAMESTEP_CANCEL          AM_PROPERTY_FRAMESTEP = 2
+	AM_PROPERTY_FRAMESTEP_CANSTEP         AM_PROPERTY_FRAMESTEP = 3
+	AM_PROPERTY_FRAMESTEP_CANSTEPMULTIPLE AM_PROPERTY_FRAMESTEP = 4
 )
 
 type KSALLOCATORMODE int32
 
 const (
-	KsAllocatorMode_User = 0
-	KsAllocatorMode_Kernel = 1
+	KsAllocatorMode_User   KSALLOCATORMODE = 0
+	KsAllocatorMode_Kernel KSALLOCATORMODE = 1
 )
 
 type FRAMING_PROP int32
 
 const (
-	FramingProp_Uninitialized = 0
-	FramingProp_None = 1
-	FramingProp_Old = 2
-	FramingProp_Ex = 3
+	FramingProp_Uninitialized FRAMING_PROP = 0
+	FramingProp_None          FRAMING_PROP = 1
+	FramingProp_Old           FRAMING_PROP = 2
+	FramingProp_Ex            FRAMING_PROP = 3
 )
 
 type FRAMING_CACHE_OPS int32
 
 const (
-	Framing_Cache_Update = 0
-	Framing_Cache_ReadLast = 1
-	Framing_Cache_ReadOrig = 2
-	Framing_Cache_Write = 3
+	Framing_Cache_Update   FRAMING_CACHE_OPS = 0
+	Framing_Cache_ReadLast FRAMING_CACHE_OPS = 1
+	Framing_Cache_ReadOrig FRAMING_CACHE_OPS = 2
+	Framing_Cache_Write    FRAMING_CACHE_OPS = 3
 )
 
 type PIPE_STATE int32
 
 const (
-	PipeState_DontCare = 0
-	PipeState_RangeNotFixed = 1
-	PipeState_RangeFixed = 2
-	PipeState_CompressionUnknown = 3
-	PipeState_Finalized = 4
+	PipeState_DontCare           PIPE_STATE = 0
+	PipeState_RangeNotFixed      PIPE_STATE = 1
+	PipeState_RangeFixed         PIPE_STATE = 2
+	PipeState_CompressionUnknown PIPE_STATE = 3
+	PipeState_Finalized          PIPE_STATE = 4
 )
 
 type PIPE_ALLOCATOR_PLACE int32
 
 const (
-	Pipe_Allocator_None = 0
-	Pipe_Allocator_FirstPin = 1
-	Pipe_Allocator_LastPin = 2
-	Pipe_Allocator_MiddlePin = 3
+	Pipe_Allocator_None      PIPE_ALLOCATOR_PLACE = 0
+	Pipe_Allocator_FirstPin  PIPE_ALLOCATOR_PLACE = 1
+	Pipe_Allocator_LastPin   PIPE_ALLOCATOR_PLACE = 2
+	Pipe_Allocator_MiddlePin PIPE_ALLOCATOR_PLACE = 3
 )
 
 type KS_LogicalMemoryType int32
 
 const (
-	KS_MemoryTypeDontCare = 0
-	KS_MemoryTypeKernelPaged = 1
-	KS_MemoryTypeKernelNonPaged = 2
-	KS_MemoryTypeDeviceHostMapped = 3
-	KS_MemoryTypeDeviceSpecific = 4
-	KS_MemoryTypeUser = 5
-	KS_MemoryTypeAnyHost = 6
+	KS_MemoryTypeDontCare         KS_LogicalMemoryType = 0
+	KS_MemoryTypeKernelPaged      KS_LogicalMemoryType = 1
+	KS_MemoryTypeKernelNonPaged   KS_LogicalMemoryType = 2
+	KS_MemoryTypeDeviceHostMapped KS_LogicalMemoryType = 3
+	KS_MemoryTypeDeviceSpecific   KS_LogicalMemoryType = 4
+	KS_MemoryTypeUser             KS_LogicalMemoryType = 5
+	KS_MemoryTypeAnyHost          KS_LogicalMemoryType = 6
 )
 
 type AM_ASPECT_RATIO_MODE int32
 
 const (
-	AM_ARMODE_STRETCHED = 0
-	AM_ARMODE_LETTER_BOX = 1
-	AM_ARMODE_CROP = 2
-	AM_ARMODE_STRETCHED_AS_PRIMARY = 3
+	AM_ARMODE_STRETCHED            AM_ASPECT_RATIO_MODE = 0
+	AM_ARMODE_LETTER_BOX           AM_ASPECT_RATIO_MODE = 1
+	AM_ARMODE_CROP                 AM_ASPECT_RATIO_MODE = 2
+	AM_ARMODE_STRETCHED_AS_PRIMARY AM_ASPECT_RATIO_MODE = 3
 )
 
 type VMR9PresentationFlags int32
 
 const (
-	VMR9Sample_SyncPoint = 1
-	VMR9Sample_Preroll = 2
-	VMR9Sample_Discontinuity = 4
-	VMR9Sample_TimeValid = 8
-	VMR9Sample_SrcDstRectsValid = 16
+	VMR9Sample_SyncPoint        VMR9PresentationFlags = 1
+	VMR9Sample_Preroll          VMR9PresentationFlags = 2
+	VMR9Sample_Discontinuity    VMR9PresentationFlags = 4
+	VMR9Sample_TimeValid        VMR9PresentationFlags = 8
+	VMR9Sample_SrcDstRectsValid VMR9PresentationFlags = 16
 )
 
 type VMR9SurfaceAllocationFlags int32
 
 const (
-	VMR9AllocFlag_3DRenderTarget = 1
-	VMR9AllocFlag_DXVATarget = 2
-	VMR9AllocFlag_TextureSurface = 4
-	VMR9AllocFlag_OffscreenSurface = 8
-	VMR9AllocFlag_RGBDynamicSwitch = 16
-	VMR9AllocFlag_UsageReserved = 224
-	VMR9AllocFlag_UsageMask = 255
+	VMR9AllocFlag_3DRenderTarget   VMR9SurfaceAllocationFlags = 1
+	VMR9AllocFlag_DXVATarget       VMR9SurfaceAllocationFlags = 2
+	VMR9AllocFlag_TextureSurface   VMR9SurfaceAllocationFlags = 4
+	VMR9AllocFlag_OffscreenSurface VMR9SurfaceAllocationFlags = 8
+	VMR9AllocFlag_RGBDynamicSwitch VMR9SurfaceAllocationFlags = 16
+	VMR9AllocFlag_UsageReserved    VMR9SurfaceAllocationFlags = 224
+	VMR9AllocFlag_UsageMask        VMR9SurfaceAllocationFlags = 255
 )
 
 type VMR9AspectRatioMode int32
 
 const (
-	VMR9ARMode_None = 0
-	VMR9ARMode_LetterBox = 1
+	VMR9ARMode_None      VMR9AspectRatioMode = 0
+	VMR9ARMode_LetterBox VMR9AspectRatioMode = 1
 )
 
 type VMR9MixerPrefs int32
 
 const (
-	MixerPref9_NoDecimation = 1
-	MixerPref9_DecimateOutput = 2
-	MixerPref9_ARAdjustXorY = 4
-	MixerPref9_NonSquareMixing = 8
-	MixerPref9_DecimateMask = 15
-	MixerPref9_BiLinearFiltering = 16
-	MixerPref9_PointFiltering = 32
-	MixerPref9_AnisotropicFiltering = 64
-	MixerPref9_PyramidalQuadFiltering = 128
-	MixerPref9_GaussianQuadFiltering = 256
-	MixerPref9_FilteringReserved = 3584
-	MixerPref9_FilteringMask = 4080
-	MixerPref9_RenderTargetRGB = 4096
-	MixerPref9_RenderTargetYUV = 8192
-	MixerPref9_RenderTargetReserved = 1032192
-	MixerPref9_RenderTargetMask = 1044480
-	MixerPref9_DynamicSwitchToBOB = 1048576
-	MixerPref9_DynamicDecimateBy2 = 2097152
-	MixerPref9_DynamicReserved = 12582912
-	MixerPref9_DynamicMask = 15728640
+	MixerPref9_NoDecimation           VMR9MixerPrefs = 1
+	MixerPref9_DecimateOutput         VMR9MixerPrefs = 2
+	MixerPref9_ARAdjustXorY           VMR9MixerPrefs = 4
+	MixerPref9_NonSquareMixing        VMR9MixerPrefs = 8
+	MixerPref9_DecimateMask           VMR9MixerPrefs = 15
+	MixerPref9_BiLinearFiltering      VMR9MixerPrefs = 16
+	MixerPref9_PointFiltering         VMR9MixerPrefs = 32
+	MixerPref9_AnisotropicFiltering   VMR9MixerPrefs = 64
+	MixerPref9_PyramidalQuadFiltering VMR9MixerPrefs = 128
+	MixerPref9_GaussianQuadFiltering  VMR9MixerPrefs = 256
+	MixerPref9_FilteringReserved      VMR9MixerPrefs = 3584
+	MixerPref9_FilteringMask          VMR9MixerPrefs = 4080
+	MixerPref9_RenderTargetRGB        VMR9MixerPrefs = 4096
+	MixerPref9_RenderTargetYUV        VMR9MixerPrefs = 8192
+	MixerPref9_RenderTargetReserved   VMR9MixerPrefs = 1032192
+	MixerPref9_RenderTargetMask       VMR9MixerPrefs = 1044480
+	MixerPref9_DynamicSwitchToBOB     VMR9MixerPrefs = 1048576
+	MixerPref9_DynamicDecimateBy2     VMR9MixerPrefs = 2097152
+	MixerPref9_DynamicReserved        VMR9MixerPrefs = 12582912
+	MixerPref9_DynamicMask            VMR9MixerPrefs = 15728640
 )
 
 type VMR9ProcAmpControlFlags int32
 
 const (
-	ProcAmpControl9_Brightness = 1
-	ProcAmpControl9_Contrast = 2
-	ProcAmpControl9_Hue = 4
-	ProcAmpControl9_Saturation = 8
-	ProcAmpControl9_Mask = 15
+	ProcAmpControl9_Brightness VMR9ProcAmpControlFlags = 1
+	ProcAmpControl9_Contrast   VMR9ProcAmpControlFlags = 2
+	ProcAmpControl9_Hue        VMR9ProcAmpControlFlags = 4
+	ProcAmpControl9_Saturation VMR9ProcAmpControlFlags = 8
+	ProcAmpControl9_Mask       VMR9ProcAmpControlFlags = 15
 )
 
 type VMR9AlphaBitmapFlags int32
 
 const (
-	VMR9AlphaBitmap_Disable = 1
-	VMR9AlphaBitmap_hDC = 2
-	VMR9AlphaBitmap_EntireDDS = 4
-	VMR9AlphaBitmap_SrcColorKey = 8
-	VMR9AlphaBitmap_SrcRect = 16
-	VMR9AlphaBitmap_FilterMode = 32
+	VMR9AlphaBitmap_Disable     VMR9AlphaBitmapFlags = 1
+	VMR9AlphaBitmap_hDC         VMR9AlphaBitmapFlags = 2
+	VMR9AlphaBitmap_EntireDDS   VMR9AlphaBitmapFlags = 4
+	VMR9AlphaBitmap_SrcColorKey VMR9AlphaBitmapFlags = 8
+	VMR9AlphaBitmap_SrcRect     VMR9AlphaBitmapFlags = 16
+	VMR9AlphaBitmap_FilterMode  VMR9AlphaBitmapFlags = 32
 )
 
 type VMR9RenderPrefs int32
 
 const (
-	RenderPrefs9_DoNotRenderBorder = 1
-	RenderPrefs9_Mask = 1
+	RenderPrefs9_DoNotRenderBorder VMR9RenderPrefs = 1
+	RenderPrefs9_Mask              VMR9RenderPrefs = 1
 )
 
 type VMR9Mode int32
 
 const (
-	VMR9Mode_Windowed = 1
-	VMR9Mode_Windowless = 2
-	VMR9Mode_Renderless = 4
-	VMR9Mode_Mask = 7
+	VMR9Mode_Windowed   VMR9Mode = 1
+	VMR9Mode_Windowless VMR9Mode = 2
+	VMR9Mode_Renderless VMR9Mode = 4
+	VMR9Mode_Mask       VMR9Mode = 7
 )
 
 type VMR9DeinterlacePrefs int32
 
 const (
-	DeinterlacePref9_NextBest = 1
-	DeinterlacePref9_BOB = 2
-	DeinterlacePref9_Weave = 4
-	DeinterlacePref9_Mask = 7
+	DeinterlacePref9_NextBest VMR9DeinterlacePrefs = 1
+	DeinterlacePref9_BOB      VMR9DeinterlacePrefs = 2
+	DeinterlacePref9_Weave    VMR9DeinterlacePrefs = 4
+	DeinterlacePref9_Mask     VMR9DeinterlacePrefs = 7
 )
 
 type VMR9DeinterlaceTech int32
 
 const (
-	DeinterlaceTech9_Unknown = 0
-	DeinterlaceTech9_BOBLineReplicate = 1
-	DeinterlaceTech9_BOBVerticalStretch = 2
-	DeinterlaceTech9_MedianFiltering = 4
-	DeinterlaceTech9_EdgeFiltering = 16
-	DeinterlaceTech9_FieldAdaptive = 32
-	DeinterlaceTech9_PixelAdaptive = 64
-	DeinterlaceTech9_MotionVectorSteered = 128
+	DeinterlaceTech9_Unknown             VMR9DeinterlaceTech = 0
+	DeinterlaceTech9_BOBLineReplicate    VMR9DeinterlaceTech = 1
+	DeinterlaceTech9_BOBVerticalStretch  VMR9DeinterlaceTech = 2
+	DeinterlaceTech9_MedianFiltering     VMR9DeinterlaceTech = 4
+	DeinterlaceTech9_EdgeFiltering       VMR9DeinterlaceTech = 16
+	DeinterlaceTech9_FieldAdaptive       VMR9DeinterlaceTech = 32
+	DeinterlaceTech9_PixelAdaptive       VMR9DeinterlaceTech = 64
+	DeinterlaceTech9_MotionVectorSteered VMR9DeinterlaceTech = 128
 )
 
 type VMR9_SampleFormat int32
 
 const (
-	VMR9_SampleReserved = 1
-	VMR9_SampleProgressiveFrame = 2
-	VMR9_SampleFieldInterleavedEvenFirst = 3
-	VMR9_SampleFieldInterleavedOddFirst = 4
-	VMR9_SampleFieldSingleEven = 5
-	VMR9_SampleFieldSingleOdd = 6
+	VMR9_SampleReserved                  VMR9_SampleFormat = 1
+	VMR9_SampleProgressiveFrame          VMR9_SampleFormat = 2
+	VMR9_SampleFieldInterleavedEvenFirst VMR9_SampleFormat = 3
+	VMR9_SampleFieldInterleavedOddFirst  VMR9_SampleFormat = 4
+	VMR9_SampleFieldSingleEven           VMR9_SampleFormat = 5
+	VMR9_SampleFieldSingleOdd            VMR9_SampleFormat = 6
 )
 
 type AM_PROPERTY_AC3 int32
 
 const (
-	AM_PROPERTY_AC3_ERROR_CONCEALMENT = 1
-	AM_PROPERTY_AC3_ALTERNATE_AUDIO = 2
-	AM_PROPERTY_AC3_DOWNMIX = 3
-	AM_PROPERTY_AC3_BIT_STREAM_MODE = 4
-	AM_PROPERTY_AC3_DIALOGUE_LEVEL = 5
-	AM_PROPERTY_AC3_LANGUAGE_CODE = 6
-	AM_PROPERTY_AC3_ROOM_TYPE = 7
+	AM_PROPERTY_AC3_ERROR_CONCEALMENT AM_PROPERTY_AC3 = 1
+	AM_PROPERTY_AC3_ALTERNATE_AUDIO   AM_PROPERTY_AC3 = 2
+	AM_PROPERTY_AC3_DOWNMIX           AM_PROPERTY_AC3 = 3
+	AM_PROPERTY_AC3_BIT_STREAM_MODE   AM_PROPERTY_AC3 = 4
+	AM_PROPERTY_AC3_DIALOGUE_LEVEL    AM_PROPERTY_AC3 = 5
+	AM_PROPERTY_AC3_LANGUAGE_CODE     AM_PROPERTY_AC3 = 6
+	AM_PROPERTY_AC3_ROOM_TYPE         AM_PROPERTY_AC3 = 7
 )
 
 type AM_PROPERTY_DVDSUBPIC int32
 
 const (
-	AM_PROPERTY_DVDSUBPIC_PALETTE = 0
-	AM_PROPERTY_DVDSUBPIC_HLI = 1
-	AM_PROPERTY_DVDSUBPIC_COMPOSIT_ON = 2
+	AM_PROPERTY_DVDSUBPIC_PALETTE     AM_PROPERTY_DVDSUBPIC = 0
+	AM_PROPERTY_DVDSUBPIC_HLI         AM_PROPERTY_DVDSUBPIC = 1
+	AM_PROPERTY_DVDSUBPIC_COMPOSIT_ON AM_PROPERTY_DVDSUBPIC = 2
 )
 
 type AM_PROPERTY_DVDCOPYPROT int32
 
 const (
-	AM_PROPERTY_DVDCOPY_CHLG_KEY = 1
-	AM_PROPERTY_DVDCOPY_DVD_KEY1 = 2
-	AM_PROPERTY_DVDCOPY_DEC_KEY2 = 3
-	AM_PROPERTY_DVDCOPY_TITLE_KEY = 4
-	AM_PROPERTY_COPY_MACROVISION = 5
-	AM_PROPERTY_DVDCOPY_REGION = 6
-	AM_PROPERTY_DVDCOPY_SET_COPY_STATE = 7
-	AM_PROPERTY_COPY_ANALOG_COMPONENT = 8
-	AM_PROPERTY_COPY_DIGITAL_CP = 9
-	AM_PROPERTY_COPY_DVD_SRM = 10
-	AM_PROPERTY_DVDCOPY_SUPPORTS_NEW_KEYCOUNT = 11
-	AM_PROPERTY_DVDCOPY_DISC_KEY = 128
+	AM_PROPERTY_DVDCOPY_CHLG_KEY              AM_PROPERTY_DVDCOPYPROT = 1
+	AM_PROPERTY_DVDCOPY_DVD_KEY1              AM_PROPERTY_DVDCOPYPROT = 2
+	AM_PROPERTY_DVDCOPY_DEC_KEY2              AM_PROPERTY_DVDCOPYPROT = 3
+	AM_PROPERTY_DVDCOPY_TITLE_KEY             AM_PROPERTY_DVDCOPYPROT = 4
+	AM_PROPERTY_COPY_MACROVISION              AM_PROPERTY_DVDCOPYPROT = 5
+	AM_PROPERTY_DVDCOPY_REGION                AM_PROPERTY_DVDCOPYPROT = 6
+	AM_PROPERTY_DVDCOPY_SET_COPY_STATE        AM_PROPERTY_DVDCOPYPROT = 7
+	AM_PROPERTY_COPY_ANALOG_COMPONENT         AM_PROPERTY_DVDCOPYPROT = 8
+	AM_PROPERTY_COPY_DIGITAL_CP               AM_PROPERTY_DVDCOPYPROT = 9
+	AM_PROPERTY_COPY_DVD_SRM                  AM_PROPERTY_DVDCOPYPROT = 10
+	AM_PROPERTY_DVDCOPY_SUPPORTS_NEW_KEYCOUNT AM_PROPERTY_DVDCOPYPROT = 11
+	AM_PROPERTY_DVDCOPY_DISC_KEY              AM_PROPERTY_DVDCOPYPROT = 128
 )
 
 type AM_DIGITAL_CP int32
 
 const (
-	AM_DIGITAL_CP_OFF = 0
-	AM_DIGITAL_CP_ON = 1
-	AM_DIGITAL_CP_DVD_COMPLIANT = 2
+	AM_DIGITAL_CP_OFF           AM_DIGITAL_CP = 0
+	AM_DIGITAL_CP_ON            AM_DIGITAL_CP = 1
+	AM_DIGITAL_CP_DVD_COMPLIANT AM_DIGITAL_CP = 2
 )
 
 type AM_DVDCOPYSTATE int32
 
 const (
-	AM_DVDCOPYSTATE_INITIALIZE = 0
-	AM_DVDCOPYSTATE_INITIALIZE_TITLE = 1
-	AM_DVDCOPYSTATE_AUTHENTICATION_NOT_REQUIRED = 2
-	AM_DVDCOPYSTATE_AUTHENTICATION_REQUIRED = 3
-	AM_DVDCOPYSTATE_DONE = 4
+	AM_DVDCOPYSTATE_INITIALIZE                  AM_DVDCOPYSTATE = 0
+	AM_DVDCOPYSTATE_INITIALIZE_TITLE            AM_DVDCOPYSTATE = 1
+	AM_DVDCOPYSTATE_AUTHENTICATION_NOT_REQUIRED AM_DVDCOPYSTATE = 2
+	AM_DVDCOPYSTATE_AUTHENTICATION_REQUIRED     AM_DVDCOPYSTATE = 3
+	AM_DVDCOPYSTATE_DONE                        AM_DVDCOPYSTATE = 4
 )
 
 type AM_COPY_MACROVISION_LEVEL int32
 
 const (
-	AM_MACROVISION_DISABLED = 0
-	AM_MACROVISION_LEVEL1 = 1
-	AM_MACROVISION_LEVEL2 = 2
-	AM_MACROVISION_LEVEL3 = 3
+	AM_MACROVISION_DISABLED AM_COPY_MACROVISION_LEVEL = 0
+	AM_MACROVISION_LEVEL1   AM_COPY_MACROVISION_LEVEL = 1
+	AM_MACROVISION_LEVEL2   AM_COPY_MACROVISION_LEVEL = 2
+	AM_MACROVISION_LEVEL3   AM_COPY_MACROVISION_LEVEL = 3
 )
 
 type AM_MPEG2Level int32
 
 const (
-	AM_MPEG2Level_Low = 1
-	AM_MPEG2Level_Main = 2
-	AM_MPEG2Level_High1440 = 3
-	AM_MPEG2Level_High = 4
+	AM_MPEG2Level_Low      AM_MPEG2Level = 1
+	AM_MPEG2Level_Main     AM_MPEG2Level = 2
+	AM_MPEG2Level_High1440 AM_MPEG2Level = 3
+	AM_MPEG2Level_High     AM_MPEG2Level = 4
 )
 
 type AM_MPEG2Profile int32
 
 const (
-	AM_MPEG2Profile_Simple = 1
-	AM_MPEG2Profile_Main = 2
-	AM_MPEG2Profile_SNRScalable = 3
-	AM_MPEG2Profile_SpatiallyScalable = 4
-	AM_MPEG2Profile_High = 5
+	AM_MPEG2Profile_Simple            AM_MPEG2Profile = 1
+	AM_MPEG2Profile_Main              AM_MPEG2Profile = 2
+	AM_MPEG2Profile_SNRScalable       AM_MPEG2Profile = 3
+	AM_MPEG2Profile_SpatiallyScalable AM_MPEG2Profile = 4
+	AM_MPEG2Profile_High              AM_MPEG2Profile = 5
 )
 
 type AM_PROPERTY_DVDKARAOKE int32
 
 const (
-	AM_PROPERTY_DVDKARAOKE_ENABLE = 0
-	AM_PROPERTY_DVDKARAOKE_DATA = 1
+	AM_PROPERTY_DVDKARAOKE_ENABLE AM_PROPERTY_DVDKARAOKE = 0
+	AM_PROPERTY_DVDKARAOKE_DATA   AM_PROPERTY_DVDKARAOKE = 1
 )
 
 type AM_PROPERTY_TS_RATE_CHANGE int32
 
 const (
-	AM_RATE_SimpleRateChange = 1
-	AM_RATE_ExactRateChange = 2
-	AM_RATE_MaxFullDataRate = 3
-	AM_RATE_Step = 4
-	AM_RATE_UseRateVersion = 5
-	AM_RATE_QueryFullFrameRate = 6
-	AM_RATE_QueryLastRateSegPTS = 7
-	AM_RATE_CorrectTS = 8
-	AM_RATE_ReverseMaxFullDataRate = 9
-	AM_RATE_ResetOnTimeDisc = 10
-	AM_RATE_QueryMapping = 11
+	AM_RATE_SimpleRateChange       AM_PROPERTY_TS_RATE_CHANGE = 1
+	AM_RATE_ExactRateChange        AM_PROPERTY_TS_RATE_CHANGE = 2
+	AM_RATE_MaxFullDataRate        AM_PROPERTY_TS_RATE_CHANGE = 3
+	AM_RATE_Step                   AM_PROPERTY_TS_RATE_CHANGE = 4
+	AM_RATE_UseRateVersion         AM_PROPERTY_TS_RATE_CHANGE = 5
+	AM_RATE_QueryFullFrameRate     AM_PROPERTY_TS_RATE_CHANGE = 6
+	AM_RATE_QueryLastRateSegPTS    AM_PROPERTY_TS_RATE_CHANGE = 7
+	AM_RATE_CorrectTS              AM_PROPERTY_TS_RATE_CHANGE = 8
+	AM_RATE_ReverseMaxFullDataRate AM_PROPERTY_TS_RATE_CHANGE = 9
+	AM_RATE_ResetOnTimeDisc        AM_PROPERTY_TS_RATE_CHANGE = 10
+	AM_RATE_QueryMapping           AM_PROPERTY_TS_RATE_CHANGE = 11
 )
 
 type AM_PROPERTY_DVD_RATE_CHANGE int32
 
 const (
-	AM_RATE_ChangeRate = 1
-	AM_RATE_FullDataRateMax = 2
-	AM_RATE_ReverseDecode = 3
-	AM_RATE_DecoderPosition = 4
-	AM_RATE_DecoderVersion = 5
+	AM_RATE_ChangeRate      AM_PROPERTY_DVD_RATE_CHANGE = 1
+	AM_RATE_FullDataRateMax AM_PROPERTY_DVD_RATE_CHANGE = 2
+	AM_RATE_ReverseDecode   AM_PROPERTY_DVD_RATE_CHANGE = 3
+	AM_RATE_DecoderPosition AM_PROPERTY_DVD_RATE_CHANGE = 4
+	AM_RATE_DecoderVersion  AM_PROPERTY_DVD_RATE_CHANGE = 5
 )
 
 type DVD_PLAY_DIRECTION int32
 
 const (
-	DVD_DIR_FORWARD = 0
-	DVD_DIR_BACKWARD = 1
+	DVD_DIR_FORWARD  DVD_PLAY_DIRECTION = 0
+	DVD_DIR_BACKWARD DVD_PLAY_DIRECTION = 1
 )
 
 type DVD_ERROR int32
 
 const (
-	DVD_ERROR_Unexpected = 1
-	DVD_ERROR_CopyProtectFail = 2
-	DVD_ERROR_InvalidDVD1_0Disc = 3
-	DVD_ERROR_InvalidDiscRegion = 4
-	DVD_ERROR_LowParentalLevel = 5
-	DVD_ERROR_MacrovisionFail = 6
-	DVD_ERROR_IncompatibleSystemAndDecoderRegions = 7
-	DVD_ERROR_IncompatibleDiscAndDecoderRegions = 8
-	DVD_ERROR_CopyProtectOutputFail = 9
-	DVD_ERROR_CopyProtectOutputNotSupported = 10
+	DVD_ERROR_Unexpected                          DVD_ERROR = 1
+	DVD_ERROR_CopyProtectFail                     DVD_ERROR = 2
+	DVD_ERROR_InvalidDVD1_0Disc                   DVD_ERROR = 3
+	DVD_ERROR_InvalidDiscRegion                   DVD_ERROR = 4
+	DVD_ERROR_LowParentalLevel                    DVD_ERROR = 5
+	DVD_ERROR_MacrovisionFail                     DVD_ERROR = 6
+	DVD_ERROR_IncompatibleSystemAndDecoderRegions DVD_ERROR = 7
+	DVD_ERROR_IncompatibleDiscAndDecoderRegions   DVD_ERROR = 8
+	DVD_ERROR_CopyProtectOutputFail               DVD_ERROR = 9
+	DVD_ERROR_CopyProtectOutputNotSupported       DVD_ERROR = 10
 )
 
 type DVD_WARNING int32
 
 const (
-	DVD_WARNING_InvalidDVD1_0Disc = 1
-	DVD_WARNING_FormatNotSupported = 2
-	DVD_WARNING_IllegalNavCommand = 3
-	DVD_WARNING_Open = 4
-	DVD_WARNING_Seek = 5
-	DVD_WARNING_Read = 6
+	DVD_WARNING_InvalidDVD1_0Disc  DVD_WARNING = 1
+	DVD_WARNING_FormatNotSupported DVD_WARNING = 2
+	DVD_WARNING_IllegalNavCommand  DVD_WARNING = 3
+	DVD_WARNING_Open               DVD_WARNING = 4
+	DVD_WARNING_Seek               DVD_WARNING = 5
+	DVD_WARNING_Read               DVD_WARNING = 6
 )
 
 type DVD_PB_STOPPED int32
 
 const (
-	DVD_PB_STOPPED_Other = 0
-	DVD_PB_STOPPED_NoBranch = 1
-	DVD_PB_STOPPED_NoFirstPlayDomain = 2
-	DVD_PB_STOPPED_StopCommand = 3
-	DVD_PB_STOPPED_Reset = 4
-	DVD_PB_STOPPED_DiscEjected = 5
-	DVD_PB_STOPPED_IllegalNavCommand = 6
-	DVD_PB_STOPPED_PlayPeriodAutoStop = 7
-	DVD_PB_STOPPED_PlayChapterAutoStop = 8
-	DVD_PB_STOPPED_ParentalFailure = 9
-	DVD_PB_STOPPED_RegionFailure = 10
-	DVD_PB_STOPPED_MacrovisionFailure = 11
-	DVD_PB_STOPPED_DiscReadError = 12
-	DVD_PB_STOPPED_CopyProtectFailure = 13
-	DVD_PB_STOPPED_CopyProtectOutputFailure = 14
-	DVD_PB_STOPPED_CopyProtectOutputNotSupported = 15
+	DVD_PB_STOPPED_Other                         DVD_PB_STOPPED = 0
+	DVD_PB_STOPPED_NoBranch                      DVD_PB_STOPPED = 1
+	DVD_PB_STOPPED_NoFirstPlayDomain             DVD_PB_STOPPED = 2
+	DVD_PB_STOPPED_StopCommand                   DVD_PB_STOPPED = 3
+	DVD_PB_STOPPED_Reset                         DVD_PB_STOPPED = 4
+	DVD_PB_STOPPED_DiscEjected                   DVD_PB_STOPPED = 5
+	DVD_PB_STOPPED_IllegalNavCommand             DVD_PB_STOPPED = 6
+	DVD_PB_STOPPED_PlayPeriodAutoStop            DVD_PB_STOPPED = 7
+	DVD_PB_STOPPED_PlayChapterAutoStop           DVD_PB_STOPPED = 8
+	DVD_PB_STOPPED_ParentalFailure               DVD_PB_STOPPED = 9
+	DVD_PB_STOPPED_RegionFailure                 DVD_PB_STOPPED = 10
+	DVD_PB_STOPPED_MacrovisionFailure            DVD_PB_STOPPED = 11
+	DVD_PB_STOPPED_DiscReadError                 DVD_PB_STOPPED = 12
+	DVD_PB_STOPPED_CopyProtectFailure            DVD_PB_STOPPED = 13
+	DVD_PB_STOPPED_CopyProtectOutputFailure      DVD_PB_STOPPED = 14
+	DVD_PB_STOPPED_CopyProtectOutputNotSupported DVD_PB_STOPPED = 15
 )
 
 type SNDDEV_ERR int32
 
 const (
-	SNDDEV_ERROR_Open = 1
-	SNDDEV_ERROR_Close = 2
-	SNDDEV_ERROR_GetCaps = 3
-	SNDDEV_ERROR_PrepareHeader = 4
-	SNDDEV_ERROR_UnprepareHeader = 5
-	SNDDEV_ERROR_Reset = 6
-	SNDDEV_ERROR_Restart = 7
-	SNDDEV_ERROR_GetPosition = 8
-	SNDDEV_ERROR_Write = 9
-	SNDDEV_ERROR_Pause = 10
-	SNDDEV_ERROR_Stop = 11
-	SNDDEV_ERROR_Start = 12
-	SNDDEV_ERROR_AddBuffer = 13
-	SNDDEV_ERROR_Query = 14
+	SNDDEV_ERROR_Open            SNDDEV_ERR = 1
+	SNDDEV_ERROR_Close           SNDDEV_ERR = 2
+	SNDDEV_ERROR_GetCaps         SNDDEV_ERR = 3
+	SNDDEV_ERROR_PrepareHeader   SNDDEV_ERR = 4
+	SNDDEV_ERROR_UnprepareHeader SNDDEV_ERR = 5
+	SNDDEV_ERROR_Reset           SNDDEV_ERR = 6
+	SNDDEV_ERROR_Restart         SNDDEV_ERR = 7
+	SNDDEV_ERROR_GetPosition     SNDDEV_ERR = 8
+	SNDDEV_ERROR_Write           SNDDEV_ERR = 9
+	SNDDEV_ERROR_Pause           SNDDEV_ERR = 10
+	SNDDEV_ERROR_Stop            SNDDEV_ERR = 11
+	SNDDEV_ERROR_Start           SNDDEV_ERR = 12
+	SNDDEV_ERROR_AddBuffer       SNDDEV_ERR = 13
+	SNDDEV_ERROR_Query           SNDDEV_ERR = 14
 )
 
 type MP_TYPE int32
 
 const (
-	MPT_INT = 0
-	MPT_FLOAT = 1
-	MPT_BOOL = 2
-	MPT_ENUM = 3
-	MPT_MAX = 4
+	MPT_INT   MP_TYPE = 0
+	MPT_FLOAT MP_TYPE = 1
+	MPT_BOOL  MP_TYPE = 2
+	MPT_ENUM  MP_TYPE = 3
+	MPT_MAX   MP_TYPE = 4
 )
 
 type MP_CURVE_TYPE int32
 
 const (
-	MP_CURVE_JUMP = 1
-	MP_CURVE_LINEAR = 2
-	MP_CURVE_SQUARE = 4
-	MP_CURVE_INVSQUARE = 8
-	MP_CURVE_SINE = 16
+	MP_CURVE_JUMP      MP_CURVE_TYPE = 1
+	MP_CURVE_LINEAR    MP_CURVE_TYPE = 2
+	MP_CURVE_SQUARE    MP_CURVE_TYPE = 4
+	MP_CURVE_INVSQUARE MP_CURVE_TYPE = 8
+	MP_CURVE_SINE      MP_CURVE_TYPE = 16
 )
 
 type DMO_REGISTER_FLAGS int32
 
 const (
-	DMO_REGISTERF_IS_KEYED = 1
+	DMO_REGISTERF_IS_KEYED DMO_REGISTER_FLAGS = 1
 )
 
 type DMO_ENUM_FLAGS int32
 
 const (
-	DMO_ENUMF_INCLUDE_KEYED = 1
+	DMO_ENUMF_INCLUDE_KEYED DMO_ENUM_FLAGS = 1
 )
 
 type __MIDL___MIDL_itf_tuner_0000_0000_0001 int32
 
 const (
-	DISPID_TUNER_TS_UNIQUENAME = 1
-	DISPID_TUNER_TS_FRIENDLYNAME = 2
-	DISPID_TUNER_TS_CLSID = 3
-	DISPID_TUNER_TS_NETWORKTYPE = 4
-	DISPID_TUNER_TS__NETWORKTYPE = 5
-	DISPID_TUNER_TS_CREATETUNEREQUEST = 6
-	DISPID_TUNER_TS_ENUMCATEGORYGUIDS = 7
-	DISPID_TUNER_TS_ENUMDEVICEMONIKERS = 8
-	DISPID_TUNER_TS_DEFAULTPREFERREDCOMPONENTTYPES = 9
-	DISPID_TUNER_TS_FREQMAP = 10
-	DISPID_TUNER_TS_DEFLOCATOR = 11
-	DISPID_TUNER_TS_CLONE = 12
-	DISPID_TUNER_TR_TUNINGSPACE = 1
-	DISPID_TUNER_TR_COMPONENTS = 2
-	DISPID_TUNER_TR_CLONE = 3
-	DISPID_TUNER_TR_LOCATOR = 4
-	DISPID_TUNER_CT_CATEGORY = 1
-	DISPID_TUNER_CT_MEDIAMAJORTYPE = 2
-	DISPID_TUNER_CT__MEDIAMAJORTYPE = 3
-	DISPID_TUNER_CT_MEDIASUBTYPE = 4
-	DISPID_TUNER_CT__MEDIASUBTYPE = 5
-	DISPID_TUNER_CT_MEDIAFORMATTYPE = 6
-	DISPID_TUNER_CT__MEDIAFORMATTYPE = 7
-	DISPID_TUNER_CT_MEDIATYPE = 8
-	DISPID_TUNER_CT_CLONE = 9
-	DISPID_TUNER_LCT_LANGID = 100
-	DISPID_TUNER_MP2CT_TYPE = 200
-	DISPID_TUNER_ATSCCT_FLAGS = 300
-	DISPID_TUNER_L_CARRFREQ = 1
-	DISPID_TUNER_L_INNERFECMETHOD = 2
-	DISPID_TUNER_L_INNERFECRATE = 3
-	DISPID_TUNER_L_OUTERFECMETHOD = 4
-	DISPID_TUNER_L_OUTERFECRATE = 5
-	DISPID_TUNER_L_MOD = 6
-	DISPID_TUNER_L_SYMRATE = 7
-	DISPID_TUNER_L_CLONE = 8
-	DISPID_TUNER_L_ATSC_PHYS_CHANNEL = 201
-	DISPID_TUNER_L_ATSC_TSID = 202
-	DISPID_TUNER_L_ATSC_MP2_PROGNO = 203
-	DISPID_TUNER_L_DVBT_BANDWIDTH = 301
-	DISPID_TUNER_L_DVBT_LPINNERFECMETHOD = 302
-	DISPID_TUNER_L_DVBT_LPINNERFECRATE = 303
-	DISPID_TUNER_L_DVBT_GUARDINTERVAL = 304
-	DISPID_TUNER_L_DVBT_HALPHA = 305
-	DISPID_TUNER_L_DVBT_TRANSMISSIONMODE = 306
-	DISPID_TUNER_L_DVBT_INUSE = 307
-	DISPID_TUNER_L_DVBT2_PHYSICALLAYERPIPEID = 351
-	DISPID_TUNER_L_DVBS_POLARISATION = 401
-	DISPID_TUNER_L_DVBS_WEST = 402
-	DISPID_TUNER_L_DVBS_ORBITAL = 403
-	DISPID_TUNER_L_DVBS_AZIMUTH = 404
-	DISPID_TUNER_L_DVBS_ELEVATION = 405
-	DISPID_TUNER_L_DVBS2_DISEQ_LNB_SOURCE = 406
-	DISPID_TUNER_TS_DVBS2_LOW_OSC_FREQ_OVERRIDE = 407
-	DISPID_TUNER_TS_DVBS2_HI_OSC_FREQ_OVERRIDE = 408
-	DISPID_TUNER_TS_DVBS2_LNB_SWITCH_FREQ_OVERRIDE = 409
-	DISPID_TUNER_TS_DVBS2_SPECTRAL_INVERSION_OVERRIDE = 410
-	DISPID_TUNER_L_DVBS2_ROLLOFF = 411
-	DISPID_TUNER_L_DVBS2_PILOT = 412
-	DISPID_TUNER_L_ANALOG_STANDARD = 601
-	DISPID_TUNER_L_DTV_O_MAJOR_CHANNEL = 701
-	DISPID_TUNER_C_TYPE = 1
-	DISPID_TUNER_C_STATUS = 2
-	DISPID_TUNER_C_LANGID = 3
-	DISPID_TUNER_C_DESCRIPTION = 4
-	DISPID_TUNER_C_CLONE = 5
-	DISPID_TUNER_C_MP2_PID = 101
-	DISPID_TUNER_C_MP2_PCRPID = 102
-	DISPID_TUNER_C_MP2_PROGNO = 103
-	DISPID_TUNER_C_ANALOG_AUDIO = 201
-	DISPID_TUNER_TS_DVB_SYSTEMTYPE = 101
-	DISPID_TUNER_TS_DVB2_NETWORK_ID = 102
-	DISPID_TUNER_TS_DVBS_LOW_OSC_FREQ = 1001
-	DISPID_TUNER_TS_DVBS_HI_OSC_FREQ = 1002
-	DISPID_TUNER_TS_DVBS_LNB_SWITCH_FREQ = 1003
-	DISPID_TUNER_TS_DVBS_INPUT_RANGE = 1004
-	DISPID_TUNER_TS_DVBS_SPECTRAL_INVERSION = 1005
-	DISPID_TUNER_TS_AR_MINFREQUENCY = 101
-	DISPID_TUNER_TS_AR_MAXFREQUENCY = 102
-	DISPID_TUNER_TS_AR_STEP = 103
-	DISPID_TUNER_TS_AR_COUNTRYCODE = 104
-	DISPID_TUNER_TS_AUX_COUNTRYCODE = 101
-	DISPID_TUNER_TS_ATV_MINCHANNEL = 101
-	DISPID_TUNER_TS_ATV_MAXCHANNEL = 102
-	DISPID_TUNER_TS_ATV_INPUTTYPE = 103
-	DISPID_TUNER_TS_ATV_COUNTRYCODE = 104
-	DISPID_TUNER_TS_ATSC_MINMINORCHANNEL = 201
-	DISPID_TUNER_TS_ATSC_MAXMINORCHANNEL = 202
-	DISPID_TUNER_TS_ATSC_MINPHYSCHANNEL = 203
-	DISPID_TUNER_TS_ATSC_MAXPHYSCHANNEL = 204
-	DISPID_TUNER_TS_DC_MINMAJORCHANNEL = 301
-	DISPID_TUNER_TS_DC_MAXMAJORCHANNEL = 302
-	DISPID_TUNER_TS_DC_MINSOURCEID = 303
-	DISPID_TUNER_TS_DC_MAXSOURCEID = 304
-	DISPID_CHTUNER_ATVAC_CHANNEL = 101
-	DISPID_CHTUNER_ATVDC_SYSTEM = 101
-	DISPID_CHTUNER_ATVDC_CONTENT = 102
-	DISPID_CHTUNER_CIDTR_CHANNELID = 101
-	DISPID_CHTUNER_CTR_CHANNEL = 101
-	DISPID_CHTUNER_ACTR_MINOR_CHANNEL = 201
-	DISPID_CHTUNER_DCTR_MAJOR_CHANNEL = 301
-	DISPID_CHTUNER_DCTR_SRCID = 302
-	DISPID_DVBTUNER_DVBC_ATTRIBUTESVALID = 101
-	DISPID_DVBTUNER_DVBC_PID = 102
-	DISPID_DVBTUNER_DVBC_TAG = 103
-	DISPID_DVBTUNER_DVBC_COMPONENTTYPE = 104
-	DISPID_DVBTUNER_ONID = 101
-	DISPID_DVBTUNER_TSID = 102
-	DISPID_DVBTUNER_SID = 103
-	DISPID_MP2TUNER_TSID = 101
-	DISPID_MP2TUNER_PROGNO = 102
-	DISPID_MP2TUNERFACTORY_CREATETUNEREQUEST = 1
+	DISPID_TUNER_TS_UNIQUENAME                        __MIDL___MIDL_itf_tuner_0000_0000_0001 = 1
+	DISPID_TUNER_TS_FRIENDLYNAME                      __MIDL___MIDL_itf_tuner_0000_0000_0001 = 2
+	DISPID_TUNER_TS_CLSID                             __MIDL___MIDL_itf_tuner_0000_0000_0001 = 3
+	DISPID_TUNER_TS_NETWORKTYPE                       __MIDL___MIDL_itf_tuner_0000_0000_0001 = 4
+	DISPID_TUNER_TS__NETWORKTYPE                      __MIDL___MIDL_itf_tuner_0000_0000_0001 = 5
+	DISPID_TUNER_TS_CREATETUNEREQUEST                 __MIDL___MIDL_itf_tuner_0000_0000_0001 = 6
+	DISPID_TUNER_TS_ENUMCATEGORYGUIDS                 __MIDL___MIDL_itf_tuner_0000_0000_0001 = 7
+	DISPID_TUNER_TS_ENUMDEVICEMONIKERS                __MIDL___MIDL_itf_tuner_0000_0000_0001 = 8
+	DISPID_TUNER_TS_DEFAULTPREFERREDCOMPONENTTYPES    __MIDL___MIDL_itf_tuner_0000_0000_0001 = 9
+	DISPID_TUNER_TS_FREQMAP                           __MIDL___MIDL_itf_tuner_0000_0000_0001 = 10
+	DISPID_TUNER_TS_DEFLOCATOR                        __MIDL___MIDL_itf_tuner_0000_0000_0001 = 11
+	DISPID_TUNER_TS_CLONE                             __MIDL___MIDL_itf_tuner_0000_0000_0001 = 12
+	DISPID_TUNER_TR_TUNINGSPACE                       __MIDL___MIDL_itf_tuner_0000_0000_0001 = 1
+	DISPID_TUNER_TR_COMPONENTS                        __MIDL___MIDL_itf_tuner_0000_0000_0001 = 2
+	DISPID_TUNER_TR_CLONE                             __MIDL___MIDL_itf_tuner_0000_0000_0001 = 3
+	DISPID_TUNER_TR_LOCATOR                           __MIDL___MIDL_itf_tuner_0000_0000_0001 = 4
+	DISPID_TUNER_CT_CATEGORY                          __MIDL___MIDL_itf_tuner_0000_0000_0001 = 1
+	DISPID_TUNER_CT_MEDIAMAJORTYPE                    __MIDL___MIDL_itf_tuner_0000_0000_0001 = 2
+	DISPID_TUNER_CT__MEDIAMAJORTYPE                   __MIDL___MIDL_itf_tuner_0000_0000_0001 = 3
+	DISPID_TUNER_CT_MEDIASUBTYPE                      __MIDL___MIDL_itf_tuner_0000_0000_0001 = 4
+	DISPID_TUNER_CT__MEDIASUBTYPE                     __MIDL___MIDL_itf_tuner_0000_0000_0001 = 5
+	DISPID_TUNER_CT_MEDIAFORMATTYPE                   __MIDL___MIDL_itf_tuner_0000_0000_0001 = 6
+	DISPID_TUNER_CT__MEDIAFORMATTYPE                  __MIDL___MIDL_itf_tuner_0000_0000_0001 = 7
+	DISPID_TUNER_CT_MEDIATYPE                         __MIDL___MIDL_itf_tuner_0000_0000_0001 = 8
+	DISPID_TUNER_CT_CLONE                             __MIDL___MIDL_itf_tuner_0000_0000_0001 = 9
+	DISPID_TUNER_LCT_LANGID                           __MIDL___MIDL_itf_tuner_0000_0000_0001 = 100
+	DISPID_TUNER_MP2CT_TYPE                           __MIDL___MIDL_itf_tuner_0000_0000_0001 = 200
+	DISPID_TUNER_ATSCCT_FLAGS                         __MIDL___MIDL_itf_tuner_0000_0000_0001 = 300
+	DISPID_TUNER_L_CARRFREQ                           __MIDL___MIDL_itf_tuner_0000_0000_0001 = 1
+	DISPID_TUNER_L_INNERFECMETHOD                     __MIDL___MIDL_itf_tuner_0000_0000_0001 = 2
+	DISPID_TUNER_L_INNERFECRATE                       __MIDL___MIDL_itf_tuner_0000_0000_0001 = 3
+	DISPID_TUNER_L_OUTERFECMETHOD                     __MIDL___MIDL_itf_tuner_0000_0000_0001 = 4
+	DISPID_TUNER_L_OUTERFECRATE                       __MIDL___MIDL_itf_tuner_0000_0000_0001 = 5
+	DISPID_TUNER_L_MOD                                __MIDL___MIDL_itf_tuner_0000_0000_0001 = 6
+	DISPID_TUNER_L_SYMRATE                            __MIDL___MIDL_itf_tuner_0000_0000_0001 = 7
+	DISPID_TUNER_L_CLONE                              __MIDL___MIDL_itf_tuner_0000_0000_0001 = 8
+	DISPID_TUNER_L_ATSC_PHYS_CHANNEL                  __MIDL___MIDL_itf_tuner_0000_0000_0001 = 201
+	DISPID_TUNER_L_ATSC_TSID                          __MIDL___MIDL_itf_tuner_0000_0000_0001 = 202
+	DISPID_TUNER_L_ATSC_MP2_PROGNO                    __MIDL___MIDL_itf_tuner_0000_0000_0001 = 203
+	DISPID_TUNER_L_DVBT_BANDWIDTH                     __MIDL___MIDL_itf_tuner_0000_0000_0001 = 301
+	DISPID_TUNER_L_DVBT_LPINNERFECMETHOD              __MIDL___MIDL_itf_tuner_0000_0000_0001 = 302
+	DISPID_TUNER_L_DVBT_LPINNERFECRATE                __MIDL___MIDL_itf_tuner_0000_0000_0001 = 303
+	DISPID_TUNER_L_DVBT_GUARDINTERVAL                 __MIDL___MIDL_itf_tuner_0000_0000_0001 = 304
+	DISPID_TUNER_L_DVBT_HALPHA                        __MIDL___MIDL_itf_tuner_0000_0000_0001 = 305
+	DISPID_TUNER_L_DVBT_TRANSMISSIONMODE              __MIDL___MIDL_itf_tuner_0000_0000_0001 = 306
+	DISPID_TUNER_L_DVBT_INUSE                         __MIDL___MIDL_itf_tuner_0000_0000_0001 = 307
+	DISPID_TUNER_L_DVBT2_PHYSICALLAYERPIPEID          __MIDL___MIDL_itf_tuner_0000_0000_0001 = 351
+	DISPID_TUNER_L_DVBS_POLARISATION                  __MIDL___MIDL_itf_tuner_0000_0000_0001 = 401
+	DISPID_TUNER_L_DVBS_WEST                          __MIDL___MIDL_itf_tuner_0000_0000_0001 = 402
+	DISPID_TUNER_L_DVBS_ORBITAL                       __MIDL___MIDL_itf_tuner_0000_0000_0001 = 403
+	DISPID_TUNER_L_DVBS_AZIMUTH                       __MIDL___MIDL_itf_tuner_0000_0000_0001 = 404
+	DISPID_TUNER_L_DVBS_ELEVATION                     __MIDL___MIDL_itf_tuner_0000_0000_0001 = 405
+	DISPID_TUNER_L_DVBS2_DISEQ_LNB_SOURCE             __MIDL___MIDL_itf_tuner_0000_0000_0001 = 406
+	DISPID_TUNER_TS_DVBS2_LOW_OSC_FREQ_OVERRIDE       __MIDL___MIDL_itf_tuner_0000_0000_0001 = 407
+	DISPID_TUNER_TS_DVBS2_HI_OSC_FREQ_OVERRIDE        __MIDL___MIDL_itf_tuner_0000_0000_0001 = 408
+	DISPID_TUNER_TS_DVBS2_LNB_SWITCH_FREQ_OVERRIDE    __MIDL___MIDL_itf_tuner_0000_0000_0001 = 409
+	DISPID_TUNER_TS_DVBS2_SPECTRAL_INVERSION_OVERRIDE __MIDL___MIDL_itf_tuner_0000_0000_0001 = 410
+	DISPID_TUNER_L_DVBS2_ROLLOFF                      __MIDL___MIDL_itf_tuner_0000_0000_0001 = 411
+	DISPID_TUNER_L_DVBS2_PILOT                        __MIDL___MIDL_itf_tuner_0000_0000_0001 = 412
+	DISPID_TUNER_L_ANALOG_STANDARD                    __MIDL___MIDL_itf_tuner_0000_0000_0001 = 601
+	DISPID_TUNER_L_DTV_O_MAJOR_CHANNEL                __MIDL___MIDL_itf_tuner_0000_0000_0001 = 701
+	DISPID_TUNER_C_TYPE                               __MIDL___MIDL_itf_tuner_0000_0000_0001 = 1
+	DISPID_TUNER_C_STATUS                             __MIDL___MIDL_itf_tuner_0000_0000_0001 = 2
+	DISPID_TUNER_C_LANGID                             __MIDL___MIDL_itf_tuner_0000_0000_0001 = 3
+	DISPID_TUNER_C_DESCRIPTION                        __MIDL___MIDL_itf_tuner_0000_0000_0001 = 4
+	DISPID_TUNER_C_CLONE                              __MIDL___MIDL_itf_tuner_0000_0000_0001 = 5
+	DISPID_TUNER_C_MP2_PID                            __MIDL___MIDL_itf_tuner_0000_0000_0001 = 101
+	DISPID_TUNER_C_MP2_PCRPID                         __MIDL___MIDL_itf_tuner_0000_0000_0001 = 102
+	DISPID_TUNER_C_MP2_PROGNO                         __MIDL___MIDL_itf_tuner_0000_0000_0001 = 103
+	DISPID_TUNER_C_ANALOG_AUDIO                       __MIDL___MIDL_itf_tuner_0000_0000_0001 = 201
+	DISPID_TUNER_TS_DVB_SYSTEMTYPE                    __MIDL___MIDL_itf_tuner_0000_0000_0001 = 101
+	DISPID_TUNER_TS_DVB2_NETWORK_ID                   __MIDL___MIDL_itf_tuner_0000_0000_0001 = 102
+	DISPID_TUNER_TS_DVBS_LOW_OSC_FREQ                 __MIDL___MIDL_itf_tuner_0000_0000_0001 = 1001
+	DISPID_TUNER_TS_DVBS_HI_OSC_FREQ                  __MIDL___MIDL_itf_tuner_0000_0000_0001 = 1002
+	DISPID_TUNER_TS_DVBS_LNB_SWITCH_FREQ              __MIDL___MIDL_itf_tuner_0000_0000_0001 = 1003
+	DISPID_TUNER_TS_DVBS_INPUT_RANGE                  __MIDL___MIDL_itf_tuner_0000_0000_0001 = 1004
+	DISPID_TUNER_TS_DVBS_SPECTRAL_INVERSION           __MIDL___MIDL_itf_tuner_0000_0000_0001 = 1005
+	DISPID_TUNER_TS_AR_MINFREQUENCY                   __MIDL___MIDL_itf_tuner_0000_0000_0001 = 101
+	DISPID_TUNER_TS_AR_MAXFREQUENCY                   __MIDL___MIDL_itf_tuner_0000_0000_0001 = 102
+	DISPID_TUNER_TS_AR_STEP                           __MIDL___MIDL_itf_tuner_0000_0000_0001 = 103
+	DISPID_TUNER_TS_AR_COUNTRYCODE                    __MIDL___MIDL_itf_tuner_0000_0000_0001 = 104
+	DISPID_TUNER_TS_AUX_COUNTRYCODE                   __MIDL___MIDL_itf_tuner_0000_0000_0001 = 101
+	DISPID_TUNER_TS_ATV_MINCHANNEL                    __MIDL___MIDL_itf_tuner_0000_0000_0001 = 101
+	DISPID_TUNER_TS_ATV_MAXCHANNEL                    __MIDL___MIDL_itf_tuner_0000_0000_0001 = 102
+	DISPID_TUNER_TS_ATV_INPUTTYPE                     __MIDL___MIDL_itf_tuner_0000_0000_0001 = 103
+	DISPID_TUNER_TS_ATV_COUNTRYCODE                   __MIDL___MIDL_itf_tuner_0000_0000_0001 = 104
+	DISPID_TUNER_TS_ATSC_MINMINORCHANNEL              __MIDL___MIDL_itf_tuner_0000_0000_0001 = 201
+	DISPID_TUNER_TS_ATSC_MAXMINORCHANNEL              __MIDL___MIDL_itf_tuner_0000_0000_0001 = 202
+	DISPID_TUNER_TS_ATSC_MINPHYSCHANNEL               __MIDL___MIDL_itf_tuner_0000_0000_0001 = 203
+	DISPID_TUNER_TS_ATSC_MAXPHYSCHANNEL               __MIDL___MIDL_itf_tuner_0000_0000_0001 = 204
+	DISPID_TUNER_TS_DC_MINMAJORCHANNEL                __MIDL___MIDL_itf_tuner_0000_0000_0001 = 301
+	DISPID_TUNER_TS_DC_MAXMAJORCHANNEL                __MIDL___MIDL_itf_tuner_0000_0000_0001 = 302
+	DISPID_TUNER_TS_DC_MINSOURCEID                    __MIDL___MIDL_itf_tuner_0000_0000_0001 = 303
+	DISPID_TUNER_TS_DC_MAXSOURCEID                    __MIDL___MIDL_itf_tuner_0000_0000_0001 = 304
+	DISPID_CHTUNER_ATVAC_CHANNEL                      __MIDL___MIDL_itf_tuner_0000_0000_0001 = 101
+	DISPID_CHTUNER_ATVDC_SYSTEM                       __MIDL___MIDL_itf_tuner_0000_0000_0001 = 101
+	DISPID_CHTUNER_ATVDC_CONTENT                      __MIDL___MIDL_itf_tuner_0000_0000_0001 = 102
+	DISPID_CHTUNER_CIDTR_CHANNELID                    __MIDL___MIDL_itf_tuner_0000_0000_0001 = 101
+	DISPID_CHTUNER_CTR_CHANNEL                        __MIDL___MIDL_itf_tuner_0000_0000_0001 = 101
+	DISPID_CHTUNER_ACTR_MINOR_CHANNEL                 __MIDL___MIDL_itf_tuner_0000_0000_0001 = 201
+	DISPID_CHTUNER_DCTR_MAJOR_CHANNEL                 __MIDL___MIDL_itf_tuner_0000_0000_0001 = 301
+	DISPID_CHTUNER_DCTR_SRCID                         __MIDL___MIDL_itf_tuner_0000_0000_0001 = 302
+	DISPID_DVBTUNER_DVBC_ATTRIBUTESVALID              __MIDL___MIDL_itf_tuner_0000_0000_0001 = 101
+	DISPID_DVBTUNER_DVBC_PID                          __MIDL___MIDL_itf_tuner_0000_0000_0001 = 102
+	DISPID_DVBTUNER_DVBC_TAG                          __MIDL___MIDL_itf_tuner_0000_0000_0001 = 103
+	DISPID_DVBTUNER_DVBC_COMPONENTTYPE                __MIDL___MIDL_itf_tuner_0000_0000_0001 = 104
+	DISPID_DVBTUNER_ONID                              __MIDL___MIDL_itf_tuner_0000_0000_0001 = 101
+	DISPID_DVBTUNER_TSID                              __MIDL___MIDL_itf_tuner_0000_0000_0001 = 102
+	DISPID_DVBTUNER_SID                               __MIDL___MIDL_itf_tuner_0000_0000_0001 = 103
+	DISPID_MP2TUNER_TSID                              __MIDL___MIDL_itf_tuner_0000_0000_0001 = 101
+	DISPID_MP2TUNER_PROGNO                            __MIDL___MIDL_itf_tuner_0000_0000_0001 = 102
+	DISPID_MP2TUNERFACTORY_CREATETUNEREQUEST          __MIDL___MIDL_itf_tuner_0000_0000_0001 = 1
 )
 
 type EnTvRat_System int32
 
 const (
-	MPAA = 0
-	US_TV = 1
-	Canadian_English = 2
-	Canadian_French = 3
-	Reserved4 = 4
-	System5 = 5
-	System6 = 6
-	Reserved7 = 7
-	PBDA = 8
-	AgeBased = 9
-	TvRat_kSystems = 10
-	TvRat_SystemDontKnow = 255
+	MPAA                 EnTvRat_System = 0
+	US_TV                EnTvRat_System = 1
+	Canadian_English     EnTvRat_System = 2
+	Canadian_French      EnTvRat_System = 3
+	Reserved4            EnTvRat_System = 4
+	System5              EnTvRat_System = 5
+	System6              EnTvRat_System = 6
+	Reserved7            EnTvRat_System = 7
+	PBDA                 EnTvRat_System = 8
+	AgeBased             EnTvRat_System = 9
+	TvRat_kSystems       EnTvRat_System = 10
+	TvRat_SystemDontKnow EnTvRat_System = 255
 )
 
 type EnTvRat_GenericLevel int32
 
 const (
-	TvRat_0 = 0
-	TvRat_1 = 1
-	TvRat_2 = 2
-	TvRat_3 = 3
-	TvRat_4 = 4
-	TvRat_5 = 5
-	TvRat_6 = 6
-	TvRat_7 = 7
-	TvRat_8 = 8
-	TvRat_9 = 9
-	TvRat_10 = 10
-	TvRat_11 = 11
-	TvRat_12 = 12
-	TvRat_13 = 13
-	TvRat_14 = 14
-	TvRat_15 = 15
-	TvRat_16 = 16
-	TvRat_17 = 17
-	TvRat_18 = 18
-	TvRat_19 = 19
-	TvRat_20 = 20
-	TvRat_21 = 21
-	TvRat_kLevels = 22
-	TvRat_Unblock = -1
-	TvRat_LevelDontKnow = 255
+	TvRat_0             EnTvRat_GenericLevel = 0
+	TvRat_1             EnTvRat_GenericLevel = 1
+	TvRat_2             EnTvRat_GenericLevel = 2
+	TvRat_3             EnTvRat_GenericLevel = 3
+	TvRat_4             EnTvRat_GenericLevel = 4
+	TvRat_5             EnTvRat_GenericLevel = 5
+	TvRat_6             EnTvRat_GenericLevel = 6
+	TvRat_7             EnTvRat_GenericLevel = 7
+	TvRat_8             EnTvRat_GenericLevel = 8
+	TvRat_9             EnTvRat_GenericLevel = 9
+	TvRat_10            EnTvRat_GenericLevel = 10
+	TvRat_11            EnTvRat_GenericLevel = 11
+	TvRat_12            EnTvRat_GenericLevel = 12
+	TvRat_13            EnTvRat_GenericLevel = 13
+	TvRat_14            EnTvRat_GenericLevel = 14
+	TvRat_15            EnTvRat_GenericLevel = 15
+	TvRat_16            EnTvRat_GenericLevel = 16
+	TvRat_17            EnTvRat_GenericLevel = 17
+	TvRat_18            EnTvRat_GenericLevel = 18
+	TvRat_19            EnTvRat_GenericLevel = 19
+	TvRat_20            EnTvRat_GenericLevel = 20
+	TvRat_21            EnTvRat_GenericLevel = 21
+	TvRat_kLevels       EnTvRat_GenericLevel = 22
+	TvRat_Unblock       EnTvRat_GenericLevel = -1
+	TvRat_LevelDontKnow EnTvRat_GenericLevel = 255
 )
 
 type EnTvRat_MPAA int32
 
 const (
-	MPAA_NotApplicable = 0
-	MPAA_G = 1
-	MPAA_PG = 2
-	MPAA_PG13 = 3
-	MPAA_R = 4
-	MPAA_NC17 = 5
-	MPAA_X = 6
-	MPAA_NotRated = 7
+	MPAA_NotApplicable EnTvRat_MPAA = 0
+	MPAA_G             EnTvRat_MPAA = 1
+	MPAA_PG            EnTvRat_MPAA = 2
+	MPAA_PG13          EnTvRat_MPAA = 3
+	MPAA_R             EnTvRat_MPAA = 4
+	MPAA_NC17          EnTvRat_MPAA = 5
+	MPAA_X             EnTvRat_MPAA = 6
+	MPAA_NotRated      EnTvRat_MPAA = 7
 )
 
 type EnTvRat_US_TV int32
 
 const (
-	US_TV_None = 0
-	US_TV_Y = 1
-	US_TV_Y7 = 2
-	US_TV_G = 3
-	US_TV_PG = 4
-	US_TV_14 = 5
-	US_TV_MA = 6
-	US_TV_None7 = 7
+	US_TV_None  EnTvRat_US_TV = 0
+	US_TV_Y     EnTvRat_US_TV = 1
+	US_TV_Y7    EnTvRat_US_TV = 2
+	US_TV_G     EnTvRat_US_TV = 3
+	US_TV_PG    EnTvRat_US_TV = 4
+	US_TV_14    EnTvRat_US_TV = 5
+	US_TV_MA    EnTvRat_US_TV = 6
+	US_TV_None7 EnTvRat_US_TV = 7
 )
 
 type EnTvRat_CAE_TV int32
 
 const (
-	CAE_TV_Exempt = 0
-	CAE_TV_C = 1
-	CAE_TV_C8 = 2
-	CAE_TV_G = 3
-	CAE_TV_PG = 4
-	CAE_TV_14 = 5
-	CAE_TV_18 = 6
-	CAE_TV_Reserved = 7
+	CAE_TV_Exempt   EnTvRat_CAE_TV = 0
+	CAE_TV_C        EnTvRat_CAE_TV = 1
+	CAE_TV_C8       EnTvRat_CAE_TV = 2
+	CAE_TV_G        EnTvRat_CAE_TV = 3
+	CAE_TV_PG       EnTvRat_CAE_TV = 4
+	CAE_TV_14       EnTvRat_CAE_TV = 5
+	CAE_TV_18       EnTvRat_CAE_TV = 6
+	CAE_TV_Reserved EnTvRat_CAE_TV = 7
 )
 
 type EnTvRat_CAF_TV int32
 
 const (
-	CAF_TV_Exempt = 0
-	CAF_TV_G = 1
-	CAF_TV_8 = 2
-	CAF_TV_13 = 3
-	CAF_TV_16 = 4
-	CAF_TV_18 = 5
-	CAF_TV_Reserved6 = 6
-	CAF_TV_Reserved = 7
+	CAF_TV_Exempt    EnTvRat_CAF_TV = 0
+	CAF_TV_G         EnTvRat_CAF_TV = 1
+	CAF_TV_8         EnTvRat_CAF_TV = 2
+	CAF_TV_13        EnTvRat_CAF_TV = 3
+	CAF_TV_16        EnTvRat_CAF_TV = 4
+	CAF_TV_18        EnTvRat_CAF_TV = 5
+	CAF_TV_Reserved6 EnTvRat_CAF_TV = 6
+	CAF_TV_Reserved  EnTvRat_CAF_TV = 7
 )
 
 type BfEnTvRat_GenericAttributes int32
 
 const (
-	BfAttrNone = 0
-	BfIsBlocked = 1
-	BfIsAttr_1 = 2
-	BfIsAttr_2 = 4
-	BfIsAttr_3 = 8
-	BfIsAttr_4 = 16
-	BfIsAttr_5 = 32
-	BfIsAttr_6 = 64
-	BfIsAttr_7 = 128
-	BfValidAttrSubmask = 255
+	BfAttrNone         BfEnTvRat_GenericAttributes = 0
+	BfIsBlocked        BfEnTvRat_GenericAttributes = 1
+	BfIsAttr_1         BfEnTvRat_GenericAttributes = 2
+	BfIsAttr_2         BfEnTvRat_GenericAttributes = 4
+	BfIsAttr_3         BfEnTvRat_GenericAttributes = 8
+	BfIsAttr_4         BfEnTvRat_GenericAttributes = 16
+	BfIsAttr_5         BfEnTvRat_GenericAttributes = 32
+	BfIsAttr_6         BfEnTvRat_GenericAttributes = 64
+	BfIsAttr_7         BfEnTvRat_GenericAttributes = 128
+	BfValidAttrSubmask BfEnTvRat_GenericAttributes = 255
 )
 
 type BfEnTvRat_Attributes_US_TV int32
 
 const (
-	US_TV_IsBlocked = 1
-	US_TV_IsViolent = 2
-	US_TV_IsSexualSituation = 4
-	US_TV_IsAdultLanguage = 8
-	US_TV_IsSexuallySuggestiveDialog = 16
-	US_TV_ValidAttrSubmask = 31
+	US_TV_IsBlocked                  BfEnTvRat_Attributes_US_TV = 1
+	US_TV_IsViolent                  BfEnTvRat_Attributes_US_TV = 2
+	US_TV_IsSexualSituation          BfEnTvRat_Attributes_US_TV = 4
+	US_TV_IsAdultLanguage            BfEnTvRat_Attributes_US_TV = 8
+	US_TV_IsSexuallySuggestiveDialog BfEnTvRat_Attributes_US_TV = 16
+	US_TV_ValidAttrSubmask           BfEnTvRat_Attributes_US_TV = 31
 )
 
 type BfEnTvRat_Attributes_MPAA int32
 
 const (
-	MPAA_IsBlocked = 1
-	MPAA_ValidAttrSubmask = 1
+	MPAA_IsBlocked        BfEnTvRat_Attributes_MPAA = 1
+	MPAA_ValidAttrSubmask BfEnTvRat_Attributes_MPAA = 1
 )
 
 type BfEnTvRat_Attributes_CAE_TV int32
 
 const (
-	CAE_IsBlocked = 1
-	CAE_ValidAttrSubmask = 1
+	CAE_IsBlocked        BfEnTvRat_Attributes_CAE_TV = 1
+	CAE_ValidAttrSubmask BfEnTvRat_Attributes_CAE_TV = 1
 )
 
 type BfEnTvRat_Attributes_CAF_TV int32
 
 const (
-	CAF_IsBlocked = 1
-	CAF_ValidAttrSubmask = 1
+	CAF_IsBlocked        BfEnTvRat_Attributes_CAF_TV = 1
+	CAF_ValidAttrSubmask BfEnTvRat_Attributes_CAF_TV = 1
 )
 
 type FormatNotSupportedEvents int32
 
 const (
-	FORMATNOTSUPPORTED_CLEAR = 0
-	FORMATNOTSUPPORTED_NOTSUPPORTED = 1
+	FORMATNOTSUPPORTED_CLEAR        FormatNotSupportedEvents = 0
+	FORMATNOTSUPPORTED_NOTSUPPORTED FormatNotSupportedEvents = 1
 )
 
 type ProtType int32
 
 const (
-	PROT_COPY_FREE = 1
-	PROT_COPY_ONCE = 2
-	PROT_COPY_NEVER = 3
-	PROT_COPY_NEVER_REALLY = 4
-	PROT_COPY_NO_MORE = 5
-	PROT_COPY_FREE_CIT = 6
-	PROT_COPY_BF = 7
-	PROT_COPY_CN_RECORDING_STOP = 8
-	PROT_COPY_FREE_SECURE = 9
-	PROT_COPY_INVALID = 50
+	PROT_COPY_FREE              ProtType = 1
+	PROT_COPY_ONCE              ProtType = 2
+	PROT_COPY_NEVER             ProtType = 3
+	PROT_COPY_NEVER_REALLY      ProtType = 4
+	PROT_COPY_NO_MORE           ProtType = 5
+	PROT_COPY_FREE_CIT          ProtType = 6
+	PROT_COPY_BF                ProtType = 7
+	PROT_COPY_CN_RECORDING_STOP ProtType = 8
+	PROT_COPY_FREE_SECURE       ProtType = 9
+	PROT_COPY_INVALID           ProtType = 50
 )
 
 type EncDecEvents int32
 
 const (
-	ENCDEC_CPEVENT = 0
-	ENCDEC_RECORDING_STATUS = 1
+	ENCDEC_CPEVENT          EncDecEvents = 0
+	ENCDEC_RECORDING_STATUS EncDecEvents = 1
 )
 
 type CPRecordingStatus int32
 
 const (
-	RECORDING_STOPPED = 0
-	RECORDING_STARTED = 1
+	RECORDING_STOPPED CPRecordingStatus = 0
+	RECORDING_STARTED CPRecordingStatus = 1
 )
 
 type CPEventBitShift int32
 
 const (
-	CPEVENT_BITSHIFT_RATINGS = 0
-	CPEVENT_BITSHIFT_COPP = 1
-	CPEVENT_BITSHIFT_LICENSE = 2
-	CPEVENT_BITSHIFT_ROLLBACK = 3
-	CPEVENT_BITSHIFT_SAC = 4
-	CPEVENT_BITSHIFT_DOWNRES = 5
-	CPEVENT_BITSHIFT_STUBLIB = 6
-	CPEVENT_BITSHIFT_UNTRUSTEDGRAPH = 7
-	CPEVENT_BITSHIFT_PENDING_CERTIFICATE = 8
-	CPEVENT_BITSHIFT_NO_PLAYREADY = 9
+	CPEVENT_BITSHIFT_RATINGS             CPEventBitShift = 0
+	CPEVENT_BITSHIFT_COPP                CPEventBitShift = 1
+	CPEVENT_BITSHIFT_LICENSE             CPEventBitShift = 2
+	CPEVENT_BITSHIFT_ROLLBACK            CPEventBitShift = 3
+	CPEVENT_BITSHIFT_SAC                 CPEventBitShift = 4
+	CPEVENT_BITSHIFT_DOWNRES             CPEventBitShift = 5
+	CPEVENT_BITSHIFT_STUBLIB             CPEventBitShift = 6
+	CPEVENT_BITSHIFT_UNTRUSTEDGRAPH      CPEventBitShift = 7
+	CPEVENT_BITSHIFT_PENDING_CERTIFICATE CPEventBitShift = 8
+	CPEVENT_BITSHIFT_NO_PLAYREADY        CPEventBitShift = 9
 )
 
 type CPEvents int32
 
 const (
-	CPEVENT_NONE = 0
-	CPEVENT_RATINGS = 1
-	CPEVENT_COPP = 2
-	CPEVENT_LICENSE = 3
-	CPEVENT_ROLLBACK = 4
-	CPEVENT_SAC = 5
-	CPEVENT_DOWNRES = 6
-	CPEVENT_STUBLIB = 7
-	CPEVENT_UNTRUSTEDGRAPH = 8
-	CPEVENT_PROTECTWINDOWED = 9
+	CPEVENT_NONE            CPEvents = 0
+	CPEVENT_RATINGS         CPEvents = 1
+	CPEVENT_COPP            CPEvents = 2
+	CPEVENT_LICENSE         CPEvents = 3
+	CPEVENT_ROLLBACK        CPEvents = 4
+	CPEVENT_SAC             CPEvents = 5
+	CPEVENT_DOWNRES         CPEvents = 6
+	CPEVENT_STUBLIB         CPEvents = 7
+	CPEVENT_UNTRUSTEDGRAPH  CPEvents = 8
+	CPEVENT_PROTECTWINDOWED CPEvents = 9
 )
 
 type RevokedComponent int32
 
 const (
-	REVOKED_COPP = 0
-	REVOKED_SAC = 1
-	REVOKED_APP_STUB = 2
-	REVOKED_SECURE_PIPELINE = 3
-	REVOKED_MAX_TYPES = 4
+	REVOKED_COPP            RevokedComponent = 0
+	REVOKED_SAC             RevokedComponent = 1
+	REVOKED_APP_STUB        RevokedComponent = 2
+	REVOKED_SECURE_PIPELINE RevokedComponent = 3
+	REVOKED_MAX_TYPES       RevokedComponent = 4
 )
 
 type EnTag_Mode int32
 
 const (
-	EnTag_Remove = 0
-	EnTag_Once = 1
-	EnTag_Repeat = 2
+	EnTag_Remove EnTag_Mode = 0
+	EnTag_Once   EnTag_Mode = 1
+	EnTag_Repeat EnTag_Mode = 2
 )
 
 type COPPEventBlockReason int32
 
 const (
-	COPP_Unknown = -1
-	COPP_BadDriver = 0
-	COPP_NoCardHDCPSupport = 1
-	COPP_NoMonitorHDCPSupport = 2
-	COPP_BadCertificate = 3
-	COPP_InvalidBusProtection = 4
-	COPP_AeroGlassOff = 5
-	COPP_RogueApp = 6
-	COPP_ForbiddenVideo = 7
-	COPP_Activate = 8
-	COPP_DigitalAudioUnprotected = 9
+	COPP_Unknown                 COPPEventBlockReason = -1
+	COPP_BadDriver               COPPEventBlockReason = 0
+	COPP_NoCardHDCPSupport       COPPEventBlockReason = 1
+	COPP_NoMonitorHDCPSupport    COPPEventBlockReason = 2
+	COPP_BadCertificate          COPPEventBlockReason = 3
+	COPP_InvalidBusProtection    COPPEventBlockReason = 4
+	COPP_AeroGlassOff            COPPEventBlockReason = 5
+	COPP_RogueApp                COPPEventBlockReason = 6
+	COPP_ForbiddenVideo          COPPEventBlockReason = 7
+	COPP_Activate                COPPEventBlockReason = 8
+	COPP_DigitalAudioUnprotected COPPEventBlockReason = 9
 )
 
 type LicenseEventBlockReason int32
 
 const (
-	LIC_BadLicense = 0
-	LIC_NeedIndiv = 1
-	LIC_Expired = 2
-	LIC_NeedActivation = 3
-	LIC_ExtenderBlocked = 4
+	LIC_BadLicense      LicenseEventBlockReason = 0
+	LIC_NeedIndiv       LicenseEventBlockReason = 1
+	LIC_Expired         LicenseEventBlockReason = 2
+	LIC_NeedActivation  LicenseEventBlockReason = 3
+	LIC_ExtenderBlocked LicenseEventBlockReason = 4
 )
 
 type DownResEventParam int32
 
 const (
-	DOWNRES_Always = 0
-	DOWNRES_InWindowOnly = 1
-	DOWNRES_Undefined = 2
+	DOWNRES_Always       DownResEventParam = 0
+	DOWNRES_InWindowOnly DownResEventParam = 1
+	DOWNRES_Undefined    DownResEventParam = 2
 )
 
 type SegDispidList int32
 
 const (
-	dispidName = 0
-	dispidStatus = 1
-	dispidDevImageSourceWidth = 2
-	dispidDevImageSourceHeight = 3
-	dispidDevCountryCode = 4
-	dispidDevOverScan = 5
-	dispidSegment = 6
-	dispidDevVolume = 7
-	dispidDevBalance = 8
-	dispidDevPower = 9
-	dispidTuneChan = 10
-	dispidDevVideoSubchannel = 11
-	dispidDevAudioSubchannel = 12
-	dispidChannelAvailable = 13
-	dispidDevVideoFrequency = 14
-	dispidDevAudioFrequency = 15
-	dispidCount = 16
-	dispidDevFileName = 17
-	dispidVisible = 18
-	dispidOwner = 19
-	dispidMessageDrain = 20
-	dispidViewable = 21
-	dispidDevView = 22
-	dispidKSCat = 23
-	dispidCLSID = 24
-	dispid_KSCat = 25
-	dispid_CLSID = 26
-	dispidTune = 27
-	dispidTS = 28
-	dispidDevSAP = 29
-	dispidClip = 30
-	dispidRequestedClipRect = 31
-	dispidClippedSourceRect = 32
-	dispidAvailableSourceRect = 33
-	dispidMediaPosition = 34
-	dispidDevRun = 35
-	dispidDevPause = 36
-	dispidDevStop = 37
-	dispidCCEnable = 38
-	dispidDevStep = 39
-	dispidDevCanStep = 40
-	dispidSourceSize = 41
-	dispid_playtitle = 42
-	dispid_playchapterintitle = 43
-	dispid_playchapter = 44
-	dispid_playchaptersautostop = 45
-	dispid_playattime = 46
-	dispid_playattimeintitle = 47
-	dispid_playperiodintitleautostop = 48
-	dispid_replaychapter = 49
-	dispid_playprevchapter = 50
-	dispid_playnextchapter = 51
-	dispid_playforwards = 52
-	dispid_playbackwards = 53
-	dispid_stilloff = 54
-	dispid_audiolanguage = 55
-	dispid_showmenu = 56
-	dispid_resume = 57
-	dispid_returnfromsubmenu = 58
-	dispid_buttonsavailable = 59
-	dispid_currentbutton = 60
-	dispid_SelectAndActivateButton = 61
-	dispid_ActivateButton = 62
-	dispid_SelectRightButton = 63
-	dispid_SelectLeftButton = 64
-	dispid_SelectLowerButton = 65
-	dispid_SelectUpperButton = 66
-	dispid_ActivateAtPosition = 67
-	dispid_SelectAtPosition = 68
-	dispid_ButtonAtPosition = 69
-	dispid_NumberOfChapters = 70
-	dispid_TotalTitleTime = 71
-	dispid_TitlesAvailable = 72
-	dispid_VolumesAvailable = 73
-	dispid_CurrentVolume = 74
-	dispid_CurrentDiscSide = 75
-	dispid_CurrentDomain = 76
-	dispid_CurrentChapter = 77
-	dispid_CurrentTitle = 78
-	dispid_CurrentTime = 79
-	dispid_FramesPerSecond = 80
-	dispid_DVDTimeCode2bstr = 81
-	dispid_DVDDirectory = 82
-	dispid_IsSubpictureStreamEnabled = 83
-	dispid_IsAudioStreamEnabled = 84
-	dispid_CurrentSubpictureStream = 85
-	dispid_SubpictureLanguage = 86
-	dispid_CurrentAudioStream = 87
-	dispid_AudioStreamsAvailable = 88
-	dispid_AnglesAvailable = 89
-	dispid_CurrentAngle = 90
-	dispid_CCActive = 91
-	dispid_CurrentCCService = 92
-	dispid_SubpictureStreamsAvailable = 93
-	dispid_SubpictureOn = 94
-	dispid_DVDUniqueID = 95
-	dispid_EnableResetOnStop = 96
-	dispid_AcceptParentalLevelChange = 97
-	dispid_NotifyParentalLevelChange = 98
-	dispid_SelectParentalCountry = 99
-	dispid_SelectParentalLevel = 100
-	dispid_TitleParentalLevels = 101
-	dispid_PlayerParentalCountry = 102
-	dispid_PlayerParentalLevel = 103
-	dispid_Eject = 104
-	dispid_UOPValid = 105
-	dispid_SPRM = 106
-	dispid_GPRM = 107
-	dispid_DVDTextStringType = 108
-	dispid_DVDTextString = 109
-	dispid_DVDTextNumberOfStrings = 110
-	dispid_DVDTextNumberOfLanguages = 111
-	dispid_DVDTextLanguageLCID = 112
-	dispid_RegionChange = 113
-	dispid_DVDAdm = 114
-	dispid_DeleteBookmark = 115
-	dispid_RestoreBookmark = 116
-	dispid_SaveBookmark = 117
-	dispid_SelectDefaultAudioLanguage = 118
-	dispid_SelectDefaultSubpictureLanguage = 119
-	dispid_PreferredSubpictureStream = 120
-	dispid_DefaultMenuLanguage = 121
-	dispid_DefaultSubpictureLanguage = 122
-	dispid_DefaultAudioLanguage = 123
-	dispid_DefaultSubpictureLanguageExt = 124
-	dispid_DefaultAudioLanguageExt = 125
-	dispid_LanguageFromLCID = 126
-	dispid_KaraokeAudioPresentationMode = 127
-	dispid_KaraokeChannelContent = 128
-	dispid_KaraokeChannelAssignment = 129
-	dispid_RestorePreferredSettings = 130
-	dispid_ButtonRect = 131
-	dispid_DVDScreenInMouseCoordinates = 132
-	dispid_CustomCompositorClass = 133
-	dispidCustomCompositorClass = 134
-	dispid_CustomCompositor = 135
-	dispidMixerBitmap = 136
-	dispid_MixerBitmap = 137
-	dispidMixerBitmapOpacity = 138
-	dispidMixerBitmapRect = 139
-	dispidSetupMixerBitmap = 140
-	dispidUsingOverlay = 141
-	dispidDisplayChange = 142
-	dispidRePaint = 143
-	dispid_IsEqualDevice = 144
-	dispidrate = 145
-	dispidposition = 146
-	dispidpositionmode = 147
-	dispidlength = 148
-	dispidChangePassword = 149
-	dispidSaveParentalLevel = 150
-	dispidSaveParentalCountry = 151
-	dispidConfirmPassword = 152
-	dispidGetParentalLevel = 153
-	dispidGetParentalCountry = 154
-	dispidDefaultAudioLCID = 155
-	dispidDefaultSubpictureLCID = 156
-	dispidDefaultMenuLCID = 157
-	dispidBookmarkOnStop = 158
-	dispidMaxVidRect = 159
-	dispidMinVidRect = 160
-	dispidCapture = 161
-	dispid_DecimateInput = 162
-	dispidAlloctor = 163
-	dispid_Allocator = 164
-	dispidAllocPresentID = 165
-	dispidSetAllocator = 166
-	dispid_SetAllocator = 167
-	dispidStreamBufferSinkName = 168
-	dispidStreamBufferSourceName = 169
-	dispidStreamBufferContentRecording = 170
-	dispidStreamBufferReferenceRecording = 171
-	dispidstarttime = 172
-	dispidstoptime = 173
-	dispidrecordingstopped = 174
-	dispidrecordingstarted = 175
-	dispidNameSetLock = 176
-	dispidrecordingtype = 177
-	dispidstart = 178
-	dispidRecordingAttribute = 179
-	dispid_RecordingAttribute = 180
-	dispidSBEConfigure = 181
-	dispid_CurrentRatings = 182
-	dispid_MaxRatingsLevel = 183
-	dispid_audioencoderint = 184
-	dispid_videoencoderint = 185
-	dispidService = 186
-	dispid_BlockUnrated = 187
-	dispid_UnratedDelay = 188
-	dispid_SuppressEffects = 189
-	dispidsbesource = 190
-	dispidSetSinkFilter = 191
-	dispid_SinkStreams = 192
-	dispidTVFormats = 193
-	dispidModes = 194
-	dispidAuxInputs = 195
-	dispidTeleTextFilter = 196
-	dispid_channelchangeint = 197
-	dispidUnlockProfile = 198
-	dispid_AddFilter = 199
-	dispidSetMinSeek = 200
-	dispidRateEx = 201
-	dispidaudiocounter = 202
-	dispidvideocounter = 203
-	dispidcccounter = 204
-	dispidwstcounter = 205
-	dispid_audiocounter = 206
-	dispid_videocounter = 207
-	dispid_cccounter = 208
-	dispid_wstcounter = 209
-	dispidaudioanalysis = 210
-	dispidvideoanalysis = 211
-	dispiddataanalysis = 212
-	dispidaudio_analysis = 213
-	dispidvideo_analysis = 214
-	dispiddata_analysis = 215
-	dispid_resetFilterList = 216
-	dispidDevicePath = 217
-	dispid_SourceFilter = 218
-	dispid__SourceFilter = 219
-	dispidUserEvent = 220
-	dispid_Bookmark = 221
-	LastReservedDeviceDispid = 16383
+	dispidName                             SegDispidList = 0
+	dispidStatus                           SegDispidList = 1
+	dispidDevImageSourceWidth              SegDispidList = 2
+	dispidDevImageSourceHeight             SegDispidList = 3
+	dispidDevCountryCode                   SegDispidList = 4
+	dispidDevOverScan                      SegDispidList = 5
+	dispidSegment                          SegDispidList = 6
+	dispidDevVolume                        SegDispidList = 7
+	dispidDevBalance                       SegDispidList = 8
+	dispidDevPower                         SegDispidList = 9
+	dispidTuneChan                         SegDispidList = 10
+	dispidDevVideoSubchannel               SegDispidList = 11
+	dispidDevAudioSubchannel               SegDispidList = 12
+	dispidChannelAvailable                 SegDispidList = 13
+	dispidDevVideoFrequency                SegDispidList = 14
+	dispidDevAudioFrequency                SegDispidList = 15
+	dispidCount                            SegDispidList = 16
+	dispidDevFileName                      SegDispidList = 17
+	dispidVisible                          SegDispidList = 18
+	dispidOwner                            SegDispidList = 19
+	dispidMessageDrain                     SegDispidList = 20
+	dispidViewable                         SegDispidList = 21
+	dispidDevView                          SegDispidList = 22
+	dispidKSCat                            SegDispidList = 23
+	dispidCLSID                            SegDispidList = 24
+	dispid_KSCat                           SegDispidList = 25
+	dispid_CLSID                           SegDispidList = 26
+	dispidTune                             SegDispidList = 27
+	dispidTS                               SegDispidList = 28
+	dispidDevSAP                           SegDispidList = 29
+	dispidClip                             SegDispidList = 30
+	dispidRequestedClipRect                SegDispidList = 31
+	dispidClippedSourceRect                SegDispidList = 32
+	dispidAvailableSourceRect              SegDispidList = 33
+	dispidMediaPosition                    SegDispidList = 34
+	dispidDevRun                           SegDispidList = 35
+	dispidDevPause                         SegDispidList = 36
+	dispidDevStop                          SegDispidList = 37
+	dispidCCEnable                         SegDispidList = 38
+	dispidDevStep                          SegDispidList = 39
+	dispidDevCanStep                       SegDispidList = 40
+	dispidSourceSize                       SegDispidList = 41
+	dispid_playtitle                       SegDispidList = 42
+	dispid_playchapterintitle              SegDispidList = 43
+	dispid_playchapter                     SegDispidList = 44
+	dispid_playchaptersautostop            SegDispidList = 45
+	dispid_playattime                      SegDispidList = 46
+	dispid_playattimeintitle               SegDispidList = 47
+	dispid_playperiodintitleautostop       SegDispidList = 48
+	dispid_replaychapter                   SegDispidList = 49
+	dispid_playprevchapter                 SegDispidList = 50
+	dispid_playnextchapter                 SegDispidList = 51
+	dispid_playforwards                    SegDispidList = 52
+	dispid_playbackwards                   SegDispidList = 53
+	dispid_stilloff                        SegDispidList = 54
+	dispid_audiolanguage                   SegDispidList = 55
+	dispid_showmenu                        SegDispidList = 56
+	dispid_resume                          SegDispidList = 57
+	dispid_returnfromsubmenu               SegDispidList = 58
+	dispid_buttonsavailable                SegDispidList = 59
+	dispid_currentbutton                   SegDispidList = 60
+	dispid_SelectAndActivateButton         SegDispidList = 61
+	dispid_ActivateButton                  SegDispidList = 62
+	dispid_SelectRightButton               SegDispidList = 63
+	dispid_SelectLeftButton                SegDispidList = 64
+	dispid_SelectLowerButton               SegDispidList = 65
+	dispid_SelectUpperButton               SegDispidList = 66
+	dispid_ActivateAtPosition              SegDispidList = 67
+	dispid_SelectAtPosition                SegDispidList = 68
+	dispid_ButtonAtPosition                SegDispidList = 69
+	dispid_NumberOfChapters                SegDispidList = 70
+	dispid_TotalTitleTime                  SegDispidList = 71
+	dispid_TitlesAvailable                 SegDispidList = 72
+	dispid_VolumesAvailable                SegDispidList = 73
+	dispid_CurrentVolume                   SegDispidList = 74
+	dispid_CurrentDiscSide                 SegDispidList = 75
+	dispid_CurrentDomain                   SegDispidList = 76
+	dispid_CurrentChapter                  SegDispidList = 77
+	dispid_CurrentTitle                    SegDispidList = 78
+	dispid_CurrentTime                     SegDispidList = 79
+	dispid_FramesPerSecond                 SegDispidList = 80
+	dispid_DVDTimeCode2bstr                SegDispidList = 81
+	dispid_DVDDirectory                    SegDispidList = 82
+	dispid_IsSubpictureStreamEnabled       SegDispidList = 83
+	dispid_IsAudioStreamEnabled            SegDispidList = 84
+	dispid_CurrentSubpictureStream         SegDispidList = 85
+	dispid_SubpictureLanguage              SegDispidList = 86
+	dispid_CurrentAudioStream              SegDispidList = 87
+	dispid_AudioStreamsAvailable           SegDispidList = 88
+	dispid_AnglesAvailable                 SegDispidList = 89
+	dispid_CurrentAngle                    SegDispidList = 90
+	dispid_CCActive                        SegDispidList = 91
+	dispid_CurrentCCService                SegDispidList = 92
+	dispid_SubpictureStreamsAvailable      SegDispidList = 93
+	dispid_SubpictureOn                    SegDispidList = 94
+	dispid_DVDUniqueID                     SegDispidList = 95
+	dispid_EnableResetOnStop               SegDispidList = 96
+	dispid_AcceptParentalLevelChange       SegDispidList = 97
+	dispid_NotifyParentalLevelChange       SegDispidList = 98
+	dispid_SelectParentalCountry           SegDispidList = 99
+	dispid_SelectParentalLevel             SegDispidList = 100
+	dispid_TitleParentalLevels             SegDispidList = 101
+	dispid_PlayerParentalCountry           SegDispidList = 102
+	dispid_PlayerParentalLevel             SegDispidList = 103
+	dispid_Eject                           SegDispidList = 104
+	dispid_UOPValid                        SegDispidList = 105
+	dispid_SPRM                            SegDispidList = 106
+	dispid_GPRM                            SegDispidList = 107
+	dispid_DVDTextStringType               SegDispidList = 108
+	dispid_DVDTextString                   SegDispidList = 109
+	dispid_DVDTextNumberOfStrings          SegDispidList = 110
+	dispid_DVDTextNumberOfLanguages        SegDispidList = 111
+	dispid_DVDTextLanguageLCID             SegDispidList = 112
+	dispid_RegionChange                    SegDispidList = 113
+	dispid_DVDAdm                          SegDispidList = 114
+	dispid_DeleteBookmark                  SegDispidList = 115
+	dispid_RestoreBookmark                 SegDispidList = 116
+	dispid_SaveBookmark                    SegDispidList = 117
+	dispid_SelectDefaultAudioLanguage      SegDispidList = 118
+	dispid_SelectDefaultSubpictureLanguage SegDispidList = 119
+	dispid_PreferredSubpictureStream       SegDispidList = 120
+	dispid_DefaultMenuLanguage             SegDispidList = 121
+	dispid_DefaultSubpictureLanguage       SegDispidList = 122
+	dispid_DefaultAudioLanguage            SegDispidList = 123
+	dispid_DefaultSubpictureLanguageExt    SegDispidList = 124
+	dispid_DefaultAudioLanguageExt         SegDispidList = 125
+	dispid_LanguageFromLCID                SegDispidList = 126
+	dispid_KaraokeAudioPresentationMode    SegDispidList = 127
+	dispid_KaraokeChannelContent           SegDispidList = 128
+	dispid_KaraokeChannelAssignment        SegDispidList = 129
+	dispid_RestorePreferredSettings        SegDispidList = 130
+	dispid_ButtonRect                      SegDispidList = 131
+	dispid_DVDScreenInMouseCoordinates     SegDispidList = 132
+	dispid_CustomCompositorClass           SegDispidList = 133
+	dispidCustomCompositorClass            SegDispidList = 134
+	dispid_CustomCompositor                SegDispidList = 135
+	dispidMixerBitmap                      SegDispidList = 136
+	dispid_MixerBitmap                     SegDispidList = 137
+	dispidMixerBitmapOpacity               SegDispidList = 138
+	dispidMixerBitmapRect                  SegDispidList = 139
+	dispidSetupMixerBitmap                 SegDispidList = 140
+	dispidUsingOverlay                     SegDispidList = 141
+	dispidDisplayChange                    SegDispidList = 142
+	dispidRePaint                          SegDispidList = 143
+	dispid_IsEqualDevice                   SegDispidList = 144
+	dispidrate                             SegDispidList = 145
+	dispidposition                         SegDispidList = 146
+	dispidpositionmode                     SegDispidList = 147
+	dispidlength                           SegDispidList = 148
+	dispidChangePassword                   SegDispidList = 149
+	dispidSaveParentalLevel                SegDispidList = 150
+	dispidSaveParentalCountry              SegDispidList = 151
+	dispidConfirmPassword                  SegDispidList = 152
+	dispidGetParentalLevel                 SegDispidList = 153
+	dispidGetParentalCountry               SegDispidList = 154
+	dispidDefaultAudioLCID                 SegDispidList = 155
+	dispidDefaultSubpictureLCID            SegDispidList = 156
+	dispidDefaultMenuLCID                  SegDispidList = 157
+	dispidBookmarkOnStop                   SegDispidList = 158
+	dispidMaxVidRect                       SegDispidList = 159
+	dispidMinVidRect                       SegDispidList = 160
+	dispidCapture                          SegDispidList = 161
+	dispid_DecimateInput                   SegDispidList = 162
+	dispidAlloctor                         SegDispidList = 163
+	dispid_Allocator                       SegDispidList = 164
+	dispidAllocPresentID                   SegDispidList = 165
+	dispidSetAllocator                     SegDispidList = 166
+	dispid_SetAllocator                    SegDispidList = 167
+	dispidStreamBufferSinkName             SegDispidList = 168
+	dispidStreamBufferSourceName           SegDispidList = 169
+	dispidStreamBufferContentRecording     SegDispidList = 170
+	dispidStreamBufferReferenceRecording   SegDispidList = 171
+	dispidstarttime                        SegDispidList = 172
+	dispidstoptime                         SegDispidList = 173
+	dispidrecordingstopped                 SegDispidList = 174
+	dispidrecordingstarted                 SegDispidList = 175
+	dispidNameSetLock                      SegDispidList = 176
+	dispidrecordingtype                    SegDispidList = 177
+	dispidstart                            SegDispidList = 178
+	dispidRecordingAttribute               SegDispidList = 179
+	dispid_RecordingAttribute              SegDispidList = 180
+	dispidSBEConfigure                     SegDispidList = 181
+	dispid_CurrentRatings                  SegDispidList = 182
+	dispid_MaxRatingsLevel                 SegDispidList = 183
+	dispid_audioencoderint                 SegDispidList = 184
+	dispid_videoencoderint                 SegDispidList = 185
+	dispidService                          SegDispidList = 186
+	dispid_BlockUnrated                    SegDispidList = 187
+	dispid_UnratedDelay                    SegDispidList = 188
+	dispid_SuppressEffects                 SegDispidList = 189
+	dispidsbesource                        SegDispidList = 190
+	dispidSetSinkFilter                    SegDispidList = 191
+	dispid_SinkStreams                     SegDispidList = 192
+	dispidTVFormats                        SegDispidList = 193
+	dispidModes                            SegDispidList = 194
+	dispidAuxInputs                        SegDispidList = 195
+	dispidTeleTextFilter                   SegDispidList = 196
+	dispid_channelchangeint                SegDispidList = 197
+	dispidUnlockProfile                    SegDispidList = 198
+	dispid_AddFilter                       SegDispidList = 199
+	dispidSetMinSeek                       SegDispidList = 200
+	dispidRateEx                           SegDispidList = 201
+	dispidaudiocounter                     SegDispidList = 202
+	dispidvideocounter                     SegDispidList = 203
+	dispidcccounter                        SegDispidList = 204
+	dispidwstcounter                       SegDispidList = 205
+	dispid_audiocounter                    SegDispidList = 206
+	dispid_videocounter                    SegDispidList = 207
+	dispid_cccounter                       SegDispidList = 208
+	dispid_wstcounter                      SegDispidList = 209
+	dispidaudioanalysis                    SegDispidList = 210
+	dispidvideoanalysis                    SegDispidList = 211
+	dispiddataanalysis                     SegDispidList = 212
+	dispidaudio_analysis                   SegDispidList = 213
+	dispidvideo_analysis                   SegDispidList = 214
+	dispiddata_analysis                    SegDispidList = 215
+	dispid_resetFilterList                 SegDispidList = 216
+	dispidDevicePath                       SegDispidList = 217
+	dispid_SourceFilter                    SegDispidList = 218
+	dispid__SourceFilter                   SegDispidList = 219
+	dispidUserEvent                        SegDispidList = 220
+	dispid_Bookmark                        SegDispidList = 221
+	LastReservedDeviceDispid               SegDispidList = 16383
 )
 
 type SegEventidList int32
 
 const (
-	eventidStateChange = 0
-	eventidOnTuneChanged = 1
-	eventidEndOfMedia = 2
-	eventidDVDNotify = 3
-	eventidPlayForwards = 4
-	eventidPlayBackwards = 5
-	eventidShowMenu = 6
-	eventidResume = 7
-	eventidSelectOrActivateButton = 8
-	eventidStillOff = 9
-	eventidPauseOn = 10
-	eventidChangeCurrentAudioStream = 11
-	eventidChangeCurrentSubpictureStream = 12
-	eventidChangeCurrentAngle = 13
-	eventidPlayAtTimeInTitle = 14
-	eventidPlayAtTime = 15
-	eventidPlayChapterInTitle = 16
-	eventidPlayChapter = 17
-	eventidReplayChapter = 18
-	eventidPlayNextChapter = 19
-	eventidStop = 20
-	eventidReturnFromSubmenu = 21
-	eventidPlayTitle = 22
-	eventidPlayPrevChapter = 23
-	eventidChangeKaraokePresMode = 24
-	eventidChangeVideoPresMode = 25
-	eventidOverlayUnavailable = 26
-	eventidSinkCertificateFailure = 27
-	eventidSinkCertificateSuccess = 28
-	eventidSourceCertificateFailure = 29
-	eventidSourceCertificateSuccess = 30
-	eventidRatingsBlocked = 31
-	eventidRatingsUnlocked = 32
-	eventidRatingsChanged = 33
-	eventidWriteFailure = 34
-	eventidTimeHole = 35
-	eventidStaleDataRead = 36
-	eventidContentBecomingStale = 37
-	eventidStaleFileDeleted = 38
-	eventidEncryptionOn = 39
-	eventidEncryptionOff = 40
-	eventidRateChange = 41
-	eventidLicenseChange = 42
-	eventidCOPPBlocked = 43
-	eventidCOPPUnblocked = 44
-	dispidlicenseerrorcode = 45
-	eventidBroadcastEvent = 46
-	eventidBroadcastEventEx = 47
-	eventidContentPrimarilyAudio = 48
-	dispidAVDecAudioDualMonoEvent = 49
-	dispidAVAudioSampleRateEvent = 50
-	dispidAVAudioChannelConfigEvent = 51
-	dispidAVAudioChannelCountEvent = 52
-	dispidAVDecCommonMeanBitRateEvent = 53
-	dispidAVDDSurroundModeEvent = 54
-	dispidAVDecCommonInputFormatEvent = 55
-	dispidAVDecCommonOutputFormatEvent = 56
-	eventidWriteFailureClear = 57
-	LastReservedDeviceEvent = 16383
+	eventidStateChange                   SegEventidList = 0
+	eventidOnTuneChanged                 SegEventidList = 1
+	eventidEndOfMedia                    SegEventidList = 2
+	eventidDVDNotify                     SegEventidList = 3
+	eventidPlayForwards                  SegEventidList = 4
+	eventidPlayBackwards                 SegEventidList = 5
+	eventidShowMenu                      SegEventidList = 6
+	eventidResume                        SegEventidList = 7
+	eventidSelectOrActivateButton        SegEventidList = 8
+	eventidStillOff                      SegEventidList = 9
+	eventidPauseOn                       SegEventidList = 10
+	eventidChangeCurrentAudioStream      SegEventidList = 11
+	eventidChangeCurrentSubpictureStream SegEventidList = 12
+	eventidChangeCurrentAngle            SegEventidList = 13
+	eventidPlayAtTimeInTitle             SegEventidList = 14
+	eventidPlayAtTime                    SegEventidList = 15
+	eventidPlayChapterInTitle            SegEventidList = 16
+	eventidPlayChapter                   SegEventidList = 17
+	eventidReplayChapter                 SegEventidList = 18
+	eventidPlayNextChapter               SegEventidList = 19
+	eventidStop                          SegEventidList = 20
+	eventidReturnFromSubmenu             SegEventidList = 21
+	eventidPlayTitle                     SegEventidList = 22
+	eventidPlayPrevChapter               SegEventidList = 23
+	eventidChangeKaraokePresMode         SegEventidList = 24
+	eventidChangeVideoPresMode           SegEventidList = 25
+	eventidOverlayUnavailable            SegEventidList = 26
+	eventidSinkCertificateFailure        SegEventidList = 27
+	eventidSinkCertificateSuccess        SegEventidList = 28
+	eventidSourceCertificateFailure      SegEventidList = 29
+	eventidSourceCertificateSuccess      SegEventidList = 30
+	eventidRatingsBlocked                SegEventidList = 31
+	eventidRatingsUnlocked               SegEventidList = 32
+	eventidRatingsChanged                SegEventidList = 33
+	eventidWriteFailure                  SegEventidList = 34
+	eventidTimeHole                      SegEventidList = 35
+	eventidStaleDataRead                 SegEventidList = 36
+	eventidContentBecomingStale          SegEventidList = 37
+	eventidStaleFileDeleted              SegEventidList = 38
+	eventidEncryptionOn                  SegEventidList = 39
+	eventidEncryptionOff                 SegEventidList = 40
+	eventidRateChange                    SegEventidList = 41
+	eventidLicenseChange                 SegEventidList = 42
+	eventidCOPPBlocked                   SegEventidList = 43
+	eventidCOPPUnblocked                 SegEventidList = 44
+	dispidlicenseerrorcode               SegEventidList = 45
+	eventidBroadcastEvent                SegEventidList = 46
+	eventidBroadcastEventEx              SegEventidList = 47
+	eventidContentPrimarilyAudio         SegEventidList = 48
+	dispidAVDecAudioDualMonoEvent        SegEventidList = 49
+	dispidAVAudioSampleRateEvent         SegEventidList = 50
+	dispidAVAudioChannelConfigEvent      SegEventidList = 51
+	dispidAVAudioChannelCountEvent       SegEventidList = 52
+	dispidAVDecCommonMeanBitRateEvent    SegEventidList = 53
+	dispidAVDDSurroundModeEvent          SegEventidList = 54
+	dispidAVDecCommonInputFormatEvent    SegEventidList = 55
+	dispidAVDecCommonOutputFormatEvent   SegEventidList = 56
+	eventidWriteFailureClear             SegEventidList = 57
+	LastReservedDeviceEvent              SegEventidList = 16383
 )
 
 type PositionModeList int32
 
 const (
-	FrameMode = 0
-	TenthsSecondsMode = 1
+	FrameMode         PositionModeList = 0
+	TenthsSecondsMode PositionModeList = 1
 )
 
 type RecordingType int32
 
 const (
-	CONTENT = 0
-	REFERENCE = 1
+	CONTENT   RecordingType = 0
+	REFERENCE RecordingType = 1
 )
 
 type MSVidCCService int32
 
 const (
-	None = 0
-	Caption1 = 1
-	Caption2 = 2
-	Text1 = 3
-	Text2 = 4
-	XDS = 5
+	None     MSVidCCService = 0
+	Caption1 MSVidCCService = 1
+	Caption2 MSVidCCService = 2
+	Text1    MSVidCCService = 3
+	Text2    MSVidCCService = 4
+	XDS      MSVidCCService = 5
 )
 
 type MSVidSinkStreams int32
 
 const (
-	MSVidSink_Video = 1
-	MSVidSink_Audio = 2
-	MSVidSink_Other = 4
+	MSVidSink_Video MSVidSinkStreams = 1
+	MSVidSink_Audio MSVidSinkStreams = 2
+	MSVidSink_Other MSVidSinkStreams = 4
 )
 
 type MSVidSegmentType int32
 
 const (
-	MSVidSEG_SOURCE = 0
-	MSVidSEG_XFORM = 1
-	MSVidSEG_DEST = 2
+	MSVidSEG_SOURCE MSVidSegmentType = 0
+	MSVidSEG_XFORM  MSVidSegmentType = 1
+	MSVidSEG_DEST   MSVidSegmentType = 2
 )
 
 type MSVidCtlButtonstate int32
 
 const (
-	MSVIDCTL_LEFT_BUTTON = 1
-	MSVIDCTL_RIGHT_BUTTON = 2
-	MSVIDCTL_MIDDLE_BUTTON = 4
-	MSVIDCTL_X_BUTTON1 = 8
-	MSVIDCTL_X_BUTTON2 = 16
-	MSVIDCTL_SHIFT = 1
-	MSVIDCTL_CTRL = 2
-	MSVIDCTL_ALT = 4
+	MSVIDCTL_LEFT_BUTTON   MSVidCtlButtonstate = 1
+	MSVIDCTL_RIGHT_BUTTON  MSVidCtlButtonstate = 2
+	MSVIDCTL_MIDDLE_BUTTON MSVidCtlButtonstate = 4
+	MSVIDCTL_X_BUTTON1     MSVidCtlButtonstate = 8
+	MSVIDCTL_X_BUTTON2     MSVidCtlButtonstate = 16
+	MSVIDCTL_SHIFT         MSVidCtlButtonstate = 1
+	MSVIDCTL_CTRL          MSVidCtlButtonstate = 2
+	MSVIDCTL_ALT           MSVidCtlButtonstate = 4
 )
 
 type DVDMenuIDConstants int32
 
 const (
-	dvdMenu_Title = 2
-	dvdMenu_Root = 3
-	dvdMenu_Subpicture = 4
-	dvdMenu_Audio = 5
-	dvdMenu_Angle = 6
-	dvdMenu_Chapter = 7
+	dvdMenu_Title      DVDMenuIDConstants = 2
+	dvdMenu_Root       DVDMenuIDConstants = 3
+	dvdMenu_Subpicture DVDMenuIDConstants = 4
+	dvdMenu_Audio      DVDMenuIDConstants = 5
+	dvdMenu_Angle      DVDMenuIDConstants = 6
+	dvdMenu_Chapter    DVDMenuIDConstants = 7
 )
 
 type DVDFilterState int32
 
 const (
-	dvdState_Undefined = -2
-	dvdState_Unitialized = -1
-	dvdState_Stopped = 0
-	dvdState_Paused = 1
-	dvdState_Running = 2
+	dvdState_Undefined   DVDFilterState = -2
+	dvdState_Unitialized DVDFilterState = -1
+	dvdState_Stopped     DVDFilterState = 0
+	dvdState_Paused      DVDFilterState = 1
+	dvdState_Running     DVDFilterState = 2
 )
 
 type DVDTextStringType int32
 
 const (
-	dvdStruct_Volume = 1
-	dvdStruct_Title = 2
-	dvdStruct_ParentalID = 3
-	dvdStruct_PartOfTitle = 4
-	dvdStruct_Cell = 5
-	dvdStream_Audio = 16
-	dvdStream_Subpicture = 17
-	dvdStream_Angle = 18
-	dvdChannel_Audio = 32
-	dvdGeneral_Name = 48
-	dvdGeneral_Comments = 49
-	dvdTitle_Series = 56
-	dvdTitle_Movie = 57
-	dvdTitle_Video = 58
-	dvdTitle_Album = 59
-	dvdTitle_Song = 60
-	dvdTitle_Other = 63
-	dvdTitle_Sub_Series = 64
-	dvdTitle_Sub_Movie = 65
-	dvdTitle_Sub_Video = 66
-	dvdTitle_Sub_Album = 67
-	dvdTitle_Sub_Song = 68
-	dvdTitle_Sub_Other = 71
-	dvdTitle_Orig_Series = 72
-	dvdTitle_Orig_Movie = 73
-	dvdTitle_Orig_Video = 74
-	dvdTitle_Orig_Album = 75
-	dvdTitle_Orig_Song = 76
-	dvdTitle_Orig_Other = 79
-	dvdOther_Scene = 80
-	dvdOther_Cut = 81
-	dvdOther_Take = 82
+	dvdStruct_Volume      DVDTextStringType = 1
+	dvdStruct_Title       DVDTextStringType = 2
+	dvdStruct_ParentalID  DVDTextStringType = 3
+	dvdStruct_PartOfTitle DVDTextStringType = 4
+	dvdStruct_Cell        DVDTextStringType = 5
+	dvdStream_Audio       DVDTextStringType = 16
+	dvdStream_Subpicture  DVDTextStringType = 17
+	dvdStream_Angle       DVDTextStringType = 18
+	dvdChannel_Audio      DVDTextStringType = 32
+	dvdGeneral_Name       DVDTextStringType = 48
+	dvdGeneral_Comments   DVDTextStringType = 49
+	dvdTitle_Series       DVDTextStringType = 56
+	dvdTitle_Movie        DVDTextStringType = 57
+	dvdTitle_Video        DVDTextStringType = 58
+	dvdTitle_Album        DVDTextStringType = 59
+	dvdTitle_Song         DVDTextStringType = 60
+	dvdTitle_Other        DVDTextStringType = 63
+	dvdTitle_Sub_Series   DVDTextStringType = 64
+	dvdTitle_Sub_Movie    DVDTextStringType = 65
+	dvdTitle_Sub_Video    DVDTextStringType = 66
+	dvdTitle_Sub_Album    DVDTextStringType = 67
+	dvdTitle_Sub_Song     DVDTextStringType = 68
+	dvdTitle_Sub_Other    DVDTextStringType = 71
+	dvdTitle_Orig_Series  DVDTextStringType = 72
+	dvdTitle_Orig_Movie   DVDTextStringType = 73
+	dvdTitle_Orig_Video   DVDTextStringType = 74
+	dvdTitle_Orig_Album   DVDTextStringType = 75
+	dvdTitle_Orig_Song    DVDTextStringType = 76
+	dvdTitle_Orig_Other   DVDTextStringType = 79
+	dvdOther_Scene        DVDTextStringType = 80
+	dvdOther_Cut          DVDTextStringType = 81
+	dvdOther_Take         DVDTextStringType = 82
 )
 
 type DVDSPExt int32
 
 const (
-	dvdSPExt_NotSpecified = 0
-	dvdSPExt_Caption_Normal = 1
-	dvdSPExt_Caption_Big = 2
-	dvdSPExt_Caption_Children = 3
-	dvdSPExt_CC_Normal = 5
-	dvdSPExt_CC_Big = 6
-	dvdSPExt_CC_Children = 7
-	dvdSPExt_Forced = 9
-	dvdSPExt_DirectorComments_Normal = 13
-	dvdSPExt_DirectorComments_Big = 14
-	dvdSPExt_DirectorComments_Children = 15
+	dvdSPExt_NotSpecified              DVDSPExt = 0
+	dvdSPExt_Caption_Normal            DVDSPExt = 1
+	dvdSPExt_Caption_Big               DVDSPExt = 2
+	dvdSPExt_Caption_Children          DVDSPExt = 3
+	dvdSPExt_CC_Normal                 DVDSPExt = 5
+	dvdSPExt_CC_Big                    DVDSPExt = 6
+	dvdSPExt_CC_Children               DVDSPExt = 7
+	dvdSPExt_Forced                    DVDSPExt = 9
+	dvdSPExt_DirectorComments_Normal   DVDSPExt = 13
+	dvdSPExt_DirectorComments_Big      DVDSPExt = 14
+	dvdSPExt_DirectorComments_Children DVDSPExt = 15
 )
 
 type SourceSizeList int32
 
 const (
-	sslFullSize = 0
-	sslClipByOverScan = 1
-	sslClipByClipRect = 2
+	sslFullSize       SourceSizeList = 0
+	sslClipByOverScan SourceSizeList = 1
+	sslClipByClipRect SourceSizeList = 2
 )
 
 type MSViddispidList int32
 
 const (
-	dispidInputs = 0
-	dispidOutputs = 1
-	dispid_Inputs = 2
-	dispid_Outputs = 3
-	dispidVideoRenderers = 4
-	dispidAudioRenderers = 5
-	dispidFeatures = 6
-	dispidInput = 7
-	dispidOutput = 8
-	dispidVideoRenderer = 9
-	dispidAudioRenderer = 10
-	dispidSelectedFeatures = 11
-	dispidView = 12
-	dispidBuild = 13
-	dispidPause = 14
-	dispidRun = 15
-	dispidStop = 16
-	dispidDecompose = 17
-	dispidDisplaySize = 18
-	dispidMaintainAspectRatio = 19
-	dispidColorKey = 20
-	dispidStateChange = 21
-	dispidgetState = 22
-	dispidunbind = 23
-	dispidbind = 24
-	dispidDisableVideo = 25
-	dispidDisableAudio = 26
-	dispidViewNext = 27
-	dispidServiceP = 28
+	dispidInputs              MSViddispidList = 0
+	dispidOutputs             MSViddispidList = 1
+	dispid_Inputs             MSViddispidList = 2
+	dispid_Outputs            MSViddispidList = 3
+	dispidVideoRenderers      MSViddispidList = 4
+	dispidAudioRenderers      MSViddispidList = 5
+	dispidFeatures            MSViddispidList = 6
+	dispidInput               MSViddispidList = 7
+	dispidOutput              MSViddispidList = 8
+	dispidVideoRenderer       MSViddispidList = 9
+	dispidAudioRenderer       MSViddispidList = 10
+	dispidSelectedFeatures    MSViddispidList = 11
+	dispidView                MSViddispidList = 12
+	dispidBuild               MSViddispidList = 13
+	dispidPause               MSViddispidList = 14
+	dispidRun                 MSViddispidList = 15
+	dispidStop                MSViddispidList = 16
+	dispidDecompose           MSViddispidList = 17
+	dispidDisplaySize         MSViddispidList = 18
+	dispidMaintainAspectRatio MSViddispidList = 19
+	dispidColorKey            MSViddispidList = 20
+	dispidStateChange         MSViddispidList = 21
+	dispidgetState            MSViddispidList = 22
+	dispidunbind              MSViddispidList = 23
+	dispidbind                MSViddispidList = 24
+	dispidDisableVideo        MSViddispidList = 25
+	dispidDisableAudio        MSViddispidList = 26
+	dispidViewNext            MSViddispidList = 27
+	dispidServiceP            MSViddispidList = 28
 )
 
 type DisplaySizeList int32
 
 const (
-	dslDefaultSize = 0
-	dslSourceSize = 0
-	dslHalfSourceSize = 1
-	dslDoubleSourceSize = 2
-	dslFullScreen = 3
-	dslHalfScreen = 4
-	dslQuarterScreen = 5
-	dslSixteenthScreen = 6
+	dslDefaultSize      DisplaySizeList = 0
+	dslSourceSize       DisplaySizeList = 0
+	dslHalfSourceSize   DisplaySizeList = 1
+	dslDoubleSourceSize DisplaySizeList = 2
+	dslFullScreen       DisplaySizeList = 3
+	dslHalfScreen       DisplaySizeList = 4
+	dslQuarterScreen    DisplaySizeList = 5
+	dslSixteenthScreen  DisplaySizeList = 6
 )
 
 type MSVidCtlStateList int32
 
 const (
-	STATE_UNBUILT = -1
-	STATE_STOP = 0
-	STATE_PAUSE = 1
-	STATE_PLAY = 2
+	STATE_UNBUILT MSVidCtlStateList = -1
+	STATE_STOP    MSVidCtlStateList = 0
+	STATE_PAUSE   MSVidCtlStateList = 1
+	STATE_PLAY    MSVidCtlStateList = 2
 )
 
 type __MIDL___MIDL_itf_sbe_0000_0001_0001 int32
 
 const (
-	RECORDING_TYPE_CONTENT = 0
-	RECORDING_TYPE_REFERENCE = 1
+	RECORDING_TYPE_CONTENT   __MIDL___MIDL_itf_sbe_0000_0001_0001 = 0
+	RECORDING_TYPE_REFERENCE __MIDL___MIDL_itf_sbe_0000_0001_0001 = 1
 )
 
 type STREAMBUFFER_ATTR_DATATYPE int32
 
 const (
-	STREAMBUFFER_TYPE_DWORD = 0
-	STREAMBUFFER_TYPE_STRING = 1
-	STREAMBUFFER_TYPE_BINARY = 2
-	STREAMBUFFER_TYPE_BOOL = 3
-	STREAMBUFFER_TYPE_QWORD = 4
-	STREAMBUFFER_TYPE_WORD = 5
-	STREAMBUFFER_TYPE_GUID = 6
+	STREAMBUFFER_TYPE_DWORD  STREAMBUFFER_ATTR_DATATYPE = 0
+	STREAMBUFFER_TYPE_STRING STREAMBUFFER_ATTR_DATATYPE = 1
+	STREAMBUFFER_TYPE_BINARY STREAMBUFFER_ATTR_DATATYPE = 2
+	STREAMBUFFER_TYPE_BOOL   STREAMBUFFER_ATTR_DATATYPE = 3
+	STREAMBUFFER_TYPE_QWORD  STREAMBUFFER_ATTR_DATATYPE = 4
+	STREAMBUFFER_TYPE_WORD   STREAMBUFFER_ATTR_DATATYPE = 5
+	STREAMBUFFER_TYPE_GUID   STREAMBUFFER_ATTR_DATATYPE = 6
 )
 
 type CROSSBAR_DEFAULT_FLAGS int32
 
 const (
-	DEF_MODE_PROFILE = 1
-	DEF_MODE_STREAMS = 2
+	DEF_MODE_PROFILE CROSSBAR_DEFAULT_FLAGS = 1
+	DEF_MODE_STREAMS CROSSBAR_DEFAULT_FLAGS = 2
 )
 
 type MPEG_CURRENT_NEXT_BIT int32
 
 const (
-	MPEG_SECTION_IS_NEXT = 0
-	MPEG_SECTION_IS_CURRENT = 1
+	MPEG_SECTION_IS_NEXT    MPEG_CURRENT_NEXT_BIT = 0
+	MPEG_SECTION_IS_CURRENT MPEG_CURRENT_NEXT_BIT = 1
 )
 
 type MPEG_CONTEXT_TYPE int32
 
 const (
-	MPEG_CONTEXT_BCS_DEMUX = 0
-	MPEG_CONTEXT_WINSOCK = 1
+	MPEG_CONTEXT_BCS_DEMUX MPEG_CONTEXT_TYPE = 0
+	MPEG_CONTEXT_WINSOCK   MPEG_CONTEXT_TYPE = 1
 )
 
 type MPEG_REQUEST_TYPE int32
 
 const (
-	MPEG_RQST_UNKNOWN = 0
-	MPEG_RQST_GET_SECTION = 1
-	MPEG_RQST_GET_SECTION_ASYNC = 2
-	MPEG_RQST_GET_TABLE = 3
-	MPEG_RQST_GET_TABLE_ASYNC = 4
-	MPEG_RQST_GET_SECTIONS_STREAM = 5
-	MPEG_RQST_GET_PES_STREAM = 6
-	MPEG_RQST_GET_TS_STREAM = 7
-	MPEG_RQST_START_MPE_STREAM = 8
+	MPEG_RQST_UNKNOWN             MPEG_REQUEST_TYPE = 0
+	MPEG_RQST_GET_SECTION         MPEG_REQUEST_TYPE = 1
+	MPEG_RQST_GET_SECTION_ASYNC   MPEG_REQUEST_TYPE = 2
+	MPEG_RQST_GET_TABLE           MPEG_REQUEST_TYPE = 3
+	MPEG_RQST_GET_TABLE_ASYNC     MPEG_REQUEST_TYPE = 4
+	MPEG_RQST_GET_SECTIONS_STREAM MPEG_REQUEST_TYPE = 5
+	MPEG_RQST_GET_PES_STREAM      MPEG_REQUEST_TYPE = 6
+	MPEG_RQST_GET_TS_STREAM       MPEG_REQUEST_TYPE = 7
+	MPEG_RQST_START_MPE_STREAM    MPEG_REQUEST_TYPE = 8
 )
 
 type VA_VIDEO_FORMAT int32
 
 const (
-	VA_VIDEO_COMPONENT = 0
-	VA_VIDEO_PAL = 1
-	VA_VIDEO_NTSC = 2
-	VA_VIDEO_SECAM = 3
-	VA_VIDEO_MAC = 4
-	VA_VIDEO_UNSPECIFIED = 5
+	VA_VIDEO_COMPONENT   VA_VIDEO_FORMAT = 0
+	VA_VIDEO_PAL         VA_VIDEO_FORMAT = 1
+	VA_VIDEO_NTSC        VA_VIDEO_FORMAT = 2
+	VA_VIDEO_SECAM       VA_VIDEO_FORMAT = 3
+	VA_VIDEO_MAC         VA_VIDEO_FORMAT = 4
+	VA_VIDEO_UNSPECIFIED VA_VIDEO_FORMAT = 5
 )
 
 type VA_COLOR_PRIMARIES int32
 
 const (
-	VA_PRIMARIES_ITU_R_BT_709 = 1
-	VA_PRIMARIES_UNSPECIFIED = 2
-	VA_PRIMARIES_ITU_R_BT_470_SYSTEM_M = 4
-	VA_PRIMARIES_ITU_R_BT_470_SYSTEM_B_G = 5
-	VA_PRIMARIES_SMPTE_170M = 6
-	VA_PRIMARIES_SMPTE_240M = 7
-	VA_PRIMARIES_H264_GENERIC_FILM = 8
+	VA_PRIMARIES_ITU_R_BT_709            VA_COLOR_PRIMARIES = 1
+	VA_PRIMARIES_UNSPECIFIED             VA_COLOR_PRIMARIES = 2
+	VA_PRIMARIES_ITU_R_BT_470_SYSTEM_M   VA_COLOR_PRIMARIES = 4
+	VA_PRIMARIES_ITU_R_BT_470_SYSTEM_B_G VA_COLOR_PRIMARIES = 5
+	VA_PRIMARIES_SMPTE_170M              VA_COLOR_PRIMARIES = 6
+	VA_PRIMARIES_SMPTE_240M              VA_COLOR_PRIMARIES = 7
+	VA_PRIMARIES_H264_GENERIC_FILM       VA_COLOR_PRIMARIES = 8
 )
 
 type VA_TRANSFER_CHARACTERISTICS int32
 
 const (
-	VA_TRANSFER_CHARACTERISTICS_ITU_R_BT_709 = 1
-	VA_TRANSFER_CHARACTERISTICS_UNSPECIFIED = 2
-	VA_TRANSFER_CHARACTERISTICS_ITU_R_BT_470_SYSTEM_M = 4
-	VA_TRANSFER_CHARACTERISTICS_ITU_R_BT_470_SYSTEM_B_G = 5
-	VA_TRANSFER_CHARACTERISTICS_SMPTE_170M = 6
-	VA_TRANSFER_CHARACTERISTICS_SMPTE_240M = 7
-	VA_TRANSFER_CHARACTERISTICS_LINEAR = 8
-	VA_TRANSFER_CHARACTERISTICS_H264_LOG_100_TO_1 = 9
-	VA_TRANSFER_CHARACTERISTICS_H264_LOG_316_TO_1 = 10
+	VA_TRANSFER_CHARACTERISTICS_ITU_R_BT_709            VA_TRANSFER_CHARACTERISTICS = 1
+	VA_TRANSFER_CHARACTERISTICS_UNSPECIFIED             VA_TRANSFER_CHARACTERISTICS = 2
+	VA_TRANSFER_CHARACTERISTICS_ITU_R_BT_470_SYSTEM_M   VA_TRANSFER_CHARACTERISTICS = 4
+	VA_TRANSFER_CHARACTERISTICS_ITU_R_BT_470_SYSTEM_B_G VA_TRANSFER_CHARACTERISTICS = 5
+	VA_TRANSFER_CHARACTERISTICS_SMPTE_170M              VA_TRANSFER_CHARACTERISTICS = 6
+	VA_TRANSFER_CHARACTERISTICS_SMPTE_240M              VA_TRANSFER_CHARACTERISTICS = 7
+	VA_TRANSFER_CHARACTERISTICS_LINEAR                  VA_TRANSFER_CHARACTERISTICS = 8
+	VA_TRANSFER_CHARACTERISTICS_H264_LOG_100_TO_1       VA_TRANSFER_CHARACTERISTICS = 9
+	VA_TRANSFER_CHARACTERISTICS_H264_LOG_316_TO_1       VA_TRANSFER_CHARACTERISTICS = 10
 )
 
 type VA_MATRIX_COEFFICIENTS int32
 
 const (
-	VA_MATRIX_COEFF_H264_RGB = 0
-	VA_MATRIX_COEFF_ITU_R_BT_709 = 1
-	VA_MATRIX_COEFF_UNSPECIFIED = 2
-	VA_MATRIX_COEFF_FCC = 4
-	VA_MATRIX_COEFF_ITU_R_BT_470_SYSTEM_B_G = 5
-	VA_MATRIX_COEFF_SMPTE_170M = 6
-	VA_MATRIX_COEFF_SMPTE_240M = 7
-	VA_MATRIX_COEFF_H264_YCgCo = 8
+	VA_MATRIX_COEFF_H264_RGB                VA_MATRIX_COEFFICIENTS = 0
+	VA_MATRIX_COEFF_ITU_R_BT_709            VA_MATRIX_COEFFICIENTS = 1
+	VA_MATRIX_COEFF_UNSPECIFIED             VA_MATRIX_COEFFICIENTS = 2
+	VA_MATRIX_COEFF_FCC                     VA_MATRIX_COEFFICIENTS = 4
+	VA_MATRIX_COEFF_ITU_R_BT_470_SYSTEM_B_G VA_MATRIX_COEFFICIENTS = 5
+	VA_MATRIX_COEFF_SMPTE_170M              VA_MATRIX_COEFFICIENTS = 6
+	VA_MATRIX_COEFF_SMPTE_240M              VA_MATRIX_COEFFICIENTS = 7
+	VA_MATRIX_COEFF_H264_YCgCo              VA_MATRIX_COEFFICIENTS = 8
 )
 
 type __MIDL___MIDL_itf_dvbsiparser_0000_0000_0001 int32
 
 const (
-	STRCONV_MODE_DVB = 0
-	STRCONV_MODE_DVB_EMPHASIS = 1
-	STRCONV_MODE_DVB_WITHOUT_EMPHASIS = 2
-	STRCONV_MODE_ISDB = 3
+	STRCONV_MODE_DVB                  __MIDL___MIDL_itf_dvbsiparser_0000_0000_0001 = 0
+	STRCONV_MODE_DVB_EMPHASIS         __MIDL___MIDL_itf_dvbsiparser_0000_0000_0001 = 1
+	STRCONV_MODE_DVB_WITHOUT_EMPHASIS __MIDL___MIDL_itf_dvbsiparser_0000_0000_0001 = 2
+	STRCONV_MODE_ISDB                 __MIDL___MIDL_itf_dvbsiparser_0000_0000_0001 = 3
 )
 
 type __MIDL___MIDL_itf_dvbsiparser_0000_0022_0001 int32
 
 const (
-	CRID_LOCATION_IN_DESCRIPTOR = 0
-	CRID_LOCATION_IN_CIT = 1
-	CRID_LOCATION_DVB_RESERVED1 = 2
-	CRID_LOCATION_DVB_RESERVED2 = 3
+	CRID_LOCATION_IN_DESCRIPTOR __MIDL___MIDL_itf_dvbsiparser_0000_0022_0001 = 0
+	CRID_LOCATION_IN_CIT        __MIDL___MIDL_itf_dvbsiparser_0000_0022_0001 = 1
+	CRID_LOCATION_DVB_RESERVED1 __MIDL___MIDL_itf_dvbsiparser_0000_0022_0001 = 2
+	CRID_LOCATION_DVB_RESERVED2 __MIDL___MIDL_itf_dvbsiparser_0000_0022_0001 = 3
 )
 
 type __MIDL___MIDL_itf_dvbsiparser_0000_0036_0001 int32
 
 const (
-	DESC_LINKAGE_RESERVED0 = 0
-	DESC_LINKAGE_INFORMATION = 1
-	DESC_LINKAGE_EPG = 2
-	DESC_LINKAGE_CA_REPLACEMENT = 3
-	DESC_LINKAGE_COMPLETE_NET_BOUQUET_SI = 4
-	DESC_LINKAGE_REPLACEMENT = 5
-	DESC_LINKAGE_DATA = 6
-	DESC_LINKAGE_RESERVED1 = 7
-	DESC_LINKAGE_USER = 8
-	DESC_LINKAGE_RESERVED2 = 255
+	DESC_LINKAGE_RESERVED0               __MIDL___MIDL_itf_dvbsiparser_0000_0036_0001 = 0
+	DESC_LINKAGE_INFORMATION             __MIDL___MIDL_itf_dvbsiparser_0000_0036_0001 = 1
+	DESC_LINKAGE_EPG                     __MIDL___MIDL_itf_dvbsiparser_0000_0036_0001 = 2
+	DESC_LINKAGE_CA_REPLACEMENT          __MIDL___MIDL_itf_dvbsiparser_0000_0036_0001 = 3
+	DESC_LINKAGE_COMPLETE_NET_BOUQUET_SI __MIDL___MIDL_itf_dvbsiparser_0000_0036_0001 = 4
+	DESC_LINKAGE_REPLACEMENT             __MIDL___MIDL_itf_dvbsiparser_0000_0036_0001 = 5
+	DESC_LINKAGE_DATA                    __MIDL___MIDL_itf_dvbsiparser_0000_0036_0001 = 6
+	DESC_LINKAGE_RESERVED1               __MIDL___MIDL_itf_dvbsiparser_0000_0036_0001 = 7
+	DESC_LINKAGE_USER                    __MIDL___MIDL_itf_dvbsiparser_0000_0036_0001 = 8
+	DESC_LINKAGE_RESERVED2               __MIDL___MIDL_itf_dvbsiparser_0000_0036_0001 = 255
 )
 
 type ChannelChangeSpanningEvent_State int32
 
 const (
-	ChannelChangeSpanningEvent_Start = 0
-	ChannelChangeSpanningEvent_End = 2
+	ChannelChangeSpanningEvent_Start ChannelChangeSpanningEvent_State = 0
+	ChannelChangeSpanningEvent_End   ChannelChangeSpanningEvent_State = 2
 )
 
 type ChannelType int32
 
 const (
-	ChannelTypeNone = 0
-	ChannelTypeOther = 1
-	ChannelTypeVideo = 2
-	ChannelTypeAudio = 4
-	ChannelTypeText = 8
-	ChannelTypeSubtitles = 16
-	ChannelTypeCaptions = 32
-	ChannelTypeSuperimpose = 64
-	ChannelTypeData = 128
+	ChannelTypeNone        ChannelType = 0
+	ChannelTypeOther       ChannelType = 1
+	ChannelTypeVideo       ChannelType = 2
+	ChannelTypeAudio       ChannelType = 4
+	ChannelTypeText        ChannelType = 8
+	ChannelTypeSubtitles   ChannelType = 16
+	ChannelTypeCaptions    ChannelType = 32
+	ChannelTypeSuperimpose ChannelType = 64
+	ChannelTypeData        ChannelType = 128
 )
 
 type SignalAndServiceStatusSpanningEvent_State int32
 
 const (
-	SignalAndServiceStatusSpanningEvent_None = -1
-	SignalAndServiceStatusSpanningEvent_Clear = 0
-	SignalAndServiceStatusSpanningEvent_NoTVSignal = 1
-	SignalAndServiceStatusSpanningEvent_ServiceOffAir = 2
-	SignalAndServiceStatusSpanningEvent_WeakTVSignal = 3
-	SignalAndServiceStatusSpanningEvent_NoSubscription = 4
-	SignalAndServiceStatusSpanningEvent_AllAVScrambled = 5
+	SignalAndServiceStatusSpanningEvent_None           SignalAndServiceStatusSpanningEvent_State = -1
+	SignalAndServiceStatusSpanningEvent_Clear          SignalAndServiceStatusSpanningEvent_State = 0
+	SignalAndServiceStatusSpanningEvent_NoTVSignal     SignalAndServiceStatusSpanningEvent_State = 1
+	SignalAndServiceStatusSpanningEvent_ServiceOffAir  SignalAndServiceStatusSpanningEvent_State = 2
+	SignalAndServiceStatusSpanningEvent_WeakTVSignal   SignalAndServiceStatusSpanningEvent_State = 3
+	SignalAndServiceStatusSpanningEvent_NoSubscription SignalAndServiceStatusSpanningEvent_State = 4
+	SignalAndServiceStatusSpanningEvent_AllAVScrambled SignalAndServiceStatusSpanningEvent_State = 5
 )
 
 type KSPROPERTY_BDA_ETHERNET_FILTER int32
 
 const (
-	KSPROPERTY_BDA_ETHERNET_FILTER_MULTICAST_LIST_SIZE = 0
-	KSPROPERTY_BDA_ETHERNET_FILTER_MULTICAST_LIST = 1
-	KSPROPERTY_BDA_ETHERNET_FILTER_MULTICAST_MODE = 2
+	KSPROPERTY_BDA_ETHERNET_FILTER_MULTICAST_LIST_SIZE KSPROPERTY_BDA_ETHERNET_FILTER = 0
+	KSPROPERTY_BDA_ETHERNET_FILTER_MULTICAST_LIST      KSPROPERTY_BDA_ETHERNET_FILTER = 1
+	KSPROPERTY_BDA_ETHERNET_FILTER_MULTICAST_MODE      KSPROPERTY_BDA_ETHERNET_FILTER = 2
 )
 
 type KSPROPERTY_BDA_IPv4_FILTER int32
 
 const (
-	KSPROPERTY_BDA_IPv4_FILTER_MULTICAST_LIST_SIZE = 0
-	KSPROPERTY_BDA_IPv4_FILTER_MULTICAST_LIST = 1
-	KSPROPERTY_BDA_IPv4_FILTER_MULTICAST_MODE = 2
+	KSPROPERTY_BDA_IPv4_FILTER_MULTICAST_LIST_SIZE KSPROPERTY_BDA_IPv4_FILTER = 0
+	KSPROPERTY_BDA_IPv4_FILTER_MULTICAST_LIST      KSPROPERTY_BDA_IPv4_FILTER = 1
+	KSPROPERTY_BDA_IPv4_FILTER_MULTICAST_MODE      KSPROPERTY_BDA_IPv4_FILTER = 2
 )
 
 type KSPROPERTY_BDA_IPv6_FILTER int32
 
 const (
-	KSPROPERTY_BDA_IPv6_FILTER_MULTICAST_LIST_SIZE = 0
-	KSPROPERTY_BDA_IPv6_FILTER_MULTICAST_LIST = 1
-	KSPROPERTY_BDA_IPv6_FILTER_MULTICAST_MODE = 2
+	KSPROPERTY_BDA_IPv6_FILTER_MULTICAST_LIST_SIZE KSPROPERTY_BDA_IPv6_FILTER = 0
+	KSPROPERTY_BDA_IPv6_FILTER_MULTICAST_LIST      KSPROPERTY_BDA_IPv6_FILTER = 1
+	KSPROPERTY_BDA_IPv6_FILTER_MULTICAST_MODE      KSPROPERTY_BDA_IPv6_FILTER = 2
 )
 
 type KSPROPERTY_BDA_SIGNAL_STATS int32
 
 const (
-	KSPROPERTY_BDA_SIGNAL_STRENGTH = 0
-	KSPROPERTY_BDA_SIGNAL_QUALITY = 1
-	KSPROPERTY_BDA_SIGNAL_PRESENT = 2
-	KSPROPERTY_BDA_SIGNAL_LOCKED = 3
-	KSPROPERTY_BDA_SAMPLE_TIME = 4
-	KSPROPERTY_BDA_SIGNAL_LOCK_CAPS = 5
-	KSPROPERTY_BDA_SIGNAL_LOCK_TYPE = 6
+	KSPROPERTY_BDA_SIGNAL_STRENGTH  KSPROPERTY_BDA_SIGNAL_STATS = 0
+	KSPROPERTY_BDA_SIGNAL_QUALITY   KSPROPERTY_BDA_SIGNAL_STATS = 1
+	KSPROPERTY_BDA_SIGNAL_PRESENT   KSPROPERTY_BDA_SIGNAL_STATS = 2
+	KSPROPERTY_BDA_SIGNAL_LOCKED    KSPROPERTY_BDA_SIGNAL_STATS = 3
+	KSPROPERTY_BDA_SAMPLE_TIME      KSPROPERTY_BDA_SIGNAL_STATS = 4
+	KSPROPERTY_BDA_SIGNAL_LOCK_CAPS KSPROPERTY_BDA_SIGNAL_STATS = 5
+	KSPROPERTY_BDA_SIGNAL_LOCK_TYPE KSPROPERTY_BDA_SIGNAL_STATS = 6
 )
 
 type _BdaLockType int32
 
 const (
-	Bda_LockType_None = 0
-	Bda_LockType_PLL = 1
-	Bda_LockType_DecoderDemod = 2
-	Bda_LockType_Complete = 128
+	Bda_LockType_None         _BdaLockType = 0
+	Bda_LockType_PLL          _BdaLockType = 1
+	Bda_LockType_DecoderDemod _BdaLockType = 2
+	Bda_LockType_Complete     _BdaLockType = 128
 )
 
 type KSMETHOD_BDA_CHANGE_SYNC int32
 
 const (
-	KSMETHOD_BDA_START_CHANGES = 0
-	KSMETHOD_BDA_CHECK_CHANGES = 1
-	KSMETHOD_BDA_COMMIT_CHANGES = 2
-	KSMETHOD_BDA_GET_CHANGE_STATE = 3
+	KSMETHOD_BDA_START_CHANGES    KSMETHOD_BDA_CHANGE_SYNC = 0
+	KSMETHOD_BDA_CHECK_CHANGES    KSMETHOD_BDA_CHANGE_SYNC = 1
+	KSMETHOD_BDA_COMMIT_CHANGES   KSMETHOD_BDA_CHANGE_SYNC = 2
+	KSMETHOD_BDA_GET_CHANGE_STATE KSMETHOD_BDA_CHANGE_SYNC = 3
 )
 
 type KSMETHOD_BDA_DEVICE_CONFIGURATION int32
 
 const (
-	KSMETHOD_BDA_CREATE_PIN_FACTORY = 0
-	KSMETHOD_BDA_DELETE_PIN_FACTORY = 1
-	KSMETHOD_BDA_CREATE_TOPOLOGY = 2
+	KSMETHOD_BDA_CREATE_PIN_FACTORY KSMETHOD_BDA_DEVICE_CONFIGURATION = 0
+	KSMETHOD_BDA_DELETE_PIN_FACTORY KSMETHOD_BDA_DEVICE_CONFIGURATION = 1
+	KSMETHOD_BDA_CREATE_TOPOLOGY    KSMETHOD_BDA_DEVICE_CONFIGURATION = 2
 )
 
 type KSPROPERTY_BDA_TOPOLOGY int32
 
 const (
-	KSPROPERTY_BDA_NODE_TYPES = 0
-	KSPROPERTY_BDA_PIN_TYPES = 1
-	KSPROPERTY_BDA_TEMPLATE_CONNECTIONS = 2
-	KSPROPERTY_BDA_NODE_METHODS = 3
-	KSPROPERTY_BDA_NODE_PROPERTIES = 4
-	KSPROPERTY_BDA_NODE_EVENTS = 5
-	KSPROPERTY_BDA_CONTROLLING_PIN_ID = 6
-	KSPROPERTY_BDA_NODE_DESCRIPTORS = 7
+	KSPROPERTY_BDA_NODE_TYPES           KSPROPERTY_BDA_TOPOLOGY = 0
+	KSPROPERTY_BDA_PIN_TYPES            KSPROPERTY_BDA_TOPOLOGY = 1
+	KSPROPERTY_BDA_TEMPLATE_CONNECTIONS KSPROPERTY_BDA_TOPOLOGY = 2
+	KSPROPERTY_BDA_NODE_METHODS         KSPROPERTY_BDA_TOPOLOGY = 3
+	KSPROPERTY_BDA_NODE_PROPERTIES      KSPROPERTY_BDA_TOPOLOGY = 4
+	KSPROPERTY_BDA_NODE_EVENTS          KSPROPERTY_BDA_TOPOLOGY = 5
+	KSPROPERTY_BDA_CONTROLLING_PIN_ID   KSPROPERTY_BDA_TOPOLOGY = 6
+	KSPROPERTY_BDA_NODE_DESCRIPTORS     KSPROPERTY_BDA_TOPOLOGY = 7
 )
 
 type KSPROPERTY_BDA_PIN_CONTROL int32
 
 const (
-	KSPROPERTY_BDA_PIN_ID = 0
-	KSPROPERTY_BDA_PIN_TYPE = 1
+	KSPROPERTY_BDA_PIN_ID   KSPROPERTY_BDA_PIN_CONTROL = 0
+	KSPROPERTY_BDA_PIN_TYPE KSPROPERTY_BDA_PIN_CONTROL = 1
 )
 
 type KSPROPERTY_BDA_PIN_EVENT int32
 
 const (
-	KSEVENT_BDA_PIN_CONNECTED = 0
-	KSEVENT_BDA_PIN_DISCONNECTED = 1
+	KSEVENT_BDA_PIN_CONNECTED    KSPROPERTY_BDA_PIN_EVENT = 0
+	KSEVENT_BDA_PIN_DISCONNECTED KSPROPERTY_BDA_PIN_EVENT = 1
 )
 
 type KSPROPERTY_BDA_VOID_TRANSFORM int32
 
 const (
-	KSPROPERTY_BDA_VOID_TRANSFORM_START = 0
-	KSPROPERTY_BDA_VOID_TRANSFORM_STOP = 1
+	KSPROPERTY_BDA_VOID_TRANSFORM_START KSPROPERTY_BDA_VOID_TRANSFORM = 0
+	KSPROPERTY_BDA_VOID_TRANSFORM_STOP  KSPROPERTY_BDA_VOID_TRANSFORM = 1
 )
 
 type KSPROPERTY_BDA_NULL_TRANSFORM int32
 
 const (
-	KSPROPERTY_BDA_NULL_TRANSFORM_START = 0
-	KSPROPERTY_BDA_NULL_TRANSFORM_STOP = 1
+	KSPROPERTY_BDA_NULL_TRANSFORM_START KSPROPERTY_BDA_NULL_TRANSFORM = 0
+	KSPROPERTY_BDA_NULL_TRANSFORM_STOP  KSPROPERTY_BDA_NULL_TRANSFORM = 1
 )
 
 type KSPROPERTY_BDA_FREQUENCY_FILTER int32
 
 const (
-	KSPROPERTY_BDA_RF_TUNER_FREQUENCY = 0
-	KSPROPERTY_BDA_RF_TUNER_POLARITY = 1
-	KSPROPERTY_BDA_RF_TUNER_RANGE = 2
-	KSPROPERTY_BDA_RF_TUNER_TRANSPONDER = 3
-	KSPROPERTY_BDA_RF_TUNER_BANDWIDTH = 4
-	KSPROPERTY_BDA_RF_TUNER_FREQUENCY_MULTIPLIER = 5
-	KSPROPERTY_BDA_RF_TUNER_CAPS = 6
-	KSPROPERTY_BDA_RF_TUNER_SCAN_STATUS = 7
-	KSPROPERTY_BDA_RF_TUNER_STANDARD = 8
-	KSPROPERTY_BDA_RF_TUNER_STANDARD_MODE = 9
+	KSPROPERTY_BDA_RF_TUNER_FREQUENCY            KSPROPERTY_BDA_FREQUENCY_FILTER = 0
+	KSPROPERTY_BDA_RF_TUNER_POLARITY             KSPROPERTY_BDA_FREQUENCY_FILTER = 1
+	KSPROPERTY_BDA_RF_TUNER_RANGE                KSPROPERTY_BDA_FREQUENCY_FILTER = 2
+	KSPROPERTY_BDA_RF_TUNER_TRANSPONDER          KSPROPERTY_BDA_FREQUENCY_FILTER = 3
+	KSPROPERTY_BDA_RF_TUNER_BANDWIDTH            KSPROPERTY_BDA_FREQUENCY_FILTER = 4
+	KSPROPERTY_BDA_RF_TUNER_FREQUENCY_MULTIPLIER KSPROPERTY_BDA_FREQUENCY_FILTER = 5
+	KSPROPERTY_BDA_RF_TUNER_CAPS                 KSPROPERTY_BDA_FREQUENCY_FILTER = 6
+	KSPROPERTY_BDA_RF_TUNER_SCAN_STATUS          KSPROPERTY_BDA_FREQUENCY_FILTER = 7
+	KSPROPERTY_BDA_RF_TUNER_STANDARD             KSPROPERTY_BDA_FREQUENCY_FILTER = 8
+	KSPROPERTY_BDA_RF_TUNER_STANDARD_MODE        KSPROPERTY_BDA_FREQUENCY_FILTER = 9
 )
 
 type _BdaSignalType int32
 
 const (
-	Bda_SignalType_Unknown = 0
-	Bda_SignalType_Analog = 1
-	Bda_SignalType_Digital = 2
+	Bda_SignalType_Unknown _BdaSignalType = 0
+	Bda_SignalType_Analog  _BdaSignalType = 1
+	Bda_SignalType_Digital _BdaSignalType = 2
 )
 
 type BDA_DigitalSignalStandard int32
 
 const (
-	Bda_DigitalStandard_None = 0
-	Bda_DigitalStandard_DVB_T = 1
-	Bda_DigitalStandard_DVB_S = 2
-	Bda_DigitalStandard_DVB_C = 4
-	Bda_DigitalStandard_ATSC = 8
-	Bda_DigitalStandard_ISDB_T = 16
-	Bda_DigitalStandard_ISDB_S = 32
-	Bda_DigitalStandard_ISDB_C = 64
+	Bda_DigitalStandard_None   BDA_DigitalSignalStandard = 0
+	Bda_DigitalStandard_DVB_T  BDA_DigitalSignalStandard = 1
+	Bda_DigitalStandard_DVB_S  BDA_DigitalSignalStandard = 2
+	Bda_DigitalStandard_DVB_C  BDA_DigitalSignalStandard = 4
+	Bda_DigitalStandard_ATSC   BDA_DigitalSignalStandard = 8
+	Bda_DigitalStandard_ISDB_T BDA_DigitalSignalStandard = 16
+	Bda_DigitalStandard_ISDB_S BDA_DigitalSignalStandard = 32
+	Bda_DigitalStandard_ISDB_C BDA_DigitalSignalStandard = 64
 )
 
 type KSEVENT_BDA_TUNER int32
 
 const (
-	KSEVENT_BDA_TUNER_SCAN = 0
+	KSEVENT_BDA_TUNER_SCAN KSEVENT_BDA_TUNER = 0
 )
 
 type KSPROPERTY_BDA_LNB_INFO int32
 
 const (
-	KSPROPERTY_BDA_LNB_LOF_LOW_BAND = 0
-	KSPROPERTY_BDA_LNB_LOF_HIGH_BAND = 1
-	KSPROPERTY_BDA_LNB_SWITCH_FREQUENCY = 2
+	KSPROPERTY_BDA_LNB_LOF_LOW_BAND     KSPROPERTY_BDA_LNB_INFO = 0
+	KSPROPERTY_BDA_LNB_LOF_HIGH_BAND    KSPROPERTY_BDA_LNB_INFO = 1
+	KSPROPERTY_BDA_LNB_SWITCH_FREQUENCY KSPROPERTY_BDA_LNB_INFO = 2
 )
 
 type KSPROPERTY_BDA_DISEQC_COMMAND int32
 
 const (
-	KSPROPERTY_BDA_DISEQC_ENABLE = 0
-	KSPROPERTY_BDA_DISEQC_LNB_SOURCE = 1
-	KSPROPERTY_BDA_DISEQC_USETONEBURST = 2
-	KSPROPERTY_BDA_DISEQC_REPEATS = 3
-	KSPROPERTY_BDA_DISEQC_SEND = 4
-	KSPROPERTY_BDA_DISEQC_RESPONSE = 5
+	KSPROPERTY_BDA_DISEQC_ENABLE       KSPROPERTY_BDA_DISEQC_COMMAND = 0
+	KSPROPERTY_BDA_DISEQC_LNB_SOURCE   KSPROPERTY_BDA_DISEQC_COMMAND = 1
+	KSPROPERTY_BDA_DISEQC_USETONEBURST KSPROPERTY_BDA_DISEQC_COMMAND = 2
+	KSPROPERTY_BDA_DISEQC_REPEATS      KSPROPERTY_BDA_DISEQC_COMMAND = 3
+	KSPROPERTY_BDA_DISEQC_SEND         KSPROPERTY_BDA_DISEQC_COMMAND = 4
+	KSPROPERTY_BDA_DISEQC_RESPONSE     KSPROPERTY_BDA_DISEQC_COMMAND = 5
 )
 
 type KSPROPERTY_BDA_DISEQC_EVENT int32
 
 const (
-	KSEVENT_BDA_DISEQC_DATA_RECEIVED = 0
+	KSEVENT_BDA_DISEQC_DATA_RECEIVED KSPROPERTY_BDA_DISEQC_EVENT = 0
 )
 
 type KSPROPERTY_BDA_DIGITAL_DEMODULATOR int32
 
 const (
-	KSPROPERTY_BDA_MODULATION_TYPE = 0
-	KSPROPERTY_BDA_INNER_FEC_TYPE = 1
-	KSPROPERTY_BDA_INNER_FEC_RATE = 2
-	KSPROPERTY_BDA_OUTER_FEC_TYPE = 3
-	KSPROPERTY_BDA_OUTER_FEC_RATE = 4
-	KSPROPERTY_BDA_SYMBOL_RATE = 5
-	KSPROPERTY_BDA_SPECTRAL_INVERSION = 6
-	KSPROPERTY_BDA_GUARD_INTERVAL = 7
-	KSPROPERTY_BDA_TRANSMISSION_MODE = 8
-	KSPROPERTY_BDA_ROLL_OFF = 9
-	KSPROPERTY_BDA_PILOT = 10
-	KSPROPERTY_BDA_SIGNALTIMEOUTS = 11
-	KSPROPERTY_BDA_PLP_NUMBER = 12
+	KSPROPERTY_BDA_MODULATION_TYPE    KSPROPERTY_BDA_DIGITAL_DEMODULATOR = 0
+	KSPROPERTY_BDA_INNER_FEC_TYPE     KSPROPERTY_BDA_DIGITAL_DEMODULATOR = 1
+	KSPROPERTY_BDA_INNER_FEC_RATE     KSPROPERTY_BDA_DIGITAL_DEMODULATOR = 2
+	KSPROPERTY_BDA_OUTER_FEC_TYPE     KSPROPERTY_BDA_DIGITAL_DEMODULATOR = 3
+	KSPROPERTY_BDA_OUTER_FEC_RATE     KSPROPERTY_BDA_DIGITAL_DEMODULATOR = 4
+	KSPROPERTY_BDA_SYMBOL_RATE        KSPROPERTY_BDA_DIGITAL_DEMODULATOR = 5
+	KSPROPERTY_BDA_SPECTRAL_INVERSION KSPROPERTY_BDA_DIGITAL_DEMODULATOR = 6
+	KSPROPERTY_BDA_GUARD_INTERVAL     KSPROPERTY_BDA_DIGITAL_DEMODULATOR = 7
+	KSPROPERTY_BDA_TRANSMISSION_MODE  KSPROPERTY_BDA_DIGITAL_DEMODULATOR = 8
+	KSPROPERTY_BDA_ROLL_OFF           KSPROPERTY_BDA_DIGITAL_DEMODULATOR = 9
+	KSPROPERTY_BDA_PILOT              KSPROPERTY_BDA_DIGITAL_DEMODULATOR = 10
+	KSPROPERTY_BDA_SIGNALTIMEOUTS     KSPROPERTY_BDA_DIGITAL_DEMODULATOR = 11
+	KSPROPERTY_BDA_PLP_NUMBER         KSPROPERTY_BDA_DIGITAL_DEMODULATOR = 12
 )
 
 type KSPROPERTY_BDA_AUTODEMODULATE int32
 
 const (
-	KSPROPERTY_BDA_AUTODEMODULATE_START = 0
-	KSPROPERTY_BDA_AUTODEMODULATE_STOP = 1
+	KSPROPERTY_BDA_AUTODEMODULATE_START KSPROPERTY_BDA_AUTODEMODULATE = 0
+	KSPROPERTY_BDA_AUTODEMODULATE_STOP  KSPROPERTY_BDA_AUTODEMODULATE = 1
 )
 
 type KSPROPERTY_IDS_BDA_TABLE int32
 
 const (
-	KSPROPERTY_BDA_TABLE_SECTION = 0
+	KSPROPERTY_BDA_TABLE_SECTION KSPROPERTY_IDS_BDA_TABLE = 0
 )
 
 type KSPROPERTY_BDA_PIDFILTER int32
 
 const (
-	KSPROPERTY_BDA_PIDFILTER_MAP_PIDS = 0
-	KSPROPERTY_BDA_PIDFILTER_UNMAP_PIDS = 1
-	KSPROPERTY_BDA_PIDFILTER_LIST_PIDS = 2
+	KSPROPERTY_BDA_PIDFILTER_MAP_PIDS   KSPROPERTY_BDA_PIDFILTER = 0
+	KSPROPERTY_BDA_PIDFILTER_UNMAP_PIDS KSPROPERTY_BDA_PIDFILTER = 1
+	KSPROPERTY_BDA_PIDFILTER_LIST_PIDS  KSPROPERTY_BDA_PIDFILTER = 2
 )
 
 type KSPROPERTY_BDA_CA int32
 
 const (
-	KSPROPERTY_BDA_ECM_MAP_STATUS = 0
-	KSPROPERTY_BDA_CA_MODULE_STATUS = 1
-	KSPROPERTY_BDA_CA_SMART_CARD_STATUS = 2
-	KSPROPERTY_BDA_CA_MODULE_UI = 3
-	KSPROPERTY_BDA_CA_SET_PROGRAM_PIDS = 4
-	KSPROPERTY_BDA_CA_REMOVE_PROGRAM = 5
+	KSPROPERTY_BDA_ECM_MAP_STATUS       KSPROPERTY_BDA_CA = 0
+	KSPROPERTY_BDA_CA_MODULE_STATUS     KSPROPERTY_BDA_CA = 1
+	KSPROPERTY_BDA_CA_SMART_CARD_STATUS KSPROPERTY_BDA_CA = 2
+	KSPROPERTY_BDA_CA_MODULE_UI         KSPROPERTY_BDA_CA = 3
+	KSPROPERTY_BDA_CA_SET_PROGRAM_PIDS  KSPROPERTY_BDA_CA = 4
+	KSPROPERTY_BDA_CA_REMOVE_PROGRAM    KSPROPERTY_BDA_CA = 5
 )
 
 type KSPROPERTY_BDA_CA_EVENT int32
 
 const (
-	KSEVENT_BDA_PROGRAM_FLOW_STATUS_CHANGED = 0
-	KSEVENT_BDA_CA_MODULE_STATUS_CHANGED = 1
-	KSEVENT_BDA_CA_SMART_CARD_STATUS_CHANGED = 2
-	KSEVENT_BDA_CA_MODULE_UI_REQUESTED = 3
+	KSEVENT_BDA_PROGRAM_FLOW_STATUS_CHANGED  KSPROPERTY_BDA_CA_EVENT = 0
+	KSEVENT_BDA_CA_MODULE_STATUS_CHANGED     KSPROPERTY_BDA_CA_EVENT = 1
+	KSEVENT_BDA_CA_SMART_CARD_STATUS_CHANGED KSPROPERTY_BDA_CA_EVENT = 2
+	KSEVENT_BDA_CA_MODULE_UI_REQUESTED       KSPROPERTY_BDA_CA_EVENT = 3
 )
 
 type KSMETHOD_BDA_DRM int32
 
 const (
-	KSMETHOD_BDA_DRM_CURRENT = 0
-	KSMETHOD_BDA_DRM_DRMSTATUS = 1
+	KSMETHOD_BDA_DRM_CURRENT   KSMETHOD_BDA_DRM = 0
+	KSMETHOD_BDA_DRM_DRMSTATUS KSMETHOD_BDA_DRM = 1
 )
 
 type KSMETHOD_BDA_WMDRM int32
 
 const (
-	KSMETHOD_BDA_WMDRM_STATUS = 0
-	KSMETHOD_BDA_WMDRM_REVINFO = 1
-	KSMETHOD_BDA_WMDRM_CRL = 2
-	KSMETHOD_BDA_WMDRM_MESSAGE = 3
-	KSMETHOD_BDA_WMDRM_REISSUELICENSE = 4
-	KSMETHOD_BDA_WMDRM_RENEWLICENSE = 5
-	KSMETHOD_BDA_WMDRM_LICENSE = 6
-	KSMETHOD_BDA_WMDRM_KEYINFO = 7
+	KSMETHOD_BDA_WMDRM_STATUS         KSMETHOD_BDA_WMDRM = 0
+	KSMETHOD_BDA_WMDRM_REVINFO        KSMETHOD_BDA_WMDRM = 1
+	KSMETHOD_BDA_WMDRM_CRL            KSMETHOD_BDA_WMDRM = 2
+	KSMETHOD_BDA_WMDRM_MESSAGE        KSMETHOD_BDA_WMDRM = 3
+	KSMETHOD_BDA_WMDRM_REISSUELICENSE KSMETHOD_BDA_WMDRM = 4
+	KSMETHOD_BDA_WMDRM_RENEWLICENSE   KSMETHOD_BDA_WMDRM = 5
+	KSMETHOD_BDA_WMDRM_LICENSE        KSMETHOD_BDA_WMDRM = 6
+	KSMETHOD_BDA_WMDRM_KEYINFO        KSMETHOD_BDA_WMDRM = 7
 )
 
 type KSMETHOD_BDA_WMDRM_TUNER int32
 
 const (
-	KSMETHOD_BDA_WMDRMTUNER_CANCELCAPTURETOKEN = 0
-	KSMETHOD_BDA_WMDRMTUNER_SETPIDPROTECTION = 1
-	KSMETHOD_BDA_WMDRMTUNER_GETPIDPROTECTION = 2
-	KSMETHOD_BDA_WMDRMTUNER_SETSYNCVALUE = 3
-	KSMETHOD_BDA_WMDRMTUNER_STARTCODEPROFILE = 4
-	KSMETHOD_BDA_WMDRMTUNER_PURCHASE_ENTITLEMENT = 5
+	KSMETHOD_BDA_WMDRMTUNER_CANCELCAPTURETOKEN   KSMETHOD_BDA_WMDRM_TUNER = 0
+	KSMETHOD_BDA_WMDRMTUNER_SETPIDPROTECTION     KSMETHOD_BDA_WMDRM_TUNER = 1
+	KSMETHOD_BDA_WMDRMTUNER_GETPIDPROTECTION     KSMETHOD_BDA_WMDRM_TUNER = 2
+	KSMETHOD_BDA_WMDRMTUNER_SETSYNCVALUE         KSMETHOD_BDA_WMDRM_TUNER = 3
+	KSMETHOD_BDA_WMDRMTUNER_STARTCODEPROFILE     KSMETHOD_BDA_WMDRM_TUNER = 4
+	KSMETHOD_BDA_WMDRMTUNER_PURCHASE_ENTITLEMENT KSMETHOD_BDA_WMDRM_TUNER = 5
 )
 
 type KSMETHOD_BDA_EVENTING_SERVICE int32
 
 const (
-	KSMETHOD_BDA_EVENT_DATA = 0
-	KSMETHOD_BDA_EVENT_COMPLETE = 1
+	KSMETHOD_BDA_EVENT_DATA     KSMETHOD_BDA_EVENTING_SERVICE = 0
+	KSMETHOD_BDA_EVENT_COMPLETE KSMETHOD_BDA_EVENTING_SERVICE = 1
 )
 
 type KSEVENT_BDA_EVENT_TYPE int32
 
 const (
-	KSEVENT_BDA_EVENT_PENDINGEVENT = 0
+	KSEVENT_BDA_EVENT_PENDINGEVENT KSEVENT_BDA_EVENT_TYPE = 0
 )
 
 type KSMETHOD_BDA_DEBUG_SERVICE int32
 
 const (
-	KSMETHOD_BDA_DEBUG_LEVEL = 0
-	KSMETHOD_BDA_DEBUG_DATA = 1
+	KSMETHOD_BDA_DEBUG_LEVEL KSMETHOD_BDA_DEBUG_SERVICE = 0
+	KSMETHOD_BDA_DEBUG_DATA  KSMETHOD_BDA_DEBUG_SERVICE = 1
 )
 
 type KSMETHOD_BDA_TUNER_SERVICE int32
 
 const (
-	KSMETHOD_BDA_TUNER_SETTUNER = 0
-	KSMETHOD_BDA_TUNER_GETTUNERSTATE = 1
-	KSMETHOD_BDA_TUNER_SIGNALNOISERATIO = 2
+	KSMETHOD_BDA_TUNER_SETTUNER         KSMETHOD_BDA_TUNER_SERVICE = 0
+	KSMETHOD_BDA_TUNER_GETTUNERSTATE    KSMETHOD_BDA_TUNER_SERVICE = 1
+	KSMETHOD_BDA_TUNER_SIGNALNOISERATIO KSMETHOD_BDA_TUNER_SERVICE = 2
 )
 
 type KSMETHOD_BDA_GPNV_SERVICE int32
 
 const (
-	KSMETHOD_BDA_GPNV_GETVALUE = 0
-	KSMETHOD_BDA_GPNV_SETVALUE = 1
-	KSMETHOD_BDA_GPNV_NAMEFROMINDEX = 2
-	KSMETHOD_BDA_GPNV_GETVALUEUPDATENAME = 3
+	KSMETHOD_BDA_GPNV_GETVALUE           KSMETHOD_BDA_GPNV_SERVICE = 0
+	KSMETHOD_BDA_GPNV_SETVALUE           KSMETHOD_BDA_GPNV_SERVICE = 1
+	KSMETHOD_BDA_GPNV_NAMEFROMINDEX      KSMETHOD_BDA_GPNV_SERVICE = 2
+	KSMETHOD_BDA_GPNV_GETVALUEUPDATENAME KSMETHOD_BDA_GPNV_SERVICE = 3
 )
 
 type KSMETHOD_BDA_MUX_SERVICE int32
 
 const (
-	KSMETHOD_BDA_MUX_GETPIDLIST = 0
-	KSMETHOD_BDA_MUX_SETPIDLIST = 1
+	KSMETHOD_BDA_MUX_GETPIDLIST KSMETHOD_BDA_MUX_SERVICE = 0
+	KSMETHOD_BDA_MUX_SETPIDLIST KSMETHOD_BDA_MUX_SERVICE = 1
 )
 
 type KSMETHOD_BDA_SCAN_SERVICE int32
 
 const (
-	KSMETHOD_BDA_SCAN_CAPABILTIES = 0
-	KSMETHOD_BDA_SCANNING_STATE = 1
-	KSMETHOD_BDA_SCAN_FILTER = 2
-	KSMETHOD_BDA_SCAN_START = 3
-	KSMETHOD_BDA_SCAN_RESUME = 4
-	KSMETHOD_BDA_SCAN_STOP = 5
+	KSMETHOD_BDA_SCAN_CAPABILTIES KSMETHOD_BDA_SCAN_SERVICE = 0
+	KSMETHOD_BDA_SCANNING_STATE   KSMETHOD_BDA_SCAN_SERVICE = 1
+	KSMETHOD_BDA_SCAN_FILTER      KSMETHOD_BDA_SCAN_SERVICE = 2
+	KSMETHOD_BDA_SCAN_START       KSMETHOD_BDA_SCAN_SERVICE = 3
+	KSMETHOD_BDA_SCAN_RESUME      KSMETHOD_BDA_SCAN_SERVICE = 4
+	KSMETHOD_BDA_SCAN_STOP        KSMETHOD_BDA_SCAN_SERVICE = 5
 )
 
 type KSMETHOD_BDA_GDDS_SERVICE int32
 
 const (
-	KSMETHOD_BDA_GDDS_DATATYPE = 0
-	KSMETHOD_BDA_GDDS_DATA = 1
-	KSMETHOD_BDA_GDDS_TUNEXMLFROMIDX = 2
-	KSMETHOD_BDA_GDDS_GETSERVICES = 3
-	KSMETHOD_BDA_GDDS_SERVICEFROMTUNEXML = 4
-	KSMETHOD_BDA_GDDS_DATAUPDATE = 5
+	KSMETHOD_BDA_GDDS_DATATYPE           KSMETHOD_BDA_GDDS_SERVICE = 0
+	KSMETHOD_BDA_GDDS_DATA               KSMETHOD_BDA_GDDS_SERVICE = 1
+	KSMETHOD_BDA_GDDS_TUNEXMLFROMIDX     KSMETHOD_BDA_GDDS_SERVICE = 2
+	KSMETHOD_BDA_GDDS_GETSERVICES        KSMETHOD_BDA_GDDS_SERVICE = 3
+	KSMETHOD_BDA_GDDS_SERVICEFROMTUNEXML KSMETHOD_BDA_GDDS_SERVICE = 4
+	KSMETHOD_BDA_GDDS_DATAUPDATE         KSMETHOD_BDA_GDDS_SERVICE = 5
 )
 
 type KSMETHOD_BDA_CAS_SERVICE int32
 
 const (
-	KSMETHOD_BDA_CAS_CHECKENTITLEMENTTOKEN = 0
-	KSMETHOD_BDA_CAS_SETCAPTURETOKEN = 1
-	KSMETHOD_BDA_CAS_OPENBROADCASTMMI = 2
-	KSMETHOD_BDA_CAS_CLOSEMMIDIALOG = 3
+	KSMETHOD_BDA_CAS_CHECKENTITLEMENTTOKEN KSMETHOD_BDA_CAS_SERVICE = 0
+	KSMETHOD_BDA_CAS_SETCAPTURETOKEN       KSMETHOD_BDA_CAS_SERVICE = 1
+	KSMETHOD_BDA_CAS_OPENBROADCASTMMI      KSMETHOD_BDA_CAS_SERVICE = 2
+	KSMETHOD_BDA_CAS_CLOSEMMIDIALOG        KSMETHOD_BDA_CAS_SERVICE = 3
 )
 
 type KSMETHOD_BDA_ISDB_CAS int32
 
 const (
-	KSMETHOD_BDA_ISDBCAS_SETREQUEST = 0
-	KSMETHOD_BDA_ISDBCAS_RESPONSEDATA = 1
+	KSMETHOD_BDA_ISDBCAS_SETREQUEST   KSMETHOD_BDA_ISDB_CAS = 0
+	KSMETHOD_BDA_ISDBCAS_RESPONSEDATA KSMETHOD_BDA_ISDB_CAS = 1
 )
 
 type KSMETHOD_BDA_TS_SELECTOR int32
 
 const (
-	KSMETHOD_BDA_TS_SELECTOR_SETTSID = 0
-	KSMETHOD_BDA_TS_SELECTOR_GETTSINFORMATION = 1
+	KSMETHOD_BDA_TS_SELECTOR_SETTSID          KSMETHOD_BDA_TS_SELECTOR = 0
+	KSMETHOD_BDA_TS_SELECTOR_GETTSINFORMATION KSMETHOD_BDA_TS_SELECTOR = 1
 )
 
 type KSMETHOD_BDA_USERACTIVITY_SERVICE int32
 
 const (
-	KSMETHOD_BDA_USERACTIVITY_USEREASON = 0
-	KSMETHOD_BDA_USERACTIVITY_INTERVAL = 1
-	KSMETHOD_BDA_USERACTIVITY_DETECTED = 2
+	KSMETHOD_BDA_USERACTIVITY_USEREASON KSMETHOD_BDA_USERACTIVITY_SERVICE = 0
+	KSMETHOD_BDA_USERACTIVITY_INTERVAL  KSMETHOD_BDA_USERACTIVITY_SERVICE = 1
+	KSMETHOD_BDA_USERACTIVITY_DETECTED  KSMETHOD_BDA_USERACTIVITY_SERVICE = 2
 )
-

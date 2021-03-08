@@ -7,414 +7,413 @@ package fileseverresourcemanager
 type FsrmQuotaFlags int32
 
 const (
-	FsrmQuotaFlags_Enforce = 256
-	FsrmQuotaFlags_Disable = 512
-	FsrmQuotaFlags_StatusIncomplete = 65536
-	FsrmQuotaFlags_StatusRebuilding = 131072
+	FsrmQuotaFlags_Enforce          FsrmQuotaFlags = 256
+	FsrmQuotaFlags_Disable          FsrmQuotaFlags = 512
+	FsrmQuotaFlags_StatusIncomplete FsrmQuotaFlags = 65536
+	FsrmQuotaFlags_StatusRebuilding FsrmQuotaFlags = 131072
 )
 
 type FsrmFileScreenFlags int32
 
 const (
-	FsrmFileScreenFlags_Enforce = 1
+	FsrmFileScreenFlags_Enforce FsrmFileScreenFlags = 1
 )
 
 type FsrmCollectionState int32
 
 const (
-	FsrmCollectionState_Fetching = 1
-	FsrmCollectionState_Committing = 2
-	FsrmCollectionState_Complete = 3
-	FsrmCollectionState_Cancelled = 4
+	FsrmCollectionState_Fetching   FsrmCollectionState = 1
+	FsrmCollectionState_Committing FsrmCollectionState = 2
+	FsrmCollectionState_Complete   FsrmCollectionState = 3
+	FsrmCollectionState_Cancelled  FsrmCollectionState = 4
 )
 
 type FsrmEnumOptions int32
 
 const (
-	FsrmEnumOptions_None = 0
-	FsrmEnumOptions_Asynchronous = 1
-	FsrmEnumOptions_CheckRecycleBin = 2
-	FsrmEnumOptions_IncludeClusterNodes = 4
-	FsrmEnumOptions_IncludeDeprecatedObjects = 8
+	FsrmEnumOptions_None                     FsrmEnumOptions = 0
+	FsrmEnumOptions_Asynchronous             FsrmEnumOptions = 1
+	FsrmEnumOptions_CheckRecycleBin          FsrmEnumOptions = 2
+	FsrmEnumOptions_IncludeClusterNodes      FsrmEnumOptions = 4
+	FsrmEnumOptions_IncludeDeprecatedObjects FsrmEnumOptions = 8
 )
 
 type FsrmCommitOptions int32
 
 const (
-	FsrmCommitOptions_None = 0
-	FsrmCommitOptions_Asynchronous = 1
+	FsrmCommitOptions_None         FsrmCommitOptions = 0
+	FsrmCommitOptions_Asynchronous FsrmCommitOptions = 1
 )
 
 type FsrmTemplateApplyOptions int32
 
 const (
-	FsrmTemplateApplyOptions_ApplyToDerivedMatching = 1
-	FsrmTemplateApplyOptions_ApplyToDerivedAll = 2
+	FsrmTemplateApplyOptions_ApplyToDerivedMatching FsrmTemplateApplyOptions = 1
+	FsrmTemplateApplyOptions_ApplyToDerivedAll      FsrmTemplateApplyOptions = 2
 )
 
 type FsrmActionType int32
 
 const (
-	FsrmActionType_Unknown = 0
-	FsrmActionType_EventLog = 1
-	FsrmActionType_Email = 2
-	FsrmActionType_Command = 3
-	FsrmActionType_Report = 4
+	FsrmActionType_Unknown  FsrmActionType = 0
+	FsrmActionType_EventLog FsrmActionType = 1
+	FsrmActionType_Email    FsrmActionType = 2
+	FsrmActionType_Command  FsrmActionType = 3
+	FsrmActionType_Report   FsrmActionType = 4
 )
 
 type FsrmEventType int32
 
 const (
-	FsrmEventType_Unknown = 0
-	FsrmEventType_Information = 1
-	FsrmEventType_Warning = 2
-	FsrmEventType_Error = 3
+	FsrmEventType_Unknown     FsrmEventType = 0
+	FsrmEventType_Information FsrmEventType = 1
+	FsrmEventType_Warning     FsrmEventType = 2
+	FsrmEventType_Error       FsrmEventType = 3
 )
 
 type FsrmAccountType int32
 
 const (
-	FsrmAccountType_Unknown = 0
-	FsrmAccountType_NetworkService = 1
-	FsrmAccountType_LocalService = 2
-	FsrmAccountType_LocalSystem = 3
-	FsrmAccountType_InProc = 4
-	FsrmAccountType_External = 5
-	FsrmAccountType_Automatic = 500
+	FsrmAccountType_Unknown        FsrmAccountType = 0
+	FsrmAccountType_NetworkService FsrmAccountType = 1
+	FsrmAccountType_LocalService   FsrmAccountType = 2
+	FsrmAccountType_LocalSystem    FsrmAccountType = 3
+	FsrmAccountType_InProc         FsrmAccountType = 4
+	FsrmAccountType_External       FsrmAccountType = 5
+	FsrmAccountType_Automatic      FsrmAccountType = 500
 )
 
 type FsrmReportType int32
 
 const (
-	FsrmReportType_Unknown = 0
-	FsrmReportType_LargeFiles = 1
-	FsrmReportType_FilesByType = 2
-	FsrmReportType_LeastRecentlyAccessed = 3
-	FsrmReportType_MostRecentlyAccessed = 4
-	FsrmReportType_QuotaUsage = 5
-	FsrmReportType_FilesByOwner = 6
-	FsrmReportType_ExportReport = 7
-	FsrmReportType_DuplicateFiles = 8
-	FsrmReportType_FileScreenAudit = 9
-	FsrmReportType_FilesByProperty = 10
-	FsrmReportType_AutomaticClassification = 11
-	FsrmReportType_Expiration = 12
-	FsrmReportType_FoldersByProperty = 13
+	FsrmReportType_Unknown                 FsrmReportType = 0
+	FsrmReportType_LargeFiles              FsrmReportType = 1
+	FsrmReportType_FilesByType             FsrmReportType = 2
+	FsrmReportType_LeastRecentlyAccessed   FsrmReportType = 3
+	FsrmReportType_MostRecentlyAccessed    FsrmReportType = 4
+	FsrmReportType_QuotaUsage              FsrmReportType = 5
+	FsrmReportType_FilesByOwner            FsrmReportType = 6
+	FsrmReportType_ExportReport            FsrmReportType = 7
+	FsrmReportType_DuplicateFiles          FsrmReportType = 8
+	FsrmReportType_FileScreenAudit         FsrmReportType = 9
+	FsrmReportType_FilesByProperty         FsrmReportType = 10
+	FsrmReportType_AutomaticClassification FsrmReportType = 11
+	FsrmReportType_Expiration              FsrmReportType = 12
+	FsrmReportType_FoldersByProperty       FsrmReportType = 13
 )
 
 type FsrmReportFormat int32
 
 const (
-	FsrmReportFormat_Unknown = 0
-	FsrmReportFormat_DHtml = 1
-	FsrmReportFormat_Html = 2
-	FsrmReportFormat_Txt = 3
-	FsrmReportFormat_Csv = 4
-	FsrmReportFormat_Xml = 5
+	FsrmReportFormat_Unknown FsrmReportFormat = 0
+	FsrmReportFormat_DHtml   FsrmReportFormat = 1
+	FsrmReportFormat_Html    FsrmReportFormat = 2
+	FsrmReportFormat_Txt     FsrmReportFormat = 3
+	FsrmReportFormat_Csv     FsrmReportFormat = 4
+	FsrmReportFormat_Xml     FsrmReportFormat = 5
 )
 
 type FsrmReportRunningStatus int32
 
 const (
-	FsrmReportRunningStatus_Unknown = 0
-	FsrmReportRunningStatus_NotRunning = 1
-	FsrmReportRunningStatus_Queued = 2
-	FsrmReportRunningStatus_Running = 3
+	FsrmReportRunningStatus_Unknown    FsrmReportRunningStatus = 0
+	FsrmReportRunningStatus_NotRunning FsrmReportRunningStatus = 1
+	FsrmReportRunningStatus_Queued     FsrmReportRunningStatus = 2
+	FsrmReportRunningStatus_Running    FsrmReportRunningStatus = 3
 )
 
 type FsrmReportGenerationContext int32
 
 const (
-	FsrmReportGenerationContext_Undefined = 1
-	FsrmReportGenerationContext_ScheduledReport = 2
-	FsrmReportGenerationContext_InteractiveReport = 3
-	FsrmReportGenerationContext_IncidentReport = 4
+	FsrmReportGenerationContext_Undefined         FsrmReportGenerationContext = 1
+	FsrmReportGenerationContext_ScheduledReport   FsrmReportGenerationContext = 2
+	FsrmReportGenerationContext_InteractiveReport FsrmReportGenerationContext = 3
+	FsrmReportGenerationContext_IncidentReport    FsrmReportGenerationContext = 4
 )
 
 type FsrmReportFilter int32
 
 const (
-	FsrmReportFilter_MinSize = 1
-	FsrmReportFilter_MinAgeDays = 2
-	FsrmReportFilter_MaxAgeDays = 3
-	FsrmReportFilter_MinQuotaUsage = 4
-	FsrmReportFilter_FileGroups = 5
-	FsrmReportFilter_Owners = 6
-	FsrmReportFilter_NamePattern = 7
-	FsrmReportFilter_Property = 8
+	FsrmReportFilter_MinSize       FsrmReportFilter = 1
+	FsrmReportFilter_MinAgeDays    FsrmReportFilter = 2
+	FsrmReportFilter_MaxAgeDays    FsrmReportFilter = 3
+	FsrmReportFilter_MinQuotaUsage FsrmReportFilter = 4
+	FsrmReportFilter_FileGroups    FsrmReportFilter = 5
+	FsrmReportFilter_Owners        FsrmReportFilter = 6
+	FsrmReportFilter_NamePattern   FsrmReportFilter = 7
+	FsrmReportFilter_Property      FsrmReportFilter = 8
 )
 
 type FsrmReportLimit int32
 
 const (
-	FsrmReportLimit_MaxFiles = 1
-	FsrmReportLimit_MaxFileGroups = 2
-	FsrmReportLimit_MaxOwners = 3
-	FsrmReportLimit_MaxFilesPerFileGroup = 4
-	FsrmReportLimit_MaxFilesPerOwner = 5
-	FsrmReportLimit_MaxFilesPerDuplGroup = 6
-	FsrmReportLimit_MaxDuplicateGroups = 7
-	FsrmReportLimit_MaxQuotas = 8
-	FsrmReportLimit_MaxFileScreenEvents = 9
-	FsrmReportLimit_MaxPropertyValues = 10
-	FsrmReportLimit_MaxFilesPerPropertyValue = 11
-	FsrmReportLimit_MaxFolders = 12
+	FsrmReportLimit_MaxFiles                 FsrmReportLimit = 1
+	FsrmReportLimit_MaxFileGroups            FsrmReportLimit = 2
+	FsrmReportLimit_MaxOwners                FsrmReportLimit = 3
+	FsrmReportLimit_MaxFilesPerFileGroup     FsrmReportLimit = 4
+	FsrmReportLimit_MaxFilesPerOwner         FsrmReportLimit = 5
+	FsrmReportLimit_MaxFilesPerDuplGroup     FsrmReportLimit = 6
+	FsrmReportLimit_MaxDuplicateGroups       FsrmReportLimit = 7
+	FsrmReportLimit_MaxQuotas                FsrmReportLimit = 8
+	FsrmReportLimit_MaxFileScreenEvents      FsrmReportLimit = 9
+	FsrmReportLimit_MaxPropertyValues        FsrmReportLimit = 10
+	FsrmReportLimit_MaxFilesPerPropertyValue FsrmReportLimit = 11
+	FsrmReportLimit_MaxFolders               FsrmReportLimit = 12
 )
 
 type FsrmPropertyDefinitionType int32
 
 const (
-	FsrmPropertyDefinitionType_Unknown = 0
-	FsrmPropertyDefinitionType_OrderedList = 1
-	FsrmPropertyDefinitionType_MultiChoiceList = 2
-	FsrmPropertyDefinitionType_SingleChoiceList = 3
-	FsrmPropertyDefinitionType_String = 4
-	FsrmPropertyDefinitionType_MultiString = 5
-	FsrmPropertyDefinitionType_Int = 6
-	FsrmPropertyDefinitionType_Bool = 7
-	FsrmPropertyDefinitionType_Date = 8
+	FsrmPropertyDefinitionType_Unknown          FsrmPropertyDefinitionType = 0
+	FsrmPropertyDefinitionType_OrderedList      FsrmPropertyDefinitionType = 1
+	FsrmPropertyDefinitionType_MultiChoiceList  FsrmPropertyDefinitionType = 2
+	FsrmPropertyDefinitionType_SingleChoiceList FsrmPropertyDefinitionType = 3
+	FsrmPropertyDefinitionType_String           FsrmPropertyDefinitionType = 4
+	FsrmPropertyDefinitionType_MultiString      FsrmPropertyDefinitionType = 5
+	FsrmPropertyDefinitionType_Int              FsrmPropertyDefinitionType = 6
+	FsrmPropertyDefinitionType_Bool             FsrmPropertyDefinitionType = 7
+	FsrmPropertyDefinitionType_Date             FsrmPropertyDefinitionType = 8
 )
 
 type FsrmPropertyDefinitionFlags int32
 
 const (
-	FsrmPropertyDefinitionFlags_Global = 1
-	FsrmPropertyDefinitionFlags_Deprecated = 2
-	FsrmPropertyDefinitionFlags_Secure = 4
+	FsrmPropertyDefinitionFlags_Global     FsrmPropertyDefinitionFlags = 1
+	FsrmPropertyDefinitionFlags_Deprecated FsrmPropertyDefinitionFlags = 2
+	FsrmPropertyDefinitionFlags_Secure     FsrmPropertyDefinitionFlags = 4
 )
 
 type FsrmPropertyDefinitionAppliesTo int32
 
 const (
-	FsrmPropertyDefinitionAppliesTo_Files = 1
-	FsrmPropertyDefinitionAppliesTo_Folders = 2
+	FsrmPropertyDefinitionAppliesTo_Files   FsrmPropertyDefinitionAppliesTo = 1
+	FsrmPropertyDefinitionAppliesTo_Folders FsrmPropertyDefinitionAppliesTo = 2
 )
 
 type FsrmRuleType int32
 
 const (
-	FsrmRuleType_Unknown = 0
-	FsrmRuleType_Classification = 1
-	FsrmRuleType_Generic = 2
+	FsrmRuleType_Unknown        FsrmRuleType = 0
+	FsrmRuleType_Classification FsrmRuleType = 1
+	FsrmRuleType_Generic        FsrmRuleType = 2
 )
 
 type FsrmRuleFlags int32
 
 const (
-	FsrmRuleFlags_Disabled = 256
-	FsrmRuleFlags_ClearAutomaticallyClassifiedProperty = 1024
-	FsrmRuleFlags_ClearManuallyClassifiedProperty = 2048
-	FsrmRuleFlags_Invalid = 4096
+	FsrmRuleFlags_Disabled                             FsrmRuleFlags = 256
+	FsrmRuleFlags_ClearAutomaticallyClassifiedProperty FsrmRuleFlags = 1024
+	FsrmRuleFlags_ClearManuallyClassifiedProperty      FsrmRuleFlags = 2048
+	FsrmRuleFlags_Invalid                              FsrmRuleFlags = 4096
 )
 
 type FsrmClassificationLoggingFlags int32
 
 const (
-	FsrmClassificationLoggingFlags_None = 0
-	FsrmClassificationLoggingFlags_ClassificationsInLogFile = 1
-	FsrmClassificationLoggingFlags_ErrorsInLogFile = 2
-	FsrmClassificationLoggingFlags_ClassificationsInSystemLog = 4
-	FsrmClassificationLoggingFlags_ErrorsInSystemLog = 8
+	FsrmClassificationLoggingFlags_None                       FsrmClassificationLoggingFlags = 0
+	FsrmClassificationLoggingFlags_ClassificationsInLogFile   FsrmClassificationLoggingFlags = 1
+	FsrmClassificationLoggingFlags_ErrorsInLogFile            FsrmClassificationLoggingFlags = 2
+	FsrmClassificationLoggingFlags_ClassificationsInSystemLog FsrmClassificationLoggingFlags = 4
+	FsrmClassificationLoggingFlags_ErrorsInSystemLog          FsrmClassificationLoggingFlags = 8
 )
 
 type FsrmExecutionOption int32
 
 const (
-	FsrmExecutionOption_Unknown = 0
-	FsrmExecutionOption_EvaluateUnset = 1
-	FsrmExecutionOption_ReEvaluate_ConsiderExistingValue = 2
-	FsrmExecutionOption_ReEvaluate_IgnoreExistingValue = 3
+	FsrmExecutionOption_Unknown                          FsrmExecutionOption = 0
+	FsrmExecutionOption_EvaluateUnset                    FsrmExecutionOption = 1
+	FsrmExecutionOption_ReEvaluate_ConsiderExistingValue FsrmExecutionOption = 2
+	FsrmExecutionOption_ReEvaluate_IgnoreExistingValue   FsrmExecutionOption = 3
 )
 
 type FsrmStorageModuleCaps int32
 
 const (
-	FsrmStorageModuleCaps_Unknown = 0
-	FsrmStorageModuleCaps_CanGet = 1
-	FsrmStorageModuleCaps_CanSet = 2
-	FsrmStorageModuleCaps_CanHandleDirectories = 4
-	FsrmStorageModuleCaps_CanHandleFiles = 8
+	FsrmStorageModuleCaps_Unknown              FsrmStorageModuleCaps = 0
+	FsrmStorageModuleCaps_CanGet               FsrmStorageModuleCaps = 1
+	FsrmStorageModuleCaps_CanSet               FsrmStorageModuleCaps = 2
+	FsrmStorageModuleCaps_CanHandleDirectories FsrmStorageModuleCaps = 4
+	FsrmStorageModuleCaps_CanHandleFiles       FsrmStorageModuleCaps = 8
 )
 
 type FsrmStorageModuleType int32
 
 const (
-	FsrmStorageModuleType_Unknown = 0
-	FsrmStorageModuleType_Cache = 1
-	FsrmStorageModuleType_InFile = 2
-	FsrmStorageModuleType_Database = 3
-	FsrmStorageModuleType_System = 100
+	FsrmStorageModuleType_Unknown  FsrmStorageModuleType = 0
+	FsrmStorageModuleType_Cache    FsrmStorageModuleType = 1
+	FsrmStorageModuleType_InFile   FsrmStorageModuleType = 2
+	FsrmStorageModuleType_Database FsrmStorageModuleType = 3
+	FsrmStorageModuleType_System   FsrmStorageModuleType = 100
 )
 
 type FsrmPropertyBagFlags int32
 
 const (
-	FsrmPropertyBagFlags_UpdatedByClassifier = 1
-	FsrmPropertyBagFlags_FailedLoadingProperties = 2
-	FsrmPropertyBagFlags_FailedSavingProperties = 4
-	FsrmPropertyBagFlags_FailedClassifyingProperties = 8
+	FsrmPropertyBagFlags_UpdatedByClassifier         FsrmPropertyBagFlags = 1
+	FsrmPropertyBagFlags_FailedLoadingProperties     FsrmPropertyBagFlags = 2
+	FsrmPropertyBagFlags_FailedSavingProperties      FsrmPropertyBagFlags = 4
+	FsrmPropertyBagFlags_FailedClassifyingProperties FsrmPropertyBagFlags = 8
 )
 
 type FsrmPropertyBagField int32
 
 const (
-	FsrmPropertyBagField_AccessVolume = 0
-	FsrmPropertyBagField_VolumeGuidName = 1
+	FsrmPropertyBagField_AccessVolume   FsrmPropertyBagField = 0
+	FsrmPropertyBagField_VolumeGuidName FsrmPropertyBagField = 1
 )
 
 type FsrmPropertyFlags int32
 
 const (
-	FsrmPropertyFlags_None = 0
-	FsrmPropertyFlags_Orphaned = 1
-	FsrmPropertyFlags_RetrievedFromCache = 2
-	FsrmPropertyFlags_RetrievedFromStorage = 4
-	FsrmPropertyFlags_SetByClassifier = 8
-	FsrmPropertyFlags_Deleted = 16
-	FsrmPropertyFlags_Reclassified = 32
-	FsrmPropertyFlags_AggregationFailed = 64
-	FsrmPropertyFlags_Existing = 128
-	FsrmPropertyFlags_FailedLoadingProperties = 256
-	FsrmPropertyFlags_FailedClassifyingProperties = 512
-	FsrmPropertyFlags_FailedSavingProperties = 1024
-	FsrmPropertyFlags_Secure = 2048
-	FsrmPropertyFlags_PolicyDerived = 4096
-	FsrmPropertyFlags_Inherited = 8192
-	FsrmPropertyFlags_Manual = 16384
-	FsrmPropertyFlags_ExplicitValueDeleted = 32768
-	FsrmPropertyFlags_PropertyDeletedFromClear = 65536
-	FsrmPropertyFlags_PropertySourceMask = 14
-	FsrmPropertyFlags_PersistentMask = 20480
+	FsrmPropertyFlags_None                        FsrmPropertyFlags = 0
+	FsrmPropertyFlags_Orphaned                    FsrmPropertyFlags = 1
+	FsrmPropertyFlags_RetrievedFromCache          FsrmPropertyFlags = 2
+	FsrmPropertyFlags_RetrievedFromStorage        FsrmPropertyFlags = 4
+	FsrmPropertyFlags_SetByClassifier             FsrmPropertyFlags = 8
+	FsrmPropertyFlags_Deleted                     FsrmPropertyFlags = 16
+	FsrmPropertyFlags_Reclassified                FsrmPropertyFlags = 32
+	FsrmPropertyFlags_AggregationFailed           FsrmPropertyFlags = 64
+	FsrmPropertyFlags_Existing                    FsrmPropertyFlags = 128
+	FsrmPropertyFlags_FailedLoadingProperties     FsrmPropertyFlags = 256
+	FsrmPropertyFlags_FailedClassifyingProperties FsrmPropertyFlags = 512
+	FsrmPropertyFlags_FailedSavingProperties      FsrmPropertyFlags = 1024
+	FsrmPropertyFlags_Secure                      FsrmPropertyFlags = 2048
+	FsrmPropertyFlags_PolicyDerived               FsrmPropertyFlags = 4096
+	FsrmPropertyFlags_Inherited                   FsrmPropertyFlags = 8192
+	FsrmPropertyFlags_Manual                      FsrmPropertyFlags = 16384
+	FsrmPropertyFlags_ExplicitValueDeleted        FsrmPropertyFlags = 32768
+	FsrmPropertyFlags_PropertyDeletedFromClear    FsrmPropertyFlags = 65536
+	FsrmPropertyFlags_PropertySourceMask          FsrmPropertyFlags = 14
+	FsrmPropertyFlags_PersistentMask              FsrmPropertyFlags = 20480
 )
 
 type FsrmPipelineModuleType int32
 
 const (
-	FsrmPipelineModuleType_Unknown = 0
-	FsrmPipelineModuleType_Storage = 1
-	FsrmPipelineModuleType_Classifier = 2
+	FsrmPipelineModuleType_Unknown    FsrmPipelineModuleType = 0
+	FsrmPipelineModuleType_Storage    FsrmPipelineModuleType = 1
+	FsrmPipelineModuleType_Classifier FsrmPipelineModuleType = 2
 )
 
 type FsrmGetFilePropertyOptions int32
 
 const (
-	FsrmGetFilePropertyOptions_None = 0
-	FsrmGetFilePropertyOptions_NoRuleEvaluation = 1
-	FsrmGetFilePropertyOptions_Persistent = 2
-	FsrmGetFilePropertyOptions_FailOnPersistErrors = 4
-	FsrmGetFilePropertyOptions_SkipOrphaned = 8
+	FsrmGetFilePropertyOptions_None                FsrmGetFilePropertyOptions = 0
+	FsrmGetFilePropertyOptions_NoRuleEvaluation    FsrmGetFilePropertyOptions = 1
+	FsrmGetFilePropertyOptions_Persistent          FsrmGetFilePropertyOptions = 2
+	FsrmGetFilePropertyOptions_FailOnPersistErrors FsrmGetFilePropertyOptions = 4
+	FsrmGetFilePropertyOptions_SkipOrphaned        FsrmGetFilePropertyOptions = 8
 )
 
 type FsrmFileManagementType int32
 
 const (
-	FsrmFileManagementType_Unknown = 0
-	FsrmFileManagementType_Expiration = 1
-	FsrmFileManagementType_Custom = 2
-	FsrmFileManagementType_Rms = 3
+	FsrmFileManagementType_Unknown    FsrmFileManagementType = 0
+	FsrmFileManagementType_Expiration FsrmFileManagementType = 1
+	FsrmFileManagementType_Custom     FsrmFileManagementType = 2
+	FsrmFileManagementType_Rms        FsrmFileManagementType = 3
 )
 
 type FsrmFileManagementLoggingFlags int32
 
 const (
-	FsrmFileManagementLoggingFlags_None = 0
-	FsrmFileManagementLoggingFlags_Error = 1
-	FsrmFileManagementLoggingFlags_Information = 2
-	FsrmFileManagementLoggingFlags_Audit = 4
+	FsrmFileManagementLoggingFlags_None        FsrmFileManagementLoggingFlags = 0
+	FsrmFileManagementLoggingFlags_Error       FsrmFileManagementLoggingFlags = 1
+	FsrmFileManagementLoggingFlags_Information FsrmFileManagementLoggingFlags = 2
+	FsrmFileManagementLoggingFlags_Audit       FsrmFileManagementLoggingFlags = 4
 )
 
 type FsrmPropertyConditionType int32
 
 const (
-	FsrmPropertyConditionType_Unknown = 0
-	FsrmPropertyConditionType_Equal = 1
-	FsrmPropertyConditionType_NotEqual = 2
-	FsrmPropertyConditionType_GreaterThan = 3
-	FsrmPropertyConditionType_LessThan = 4
-	FsrmPropertyConditionType_Contain = 5
-	FsrmPropertyConditionType_Exist = 6
-	FsrmPropertyConditionType_NotExist = 7
-	FsrmPropertyConditionType_StartWith = 8
-	FsrmPropertyConditionType_EndWith = 9
-	FsrmPropertyConditionType_ContainedIn = 10
-	FsrmPropertyConditionType_PrefixOf = 11
-	FsrmPropertyConditionType_SuffixOf = 12
-	FsrmPropertyConditionType_MatchesPattern = 13
+	FsrmPropertyConditionType_Unknown        FsrmPropertyConditionType = 0
+	FsrmPropertyConditionType_Equal          FsrmPropertyConditionType = 1
+	FsrmPropertyConditionType_NotEqual       FsrmPropertyConditionType = 2
+	FsrmPropertyConditionType_GreaterThan    FsrmPropertyConditionType = 3
+	FsrmPropertyConditionType_LessThan       FsrmPropertyConditionType = 4
+	FsrmPropertyConditionType_Contain        FsrmPropertyConditionType = 5
+	FsrmPropertyConditionType_Exist          FsrmPropertyConditionType = 6
+	FsrmPropertyConditionType_NotExist       FsrmPropertyConditionType = 7
+	FsrmPropertyConditionType_StartWith      FsrmPropertyConditionType = 8
+	FsrmPropertyConditionType_EndWith        FsrmPropertyConditionType = 9
+	FsrmPropertyConditionType_ContainedIn    FsrmPropertyConditionType = 10
+	FsrmPropertyConditionType_PrefixOf       FsrmPropertyConditionType = 11
+	FsrmPropertyConditionType_SuffixOf       FsrmPropertyConditionType = 12
+	FsrmPropertyConditionType_MatchesPattern FsrmPropertyConditionType = 13
 )
 
 type FsrmFileStreamingMode int32
 
 const (
-	FsrmFileStreamingMode_Unknown = 0
-	FsrmFileStreamingMode_Read = 1
-	FsrmFileStreamingMode_Write = 2
+	FsrmFileStreamingMode_Unknown FsrmFileStreamingMode = 0
+	FsrmFileStreamingMode_Read    FsrmFileStreamingMode = 1
+	FsrmFileStreamingMode_Write   FsrmFileStreamingMode = 2
 )
 
 type FsrmFileStreamingInterfaceType int32
 
 const (
-	FsrmFileStreamingInterfaceType_Unknown = 0
-	FsrmFileStreamingInterfaceType_ILockBytes = 1
-	FsrmFileStreamingInterfaceType_IStream = 2
+	FsrmFileStreamingInterfaceType_Unknown    FsrmFileStreamingInterfaceType = 0
+	FsrmFileStreamingInterfaceType_ILockBytes FsrmFileStreamingInterfaceType = 1
+	FsrmFileStreamingInterfaceType_IStream    FsrmFileStreamingInterfaceType = 2
 )
 
 type FsrmFileConditionType int32
 
 const (
-	FsrmFileConditionType_Unknown = 0
-	FsrmFileConditionType_Property = 1
+	FsrmFileConditionType_Unknown  FsrmFileConditionType = 0
+	FsrmFileConditionType_Property FsrmFileConditionType = 1
 )
 
 type FsrmFileSystemPropertyId int32
 
 const (
-	FsrmFileSystemPropertyId_Undefined = 0
-	FsrmFileSystemPropertyId_FileName = 1
-	FsrmFileSystemPropertyId_DateCreated = 2
-	FsrmFileSystemPropertyId_DateLastAccessed = 3
-	FsrmFileSystemPropertyId_DateLastModified = 4
-	FsrmFileSystemPropertyId_DateNow = 5
+	FsrmFileSystemPropertyId_Undefined        FsrmFileSystemPropertyId = 0
+	FsrmFileSystemPropertyId_FileName         FsrmFileSystemPropertyId = 1
+	FsrmFileSystemPropertyId_DateCreated      FsrmFileSystemPropertyId = 2
+	FsrmFileSystemPropertyId_DateLastAccessed FsrmFileSystemPropertyId = 3
+	FsrmFileSystemPropertyId_DateLastModified FsrmFileSystemPropertyId = 4
+	FsrmFileSystemPropertyId_DateNow          FsrmFileSystemPropertyId = 5
 )
 
 type FsrmPropertyValueType int32
 
 const (
-	FsrmPropertyValueType_Undefined = 0
-	FsrmPropertyValueType_Literal = 1
-	FsrmPropertyValueType_DateOffset = 2
+	FsrmPropertyValueType_Undefined  FsrmPropertyValueType = 0
+	FsrmPropertyValueType_Literal    FsrmPropertyValueType = 1
+	FsrmPropertyValueType_DateOffset FsrmPropertyValueType = 2
 )
 
 type AdrClientDisplayFlags int32
 
 const (
-	AdrClientDisplayFlags_AllowEmailRequests = 1
-	AdrClientDisplayFlags_ShowDeviceTroubleshooting = 2
+	AdrClientDisplayFlags_AllowEmailRequests        AdrClientDisplayFlags = 1
+	AdrClientDisplayFlags_ShowDeviceTroubleshooting AdrClientDisplayFlags = 2
 )
 
 type AdrEmailFlags int32
 
 const (
-	AdrEmailFlags_PutDataOwnerOnToLine = 1
-	AdrEmailFlags_PutAdminOnToLine = 2
-	AdrEmailFlags_IncludeDeviceClaims = 4
-	AdrEmailFlags_IncludeUserInfo = 8
-	AdrEmailFlags_GenerateEventLog = 16
+	AdrEmailFlags_PutDataOwnerOnToLine AdrEmailFlags = 1
+	AdrEmailFlags_PutAdminOnToLine     AdrEmailFlags = 2
+	AdrEmailFlags_IncludeDeviceClaims  AdrEmailFlags = 4
+	AdrEmailFlags_IncludeUserInfo      AdrEmailFlags = 8
+	AdrEmailFlags_GenerateEventLog     AdrEmailFlags = 16
 )
 
 type AdrClientErrorType int32
 
 const (
-	AdrClientErrorType_Unknown = 0
-	AdrClientErrorType_AccessDenied = 1
-	AdrClientErrorType_FileNotFound = 2
+	AdrClientErrorType_Unknown      AdrClientErrorType = 0
+	AdrClientErrorType_AccessDenied AdrClientErrorType = 1
+	AdrClientErrorType_FileNotFound AdrClientErrorType = 2
 )
 
 type AdrClientFlags int32
 
 const (
-	AdrClientFlags_None = 0
-	AdrClientFlags_FailForLocalPaths = 1
-	AdrClientFlags_FailIfNotSupportedByServer = 2
-	AdrClientFlags_FailIfNotDomainJoined = 4
+	AdrClientFlags_None                       AdrClientFlags = 0
+	AdrClientFlags_FailForLocalPaths          AdrClientFlags = 1
+	AdrClientFlags_FailIfNotSupportedByServer AdrClientFlags = 2
+	AdrClientFlags_FailIfNotDomainJoined      AdrClientFlags = 4
 )
-

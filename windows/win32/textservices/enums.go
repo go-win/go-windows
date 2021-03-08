@@ -7,233 +7,232 @@ package textservices
 type TsActiveSelEnd int32
 
 const (
-	TS_AE_NONE = 0
-	TS_AE_START = 1
-	TS_AE_END = 2
+	TS_AE_NONE  TsActiveSelEnd = 0
+	TS_AE_START TsActiveSelEnd = 1
+	TS_AE_END   TsActiveSelEnd = 2
 )
 
 type TsLayoutCode int32
 
 const (
-	TS_LC_CREATE = 0
-	TS_LC_CHANGE = 1
-	TS_LC_DESTROY = 2
+	TS_LC_CREATE  TsLayoutCode = 0
+	TS_LC_CHANGE  TsLayoutCode = 1
+	TS_LC_DESTROY TsLayoutCode = 2
 )
 
 type TsRunType int32
 
 const (
-	TS_RT_PLAIN = 0
-	TS_RT_HIDDEN = 1
-	TS_RT_OPAQUE = 2
+	TS_RT_PLAIN  TsRunType = 0
+	TS_RT_HIDDEN TsRunType = 1
+	TS_RT_OPAQUE TsRunType = 2
 )
 
 type TsGravity int32
 
 const (
-	TS_GR_BACKWARD = 0
-	TS_GR_FORWARD = 1
+	TS_GR_BACKWARD TsGravity = 0
+	TS_GR_FORWARD  TsGravity = 1
 )
 
 type TsShiftDir int32
 
 const (
-	TS_SD_BACKWARD = 0
-	TS_SD_FORWARD = 1
+	TS_SD_BACKWARD TsShiftDir = 0
+	TS_SD_FORWARD  TsShiftDir = 1
 )
 
 type TfLBIClick int32
 
 const (
-	TF_LBI_CLK_RIGHT = 1
-	TF_LBI_CLK_LEFT = 2
+	TF_LBI_CLK_RIGHT TfLBIClick = 1
+	TF_LBI_CLK_LEFT  TfLBIClick = 2
 )
 
 type TfLBBalloonStyle int32
 
 const (
-	TF_LB_BALLOON_RECO = 0
-	TF_LB_BALLOON_SHOW = 1
-	TF_LB_BALLOON_MISS = 2
+	TF_LB_BALLOON_RECO TfLBBalloonStyle = 0
+	TF_LB_BALLOON_SHOW TfLBBalloonStyle = 1
+	TF_LB_BALLOON_MISS TfLBBalloonStyle = 2
 )
 
 type TfAnchor int32
 
 const (
-	TF_ANCHOR_START = 0
-	TF_ANCHOR_END = 1
+	TF_ANCHOR_START TfAnchor = 0
+	TF_ANCHOR_END   TfAnchor = 1
 )
 
 type TfActiveSelEnd int32
 
 const (
-	TF_AE_NONE = 0
-	TF_AE_START = 1
-	TF_AE_END = 2
+	TF_AE_NONE  TfActiveSelEnd = 0
+	TF_AE_START TfActiveSelEnd = 1
+	TF_AE_END   TfActiveSelEnd = 2
 )
 
 type TfLayoutCode int32
 
 const (
-	TF_LC_CREATE = 0
-	TF_LC_CHANGE = 1
-	TF_LC_DESTROY = 2
+	TF_LC_CREATE  TfLayoutCode = 0
+	TF_LC_CHANGE  TfLayoutCode = 1
+	TF_LC_DESTROY TfLayoutCode = 2
 )
 
 type TfGravity int32
 
 const (
-	TF_GRAVITY_BACKWARD = 0
-	TF_GRAVITY_FORWARD = 1
+	TF_GRAVITY_BACKWARD TfGravity = 0
+	TF_GRAVITY_FORWARD  TfGravity = 1
 )
 
 type TfShiftDir int32
 
 const (
-	TF_SD_BACKWARD = 0
-	TF_SD_FORWARD = 1
+	TF_SD_BACKWARD TfShiftDir = 0
+	TF_SD_FORWARD  TfShiftDir = 1
 )
 
 type TF_DA_LINESTYLE int32
 
 const (
-	TF_LS_NONE = 0
-	TF_LS_SOLID = 1
-	TF_LS_DOT = 2
-	TF_LS_DASH = 3
-	TF_LS_SQUIGGLE = 4
+	TF_LS_NONE     TF_DA_LINESTYLE = 0
+	TF_LS_SOLID    TF_DA_LINESTYLE = 1
+	TF_LS_DOT      TF_DA_LINESTYLE = 2
+	TF_LS_DASH     TF_DA_LINESTYLE = 3
+	TF_LS_SQUIGGLE TF_DA_LINESTYLE = 4
 )
 
 type TF_DA_COLORTYPE int32
 
 const (
-	TF_CT_NONE = 0
-	TF_CT_SYSCOLOR = 1
-	TF_CT_COLORREF = 2
+	TF_CT_NONE     TF_DA_COLORTYPE = 0
+	TF_CT_SYSCOLOR TF_DA_COLORTYPE = 1
+	TF_CT_COLORREF TF_DA_COLORTYPE = 2
 )
 
 type TF_DA_ATTR_INFO int32
 
 const (
-	TF_ATTR_INPUT = 0
-	TF_ATTR_TARGET_CONVERTED = 1
-	TF_ATTR_CONVERTED = 2
-	TF_ATTR_TARGET_NOTCONVERTED = 3
-	TF_ATTR_INPUT_ERROR = 4
-	TF_ATTR_FIXEDCONVERTED = 5
-	TF_ATTR_OTHER = -1
+	TF_ATTR_INPUT               TF_DA_ATTR_INFO = 0
+	TF_ATTR_TARGET_CONVERTED    TF_DA_ATTR_INFO = 1
+	TF_ATTR_CONVERTED           TF_DA_ATTR_INFO = 2
+	TF_ATTR_TARGET_NOTCONVERTED TF_DA_ATTR_INFO = 3
+	TF_ATTR_INPUT_ERROR         TF_DA_ATTR_INFO = 4
+	TF_ATTR_FIXEDCONVERTED      TF_DA_ATTR_INFO = 5
+	TF_ATTR_OTHER               TF_DA_ATTR_INFO = -1
 )
 
 type TfCandidateResult int32
 
 const (
-	CAND_FINALIZED = 0
-	CAND_SELECTED = 1
-	CAND_CANCELED = 2
+	CAND_FINALIZED TfCandidateResult = 0
+	CAND_SELECTED  TfCandidateResult = 1
+	CAND_CANCELED  TfCandidateResult = 2
 )
 
 type TfSapiObject int32
 
 const (
-	GETIF_RESMGR = 0
-	GETIF_RECOCONTEXT = 1
-	GETIF_RECOGNIZER = 2
-	GETIF_VOICE = 3
-	GETIF_DICTGRAM = 4
-	GETIF_RECOGNIZERNOINIT = 5
+	GETIF_RESMGR           TfSapiObject = 0
+	GETIF_RECOCONTEXT      TfSapiObject = 1
+	GETIF_RECOGNIZER       TfSapiObject = 2
+	GETIF_VOICE            TfSapiObject = 3
+	GETIF_DICTGRAM         TfSapiObject = 4
+	GETIF_RECOGNIZERNOINIT TfSapiObject = 5
 )
 
 type TfIntegratableCandidateListSelectionStyle int32
 
 const (
-	STYLE_ACTIVE_SELECTION = 0
-	STYLE_IMPLIED_SELECTION = 1
+	STYLE_ACTIVE_SELECTION  TfIntegratableCandidateListSelectionStyle = 0
+	STYLE_IMPLIED_SELECTION TfIntegratableCandidateListSelectionStyle = 1
 )
 
 type TKBLayoutType int32
 
 const (
-	TKBLT_UNDEFINED = 0
-	TKBLT_CLASSIC = 1
-	TKBLT_OPTIMIZED = 2
+	TKBLT_UNDEFINED TKBLayoutType = 0
+	TKBLT_CLASSIC   TKBLayoutType = 1
+	TKBLT_OPTIMIZED TKBLayoutType = 2
 )
 
 type InputScope int32
 
 const (
-	IS_DEFAULT = 0
-	IS_URL = 1
-	IS_FILE_FULLFILEPATH = 2
-	IS_FILE_FILENAME = 3
-	IS_EMAIL_USERNAME = 4
-	IS_EMAIL_SMTPEMAILADDRESS = 5
-	IS_LOGINNAME = 6
-	IS_PERSONALNAME_FULLNAME = 7
-	IS_PERSONALNAME_PREFIX = 8
-	IS_PERSONALNAME_GIVENNAME = 9
-	IS_PERSONALNAME_MIDDLENAME = 10
-	IS_PERSONALNAME_SURNAME = 11
-	IS_PERSONALNAME_SUFFIX = 12
-	IS_ADDRESS_FULLPOSTALADDRESS = 13
-	IS_ADDRESS_POSTALCODE = 14
-	IS_ADDRESS_STREET = 15
-	IS_ADDRESS_STATEORPROVINCE = 16
-	IS_ADDRESS_CITY = 17
-	IS_ADDRESS_COUNTRYNAME = 18
-	IS_ADDRESS_COUNTRYSHORTNAME = 19
-	IS_CURRENCY_AMOUNTANDSYMBOL = 20
-	IS_CURRENCY_AMOUNT = 21
-	IS_DATE_FULLDATE = 22
-	IS_DATE_MONTH = 23
-	IS_DATE_DAY = 24
-	IS_DATE_YEAR = 25
-	IS_DATE_MONTHNAME = 26
-	IS_DATE_DAYNAME = 27
-	IS_DIGITS = 28
-	IS_NUMBER = 29
-	IS_ONECHAR = 30
-	IS_PASSWORD = 31
-	IS_TELEPHONE_FULLTELEPHONENUMBER = 32
-	IS_TELEPHONE_COUNTRYCODE = 33
-	IS_TELEPHONE_AREACODE = 34
-	IS_TELEPHONE_LOCALNUMBER = 35
-	IS_TIME_FULLTIME = 36
-	IS_TIME_HOUR = 37
-	IS_TIME_MINORSEC = 38
-	IS_NUMBER_FULLWIDTH = 39
-	IS_ALPHANUMERIC_HALFWIDTH = 40
-	IS_ALPHANUMERIC_FULLWIDTH = 41
-	IS_CURRENCY_CHINESE = 42
-	IS_BOPOMOFO = 43
-	IS_HIRAGANA = 44
-	IS_KATAKANA_HALFWIDTH = 45
-	IS_KATAKANA_FULLWIDTH = 46
-	IS_HANJA = 47
-	IS_HANGUL_HALFWIDTH = 48
-	IS_HANGUL_FULLWIDTH = 49
-	IS_SEARCH = 50
-	IS_FORMULA = 51
-	IS_SEARCH_INCREMENTAL = 52
-	IS_CHINESE_HALFWIDTH = 53
-	IS_CHINESE_FULLWIDTH = 54
-	IS_NATIVE_SCRIPT = 55
-	IS_YOMI = 56
-	IS_TEXT = 57
-	IS_CHAT = 58
-	IS_NAME_OR_PHONENUMBER = 59
-	IS_EMAILNAME_OR_ADDRESS = 60
-	IS_PRIVATE = 61
-	IS_MAPS = 62
-	IS_NUMERIC_PASSWORD = 63
-	IS_NUMERIC_PIN = 64
-	IS_ALPHANUMERIC_PIN = 65
-	IS_ALPHANUMERIC_PIN_SET = 66
-	IS_FORMULA_NUMBER = 67
-	IS_CHAT_WITHOUT_EMOJI = 68
-	IS_PHRASELIST = -1
-	IS_REGULAREXPRESSION = -2
-	IS_SRGS = -3
-	IS_XML = -4
-	IS_ENUMSTRING = -5
+	IS_DEFAULT                       InputScope = 0
+	IS_URL                           InputScope = 1
+	IS_FILE_FULLFILEPATH             InputScope = 2
+	IS_FILE_FILENAME                 InputScope = 3
+	IS_EMAIL_USERNAME                InputScope = 4
+	IS_EMAIL_SMTPEMAILADDRESS        InputScope = 5
+	IS_LOGINNAME                     InputScope = 6
+	IS_PERSONALNAME_FULLNAME         InputScope = 7
+	IS_PERSONALNAME_PREFIX           InputScope = 8
+	IS_PERSONALNAME_GIVENNAME        InputScope = 9
+	IS_PERSONALNAME_MIDDLENAME       InputScope = 10
+	IS_PERSONALNAME_SURNAME          InputScope = 11
+	IS_PERSONALNAME_SUFFIX           InputScope = 12
+	IS_ADDRESS_FULLPOSTALADDRESS     InputScope = 13
+	IS_ADDRESS_POSTALCODE            InputScope = 14
+	IS_ADDRESS_STREET                InputScope = 15
+	IS_ADDRESS_STATEORPROVINCE       InputScope = 16
+	IS_ADDRESS_CITY                  InputScope = 17
+	IS_ADDRESS_COUNTRYNAME           InputScope = 18
+	IS_ADDRESS_COUNTRYSHORTNAME      InputScope = 19
+	IS_CURRENCY_AMOUNTANDSYMBOL      InputScope = 20
+	IS_CURRENCY_AMOUNT               InputScope = 21
+	IS_DATE_FULLDATE                 InputScope = 22
+	IS_DATE_MONTH                    InputScope = 23
+	IS_DATE_DAY                      InputScope = 24
+	IS_DATE_YEAR                     InputScope = 25
+	IS_DATE_MONTHNAME                InputScope = 26
+	IS_DATE_DAYNAME                  InputScope = 27
+	IS_DIGITS                        InputScope = 28
+	IS_NUMBER                        InputScope = 29
+	IS_ONECHAR                       InputScope = 30
+	IS_PASSWORD                      InputScope = 31
+	IS_TELEPHONE_FULLTELEPHONENUMBER InputScope = 32
+	IS_TELEPHONE_COUNTRYCODE         InputScope = 33
+	IS_TELEPHONE_AREACODE            InputScope = 34
+	IS_TELEPHONE_LOCALNUMBER         InputScope = 35
+	IS_TIME_FULLTIME                 InputScope = 36
+	IS_TIME_HOUR                     InputScope = 37
+	IS_TIME_MINORSEC                 InputScope = 38
+	IS_NUMBER_FULLWIDTH              InputScope = 39
+	IS_ALPHANUMERIC_HALFWIDTH        InputScope = 40
+	IS_ALPHANUMERIC_FULLWIDTH        InputScope = 41
+	IS_CURRENCY_CHINESE              InputScope = 42
+	IS_BOPOMOFO                      InputScope = 43
+	IS_HIRAGANA                      InputScope = 44
+	IS_KATAKANA_HALFWIDTH            InputScope = 45
+	IS_KATAKANA_FULLWIDTH            InputScope = 46
+	IS_HANJA                         InputScope = 47
+	IS_HANGUL_HALFWIDTH              InputScope = 48
+	IS_HANGUL_FULLWIDTH              InputScope = 49
+	IS_SEARCH                        InputScope = 50
+	IS_FORMULA                       InputScope = 51
+	IS_SEARCH_INCREMENTAL            InputScope = 52
+	IS_CHINESE_HALFWIDTH             InputScope = 53
+	IS_CHINESE_FULLWIDTH             InputScope = 54
+	IS_NATIVE_SCRIPT                 InputScope = 55
+	IS_YOMI                          InputScope = 56
+	IS_TEXT                          InputScope = 57
+	IS_CHAT                          InputScope = 58
+	IS_NAME_OR_PHONENUMBER           InputScope = 59
+	IS_EMAILNAME_OR_ADDRESS          InputScope = 60
+	IS_PRIVATE                       InputScope = 61
+	IS_MAPS                          InputScope = 62
+	IS_NUMERIC_PASSWORD              InputScope = 63
+	IS_NUMERIC_PIN                   InputScope = 64
+	IS_ALPHANUMERIC_PIN              InputScope = 65
+	IS_ALPHANUMERIC_PIN_SET          InputScope = 66
+	IS_FORMULA_NUMBER                InputScope = 67
+	IS_CHAT_WITHOUT_EMOJI            InputScope = 68
+	IS_PHRASELIST                    InputScope = -1
+	IS_REGULAREXPRESSION             InputScope = -2
+	IS_SRGS                          InputScope = -3
+	IS_XML                           InputScope = -4
+	IS_ENUMSTRING                    InputScope = -5
 )
-

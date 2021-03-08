@@ -7,123 +7,122 @@ package performancelogandalerts
 type DataCollectorType int32
 
 const (
-	plaPerformanceCounter = 0
-	plaTrace = 1
-	plaConfiguration = 2
-	plaAlert = 3
-	plaApiTrace = 4
+	plaPerformanceCounter DataCollectorType = 0
+	plaTrace              DataCollectorType = 1
+	plaConfiguration      DataCollectorType = 2
+	plaAlert              DataCollectorType = 3
+	plaApiTrace           DataCollectorType = 4
 )
 
 type FileFormat int32
 
 const (
-	plaCommaSeparated = 0
-	plaTabSeparated = 1
-	plaSql = 2
-	plaBinary = 3
+	plaCommaSeparated FileFormat = 0
+	plaTabSeparated   FileFormat = 1
+	plaSql            FileFormat = 2
+	plaBinary         FileFormat = 3
 )
 
 type AutoPathFormat int32
 
 const (
-	plaNone = 0
-	plaPattern = 1
-	plaComputer = 2
-	plaMonthDayHour = 256
-	plaSerialNumber = 512
-	plaYearDayOfYear = 1024
-	plaYearMonth = 2048
-	plaYearMonthDay = 4096
-	plaYearMonthDayHour = 8192
-	plaMonthDayHourMinute = 16384
+	plaNone               AutoPathFormat = 0
+	plaPattern            AutoPathFormat = 1
+	plaComputer           AutoPathFormat = 2
+	plaMonthDayHour       AutoPathFormat = 256
+	plaSerialNumber       AutoPathFormat = 512
+	plaYearDayOfYear      AutoPathFormat = 1024
+	plaYearMonth          AutoPathFormat = 2048
+	plaYearMonthDay       AutoPathFormat = 4096
+	plaYearMonthDayHour   AutoPathFormat = 8192
+	plaMonthDayHourMinute AutoPathFormat = 16384
 )
 
 type DataCollectorSetStatus int32
 
 const (
-	plaStopped = 0
-	plaRunning = 1
-	plaCompiling = 2
-	plaPending = 3
-	plaUndefined = 4
+	plaStopped   DataCollectorSetStatus = 0
+	plaRunning   DataCollectorSetStatus = 1
+	plaCompiling DataCollectorSetStatus = 2
+	plaPending   DataCollectorSetStatus = 3
+	plaUndefined DataCollectorSetStatus = 4
 )
 
 type ClockType int32
 
 const (
-	plaTimeStamp = 0
-	plaPerformance = 1
-	plaSystem = 2
-	plaCycle = 3
+	plaTimeStamp   ClockType = 0
+	plaPerformance ClockType = 1
+	plaSystem      ClockType = 2
+	plaCycle       ClockType = 3
 )
 
 type StreamMode int32
 
 const (
-	plaFile = 1
-	plaRealTime = 2
-	plaBoth = 3
-	plaBuffering = 4
+	plaFile      StreamMode = 1
+	plaRealTime  StreamMode = 2
+	plaBoth      StreamMode = 3
+	plaBuffering StreamMode = 4
 )
 
 type CommitMode int32
 
 const (
-	plaCreateNew = 1
-	plaModify = 2
-	plaCreateOrModify = 3
-	plaUpdateRunningInstance = 16
-	plaFlushTrace = 32
-	plaValidateOnly = 4096
+	plaCreateNew             CommitMode = 1
+	plaModify                CommitMode = 2
+	plaCreateOrModify        CommitMode = 3
+	plaUpdateRunningInstance CommitMode = 16
+	plaFlushTrace            CommitMode = 32
+	plaValidateOnly          CommitMode = 4096
 )
 
 type ValueMapType int32
 
 const (
-	plaIndex = 1
-	plaFlag = 2
-	plaFlagArray = 3
-	plaValidation = 4
+	plaIndex      ValueMapType = 1
+	plaFlag       ValueMapType = 2
+	plaFlagArray  ValueMapType = 3
+	plaValidation ValueMapType = 4
 )
 
 type WeekDays int32
 
 const (
-	plaRunOnce = 0
-	plaSunday = 1
-	plaMonday = 2
-	plaTuesday = 4
-	plaWednesday = 8
-	plaThursday = 16
-	plaFriday = 32
-	plaSaturday = 64
-	plaEveryday = 127
+	plaRunOnce   WeekDays = 0
+	plaSunday    WeekDays = 1
+	plaMonday    WeekDays = 2
+	plaTuesday   WeekDays = 4
+	plaWednesday WeekDays = 8
+	plaThursday  WeekDays = 16
+	plaFriday    WeekDays = 32
+	plaSaturday  WeekDays = 64
+	plaEveryday  WeekDays = 127
 )
 
 type ResourcePolicy int32
 
 const (
-	plaDeleteLargest = 0
-	plaDeleteOldest = 1
+	plaDeleteLargest ResourcePolicy = 0
+	plaDeleteOldest  ResourcePolicy = 1
 )
 
 type DataManagerSteps int32
 
 const (
-	plaCreateReport = 1
-	plaRunRules = 2
-	plaCreateHtml = 4
-	plaFolderActions = 8
-	plaResourceFreeing = 16
+	plaCreateReport    DataManagerSteps = 1
+	plaRunRules        DataManagerSteps = 2
+	plaCreateHtml      DataManagerSteps = 4
+	plaFolderActions   DataManagerSteps = 8
+	plaResourceFreeing DataManagerSteps = 16
 )
 
 type FolderActionSteps int32
 
 const (
-	plaCreateCab = 1
-	plaDeleteData = 2
-	plaSendCab = 4
-	plaDeleteCab = 8
-	plaDeleteReport = 16
+	plaCreateCab    FolderActionSteps = 1
+	plaDeleteData   FolderActionSteps = 2
+	plaSendCab      FolderActionSteps = 4
+	plaDeleteCab    FolderActionSteps = 8
+	plaDeleteReport FolderActionSteps = 16
 )
-
