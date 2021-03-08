@@ -8,6 +8,7 @@ import (
 	"fmt"
 	"log"
 	"os"
+	"os/exec"
 	"strings"
 
 	"github.com/go-win/go-windows/internal/winmd"
@@ -143,9 +144,15 @@ func gen(f *winmd.File) error {
 			}
 			fmt.Fprintf(f, ")\n\n")
 		}
+		if err := f.Sync(); err != nil {
+			return err
+		}
+		if err := f.Close(); err != nil {
+			return err
+		}
 	}
 
-	return nil
+	return exec.Command("go", "fmt", "./...").Run()
 }
 
 func main() {
