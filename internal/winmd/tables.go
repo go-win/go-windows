@@ -65,7 +65,7 @@ type MemberRef struct {
 
 // Constant is a row in the constant table.
 type Constant struct {
-	Type        byte
+	Type        ValueType
 	PaddingZero byte
 	Parent      HasConstantIndex
 	Value       IndexedBlob
