@@ -13,62 +13,62 @@ const (
 	RASAPIVERSION_601 RASAPIVERSION = 4
 )
 
-type tagRASCONNSTATE int32
+type TAGRASCONNSTATE int32
 
 const (
-	RASCS_OpenPort             tagRASCONNSTATE = 0
-	RASCS_PortOpened           tagRASCONNSTATE = 1
-	RASCS_ConnectDevice        tagRASCONNSTATE = 2
-	RASCS_DeviceConnected      tagRASCONNSTATE = 3
-	RASCS_AllDevicesConnected  tagRASCONNSTATE = 4
-	RASCS_Authenticate         tagRASCONNSTATE = 5
-	RASCS_AuthNotify           tagRASCONNSTATE = 6
-	RASCS_AuthRetry            tagRASCONNSTATE = 7
-	RASCS_AuthCallback         tagRASCONNSTATE = 8
-	RASCS_AuthChangePassword   tagRASCONNSTATE = 9
-	RASCS_AuthProject          tagRASCONNSTATE = 10
-	RASCS_AuthLinkSpeed        tagRASCONNSTATE = 11
-	RASCS_AuthAck              tagRASCONNSTATE = 12
-	RASCS_ReAuthenticate       tagRASCONNSTATE = 13
-	RASCS_Authenticated        tagRASCONNSTATE = 14
-	RASCS_PrepareForCallback   tagRASCONNSTATE = 15
-	RASCS_WaitForModemReset    tagRASCONNSTATE = 16
-	RASCS_WaitForCallback      tagRASCONNSTATE = 17
-	RASCS_Projected            tagRASCONNSTATE = 18
-	RASCS_StartAuthentication  tagRASCONNSTATE = 19
-	RASCS_CallbackComplete     tagRASCONNSTATE = 20
-	RASCS_LogonNetwork         tagRASCONNSTATE = 21
-	RASCS_SubEntryConnected    tagRASCONNSTATE = 22
-	RASCS_SubEntryDisconnected tagRASCONNSTATE = 23
-	RASCS_ApplySettings        tagRASCONNSTATE = 24
-	RASCS_Interactive          tagRASCONNSTATE = 4096
-	RASCS_RetryAuthentication  tagRASCONNSTATE = 4097
-	RASCS_CallbackSetByCaller  tagRASCONNSTATE = 4098
-	RASCS_PasswordExpired      tagRASCONNSTATE = 4099
-	RASCS_InvokeEapUI          tagRASCONNSTATE = 4100
-	RASCS_Connected            tagRASCONNSTATE = 8192
-	RASCS_Disconnected         tagRASCONNSTATE = 8193
+	RASCS_OpenPort             TAGRASCONNSTATE = 0
+	RASCS_PortOpened           TAGRASCONNSTATE = 1
+	RASCS_ConnectDevice        TAGRASCONNSTATE = 2
+	RASCS_DeviceConnected      TAGRASCONNSTATE = 3
+	RASCS_AllDevicesConnected  TAGRASCONNSTATE = 4
+	RASCS_Authenticate         TAGRASCONNSTATE = 5
+	RASCS_AuthNotify           TAGRASCONNSTATE = 6
+	RASCS_AuthRetry            TAGRASCONNSTATE = 7
+	RASCS_AuthCallback         TAGRASCONNSTATE = 8
+	RASCS_AuthChangePassword   TAGRASCONNSTATE = 9
+	RASCS_AuthProject          TAGRASCONNSTATE = 10
+	RASCS_AuthLinkSpeed        TAGRASCONNSTATE = 11
+	RASCS_AuthAck              TAGRASCONNSTATE = 12
+	RASCS_ReAuthenticate       TAGRASCONNSTATE = 13
+	RASCS_Authenticated        TAGRASCONNSTATE = 14
+	RASCS_PrepareForCallback   TAGRASCONNSTATE = 15
+	RASCS_WaitForModemReset    TAGRASCONNSTATE = 16
+	RASCS_WaitForCallback      TAGRASCONNSTATE = 17
+	RASCS_Projected            TAGRASCONNSTATE = 18
+	RASCS_StartAuthentication  TAGRASCONNSTATE = 19
+	RASCS_CallbackComplete     TAGRASCONNSTATE = 20
+	RASCS_LogonNetwork         TAGRASCONNSTATE = 21
+	RASCS_SubEntryConnected    TAGRASCONNSTATE = 22
+	RASCS_SubEntryDisconnected TAGRASCONNSTATE = 23
+	RASCS_ApplySettings        TAGRASCONNSTATE = 24
+	RASCS_Interactive          TAGRASCONNSTATE = 4096
+	RASCS_RetryAuthentication  TAGRASCONNSTATE = 4097
+	RASCS_CallbackSetByCaller  TAGRASCONNSTATE = 4098
+	RASCS_PasswordExpired      TAGRASCONNSTATE = 4099
+	RASCS_InvokeEapUI          TAGRASCONNSTATE = 4100
+	RASCS_Connected            TAGRASCONNSTATE = 8192
+	RASCS_Disconnected         TAGRASCONNSTATE = 8193
 )
 
-type tagRASCONNSUBSTATE int32
+type TAGRASCONNSUBSTATE int32
 
 const (
-	RASCSS_None         tagRASCONNSUBSTATE = 0
-	RASCSS_Dormant      tagRASCONNSUBSTATE = 1
-	RASCSS_Reconnecting tagRASCONNSUBSTATE = 2
-	RASCSS_Reconnected  tagRASCONNSUBSTATE = 8192
+	RASCSS_None         TAGRASCONNSUBSTATE = 0
+	RASCSS_Dormant      TAGRASCONNSUBSTATE = 1
+	RASCSS_Reconnecting TAGRASCONNSUBSTATE = 2
+	RASCSS_Reconnected  TAGRASCONNSUBSTATE = 8192
 )
 
-type tagRASPROJECTION int32
+type TAGRASPROJECTION int32
 
 const (
-	RASP_Amb     tagRASPROJECTION = 65536
-	RASP_PppNbf  tagRASPROJECTION = 32831
-	RASP_PppIpx  tagRASPROJECTION = 32811
-	RASP_PppIp   tagRASPROJECTION = 32801
-	RASP_PppCcp  tagRASPROJECTION = 33021
-	RASP_PppLcp  tagRASPROJECTION = 49185
-	RASP_PppIpv6 tagRASPROJECTION = 32855
+	RASP_Amb     TAGRASPROJECTION = 65536
+	RASP_PppNbf  TAGRASPROJECTION = 32831
+	RASP_PppIpx  TAGRASPROJECTION = 32811
+	RASP_PppIp   TAGRASPROJECTION = 32801
+	RASP_PppCcp  TAGRASPROJECTION = 33021
+	RASP_PppLcp  TAGRASPROJECTION = 49185
+	RASP_PppIpv6 TAGRASPROJECTION = 32855
 )
 
 type RASPROJECTION_INFO_TYPE int32

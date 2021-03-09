@@ -270,44 +270,44 @@ const (
 	WinStationInformation WINSTATIONINFOCLASS = 8
 )
 
-type eUserAllocationState int32
+type EUSERALLOCATIONSTATE int32
 
 const (
-	AllocationStateUnknown eUserAllocationState = 0
-	AllocationStateBusy    eUserAllocationState = 1
-	AllocationStateFree    eUserAllocationState = 2
+	AllocationStateUnknown EUSERALLOCATIONSTATE = 0
+	AllocationStateBusy    EUSERALLOCATIONSTATE = 1
+	AllocationStateFree    EUSERALLOCATIONSTATE = 2
 )
 
-type eHeapAllocationState int32
+type EHEAPALLOCATIONSTATE int32
 
 const (
-	HeapFullPageHeap eHeapAllocationState = 1073741824
-	HeapMetadata     eHeapAllocationState = -2147483648
-	HeapStateMask    eHeapAllocationState = -65536
+	HeapFullPageHeap EHEAPALLOCATIONSTATE = 1073741824
+	HeapMetadata     EHEAPALLOCATIONSTATE = -2147483648
+	HeapStateMask    EHEAPALLOCATIONSTATE = -65536
 )
 
-type eHeapEnumerationLevel int32
+type EHEAPENUMERATIONLEVEL int32
 
 const (
-	HeapEnumerationEverything eHeapEnumerationLevel = 0
-	HeapEnumerationStop       eHeapEnumerationLevel = -1
+	HeapEnumerationEverything EHEAPENUMERATIONLEVEL = 0
+	HeapEnumerationStop       EHEAPENUMERATIONLEVEL = -1
 )
 
-type eHANDLE_TRACE_OPERATIONS int32
+type EHANDLE_TRACE_OPERATIONS int32
 
 const (
-	OperationDbUnused eHANDLE_TRACE_OPERATIONS = 0
-	OperationDbOPEN   eHANDLE_TRACE_OPERATIONS = 1
-	OperationDbCLOSE  eHANDLE_TRACE_OPERATIONS = 2
-	OperationDbBADREF eHANDLE_TRACE_OPERATIONS = 3
+	OperationDbUnused EHANDLE_TRACE_OPERATIONS = 0
+	OperationDbOPEN   EHANDLE_TRACE_OPERATIONS = 1
+	OperationDbCLOSE  EHANDLE_TRACE_OPERATIONS = 2
+	OperationDbBADREF EHANDLE_TRACE_OPERATIONS = 3
 )
 
-type eAvrfResourceTypes int32
+type EAVRFRESOURCETYPES int32
 
 const (
-	AvrfResourceHeapAllocation eAvrfResourceTypes = 0
-	AvrfResourceHandleTrace    eAvrfResourceTypes = 1
-	AvrfResourceMax            eAvrfResourceTypes = 2
+	AvrfResourceHeapAllocation EAVRFRESOURCETYPES = 0
+	AvrfResourceHandleTrace    EAVRFRESOURCETYPES = 1
+	AvrfResourceMax            EAVRFRESOURCETYPES = 2
 )
 
 type CameraUIControlMode int32
@@ -390,20 +390,20 @@ const (
 type FDIDECRYPTTYPE int32
 
 const (
-	fdidtNEW_CABINET FDIDECRYPTTYPE = 0
-	fdidtNEW_FOLDER  FDIDECRYPTTYPE = 1
-	fdidtDECRYPT     FDIDECRYPTTYPE = 2
+	FDIDTNEW_CABINET FDIDECRYPTTYPE = 0
+	FDIDTNEW_FOLDER  FDIDECRYPTTYPE = 1
+	FDIDTDECRYPT     FDIDECRYPTTYPE = 2
 )
 
 type FDINOTIFICATIONTYPE int32
 
 const (
-	fdintCABINET_INFO    FDINOTIFICATIONTYPE = 0
-	fdintPARTIAL_FILE    FDINOTIFICATIONTYPE = 1
-	fdintCOPY_FILE       FDINOTIFICATIONTYPE = 2
-	fdintCLOSE_FILE_INFO FDINOTIFICATIONTYPE = 3
-	fdintNEXT_CABINET    FDINOTIFICATIONTYPE = 4
-	fdintENUMERATE       FDINOTIFICATIONTYPE = 5
+	FDINTCABINET_INFO    FDINOTIFICATIONTYPE = 0
+	FDINTPARTIAL_FILE    FDINOTIFICATIONTYPE = 1
+	FDINTCOPY_FILE       FDINOTIFICATIONTYPE = 2
+	FDINTCLOSE_FILE_INFO FDINOTIFICATIONTYPE = 3
+	FDINTNEXT_CABINET    FDINOTIFICATIONTYPE = 4
+	FDINTENUMERATE       FDINOTIFICATIONTYPE = 5
 )
 
 type FEATURE_CHANGE_TIME int32
@@ -511,13 +511,13 @@ const (
 type SecureLockIconConstants int32
 
 const (
-	secureLockIconUnsecure          SecureLockIconConstants = 0
-	secureLockIconMixed             SecureLockIconConstants = 1
-	secureLockIconSecureUnknownBits SecureLockIconConstants = 2
-	secureLockIconSecure40Bit       SecureLockIconConstants = 3
-	secureLockIconSecure56Bit       SecureLockIconConstants = 4
-	secureLockIconSecureFortezza    SecureLockIconConstants = 5
-	secureLockIconSecure128Bit      SecureLockIconConstants = 6
+	SECURELOCKICONUNSECURE          SecureLockIconConstants = 0
+	SECURELOCKICONMIXED             SecureLockIconConstants = 1
+	SECURELOCKICONSECUREUNKNOWNBITS SecureLockIconConstants = 2
+	SECURELOCKICONSECURE40BIT       SecureLockIconConstants = 3
+	SECURELOCKICONSECURE56BIT       SecureLockIconConstants = 4
+	SECURELOCKICONSECUREFORTEZZA    SecureLockIconConstants = 5
+	SECURELOCKICONSECURE128BIT      SecureLockIconConstants = 6
 )
 
 type NewProcessCauseConstants int32
@@ -529,38 +529,38 @@ const (
 type BrowserNavConstants int32
 
 const (
-	navOpenInNewWindow       BrowserNavConstants = 1
-	navNoHistory             BrowserNavConstants = 2
-	navNoReadFromCache       BrowserNavConstants = 4
-	navNoWriteToCache        BrowserNavConstants = 8
-	navAllowAutosearch       BrowserNavConstants = 16
-	navBrowserBar            BrowserNavConstants = 32
-	navHyperlink             BrowserNavConstants = 64
-	navEnforceRestricted     BrowserNavConstants = 128
-	navNewWindowsManaged     BrowserNavConstants = 256
-	navUntrustedForDownload  BrowserNavConstants = 512
-	navTrustedForActiveX     BrowserNavConstants = 1024
-	navOpenInNewTab          BrowserNavConstants = 2048
-	navOpenInBackgroundTab   BrowserNavConstants = 4096
-	navKeepWordWheelText     BrowserNavConstants = 8192
-	navVirtualTab            BrowserNavConstants = 16384
-	navBlockRedirectsXDomain BrowserNavConstants = 32768
-	navOpenNewForegroundTab  BrowserNavConstants = 65536
-	navTravelLogScreenshot   BrowserNavConstants = 131072
-	navDeferUnload           BrowserNavConstants = 262144
-	navSpeculative           BrowserNavConstants = 524288
-	navSuggestNewWindow      BrowserNavConstants = 1048576
-	navSuggestNewTab         BrowserNavConstants = 2097152
-	navReserved1             BrowserNavConstants = 4194304
-	navHomepageNavigate      BrowserNavConstants = 8388608
-	navRefresh               BrowserNavConstants = 16777216
-	navHostNavigation        BrowserNavConstants = 33554432
-	navReserved2             BrowserNavConstants = 67108864
-	navReserved3             BrowserNavConstants = 134217728
-	navReserved4             BrowserNavConstants = 268435456
-	navReserved5             BrowserNavConstants = 536870912
-	navReserved6             BrowserNavConstants = 1073741824
-	navReserved7             BrowserNavConstants = -2147483648
+	NAVOPENINNEWWINDOW       BrowserNavConstants = 1
+	NAVNOHISTORY             BrowserNavConstants = 2
+	NAVNOREADFROMCACHE       BrowserNavConstants = 4
+	NAVNOWRITETOCACHE        BrowserNavConstants = 8
+	NAVALLOWAUTOSEARCH       BrowserNavConstants = 16
+	NAVBROWSERBAR            BrowserNavConstants = 32
+	NAVHYPERLINK             BrowserNavConstants = 64
+	NAVENFORCERESTRICTED     BrowserNavConstants = 128
+	NAVNEWWINDOWSMANAGED     BrowserNavConstants = 256
+	NAVUNTRUSTEDFORDOWNLOAD  BrowserNavConstants = 512
+	NAVTRUSTEDFORACTIVEX     BrowserNavConstants = 1024
+	NAVOPENINNEWTAB          BrowserNavConstants = 2048
+	NAVOPENINBACKGROUNDTAB   BrowserNavConstants = 4096
+	NAVKEEPWORDWHEELTEXT     BrowserNavConstants = 8192
+	NAVVIRTUALTAB            BrowserNavConstants = 16384
+	NAVBLOCKREDIRECTSXDOMAIN BrowserNavConstants = 32768
+	NAVOPENNEWFOREGROUNDTAB  BrowserNavConstants = 65536
+	NAVTRAVELLOGSCREENSHOT   BrowserNavConstants = 131072
+	NAVDEFERUNLOAD           BrowserNavConstants = 262144
+	NAVSPECULATIVE           BrowserNavConstants = 524288
+	NAVSUGGESTNEWWINDOW      BrowserNavConstants = 1048576
+	NAVSUGGESTNEWTAB         BrowserNavConstants = 2097152
+	NAVRESERVED1             BrowserNavConstants = 4194304
+	NAVHOMEPAGENAVIGATE      BrowserNavConstants = 8388608
+	NAVREFRESH               BrowserNavConstants = 16777216
+	NAVHOSTNAVIGATION        BrowserNavConstants = 33554432
+	NAVRESERVED2             BrowserNavConstants = 67108864
+	NAVRESERVED3             BrowserNavConstants = 134217728
+	NAVRESERVED4             BrowserNavConstants = 268435456
+	NAVRESERVED5             BrowserNavConstants = 536870912
+	NAVRESERVED6             BrowserNavConstants = 1073741824
+	NAVRESERVED7             BrowserNavConstants = -2147483648
 )
 
 type RefreshConstants int32
@@ -721,7 +721,7 @@ const (
 	XmlNodeType_Whitespace            XmlNodeType = 13
 	XmlNodeType_EndElement            XmlNodeType = 15
 	XmlNodeType_XmlDeclaration        XmlNodeType = 17
-	_XmlNodeType_Last                 XmlNodeType = 17
+	XmlNodeType_Last                  XmlNodeType = 17
 )
 
 type XmlConformanceLevel int32
@@ -730,7 +730,7 @@ const (
 	XmlConformanceLevel_Auto     XmlConformanceLevel = 0
 	XmlConformanceLevel_Fragment XmlConformanceLevel = 1
 	XmlConformanceLevel_Document XmlConformanceLevel = 2
-	_XmlConformanceLevel_Last    XmlConformanceLevel = 2
+	XmlConformanceLevel_Last     XmlConformanceLevel = 2
 )
 
 type DtdProcessing int32
@@ -738,7 +738,7 @@ type DtdProcessing int32
 const (
 	DtdProcessing_Prohibit DtdProcessing = 0
 	DtdProcessing_Parse    DtdProcessing = 1
-	_DtdProcessing_Last    DtdProcessing = 1
+	DtdProcessing_Last     DtdProcessing = 1
 )
 
 type XmlReadState int32
@@ -762,7 +762,7 @@ const (
 	XmlReaderProperty_ReadState          XmlReaderProperty = 5
 	XmlReaderProperty_MaxElementDepth    XmlReaderProperty = 6
 	XmlReaderProperty_MaxEntityExpansion XmlReaderProperty = 7
-	_XmlReaderProperty_Last              XmlReaderProperty = 7
+	XmlReaderProperty_Last               XmlReaderProperty = 7
 )
 
 type XmlError int32
@@ -858,10 +858,10 @@ const (
 type XmlStandalone int32
 
 const (
-	XmlStandalone_Omit  XmlStandalone = 0
-	XmlStandalone_Yes   XmlStandalone = 1
-	XmlStandalone_No    XmlStandalone = 2
-	_XmlStandalone_Last XmlStandalone = 2
+	XmlStandalone_Omit XmlStandalone = 0
+	XmlStandalone_Yes  XmlStandalone = 1
+	XmlStandalone_No   XmlStandalone = 2
+	XmlStandalone_Last XmlStandalone = 2
 )
 
 type XmlWriterProperty int32
@@ -873,7 +873,7 @@ const (
 	XmlWriterProperty_OmitXmlDeclaration  XmlWriterProperty = 3
 	XmlWriterProperty_ConformanceLevel    XmlWriterProperty = 4
 	XmlWriterProperty_CompactEmptyElement XmlWriterProperty = 5
-	_XmlWriterProperty_Last               XmlWriterProperty = 5
+	XmlWriterProperty_Last                XmlWriterProperty = 5
 )
 
 type DEVPROP_OPERATOR int32
@@ -968,34 +968,34 @@ const (
 	DevQueryResultRemove      DEV_QUERY_RESULT_ACTION = 3
 )
 
-type _GlobalFilter int32
+type GlobalFilter int32
 
 const (
-	GF_FRAGMENTS  _GlobalFilter = 2
-	GF_STRONGHOST _GlobalFilter = 8
-	GF_FRAGCACHE  _GlobalFilter = 9
+	GF_FRAGMENTS  GlobalFilter = 2
+	GF_STRONGHOST GlobalFilter = 8
+	GF_FRAGCACHE  GlobalFilter = 9
 )
 
-type _PfForwardAction int32
+type PfForwardAction int32
 
 const (
-	PF_ACTION_FORWARD _PfForwardAction = 0
-	PF_ACTION_DROP    _PfForwardAction = 1
+	PF_ACTION_FORWARD PfForwardAction = 0
+	PF_ACTION_DROP    PfForwardAction = 1
 )
 
-type _PfAddresType int32
+type PfAddresType int32
 
 const (
-	PF_IPV4 _PfAddresType = 0
-	PF_IPV6 _PfAddresType = 1
+	PF_IPV4 PfAddresType = 0
+	PF_IPV6 PfAddresType = 1
 )
 
-type _PfFrameType int32
+type PfFrameType int32
 
 const (
-	PFFT_FILTER _PfFrameType = 1
-	PFFT_FRAG   _PfFrameType = 2
-	PFFT_SPOOF  _PfFrameType = 3
+	PFFT_FILTER PfFrameType = 1
+	PFFT_FRAG   PfFrameType = 2
+	PFFT_SPOOF  PfFrameType = 3
 )
 
 type EXTENDED_NAME_FORMAT int32

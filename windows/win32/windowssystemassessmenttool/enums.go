@@ -4,13 +4,13 @@
 // Package windowssystemassessmenttool implements the Windows.Win32.WindowsSystemAssessmentTool namespace.
 package windowssystemassessmenttool
 
-type __MIDL___MIDL_itf_winsatcominterfacei_0000_0000_0001 int32
+type MIDL___MIDL_itf_winsatcominterfacei_0000_0000_0001 int32
 
 const (
-	WINSAT_OEM_DATA_VALID                __MIDL___MIDL_itf_winsatcominterfacei_0000_0000_0001 = 0
-	WINSAT_OEM_DATA_NON_SYS_CONFIG_MATCH __MIDL___MIDL_itf_winsatcominterfacei_0000_0000_0001 = 1
-	WINSAT_OEM_DATA_INVALID              __MIDL___MIDL_itf_winsatcominterfacei_0000_0000_0001 = 2
-	WINSAT_OEM_NO_DATA_SUPPLIED          __MIDL___MIDL_itf_winsatcominterfacei_0000_0000_0001 = 3
+	WINSAT_OEM_DATA_VALID                MIDL___MIDL_itf_winsatcominterfacei_0000_0000_0001 = 0
+	WINSAT_OEM_DATA_NON_SYS_CONFIG_MATCH MIDL___MIDL_itf_winsatcominterfacei_0000_0000_0001 = 1
+	WINSAT_OEM_DATA_INVALID              MIDL___MIDL_itf_winsatcominterfacei_0000_0000_0001 = 2
+	WINSAT_OEM_NO_DATA_SUPPLIED          MIDL___MIDL_itf_winsatcominterfacei_0000_0000_0001 = 3
 )
 
 type WINSAT_ASSESSMENT_STATE int32

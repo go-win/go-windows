@@ -452,79 +452,79 @@ const (
 	XACT_E_NOLASTRESOURCEINTERFACE   XACT_DTC_CONSTANTS = -2147167981
 	XACT_S_NONOTIFY                  XACT_DTC_CONSTANTS = 315648
 	XACT_OK_NONOTIFY                 XACT_DTC_CONSTANTS = 315649
-	dwUSER_MS_SQLSERVER              XACT_DTC_CONSTANTS = 65535
+	DWUSER_MS_SQLSERVER              XACT_DTC_CONSTANTS = 65535
 )
 
-type _DtcLu_LocalRecovery_Work int32
+type DtcLu_LocalRecovery_Work int32
 
 const (
-	DTCINITIATEDRECOVERYWORK_CHECKLUSTATUS _DtcLu_LocalRecovery_Work = 1
-	DTCINITIATEDRECOVERYWORK_TRANS         _DtcLu_LocalRecovery_Work = 2
-	DTCINITIATEDRECOVERYWORK_TMDOWN        _DtcLu_LocalRecovery_Work = 3
+	DTCINITIATEDRECOVERYWORK_CHECKLUSTATUS DtcLu_LocalRecovery_Work = 1
+	DTCINITIATEDRECOVERYWORK_TRANS         DtcLu_LocalRecovery_Work = 2
+	DTCINITIATEDRECOVERYWORK_TMDOWN        DtcLu_LocalRecovery_Work = 3
 )
 
-type _DtcLu_Xln int32
+type DtcLu_Xln int32
 
 const (
-	DTCLUXLN_COLD _DtcLu_Xln = 1
-	DTCLUXLN_WARM _DtcLu_Xln = 2
+	DTCLUXLN_COLD DtcLu_Xln = 1
+	DTCLUXLN_WARM DtcLu_Xln = 2
 )
 
-type _DtcLu_Xln_Confirmation int32
+type DtcLu_Xln_Confirmation int32
 
 const (
-	DTCLUXLNCONFIRMATION_CONFIRM          _DtcLu_Xln_Confirmation = 1
-	DTCLUXLNCONFIRMATION_LOGNAMEMISMATCH  _DtcLu_Xln_Confirmation = 2
-	DTCLUXLNCONFIRMATION_COLDWARMMISMATCH _DtcLu_Xln_Confirmation = 3
-	DTCLUXLNCONFIRMATION_OBSOLETE         _DtcLu_Xln_Confirmation = 4
+	DTCLUXLNCONFIRMATION_CONFIRM          DtcLu_Xln_Confirmation = 1
+	DTCLUXLNCONFIRMATION_LOGNAMEMISMATCH  DtcLu_Xln_Confirmation = 2
+	DTCLUXLNCONFIRMATION_COLDWARMMISMATCH DtcLu_Xln_Confirmation = 3
+	DTCLUXLNCONFIRMATION_OBSOLETE         DtcLu_Xln_Confirmation = 4
 )
 
-type _DtcLu_Xln_Response int32
+type DtcLu_Xln_Response int32
 
 const (
-	DTCLUXLNRESPONSE_OK_SENDOURXLNBACK   _DtcLu_Xln_Response = 1
-	DTCLUXLNRESPONSE_OK_SENDCONFIRMATION _DtcLu_Xln_Response = 2
-	DTCLUXLNRESPONSE_LOGNAMEMISMATCH     _DtcLu_Xln_Response = 3
-	DTCLUXLNRESPONSE_COLDWARMMISMATCH    _DtcLu_Xln_Response = 4
+	DTCLUXLNRESPONSE_OK_SENDOURXLNBACK   DtcLu_Xln_Response = 1
+	DTCLUXLNRESPONSE_OK_SENDCONFIRMATION DtcLu_Xln_Response = 2
+	DTCLUXLNRESPONSE_LOGNAMEMISMATCH     DtcLu_Xln_Response = 3
+	DTCLUXLNRESPONSE_COLDWARMMISMATCH    DtcLu_Xln_Response = 4
 )
 
-type _DtcLu_Xln_Error int32
+type DtcLu_Xln_Error int32
 
 const (
-	DTCLUXLNERROR_PROTOCOL         _DtcLu_Xln_Error = 1
-	DTCLUXLNERROR_LOGNAMEMISMATCH  _DtcLu_Xln_Error = 2
-	DTCLUXLNERROR_COLDWARMMISMATCH _DtcLu_Xln_Error = 3
+	DTCLUXLNERROR_PROTOCOL         DtcLu_Xln_Error = 1
+	DTCLUXLNERROR_LOGNAMEMISMATCH  DtcLu_Xln_Error = 2
+	DTCLUXLNERROR_COLDWARMMISMATCH DtcLu_Xln_Error = 3
 )
 
-type _DtcLu_CompareState int32
+type DtcLu_CompareState int32
 
 const (
-	DTCLUCOMPARESTATE_COMMITTED          _DtcLu_CompareState = 1
-	DTCLUCOMPARESTATE_HEURISTICCOMMITTED _DtcLu_CompareState = 2
-	DTCLUCOMPARESTATE_HEURISTICMIXED     _DtcLu_CompareState = 3
-	DTCLUCOMPARESTATE_HEURISTICRESET     _DtcLu_CompareState = 4
-	DTCLUCOMPARESTATE_INDOUBT            _DtcLu_CompareState = 5
-	DTCLUCOMPARESTATE_RESET              _DtcLu_CompareState = 6
+	DTCLUCOMPARESTATE_COMMITTED          DtcLu_CompareState = 1
+	DTCLUCOMPARESTATE_HEURISTICCOMMITTED DtcLu_CompareState = 2
+	DTCLUCOMPARESTATE_HEURISTICMIXED     DtcLu_CompareState = 3
+	DTCLUCOMPARESTATE_HEURISTICRESET     DtcLu_CompareState = 4
+	DTCLUCOMPARESTATE_INDOUBT            DtcLu_CompareState = 5
+	DTCLUCOMPARESTATE_RESET              DtcLu_CompareState = 6
 )
 
-type _DtcLu_CompareStates_Confirmation int32
+type DtcLu_CompareStates_Confirmation int32
 
 const (
-	DTCLUCOMPARESTATESCONFIRMATION_CONFIRM  _DtcLu_CompareStates_Confirmation = 1
-	DTCLUCOMPARESTATESCONFIRMATION_PROTOCOL _DtcLu_CompareStates_Confirmation = 2
+	DTCLUCOMPARESTATESCONFIRMATION_CONFIRM  DtcLu_CompareStates_Confirmation = 1
+	DTCLUCOMPARESTATESCONFIRMATION_PROTOCOL DtcLu_CompareStates_Confirmation = 2
 )
 
-type _DtcLu_CompareStates_Error int32
+type DtcLu_CompareStates_Error int32
 
 const (
-	DTCLUCOMPARESTATESERROR_PROTOCOL _DtcLu_CompareStates_Error = 1
+	DTCLUCOMPARESTATESERROR_PROTOCOL DtcLu_CompareStates_Error = 1
 )
 
-type _DtcLu_CompareStates_Response int32
+type DtcLu_CompareStates_Response int32
 
 const (
-	DTCLUCOMPARESTATESRESPONSE_OK       _DtcLu_CompareStates_Response = 1
-	DTCLUCOMPARESTATESRESPONSE_PROTOCOL _DtcLu_CompareStates_Response = 2
+	DTCLUCOMPARESTATESRESPONSE_OK       DtcLu_CompareStates_Response = 1
+	DTCLUCOMPARESTATESRESPONSE_PROTOCOL DtcLu_CompareStates_Response = 2
 )
 
 type TRACKING_COLL_TYPE int32
@@ -656,49 +656,49 @@ const (
 	CSC_NewSxs     CSC_SxsConfig = 2
 )
 
-type __MIDL___MIDL_itf_autosvcs_0001_0150_0001 int32
+type MIDL___MIDL_itf_autosvcs_0001_0150_0001 int32
 
 const (
-	mtsErrCtxAborted                   __MIDL___MIDL_itf_autosvcs_0001_0150_0001 = -2147164158
-	mtsErrCtxAborting                  __MIDL___MIDL_itf_autosvcs_0001_0150_0001 = -2147164157
-	mtsErrCtxNoContext                 __MIDL___MIDL_itf_autosvcs_0001_0150_0001 = -2147164156
-	mtsErrCtxNotRegistered             __MIDL___MIDL_itf_autosvcs_0001_0150_0001 = -2147164155
-	mtsErrCtxSynchTimeout              __MIDL___MIDL_itf_autosvcs_0001_0150_0001 = -2147164154
-	mtsErrCtxOldReference              __MIDL___MIDL_itf_autosvcs_0001_0150_0001 = -2147164153
-	mtsErrCtxRoleNotFound              __MIDL___MIDL_itf_autosvcs_0001_0150_0001 = -2147164148
-	mtsErrCtxNoSecurity                __MIDL___MIDL_itf_autosvcs_0001_0150_0001 = -2147164147
-	mtsErrCtxWrongThread               __MIDL___MIDL_itf_autosvcs_0001_0150_0001 = -2147164146
-	mtsErrCtxTMNotAvailable            __MIDL___MIDL_itf_autosvcs_0001_0150_0001 = -2147164145
-	comQCErrApplicationNotQueued       __MIDL___MIDL_itf_autosvcs_0001_0150_0001 = -2146368000
-	comQCErrNoQueueableInterfaces      __MIDL___MIDL_itf_autosvcs_0001_0150_0001 = -2146367999
-	comQCErrQueuingServiceNotAvailable __MIDL___MIDL_itf_autosvcs_0001_0150_0001 = -2146367998
-	comQCErrQueueTransactMismatch      __MIDL___MIDL_itf_autosvcs_0001_0150_0001 = -2146367997
-	comqcErrRecorderMarshalled         __MIDL___MIDL_itf_autosvcs_0001_0150_0001 = -2146367996
-	comqcErrOutParam                   __MIDL___MIDL_itf_autosvcs_0001_0150_0001 = -2146367995
-	comqcErrRecorderNotTrusted         __MIDL___MIDL_itf_autosvcs_0001_0150_0001 = -2146367994
-	comqcErrPSLoad                     __MIDL___MIDL_itf_autosvcs_0001_0150_0001 = -2146367993
-	comqcErrMarshaledObjSameTxn        __MIDL___MIDL_itf_autosvcs_0001_0150_0001 = -2146367992
-	comqcErrInvalidMessage             __MIDL___MIDL_itf_autosvcs_0001_0150_0001 = -2146367920
-	comqcErrMsmqSidUnavailable         __MIDL___MIDL_itf_autosvcs_0001_0150_0001 = -2146367919
-	comqcErrWrongMsgExtension          __MIDL___MIDL_itf_autosvcs_0001_0150_0001 = -2146367918
-	comqcErrMsmqServiceUnavailable     __MIDL___MIDL_itf_autosvcs_0001_0150_0001 = -2146367917
-	comqcErrMsgNotAuthenticated        __MIDL___MIDL_itf_autosvcs_0001_0150_0001 = -2146367916
-	comqcErrMsmqConnectorUsed          __MIDL___MIDL_itf_autosvcs_0001_0150_0001 = -2146367915
-	comqcErrBadMarshaledObject         __MIDL___MIDL_itf_autosvcs_0001_0150_0001 = -2146367914
+	MTSERRCTXABORTED                   MIDL___MIDL_itf_autosvcs_0001_0150_0001 = -2147164158
+	MTSERRCTXABORTING                  MIDL___MIDL_itf_autosvcs_0001_0150_0001 = -2147164157
+	MTSERRCTXNOCONTEXT                 MIDL___MIDL_itf_autosvcs_0001_0150_0001 = -2147164156
+	MTSERRCTXNOTREGISTERED             MIDL___MIDL_itf_autosvcs_0001_0150_0001 = -2147164155
+	MTSERRCTXSYNCHTIMEOUT              MIDL___MIDL_itf_autosvcs_0001_0150_0001 = -2147164154
+	MTSERRCTXOLDREFERENCE              MIDL___MIDL_itf_autosvcs_0001_0150_0001 = -2147164153
+	MTSERRCTXROLENOTFOUND              MIDL___MIDL_itf_autosvcs_0001_0150_0001 = -2147164148
+	MTSERRCTXNOSECURITY                MIDL___MIDL_itf_autosvcs_0001_0150_0001 = -2147164147
+	MTSERRCTXWRONGTHREAD               MIDL___MIDL_itf_autosvcs_0001_0150_0001 = -2147164146
+	MTSERRCTXTMNOTAVAILABLE            MIDL___MIDL_itf_autosvcs_0001_0150_0001 = -2147164145
+	COMQCERRAPPLICATIONNOTQUEUED       MIDL___MIDL_itf_autosvcs_0001_0150_0001 = -2146368000
+	COMQCERRNOQUEUEABLEINTERFACES      MIDL___MIDL_itf_autosvcs_0001_0150_0001 = -2146367999
+	COMQCERRQUEUINGSERVICENOTAVAILABLE MIDL___MIDL_itf_autosvcs_0001_0150_0001 = -2146367998
+	COMQCERRQUEUETRANSACTMISMATCH      MIDL___MIDL_itf_autosvcs_0001_0150_0001 = -2146367997
+	COMQCERRRECORDERMARSHALLED         MIDL___MIDL_itf_autosvcs_0001_0150_0001 = -2146367996
+	COMQCERROUTPARAM                   MIDL___MIDL_itf_autosvcs_0001_0150_0001 = -2146367995
+	COMQCERRRECORDERNOTTRUSTED         MIDL___MIDL_itf_autosvcs_0001_0150_0001 = -2146367994
+	COMQCERRPSLOAD                     MIDL___MIDL_itf_autosvcs_0001_0150_0001 = -2146367993
+	COMQCERRMARSHALEDOBJSAMETXN        MIDL___MIDL_itf_autosvcs_0001_0150_0001 = -2146367992
+	COMQCERRINVALIDMESSAGE             MIDL___MIDL_itf_autosvcs_0001_0150_0001 = -2146367920
+	COMQCERRMSMQSIDUNAVAILABLE         MIDL___MIDL_itf_autosvcs_0001_0150_0001 = -2146367919
+	COMQCERRWRONGMSGEXTENSION          MIDL___MIDL_itf_autosvcs_0001_0150_0001 = -2146367918
+	COMQCERRMSMQSERVICEUNAVAILABLE     MIDL___MIDL_itf_autosvcs_0001_0150_0001 = -2146367917
+	COMQCERRMSGNOTAUTHENTICATED        MIDL___MIDL_itf_autosvcs_0001_0150_0001 = -2146367916
+	COMQCERRMSMQCONNECTORUSED          MIDL___MIDL_itf_autosvcs_0001_0150_0001 = -2146367915
+	COMQCERRBADMARSHALEDOBJECT         MIDL___MIDL_itf_autosvcs_0001_0150_0001 = -2146367914
 )
 
-type __MIDL___MIDL_itf_autosvcs_0001_0159_0001 int32
+type MIDL___MIDL_itf_autosvcs_0001_0159_0001 int32
 
 const (
-	LockSetGet __MIDL___MIDL_itf_autosvcs_0001_0159_0001 = 0
-	LockMethod __MIDL___MIDL_itf_autosvcs_0001_0159_0001 = 1
+	LockSetGet MIDL___MIDL_itf_autosvcs_0001_0159_0001 = 0
+	LockMethod MIDL___MIDL_itf_autosvcs_0001_0159_0001 = 1
 )
 
-type __MIDL___MIDL_itf_autosvcs_0001_0159_0002 int32
+type MIDL___MIDL_itf_autosvcs_0001_0159_0002 int32
 
 const (
-	Standard __MIDL___MIDL_itf_autosvcs_0001_0159_0002 = 0
-	Process  __MIDL___MIDL_itf_autosvcs_0001_0159_0002 = 1
+	Standard MIDL___MIDL_itf_autosvcs_0001_0159_0002 = 0
+	Process  MIDL___MIDL_itf_autosvcs_0001_0159_0002 = 1
 )
 
 type CRMFLAGS int32

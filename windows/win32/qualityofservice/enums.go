@@ -4,15 +4,15 @@
 // Package qualityofservice implements the Windows.Win32.QualityOfService namespace.
 package qualityofservice
 
-type int_serv_wkp int32
+type INT_SERV_WKP int32
 
 const (
-	IS_WKP_HOP_CNT      int_serv_wkp = 4
-	IS_WKP_PATH_BW      int_serv_wkp = 6
-	IS_WKP_MIN_LATENCY  int_serv_wkp = 8
-	IS_WKP_COMPOSED_MTU int_serv_wkp = 10
-	IS_WKP_TB_TSPEC     int_serv_wkp = 127
-	IS_WKP_Q_TSPEC      int_serv_wkp = 128
+	IS_WKP_HOP_CNT      INT_SERV_WKP = 4
+	IS_WKP_PATH_BW      INT_SERV_WKP = 6
+	IS_WKP_MIN_LATENCY  INT_SERV_WKP = 8
+	IS_WKP_COMPOSED_MTU INT_SERV_WKP = 10
+	IS_WKP_TB_TSPEC     INT_SERV_WKP = 127
+	IS_WKP_Q_TSPEC      INT_SERV_WKP = 128
 )
 
 type QOS_TRAFFIC_TYPE int32

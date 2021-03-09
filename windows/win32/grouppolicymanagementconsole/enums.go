@@ -4,124 +4,124 @@
 // Package grouppolicymanagementconsole implements the Windows.Win32.GroupPolicyManagementConsole namespace.
 package grouppolicymanagementconsole
 
-type __MIDL___MIDL_itf_gpmgmt_0000_0000_0001 int32
+type MIDL___MIDL_itf_gpmgmt_0000_0000_0001 int32
 
 const (
-	rsopUnknown  __MIDL___MIDL_itf_gpmgmt_0000_0000_0001 = 0
-	rsopPlanning __MIDL___MIDL_itf_gpmgmt_0000_0000_0001 = 1
-	rsopLogging  __MIDL___MIDL_itf_gpmgmt_0000_0000_0001 = 2
+	RSOPUNKNOWN  MIDL___MIDL_itf_gpmgmt_0000_0000_0001 = 0
+	RSOPPLANNING MIDL___MIDL_itf_gpmgmt_0000_0000_0001 = 1
+	RSOPLOGGING  MIDL___MIDL_itf_gpmgmt_0000_0000_0001 = 2
 )
 
 type GPMPermissionType int32
 
 const (
-	permGPOApply                 GPMPermissionType = 65536
-	permGPORead                  GPMPermissionType = 65792
-	permGPOEdit                  GPMPermissionType = 65793
-	permGPOEditSecurityAndDelete GPMPermissionType = 65794
-	permGPOCustom                GPMPermissionType = 65795
-	permWMIFilterEdit            GPMPermissionType = 131072
-	permWMIFilterFullControl     GPMPermissionType = 131073
-	permWMIFilterCustom          GPMPermissionType = 131074
-	permSOMLink                  GPMPermissionType = 1835008
-	permSOMLogging               GPMPermissionType = 1573120
-	permSOMPlanning              GPMPermissionType = 1573376
-	permSOMWMICreate             GPMPermissionType = 1049344
-	permSOMWMIFullControl        GPMPermissionType = 1049345
-	permSOMGPOCreate             GPMPermissionType = 1049600
-	permStarterGPORead           GPMPermissionType = 197888
-	permStarterGPOEdit           GPMPermissionType = 197889
-	permStarterGPOFullControl    GPMPermissionType = 197890
-	permStarterGPOCustom         GPMPermissionType = 197891
-	permSOMStarterGPOCreate      GPMPermissionType = 1049856
+	PERMGPOAPPLY                 GPMPermissionType = 65536
+	PERMGPOREAD                  GPMPermissionType = 65792
+	PERMGPOEDIT                  GPMPermissionType = 65793
+	PERMGPOEDITSECURITYANDDELETE GPMPermissionType = 65794
+	PERMGPOCUSTOM                GPMPermissionType = 65795
+	PERMWMIFILTEREDIT            GPMPermissionType = 131072
+	PERMWMIFILTERFULLCONTROL     GPMPermissionType = 131073
+	PERMWMIFILTERCUSTOM          GPMPermissionType = 131074
+	PERMSOMLINK                  GPMPermissionType = 1835008
+	PERMSOMLOGGING               GPMPermissionType = 1573120
+	PERMSOMPLANNING              GPMPermissionType = 1573376
+	PERMSOMWMICREATE             GPMPermissionType = 1049344
+	PERMSOMWMIFULLCONTROL        GPMPermissionType = 1049345
+	PERMSOMGPOCREATE             GPMPermissionType = 1049600
+	PERMSTARTERGPOREAD           GPMPermissionType = 197888
+	PERMSTARTERGPOEDIT           GPMPermissionType = 197889
+	PERMSTARTERGPOFULLCONTROL    GPMPermissionType = 197890
+	PERMSTARTERGPOCUSTOM         GPMPermissionType = 197891
+	PERMSOMSTARTERGPOCREATE      GPMPermissionType = 1049856
 )
 
 type GPMSearchProperty int32
 
 const (
-	gpoPermissions                 GPMSearchProperty = 0
-	gpoEffectivePermissions        GPMSearchProperty = 1
-	gpoDisplayName                 GPMSearchProperty = 2
-	gpoWMIFilter                   GPMSearchProperty = 3
-	gpoID                          GPMSearchProperty = 4
-	gpoComputerExtensions          GPMSearchProperty = 5
-	gpoUserExtensions              GPMSearchProperty = 6
-	somLinks                       GPMSearchProperty = 7
-	gpoDomain                      GPMSearchProperty = 8
-	backupMostRecent               GPMSearchProperty = 9
-	starterGPOPermissions          GPMSearchProperty = 10
-	starterGPOEffectivePermissions GPMSearchProperty = 11
-	starterGPODisplayName          GPMSearchProperty = 12
-	starterGPOID                   GPMSearchProperty = 13
-	starterGPODomain               GPMSearchProperty = 14
+	GPOPERMISSIONS                 GPMSearchProperty = 0
+	GPOEFFECTIVEPERMISSIONS        GPMSearchProperty = 1
+	GPODISPLAYNAME                 GPMSearchProperty = 2
+	GPOWMIFILTER                   GPMSearchProperty = 3
+	GPOID                          GPMSearchProperty = 4
+	GPOCOMPUTEREXTENSIONS          GPMSearchProperty = 5
+	GPOUSEREXTENSIONS              GPMSearchProperty = 6
+	SOMLINKS                       GPMSearchProperty = 7
+	GPODOMAIN                      GPMSearchProperty = 8
+	BACKUPMOSTRECENT               GPMSearchProperty = 9
+	STARTERGPOPERMISSIONS          GPMSearchProperty = 10
+	STARTERGPOEFFECTIVEPERMISSIONS GPMSearchProperty = 11
+	STARTERGPODISPLAYNAME          GPMSearchProperty = 12
+	STARTERGPOID                   GPMSearchProperty = 13
+	STARTERGPODOMAIN               GPMSearchProperty = 14
 )
 
-type __MIDL___MIDL_itf_gpmgmt_0000_0000_0004 int32
+type MIDL___MIDL_itf_gpmgmt_0000_0000_0004 int32
 
 const (
-	opEquals      __MIDL___MIDL_itf_gpmgmt_0000_0000_0004 = 0
-	opContains    __MIDL___MIDL_itf_gpmgmt_0000_0000_0004 = 1
-	opNotContains __MIDL___MIDL_itf_gpmgmt_0000_0000_0004 = 2
-	opNotEquals   __MIDL___MIDL_itf_gpmgmt_0000_0000_0004 = 3
+	OPEQUALS      MIDL___MIDL_itf_gpmgmt_0000_0000_0004 = 0
+	OPCONTAINS    MIDL___MIDL_itf_gpmgmt_0000_0000_0004 = 1
+	OPNOTCONTAINS MIDL___MIDL_itf_gpmgmt_0000_0000_0004 = 2
+	OPNOTEQUALS   MIDL___MIDL_itf_gpmgmt_0000_0000_0004 = 3
 )
 
-type __MIDL___MIDL_itf_gpmgmt_0000_0000_0005 int32
+type MIDL___MIDL_itf_gpmgmt_0000_0000_0005 int32
 
 const (
-	repXML                    __MIDL___MIDL_itf_gpmgmt_0000_0000_0005 = 0
-	repHTML                   __MIDL___MIDL_itf_gpmgmt_0000_0000_0005 = 1
-	repInfraXML               __MIDL___MIDL_itf_gpmgmt_0000_0000_0005 = 2
-	repInfraRefreshXML        __MIDL___MIDL_itf_gpmgmt_0000_0000_0005 = 3
-	repClientHealthXML        __MIDL___MIDL_itf_gpmgmt_0000_0000_0005 = 4
-	repClientHealthRefreshXML __MIDL___MIDL_itf_gpmgmt_0000_0000_0005 = 5
+	REPXML                    MIDL___MIDL_itf_gpmgmt_0000_0000_0005 = 0
+	REPHTML                   MIDL___MIDL_itf_gpmgmt_0000_0000_0005 = 1
+	REPINFRAXML               MIDL___MIDL_itf_gpmgmt_0000_0000_0005 = 2
+	REPINFRAREFRESHXML        MIDL___MIDL_itf_gpmgmt_0000_0000_0005 = 3
+	REPCLIENTHEALTHXML        MIDL___MIDL_itf_gpmgmt_0000_0000_0005 = 4
+	REPCLIENTHEALTHREFRESHXML MIDL___MIDL_itf_gpmgmt_0000_0000_0005 = 5
 )
 
-type __MIDL___MIDL_itf_gpmgmt_0000_0000_0006 int32
+type MIDL___MIDL_itf_gpmgmt_0000_0000_0006 int32
 
 const (
-	typeUser           __MIDL___MIDL_itf_gpmgmt_0000_0000_0006 = 0
-	typeComputer       __MIDL___MIDL_itf_gpmgmt_0000_0000_0006 = 1
-	typeLocalGroup     __MIDL___MIDL_itf_gpmgmt_0000_0000_0006 = 2
-	typeGlobalGroup    __MIDL___MIDL_itf_gpmgmt_0000_0000_0006 = 3
-	typeUniversalGroup __MIDL___MIDL_itf_gpmgmt_0000_0000_0006 = 4
-	typeUNCPath        __MIDL___MIDL_itf_gpmgmt_0000_0000_0006 = 5
-	typeUnknown        __MIDL___MIDL_itf_gpmgmt_0000_0000_0006 = 6
+	TYPEUSER           MIDL___MIDL_itf_gpmgmt_0000_0000_0006 = 0
+	TYPECOMPUTER       MIDL___MIDL_itf_gpmgmt_0000_0000_0006 = 1
+	TYPELOCALGROUP     MIDL___MIDL_itf_gpmgmt_0000_0000_0006 = 2
+	TYPEGLOBALGROUP    MIDL___MIDL_itf_gpmgmt_0000_0000_0006 = 3
+	TYPEUNIVERSALGROUP MIDL___MIDL_itf_gpmgmt_0000_0000_0006 = 4
+	TYPEUNCPATH        MIDL___MIDL_itf_gpmgmt_0000_0000_0006 = 5
+	TYPEUNKNOWN        MIDL___MIDL_itf_gpmgmt_0000_0000_0006 = 6
 )
 
-type __MIDL___MIDL_itf_gpmgmt_0000_0000_0007 int32
+type MIDL___MIDL_itf_gpmgmt_0000_0000_0007 int32
 
 const (
-	opDestinationSameAsSource   __MIDL___MIDL_itf_gpmgmt_0000_0000_0007 = 0
-	opDestinationNone           __MIDL___MIDL_itf_gpmgmt_0000_0000_0007 = 1
-	opDestinationByRelativeName __MIDL___MIDL_itf_gpmgmt_0000_0000_0007 = 2
-	opDestinationSet            __MIDL___MIDL_itf_gpmgmt_0000_0000_0007 = 3
+	OPDESTINATIONSAMEASSOURCE   MIDL___MIDL_itf_gpmgmt_0000_0000_0007 = 0
+	OPDESTINATIONNONE           MIDL___MIDL_itf_gpmgmt_0000_0000_0007 = 1
+	OPDESTINATIONBYRELATIVENAME MIDL___MIDL_itf_gpmgmt_0000_0000_0007 = 2
+	OPDESTINATIONSET            MIDL___MIDL_itf_gpmgmt_0000_0000_0007 = 3
 )
 
 type GPMReportingOptions int32
 
 const (
-	opReportLegacy   GPMReportingOptions = 0
-	opReportComments GPMReportingOptions = 1
+	OPREPORTLEGACY   GPMReportingOptions = 0
+	OPREPORTCOMMENTS GPMReportingOptions = 1
 )
 
-type __MIDL_IGPMSOM_0001 int32
+type MIDL_IGPMSOM_0001 int32
 
 const (
-	somSite   __MIDL_IGPMSOM_0001 = 0
-	somDomain __MIDL_IGPMSOM_0001 = 1
-	somOU     __MIDL_IGPMSOM_0001 = 2
+	SOMSITE   MIDL_IGPMSOM_0001 = 0
+	SOMDOMAIN MIDL_IGPMSOM_0001 = 1
+	SOMOU     MIDL_IGPMSOM_0001 = 2
 )
 
 type GPMBackupType int32
 
 const (
-	typeGPO        GPMBackupType = 0
-	typeStarterGPO GPMBackupType = 1
+	TYPEGPO        GPMBackupType = 0
+	TYPESTARTERGPO GPMBackupType = 1
 )
 
 type GPMStarterGPOType int32
 
 const (
-	typeSystem GPMStarterGPOType = 0
-	typeCustom GPMStarterGPOType = 1
+	TYPESYSTEM GPMStarterGPOType = 0
+	TYPECUSTOM GPMStarterGPOType = 1
 )

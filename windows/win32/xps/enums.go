@@ -233,14 +233,14 @@ const (
 type EDefaultDevmodeType int32
 
 const (
-	kUserDefaultDevmode    EDefaultDevmodeType = 0
-	kPrinterDefaultDevmode EDefaultDevmodeType = 1
+	KUSERDEFAULTDEVMODE    EDefaultDevmodeType = 0
+	KPRINTERDEFAULTDEVMODE EDefaultDevmodeType = 1
 )
 
 type EPrintTicketScope int32
 
 const (
-	kPTPageScope     EPrintTicketScope = 0
-	kPTDocumentScope EPrintTicketScope = 1
-	kPTJobScope      EPrintTicketScope = 2
+	KPTPAGESCOPE     EPrintTicketScope = 0
+	KPTDOCUMENTSCOPE EPrintTicketScope = 1
+	KPTJOBSCOPE      EPrintTicketScope = 2
 )

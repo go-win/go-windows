@@ -332,80 +332,80 @@ const (
 	D3D12_VIDEO_EXTENSION_COMMAND_PARAMETER_FLAG_WRITE D3D12_VIDEO_EXTENSION_COMMAND_PARAMETER_FLAGS = 2
 )
 
-type _DMO_INPUT_DATA_BUFFER_FLAGS int32
+type DMO_INPUT_DATA_BUFFER_FLAGS int32
 
 const (
-	DMO_INPUT_DATA_BUFFERF_SYNCPOINT     _DMO_INPUT_DATA_BUFFER_FLAGS = 1
-	DMO_INPUT_DATA_BUFFERF_TIME          _DMO_INPUT_DATA_BUFFER_FLAGS = 2
-	DMO_INPUT_DATA_BUFFERF_TIMELENGTH    _DMO_INPUT_DATA_BUFFER_FLAGS = 4
-	DMO_INPUT_DATA_BUFFERF_DISCONTINUITY _DMO_INPUT_DATA_BUFFER_FLAGS = 8
+	DMO_INPUT_DATA_BUFFERF_SYNCPOINT     DMO_INPUT_DATA_BUFFER_FLAGS = 1
+	DMO_INPUT_DATA_BUFFERF_TIME          DMO_INPUT_DATA_BUFFER_FLAGS = 2
+	DMO_INPUT_DATA_BUFFERF_TIMELENGTH    DMO_INPUT_DATA_BUFFER_FLAGS = 4
+	DMO_INPUT_DATA_BUFFERF_DISCONTINUITY DMO_INPUT_DATA_BUFFER_FLAGS = 8
 )
 
-type _DMO_OUTPUT_DATA_BUFFER_FLAGS int32
+type DMO_OUTPUT_DATA_BUFFER_FLAGS int32
 
 const (
-	DMO_OUTPUT_DATA_BUFFERF_SYNCPOINT     _DMO_OUTPUT_DATA_BUFFER_FLAGS = 1
-	DMO_OUTPUT_DATA_BUFFERF_TIME          _DMO_OUTPUT_DATA_BUFFER_FLAGS = 2
-	DMO_OUTPUT_DATA_BUFFERF_TIMELENGTH    _DMO_OUTPUT_DATA_BUFFER_FLAGS = 4
-	DMO_OUTPUT_DATA_BUFFERF_DISCONTINUITY _DMO_OUTPUT_DATA_BUFFER_FLAGS = 8
-	DMO_OUTPUT_DATA_BUFFERF_INCOMPLETE    _DMO_OUTPUT_DATA_BUFFER_FLAGS = 16777216
+	DMO_OUTPUT_DATA_BUFFERF_SYNCPOINT     DMO_OUTPUT_DATA_BUFFER_FLAGS = 1
+	DMO_OUTPUT_DATA_BUFFERF_TIME          DMO_OUTPUT_DATA_BUFFER_FLAGS = 2
+	DMO_OUTPUT_DATA_BUFFERF_TIMELENGTH    DMO_OUTPUT_DATA_BUFFER_FLAGS = 4
+	DMO_OUTPUT_DATA_BUFFERF_DISCONTINUITY DMO_OUTPUT_DATA_BUFFER_FLAGS = 8
+	DMO_OUTPUT_DATA_BUFFERF_INCOMPLETE    DMO_OUTPUT_DATA_BUFFER_FLAGS = 16777216
 )
 
-type _DMO_INPUT_STATUS_FLAGS int32
+type DMO_INPUT_STATUS_FLAGS int32
 
 const (
-	DMO_INPUT_STATUSF_ACCEPT_DATA _DMO_INPUT_STATUS_FLAGS = 1
+	DMO_INPUT_STATUSF_ACCEPT_DATA DMO_INPUT_STATUS_FLAGS = 1
 )
 
-type _DMO_INPUT_STREAM_INFO_FLAGS int32
+type DMO_INPUT_STREAM_INFO_FLAGS int32
 
 const (
-	DMO_INPUT_STREAMF_WHOLE_SAMPLES            _DMO_INPUT_STREAM_INFO_FLAGS = 1
-	DMO_INPUT_STREAMF_SINGLE_SAMPLE_PER_BUFFER _DMO_INPUT_STREAM_INFO_FLAGS = 2
-	DMO_INPUT_STREAMF_FIXED_SAMPLE_SIZE        _DMO_INPUT_STREAM_INFO_FLAGS = 4
-	DMO_INPUT_STREAMF_HOLDS_BUFFERS            _DMO_INPUT_STREAM_INFO_FLAGS = 8
+	DMO_INPUT_STREAMF_WHOLE_SAMPLES            DMO_INPUT_STREAM_INFO_FLAGS = 1
+	DMO_INPUT_STREAMF_SINGLE_SAMPLE_PER_BUFFER DMO_INPUT_STREAM_INFO_FLAGS = 2
+	DMO_INPUT_STREAMF_FIXED_SAMPLE_SIZE        DMO_INPUT_STREAM_INFO_FLAGS = 4
+	DMO_INPUT_STREAMF_HOLDS_BUFFERS            DMO_INPUT_STREAM_INFO_FLAGS = 8
 )
 
-type _DMO_OUTPUT_STREAM_INFO_FLAGS int32
+type DMO_OUTPUT_STREAM_INFO_FLAGS int32
 
 const (
-	DMO_OUTPUT_STREAMF_WHOLE_SAMPLES            _DMO_OUTPUT_STREAM_INFO_FLAGS = 1
-	DMO_OUTPUT_STREAMF_SINGLE_SAMPLE_PER_BUFFER _DMO_OUTPUT_STREAM_INFO_FLAGS = 2
-	DMO_OUTPUT_STREAMF_FIXED_SAMPLE_SIZE        _DMO_OUTPUT_STREAM_INFO_FLAGS = 4
-	DMO_OUTPUT_STREAMF_DISCARDABLE              _DMO_OUTPUT_STREAM_INFO_FLAGS = 8
-	DMO_OUTPUT_STREAMF_OPTIONAL                 _DMO_OUTPUT_STREAM_INFO_FLAGS = 16
+	DMO_OUTPUT_STREAMF_WHOLE_SAMPLES            DMO_OUTPUT_STREAM_INFO_FLAGS = 1
+	DMO_OUTPUT_STREAMF_SINGLE_SAMPLE_PER_BUFFER DMO_OUTPUT_STREAM_INFO_FLAGS = 2
+	DMO_OUTPUT_STREAMF_FIXED_SAMPLE_SIZE        DMO_OUTPUT_STREAM_INFO_FLAGS = 4
+	DMO_OUTPUT_STREAMF_DISCARDABLE              DMO_OUTPUT_STREAM_INFO_FLAGS = 8
+	DMO_OUTPUT_STREAMF_OPTIONAL                 DMO_OUTPUT_STREAM_INFO_FLAGS = 16
 )
 
-type _DMO_SET_TYPE_FLAGS int32
+type DMO_SET_TYPE_FLAGS int32
 
 const (
-	DMO_SET_TYPEF_TEST_ONLY _DMO_SET_TYPE_FLAGS = 1
-	DMO_SET_TYPEF_CLEAR     _DMO_SET_TYPE_FLAGS = 2
+	DMO_SET_TYPEF_TEST_ONLY DMO_SET_TYPE_FLAGS = 1
+	DMO_SET_TYPEF_CLEAR     DMO_SET_TYPE_FLAGS = 2
 )
 
-type _DMO_PROCESS_OUTPUT_FLAGS int32
+type DMO_PROCESS_OUTPUT_FLAGS int32
 
 const (
-	DMO_PROCESS_OUTPUT_DISCARD_WHEN_NO_BUFFER _DMO_PROCESS_OUTPUT_FLAGS = 1
+	DMO_PROCESS_OUTPUT_DISCARD_WHEN_NO_BUFFER DMO_PROCESS_OUTPUT_FLAGS = 1
 )
 
-type _DMO_INPLACE_PROCESS_FLAGS int32
+type DMO_INPLACE_PROCESS_FLAGS int32
 
 const (
-	DMO_INPLACE_NORMAL _DMO_INPLACE_PROCESS_FLAGS = 0
-	DMO_INPLACE_ZERO   _DMO_INPLACE_PROCESS_FLAGS = 1
+	DMO_INPLACE_NORMAL DMO_INPLACE_PROCESS_FLAGS = 0
+	DMO_INPLACE_ZERO   DMO_INPLACE_PROCESS_FLAGS = 1
 )
 
-type _DMO_QUALITY_STATUS_FLAGS int32
+type DMO_QUALITY_STATUS_FLAGS int32
 
 const (
-	DMO_QUALITY_STATUS_ENABLED _DMO_QUALITY_STATUS_FLAGS = 1
+	DMO_QUALITY_STATUS_ENABLED DMO_QUALITY_STATUS_FLAGS = 1
 )
 
-type _DMO_VIDEO_OUTPUT_STREAM_FLAGS int32
+type DMO_VIDEO_OUTPUT_STREAM_FLAGS int32
 
 const (
-	DMO_VOSF_NEEDS_PREVIOUS_SAMPLE _DMO_VIDEO_OUTPUT_STREAM_FLAGS = 1
+	DMO_VOSF_NEEDS_PREVIOUS_SAMPLE DMO_VIDEO_OUTPUT_STREAM_FLAGS = 1
 )
 
 type WMT_PROP_DATATYPE int32
@@ -502,8 +502,8 @@ const (
 type SEEK_ORIGIN int32
 
 const (
-	_msoBegin   SEEK_ORIGIN = 0
-	_msoCurrent SEEK_ORIGIN = 1
+	SEEK_ORIGIN_MSOBEGIN   SEEK_ORIGIN = 0
+	SEEK_ORIGIN_MSOCURRENT SEEK_ORIGIN = 1
 )
 
 type FILE_ACCESSMODE int32
@@ -924,142 +924,142 @@ const (
 	DXVA2_VideoTransFunc_28      DXVA2_VideoTransferFunction = 8
 )
 
-type __MIDL___MIDL_itf_dxva2api_0000_0000_0003 int32
+type MIDL___MIDL_itf_dxva2api_0000_0000_0003 int32
 
 const (
-	DXVA2_DeinterlaceTech_Unknown                __MIDL___MIDL_itf_dxva2api_0000_0000_0003 = 0
-	DXVA2_DeinterlaceTech_BOBLineReplicate       __MIDL___MIDL_itf_dxva2api_0000_0000_0003 = 1
-	DXVA2_DeinterlaceTech_BOBVerticalStretch     __MIDL___MIDL_itf_dxva2api_0000_0000_0003 = 2
-	DXVA2_DeinterlaceTech_BOBVerticalStretch4Tap __MIDL___MIDL_itf_dxva2api_0000_0000_0003 = 4
-	DXVA2_DeinterlaceTech_MedianFiltering        __MIDL___MIDL_itf_dxva2api_0000_0000_0003 = 8
-	DXVA2_DeinterlaceTech_EdgeFiltering          __MIDL___MIDL_itf_dxva2api_0000_0000_0003 = 16
-	DXVA2_DeinterlaceTech_FieldAdaptive          __MIDL___MIDL_itf_dxva2api_0000_0000_0003 = 32
-	DXVA2_DeinterlaceTech_PixelAdaptive          __MIDL___MIDL_itf_dxva2api_0000_0000_0003 = 64
-	DXVA2_DeinterlaceTech_MotionVectorSteered    __MIDL___MIDL_itf_dxva2api_0000_0000_0003 = 128
-	DXVA2_DeinterlaceTech_InverseTelecine        __MIDL___MIDL_itf_dxva2api_0000_0000_0003 = 256
-	DXVA2_DeinterlaceTech_Mask                   __MIDL___MIDL_itf_dxva2api_0000_0000_0003 = 511
+	DXVA2_DeinterlaceTech_Unknown                MIDL___MIDL_itf_dxva2api_0000_0000_0003 = 0
+	DXVA2_DeinterlaceTech_BOBLineReplicate       MIDL___MIDL_itf_dxva2api_0000_0000_0003 = 1
+	DXVA2_DeinterlaceTech_BOBVerticalStretch     MIDL___MIDL_itf_dxva2api_0000_0000_0003 = 2
+	DXVA2_DeinterlaceTech_BOBVerticalStretch4Tap MIDL___MIDL_itf_dxva2api_0000_0000_0003 = 4
+	DXVA2_DeinterlaceTech_MedianFiltering        MIDL___MIDL_itf_dxva2api_0000_0000_0003 = 8
+	DXVA2_DeinterlaceTech_EdgeFiltering          MIDL___MIDL_itf_dxva2api_0000_0000_0003 = 16
+	DXVA2_DeinterlaceTech_FieldAdaptive          MIDL___MIDL_itf_dxva2api_0000_0000_0003 = 32
+	DXVA2_DeinterlaceTech_PixelAdaptive          MIDL___MIDL_itf_dxva2api_0000_0000_0003 = 64
+	DXVA2_DeinterlaceTech_MotionVectorSteered    MIDL___MIDL_itf_dxva2api_0000_0000_0003 = 128
+	DXVA2_DeinterlaceTech_InverseTelecine        MIDL___MIDL_itf_dxva2api_0000_0000_0003 = 256
+	DXVA2_DeinterlaceTech_Mask                   MIDL___MIDL_itf_dxva2api_0000_0000_0003 = 511
 )
 
-type __MIDL___MIDL_itf_dxva2api_0000_0000_0004 int32
+type MIDL___MIDL_itf_dxva2api_0000_0000_0004 int32
 
 const (
-	DXVA2_NoiseFilterLumaLevel        __MIDL___MIDL_itf_dxva2api_0000_0000_0004 = 1
-	DXVA2_NoiseFilterLumaThreshold    __MIDL___MIDL_itf_dxva2api_0000_0000_0004 = 2
-	DXVA2_NoiseFilterLumaRadius       __MIDL___MIDL_itf_dxva2api_0000_0000_0004 = 3
-	DXVA2_NoiseFilterChromaLevel      __MIDL___MIDL_itf_dxva2api_0000_0000_0004 = 4
-	DXVA2_NoiseFilterChromaThreshold  __MIDL___MIDL_itf_dxva2api_0000_0000_0004 = 5
-	DXVA2_NoiseFilterChromaRadius     __MIDL___MIDL_itf_dxva2api_0000_0000_0004 = 6
-	DXVA2_DetailFilterLumaLevel       __MIDL___MIDL_itf_dxva2api_0000_0000_0004 = 7
-	DXVA2_DetailFilterLumaThreshold   __MIDL___MIDL_itf_dxva2api_0000_0000_0004 = 8
-	DXVA2_DetailFilterLumaRadius      __MIDL___MIDL_itf_dxva2api_0000_0000_0004 = 9
-	DXVA2_DetailFilterChromaLevel     __MIDL___MIDL_itf_dxva2api_0000_0000_0004 = 10
-	DXVA2_DetailFilterChromaThreshold __MIDL___MIDL_itf_dxva2api_0000_0000_0004 = 11
-	DXVA2_DetailFilterChromaRadius    __MIDL___MIDL_itf_dxva2api_0000_0000_0004 = 12
+	DXVA2_NoiseFilterLumaLevel        MIDL___MIDL_itf_dxva2api_0000_0000_0004 = 1
+	DXVA2_NoiseFilterLumaThreshold    MIDL___MIDL_itf_dxva2api_0000_0000_0004 = 2
+	DXVA2_NoiseFilterLumaRadius       MIDL___MIDL_itf_dxva2api_0000_0000_0004 = 3
+	DXVA2_NoiseFilterChromaLevel      MIDL___MIDL_itf_dxva2api_0000_0000_0004 = 4
+	DXVA2_NoiseFilterChromaThreshold  MIDL___MIDL_itf_dxva2api_0000_0000_0004 = 5
+	DXVA2_NoiseFilterChromaRadius     MIDL___MIDL_itf_dxva2api_0000_0000_0004 = 6
+	DXVA2_DetailFilterLumaLevel       MIDL___MIDL_itf_dxva2api_0000_0000_0004 = 7
+	DXVA2_DetailFilterLumaThreshold   MIDL___MIDL_itf_dxva2api_0000_0000_0004 = 8
+	DXVA2_DetailFilterLumaRadius      MIDL___MIDL_itf_dxva2api_0000_0000_0004 = 9
+	DXVA2_DetailFilterChromaLevel     MIDL___MIDL_itf_dxva2api_0000_0000_0004 = 10
+	DXVA2_DetailFilterChromaThreshold MIDL___MIDL_itf_dxva2api_0000_0000_0004 = 11
+	DXVA2_DetailFilterChromaRadius    MIDL___MIDL_itf_dxva2api_0000_0000_0004 = 12
 )
 
-type __MIDL___MIDL_itf_dxva2api_0000_0000_0005 int32
+type MIDL___MIDL_itf_dxva2api_0000_0000_0005 int32
 
 const (
-	DXVA2_NoiseFilterTech_Unsupported   __MIDL___MIDL_itf_dxva2api_0000_0000_0005 = 0
-	DXVA2_NoiseFilterTech_Unknown       __MIDL___MIDL_itf_dxva2api_0000_0000_0005 = 1
-	DXVA2_NoiseFilterTech_Median        __MIDL___MIDL_itf_dxva2api_0000_0000_0005 = 2
-	DXVA2_NoiseFilterTech_Temporal      __MIDL___MIDL_itf_dxva2api_0000_0000_0005 = 4
-	DXVA2_NoiseFilterTech_BlockNoise    __MIDL___MIDL_itf_dxva2api_0000_0000_0005 = 8
-	DXVA2_NoiseFilterTech_MosquitoNoise __MIDL___MIDL_itf_dxva2api_0000_0000_0005 = 16
-	DXVA2_NoiseFilterTech_Mask          __MIDL___MIDL_itf_dxva2api_0000_0000_0005 = 31
+	DXVA2_NoiseFilterTech_Unsupported   MIDL___MIDL_itf_dxva2api_0000_0000_0005 = 0
+	DXVA2_NoiseFilterTech_Unknown       MIDL___MIDL_itf_dxva2api_0000_0000_0005 = 1
+	DXVA2_NoiseFilterTech_Median        MIDL___MIDL_itf_dxva2api_0000_0000_0005 = 2
+	DXVA2_NoiseFilterTech_Temporal      MIDL___MIDL_itf_dxva2api_0000_0000_0005 = 4
+	DXVA2_NoiseFilterTech_BlockNoise    MIDL___MIDL_itf_dxva2api_0000_0000_0005 = 8
+	DXVA2_NoiseFilterTech_MosquitoNoise MIDL___MIDL_itf_dxva2api_0000_0000_0005 = 16
+	DXVA2_NoiseFilterTech_Mask          MIDL___MIDL_itf_dxva2api_0000_0000_0005 = 31
 )
 
-type __MIDL___MIDL_itf_dxva2api_0000_0000_0006 int32
+type MIDL___MIDL_itf_dxva2api_0000_0000_0006 int32
 
 const (
-	DXVA2_DetailFilterTech_Unsupported __MIDL___MIDL_itf_dxva2api_0000_0000_0006 = 0
-	DXVA2_DetailFilterTech_Unknown     __MIDL___MIDL_itf_dxva2api_0000_0000_0006 = 1
-	DXVA2_DetailFilterTech_Edge        __MIDL___MIDL_itf_dxva2api_0000_0000_0006 = 2
-	DXVA2_DetailFilterTech_Sharpening  __MIDL___MIDL_itf_dxva2api_0000_0000_0006 = 4
-	DXVA2_DetailFilterTech_Mask        __MIDL___MIDL_itf_dxva2api_0000_0000_0006 = 7
+	DXVA2_DetailFilterTech_Unsupported MIDL___MIDL_itf_dxva2api_0000_0000_0006 = 0
+	DXVA2_DetailFilterTech_Unknown     MIDL___MIDL_itf_dxva2api_0000_0000_0006 = 1
+	DXVA2_DetailFilterTech_Edge        MIDL___MIDL_itf_dxva2api_0000_0000_0006 = 2
+	DXVA2_DetailFilterTech_Sharpening  MIDL___MIDL_itf_dxva2api_0000_0000_0006 = 4
+	DXVA2_DetailFilterTech_Mask        MIDL___MIDL_itf_dxva2api_0000_0000_0006 = 7
 )
 
-type __MIDL___MIDL_itf_dxva2api_0000_0000_0007 int32
+type MIDL___MIDL_itf_dxva2api_0000_0000_0007 int32
 
 const (
-	DXVA2_ProcAmp_None       __MIDL___MIDL_itf_dxva2api_0000_0000_0007 = 0
-	DXVA2_ProcAmp_Brightness __MIDL___MIDL_itf_dxva2api_0000_0000_0007 = 1
-	DXVA2_ProcAmp_Contrast   __MIDL___MIDL_itf_dxva2api_0000_0000_0007 = 2
-	DXVA2_ProcAmp_Hue        __MIDL___MIDL_itf_dxva2api_0000_0000_0007 = 4
-	DXVA2_ProcAmp_Saturation __MIDL___MIDL_itf_dxva2api_0000_0000_0007 = 8
-	DXVA2_ProcAmp_Mask       __MIDL___MIDL_itf_dxva2api_0000_0000_0007 = 15
+	DXVA2_ProcAmp_None       MIDL___MIDL_itf_dxva2api_0000_0000_0007 = 0
+	DXVA2_ProcAmp_Brightness MIDL___MIDL_itf_dxva2api_0000_0000_0007 = 1
+	DXVA2_ProcAmp_Contrast   MIDL___MIDL_itf_dxva2api_0000_0000_0007 = 2
+	DXVA2_ProcAmp_Hue        MIDL___MIDL_itf_dxva2api_0000_0000_0007 = 4
+	DXVA2_ProcAmp_Saturation MIDL___MIDL_itf_dxva2api_0000_0000_0007 = 8
+	DXVA2_ProcAmp_Mask       MIDL___MIDL_itf_dxva2api_0000_0000_0007 = 15
 )
 
-type __MIDL___MIDL_itf_dxva2api_0000_0000_0008 int32
+type MIDL___MIDL_itf_dxva2api_0000_0000_0008 int32
 
 const (
-	DXVA2_VideoProcess_None                       __MIDL___MIDL_itf_dxva2api_0000_0000_0008 = 0
-	DXVA2_VideoProcess_YUV2RGB                    __MIDL___MIDL_itf_dxva2api_0000_0000_0008 = 1
-	DXVA2_VideoProcess_StretchX                   __MIDL___MIDL_itf_dxva2api_0000_0000_0008 = 2
-	DXVA2_VideoProcess_StretchY                   __MIDL___MIDL_itf_dxva2api_0000_0000_0008 = 4
-	DXVA2_VideoProcess_AlphaBlend                 __MIDL___MIDL_itf_dxva2api_0000_0000_0008 = 8
-	DXVA2_VideoProcess_SubRects                   __MIDL___MIDL_itf_dxva2api_0000_0000_0008 = 16
-	DXVA2_VideoProcess_SubStreams                 __MIDL___MIDL_itf_dxva2api_0000_0000_0008 = 32
-	DXVA2_VideoProcess_SubStreamsExtended         __MIDL___MIDL_itf_dxva2api_0000_0000_0008 = 64
-	DXVA2_VideoProcess_YUV2RGBExtended            __MIDL___MIDL_itf_dxva2api_0000_0000_0008 = 128
-	DXVA2_VideoProcess_AlphaBlendExtended         __MIDL___MIDL_itf_dxva2api_0000_0000_0008 = 256
-	DXVA2_VideoProcess_Constriction               __MIDL___MIDL_itf_dxva2api_0000_0000_0008 = 512
-	DXVA2_VideoProcess_NoiseFilter                __MIDL___MIDL_itf_dxva2api_0000_0000_0008 = 1024
-	DXVA2_VideoProcess_DetailFilter               __MIDL___MIDL_itf_dxva2api_0000_0000_0008 = 2048
-	DXVA2_VideoProcess_PlanarAlpha                __MIDL___MIDL_itf_dxva2api_0000_0000_0008 = 4096
-	DXVA2_VideoProcess_LinearScaling              __MIDL___MIDL_itf_dxva2api_0000_0000_0008 = 8192
-	DXVA2_VideoProcess_GammaCompensated           __MIDL___MIDL_itf_dxva2api_0000_0000_0008 = 16384
-	DXVA2_VideoProcess_MaintainsOriginalFieldData __MIDL___MIDL_itf_dxva2api_0000_0000_0008 = 32768
-	DXVA2_VideoProcess_Mask                       __MIDL___MIDL_itf_dxva2api_0000_0000_0008 = 65535
+	DXVA2_VideoProcess_None                       MIDL___MIDL_itf_dxva2api_0000_0000_0008 = 0
+	DXVA2_VideoProcess_YUV2RGB                    MIDL___MIDL_itf_dxva2api_0000_0000_0008 = 1
+	DXVA2_VideoProcess_StretchX                   MIDL___MIDL_itf_dxva2api_0000_0000_0008 = 2
+	DXVA2_VideoProcess_StretchY                   MIDL___MIDL_itf_dxva2api_0000_0000_0008 = 4
+	DXVA2_VideoProcess_AlphaBlend                 MIDL___MIDL_itf_dxva2api_0000_0000_0008 = 8
+	DXVA2_VideoProcess_SubRects                   MIDL___MIDL_itf_dxva2api_0000_0000_0008 = 16
+	DXVA2_VideoProcess_SubStreams                 MIDL___MIDL_itf_dxva2api_0000_0000_0008 = 32
+	DXVA2_VideoProcess_SubStreamsExtended         MIDL___MIDL_itf_dxva2api_0000_0000_0008 = 64
+	DXVA2_VideoProcess_YUV2RGBExtended            MIDL___MIDL_itf_dxva2api_0000_0000_0008 = 128
+	DXVA2_VideoProcess_AlphaBlendExtended         MIDL___MIDL_itf_dxva2api_0000_0000_0008 = 256
+	DXVA2_VideoProcess_Constriction               MIDL___MIDL_itf_dxva2api_0000_0000_0008 = 512
+	DXVA2_VideoProcess_NoiseFilter                MIDL___MIDL_itf_dxva2api_0000_0000_0008 = 1024
+	DXVA2_VideoProcess_DetailFilter               MIDL___MIDL_itf_dxva2api_0000_0000_0008 = 2048
+	DXVA2_VideoProcess_PlanarAlpha                MIDL___MIDL_itf_dxva2api_0000_0000_0008 = 4096
+	DXVA2_VideoProcess_LinearScaling              MIDL___MIDL_itf_dxva2api_0000_0000_0008 = 8192
+	DXVA2_VideoProcess_GammaCompensated           MIDL___MIDL_itf_dxva2api_0000_0000_0008 = 16384
+	DXVA2_VideoProcess_MaintainsOriginalFieldData MIDL___MIDL_itf_dxva2api_0000_0000_0008 = 32768
+	DXVA2_VideoProcess_Mask                       MIDL___MIDL_itf_dxva2api_0000_0000_0008 = 65535
 )
 
-type __MIDL___MIDL_itf_dxva2api_0000_0000_0009 int32
+type MIDL___MIDL_itf_dxva2api_0000_0000_0009 int32
 
 const (
-	DXVA2_VPDev_HardwareDevice __MIDL___MIDL_itf_dxva2api_0000_0000_0009 = 1
-	DXVA2_VPDev_EmulatedDXVA1  __MIDL___MIDL_itf_dxva2api_0000_0000_0009 = 2
-	DXVA2_VPDev_SoftwareDevice __MIDL___MIDL_itf_dxva2api_0000_0000_0009 = 4
-	DXVA2_VPDev_Mask           __MIDL___MIDL_itf_dxva2api_0000_0000_0009 = 7
+	DXVA2_VPDev_HardwareDevice MIDL___MIDL_itf_dxva2api_0000_0000_0009 = 1
+	DXVA2_VPDev_EmulatedDXVA1  MIDL___MIDL_itf_dxva2api_0000_0000_0009 = 2
+	DXVA2_VPDev_SoftwareDevice MIDL___MIDL_itf_dxva2api_0000_0000_0009 = 4
+	DXVA2_VPDev_Mask           MIDL___MIDL_itf_dxva2api_0000_0000_0009 = 7
 )
 
-type __MIDL___MIDL_itf_dxva2api_0000_0000_0010 int32
+type MIDL___MIDL_itf_dxva2api_0000_0000_0010 int32
 
 const (
-	DXVA2_SampleData_RFF             __MIDL___MIDL_itf_dxva2api_0000_0000_0010 = 1
-	DXVA2_SampleData_TFF             __MIDL___MIDL_itf_dxva2api_0000_0000_0010 = 2
-	DXVA2_SampleData_RFF_TFF_Present __MIDL___MIDL_itf_dxva2api_0000_0000_0010 = 4
-	DXVA2_SampleData_Mask            __MIDL___MIDL_itf_dxva2api_0000_0000_0010 = 65535
+	DXVA2_SampleData_RFF             MIDL___MIDL_itf_dxva2api_0000_0000_0010 = 1
+	DXVA2_SampleData_TFF             MIDL___MIDL_itf_dxva2api_0000_0000_0010 = 2
+	DXVA2_SampleData_RFF_TFF_Present MIDL___MIDL_itf_dxva2api_0000_0000_0010 = 4
+	DXVA2_SampleData_Mask            MIDL___MIDL_itf_dxva2api_0000_0000_0010 = 65535
 )
 
-type __MIDL___MIDL_itf_dxva2api_0000_0000_0011 int32
+type MIDL___MIDL_itf_dxva2api_0000_0000_0011 int32
 
 const (
-	DXVA2_DestData_RFF             __MIDL___MIDL_itf_dxva2api_0000_0000_0011 = 1
-	DXVA2_DestData_TFF             __MIDL___MIDL_itf_dxva2api_0000_0000_0011 = 2
-	DXVA2_DestData_RFF_TFF_Present __MIDL___MIDL_itf_dxva2api_0000_0000_0011 = 4
-	DXVA2_DestData_Mask            __MIDL___MIDL_itf_dxva2api_0000_0000_0011 = 65535
+	DXVA2_DestData_RFF             MIDL___MIDL_itf_dxva2api_0000_0000_0011 = 1
+	DXVA2_DestData_TFF             MIDL___MIDL_itf_dxva2api_0000_0000_0011 = 2
+	DXVA2_DestData_RFF_TFF_Present MIDL___MIDL_itf_dxva2api_0000_0000_0011 = 4
+	DXVA2_DestData_Mask            MIDL___MIDL_itf_dxva2api_0000_0000_0011 = 65535
 )
 
-type __MIDL___MIDL_itf_dxva2api_0000_0000_0012 int32
+type MIDL___MIDL_itf_dxva2api_0000_0000_0012 int32
 
 const (
-	DXVA2_PictureParametersBufferType         __MIDL___MIDL_itf_dxva2api_0000_0000_0012 = 0
-	DXVA2_MacroBlockControlBufferType         __MIDL___MIDL_itf_dxva2api_0000_0000_0012 = 1
-	DXVA2_ResidualDifferenceBufferType        __MIDL___MIDL_itf_dxva2api_0000_0000_0012 = 2
-	DXVA2_DeblockingControlBufferType         __MIDL___MIDL_itf_dxva2api_0000_0000_0012 = 3
-	DXVA2_InverseQuantizationMatrixBufferType __MIDL___MIDL_itf_dxva2api_0000_0000_0012 = 4
-	DXVA2_SliceControlBufferType              __MIDL___MIDL_itf_dxva2api_0000_0000_0012 = 5
-	DXVA2_BitStreamDateBufferType             __MIDL___MIDL_itf_dxva2api_0000_0000_0012 = 6
-	DXVA2_MotionVectorBuffer                  __MIDL___MIDL_itf_dxva2api_0000_0000_0012 = 7
-	DXVA2_FilmGrainBuffer                     __MIDL___MIDL_itf_dxva2api_0000_0000_0012 = 8
+	DXVA2_PictureParametersBufferType         MIDL___MIDL_itf_dxva2api_0000_0000_0012 = 0
+	DXVA2_MacroBlockControlBufferType         MIDL___MIDL_itf_dxva2api_0000_0000_0012 = 1
+	DXVA2_ResidualDifferenceBufferType        MIDL___MIDL_itf_dxva2api_0000_0000_0012 = 2
+	DXVA2_DeblockingControlBufferType         MIDL___MIDL_itf_dxva2api_0000_0000_0012 = 3
+	DXVA2_InverseQuantizationMatrixBufferType MIDL___MIDL_itf_dxva2api_0000_0000_0012 = 4
+	DXVA2_SliceControlBufferType              MIDL___MIDL_itf_dxva2api_0000_0000_0012 = 5
+	DXVA2_BitStreamDateBufferType             MIDL___MIDL_itf_dxva2api_0000_0000_0012 = 6
+	DXVA2_MotionVectorBuffer                  MIDL___MIDL_itf_dxva2api_0000_0000_0012 = 7
+	DXVA2_FilmGrainBuffer                     MIDL___MIDL_itf_dxva2api_0000_0000_0012 = 8
 )
 
-type __MIDL___MIDL_itf_dxva2api_0000_0000_0013 int32
+type MIDL___MIDL_itf_dxva2api_0000_0000_0013 int32
 
 const (
-	DXVA2_VideoDecoderRenderTarget   __MIDL___MIDL_itf_dxva2api_0000_0000_0013 = 0
-	DXVA2_VideoProcessorRenderTarget __MIDL___MIDL_itf_dxva2api_0000_0000_0013 = 1
-	DXVA2_VideoSoftwareRenderTarget  __MIDL___MIDL_itf_dxva2api_0000_0000_0013 = 2
+	DXVA2_VideoDecoderRenderTarget   MIDL___MIDL_itf_dxva2api_0000_0000_0013 = 0
+	DXVA2_VideoProcessorRenderTarget MIDL___MIDL_itf_dxva2api_0000_0000_0013 = 1
+	DXVA2_VideoSoftwareRenderTarget  MIDL___MIDL_itf_dxva2api_0000_0000_0013 = 2
 )
 
 type DXVA2_SurfaceType int32
@@ -1070,19 +1070,19 @@ const (
 	DXVA2_SurfaceType_D3DRenderTargetTexture DXVA2_SurfaceType = 2
 )
 
-type __MIDL___MIDL_itf_opmapi_0000_0000_0001 int32
+type MIDL___MIDL_itf_opmapi_0000_0000_0001 int32
 
 const (
-	OPM_OMAC_SIZE                                __MIDL___MIDL_itf_opmapi_0000_0000_0001 = 16
-	OPM_128_BIT_RANDOM_NUMBER_SIZE               __MIDL___MIDL_itf_opmapi_0000_0000_0001 = 16
-	OPM_ENCRYPTED_INITIALIZATION_PARAMETERS_SIZE __MIDL___MIDL_itf_opmapi_0000_0000_0001 = 256
-	OPM_CONFIGURE_SETTING_DATA_SIZE              __MIDL___MIDL_itf_opmapi_0000_0000_0001 = 4056
-	OPM_GET_INFORMATION_PARAMETERS_SIZE          __MIDL___MIDL_itf_opmapi_0000_0000_0001 = 4056
-	OPM_REQUESTED_INFORMATION_SIZE               __MIDL___MIDL_itf_opmapi_0000_0000_0001 = 4076
-	OPM_HDCP_KEY_SELECTION_VECTOR_SIZE           __MIDL___MIDL_itf_opmapi_0000_0000_0001 = 5
-	OPM_PROTECTION_TYPE_SIZE                     __MIDL___MIDL_itf_opmapi_0000_0000_0001 = 4
-	OPM_BUS_TYPE_MASK                            __MIDL___MIDL_itf_opmapi_0000_0000_0001 = 65535
-	OPM_BUS_IMPLEMENTATION_MODIFIER_MASK         __MIDL___MIDL_itf_opmapi_0000_0000_0001 = 32767
+	OPM_OMAC_SIZE                                MIDL___MIDL_itf_opmapi_0000_0000_0001 = 16
+	OPM_128_BIT_RANDOM_NUMBER_SIZE               MIDL___MIDL_itf_opmapi_0000_0000_0001 = 16
+	OPM_ENCRYPTED_INITIALIZATION_PARAMETERS_SIZE MIDL___MIDL_itf_opmapi_0000_0000_0001 = 256
+	OPM_CONFIGURE_SETTING_DATA_SIZE              MIDL___MIDL_itf_opmapi_0000_0000_0001 = 4056
+	OPM_GET_INFORMATION_PARAMETERS_SIZE          MIDL___MIDL_itf_opmapi_0000_0000_0001 = 4056
+	OPM_REQUESTED_INFORMATION_SIZE               MIDL___MIDL_itf_opmapi_0000_0000_0001 = 4076
+	OPM_HDCP_KEY_SELECTION_VECTOR_SIZE           MIDL___MIDL_itf_opmapi_0000_0000_0001 = 5
+	OPM_PROTECTION_TYPE_SIZE                     MIDL___MIDL_itf_opmapi_0000_0000_0001 = 4
+	OPM_BUS_TYPE_MASK                            MIDL___MIDL_itf_opmapi_0000_0000_0001 = 65535
+	OPM_BUS_IMPLEMENTATION_MODIFIER_MASK         MIDL___MIDL_itf_opmapi_0000_0000_0001 = 32767
 )
 
 type OPM_VIDEO_OUTPUT_SEMANTICS int32
@@ -1093,52 +1093,52 @@ const (
 	OPM_VOS_OPM_INDIRECT_DISPLAY OPM_VIDEO_OUTPUT_SEMANTICS = 2
 )
 
-type __MIDL___MIDL_itf_opmapi_0000_0000_0002 int32
+type MIDL___MIDL_itf_opmapi_0000_0000_0002 int32
 
 const (
-	OPM_HDCP_FLAG_NONE     __MIDL___MIDL_itf_opmapi_0000_0000_0002 = 0
-	OPM_HDCP_FLAG_REPEATER __MIDL___MIDL_itf_opmapi_0000_0000_0002 = 1
+	OPM_HDCP_FLAG_NONE     MIDL___MIDL_itf_opmapi_0000_0000_0002 = 0
+	OPM_HDCP_FLAG_REPEATER MIDL___MIDL_itf_opmapi_0000_0000_0002 = 1
 )
 
-type __MIDL___MIDL_itf_opmapi_0000_0000_0003 int32
+type MIDL___MIDL_itf_opmapi_0000_0000_0003 int32
 
 const (
-	OPM_STATUS_NORMAL                       __MIDL___MIDL_itf_opmapi_0000_0000_0003 = 0
-	OPM_STATUS_LINK_LOST                    __MIDL___MIDL_itf_opmapi_0000_0000_0003 = 1
-	OPM_STATUS_RENEGOTIATION_REQUIRED       __MIDL___MIDL_itf_opmapi_0000_0000_0003 = 2
-	OPM_STATUS_TAMPERING_DETECTED           __MIDL___MIDL_itf_opmapi_0000_0000_0003 = 4
-	OPM_STATUS_REVOKED_HDCP_DEVICE_ATTACHED __MIDL___MIDL_itf_opmapi_0000_0000_0003 = 8
+	OPM_STATUS_NORMAL                       MIDL___MIDL_itf_opmapi_0000_0000_0003 = 0
+	OPM_STATUS_LINK_LOST                    MIDL___MIDL_itf_opmapi_0000_0000_0003 = 1
+	OPM_STATUS_RENEGOTIATION_REQUIRED       MIDL___MIDL_itf_opmapi_0000_0000_0003 = 2
+	OPM_STATUS_TAMPERING_DETECTED           MIDL___MIDL_itf_opmapi_0000_0000_0003 = 4
+	OPM_STATUS_REVOKED_HDCP_DEVICE_ATTACHED MIDL___MIDL_itf_opmapi_0000_0000_0003 = 8
 )
 
-type __MIDL___MIDL_itf_opmapi_0000_0000_0004 int32
+type MIDL___MIDL_itf_opmapi_0000_0000_0004 int32
 
 const (
-	OPM_CONNECTOR_TYPE_OTHER                             __MIDL___MIDL_itf_opmapi_0000_0000_0004 = -1
-	OPM_CONNECTOR_TYPE_VGA                               __MIDL___MIDL_itf_opmapi_0000_0000_0004 = 0
-	OPM_CONNECTOR_TYPE_SVIDEO                            __MIDL___MIDL_itf_opmapi_0000_0000_0004 = 1
-	OPM_CONNECTOR_TYPE_COMPOSITE_VIDEO                   __MIDL___MIDL_itf_opmapi_0000_0000_0004 = 2
-	OPM_CONNECTOR_TYPE_COMPONENT_VIDEO                   __MIDL___MIDL_itf_opmapi_0000_0000_0004 = 3
-	OPM_CONNECTOR_TYPE_DVI                               __MIDL___MIDL_itf_opmapi_0000_0000_0004 = 4
-	OPM_CONNECTOR_TYPE_HDMI                              __MIDL___MIDL_itf_opmapi_0000_0000_0004 = 5
-	OPM_CONNECTOR_TYPE_LVDS                              __MIDL___MIDL_itf_opmapi_0000_0000_0004 = 6
-	OPM_CONNECTOR_TYPE_D_JPN                             __MIDL___MIDL_itf_opmapi_0000_0000_0004 = 8
-	OPM_CONNECTOR_TYPE_SDI                               __MIDL___MIDL_itf_opmapi_0000_0000_0004 = 9
-	OPM_CONNECTOR_TYPE_DISPLAYPORT_EXTERNAL              __MIDL___MIDL_itf_opmapi_0000_0000_0004 = 10
-	OPM_CONNECTOR_TYPE_DISPLAYPORT_EMBEDDED              __MIDL___MIDL_itf_opmapi_0000_0000_0004 = 11
-	OPM_CONNECTOR_TYPE_UDI_EXTERNAL                      __MIDL___MIDL_itf_opmapi_0000_0000_0004 = 12
-	OPM_CONNECTOR_TYPE_UDI_EMBEDDED                      __MIDL___MIDL_itf_opmapi_0000_0000_0004 = 13
-	OPM_CONNECTOR_TYPE_RESERVED                          __MIDL___MIDL_itf_opmapi_0000_0000_0004 = 14
-	OPM_CONNECTOR_TYPE_MIRACAST                          __MIDL___MIDL_itf_opmapi_0000_0000_0004 = 15
-	OPM_CONNECTOR_TYPE_TRANSPORT_AGNOSTIC_DIGITAL_MODE_A __MIDL___MIDL_itf_opmapi_0000_0000_0004 = 16
-	OPM_CONNECTOR_TYPE_TRANSPORT_AGNOSTIC_DIGITAL_MODE_B __MIDL___MIDL_itf_opmapi_0000_0000_0004 = 17
-	OPM_COPP_COMPATIBLE_CONNECTOR_TYPE_INTERNAL          __MIDL___MIDL_itf_opmapi_0000_0000_0004 = -2147483648
+	OPM_CONNECTOR_TYPE_OTHER                             MIDL___MIDL_itf_opmapi_0000_0000_0004 = -1
+	OPM_CONNECTOR_TYPE_VGA                               MIDL___MIDL_itf_opmapi_0000_0000_0004 = 0
+	OPM_CONNECTOR_TYPE_SVIDEO                            MIDL___MIDL_itf_opmapi_0000_0000_0004 = 1
+	OPM_CONNECTOR_TYPE_COMPOSITE_VIDEO                   MIDL___MIDL_itf_opmapi_0000_0000_0004 = 2
+	OPM_CONNECTOR_TYPE_COMPONENT_VIDEO                   MIDL___MIDL_itf_opmapi_0000_0000_0004 = 3
+	OPM_CONNECTOR_TYPE_DVI                               MIDL___MIDL_itf_opmapi_0000_0000_0004 = 4
+	OPM_CONNECTOR_TYPE_HDMI                              MIDL___MIDL_itf_opmapi_0000_0000_0004 = 5
+	OPM_CONNECTOR_TYPE_LVDS                              MIDL___MIDL_itf_opmapi_0000_0000_0004 = 6
+	OPM_CONNECTOR_TYPE_D_JPN                             MIDL___MIDL_itf_opmapi_0000_0000_0004 = 8
+	OPM_CONNECTOR_TYPE_SDI                               MIDL___MIDL_itf_opmapi_0000_0000_0004 = 9
+	OPM_CONNECTOR_TYPE_DISPLAYPORT_EXTERNAL              MIDL___MIDL_itf_opmapi_0000_0000_0004 = 10
+	OPM_CONNECTOR_TYPE_DISPLAYPORT_EMBEDDED              MIDL___MIDL_itf_opmapi_0000_0000_0004 = 11
+	OPM_CONNECTOR_TYPE_UDI_EXTERNAL                      MIDL___MIDL_itf_opmapi_0000_0000_0004 = 12
+	OPM_CONNECTOR_TYPE_UDI_EMBEDDED                      MIDL___MIDL_itf_opmapi_0000_0000_0004 = 13
+	OPM_CONNECTOR_TYPE_RESERVED                          MIDL___MIDL_itf_opmapi_0000_0000_0004 = 14
+	OPM_CONNECTOR_TYPE_MIRACAST                          MIDL___MIDL_itf_opmapi_0000_0000_0004 = 15
+	OPM_CONNECTOR_TYPE_TRANSPORT_AGNOSTIC_DIGITAL_MODE_A MIDL___MIDL_itf_opmapi_0000_0000_0004 = 16
+	OPM_CONNECTOR_TYPE_TRANSPORT_AGNOSTIC_DIGITAL_MODE_B MIDL___MIDL_itf_opmapi_0000_0000_0004 = 17
+	OPM_COPP_COMPATIBLE_CONNECTOR_TYPE_INTERNAL          MIDL___MIDL_itf_opmapi_0000_0000_0004 = -2147483648
 )
 
-type __MIDL___MIDL_itf_opmapi_0000_0000_0005 int32
+type MIDL___MIDL_itf_opmapi_0000_0000_0005 int32
 
 const (
-	OPM_DVI_CHARACTERISTIC_1_0          __MIDL___MIDL_itf_opmapi_0000_0000_0005 = 1
-	OPM_DVI_CHARACTERISTIC_1_1_OR_ABOVE __MIDL___MIDL_itf_opmapi_0000_0000_0005 = 2
+	OPM_DVI_CHARACTERISTIC_1_0          MIDL___MIDL_itf_opmapi_0000_0000_0005 = 1
+	OPM_DVI_CHARACTERISTIC_1_1_OR_ABOVE MIDL___MIDL_itf_opmapi_0000_0000_0005 = 2
 )
 
 type OPM_OUTPUT_HARDWARE_PROTECTION int32
@@ -1148,21 +1148,21 @@ const (
 	OPM_OUTPUT_HARDWARE_PROTECTION_SUPPORTED     OPM_OUTPUT_HARDWARE_PROTECTION = 1
 )
 
-type __MIDL___MIDL_itf_opmapi_0000_0000_0006 int32
+type MIDL___MIDL_itf_opmapi_0000_0000_0006 int32
 
 const (
-	OPM_BUS_TYPE_OTHER                                                      __MIDL___MIDL_itf_opmapi_0000_0000_0006 = 0
-	OPM_BUS_TYPE_PCI                                                        __MIDL___MIDL_itf_opmapi_0000_0000_0006 = 1
-	OPM_BUS_TYPE_PCIX                                                       __MIDL___MIDL_itf_opmapi_0000_0000_0006 = 2
-	OPM_BUS_TYPE_PCIEXPRESS                                                 __MIDL___MIDL_itf_opmapi_0000_0000_0006 = 3
-	OPM_BUS_TYPE_AGP                                                        __MIDL___MIDL_itf_opmapi_0000_0000_0006 = 4
-	OPM_BUS_IMPLEMENTATION_MODIFIER_INSIDE_OF_CHIPSET                       __MIDL___MIDL_itf_opmapi_0000_0000_0006 = 65536
-	OPM_BUS_IMPLEMENTATION_MODIFIER_TRACKS_ON_MOTHER_BOARD_TO_CHIP          __MIDL___MIDL_itf_opmapi_0000_0000_0006 = 131072
-	OPM_BUS_IMPLEMENTATION_MODIFIER_TRACKS_ON_MOTHER_BOARD_TO_SOCKET        __MIDL___MIDL_itf_opmapi_0000_0000_0006 = 196608
-	OPM_BUS_IMPLEMENTATION_MODIFIER_DAUGHTER_BOARD_CONNECTOR                __MIDL___MIDL_itf_opmapi_0000_0000_0006 = 262144
-	OPM_BUS_IMPLEMENTATION_MODIFIER_DAUGHTER_BOARD_CONNECTOR_INSIDE_OF_NUAE __MIDL___MIDL_itf_opmapi_0000_0000_0006 = 327680
-	OPM_BUS_IMPLEMENTATION_MODIFIER_NON_STANDARD                            __MIDL___MIDL_itf_opmapi_0000_0000_0006 = -2147483648
-	OPM_COPP_COMPATIBLE_BUS_TYPE_INTEGRATED                                 __MIDL___MIDL_itf_opmapi_0000_0000_0006 = -2147483648
+	OPM_BUS_TYPE_OTHER                                                      MIDL___MIDL_itf_opmapi_0000_0000_0006 = 0
+	OPM_BUS_TYPE_PCI                                                        MIDL___MIDL_itf_opmapi_0000_0000_0006 = 1
+	OPM_BUS_TYPE_PCIX                                                       MIDL___MIDL_itf_opmapi_0000_0000_0006 = 2
+	OPM_BUS_TYPE_PCIEXPRESS                                                 MIDL___MIDL_itf_opmapi_0000_0000_0006 = 3
+	OPM_BUS_TYPE_AGP                                                        MIDL___MIDL_itf_opmapi_0000_0000_0006 = 4
+	OPM_BUS_IMPLEMENTATION_MODIFIER_INSIDE_OF_CHIPSET                       MIDL___MIDL_itf_opmapi_0000_0000_0006 = 65536
+	OPM_BUS_IMPLEMENTATION_MODIFIER_TRACKS_ON_MOTHER_BOARD_TO_CHIP          MIDL___MIDL_itf_opmapi_0000_0000_0006 = 131072
+	OPM_BUS_IMPLEMENTATION_MODIFIER_TRACKS_ON_MOTHER_BOARD_TO_SOCKET        MIDL___MIDL_itf_opmapi_0000_0000_0006 = 196608
+	OPM_BUS_IMPLEMENTATION_MODIFIER_DAUGHTER_BOARD_CONNECTOR                MIDL___MIDL_itf_opmapi_0000_0000_0006 = 262144
+	OPM_BUS_IMPLEMENTATION_MODIFIER_DAUGHTER_BOARD_CONNECTOR_INSIDE_OF_NUAE MIDL___MIDL_itf_opmapi_0000_0000_0006 = 327680
+	OPM_BUS_IMPLEMENTATION_MODIFIER_NON_STANDARD                            MIDL___MIDL_itf_opmapi_0000_0000_0006 = -2147483648
+	OPM_COPP_COMPATIBLE_BUS_TYPE_INTEGRATED                                 MIDL___MIDL_itf_opmapi_0000_0000_0006 = -2147483648
 )
 
 type OPM_DPCP_PROTECTION_LEVEL int32
@@ -1190,15 +1190,15 @@ const (
 	OPM_TYPE_ENFORCEMENT_HDCP_FORCE_ULONG                 OPM_TYPE_ENFORCEMENT_HDCP_PROTECTION_LEVEL = 2147483647
 )
 
-type __MIDL___MIDL_itf_opmapi_0000_0000_0007 int32
+type MIDL___MIDL_itf_opmapi_0000_0000_0007 int32
 
 const (
-	OPM_CGMSA_OFF                             __MIDL___MIDL_itf_opmapi_0000_0000_0007 = 0
-	OPM_CGMSA_COPY_FREELY                     __MIDL___MIDL_itf_opmapi_0000_0000_0007 = 1
-	OPM_CGMSA_COPY_NO_MORE                    __MIDL___MIDL_itf_opmapi_0000_0000_0007 = 2
-	OPM_CGMSA_COPY_ONE_GENERATION             __MIDL___MIDL_itf_opmapi_0000_0000_0007 = 3
-	OPM_CGMSA_COPY_NEVER                      __MIDL___MIDL_itf_opmapi_0000_0000_0007 = 4
-	OPM_CGMSA_REDISTRIBUTION_CONTROL_REQUIRED __MIDL___MIDL_itf_opmapi_0000_0000_0007 = 8
+	OPM_CGMSA_OFF                             MIDL___MIDL_itf_opmapi_0000_0000_0007 = 0
+	OPM_CGMSA_COPY_FREELY                     MIDL___MIDL_itf_opmapi_0000_0000_0007 = 1
+	OPM_CGMSA_COPY_NO_MORE                    MIDL___MIDL_itf_opmapi_0000_0000_0007 = 2
+	OPM_CGMSA_COPY_ONE_GENERATION             MIDL___MIDL_itf_opmapi_0000_0000_0007 = 3
+	OPM_CGMSA_COPY_NEVER                      MIDL___MIDL_itf_opmapi_0000_0000_0007 = 4
+	OPM_CGMSA_REDISTRIBUTION_CONTROL_REQUIRED MIDL___MIDL_itf_opmapi_0000_0000_0007 = 8
 )
 
 type OPM_ACP_PROTECTION_LEVEL int32
@@ -1211,39 +1211,39 @@ const (
 	OPM_ACP_FORCE_ULONG OPM_ACP_PROTECTION_LEVEL = 2147483647
 )
 
-type __MIDL___MIDL_itf_opmapi_0000_0000_0008 int32
+type MIDL___MIDL_itf_opmapi_0000_0000_0008 int32
 
 const (
-	OPM_PROTECTION_TYPE_OTHER                 __MIDL___MIDL_itf_opmapi_0000_0000_0008 = -2147483648
-	OPM_PROTECTION_TYPE_NONE                  __MIDL___MIDL_itf_opmapi_0000_0000_0008 = 0
-	OPM_PROTECTION_TYPE_COPP_COMPATIBLE_HDCP  __MIDL___MIDL_itf_opmapi_0000_0000_0008 = 1
-	OPM_PROTECTION_TYPE_ACP                   __MIDL___MIDL_itf_opmapi_0000_0000_0008 = 2
-	OPM_PROTECTION_TYPE_CGMSA                 __MIDL___MIDL_itf_opmapi_0000_0000_0008 = 4
-	OPM_PROTECTION_TYPE_HDCP                  __MIDL___MIDL_itf_opmapi_0000_0000_0008 = 8
-	OPM_PROTECTION_TYPE_DPCP                  __MIDL___MIDL_itf_opmapi_0000_0000_0008 = 16
-	OPM_PROTECTION_TYPE_TYPE_ENFORCEMENT_HDCP __MIDL___MIDL_itf_opmapi_0000_0000_0008 = 32
+	OPM_PROTECTION_TYPE_OTHER                 MIDL___MIDL_itf_opmapi_0000_0000_0008 = -2147483648
+	OPM_PROTECTION_TYPE_NONE                  MIDL___MIDL_itf_opmapi_0000_0000_0008 = 0
+	OPM_PROTECTION_TYPE_COPP_COMPATIBLE_HDCP  MIDL___MIDL_itf_opmapi_0000_0000_0008 = 1
+	OPM_PROTECTION_TYPE_ACP                   MIDL___MIDL_itf_opmapi_0000_0000_0008 = 2
+	OPM_PROTECTION_TYPE_CGMSA                 MIDL___MIDL_itf_opmapi_0000_0000_0008 = 4
+	OPM_PROTECTION_TYPE_HDCP                  MIDL___MIDL_itf_opmapi_0000_0000_0008 = 8
+	OPM_PROTECTION_TYPE_DPCP                  MIDL___MIDL_itf_opmapi_0000_0000_0008 = 16
+	OPM_PROTECTION_TYPE_TYPE_ENFORCEMENT_HDCP MIDL___MIDL_itf_opmapi_0000_0000_0008 = 32
 )
 
-type __MIDL___MIDL_itf_opmapi_0000_0000_0009 int32
+type MIDL___MIDL_itf_opmapi_0000_0000_0009 int32
 
 const (
-	OPM_PROTECTION_STANDARD_OTHER               __MIDL___MIDL_itf_opmapi_0000_0000_0009 = -2147483648
-	OPM_PROTECTION_STANDARD_NONE                __MIDL___MIDL_itf_opmapi_0000_0000_0009 = 0
-	OPM_PROTECTION_STANDARD_IEC61880_525I       __MIDL___MIDL_itf_opmapi_0000_0000_0009 = 1
-	OPM_PROTECTION_STANDARD_IEC61880_2_525I     __MIDL___MIDL_itf_opmapi_0000_0000_0009 = 2
-	OPM_PROTECTION_STANDARD_IEC62375_625P       __MIDL___MIDL_itf_opmapi_0000_0000_0009 = 4
-	OPM_PROTECTION_STANDARD_EIA608B_525         __MIDL___MIDL_itf_opmapi_0000_0000_0009 = 8
-	OPM_PROTECTION_STANDARD_EN300294_625I       __MIDL___MIDL_itf_opmapi_0000_0000_0009 = 16
-	OPM_PROTECTION_STANDARD_CEA805A_TYPEA_525P  __MIDL___MIDL_itf_opmapi_0000_0000_0009 = 32
-	OPM_PROTECTION_STANDARD_CEA805A_TYPEA_750P  __MIDL___MIDL_itf_opmapi_0000_0000_0009 = 64
-	OPM_PROTECTION_STANDARD_CEA805A_TYPEA_1125I __MIDL___MIDL_itf_opmapi_0000_0000_0009 = 128
-	OPM_PROTECTION_STANDARD_CEA805A_TYPEB_525P  __MIDL___MIDL_itf_opmapi_0000_0000_0009 = 256
-	OPM_PROTECTION_STANDARD_CEA805A_TYPEB_750P  __MIDL___MIDL_itf_opmapi_0000_0000_0009 = 512
-	OPM_PROTECTION_STANDARD_CEA805A_TYPEB_1125I __MIDL___MIDL_itf_opmapi_0000_0000_0009 = 1024
-	OPM_PROTECTION_STANDARD_ARIBTRB15_525I      __MIDL___MIDL_itf_opmapi_0000_0000_0009 = 2048
-	OPM_PROTECTION_STANDARD_ARIBTRB15_525P      __MIDL___MIDL_itf_opmapi_0000_0000_0009 = 4096
-	OPM_PROTECTION_STANDARD_ARIBTRB15_750P      __MIDL___MIDL_itf_opmapi_0000_0000_0009 = 8192
-	OPM_PROTECTION_STANDARD_ARIBTRB15_1125I     __MIDL___MIDL_itf_opmapi_0000_0000_0009 = 16384
+	OPM_PROTECTION_STANDARD_OTHER               MIDL___MIDL_itf_opmapi_0000_0000_0009 = -2147483648
+	OPM_PROTECTION_STANDARD_NONE                MIDL___MIDL_itf_opmapi_0000_0000_0009 = 0
+	OPM_PROTECTION_STANDARD_IEC61880_525I       MIDL___MIDL_itf_opmapi_0000_0000_0009 = 1
+	OPM_PROTECTION_STANDARD_IEC61880_2_525I     MIDL___MIDL_itf_opmapi_0000_0000_0009 = 2
+	OPM_PROTECTION_STANDARD_IEC62375_625P       MIDL___MIDL_itf_opmapi_0000_0000_0009 = 4
+	OPM_PROTECTION_STANDARD_EIA608B_525         MIDL___MIDL_itf_opmapi_0000_0000_0009 = 8
+	OPM_PROTECTION_STANDARD_EN300294_625I       MIDL___MIDL_itf_opmapi_0000_0000_0009 = 16
+	OPM_PROTECTION_STANDARD_CEA805A_TYPEA_525P  MIDL___MIDL_itf_opmapi_0000_0000_0009 = 32
+	OPM_PROTECTION_STANDARD_CEA805A_TYPEA_750P  MIDL___MIDL_itf_opmapi_0000_0000_0009 = 64
+	OPM_PROTECTION_STANDARD_CEA805A_TYPEA_1125I MIDL___MIDL_itf_opmapi_0000_0000_0009 = 128
+	OPM_PROTECTION_STANDARD_CEA805A_TYPEB_525P  MIDL___MIDL_itf_opmapi_0000_0000_0009 = 256
+	OPM_PROTECTION_STANDARD_CEA805A_TYPEB_750P  MIDL___MIDL_itf_opmapi_0000_0000_0009 = 512
+	OPM_PROTECTION_STANDARD_CEA805A_TYPEB_1125I MIDL___MIDL_itf_opmapi_0000_0000_0009 = 1024
+	OPM_PROTECTION_STANDARD_ARIBTRB15_525I      MIDL___MIDL_itf_opmapi_0000_0000_0009 = 2048
+	OPM_PROTECTION_STANDARD_ARIBTRB15_525P      MIDL___MIDL_itf_opmapi_0000_0000_0009 = 4096
+	OPM_PROTECTION_STANDARD_ARIBTRB15_750P      MIDL___MIDL_itf_opmapi_0000_0000_0009 = 8192
+	OPM_PROTECTION_STANDARD_ARIBTRB15_1125I     MIDL___MIDL_itf_opmapi_0000_0000_0009 = 16384
 )
 
 type OPM_IMAGE_ASPECT_RATIO_EN300294 int32
@@ -1460,136 +1460,136 @@ const (
 	MFStdVideoFormat_ATSC_HD720p  MFStandardVideoFormat = 9
 )
 
-type __MIDL___MIDL_itf_mfobjects_0000_0012_0001 int32
+type MIDL___MIDL_itf_mfobjects_0000_0012_0001 int32
 
 const (
-	MEUnknown                                  __MIDL___MIDL_itf_mfobjects_0000_0012_0001 = 0
-	MEError                                    __MIDL___MIDL_itf_mfobjects_0000_0012_0001 = 1
-	MEExtendedType                             __MIDL___MIDL_itf_mfobjects_0000_0012_0001 = 2
-	MENonFatalError                            __MIDL___MIDL_itf_mfobjects_0000_0012_0001 = 3
-	MEGenericV1Anchor                          __MIDL___MIDL_itf_mfobjects_0000_0012_0001 = 3
-	MESessionUnknown                           __MIDL___MIDL_itf_mfobjects_0000_0012_0001 = 100
-	MESessionTopologySet                       __MIDL___MIDL_itf_mfobjects_0000_0012_0001 = 101
-	MESessionTopologiesCleared                 __MIDL___MIDL_itf_mfobjects_0000_0012_0001 = 102
-	MESessionStarted                           __MIDL___MIDL_itf_mfobjects_0000_0012_0001 = 103
-	MESessionPaused                            __MIDL___MIDL_itf_mfobjects_0000_0012_0001 = 104
-	MESessionStopped                           __MIDL___MIDL_itf_mfobjects_0000_0012_0001 = 105
-	MESessionClosed                            __MIDL___MIDL_itf_mfobjects_0000_0012_0001 = 106
-	MESessionEnded                             __MIDL___MIDL_itf_mfobjects_0000_0012_0001 = 107
-	MESessionRateChanged                       __MIDL___MIDL_itf_mfobjects_0000_0012_0001 = 108
-	MESessionScrubSampleComplete               __MIDL___MIDL_itf_mfobjects_0000_0012_0001 = 109
-	MESessionCapabilitiesChanged               __MIDL___MIDL_itf_mfobjects_0000_0012_0001 = 110
-	MESessionTopologyStatus                    __MIDL___MIDL_itf_mfobjects_0000_0012_0001 = 111
-	MESessionNotifyPresentationTime            __MIDL___MIDL_itf_mfobjects_0000_0012_0001 = 112
-	MENewPresentation                          __MIDL___MIDL_itf_mfobjects_0000_0012_0001 = 113
-	MELicenseAcquisitionStart                  __MIDL___MIDL_itf_mfobjects_0000_0012_0001 = 114
-	MELicenseAcquisitionCompleted              __MIDL___MIDL_itf_mfobjects_0000_0012_0001 = 115
-	MEIndividualizationStart                   __MIDL___MIDL_itf_mfobjects_0000_0012_0001 = 116
-	MEIndividualizationCompleted               __MIDL___MIDL_itf_mfobjects_0000_0012_0001 = 117
-	MEEnablerProgress                          __MIDL___MIDL_itf_mfobjects_0000_0012_0001 = 118
-	MEEnablerCompleted                         __MIDL___MIDL_itf_mfobjects_0000_0012_0001 = 119
-	MEPolicyError                              __MIDL___MIDL_itf_mfobjects_0000_0012_0001 = 120
-	MEPolicyReport                             __MIDL___MIDL_itf_mfobjects_0000_0012_0001 = 121
-	MEBufferingStarted                         __MIDL___MIDL_itf_mfobjects_0000_0012_0001 = 122
-	MEBufferingStopped                         __MIDL___MIDL_itf_mfobjects_0000_0012_0001 = 123
-	MEConnectStart                             __MIDL___MIDL_itf_mfobjects_0000_0012_0001 = 124
-	MEConnectEnd                               __MIDL___MIDL_itf_mfobjects_0000_0012_0001 = 125
-	MEReconnectStart                           __MIDL___MIDL_itf_mfobjects_0000_0012_0001 = 126
-	MEReconnectEnd                             __MIDL___MIDL_itf_mfobjects_0000_0012_0001 = 127
-	MERendererEvent                            __MIDL___MIDL_itf_mfobjects_0000_0012_0001 = 128
-	MESessionStreamSinkFormatChanged           __MIDL___MIDL_itf_mfobjects_0000_0012_0001 = 129
-	MESessionV1Anchor                          __MIDL___MIDL_itf_mfobjects_0000_0012_0001 = 129
-	MESourceUnknown                            __MIDL___MIDL_itf_mfobjects_0000_0012_0001 = 200
-	MESourceStarted                            __MIDL___MIDL_itf_mfobjects_0000_0012_0001 = 201
-	MEStreamStarted                            __MIDL___MIDL_itf_mfobjects_0000_0012_0001 = 202
-	MESourceSeeked                             __MIDL___MIDL_itf_mfobjects_0000_0012_0001 = 203
-	MEStreamSeeked                             __MIDL___MIDL_itf_mfobjects_0000_0012_0001 = 204
-	MENewStream                                __MIDL___MIDL_itf_mfobjects_0000_0012_0001 = 205
-	MEUpdatedStream                            __MIDL___MIDL_itf_mfobjects_0000_0012_0001 = 206
-	MESourceStopped                            __MIDL___MIDL_itf_mfobjects_0000_0012_0001 = 207
-	MEStreamStopped                            __MIDL___MIDL_itf_mfobjects_0000_0012_0001 = 208
-	MESourcePaused                             __MIDL___MIDL_itf_mfobjects_0000_0012_0001 = 209
-	MEStreamPaused                             __MIDL___MIDL_itf_mfobjects_0000_0012_0001 = 210
-	MEEndOfPresentation                        __MIDL___MIDL_itf_mfobjects_0000_0012_0001 = 211
-	MEEndOfStream                              __MIDL___MIDL_itf_mfobjects_0000_0012_0001 = 212
-	MEMediaSample                              __MIDL___MIDL_itf_mfobjects_0000_0012_0001 = 213
-	MEStreamTick                               __MIDL___MIDL_itf_mfobjects_0000_0012_0001 = 214
-	MEStreamThinMode                           __MIDL___MIDL_itf_mfobjects_0000_0012_0001 = 215
-	MEStreamFormatChanged                      __MIDL___MIDL_itf_mfobjects_0000_0012_0001 = 216
-	MESourceRateChanged                        __MIDL___MIDL_itf_mfobjects_0000_0012_0001 = 217
-	MEEndOfPresentationSegment                 __MIDL___MIDL_itf_mfobjects_0000_0012_0001 = 218
-	MESourceCharacteristicsChanged             __MIDL___MIDL_itf_mfobjects_0000_0012_0001 = 219
-	MESourceRateChangeRequested                __MIDL___MIDL_itf_mfobjects_0000_0012_0001 = 220
-	MESourceMetadataChanged                    __MIDL___MIDL_itf_mfobjects_0000_0012_0001 = 221
-	MESequencerSourceTopologyUpdated           __MIDL___MIDL_itf_mfobjects_0000_0012_0001 = 222
-	MESourceV1Anchor                           __MIDL___MIDL_itf_mfobjects_0000_0012_0001 = 222
-	MESinkUnknown                              __MIDL___MIDL_itf_mfobjects_0000_0012_0001 = 300
-	MEStreamSinkStarted                        __MIDL___MIDL_itf_mfobjects_0000_0012_0001 = 301
-	MEStreamSinkStopped                        __MIDL___MIDL_itf_mfobjects_0000_0012_0001 = 302
-	MEStreamSinkPaused                         __MIDL___MIDL_itf_mfobjects_0000_0012_0001 = 303
-	MEStreamSinkRateChanged                    __MIDL___MIDL_itf_mfobjects_0000_0012_0001 = 304
-	MEStreamSinkRequestSample                  __MIDL___MIDL_itf_mfobjects_0000_0012_0001 = 305
-	MEStreamSinkMarker                         __MIDL___MIDL_itf_mfobjects_0000_0012_0001 = 306
-	MEStreamSinkPrerolled                      __MIDL___MIDL_itf_mfobjects_0000_0012_0001 = 307
-	MEStreamSinkScrubSampleComplete            __MIDL___MIDL_itf_mfobjects_0000_0012_0001 = 308
-	MEStreamSinkFormatChanged                  __MIDL___MIDL_itf_mfobjects_0000_0012_0001 = 309
-	MEStreamSinkDeviceChanged                  __MIDL___MIDL_itf_mfobjects_0000_0012_0001 = 310
-	MEQualityNotify                            __MIDL___MIDL_itf_mfobjects_0000_0012_0001 = 311
-	MESinkInvalidated                          __MIDL___MIDL_itf_mfobjects_0000_0012_0001 = 312
-	MEAudioSessionNameChanged                  __MIDL___MIDL_itf_mfobjects_0000_0012_0001 = 313
-	MEAudioSessionVolumeChanged                __MIDL___MIDL_itf_mfobjects_0000_0012_0001 = 314
-	MEAudioSessionDeviceRemoved                __MIDL___MIDL_itf_mfobjects_0000_0012_0001 = 315
-	MEAudioSessionServerShutdown               __MIDL___MIDL_itf_mfobjects_0000_0012_0001 = 316
-	MEAudioSessionGroupingParamChanged         __MIDL___MIDL_itf_mfobjects_0000_0012_0001 = 317
-	MEAudioSessionIconChanged                  __MIDL___MIDL_itf_mfobjects_0000_0012_0001 = 318
-	MEAudioSessionFormatChanged                __MIDL___MIDL_itf_mfobjects_0000_0012_0001 = 319
-	MEAudioSessionDisconnected                 __MIDL___MIDL_itf_mfobjects_0000_0012_0001 = 320
-	MEAudioSessionExclusiveModeOverride        __MIDL___MIDL_itf_mfobjects_0000_0012_0001 = 321
-	MESinkV1Anchor                             __MIDL___MIDL_itf_mfobjects_0000_0012_0001 = 321
-	MECaptureAudioSessionVolumeChanged         __MIDL___MIDL_itf_mfobjects_0000_0012_0001 = 322
-	MECaptureAudioSessionDeviceRemoved         __MIDL___MIDL_itf_mfobjects_0000_0012_0001 = 323
-	MECaptureAudioSessionFormatChanged         __MIDL___MIDL_itf_mfobjects_0000_0012_0001 = 324
-	MECaptureAudioSessionDisconnected          __MIDL___MIDL_itf_mfobjects_0000_0012_0001 = 325
-	MECaptureAudioSessionExclusiveModeOverride __MIDL___MIDL_itf_mfobjects_0000_0012_0001 = 326
-	MECaptureAudioSessionServerShutdown        __MIDL___MIDL_itf_mfobjects_0000_0012_0001 = 327
-	MESinkV2Anchor                             __MIDL___MIDL_itf_mfobjects_0000_0012_0001 = 327
-	METrustUnknown                             __MIDL___MIDL_itf_mfobjects_0000_0012_0001 = 400
-	MEPolicyChanged                            __MIDL___MIDL_itf_mfobjects_0000_0012_0001 = 401
-	MEContentProtectionMessage                 __MIDL___MIDL_itf_mfobjects_0000_0012_0001 = 402
-	MEPolicySet                                __MIDL___MIDL_itf_mfobjects_0000_0012_0001 = 403
-	METrustV1Anchor                            __MIDL___MIDL_itf_mfobjects_0000_0012_0001 = 403
-	MEWMDRMLicenseBackupCompleted              __MIDL___MIDL_itf_mfobjects_0000_0012_0001 = 500
-	MEWMDRMLicenseBackupProgress               __MIDL___MIDL_itf_mfobjects_0000_0012_0001 = 501
-	MEWMDRMLicenseRestoreCompleted             __MIDL___MIDL_itf_mfobjects_0000_0012_0001 = 502
-	MEWMDRMLicenseRestoreProgress              __MIDL___MIDL_itf_mfobjects_0000_0012_0001 = 503
-	MEWMDRMLicenseAcquisitionCompleted         __MIDL___MIDL_itf_mfobjects_0000_0012_0001 = 506
-	MEWMDRMIndividualizationCompleted          __MIDL___MIDL_itf_mfobjects_0000_0012_0001 = 508
-	MEWMDRMIndividualizationProgress           __MIDL___MIDL_itf_mfobjects_0000_0012_0001 = 513
-	MEWMDRMProximityCompleted                  __MIDL___MIDL_itf_mfobjects_0000_0012_0001 = 514
-	MEWMDRMLicenseStoreCleaned                 __MIDL___MIDL_itf_mfobjects_0000_0012_0001 = 515
-	MEWMDRMRevocationDownloadCompleted         __MIDL___MIDL_itf_mfobjects_0000_0012_0001 = 516
-	MEWMDRMV1Anchor                            __MIDL___MIDL_itf_mfobjects_0000_0012_0001 = 516
-	METransformUnknown                         __MIDL___MIDL_itf_mfobjects_0000_0012_0001 = 600
-	METransformNeedInput                       __MIDL___MIDL_itf_mfobjects_0000_0012_0001 = 601
-	METransformHaveOutput                      __MIDL___MIDL_itf_mfobjects_0000_0012_0001 = 602
-	METransformDrainComplete                   __MIDL___MIDL_itf_mfobjects_0000_0012_0001 = 603
-	METransformMarker                          __MIDL___MIDL_itf_mfobjects_0000_0012_0001 = 604
-	METransformInputStreamStateChanged         __MIDL___MIDL_itf_mfobjects_0000_0012_0001 = 605
-	MEByteStreamCharacteristicsChanged         __MIDL___MIDL_itf_mfobjects_0000_0012_0001 = 700
-	MEVideoCaptureDeviceRemoved                __MIDL___MIDL_itf_mfobjects_0000_0012_0001 = 800
-	MEVideoCaptureDevicePreempted              __MIDL___MIDL_itf_mfobjects_0000_0012_0001 = 801
-	MEStreamSinkFormatInvalidated              __MIDL___MIDL_itf_mfobjects_0000_0012_0001 = 802
-	MEEncodingParameters                       __MIDL___MIDL_itf_mfobjects_0000_0012_0001 = 803
-	MEContentProtectionMetadata                __MIDL___MIDL_itf_mfobjects_0000_0012_0001 = 900
-	MEDeviceThermalStateChanged                __MIDL___MIDL_itf_mfobjects_0000_0012_0001 = 950
-	MEReservedMax                              __MIDL___MIDL_itf_mfobjects_0000_0012_0001 = 10000
+	MEUnknown                                  MIDL___MIDL_itf_mfobjects_0000_0012_0001 = 0
+	MEError                                    MIDL___MIDL_itf_mfobjects_0000_0012_0001 = 1
+	MEExtendedType                             MIDL___MIDL_itf_mfobjects_0000_0012_0001 = 2
+	MENonFatalError                            MIDL___MIDL_itf_mfobjects_0000_0012_0001 = 3
+	MEGenericV1Anchor                          MIDL___MIDL_itf_mfobjects_0000_0012_0001 = 3
+	MESessionUnknown                           MIDL___MIDL_itf_mfobjects_0000_0012_0001 = 100
+	MESessionTopologySet                       MIDL___MIDL_itf_mfobjects_0000_0012_0001 = 101
+	MESessionTopologiesCleared                 MIDL___MIDL_itf_mfobjects_0000_0012_0001 = 102
+	MESessionStarted                           MIDL___MIDL_itf_mfobjects_0000_0012_0001 = 103
+	MESessionPaused                            MIDL___MIDL_itf_mfobjects_0000_0012_0001 = 104
+	MESessionStopped                           MIDL___MIDL_itf_mfobjects_0000_0012_0001 = 105
+	MESessionClosed                            MIDL___MIDL_itf_mfobjects_0000_0012_0001 = 106
+	MESessionEnded                             MIDL___MIDL_itf_mfobjects_0000_0012_0001 = 107
+	MESessionRateChanged                       MIDL___MIDL_itf_mfobjects_0000_0012_0001 = 108
+	MESessionScrubSampleComplete               MIDL___MIDL_itf_mfobjects_0000_0012_0001 = 109
+	MESessionCapabilitiesChanged               MIDL___MIDL_itf_mfobjects_0000_0012_0001 = 110
+	MESessionTopologyStatus                    MIDL___MIDL_itf_mfobjects_0000_0012_0001 = 111
+	MESessionNotifyPresentationTime            MIDL___MIDL_itf_mfobjects_0000_0012_0001 = 112
+	MENewPresentation                          MIDL___MIDL_itf_mfobjects_0000_0012_0001 = 113
+	MELicenseAcquisitionStart                  MIDL___MIDL_itf_mfobjects_0000_0012_0001 = 114
+	MELicenseAcquisitionCompleted              MIDL___MIDL_itf_mfobjects_0000_0012_0001 = 115
+	MEIndividualizationStart                   MIDL___MIDL_itf_mfobjects_0000_0012_0001 = 116
+	MEIndividualizationCompleted               MIDL___MIDL_itf_mfobjects_0000_0012_0001 = 117
+	MEEnablerProgress                          MIDL___MIDL_itf_mfobjects_0000_0012_0001 = 118
+	MEEnablerCompleted                         MIDL___MIDL_itf_mfobjects_0000_0012_0001 = 119
+	MEPolicyError                              MIDL___MIDL_itf_mfobjects_0000_0012_0001 = 120
+	MEPolicyReport                             MIDL___MIDL_itf_mfobjects_0000_0012_0001 = 121
+	MEBufferingStarted                         MIDL___MIDL_itf_mfobjects_0000_0012_0001 = 122
+	MEBufferingStopped                         MIDL___MIDL_itf_mfobjects_0000_0012_0001 = 123
+	MEConnectStart                             MIDL___MIDL_itf_mfobjects_0000_0012_0001 = 124
+	MEConnectEnd                               MIDL___MIDL_itf_mfobjects_0000_0012_0001 = 125
+	MEReconnectStart                           MIDL___MIDL_itf_mfobjects_0000_0012_0001 = 126
+	MEReconnectEnd                             MIDL___MIDL_itf_mfobjects_0000_0012_0001 = 127
+	MERendererEvent                            MIDL___MIDL_itf_mfobjects_0000_0012_0001 = 128
+	MESessionStreamSinkFormatChanged           MIDL___MIDL_itf_mfobjects_0000_0012_0001 = 129
+	MESessionV1Anchor                          MIDL___MIDL_itf_mfobjects_0000_0012_0001 = 129
+	MESourceUnknown                            MIDL___MIDL_itf_mfobjects_0000_0012_0001 = 200
+	MESourceStarted                            MIDL___MIDL_itf_mfobjects_0000_0012_0001 = 201
+	MEStreamStarted                            MIDL___MIDL_itf_mfobjects_0000_0012_0001 = 202
+	MESourceSeeked                             MIDL___MIDL_itf_mfobjects_0000_0012_0001 = 203
+	MEStreamSeeked                             MIDL___MIDL_itf_mfobjects_0000_0012_0001 = 204
+	MENewStream                                MIDL___MIDL_itf_mfobjects_0000_0012_0001 = 205
+	MEUpdatedStream                            MIDL___MIDL_itf_mfobjects_0000_0012_0001 = 206
+	MESourceStopped                            MIDL___MIDL_itf_mfobjects_0000_0012_0001 = 207
+	MEStreamStopped                            MIDL___MIDL_itf_mfobjects_0000_0012_0001 = 208
+	MESourcePaused                             MIDL___MIDL_itf_mfobjects_0000_0012_0001 = 209
+	MEStreamPaused                             MIDL___MIDL_itf_mfobjects_0000_0012_0001 = 210
+	MEEndOfPresentation                        MIDL___MIDL_itf_mfobjects_0000_0012_0001 = 211
+	MEEndOfStream                              MIDL___MIDL_itf_mfobjects_0000_0012_0001 = 212
+	MEMediaSample                              MIDL___MIDL_itf_mfobjects_0000_0012_0001 = 213
+	MEStreamTick                               MIDL___MIDL_itf_mfobjects_0000_0012_0001 = 214
+	MEStreamThinMode                           MIDL___MIDL_itf_mfobjects_0000_0012_0001 = 215
+	MEStreamFormatChanged                      MIDL___MIDL_itf_mfobjects_0000_0012_0001 = 216
+	MESourceRateChanged                        MIDL___MIDL_itf_mfobjects_0000_0012_0001 = 217
+	MEEndOfPresentationSegment                 MIDL___MIDL_itf_mfobjects_0000_0012_0001 = 218
+	MESourceCharacteristicsChanged             MIDL___MIDL_itf_mfobjects_0000_0012_0001 = 219
+	MESourceRateChangeRequested                MIDL___MIDL_itf_mfobjects_0000_0012_0001 = 220
+	MESourceMetadataChanged                    MIDL___MIDL_itf_mfobjects_0000_0012_0001 = 221
+	MESequencerSourceTopologyUpdated           MIDL___MIDL_itf_mfobjects_0000_0012_0001 = 222
+	MESourceV1Anchor                           MIDL___MIDL_itf_mfobjects_0000_0012_0001 = 222
+	MESinkUnknown                              MIDL___MIDL_itf_mfobjects_0000_0012_0001 = 300
+	MEStreamSinkStarted                        MIDL___MIDL_itf_mfobjects_0000_0012_0001 = 301
+	MEStreamSinkStopped                        MIDL___MIDL_itf_mfobjects_0000_0012_0001 = 302
+	MEStreamSinkPaused                         MIDL___MIDL_itf_mfobjects_0000_0012_0001 = 303
+	MEStreamSinkRateChanged                    MIDL___MIDL_itf_mfobjects_0000_0012_0001 = 304
+	MEStreamSinkRequestSample                  MIDL___MIDL_itf_mfobjects_0000_0012_0001 = 305
+	MEStreamSinkMarker                         MIDL___MIDL_itf_mfobjects_0000_0012_0001 = 306
+	MEStreamSinkPrerolled                      MIDL___MIDL_itf_mfobjects_0000_0012_0001 = 307
+	MEStreamSinkScrubSampleComplete            MIDL___MIDL_itf_mfobjects_0000_0012_0001 = 308
+	MEStreamSinkFormatChanged                  MIDL___MIDL_itf_mfobjects_0000_0012_0001 = 309
+	MEStreamSinkDeviceChanged                  MIDL___MIDL_itf_mfobjects_0000_0012_0001 = 310
+	MEQualityNotify                            MIDL___MIDL_itf_mfobjects_0000_0012_0001 = 311
+	MESinkInvalidated                          MIDL___MIDL_itf_mfobjects_0000_0012_0001 = 312
+	MEAudioSessionNameChanged                  MIDL___MIDL_itf_mfobjects_0000_0012_0001 = 313
+	MEAudioSessionVolumeChanged                MIDL___MIDL_itf_mfobjects_0000_0012_0001 = 314
+	MEAudioSessionDeviceRemoved                MIDL___MIDL_itf_mfobjects_0000_0012_0001 = 315
+	MEAudioSessionServerShutdown               MIDL___MIDL_itf_mfobjects_0000_0012_0001 = 316
+	MEAudioSessionGroupingParamChanged         MIDL___MIDL_itf_mfobjects_0000_0012_0001 = 317
+	MEAudioSessionIconChanged                  MIDL___MIDL_itf_mfobjects_0000_0012_0001 = 318
+	MEAudioSessionFormatChanged                MIDL___MIDL_itf_mfobjects_0000_0012_0001 = 319
+	MEAudioSessionDisconnected                 MIDL___MIDL_itf_mfobjects_0000_0012_0001 = 320
+	MEAudioSessionExclusiveModeOverride        MIDL___MIDL_itf_mfobjects_0000_0012_0001 = 321
+	MESinkV1Anchor                             MIDL___MIDL_itf_mfobjects_0000_0012_0001 = 321
+	MECaptureAudioSessionVolumeChanged         MIDL___MIDL_itf_mfobjects_0000_0012_0001 = 322
+	MECaptureAudioSessionDeviceRemoved         MIDL___MIDL_itf_mfobjects_0000_0012_0001 = 323
+	MECaptureAudioSessionFormatChanged         MIDL___MIDL_itf_mfobjects_0000_0012_0001 = 324
+	MECaptureAudioSessionDisconnected          MIDL___MIDL_itf_mfobjects_0000_0012_0001 = 325
+	MECaptureAudioSessionExclusiveModeOverride MIDL___MIDL_itf_mfobjects_0000_0012_0001 = 326
+	MECaptureAudioSessionServerShutdown        MIDL___MIDL_itf_mfobjects_0000_0012_0001 = 327
+	MESinkV2Anchor                             MIDL___MIDL_itf_mfobjects_0000_0012_0001 = 327
+	METrustUnknown                             MIDL___MIDL_itf_mfobjects_0000_0012_0001 = 400
+	MEPolicyChanged                            MIDL___MIDL_itf_mfobjects_0000_0012_0001 = 401
+	MEContentProtectionMessage                 MIDL___MIDL_itf_mfobjects_0000_0012_0001 = 402
+	MEPolicySet                                MIDL___MIDL_itf_mfobjects_0000_0012_0001 = 403
+	METrustV1Anchor                            MIDL___MIDL_itf_mfobjects_0000_0012_0001 = 403
+	MEWMDRMLicenseBackupCompleted              MIDL___MIDL_itf_mfobjects_0000_0012_0001 = 500
+	MEWMDRMLicenseBackupProgress               MIDL___MIDL_itf_mfobjects_0000_0012_0001 = 501
+	MEWMDRMLicenseRestoreCompleted             MIDL___MIDL_itf_mfobjects_0000_0012_0001 = 502
+	MEWMDRMLicenseRestoreProgress              MIDL___MIDL_itf_mfobjects_0000_0012_0001 = 503
+	MEWMDRMLicenseAcquisitionCompleted         MIDL___MIDL_itf_mfobjects_0000_0012_0001 = 506
+	MEWMDRMIndividualizationCompleted          MIDL___MIDL_itf_mfobjects_0000_0012_0001 = 508
+	MEWMDRMIndividualizationProgress           MIDL___MIDL_itf_mfobjects_0000_0012_0001 = 513
+	MEWMDRMProximityCompleted                  MIDL___MIDL_itf_mfobjects_0000_0012_0001 = 514
+	MEWMDRMLicenseStoreCleaned                 MIDL___MIDL_itf_mfobjects_0000_0012_0001 = 515
+	MEWMDRMRevocationDownloadCompleted         MIDL___MIDL_itf_mfobjects_0000_0012_0001 = 516
+	MEWMDRMV1Anchor                            MIDL___MIDL_itf_mfobjects_0000_0012_0001 = 516
+	METransformUnknown                         MIDL___MIDL_itf_mfobjects_0000_0012_0001 = 600
+	METransformNeedInput                       MIDL___MIDL_itf_mfobjects_0000_0012_0001 = 601
+	METransformHaveOutput                      MIDL___MIDL_itf_mfobjects_0000_0012_0001 = 602
+	METransformDrainComplete                   MIDL___MIDL_itf_mfobjects_0000_0012_0001 = 603
+	METransformMarker                          MIDL___MIDL_itf_mfobjects_0000_0012_0001 = 604
+	METransformInputStreamStateChanged         MIDL___MIDL_itf_mfobjects_0000_0012_0001 = 605
+	MEByteStreamCharacteristicsChanged         MIDL___MIDL_itf_mfobjects_0000_0012_0001 = 700
+	MEVideoCaptureDeviceRemoved                MIDL___MIDL_itf_mfobjects_0000_0012_0001 = 800
+	MEVideoCaptureDevicePreempted              MIDL___MIDL_itf_mfobjects_0000_0012_0001 = 801
+	MEStreamSinkFormatInvalidated              MIDL___MIDL_itf_mfobjects_0000_0012_0001 = 802
+	MEEncodingParameters                       MIDL___MIDL_itf_mfobjects_0000_0012_0001 = 803
+	MEContentProtectionMetadata                MIDL___MIDL_itf_mfobjects_0000_0012_0001 = 900
+	MEDeviceThermalStateChanged                MIDL___MIDL_itf_mfobjects_0000_0012_0001 = 950
+	MEReservedMax                              MIDL___MIDL_itf_mfobjects_0000_0012_0001 = 10000
 )
 
 type MFBYTESTREAM_SEEK_ORIGIN int32
 
 const (
-	msoBegin   MFBYTESTREAM_SEEK_ORIGIN = 0
-	msoCurrent MFBYTESTREAM_SEEK_ORIGIN = 1
+	MFBYTESTREAM_SEEK_ORIGIN_MSOBEGIN   MFBYTESTREAM_SEEK_ORIGIN = 0
+	MFBYTESTREAM_SEEK_ORIGIN_MSOCURRENT MFBYTESTREAM_SEEK_ORIGIN = 1
 )
 
 type MF_FILE_ACCESSMODE int32
@@ -1635,77 +1635,77 @@ const (
 	MF_STREAM_STATE_RUNNING MF_STREAM_STATE = 2
 )
 
-type _MFT_INPUT_DATA_BUFFER_FLAGS int32
+type MFT_INPUT_DATA_BUFFER_FLAGS int32
 
 const (
-	MFT_INPUT_DATA_BUFFER_PLACEHOLDER _MFT_INPUT_DATA_BUFFER_FLAGS = -1
+	MFT_INPUT_DATA_BUFFER_PLACEHOLDER MFT_INPUT_DATA_BUFFER_FLAGS = -1
 )
 
-type _MFT_OUTPUT_DATA_BUFFER_FLAGS int32
+type MFT_OUTPUT_DATA_BUFFER_FLAGS int32
 
 const (
-	MFT_OUTPUT_DATA_BUFFER_INCOMPLETE    _MFT_OUTPUT_DATA_BUFFER_FLAGS = 16777216
-	MFT_OUTPUT_DATA_BUFFER_FORMAT_CHANGE _MFT_OUTPUT_DATA_BUFFER_FLAGS = 256
-	MFT_OUTPUT_DATA_BUFFER_STREAM_END    _MFT_OUTPUT_DATA_BUFFER_FLAGS = 512
-	MFT_OUTPUT_DATA_BUFFER_NO_SAMPLE     _MFT_OUTPUT_DATA_BUFFER_FLAGS = 768
+	MFT_OUTPUT_DATA_BUFFER_INCOMPLETE    MFT_OUTPUT_DATA_BUFFER_FLAGS = 16777216
+	MFT_OUTPUT_DATA_BUFFER_FORMAT_CHANGE MFT_OUTPUT_DATA_BUFFER_FLAGS = 256
+	MFT_OUTPUT_DATA_BUFFER_STREAM_END    MFT_OUTPUT_DATA_BUFFER_FLAGS = 512
+	MFT_OUTPUT_DATA_BUFFER_NO_SAMPLE     MFT_OUTPUT_DATA_BUFFER_FLAGS = 768
 )
 
-type _MFT_INPUT_STATUS_FLAGS int32
+type MFT_INPUT_STATUS_FLAGS int32
 
 const (
-	MFT_INPUT_STATUS_ACCEPT_DATA _MFT_INPUT_STATUS_FLAGS = 1
+	MFT_INPUT_STATUS_ACCEPT_DATA MFT_INPUT_STATUS_FLAGS = 1
 )
 
-type _MFT_OUTPUT_STATUS_FLAGS int32
+type MFT_OUTPUT_STATUS_FLAGS int32
 
 const (
-	MFT_OUTPUT_STATUS_SAMPLE_READY _MFT_OUTPUT_STATUS_FLAGS = 1
+	MFT_OUTPUT_STATUS_SAMPLE_READY MFT_OUTPUT_STATUS_FLAGS = 1
 )
 
-type _MFT_INPUT_STREAM_INFO_FLAGS int32
+type MFT_INPUT_STREAM_INFO_FLAGS int32
 
 const (
-	MFT_INPUT_STREAM_WHOLE_SAMPLES            _MFT_INPUT_STREAM_INFO_FLAGS = 1
-	MFT_INPUT_STREAM_SINGLE_SAMPLE_PER_BUFFER _MFT_INPUT_STREAM_INFO_FLAGS = 2
-	MFT_INPUT_STREAM_FIXED_SAMPLE_SIZE        _MFT_INPUT_STREAM_INFO_FLAGS = 4
-	MFT_INPUT_STREAM_HOLDS_BUFFERS            _MFT_INPUT_STREAM_INFO_FLAGS = 8
-	MFT_INPUT_STREAM_DOES_NOT_ADDREF          _MFT_INPUT_STREAM_INFO_FLAGS = 256
-	MFT_INPUT_STREAM_REMOVABLE                _MFT_INPUT_STREAM_INFO_FLAGS = 512
-	MFT_INPUT_STREAM_OPTIONAL                 _MFT_INPUT_STREAM_INFO_FLAGS = 1024
-	MFT_INPUT_STREAM_PROCESSES_IN_PLACE       _MFT_INPUT_STREAM_INFO_FLAGS = 2048
+	MFT_INPUT_STREAM_WHOLE_SAMPLES            MFT_INPUT_STREAM_INFO_FLAGS = 1
+	MFT_INPUT_STREAM_SINGLE_SAMPLE_PER_BUFFER MFT_INPUT_STREAM_INFO_FLAGS = 2
+	MFT_INPUT_STREAM_FIXED_SAMPLE_SIZE        MFT_INPUT_STREAM_INFO_FLAGS = 4
+	MFT_INPUT_STREAM_HOLDS_BUFFERS            MFT_INPUT_STREAM_INFO_FLAGS = 8
+	MFT_INPUT_STREAM_DOES_NOT_ADDREF          MFT_INPUT_STREAM_INFO_FLAGS = 256
+	MFT_INPUT_STREAM_REMOVABLE                MFT_INPUT_STREAM_INFO_FLAGS = 512
+	MFT_INPUT_STREAM_OPTIONAL                 MFT_INPUT_STREAM_INFO_FLAGS = 1024
+	MFT_INPUT_STREAM_PROCESSES_IN_PLACE       MFT_INPUT_STREAM_INFO_FLAGS = 2048
 )
 
-type _MFT_OUTPUT_STREAM_INFO_FLAGS int32
+type MFT_OUTPUT_STREAM_INFO_FLAGS int32
 
 const (
-	MFT_OUTPUT_STREAM_WHOLE_SAMPLES            _MFT_OUTPUT_STREAM_INFO_FLAGS = 1
-	MFT_OUTPUT_STREAM_SINGLE_SAMPLE_PER_BUFFER _MFT_OUTPUT_STREAM_INFO_FLAGS = 2
-	MFT_OUTPUT_STREAM_FIXED_SAMPLE_SIZE        _MFT_OUTPUT_STREAM_INFO_FLAGS = 4
-	MFT_OUTPUT_STREAM_DISCARDABLE              _MFT_OUTPUT_STREAM_INFO_FLAGS = 8
-	MFT_OUTPUT_STREAM_OPTIONAL                 _MFT_OUTPUT_STREAM_INFO_FLAGS = 16
-	MFT_OUTPUT_STREAM_PROVIDES_SAMPLES         _MFT_OUTPUT_STREAM_INFO_FLAGS = 256
-	MFT_OUTPUT_STREAM_CAN_PROVIDE_SAMPLES      _MFT_OUTPUT_STREAM_INFO_FLAGS = 512
-	MFT_OUTPUT_STREAM_LAZY_READ                _MFT_OUTPUT_STREAM_INFO_FLAGS = 1024
-	MFT_OUTPUT_STREAM_REMOVABLE                _MFT_OUTPUT_STREAM_INFO_FLAGS = 2048
+	MFT_OUTPUT_STREAM_WHOLE_SAMPLES            MFT_OUTPUT_STREAM_INFO_FLAGS = 1
+	MFT_OUTPUT_STREAM_SINGLE_SAMPLE_PER_BUFFER MFT_OUTPUT_STREAM_INFO_FLAGS = 2
+	MFT_OUTPUT_STREAM_FIXED_SAMPLE_SIZE        MFT_OUTPUT_STREAM_INFO_FLAGS = 4
+	MFT_OUTPUT_STREAM_DISCARDABLE              MFT_OUTPUT_STREAM_INFO_FLAGS = 8
+	MFT_OUTPUT_STREAM_OPTIONAL                 MFT_OUTPUT_STREAM_INFO_FLAGS = 16
+	MFT_OUTPUT_STREAM_PROVIDES_SAMPLES         MFT_OUTPUT_STREAM_INFO_FLAGS = 256
+	MFT_OUTPUT_STREAM_CAN_PROVIDE_SAMPLES      MFT_OUTPUT_STREAM_INFO_FLAGS = 512
+	MFT_OUTPUT_STREAM_LAZY_READ                MFT_OUTPUT_STREAM_INFO_FLAGS = 1024
+	MFT_OUTPUT_STREAM_REMOVABLE                MFT_OUTPUT_STREAM_INFO_FLAGS = 2048
 )
 
-type _MFT_SET_TYPE_FLAGS int32
+type MFT_SET_TYPE_FLAGS int32
 
 const (
-	MFT_SET_TYPE_TEST_ONLY _MFT_SET_TYPE_FLAGS = 1
+	MFT_SET_TYPE_TEST_ONLY MFT_SET_TYPE_FLAGS = 1
 )
 
-type _MFT_PROCESS_OUTPUT_FLAGS int32
+type MFT_PROCESS_OUTPUT_FLAGS int32
 
 const (
-	MFT_PROCESS_OUTPUT_DISCARD_WHEN_NO_BUFFER _MFT_PROCESS_OUTPUT_FLAGS = 1
-	MFT_PROCESS_OUTPUT_REGENERATE_LAST_OUTPUT _MFT_PROCESS_OUTPUT_FLAGS = 2
+	MFT_PROCESS_OUTPUT_DISCARD_WHEN_NO_BUFFER MFT_PROCESS_OUTPUT_FLAGS = 1
+	MFT_PROCESS_OUTPUT_REGENERATE_LAST_OUTPUT MFT_PROCESS_OUTPUT_FLAGS = 2
 )
 
-type _MFT_PROCESS_OUTPUT_STATUS int32
+type MFT_PROCESS_OUTPUT_STATUS int32
 
 const (
-	MFT_PROCESS_OUTPUT_STATUS_NEW_STREAMS _MFT_PROCESS_OUTPUT_STATUS = 256
+	MFT_PROCESS_OUTPUT_STATUS_NEW_STREAMS MFT_PROCESS_OUTPUT_STATUS = 256
 )
 
 type MFT_DRAIN_TYPE int32
@@ -1796,20 +1796,20 @@ const (
 	MF_OBJECT_INVALID     MF_OBJECT_TYPE = 2
 )
 
-type __MIDL___MIDL_itf_mfidl_0000_0001_0001 int32
+type MIDL___MIDL_itf_mfidl_0000_0001_0001 int32
 
 const (
-	MF_RESOLUTION_MEDIASOURCE                                           __MIDL___MIDL_itf_mfidl_0000_0001_0001 = 1
-	MF_RESOLUTION_BYTESTREAM                                            __MIDL___MIDL_itf_mfidl_0000_0001_0001 = 2
-	MF_RESOLUTION_CONTENT_DOES_NOT_HAVE_TO_MATCH_EXTENSION_OR_MIME_TYPE __MIDL___MIDL_itf_mfidl_0000_0001_0001 = 16
-	MF_RESOLUTION_KEEP_BYTE_STREAM_ALIVE_ON_FAIL                        __MIDL___MIDL_itf_mfidl_0000_0001_0001 = 32
-	MF_RESOLUTION_DISABLE_LOCAL_PLUGINS                                 __MIDL___MIDL_itf_mfidl_0000_0001_0001 = 64
-	MF_RESOLUTION_PLUGIN_CONTROL_POLICY_APPROVED_ONLY                   __MIDL___MIDL_itf_mfidl_0000_0001_0001 = 128
-	MF_RESOLUTION_PLUGIN_CONTROL_POLICY_WEB_ONLY                        __MIDL___MIDL_itf_mfidl_0000_0001_0001 = 256
-	MF_RESOLUTION_PLUGIN_CONTROL_POLICY_WEB_ONLY_EDGEMODE               __MIDL___MIDL_itf_mfidl_0000_0001_0001 = 512
-	MF_RESOLUTION_ENABLE_STORE_PLUGINS                                  __MIDL___MIDL_itf_mfidl_0000_0001_0001 = 1024
-	MF_RESOLUTION_READ                                                  __MIDL___MIDL_itf_mfidl_0000_0001_0001 = 65536
-	MF_RESOLUTION_WRITE                                                 __MIDL___MIDL_itf_mfidl_0000_0001_0001 = 131072
+	MF_RESOLUTION_MEDIASOURCE                                           MIDL___MIDL_itf_mfidl_0000_0001_0001 = 1
+	MF_RESOLUTION_BYTESTREAM                                            MIDL___MIDL_itf_mfidl_0000_0001_0001 = 2
+	MF_RESOLUTION_CONTENT_DOES_NOT_HAVE_TO_MATCH_EXTENSION_OR_MIME_TYPE MIDL___MIDL_itf_mfidl_0000_0001_0001 = 16
+	MF_RESOLUTION_KEEP_BYTE_STREAM_ALIVE_ON_FAIL                        MIDL___MIDL_itf_mfidl_0000_0001_0001 = 32
+	MF_RESOLUTION_DISABLE_LOCAL_PLUGINS                                 MIDL___MIDL_itf_mfidl_0000_0001_0001 = 64
+	MF_RESOLUTION_PLUGIN_CONTROL_POLICY_APPROVED_ONLY                   MIDL___MIDL_itf_mfidl_0000_0001_0001 = 128
+	MF_RESOLUTION_PLUGIN_CONTROL_POLICY_WEB_ONLY                        MIDL___MIDL_itf_mfidl_0000_0001_0001 = 256
+	MF_RESOLUTION_PLUGIN_CONTROL_POLICY_WEB_ONLY_EDGEMODE               MIDL___MIDL_itf_mfidl_0000_0001_0001 = 512
+	MF_RESOLUTION_ENABLE_STORE_PLUGINS                                  MIDL___MIDL_itf_mfidl_0000_0001_0001 = 1024
+	MF_RESOLUTION_READ                                                  MIDL___MIDL_itf_mfidl_0000_0001_0001 = 65536
+	MF_RESOLUTION_WRITE                                                 MIDL___MIDL_itf_mfidl_0000_0001_0001 = 131072
 )
 
 type MF_CONNECT_METHOD int32
@@ -1955,16 +1955,16 @@ const (
 	MFTIMER_RELATIVE MFTIMER_FLAGS = 1
 )
 
-type __MIDL___MIDL_itf_mfidl_0000_0029_0001 int32
+type MIDL___MIDL_itf_mfidl_0000_0029_0001 int32
 
 const (
-	MF_ACTIVATE_CUSTOM_MIXER_ALLOWFAIL __MIDL___MIDL_itf_mfidl_0000_0029_0001 = 1
+	MF_ACTIVATE_CUSTOM_MIXER_ALLOWFAIL MIDL___MIDL_itf_mfidl_0000_0029_0001 = 1
 )
 
-type __MIDL___MIDL_itf_mfidl_0000_0029_0002 int32
+type MIDL___MIDL_itf_mfidl_0000_0029_0002 int32
 
 const (
-	MF_ACTIVATE_CUSTOM_PRESENTER_ALLOWFAIL __MIDL___MIDL_itf_mfidl_0000_0029_0002 = 1
+	MF_ACTIVATE_CUSTOM_PRESENTER_ALLOWFAIL MIDL___MIDL_itf_mfidl_0000_0029_0002 = 1
 )
 
 type MFSHUTDOWN_STATUS int32
@@ -2340,14 +2340,14 @@ const (
 	MF_CAPTURE_ENGINE_SINK_TYPE_PHOTO   MF_CAPTURE_ENGINE_SINK_TYPE = 2
 )
 
-type __MIDL___MIDL_itf_mfcaptureengine_0000_0000_0001 int32
+type MIDL___MIDL_itf_mfcaptureengine_0000_0000_0001 int32
 
 const (
-	MF_CAPTURE_ENGINE_PREFERRED_SOURCE_STREAM_FOR_VIDEO_PREVIEW __MIDL___MIDL_itf_mfcaptureengine_0000_0000_0001 = -6
-	MF_CAPTURE_ENGINE_PREFERRED_SOURCE_STREAM_FOR_VIDEO_RECORD  __MIDL___MIDL_itf_mfcaptureengine_0000_0000_0001 = -7
-	MF_CAPTURE_ENGINE_PREFERRED_SOURCE_STREAM_FOR_PHOTO         __MIDL___MIDL_itf_mfcaptureengine_0000_0000_0001 = -8
-	MF_CAPTURE_ENGINE_PREFERRED_SOURCE_STREAM_FOR_AUDIO         __MIDL___MIDL_itf_mfcaptureengine_0000_0000_0001 = -9
-	MF_CAPTURE_ENGINE_MEDIASOURCE                               __MIDL___MIDL_itf_mfcaptureengine_0000_0000_0001 = -1
+	MF_CAPTURE_ENGINE_PREFERRED_SOURCE_STREAM_FOR_VIDEO_PREVIEW MIDL___MIDL_itf_mfcaptureengine_0000_0000_0001 = -6
+	MF_CAPTURE_ENGINE_PREFERRED_SOURCE_STREAM_FOR_VIDEO_RECORD  MIDL___MIDL_itf_mfcaptureengine_0000_0000_0001 = -7
+	MF_CAPTURE_ENGINE_PREFERRED_SOURCE_STREAM_FOR_PHOTO         MIDL___MIDL_itf_mfcaptureengine_0000_0000_0001 = -8
+	MF_CAPTURE_ENGINE_PREFERRED_SOURCE_STREAM_FOR_AUDIO         MIDL___MIDL_itf_mfcaptureengine_0000_0000_0001 = -9
+	MF_CAPTURE_ENGINE_MEDIASOURCE                               MIDL___MIDL_itf_mfcaptureengine_0000_0000_0001 = -1
 )
 
 type MF_CAPTURE_ENGINE_STREAM_CATEGORY int32
@@ -2405,21 +2405,21 @@ const (
 	MF_SAMPLE_ENCRYPTION_PROTECTION_SCHEME_AES_CBC MFSampleEncryptionProtectionScheme = 2
 )
 
-type _MFT_ENUM_FLAG int32
+type MFT_ENUM_FLAG int32
 
 const (
-	MFT_ENUM_FLAG_SYNCMFT                         _MFT_ENUM_FLAG = 1
-	MFT_ENUM_FLAG_ASYNCMFT                        _MFT_ENUM_FLAG = 2
-	MFT_ENUM_FLAG_HARDWARE                        _MFT_ENUM_FLAG = 4
-	MFT_ENUM_FLAG_FIELDOFUSE                      _MFT_ENUM_FLAG = 8
-	MFT_ENUM_FLAG_LOCALMFT                        _MFT_ENUM_FLAG = 16
-	MFT_ENUM_FLAG_TRANSCODE_ONLY                  _MFT_ENUM_FLAG = 32
-	MFT_ENUM_FLAG_SORTANDFILTER                   _MFT_ENUM_FLAG = 64
-	MFT_ENUM_FLAG_SORTANDFILTER_APPROVED_ONLY     _MFT_ENUM_FLAG = 192
-	MFT_ENUM_FLAG_SORTANDFILTER_WEB_ONLY          _MFT_ENUM_FLAG = 320
-	MFT_ENUM_FLAG_SORTANDFILTER_WEB_ONLY_EDGEMODE _MFT_ENUM_FLAG = 576
-	MFT_ENUM_FLAG_UNTRUSTED_STOREMFT              _MFT_ENUM_FLAG = 1024
-	MFT_ENUM_FLAG_ALL                             _MFT_ENUM_FLAG = 63
+	MFT_ENUM_FLAG_SYNCMFT                         MFT_ENUM_FLAG = 1
+	MFT_ENUM_FLAG_ASYNCMFT                        MFT_ENUM_FLAG = 2
+	MFT_ENUM_FLAG_HARDWARE                        MFT_ENUM_FLAG = 4
+	MFT_ENUM_FLAG_FIELDOFUSE                      MFT_ENUM_FLAG = 8
+	MFT_ENUM_FLAG_LOCALMFT                        MFT_ENUM_FLAG = 16
+	MFT_ENUM_FLAG_TRANSCODE_ONLY                  MFT_ENUM_FLAG = 32
+	MFT_ENUM_FLAG_SORTANDFILTER                   MFT_ENUM_FLAG = 64
+	MFT_ENUM_FLAG_SORTANDFILTER_APPROVED_ONLY     MFT_ENUM_FLAG = 192
+	MFT_ENUM_FLAG_SORTANDFILTER_WEB_ONLY          MFT_ENUM_FLAG = 320
+	MFT_ENUM_FLAG_SORTANDFILTER_WEB_ONLY_EDGEMODE MFT_ENUM_FLAG = 576
+	MFT_ENUM_FLAG_UNTRUSTED_STOREMFT              MFT_ENUM_FLAG = 1024
+	MFT_ENUM_FLAG_ALL                             MFT_ENUM_FLAG = 63
 )
 
 type MFFrameSourceTypes int32
@@ -2505,10 +2505,10 @@ const (
 type EAllocationType int32
 
 const (
-	eAllocationTypeDynamic  EAllocationType = 0
-	eAllocationTypeRT       EAllocationType = 1
-	eAllocationTypePageable EAllocationType = 2
-	eAllocationTypeIgnore   EAllocationType = 3
+	EALLOCATIONTYPEDYNAMIC  EAllocationType = 0
+	EALLOCATIONTYPERT       EAllocationType = 1
+	EALLOCATIONTYPEPAGEABLE EAllocationType = 2
+	EALLOCATIONTYPEIGNORE   EAllocationType = 3
 )
 
 type MF_MEDIA_ENGINE_ERR int32
@@ -2863,29 +2863,29 @@ const (
 	MF_SOURCE_READER_CONTROLF_DRAIN MF_SOURCE_READER_CONTROL_FLAG = 1
 )
 
-type __MIDL___MIDL_itf_mfreadwrite_0000_0001_0001 int32
+type MIDL___MIDL_itf_mfreadwrite_0000_0001_0001 int32
 
 const (
-	MF_SOURCE_READER_INVALID_STREAM_INDEX __MIDL___MIDL_itf_mfreadwrite_0000_0001_0001 = -1
-	MF_SOURCE_READER_ALL_STREAMS          __MIDL___MIDL_itf_mfreadwrite_0000_0001_0001 = -2
-	MF_SOURCE_READER_ANY_STREAM           __MIDL___MIDL_itf_mfreadwrite_0000_0001_0001 = -2
-	MF_SOURCE_READER_FIRST_AUDIO_STREAM   __MIDL___MIDL_itf_mfreadwrite_0000_0001_0001 = -3
-	MF_SOURCE_READER_FIRST_VIDEO_STREAM   __MIDL___MIDL_itf_mfreadwrite_0000_0001_0001 = -4
-	MF_SOURCE_READER_MEDIASOURCE          __MIDL___MIDL_itf_mfreadwrite_0000_0001_0001 = -1
+	MF_SOURCE_READER_INVALID_STREAM_INDEX MIDL___MIDL_itf_mfreadwrite_0000_0001_0001 = -1
+	MF_SOURCE_READER_ALL_STREAMS          MIDL___MIDL_itf_mfreadwrite_0000_0001_0001 = -2
+	MF_SOURCE_READER_ANY_STREAM           MIDL___MIDL_itf_mfreadwrite_0000_0001_0001 = -2
+	MF_SOURCE_READER_FIRST_AUDIO_STREAM   MIDL___MIDL_itf_mfreadwrite_0000_0001_0001 = -3
+	MF_SOURCE_READER_FIRST_VIDEO_STREAM   MIDL___MIDL_itf_mfreadwrite_0000_0001_0001 = -4
+	MF_SOURCE_READER_MEDIASOURCE          MIDL___MIDL_itf_mfreadwrite_0000_0001_0001 = -1
 )
 
-type __MIDL___MIDL_itf_mfreadwrite_0000_0001_0002 int32
+type MIDL___MIDL_itf_mfreadwrite_0000_0001_0002 int32
 
 const (
-	MF_SOURCE_READER_CURRENT_TYPE_INDEX __MIDL___MIDL_itf_mfreadwrite_0000_0001_0002 = -1
+	MF_SOURCE_READER_CURRENT_TYPE_INDEX MIDL___MIDL_itf_mfreadwrite_0000_0001_0002 = -1
 )
 
-type __MIDL___MIDL_itf_mfreadwrite_0000_0005_0001 int32
+type MIDL___MIDL_itf_mfreadwrite_0000_0005_0001 int32
 
 const (
-	MF_SINK_WRITER_INVALID_STREAM_INDEX __MIDL___MIDL_itf_mfreadwrite_0000_0005_0001 = -1
-	MF_SINK_WRITER_ALL_STREAMS          __MIDL___MIDL_itf_mfreadwrite_0000_0005_0001 = -2
-	MF_SINK_WRITER_MEDIASINK            __MIDL___MIDL_itf_mfreadwrite_0000_0005_0001 = -1
+	MF_SINK_WRITER_INVALID_STREAM_INDEX MIDL___MIDL_itf_mfreadwrite_0000_0005_0001 = -1
+	MF_SINK_WRITER_ALL_STREAMS          MIDL___MIDL_itf_mfreadwrite_0000_0005_0001 = -2
+	MF_SINK_WRITER_MEDIASINK            MIDL___MIDL_itf_mfreadwrite_0000_0005_0001 = -1
 )
 
 type MFVideoAspectRatioMode int32
@@ -2974,24 +2974,24 @@ const (
 	MFP_MEDIAPLAYER_STATE_SHUTDOWN MFP_MEDIAPLAYER_STATE = 4
 )
 
-type _MFP_MEDIAITEM_CHARACTERISTICS int32
+type MFP_MEDIAITEM_CHARACTERISTICS int32
 
 const (
-	MFP_MEDIAITEM_IS_LIVE       _MFP_MEDIAITEM_CHARACTERISTICS = 1
-	MFP_MEDIAITEM_CAN_SEEK      _MFP_MEDIAITEM_CHARACTERISTICS = 2
-	MFP_MEDIAITEM_CAN_PAUSE     _MFP_MEDIAITEM_CHARACTERISTICS = 4
-	MFP_MEDIAITEM_HAS_SLOW_SEEK _MFP_MEDIAITEM_CHARACTERISTICS = 8
+	MFP_MEDIAITEM_IS_LIVE       MFP_MEDIAITEM_CHARACTERISTICS = 1
+	MFP_MEDIAITEM_CAN_SEEK      MFP_MEDIAITEM_CHARACTERISTICS = 2
+	MFP_MEDIAITEM_CAN_PAUSE     MFP_MEDIAITEM_CHARACTERISTICS = 4
+	MFP_MEDIAITEM_HAS_SLOW_SEEK MFP_MEDIAITEM_CHARACTERISTICS = 8
 )
 
-type _MFP_CREDENTIAL_FLAGS int32
+type MFP_CREDENTIAL_FLAGS int32
 
 const (
-	MFP_CREDENTIAL_PROMPT         _MFP_CREDENTIAL_FLAGS = 1
-	MFP_CREDENTIAL_SAVE           _MFP_CREDENTIAL_FLAGS = 2
-	MFP_CREDENTIAL_DO_NOT_CACHE   _MFP_CREDENTIAL_FLAGS = 4
-	MFP_CREDENTIAL_CLEAR_TEXT     _MFP_CREDENTIAL_FLAGS = 8
-	MFP_CREDENTIAL_PROXY          _MFP_CREDENTIAL_FLAGS = 16
-	MFP_CREDENTIAL_LOGGED_ON_USER _MFP_CREDENTIAL_FLAGS = 32
+	MFP_CREDENTIAL_PROMPT         MFP_CREDENTIAL_FLAGS = 1
+	MFP_CREDENTIAL_SAVE           MFP_CREDENTIAL_FLAGS = 2
+	MFP_CREDENTIAL_DO_NOT_CACHE   MFP_CREDENTIAL_FLAGS = 4
+	MFP_CREDENTIAL_CLEAR_TEXT     MFP_CREDENTIAL_FLAGS = 8
+	MFP_CREDENTIAL_PROXY          MFP_CREDENTIAL_FLAGS = 16
+	MFP_CREDENTIAL_LOGGED_ON_USER MFP_CREDENTIAL_FLAGS = 32
 )
 
 type MFP_EVENT_TYPE int32

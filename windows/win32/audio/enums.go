@@ -34,11 +34,11 @@ const (
 type EAudioConstriction int32
 
 const (
-	eAudioConstrictionOff   EAudioConstriction = 0
-	eAudioConstriction48_16 EAudioConstriction = 1
-	eAudioConstriction44_16 EAudioConstriction = 2
-	eAudioConstriction14_14 EAudioConstriction = 3
-	eAudioConstrictionMute  EAudioConstriction = 4
+	EAUDIOCONSTRICTIONOFF   EAudioConstriction = 0
+	EAUDIOCONSTRICTION48_16 EAudioConstriction = 1
+	EAUDIOCONSTRICTION44_16 EAudioConstriction = 2
+	EAUDIOCONSTRICTION14_14 EAudioConstriction = 3
+	EAUDIOCONSTRICTIONMUTE  EAudioConstriction = 4
 )
 
 type DMUS_CLOCKTYPE int32

@@ -7,181 +7,181 @@ package windowsupdateagent
 type AutomaticUpdatesNotificationLevel int32
 
 const (
-	aunlNotConfigured            AutomaticUpdatesNotificationLevel = 0
-	aunlDisabled                 AutomaticUpdatesNotificationLevel = 1
-	aunlNotifyBeforeDownload     AutomaticUpdatesNotificationLevel = 2
-	aunlNotifyBeforeInstallation AutomaticUpdatesNotificationLevel = 3
-	aunlScheduledInstallation    AutomaticUpdatesNotificationLevel = 4
+	AUNLNOTCONFIGURED            AutomaticUpdatesNotificationLevel = 0
+	AUNLDISABLED                 AutomaticUpdatesNotificationLevel = 1
+	AUNLNOTIFYBEFOREDOWNLOAD     AutomaticUpdatesNotificationLevel = 2
+	AUNLNOTIFYBEFOREINSTALLATION AutomaticUpdatesNotificationLevel = 3
+	AUNLSCHEDULEDINSTALLATION    AutomaticUpdatesNotificationLevel = 4
 )
 
 type AutomaticUpdatesScheduledInstallationDay int32
 
 const (
-	ausidEveryDay       AutomaticUpdatesScheduledInstallationDay = 0
-	ausidEverySunday    AutomaticUpdatesScheduledInstallationDay = 1
-	ausidEveryMonday    AutomaticUpdatesScheduledInstallationDay = 2
-	ausidEveryTuesday   AutomaticUpdatesScheduledInstallationDay = 3
-	ausidEveryWednesday AutomaticUpdatesScheduledInstallationDay = 4
-	ausidEveryThursday  AutomaticUpdatesScheduledInstallationDay = 5
-	ausidEveryFriday    AutomaticUpdatesScheduledInstallationDay = 6
-	ausidEverySaturday  AutomaticUpdatesScheduledInstallationDay = 7
+	AUSIDEVERYDAY       AutomaticUpdatesScheduledInstallationDay = 0
+	AUSIDEVERYSUNDAY    AutomaticUpdatesScheduledInstallationDay = 1
+	AUSIDEVERYMONDAY    AutomaticUpdatesScheduledInstallationDay = 2
+	AUSIDEVERYTUESDAY   AutomaticUpdatesScheduledInstallationDay = 3
+	AUSIDEVERYWEDNESDAY AutomaticUpdatesScheduledInstallationDay = 4
+	AUSIDEVERYTHURSDAY  AutomaticUpdatesScheduledInstallationDay = 5
+	AUSIDEVERYFRIDAY    AutomaticUpdatesScheduledInstallationDay = 6
+	AUSIDEVERYSATURDAY  AutomaticUpdatesScheduledInstallationDay = 7
 )
 
 type DownloadPhase int32
 
 const (
-	dphInitializing DownloadPhase = 1
-	dphDownloading  DownloadPhase = 2
-	dphVerifying    DownloadPhase = 3
+	DPHINITIALIZING DownloadPhase = 1
+	DPHDOWNLOADING  DownloadPhase = 2
+	DPHVERIFYING    DownloadPhase = 3
 )
 
 type DownloadPriority int32
 
 const (
-	dpLow       DownloadPriority = 1
-	dpNormal    DownloadPriority = 2
-	dpHigh      DownloadPriority = 3
-	dpExtraHigh DownloadPriority = 4
+	DPLOW       DownloadPriority = 1
+	DPNORMAL    DownloadPriority = 2
+	DPHIGH      DownloadPriority = 3
+	DPEXTRAHIGH DownloadPriority = 4
 )
 
 type AutoSelectionMode int32
 
 const (
-	asLetWindowsUpdateDecide AutoSelectionMode = 0
-	asAutoSelectIfDownloaded AutoSelectionMode = 1
-	asNeverAutoSelect        AutoSelectionMode = 2
-	asAlwaysAutoSelect       AutoSelectionMode = 3
+	ASLETWINDOWSUPDATEDECIDE AutoSelectionMode = 0
+	ASAUTOSELECTIFDOWNLOADED AutoSelectionMode = 1
+	ASNEVERAUTOSELECT        AutoSelectionMode = 2
+	ASALWAYSAUTOSELECT       AutoSelectionMode = 3
 )
 
 type AutoDownloadMode int32
 
 const (
-	adLetWindowsUpdateDecide AutoDownloadMode = 0
-	adNeverAutoDownload      AutoDownloadMode = 1
-	adAlwaysAutoDownload     AutoDownloadMode = 2
+	ADLETWINDOWSUPDATEDECIDE AutoDownloadMode = 0
+	ADNEVERAUTODOWNLOAD      AutoDownloadMode = 1
+	ADALWAYSAUTODOWNLOAD     AutoDownloadMode = 2
 )
 
 type InstallationImpact int32
 
 const (
-	iiNormal                    InstallationImpact = 0
-	iiMinor                     InstallationImpact = 1
-	iiRequiresExclusiveHandling InstallationImpact = 2
+	IINORMAL                    InstallationImpact = 0
+	IIMINOR                     InstallationImpact = 1
+	IIREQUIRESEXCLUSIVEHANDLING InstallationImpact = 2
 )
 
 type InstallationRebootBehavior int32
 
 const (
-	irbNeverReboots         InstallationRebootBehavior = 0
-	irbAlwaysRequiresReboot InstallationRebootBehavior = 1
-	irbCanRequestReboot     InstallationRebootBehavior = 2
+	IRBNEVERREBOOTS         InstallationRebootBehavior = 0
+	IRBALWAYSREQUIRESREBOOT InstallationRebootBehavior = 1
+	IRBCANREQUESTREBOOT     InstallationRebootBehavior = 2
 )
 
 type OperationResultCode int32
 
 const (
-	orcNotStarted          OperationResultCode = 0
-	orcInProgress          OperationResultCode = 1
-	orcSucceeded           OperationResultCode = 2
-	orcSucceededWithErrors OperationResultCode = 3
-	orcFailed              OperationResultCode = 4
-	orcAborted             OperationResultCode = 5
+	ORCNOTSTARTED          OperationResultCode = 0
+	ORCINPROGRESS          OperationResultCode = 1
+	ORCSUCCEEDED           OperationResultCode = 2
+	ORCSUCCEEDEDWITHERRORS OperationResultCode = 3
+	ORCFAILED              OperationResultCode = 4
+	ORCABORTED             OperationResultCode = 5
 )
 
 type ServerSelection int32
 
 const (
-	ssDefault       ServerSelection = 0
-	ssManagedServer ServerSelection = 1
-	ssWindowsUpdate ServerSelection = 2
-	ssOthers        ServerSelection = 3
+	SSDEFAULT       ServerSelection = 0
+	SSMANAGEDSERVER ServerSelection = 1
+	SSWINDOWSUPDATE ServerSelection = 2
+	SSOTHERS        ServerSelection = 3
 )
 
 type UpdateType int32
 
 const (
-	utSoftware UpdateType = 1
-	utDriver   UpdateType = 2
+	UTSOFTWARE UpdateType = 1
+	UTDRIVER   UpdateType = 2
 )
 
 type UpdateOperation int32
 
 const (
-	uoInstallation   UpdateOperation = 1
-	uoUninstallation UpdateOperation = 2
+	UOINSTALLATION   UpdateOperation = 1
+	UOUNINSTALLATION UpdateOperation = 2
 )
 
 type DeploymentAction int32
 
 const (
-	daNone                 DeploymentAction = 0
-	daInstallation         DeploymentAction = 1
-	daUninstallation       DeploymentAction = 2
-	daDetection            DeploymentAction = 3
-	daOptionalInstallation DeploymentAction = 4
+	DANONE                 DeploymentAction = 0
+	DAINSTALLATION         DeploymentAction = 1
+	DAUNINSTALLATION       DeploymentAction = 2
+	DADETECTION            DeploymentAction = 3
+	DAOPTIONALINSTALLATION DeploymentAction = 4
 )
 
 type UpdateExceptionContext int32
 
 const (
-	uecGeneral          UpdateExceptionContext = 1
-	uecWindowsDriver    UpdateExceptionContext = 2
-	uecWindowsInstaller UpdateExceptionContext = 3
-	uecSearchIncomplete UpdateExceptionContext = 4
+	UECGENERAL          UpdateExceptionContext = 1
+	UECWINDOWSDRIVER    UpdateExceptionContext = 2
+	UECWINDOWSINSTALLER UpdateExceptionContext = 3
+	UECSEARCHINCOMPLETE UpdateExceptionContext = 4
 )
 
 type AutomaticUpdatesUserType int32
 
 const (
-	auutCurrentUser        AutomaticUpdatesUserType = 1
-	auutLocalAdministrator AutomaticUpdatesUserType = 2
+	AUUTCURRENTUSER        AutomaticUpdatesUserType = 1
+	AUUTLOCALADMINISTRATOR AutomaticUpdatesUserType = 2
 )
 
 type AutomaticUpdatesPermissionType int32
 
 const (
-	auptSetNotificationLevel         AutomaticUpdatesPermissionType = 1
-	auptDisableAutomaticUpdates      AutomaticUpdatesPermissionType = 2
-	auptSetIncludeRecommendedUpdates AutomaticUpdatesPermissionType = 3
-	auptSetFeaturedUpdatesEnabled    AutomaticUpdatesPermissionType = 4
-	auptSetNonAdministratorsElevated AutomaticUpdatesPermissionType = 5
+	AUPTSETNOTIFICATIONLEVEL         AutomaticUpdatesPermissionType = 1
+	AUPTDISABLEAUTOMATICUPDATES      AutomaticUpdatesPermissionType = 2
+	AUPTSETINCLUDERECOMMENDEDUPDATES AutomaticUpdatesPermissionType = 3
+	AUPTSETFEATUREDUPDATESENABLED    AutomaticUpdatesPermissionType = 4
+	AUPTSETNONADMINISTRATORSELEVATED AutomaticUpdatesPermissionType = 5
 )
 
 type UpdateServiceRegistrationState int32
 
 const (
-	usrsNotRegistered       UpdateServiceRegistrationState = 1
-	usrsRegistrationPending UpdateServiceRegistrationState = 2
-	usrsRegistered          UpdateServiceRegistrationState = 3
+	USRSNOTREGISTERED       UpdateServiceRegistrationState = 1
+	USRSREGISTRATIONPENDING UpdateServiceRegistrationState = 2
+	USRSREGISTERED          UpdateServiceRegistrationState = 3
 )
 
 type SearchScope int32
 
 const (
-	searchScopeDefault               SearchScope = 0
-	searchScopeMachineOnly           SearchScope = 1
-	searchScopeCurrentUserOnly       SearchScope = 2
-	searchScopeMachineAndCurrentUser SearchScope = 3
-	searchScopeMachineAndAllUsers    SearchScope = 4
-	searchScopeAllUsers              SearchScope = 5
+	SEARCHSCOPEDEFAULT               SearchScope = 0
+	SEARCHSCOPEMACHINEONLY           SearchScope = 1
+	SEARCHSCOPECURRENTUSERONLY       SearchScope = 2
+	SEARCHSCOPEMACHINEANDCURRENTUSER SearchScope = 3
+	SEARCHSCOPEMACHINEANDALLUSERS    SearchScope = 4
+	SEARCHSCOPEALLUSERS              SearchScope = 5
 )
 
 type UpdateLockdownOption int32
 
 const (
-	uloForWebsiteAccess UpdateLockdownOption = 1
+	ULOFORWEBSITEACCESS UpdateLockdownOption = 1
 )
 
 type AddServiceFlag int32
 
 const (
-	asfAllowPendingRegistration AddServiceFlag = 1
-	asfAllowOnlineRegistration  AddServiceFlag = 2
-	asfRegisterServiceWithAU    AddServiceFlag = 4
+	ASFALLOWPENDINGREGISTRATION AddServiceFlag = 1
+	ASFALLOWONLINEREGISTRATION  AddServiceFlag = 2
+	ASFREGISTERSERVICEWITHAU    AddServiceFlag = 4
 )
 
 type UpdateServiceOption int32
 
 const (
-	usoNonVolatileService UpdateServiceOption = 1
+	USONONVOLATILESERVICE UpdateServiceOption = 1
 )

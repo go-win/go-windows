@@ -896,25 +896,25 @@ const (
 	KSecNonPaged KSEC_CONTEXT_TYPE = 1
 )
 
-type eTlsSignatureAlgorithm int32
+type ETLSSIGNATUREALGORITHM int32
 
 const (
-	TlsSignatureAlgorithm_Anonymous eTlsSignatureAlgorithm = 0
-	TlsSignatureAlgorithm_Rsa       eTlsSignatureAlgorithm = 1
-	TlsSignatureAlgorithm_Dsa       eTlsSignatureAlgorithm = 2
-	TlsSignatureAlgorithm_Ecdsa     eTlsSignatureAlgorithm = 3
+	TlsSignatureAlgorithm_Anonymous ETLSSIGNATUREALGORITHM = 0
+	TlsSignatureAlgorithm_Rsa       ETLSSIGNATUREALGORITHM = 1
+	TlsSignatureAlgorithm_Dsa       ETLSSIGNATUREALGORITHM = 2
+	TlsSignatureAlgorithm_Ecdsa     ETLSSIGNATUREALGORITHM = 3
 )
 
-type eTlsHashAlgorithm int32
+type ETLSHASHALGORITHM int32
 
 const (
-	TlsHashAlgorithm_None   eTlsHashAlgorithm = 0
-	TlsHashAlgorithm_Md5    eTlsHashAlgorithm = 1
-	TlsHashAlgorithm_Sha1   eTlsHashAlgorithm = 2
-	TlsHashAlgorithm_Sha224 eTlsHashAlgorithm = 3
-	TlsHashAlgorithm_Sha256 eTlsHashAlgorithm = 4
-	TlsHashAlgorithm_Sha384 eTlsHashAlgorithm = 5
-	TlsHashAlgorithm_Sha512 eTlsHashAlgorithm = 6
+	TlsHashAlgorithm_None   ETLSHASHALGORITHM = 0
+	TlsHashAlgorithm_Md5    ETLSHASHALGORITHM = 1
+	TlsHashAlgorithm_Sha1   ETLSHASHALGORITHM = 2
+	TlsHashAlgorithm_Sha224 ETLSHASHALGORITHM = 3
+	TlsHashAlgorithm_Sha256 ETLSHASHALGORITHM = 4
+	TlsHashAlgorithm_Sha384 ETLSHASHALGORITHM = 5
+	TlsHashAlgorithm_Sha512 ETLSHASHALGORITHM = 6
 )
 
 type SchGetExtensionsOptions int32
@@ -1088,37 +1088,37 @@ const (
 	NetlogonServiceTransitiveInformation     NETLOGON_LOGON_INFO_CLASS = 7
 )
 
-type tag_IdentityUpdateEvent int32
+type TAG_IDENTITYUPDATEEVENT int32
 
 const (
-	IDENTITY_ASSOCIATED    tag_IdentityUpdateEvent = 1
-	IDENTITY_DISASSOCIATED tag_IdentityUpdateEvent = 2
-	IDENTITY_CREATED       tag_IdentityUpdateEvent = 4
-	IDENTITY_IMPORTED      tag_IdentityUpdateEvent = 8
-	IDENTITY_DELETED       tag_IdentityUpdateEvent = 16
-	IDENTITY_PROPCHANGED   tag_IdentityUpdateEvent = 32
-	IDENTITY_CONNECTED     tag_IdentityUpdateEvent = 64
-	IDENTITY_DISCONNECTED  tag_IdentityUpdateEvent = 128
+	IDENTITY_ASSOCIATED    TAG_IDENTITYUPDATEEVENT = 1
+	IDENTITY_DISASSOCIATED TAG_IDENTITYUPDATEEVENT = 2
+	IDENTITY_CREATED       TAG_IDENTITYUPDATEEVENT = 4
+	IDENTITY_IMPORTED      TAG_IDENTITYUPDATEEVENT = 8
+	IDENTITY_DELETED       TAG_IDENTITYUPDATEEVENT = 16
+	IDENTITY_PROPCHANGED   TAG_IDENTITYUPDATEEVENT = 32
+	IDENTITY_CONNECTED     TAG_IDENTITYUPDATEEVENT = 64
+	IDENTITY_DISCONNECTED  TAG_IDENTITYUPDATEEVENT = 128
 )
 
-type __MIDL___MIDL_itf_identityprovider_0000_0003_0001 int32
+type MIDL___MIDL_itf_identityprovider_0000_0003_0001 int32
 
 const (
-	IDENTITY_URL_CREATE_ACCOUNT_WIZARD  __MIDL___MIDL_itf_identityprovider_0000_0003_0001 = 0
-	IDENTITY_URL_SIGN_IN_WIZARD         __MIDL___MIDL_itf_identityprovider_0000_0003_0001 = 1
-	IDENTITY_URL_CHANGE_PASSWORD_WIZARD __MIDL___MIDL_itf_identityprovider_0000_0003_0001 = 2
-	IDENTITY_URL_IFEXISTS_WIZARD        __MIDL___MIDL_itf_identityprovider_0000_0003_0001 = 3
-	IDENTITY_URL_ACCOUNT_SETTINGS       __MIDL___MIDL_itf_identityprovider_0000_0003_0001 = 4
-	IDENTITY_URL_RESTORE_WIZARD         __MIDL___MIDL_itf_identityprovider_0000_0003_0001 = 5
-	IDENTITY_URL_CONNECT_WIZARD         __MIDL___MIDL_itf_identityprovider_0000_0003_0001 = 6
+	IDENTITY_URL_CREATE_ACCOUNT_WIZARD  MIDL___MIDL_itf_identityprovider_0000_0003_0001 = 0
+	IDENTITY_URL_SIGN_IN_WIZARD         MIDL___MIDL_itf_identityprovider_0000_0003_0001 = 1
+	IDENTITY_URL_CHANGE_PASSWORD_WIZARD MIDL___MIDL_itf_identityprovider_0000_0003_0001 = 2
+	IDENTITY_URL_IFEXISTS_WIZARD        MIDL___MIDL_itf_identityprovider_0000_0003_0001 = 3
+	IDENTITY_URL_ACCOUNT_SETTINGS       MIDL___MIDL_itf_identityprovider_0000_0003_0001 = 4
+	IDENTITY_URL_RESTORE_WIZARD         MIDL___MIDL_itf_identityprovider_0000_0003_0001 = 5
+	IDENTITY_URL_CONNECT_WIZARD         MIDL___MIDL_itf_identityprovider_0000_0003_0001 = 6
 )
 
-type __MIDL___MIDL_itf_identityprovider_0000_0003_0002 int32
+type MIDL___MIDL_itf_identityprovider_0000_0003_0002 int32
 
 const (
-	NOT_CONNECTED     __MIDL___MIDL_itf_identityprovider_0000_0003_0002 = 0
-	CONNECTING        __MIDL___MIDL_itf_identityprovider_0000_0003_0002 = 1
-	CONNECT_COMPLETED __MIDL___MIDL_itf_identityprovider_0000_0003_0002 = 2
+	NOT_CONNECTED     MIDL___MIDL_itf_identityprovider_0000_0003_0002 = 0
+	CONNECTING        MIDL___MIDL_itf_identityprovider_0000_0003_0002 = 1
+	CONNECT_COMPLETED MIDL___MIDL_itf_identityprovider_0000_0003_0002 = 2
 )
 
 type AUDIT_PARAM_TYPE int32

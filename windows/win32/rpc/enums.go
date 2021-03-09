@@ -70,39 +70,39 @@ const (
 type ExtendedErrorParamTypes int32
 
 const (
-	eeptAnsiString    ExtendedErrorParamTypes = 1
-	eeptUnicodeString ExtendedErrorParamTypes = 2
-	eeptLongVal       ExtendedErrorParamTypes = 3
-	eeptShortVal      ExtendedErrorParamTypes = 4
-	eeptPointerVal    ExtendedErrorParamTypes = 5
-	eeptNone          ExtendedErrorParamTypes = 6
-	eeptBinary        ExtendedErrorParamTypes = 7
+	EEPTANSISTRING    ExtendedErrorParamTypes = 1
+	EEPTUNICODESTRING ExtendedErrorParamTypes = 2
+	EEPTLONGVAL       ExtendedErrorParamTypes = 3
+	EEPTSHORTVAL      ExtendedErrorParamTypes = 4
+	EEPTPOINTERVAL    ExtendedErrorParamTypes = 5
+	EEPTNONE          ExtendedErrorParamTypes = 6
+	EEPTBINARY        ExtendedErrorParamTypes = 7
 )
 
 type RpcLocalAddressFormat int32
 
 const (
-	rlafInvalid RpcLocalAddressFormat = 0
-	rlafIPv4    RpcLocalAddressFormat = 1
-	rlafIPv6    RpcLocalAddressFormat = 2
+	RLAFINVALID RpcLocalAddressFormat = 0
+	RLAFIPV4    RpcLocalAddressFormat = 1
+	RLAFIPV6    RpcLocalAddressFormat = 2
 )
 
 type RpcCallType int32
 
 const (
-	rctInvalid    RpcCallType = 0
-	rctNormal     RpcCallType = 1
-	rctTraining   RpcCallType = 2
-	rctGuaranteed RpcCallType = 3
+	RCTINVALID    RpcCallType = 0
+	RCTNORMAL     RpcCallType = 1
+	RCTTRAINING   RpcCallType = 2
+	RCTGUARANTEED RpcCallType = 3
 )
 
 type RpcCallClientLocality int32
 
 const (
-	rcclInvalid               RpcCallClientLocality = 0
-	rcclLocal                 RpcCallClientLocality = 1
-	rcclRemote                RpcCallClientLocality = 2
-	rcclClientUnknownLocality RpcCallClientLocality = 3
+	RCCLINVALID               RpcCallClientLocality = 0
+	RCCLLOCAL                 RpcCallClientLocality = 1
+	RCCLREMOTE                RpcCallClientLocality = 2
+	RCCLCLIENTUNKNOWNLOCALITY RpcCallClientLocality = 3
 )
 
 type RPC_NOTIFICATIONS int32
@@ -137,24 +137,24 @@ const (
 	XLAT_CLIENT XLAT_SIDE = 2
 )
 
-type system_handle_t int32
+type SYSTEM_HANDLE_T int32
 
 const (
-	SYSTEM_HANDLE_FILE               system_handle_t = 0
-	SYSTEM_HANDLE_SEMAPHORE          system_handle_t = 1
-	SYSTEM_HANDLE_EVENT              system_handle_t = 2
-	SYSTEM_HANDLE_MUTEX              system_handle_t = 3
-	SYSTEM_HANDLE_PROCESS            system_handle_t = 4
-	SYSTEM_HANDLE_TOKEN              system_handle_t = 5
-	SYSTEM_HANDLE_SECTION            system_handle_t = 6
-	SYSTEM_HANDLE_REG_KEY            system_handle_t = 7
-	SYSTEM_HANDLE_THREAD             system_handle_t = 8
-	SYSTEM_HANDLE_COMPOSITION_OBJECT system_handle_t = 9
-	SYSTEM_HANDLE_SOCKET             system_handle_t = 10
-	SYSTEM_HANDLE_JOB                system_handle_t = 11
-	SYSTEM_HANDLE_PIPE               system_handle_t = 12
-	SYSTEM_HANDLE_MAX                system_handle_t = 12
-	SYSTEM_HANDLE_INVALID            system_handle_t = 255
+	SYSTEM_HANDLE_FILE               SYSTEM_HANDLE_T = 0
+	SYSTEM_HANDLE_SEMAPHORE          SYSTEM_HANDLE_T = 1
+	SYSTEM_HANDLE_EVENT              SYSTEM_HANDLE_T = 2
+	SYSTEM_HANDLE_MUTEX              SYSTEM_HANDLE_T = 3
+	SYSTEM_HANDLE_PROCESS            SYSTEM_HANDLE_T = 4
+	SYSTEM_HANDLE_TOKEN              SYSTEM_HANDLE_T = 5
+	SYSTEM_HANDLE_SECTION            SYSTEM_HANDLE_T = 6
+	SYSTEM_HANDLE_REG_KEY            SYSTEM_HANDLE_T = 7
+	SYSTEM_HANDLE_THREAD             SYSTEM_HANDLE_T = 8
+	SYSTEM_HANDLE_COMPOSITION_OBJECT SYSTEM_HANDLE_T = 9
+	SYSTEM_HANDLE_SOCKET             SYSTEM_HANDLE_T = 10
+	SYSTEM_HANDLE_JOB                SYSTEM_HANDLE_T = 11
+	SYSTEM_HANDLE_PIPE               SYSTEM_HANDLE_T = 12
+	SYSTEM_HANDLE_MAX                SYSTEM_HANDLE_T = 12
+	SYSTEM_HANDLE_INVALID            SYSTEM_HANDLE_T = 255
 )
 
 type STUB_PHASE int32

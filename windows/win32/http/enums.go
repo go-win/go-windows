@@ -101,12 +101,12 @@ const (
 	HttpProtectionLevelRestricted     HTTP_PROTECTION_LEVEL_TYPE = 2
 )
 
-type _HTTP_URI_SCHEME int32
+type HTTP_URI_SCHEME int32
 
 const (
-	HttpSchemeHttp    _HTTP_URI_SCHEME = 0
-	HttpSchemeHttps   _HTTP_URI_SCHEME = 1
-	HttpSchemeMaximum _HTTP_URI_SCHEME = 2
+	HttpSchemeHttp    HTTP_URI_SCHEME = 0
+	HttpSchemeHttps   HTTP_URI_SCHEME = 1
+	HttpSchemeMaximum HTTP_URI_SCHEME = 2
 )
 
 type HTTP_VERB int32

@@ -4,10 +4,10 @@
 // Package inkinput implements the Windows.Win32.InkInput namespace.
 package inkinput
 
-type __MIDL___MIDL_itf_inkrenderer_0000_0000_0001 int32
+type MIDL___MIDL_itf_inkrenderer_0000_0000_0001 int32
 
 const (
-	USE_SYSTEM_COLORS_WHEN_NECESSARY __MIDL___MIDL_itf_inkrenderer_0000_0000_0001 = 0
-	USE_SYSTEM_COLORS                __MIDL___MIDL_itf_inkrenderer_0000_0000_0001 = 1
-	USE_ORIGINAL_COLORS              __MIDL___MIDL_itf_inkrenderer_0000_0000_0001 = 2
+	USE_SYSTEM_COLORS_WHEN_NECESSARY MIDL___MIDL_itf_inkrenderer_0000_0000_0001 = 0
+	USE_SYSTEM_COLORS                MIDL___MIDL_itf_inkrenderer_0000_0000_0001 = 1
+	USE_ORIGINAL_COLORS              MIDL___MIDL_itf_inkrenderer_0000_0000_0001 = 2
 )

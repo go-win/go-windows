@@ -4,54 +4,54 @@
 // Package wmi implements the Windows.Win32.Wmi namespace.
 package wmi
 
-type tag_WBEM_PATH_STATUS_FLAG int32
+type TAG_WBEM_PATH_STATUS_FLAG int32
 
 const (
-	WBEMPATH_INFO_ANON_LOCAL_MACHINE    tag_WBEM_PATH_STATUS_FLAG = 1
-	WBEMPATH_INFO_HAS_MACHINE_NAME      tag_WBEM_PATH_STATUS_FLAG = 2
-	WBEMPATH_INFO_IS_CLASS_REF          tag_WBEM_PATH_STATUS_FLAG = 4
-	WBEMPATH_INFO_IS_INST_REF           tag_WBEM_PATH_STATUS_FLAG = 8
-	WBEMPATH_INFO_HAS_SUBSCOPES         tag_WBEM_PATH_STATUS_FLAG = 16
-	WBEMPATH_INFO_IS_COMPOUND           tag_WBEM_PATH_STATUS_FLAG = 32
-	WBEMPATH_INFO_HAS_V2_REF_PATHS      tag_WBEM_PATH_STATUS_FLAG = 64
-	WBEMPATH_INFO_HAS_IMPLIED_KEY       tag_WBEM_PATH_STATUS_FLAG = 128
-	WBEMPATH_INFO_CONTAINS_SINGLETON    tag_WBEM_PATH_STATUS_FLAG = 256
-	WBEMPATH_INFO_V1_COMPLIANT          tag_WBEM_PATH_STATUS_FLAG = 512
-	WBEMPATH_INFO_V2_COMPLIANT          tag_WBEM_PATH_STATUS_FLAG = 1024
-	WBEMPATH_INFO_CIM_COMPLIANT         tag_WBEM_PATH_STATUS_FLAG = 2048
-	WBEMPATH_INFO_IS_SINGLETON          tag_WBEM_PATH_STATUS_FLAG = 4096
-	WBEMPATH_INFO_IS_PARENT             tag_WBEM_PATH_STATUS_FLAG = 8192
-	WBEMPATH_INFO_SERVER_NAMESPACE_ONLY tag_WBEM_PATH_STATUS_FLAG = 16384
-	WBEMPATH_INFO_NATIVE_PATH           tag_WBEM_PATH_STATUS_FLAG = 32768
-	WBEMPATH_INFO_WMI_PATH              tag_WBEM_PATH_STATUS_FLAG = 65536
-	WBEMPATH_INFO_PATH_HAD_SERVER       tag_WBEM_PATH_STATUS_FLAG = 131072
+	WBEMPATH_INFO_ANON_LOCAL_MACHINE    TAG_WBEM_PATH_STATUS_FLAG = 1
+	WBEMPATH_INFO_HAS_MACHINE_NAME      TAG_WBEM_PATH_STATUS_FLAG = 2
+	WBEMPATH_INFO_IS_CLASS_REF          TAG_WBEM_PATH_STATUS_FLAG = 4
+	WBEMPATH_INFO_IS_INST_REF           TAG_WBEM_PATH_STATUS_FLAG = 8
+	WBEMPATH_INFO_HAS_SUBSCOPES         TAG_WBEM_PATH_STATUS_FLAG = 16
+	WBEMPATH_INFO_IS_COMPOUND           TAG_WBEM_PATH_STATUS_FLAG = 32
+	WBEMPATH_INFO_HAS_V2_REF_PATHS      TAG_WBEM_PATH_STATUS_FLAG = 64
+	WBEMPATH_INFO_HAS_IMPLIED_KEY       TAG_WBEM_PATH_STATUS_FLAG = 128
+	WBEMPATH_INFO_CONTAINS_SINGLETON    TAG_WBEM_PATH_STATUS_FLAG = 256
+	WBEMPATH_INFO_V1_COMPLIANT          TAG_WBEM_PATH_STATUS_FLAG = 512
+	WBEMPATH_INFO_V2_COMPLIANT          TAG_WBEM_PATH_STATUS_FLAG = 1024
+	WBEMPATH_INFO_CIM_COMPLIANT         TAG_WBEM_PATH_STATUS_FLAG = 2048
+	WBEMPATH_INFO_IS_SINGLETON          TAG_WBEM_PATH_STATUS_FLAG = 4096
+	WBEMPATH_INFO_IS_PARENT             TAG_WBEM_PATH_STATUS_FLAG = 8192
+	WBEMPATH_INFO_SERVER_NAMESPACE_ONLY TAG_WBEM_PATH_STATUS_FLAG = 16384
+	WBEMPATH_INFO_NATIVE_PATH           TAG_WBEM_PATH_STATUS_FLAG = 32768
+	WBEMPATH_INFO_WMI_PATH              TAG_WBEM_PATH_STATUS_FLAG = 65536
+	WBEMPATH_INFO_PATH_HAD_SERVER       TAG_WBEM_PATH_STATUS_FLAG = 131072
 )
 
-type tag_WBEM_PATH_CREATE_FLAG int32
+type TAG_WBEM_PATH_CREATE_FLAG int32
 
 const (
-	WBEMPATH_CREATE_ACCEPT_RELATIVE   tag_WBEM_PATH_CREATE_FLAG = 1
-	WBEMPATH_CREATE_ACCEPT_ABSOLUTE   tag_WBEM_PATH_CREATE_FLAG = 2
-	WBEMPATH_CREATE_ACCEPT_ALL        tag_WBEM_PATH_CREATE_FLAG = 4
-	WBEMPATH_TREAT_SINGLE_IDENT_AS_NS tag_WBEM_PATH_CREATE_FLAG = 8
+	WBEMPATH_CREATE_ACCEPT_RELATIVE   TAG_WBEM_PATH_CREATE_FLAG = 1
+	WBEMPATH_CREATE_ACCEPT_ABSOLUTE   TAG_WBEM_PATH_CREATE_FLAG = 2
+	WBEMPATH_CREATE_ACCEPT_ALL        TAG_WBEM_PATH_CREATE_FLAG = 4
+	WBEMPATH_TREAT_SINGLE_IDENT_AS_NS TAG_WBEM_PATH_CREATE_FLAG = 8
 )
 
-type tag_WBEM_GET_TEXT_FLAGS int32
+type TAG_WBEM_GET_TEXT_FLAGS int32
 
 const (
-	WBEMPATH_COMPRESSED                    tag_WBEM_GET_TEXT_FLAGS = 1
-	WBEMPATH_GET_RELATIVE_ONLY             tag_WBEM_GET_TEXT_FLAGS = 2
-	WBEMPATH_GET_SERVER_TOO                tag_WBEM_GET_TEXT_FLAGS = 4
-	WBEMPATH_GET_SERVER_AND_NAMESPACE_ONLY tag_WBEM_GET_TEXT_FLAGS = 8
-	WBEMPATH_GET_NAMESPACE_ONLY            tag_WBEM_GET_TEXT_FLAGS = 16
-	WBEMPATH_GET_ORIGINAL                  tag_WBEM_GET_TEXT_FLAGS = 32
+	WBEMPATH_COMPRESSED                    TAG_WBEM_GET_TEXT_FLAGS = 1
+	WBEMPATH_GET_RELATIVE_ONLY             TAG_WBEM_GET_TEXT_FLAGS = 2
+	WBEMPATH_GET_SERVER_TOO                TAG_WBEM_GET_TEXT_FLAGS = 4
+	WBEMPATH_GET_SERVER_AND_NAMESPACE_ONLY TAG_WBEM_GET_TEXT_FLAGS = 8
+	WBEMPATH_GET_NAMESPACE_ONLY            TAG_WBEM_GET_TEXT_FLAGS = 16
+	WBEMPATH_GET_ORIGINAL                  TAG_WBEM_GET_TEXT_FLAGS = 32
 )
 
-type tag_WBEM_GET_KEY_FLAGS int32
+type TAG_WBEM_GET_KEY_FLAGS int32
 
 const (
-	WBEMPATH_TEXT       tag_WBEM_GET_KEY_FLAGS = 1
-	WBEMPATH_QUOTEDTEXT tag_WBEM_GET_KEY_FLAGS = 2
+	WBEMPATH_TEXT       TAG_WBEM_GET_KEY_FLAGS = 1
+	WBEMPATH_QUOTEDTEXT TAG_WBEM_GET_KEY_FLAGS = 2
 )
 
 type WMIQ_ANALYSIS_TYPE int32
@@ -119,69 +119,69 @@ const (
 	WMIQ_ASSOCQ_CLASSREFSONLY          WMIQ_ASSOCQ_FLAGS = 2048
 )
 
-type tag_WMIQ_LANGUAGE_FEATURES int32
+type TAG_WMIQ_LANGUAGE_FEATURES int32
 
 const (
-	WMIQ_LF1_BASIC_SELECT                tag_WMIQ_LANGUAGE_FEATURES = 1
-	WMIQ_LF2_CLASS_NAME_IN_QUERY         tag_WMIQ_LANGUAGE_FEATURES = 2
-	WMIQ_LF3_STRING_CASE_FUNCTIONS       tag_WMIQ_LANGUAGE_FEATURES = 3
-	WMIQ_LF4_PROP_TO_PROP_TESTS          tag_WMIQ_LANGUAGE_FEATURES = 4
-	WMIQ_LF5_COUNT_STAR                  tag_WMIQ_LANGUAGE_FEATURES = 5
-	WMIQ_LF6_ORDER_BY                    tag_WMIQ_LANGUAGE_FEATURES = 6
-	WMIQ_LF7_DISTINCT                    tag_WMIQ_LANGUAGE_FEATURES = 7
-	WMIQ_LF8_ISA                         tag_WMIQ_LANGUAGE_FEATURES = 8
-	WMIQ_LF9_THIS                        tag_WMIQ_LANGUAGE_FEATURES = 9
-	WMIQ_LF10_COMPEX_SUBEXPRESSIONS      tag_WMIQ_LANGUAGE_FEATURES = 10
-	WMIQ_LF11_ALIASING                   tag_WMIQ_LANGUAGE_FEATURES = 11
-	WMIQ_LF12_GROUP_BY_HAVING            tag_WMIQ_LANGUAGE_FEATURES = 12
-	WMIQ_LF13_WMI_WITHIN                 tag_WMIQ_LANGUAGE_FEATURES = 13
-	WMIQ_LF14_SQL_WRITE_OPERATIONS       tag_WMIQ_LANGUAGE_FEATURES = 14
-	WMIQ_LF15_GO                         tag_WMIQ_LANGUAGE_FEATURES = 15
-	WMIQ_LF16_SINGLE_LEVEL_TRANSACTIONS  tag_WMIQ_LANGUAGE_FEATURES = 16
-	WMIQ_LF17_QUALIFIED_NAMES            tag_WMIQ_LANGUAGE_FEATURES = 17
-	WMIQ_LF18_ASSOCIATONS                tag_WMIQ_LANGUAGE_FEATURES = 18
-	WMIQ_LF19_SYSTEM_PROPERTIES          tag_WMIQ_LANGUAGE_FEATURES = 19
-	WMIQ_LF20_EXTENDED_SYSTEM_PROPERTIES tag_WMIQ_LANGUAGE_FEATURES = 20
-	WMIQ_LF21_SQL89_JOINS                tag_WMIQ_LANGUAGE_FEATURES = 21
-	WMIQ_LF22_SQL92_JOINS                tag_WMIQ_LANGUAGE_FEATURES = 22
-	WMIQ_LF23_SUBSELECTS                 tag_WMIQ_LANGUAGE_FEATURES = 23
-	WMIQ_LF24_UMI_EXTENSIONS             tag_WMIQ_LANGUAGE_FEATURES = 24
-	WMIQ_LF25_DATEPART                   tag_WMIQ_LANGUAGE_FEATURES = 25
-	WMIQ_LF26_LIKE                       tag_WMIQ_LANGUAGE_FEATURES = 26
-	WMIQ_LF27_CIM_TEMPORAL_CONSTRUCTS    tag_WMIQ_LANGUAGE_FEATURES = 27
-	WMIQ_LF28_STANDARD_AGGREGATES        tag_WMIQ_LANGUAGE_FEATURES = 28
-	WMIQ_LF29_MULTI_LEVEL_ORDER_BY       tag_WMIQ_LANGUAGE_FEATURES = 29
-	WMIQ_LF30_WMI_PRAGMAS                tag_WMIQ_LANGUAGE_FEATURES = 30
-	WMIQ_LF31_QUALIFIER_TESTS            tag_WMIQ_LANGUAGE_FEATURES = 31
-	WMIQ_LF32_SP_EXECUTE                 tag_WMIQ_LANGUAGE_FEATURES = 32
-	WMIQ_LF33_ARRAY_ACCESS               tag_WMIQ_LANGUAGE_FEATURES = 33
-	WMIQ_LF34_UNION                      tag_WMIQ_LANGUAGE_FEATURES = 34
-	WMIQ_LF35_COMPLEX_SELECT_TARGET      tag_WMIQ_LANGUAGE_FEATURES = 35
-	WMIQ_LF36_REFERENCE_TESTS            tag_WMIQ_LANGUAGE_FEATURES = 36
-	WMIQ_LF37_SELECT_INTO                tag_WMIQ_LANGUAGE_FEATURES = 37
-	WMIQ_LF38_BASIC_DATETIME_TESTS       tag_WMIQ_LANGUAGE_FEATURES = 38
-	WMIQ_LF39_COUNT_COLUMN               tag_WMIQ_LANGUAGE_FEATURES = 39
-	WMIQ_LF40_BETWEEN                    tag_WMIQ_LANGUAGE_FEATURES = 40
-	WMIQ_LF_LAST                         tag_WMIQ_LANGUAGE_FEATURES = 40
+	WMIQ_LF1_BASIC_SELECT                TAG_WMIQ_LANGUAGE_FEATURES = 1
+	WMIQ_LF2_CLASS_NAME_IN_QUERY         TAG_WMIQ_LANGUAGE_FEATURES = 2
+	WMIQ_LF3_STRING_CASE_FUNCTIONS       TAG_WMIQ_LANGUAGE_FEATURES = 3
+	WMIQ_LF4_PROP_TO_PROP_TESTS          TAG_WMIQ_LANGUAGE_FEATURES = 4
+	WMIQ_LF5_COUNT_STAR                  TAG_WMIQ_LANGUAGE_FEATURES = 5
+	WMIQ_LF6_ORDER_BY                    TAG_WMIQ_LANGUAGE_FEATURES = 6
+	WMIQ_LF7_DISTINCT                    TAG_WMIQ_LANGUAGE_FEATURES = 7
+	WMIQ_LF8_ISA                         TAG_WMIQ_LANGUAGE_FEATURES = 8
+	WMIQ_LF9_THIS                        TAG_WMIQ_LANGUAGE_FEATURES = 9
+	WMIQ_LF10_COMPEX_SUBEXPRESSIONS      TAG_WMIQ_LANGUAGE_FEATURES = 10
+	WMIQ_LF11_ALIASING                   TAG_WMIQ_LANGUAGE_FEATURES = 11
+	WMIQ_LF12_GROUP_BY_HAVING            TAG_WMIQ_LANGUAGE_FEATURES = 12
+	WMIQ_LF13_WMI_WITHIN                 TAG_WMIQ_LANGUAGE_FEATURES = 13
+	WMIQ_LF14_SQL_WRITE_OPERATIONS       TAG_WMIQ_LANGUAGE_FEATURES = 14
+	WMIQ_LF15_GO                         TAG_WMIQ_LANGUAGE_FEATURES = 15
+	WMIQ_LF16_SINGLE_LEVEL_TRANSACTIONS  TAG_WMIQ_LANGUAGE_FEATURES = 16
+	WMIQ_LF17_QUALIFIED_NAMES            TAG_WMIQ_LANGUAGE_FEATURES = 17
+	WMIQ_LF18_ASSOCIATONS                TAG_WMIQ_LANGUAGE_FEATURES = 18
+	WMIQ_LF19_SYSTEM_PROPERTIES          TAG_WMIQ_LANGUAGE_FEATURES = 19
+	WMIQ_LF20_EXTENDED_SYSTEM_PROPERTIES TAG_WMIQ_LANGUAGE_FEATURES = 20
+	WMIQ_LF21_SQL89_JOINS                TAG_WMIQ_LANGUAGE_FEATURES = 21
+	WMIQ_LF22_SQL92_JOINS                TAG_WMIQ_LANGUAGE_FEATURES = 22
+	WMIQ_LF23_SUBSELECTS                 TAG_WMIQ_LANGUAGE_FEATURES = 23
+	WMIQ_LF24_UMI_EXTENSIONS             TAG_WMIQ_LANGUAGE_FEATURES = 24
+	WMIQ_LF25_DATEPART                   TAG_WMIQ_LANGUAGE_FEATURES = 25
+	WMIQ_LF26_LIKE                       TAG_WMIQ_LANGUAGE_FEATURES = 26
+	WMIQ_LF27_CIM_TEMPORAL_CONSTRUCTS    TAG_WMIQ_LANGUAGE_FEATURES = 27
+	WMIQ_LF28_STANDARD_AGGREGATES        TAG_WMIQ_LANGUAGE_FEATURES = 28
+	WMIQ_LF29_MULTI_LEVEL_ORDER_BY       TAG_WMIQ_LANGUAGE_FEATURES = 29
+	WMIQ_LF30_WMI_PRAGMAS                TAG_WMIQ_LANGUAGE_FEATURES = 30
+	WMIQ_LF31_QUALIFIER_TESTS            TAG_WMIQ_LANGUAGE_FEATURES = 31
+	WMIQ_LF32_SP_EXECUTE                 TAG_WMIQ_LANGUAGE_FEATURES = 32
+	WMIQ_LF33_ARRAY_ACCESS               TAG_WMIQ_LANGUAGE_FEATURES = 33
+	WMIQ_LF34_UNION                      TAG_WMIQ_LANGUAGE_FEATURES = 34
+	WMIQ_LF35_COMPLEX_SELECT_TARGET      TAG_WMIQ_LANGUAGE_FEATURES = 35
+	WMIQ_LF36_REFERENCE_TESTS            TAG_WMIQ_LANGUAGE_FEATURES = 36
+	WMIQ_LF37_SELECT_INTO                TAG_WMIQ_LANGUAGE_FEATURES = 37
+	WMIQ_LF38_BASIC_DATETIME_TESTS       TAG_WMIQ_LANGUAGE_FEATURES = 38
+	WMIQ_LF39_COUNT_COLUMN               TAG_WMIQ_LANGUAGE_FEATURES = 39
+	WMIQ_LF40_BETWEEN                    TAG_WMIQ_LANGUAGE_FEATURES = 40
+	WMIQ_LF_LAST                         TAG_WMIQ_LANGUAGE_FEATURES = 40
 )
 
-type tag_WMIQ_RPNQ_FEATURE int32
+type TAG_WMIQ_RPNQ_FEATURE int32
 
 const (
-	WMIQ_RPNF_WHERE_CLAUSE_PRESENT tag_WMIQ_RPNQ_FEATURE = 1
-	WMIQ_RPNF_QUERY_IS_CONJUNCTIVE tag_WMIQ_RPNQ_FEATURE = 2
-	WMIQ_RPNF_QUERY_IS_DISJUNCTIVE tag_WMIQ_RPNQ_FEATURE = 4
-	WMIQ_RPNF_PROJECTION           tag_WMIQ_RPNQ_FEATURE = 8
-	WMIQ_RPNF_FEATURE_SELECT_STAR  tag_WMIQ_RPNQ_FEATURE = 16
-	WMIQ_RPNF_EQUALITY_TESTS_ONLY  tag_WMIQ_RPNQ_FEATURE = 32
-	WMIQ_RPNF_COUNT_STAR           tag_WMIQ_RPNQ_FEATURE = 64
-	WMIQ_RPNF_QUALIFIED_NAMES_USED tag_WMIQ_RPNQ_FEATURE = 128
-	WMIQ_RPNF_SYSPROP_CLASS_USED   tag_WMIQ_RPNQ_FEATURE = 256
-	WMIQ_RPNF_PROP_TO_PROP_TESTS   tag_WMIQ_RPNQ_FEATURE = 512
-	WMIQ_RPNF_ORDER_BY             tag_WMIQ_RPNQ_FEATURE = 1024
-	WMIQ_RPNF_ISA_USED             tag_WMIQ_RPNQ_FEATURE = 2048
-	WMIQ_RPNF_GROUP_BY_HAVING      tag_WMIQ_RPNQ_FEATURE = 4096
-	WMIQ_RPNF_ARRAY_ACCESS_USED    tag_WMIQ_RPNQ_FEATURE = 8192
+	WMIQ_RPNF_WHERE_CLAUSE_PRESENT TAG_WMIQ_RPNQ_FEATURE = 1
+	WMIQ_RPNF_QUERY_IS_CONJUNCTIVE TAG_WMIQ_RPNQ_FEATURE = 2
+	WMIQ_RPNF_QUERY_IS_DISJUNCTIVE TAG_WMIQ_RPNQ_FEATURE = 4
+	WMIQ_RPNF_PROJECTION           TAG_WMIQ_RPNQ_FEATURE = 8
+	WMIQ_RPNF_FEATURE_SELECT_STAR  TAG_WMIQ_RPNQ_FEATURE = 16
+	WMIQ_RPNF_EQUALITY_TESTS_ONLY  TAG_WMIQ_RPNQ_FEATURE = 32
+	WMIQ_RPNF_COUNT_STAR           TAG_WMIQ_RPNQ_FEATURE = 64
+	WMIQ_RPNF_QUALIFIED_NAMES_USED TAG_WMIQ_RPNQ_FEATURE = 128
+	WMIQ_RPNF_SYSPROP_CLASS_USED   TAG_WMIQ_RPNQ_FEATURE = 256
+	WMIQ_RPNF_PROP_TO_PROP_TESTS   TAG_WMIQ_RPNQ_FEATURE = 512
+	WMIQ_RPNF_ORDER_BY             TAG_WMIQ_RPNQ_FEATURE = 1024
+	WMIQ_RPNF_ISA_USED             TAG_WMIQ_RPNQ_FEATURE = 2048
+	WMIQ_RPNF_GROUP_BY_HAVING      TAG_WMIQ_RPNQ_FEATURE = 4096
+	WMIQ_RPNF_ARRAY_ACCESS_USED    TAG_WMIQ_RPNQ_FEATURE = 8192
 )
 
 type WBEM_GENUS_TYPE int32
@@ -305,11 +305,11 @@ const (
 	WBEM_RIGHT_PUBLISH     WBEM_SECURITY_FLAGS = 128
 )
 
-type tag_WBEM_LIMITATION_FLAG_TYPE int32
+type TAG_WBEM_LIMITATION_FLAG_TYPE int32
 
 const (
-	WBEM_FLAG_EXCLUDE_OBJECT_QUALIFIERS   tag_WBEM_LIMITATION_FLAG_TYPE = 16
-	WBEM_FLAG_EXCLUDE_PROPERTY_QUALIFIERS tag_WBEM_LIMITATION_FLAG_TYPE = 32
+	WBEM_FLAG_EXCLUDE_OBJECT_QUALIFIERS   TAG_WBEM_LIMITATION_FLAG_TYPE = 16
+	WBEM_FLAG_EXCLUDE_PROPERTY_QUALIFIERS TAG_WBEM_LIMITATION_FLAG_TYPE = 32
 )
 
 type WBEM_TEXT_FLAG_TYPE int32
@@ -330,10 +330,10 @@ const (
 	WBEM_FLAG_IGNORE_FLAVOR         WBEM_COMPARISON_FLAG = 32
 )
 
-type tag_WBEM_LOCKING int32
+type TAG_WBEM_LOCKING int32
 
 const (
-	WBEM_FLAG_ALLOW_READ tag_WBEM_LOCKING = 1
+	WBEM_FLAG_ALLOW_READ TAG_WBEM_LOCKING = 1
 )
 
 type CIMTYPE_ENUMERATION int32
@@ -374,19 +374,19 @@ const (
 	WBEM_FLAG_REFRESH_NO_AUTO_RECONNECT WBEM_REFRESHER_FLAGS = 1
 )
 
-type tag_WBEM_SHUTDOWN_FLAGS int32
+type TAG_WBEM_SHUTDOWN_FLAGS int32
 
 const (
-	WBEM_SHUTDOWN_UNLOAD_COMPONENT tag_WBEM_SHUTDOWN_FLAGS = 1
-	WBEM_SHUTDOWN_WMI              tag_WBEM_SHUTDOWN_FLAGS = 2
-	WBEM_SHUTDOWN_OS               tag_WBEM_SHUTDOWN_FLAGS = 3
+	WBEM_SHUTDOWN_UNLOAD_COMPONENT TAG_WBEM_SHUTDOWN_FLAGS = 1
+	WBEM_SHUTDOWN_WMI              TAG_WBEM_SHUTDOWN_FLAGS = 2
+	WBEM_SHUTDOWN_OS               TAG_WBEM_SHUTDOWN_FLAGS = 3
 )
 
-type tag_WBEMSTATUS_FORMAT int32
+type TAG_WBEMSTATUS_FORMAT int32
 
 const (
-	WBEMSTATUS_FORMAT_NEWLINE    tag_WBEMSTATUS_FORMAT = 0
-	WBEMSTATUS_FORMAT_NO_NEWLINE tag_WBEMSTATUS_FORMAT = 1
+	WBEMSTATUS_FORMAT_NEWLINE    TAG_WBEMSTATUS_FORMAT = 0
+	WBEMSTATUS_FORMAT_NO_NEWLINE TAG_WBEMSTATUS_FORMAT = 1
 )
 
 type WBEM_LIMITS int32
@@ -643,327 +643,327 @@ const (
 	WBEM_FLAG_UNSECAPP_DONT_CHECK_ACCESS    WBEM_UNSECAPP_FLAG_TYPE = 2
 )
 
-type tag_WBEM_INFORMATION_FLAG_TYPE int32
+type TAG_WBEM_INFORMATION_FLAG_TYPE int32
 
 const (
-	WBEM_FLAG_SHORT_NAME tag_WBEM_INFORMATION_FLAG_TYPE = 1
-	WBEM_FLAG_LONG_NAME  tag_WBEM_INFORMATION_FLAG_TYPE = 2
+	WBEM_FLAG_SHORT_NAME TAG_WBEM_INFORMATION_FLAG_TYPE = 1
+	WBEM_FLAG_LONG_NAME  TAG_WBEM_INFORMATION_FLAG_TYPE = 2
 )
 
-type tag_WBEM_PROVIDER_REQUIREMENTS_TYPE int32
+type TAG_WBEM_PROVIDER_REQUIREMENTS_TYPE int32
 
 const (
-	WBEM_REQUIREMENTS_START_POSTFILTER      tag_WBEM_PROVIDER_REQUIREMENTS_TYPE = 0
-	WBEM_REQUIREMENTS_STOP_POSTFILTER       tag_WBEM_PROVIDER_REQUIREMENTS_TYPE = 1
-	WBEM_REQUIREMENTS_RECHECK_SUBSCRIPTIONS tag_WBEM_PROVIDER_REQUIREMENTS_TYPE = 2
+	WBEM_REQUIREMENTS_START_POSTFILTER      TAG_WBEM_PROVIDER_REQUIREMENTS_TYPE = 0
+	WBEM_REQUIREMENTS_STOP_POSTFILTER       TAG_WBEM_PROVIDER_REQUIREMENTS_TYPE = 1
+	WBEM_REQUIREMENTS_RECHECK_SUBSCRIPTIONS TAG_WBEM_PROVIDER_REQUIREMENTS_TYPE = 2
 )
 
-type tag_WBEM_EXTRA_RETURN_CODES int32
+type TAG_WBEM_EXTRA_RETURN_CODES int32
 
 const (
-	WBEM_S_INITIALIZED         tag_WBEM_EXTRA_RETURN_CODES = 0
-	WBEM_S_LIMITED_SERVICE     tag_WBEM_EXTRA_RETURN_CODES = 274433
-	WBEM_S_INDIRECTLY_UPDATED  tag_WBEM_EXTRA_RETURN_CODES = 274434
-	WBEM_S_SUBJECT_TO_SDS      tag_WBEM_EXTRA_RETURN_CODES = 274435
-	WBEM_E_RETRY_LATER         tag_WBEM_EXTRA_RETURN_CODES = -2147209215
-	WBEM_E_RESOURCE_CONTENTION tag_WBEM_EXTRA_RETURN_CODES = -2147209214
+	WBEM_S_INITIALIZED         TAG_WBEM_EXTRA_RETURN_CODES = 0
+	WBEM_S_LIMITED_SERVICE     TAG_WBEM_EXTRA_RETURN_CODES = 274433
+	WBEM_S_INDIRECTLY_UPDATED  TAG_WBEM_EXTRA_RETURN_CODES = 274434
+	WBEM_S_SUBJECT_TO_SDS      TAG_WBEM_EXTRA_RETURN_CODES = 274435
+	WBEM_E_RETRY_LATER         TAG_WBEM_EXTRA_RETURN_CODES = -2147209215
+	WBEM_E_RESOURCE_CONTENTION TAG_WBEM_EXTRA_RETURN_CODES = -2147209214
 )
 
-type tag_WBEM_PROVIDER_FLAGS int32
+type TAG_WBEM_PROVIDER_FLAGS int32
 
 const (
-	WBEM_FLAG_OWNER_UPDATE tag_WBEM_PROVIDER_FLAGS = 65536
+	WBEM_FLAG_OWNER_UPDATE TAG_WBEM_PROVIDER_FLAGS = 65536
 )
 
-type tag_WBEM_BATCH_TYPE int32
+type TAG_WBEM_BATCH_TYPE int32
 
 const (
-	WBEM_FLAG_BATCH_IF_NEEDED tag_WBEM_BATCH_TYPE = 0
-	WBEM_FLAG_MUST_BATCH      tag_WBEM_BATCH_TYPE = 1
-	WBEM_FLAG_MUST_NOT_BATCH  tag_WBEM_BATCH_TYPE = 2
+	WBEM_FLAG_BATCH_IF_NEEDED TAG_WBEM_BATCH_TYPE = 0
+	WBEM_FLAG_MUST_BATCH      TAG_WBEM_BATCH_TYPE = 1
+	WBEM_FLAG_MUST_NOT_BATCH  TAG_WBEM_BATCH_TYPE = 2
 )
 
 type WbemChangeFlagEnum int32
 
 const (
-	wbemChangeFlagCreateOrUpdate   WbemChangeFlagEnum = 0
-	wbemChangeFlagUpdateOnly       WbemChangeFlagEnum = 1
-	wbemChangeFlagCreateOnly       WbemChangeFlagEnum = 2
-	wbemChangeFlagUpdateCompatible WbemChangeFlagEnum = 0
-	wbemChangeFlagUpdateSafeMode   WbemChangeFlagEnum = 32
-	wbemChangeFlagUpdateForceMode  WbemChangeFlagEnum = 64
-	wbemChangeFlagStrongValidation WbemChangeFlagEnum = 128
-	wbemChangeFlagAdvisory         WbemChangeFlagEnum = 65536
+	WBEMCHANGEFLAGCREATEORUPDATE   WbemChangeFlagEnum = 0
+	WBEMCHANGEFLAGUPDATEONLY       WbemChangeFlagEnum = 1
+	WBEMCHANGEFLAGCREATEONLY       WbemChangeFlagEnum = 2
+	WBEMCHANGEFLAGUPDATECOMPATIBLE WbemChangeFlagEnum = 0
+	WBEMCHANGEFLAGUPDATESAFEMODE   WbemChangeFlagEnum = 32
+	WBEMCHANGEFLAGUPDATEFORCEMODE  WbemChangeFlagEnum = 64
+	WBEMCHANGEFLAGSTRONGVALIDATION WbemChangeFlagEnum = 128
+	WBEMCHANGEFLAGADVISORY         WbemChangeFlagEnum = 65536
 )
 
 type WbemFlagEnum int32
 
 const (
-	wbemFlagReturnImmediately    WbemFlagEnum = 16
-	wbemFlagReturnWhenComplete   WbemFlagEnum = 0
-	wbemFlagBidirectional        WbemFlagEnum = 0
-	wbemFlagForwardOnly          WbemFlagEnum = 32
-	wbemFlagNoErrorObject        WbemFlagEnum = 64
-	wbemFlagReturnErrorObject    WbemFlagEnum = 0
-	wbemFlagSendStatus           WbemFlagEnum = 128
-	wbemFlagDontSendStatus       WbemFlagEnum = 0
-	wbemFlagEnsureLocatable      WbemFlagEnum = 256
-	wbemFlagDirectRead           WbemFlagEnum = 512
-	wbemFlagSendOnlySelected     WbemFlagEnum = 0
-	wbemFlagUseAmendedQualifiers WbemFlagEnum = 131072
-	wbemFlagGetDefault           WbemFlagEnum = 0
-	wbemFlagSpawnInstance        WbemFlagEnum = 1
-	wbemFlagUseCurrentTime       WbemFlagEnum = 1
+	WBEMFLAGRETURNIMMEDIATELY    WbemFlagEnum = 16
+	WBEMFLAGRETURNWHENCOMPLETE   WbemFlagEnum = 0
+	WBEMFLAGBIDIRECTIONAL        WbemFlagEnum = 0
+	WBEMFLAGFORWARDONLY          WbemFlagEnum = 32
+	WBEMFLAGNOERROROBJECT        WbemFlagEnum = 64
+	WBEMFLAGRETURNERROROBJECT    WbemFlagEnum = 0
+	WBEMFLAGSENDSTATUS           WbemFlagEnum = 128
+	WBEMFLAGDONTSENDSTATUS       WbemFlagEnum = 0
+	WBEMFLAGENSURELOCATABLE      WbemFlagEnum = 256
+	WBEMFLAGDIRECTREAD           WbemFlagEnum = 512
+	WBEMFLAGSENDONLYSELECTED     WbemFlagEnum = 0
+	WBEMFLAGUSEAMENDEDQUALIFIERS WbemFlagEnum = 131072
+	WBEMFLAGGETDEFAULT           WbemFlagEnum = 0
+	WBEMFLAGSPAWNINSTANCE        WbemFlagEnum = 1
+	WBEMFLAGUSECURRENTTIME       WbemFlagEnum = 1
 )
 
 type WbemQueryFlagEnum int32
 
 const (
-	wbemQueryFlagDeep      WbemQueryFlagEnum = 0
-	wbemQueryFlagShallow   WbemQueryFlagEnum = 1
-	wbemQueryFlagPrototype WbemQueryFlagEnum = 2
+	WBEMQUERYFLAGDEEP      WbemQueryFlagEnum = 0
+	WBEMQUERYFLAGSHALLOW   WbemQueryFlagEnum = 1
+	WBEMQUERYFLAGPROTOTYPE WbemQueryFlagEnum = 2
 )
 
 type WbemTextFlagEnum int32
 
 const (
-	wbemTextFlagNoFlavors WbemTextFlagEnum = 1
+	WBEMTEXTFLAGNOFLAVORS WbemTextFlagEnum = 1
 )
 
 type WbemTimeout int32
 
 const (
-	wbemTimeoutInfinite WbemTimeout = -1
+	WBEMTIMEOUTINFINITE WbemTimeout = -1
 )
 
 type WbemComparisonFlagEnum int32
 
 const (
-	wbemComparisonFlagIncludeAll          WbemComparisonFlagEnum = 0
-	wbemComparisonFlagIgnoreQualifiers    WbemComparisonFlagEnum = 1
-	wbemComparisonFlagIgnoreObjectSource  WbemComparisonFlagEnum = 2
-	wbemComparisonFlagIgnoreDefaultValues WbemComparisonFlagEnum = 4
-	wbemComparisonFlagIgnoreClass         WbemComparisonFlagEnum = 8
-	wbemComparisonFlagIgnoreCase          WbemComparisonFlagEnum = 16
-	wbemComparisonFlagIgnoreFlavor        WbemComparisonFlagEnum = 32
+	WBEMCOMPARISONFLAGINCLUDEALL          WbemComparisonFlagEnum = 0
+	WBEMCOMPARISONFLAGIGNOREQUALIFIERS    WbemComparisonFlagEnum = 1
+	WBEMCOMPARISONFLAGIGNOREOBJECTSOURCE  WbemComparisonFlagEnum = 2
+	WBEMCOMPARISONFLAGIGNOREDEFAULTVALUES WbemComparisonFlagEnum = 4
+	WBEMCOMPARISONFLAGIGNORECLASS         WbemComparisonFlagEnum = 8
+	WBEMCOMPARISONFLAGIGNORECASE          WbemComparisonFlagEnum = 16
+	WBEMCOMPARISONFLAGIGNOREFLAVOR        WbemComparisonFlagEnum = 32
 )
 
 type WbemCimtypeEnum int32
 
 const (
-	wbemCimtypeSint8     WbemCimtypeEnum = 16
-	wbemCimtypeUint8     WbemCimtypeEnum = 17
-	wbemCimtypeSint16    WbemCimtypeEnum = 2
-	wbemCimtypeUint16    WbemCimtypeEnum = 18
-	wbemCimtypeSint32    WbemCimtypeEnum = 3
-	wbemCimtypeUint32    WbemCimtypeEnum = 19
-	wbemCimtypeSint64    WbemCimtypeEnum = 20
-	wbemCimtypeUint64    WbemCimtypeEnum = 21
-	wbemCimtypeReal32    WbemCimtypeEnum = 4
-	wbemCimtypeReal64    WbemCimtypeEnum = 5
-	wbemCimtypeBoolean   WbemCimtypeEnum = 11
-	wbemCimtypeString    WbemCimtypeEnum = 8
-	wbemCimtypeDatetime  WbemCimtypeEnum = 101
-	wbemCimtypeReference WbemCimtypeEnum = 102
-	wbemCimtypeChar16    WbemCimtypeEnum = 103
-	wbemCimtypeObject    WbemCimtypeEnum = 13
+	WBEMCIMTYPESINT8     WbemCimtypeEnum = 16
+	WBEMCIMTYPEUINT8     WbemCimtypeEnum = 17
+	WBEMCIMTYPESINT16    WbemCimtypeEnum = 2
+	WBEMCIMTYPEUINT16    WbemCimtypeEnum = 18
+	WBEMCIMTYPESINT32    WbemCimtypeEnum = 3
+	WBEMCIMTYPEUINT32    WbemCimtypeEnum = 19
+	WBEMCIMTYPESINT64    WbemCimtypeEnum = 20
+	WBEMCIMTYPEUINT64    WbemCimtypeEnum = 21
+	WBEMCIMTYPEREAL32    WbemCimtypeEnum = 4
+	WBEMCIMTYPEREAL64    WbemCimtypeEnum = 5
+	WBEMCIMTYPEBOOLEAN   WbemCimtypeEnum = 11
+	WBEMCIMTYPESTRING    WbemCimtypeEnum = 8
+	WBEMCIMTYPEDATETIME  WbemCimtypeEnum = 101
+	WBEMCIMTYPEREFERENCE WbemCimtypeEnum = 102
+	WBEMCIMTYPECHAR16    WbemCimtypeEnum = 103
+	WBEMCIMTYPEOBJECT    WbemCimtypeEnum = 13
 )
 
 type WbemErrorEnum int32
 
 const (
-	wbemNoErr                           WbemErrorEnum = 0
-	wbemErrFailed                       WbemErrorEnum = -2147217407
-	wbemErrNotFound                     WbemErrorEnum = -2147217406
-	wbemErrAccessDenied                 WbemErrorEnum = -2147217405
-	wbemErrProviderFailure              WbemErrorEnum = -2147217404
-	wbemErrTypeMismatch                 WbemErrorEnum = -2147217403
-	wbemErrOutOfMemory                  WbemErrorEnum = -2147217402
-	wbemErrInvalidContext               WbemErrorEnum = -2147217401
-	wbemErrInvalidParameter             WbemErrorEnum = -2147217400
-	wbemErrNotAvailable                 WbemErrorEnum = -2147217399
-	wbemErrCriticalError                WbemErrorEnum = -2147217398
-	wbemErrInvalidStream                WbemErrorEnum = -2147217397
-	wbemErrNotSupported                 WbemErrorEnum = -2147217396
-	wbemErrInvalidSuperclass            WbemErrorEnum = -2147217395
-	wbemErrInvalidNamespace             WbemErrorEnum = -2147217394
-	wbemErrInvalidObject                WbemErrorEnum = -2147217393
-	wbemErrInvalidClass                 WbemErrorEnum = -2147217392
-	wbemErrProviderNotFound             WbemErrorEnum = -2147217391
-	wbemErrInvalidProviderRegistration  WbemErrorEnum = -2147217390
-	wbemErrProviderLoadFailure          WbemErrorEnum = -2147217389
-	wbemErrInitializationFailure        WbemErrorEnum = -2147217388
-	wbemErrTransportFailure             WbemErrorEnum = -2147217387
-	wbemErrInvalidOperation             WbemErrorEnum = -2147217386
-	wbemErrInvalidQuery                 WbemErrorEnum = -2147217385
-	wbemErrInvalidQueryType             WbemErrorEnum = -2147217384
-	wbemErrAlreadyExists                WbemErrorEnum = -2147217383
-	wbemErrOverrideNotAllowed           WbemErrorEnum = -2147217382
-	wbemErrPropagatedQualifier          WbemErrorEnum = -2147217381
-	wbemErrPropagatedProperty           WbemErrorEnum = -2147217380
-	wbemErrUnexpected                   WbemErrorEnum = -2147217379
-	wbemErrIllegalOperation             WbemErrorEnum = -2147217378
-	wbemErrCannotBeKey                  WbemErrorEnum = -2147217377
-	wbemErrIncompleteClass              WbemErrorEnum = -2147217376
-	wbemErrInvalidSyntax                WbemErrorEnum = -2147217375
-	wbemErrNondecoratedObject           WbemErrorEnum = -2147217374
-	wbemErrReadOnly                     WbemErrorEnum = -2147217373
-	wbemErrProviderNotCapable           WbemErrorEnum = -2147217372
-	wbemErrClassHasChildren             WbemErrorEnum = -2147217371
-	wbemErrClassHasInstances            WbemErrorEnum = -2147217370
-	wbemErrQueryNotImplemented          WbemErrorEnum = -2147217369
-	wbemErrIllegalNull                  WbemErrorEnum = -2147217368
-	wbemErrInvalidQualifierType         WbemErrorEnum = -2147217367
-	wbemErrInvalidPropertyType          WbemErrorEnum = -2147217366
-	wbemErrValueOutOfRange              WbemErrorEnum = -2147217365
-	wbemErrCannotBeSingleton            WbemErrorEnum = -2147217364
-	wbemErrInvalidCimType               WbemErrorEnum = -2147217363
-	wbemErrInvalidMethod                WbemErrorEnum = -2147217362
-	wbemErrInvalidMethodParameters      WbemErrorEnum = -2147217361
-	wbemErrSystemProperty               WbemErrorEnum = -2147217360
-	wbemErrInvalidProperty              WbemErrorEnum = -2147217359
-	wbemErrCallCancelled                WbemErrorEnum = -2147217358
-	wbemErrShuttingDown                 WbemErrorEnum = -2147217357
-	wbemErrPropagatedMethod             WbemErrorEnum = -2147217356
-	wbemErrUnsupportedParameter         WbemErrorEnum = -2147217355
-	wbemErrMissingParameter             WbemErrorEnum = -2147217354
-	wbemErrInvalidParameterId           WbemErrorEnum = -2147217353
-	wbemErrNonConsecutiveParameterIds   WbemErrorEnum = -2147217352
-	wbemErrParameterIdOnRetval          WbemErrorEnum = -2147217351
-	wbemErrInvalidObjectPath            WbemErrorEnum = -2147217350
-	wbemErrOutOfDiskSpace               WbemErrorEnum = -2147217349
-	wbemErrBufferTooSmall               WbemErrorEnum = -2147217348
-	wbemErrUnsupportedPutExtension      WbemErrorEnum = -2147217347
-	wbemErrUnknownObjectType            WbemErrorEnum = -2147217346
-	wbemErrUnknownPacketType            WbemErrorEnum = -2147217345
-	wbemErrMarshalVersionMismatch       WbemErrorEnum = -2147217344
-	wbemErrMarshalInvalidSignature      WbemErrorEnum = -2147217343
-	wbemErrInvalidQualifier             WbemErrorEnum = -2147217342
-	wbemErrInvalidDuplicateParameter    WbemErrorEnum = -2147217341
-	wbemErrTooMuchData                  WbemErrorEnum = -2147217340
-	wbemErrServerTooBusy                WbemErrorEnum = -2147217339
-	wbemErrInvalidFlavor                WbemErrorEnum = -2147217338
-	wbemErrCircularReference            WbemErrorEnum = -2147217337
-	wbemErrUnsupportedClassUpdate       WbemErrorEnum = -2147217336
-	wbemErrCannotChangeKeyInheritance   WbemErrorEnum = -2147217335
-	wbemErrCannotChangeIndexInheritance WbemErrorEnum = -2147217328
-	wbemErrTooManyProperties            WbemErrorEnum = -2147217327
-	wbemErrUpdateTypeMismatch           WbemErrorEnum = -2147217326
-	wbemErrUpdateOverrideNotAllowed     WbemErrorEnum = -2147217325
-	wbemErrUpdatePropagatedMethod       WbemErrorEnum = -2147217324
-	wbemErrMethodNotImplemented         WbemErrorEnum = -2147217323
-	wbemErrMethodDisabled               WbemErrorEnum = -2147217322
-	wbemErrRefresherBusy                WbemErrorEnum = -2147217321
-	wbemErrUnparsableQuery              WbemErrorEnum = -2147217320
-	wbemErrNotEventClass                WbemErrorEnum = -2147217319
-	wbemErrMissingGroupWithin           WbemErrorEnum = -2147217318
-	wbemErrMissingAggregationList       WbemErrorEnum = -2147217317
-	wbemErrPropertyNotAnObject          WbemErrorEnum = -2147217316
-	wbemErrAggregatingByObject          WbemErrorEnum = -2147217315
-	wbemErrUninterpretableProviderQuery WbemErrorEnum = -2147217313
-	wbemErrBackupRestoreWinmgmtRunning  WbemErrorEnum = -2147217312
-	wbemErrQueueOverflow                WbemErrorEnum = -2147217311
-	wbemErrPrivilegeNotHeld             WbemErrorEnum = -2147217310
-	wbemErrInvalidOperator              WbemErrorEnum = -2147217309
-	wbemErrLocalCredentials             WbemErrorEnum = -2147217308
-	wbemErrCannotBeAbstract             WbemErrorEnum = -2147217307
-	wbemErrAmendedObject                WbemErrorEnum = -2147217306
-	wbemErrClientTooSlow                WbemErrorEnum = -2147217305
-	wbemErrNullSecurityDescriptor       WbemErrorEnum = -2147217304
-	wbemErrTimeout                      WbemErrorEnum = -2147217303
-	wbemErrInvalidAssociation           WbemErrorEnum = -2147217302
-	wbemErrAmbiguousOperation           WbemErrorEnum = -2147217301
-	wbemErrQuotaViolation               WbemErrorEnum = -2147217300
-	wbemErrTransactionConflict          WbemErrorEnum = -2147217299
-	wbemErrForcedRollback               WbemErrorEnum = -2147217298
-	wbemErrUnsupportedLocale            WbemErrorEnum = -2147217297
-	wbemErrHandleOutOfDate              WbemErrorEnum = -2147217296
-	wbemErrConnectionFailed             WbemErrorEnum = -2147217295
-	wbemErrInvalidHandleRequest         WbemErrorEnum = -2147217294
-	wbemErrPropertyNameTooWide          WbemErrorEnum = -2147217293
-	wbemErrClassNameTooWide             WbemErrorEnum = -2147217292
-	wbemErrMethodNameTooWide            WbemErrorEnum = -2147217291
-	wbemErrQualifierNameTooWide         WbemErrorEnum = -2147217290
-	wbemErrRerunCommand                 WbemErrorEnum = -2147217289
-	wbemErrDatabaseVerMismatch          WbemErrorEnum = -2147217288
-	wbemErrVetoPut                      WbemErrorEnum = -2147217287
-	wbemErrVetoDelete                   WbemErrorEnum = -2147217286
-	wbemErrInvalidLocale                WbemErrorEnum = -2147217280
-	wbemErrProviderSuspended            WbemErrorEnum = -2147217279
-	wbemErrSynchronizationRequired      WbemErrorEnum = -2147217278
-	wbemErrNoSchema                     WbemErrorEnum = -2147217277
-	wbemErrProviderAlreadyRegistered    WbemErrorEnum = -2147217276
-	wbemErrProviderNotRegistered        WbemErrorEnum = -2147217275
-	wbemErrFatalTransportError          WbemErrorEnum = -2147217274
-	wbemErrEncryptedConnectionRequired  WbemErrorEnum = -2147217273
-	wbemErrRegistrationTooBroad         WbemErrorEnum = -2147213311
-	wbemErrRegistrationTooPrecise       WbemErrorEnum = -2147213310
-	wbemErrTimedout                     WbemErrorEnum = -2147209215
-	wbemErrResetToDefault               WbemErrorEnum = -2147209214
+	WBEMNOERR                           WbemErrorEnum = 0
+	WBEMERRFAILED                       WbemErrorEnum = -2147217407
+	WBEMERRNOTFOUND                     WbemErrorEnum = -2147217406
+	WBEMERRACCESSDENIED                 WbemErrorEnum = -2147217405
+	WBEMERRPROVIDERFAILURE              WbemErrorEnum = -2147217404
+	WBEMERRTYPEMISMATCH                 WbemErrorEnum = -2147217403
+	WBEMERROUTOFMEMORY                  WbemErrorEnum = -2147217402
+	WBEMERRINVALIDCONTEXT               WbemErrorEnum = -2147217401
+	WBEMERRINVALIDPARAMETER             WbemErrorEnum = -2147217400
+	WBEMERRNOTAVAILABLE                 WbemErrorEnum = -2147217399
+	WBEMERRCRITICALERROR                WbemErrorEnum = -2147217398
+	WBEMERRINVALIDSTREAM                WbemErrorEnum = -2147217397
+	WBEMERRNOTSUPPORTED                 WbemErrorEnum = -2147217396
+	WBEMERRINVALIDSUPERCLASS            WbemErrorEnum = -2147217395
+	WBEMERRINVALIDNAMESPACE             WbemErrorEnum = -2147217394
+	WBEMERRINVALIDOBJECT                WbemErrorEnum = -2147217393
+	WBEMERRINVALIDCLASS                 WbemErrorEnum = -2147217392
+	WBEMERRPROVIDERNOTFOUND             WbemErrorEnum = -2147217391
+	WBEMERRINVALIDPROVIDERREGISTRATION  WbemErrorEnum = -2147217390
+	WBEMERRPROVIDERLOADFAILURE          WbemErrorEnum = -2147217389
+	WBEMERRINITIALIZATIONFAILURE        WbemErrorEnum = -2147217388
+	WBEMERRTRANSPORTFAILURE             WbemErrorEnum = -2147217387
+	WBEMERRINVALIDOPERATION             WbemErrorEnum = -2147217386
+	WBEMERRINVALIDQUERY                 WbemErrorEnum = -2147217385
+	WBEMERRINVALIDQUERYTYPE             WbemErrorEnum = -2147217384
+	WBEMERRALREADYEXISTS                WbemErrorEnum = -2147217383
+	WBEMERROVERRIDENOTALLOWED           WbemErrorEnum = -2147217382
+	WBEMERRPROPAGATEDQUALIFIER          WbemErrorEnum = -2147217381
+	WBEMERRPROPAGATEDPROPERTY           WbemErrorEnum = -2147217380
+	WBEMERRUNEXPECTED                   WbemErrorEnum = -2147217379
+	WBEMERRILLEGALOPERATION             WbemErrorEnum = -2147217378
+	WBEMERRCANNOTBEKEY                  WbemErrorEnum = -2147217377
+	WBEMERRINCOMPLETECLASS              WbemErrorEnum = -2147217376
+	WBEMERRINVALIDSYNTAX                WbemErrorEnum = -2147217375
+	WBEMERRNONDECORATEDOBJECT           WbemErrorEnum = -2147217374
+	WBEMERRREADONLY                     WbemErrorEnum = -2147217373
+	WBEMERRPROVIDERNOTCAPABLE           WbemErrorEnum = -2147217372
+	WBEMERRCLASSHASCHILDREN             WbemErrorEnum = -2147217371
+	WBEMERRCLASSHASINSTANCES            WbemErrorEnum = -2147217370
+	WBEMERRQUERYNOTIMPLEMENTED          WbemErrorEnum = -2147217369
+	WBEMERRILLEGALNULL                  WbemErrorEnum = -2147217368
+	WBEMERRINVALIDQUALIFIERTYPE         WbemErrorEnum = -2147217367
+	WBEMERRINVALIDPROPERTYTYPE          WbemErrorEnum = -2147217366
+	WBEMERRVALUEOUTOFRANGE              WbemErrorEnum = -2147217365
+	WBEMERRCANNOTBESINGLETON            WbemErrorEnum = -2147217364
+	WBEMERRINVALIDCIMTYPE               WbemErrorEnum = -2147217363
+	WBEMERRINVALIDMETHOD                WbemErrorEnum = -2147217362
+	WBEMERRINVALIDMETHODPARAMETERS      WbemErrorEnum = -2147217361
+	WBEMERRSYSTEMPROPERTY               WbemErrorEnum = -2147217360
+	WBEMERRINVALIDPROPERTY              WbemErrorEnum = -2147217359
+	WBEMERRCALLCANCELLED                WbemErrorEnum = -2147217358
+	WBEMERRSHUTTINGDOWN                 WbemErrorEnum = -2147217357
+	WBEMERRPROPAGATEDMETHOD             WbemErrorEnum = -2147217356
+	WBEMERRUNSUPPORTEDPARAMETER         WbemErrorEnum = -2147217355
+	WBEMERRMISSINGPARAMETER             WbemErrorEnum = -2147217354
+	WBEMERRINVALIDPARAMETERID           WbemErrorEnum = -2147217353
+	WBEMERRNONCONSECUTIVEPARAMETERIDS   WbemErrorEnum = -2147217352
+	WBEMERRPARAMETERIDONRETVAL          WbemErrorEnum = -2147217351
+	WBEMERRINVALIDOBJECTPATH            WbemErrorEnum = -2147217350
+	WBEMERROUTOFDISKSPACE               WbemErrorEnum = -2147217349
+	WBEMERRBUFFERTOOSMALL               WbemErrorEnum = -2147217348
+	WBEMERRUNSUPPORTEDPUTEXTENSION      WbemErrorEnum = -2147217347
+	WBEMERRUNKNOWNOBJECTTYPE            WbemErrorEnum = -2147217346
+	WBEMERRUNKNOWNPACKETTYPE            WbemErrorEnum = -2147217345
+	WBEMERRMARSHALVERSIONMISMATCH       WbemErrorEnum = -2147217344
+	WBEMERRMARSHALINVALIDSIGNATURE      WbemErrorEnum = -2147217343
+	WBEMERRINVALIDQUALIFIER             WbemErrorEnum = -2147217342
+	WBEMERRINVALIDDUPLICATEPARAMETER    WbemErrorEnum = -2147217341
+	WBEMERRTOOMUCHDATA                  WbemErrorEnum = -2147217340
+	WBEMERRSERVERTOOBUSY                WbemErrorEnum = -2147217339
+	WBEMERRINVALIDFLAVOR                WbemErrorEnum = -2147217338
+	WBEMERRCIRCULARREFERENCE            WbemErrorEnum = -2147217337
+	WBEMERRUNSUPPORTEDCLASSUPDATE       WbemErrorEnum = -2147217336
+	WBEMERRCANNOTCHANGEKEYINHERITANCE   WbemErrorEnum = -2147217335
+	WBEMERRCANNOTCHANGEINDEXINHERITANCE WbemErrorEnum = -2147217328
+	WBEMERRTOOMANYPROPERTIES            WbemErrorEnum = -2147217327
+	WBEMERRUPDATETYPEMISMATCH           WbemErrorEnum = -2147217326
+	WBEMERRUPDATEOVERRIDENOTALLOWED     WbemErrorEnum = -2147217325
+	WBEMERRUPDATEPROPAGATEDMETHOD       WbemErrorEnum = -2147217324
+	WBEMERRMETHODNOTIMPLEMENTED         WbemErrorEnum = -2147217323
+	WBEMERRMETHODDISABLED               WbemErrorEnum = -2147217322
+	WBEMERRREFRESHERBUSY                WbemErrorEnum = -2147217321
+	WBEMERRUNPARSABLEQUERY              WbemErrorEnum = -2147217320
+	WBEMERRNOTEVENTCLASS                WbemErrorEnum = -2147217319
+	WBEMERRMISSINGGROUPWITHIN           WbemErrorEnum = -2147217318
+	WBEMERRMISSINGAGGREGATIONLIST       WbemErrorEnum = -2147217317
+	WBEMERRPROPERTYNOTANOBJECT          WbemErrorEnum = -2147217316
+	WBEMERRAGGREGATINGBYOBJECT          WbemErrorEnum = -2147217315
+	WBEMERRUNINTERPRETABLEPROVIDERQUERY WbemErrorEnum = -2147217313
+	WBEMERRBACKUPRESTOREWINMGMTRUNNING  WbemErrorEnum = -2147217312
+	WBEMERRQUEUEOVERFLOW                WbemErrorEnum = -2147217311
+	WBEMERRPRIVILEGENOTHELD             WbemErrorEnum = -2147217310
+	WBEMERRINVALIDOPERATOR              WbemErrorEnum = -2147217309
+	WBEMERRLOCALCREDENTIALS             WbemErrorEnum = -2147217308
+	WBEMERRCANNOTBEABSTRACT             WbemErrorEnum = -2147217307
+	WBEMERRAMENDEDOBJECT                WbemErrorEnum = -2147217306
+	WBEMERRCLIENTTOOSLOW                WbemErrorEnum = -2147217305
+	WBEMERRNULLSECURITYDESCRIPTOR       WbemErrorEnum = -2147217304
+	WBEMERRTIMEOUT                      WbemErrorEnum = -2147217303
+	WBEMERRINVALIDASSOCIATION           WbemErrorEnum = -2147217302
+	WBEMERRAMBIGUOUSOPERATION           WbemErrorEnum = -2147217301
+	WBEMERRQUOTAVIOLATION               WbemErrorEnum = -2147217300
+	WBEMERRTRANSACTIONCONFLICT          WbemErrorEnum = -2147217299
+	WBEMERRFORCEDROLLBACK               WbemErrorEnum = -2147217298
+	WBEMERRUNSUPPORTEDLOCALE            WbemErrorEnum = -2147217297
+	WBEMERRHANDLEOUTOFDATE              WbemErrorEnum = -2147217296
+	WBEMERRCONNECTIONFAILED             WbemErrorEnum = -2147217295
+	WBEMERRINVALIDHANDLEREQUEST         WbemErrorEnum = -2147217294
+	WBEMERRPROPERTYNAMETOOWIDE          WbemErrorEnum = -2147217293
+	WBEMERRCLASSNAMETOOWIDE             WbemErrorEnum = -2147217292
+	WBEMERRMETHODNAMETOOWIDE            WbemErrorEnum = -2147217291
+	WBEMERRQUALIFIERNAMETOOWIDE         WbemErrorEnum = -2147217290
+	WBEMERRRERUNCOMMAND                 WbemErrorEnum = -2147217289
+	WBEMERRDATABASEVERMISMATCH          WbemErrorEnum = -2147217288
+	WBEMERRVETOPUT                      WbemErrorEnum = -2147217287
+	WBEMERRVETODELETE                   WbemErrorEnum = -2147217286
+	WBEMERRINVALIDLOCALE                WbemErrorEnum = -2147217280
+	WBEMERRPROVIDERSUSPENDED            WbemErrorEnum = -2147217279
+	WBEMERRSYNCHRONIZATIONREQUIRED      WbemErrorEnum = -2147217278
+	WBEMERRNOSCHEMA                     WbemErrorEnum = -2147217277
+	WBEMERRPROVIDERALREADYREGISTERED    WbemErrorEnum = -2147217276
+	WBEMERRPROVIDERNOTREGISTERED        WbemErrorEnum = -2147217275
+	WBEMERRFATALTRANSPORTERROR          WbemErrorEnum = -2147217274
+	WBEMERRENCRYPTEDCONNECTIONREQUIRED  WbemErrorEnum = -2147217273
+	WBEMERRREGISTRATIONTOOBROAD         WbemErrorEnum = -2147213311
+	WBEMERRREGISTRATIONTOOPRECISE       WbemErrorEnum = -2147213310
+	WBEMERRTIMEDOUT                     WbemErrorEnum = -2147209215
+	WBEMERRRESETTODEFAULT               WbemErrorEnum = -2147209214
 )
 
 type WbemAuthenticationLevelEnum int32
 
 const (
-	wbemAuthenticationLevelDefault      WbemAuthenticationLevelEnum = 0
-	wbemAuthenticationLevelNone         WbemAuthenticationLevelEnum = 1
-	wbemAuthenticationLevelConnect      WbemAuthenticationLevelEnum = 2
-	wbemAuthenticationLevelCall         WbemAuthenticationLevelEnum = 3
-	wbemAuthenticationLevelPkt          WbemAuthenticationLevelEnum = 4
-	wbemAuthenticationLevelPktIntegrity WbemAuthenticationLevelEnum = 5
-	wbemAuthenticationLevelPktPrivacy   WbemAuthenticationLevelEnum = 6
+	WBEMAUTHENTICATIONLEVELDEFAULT      WbemAuthenticationLevelEnum = 0
+	WBEMAUTHENTICATIONLEVELNONE         WbemAuthenticationLevelEnum = 1
+	WBEMAUTHENTICATIONLEVELCONNECT      WbemAuthenticationLevelEnum = 2
+	WBEMAUTHENTICATIONLEVELCALL         WbemAuthenticationLevelEnum = 3
+	WBEMAUTHENTICATIONLEVELPKT          WbemAuthenticationLevelEnum = 4
+	WBEMAUTHENTICATIONLEVELPKTINTEGRITY WbemAuthenticationLevelEnum = 5
+	WBEMAUTHENTICATIONLEVELPKTPRIVACY   WbemAuthenticationLevelEnum = 6
 )
 
 type WbemImpersonationLevelEnum int32
 
 const (
-	wbemImpersonationLevelAnonymous   WbemImpersonationLevelEnum = 1
-	wbemImpersonationLevelIdentify    WbemImpersonationLevelEnum = 2
-	wbemImpersonationLevelImpersonate WbemImpersonationLevelEnum = 3
-	wbemImpersonationLevelDelegate    WbemImpersonationLevelEnum = 4
+	WBEMIMPERSONATIONLEVELANONYMOUS   WbemImpersonationLevelEnum = 1
+	WBEMIMPERSONATIONLEVELIDENTIFY    WbemImpersonationLevelEnum = 2
+	WBEMIMPERSONATIONLEVELIMPERSONATE WbemImpersonationLevelEnum = 3
+	WBEMIMPERSONATIONLEVELDELEGATE    WbemImpersonationLevelEnum = 4
 )
 
 type WbemPrivilegeEnum int32
 
 const (
-	wbemPrivilegeCreateToken          WbemPrivilegeEnum = 1
-	wbemPrivilegePrimaryToken         WbemPrivilegeEnum = 2
-	wbemPrivilegeLockMemory           WbemPrivilegeEnum = 3
-	wbemPrivilegeIncreaseQuota        WbemPrivilegeEnum = 4
-	wbemPrivilegeMachineAccount       WbemPrivilegeEnum = 5
-	wbemPrivilegeTcb                  WbemPrivilegeEnum = 6
-	wbemPrivilegeSecurity             WbemPrivilegeEnum = 7
-	wbemPrivilegeTakeOwnership        WbemPrivilegeEnum = 8
-	wbemPrivilegeLoadDriver           WbemPrivilegeEnum = 9
-	wbemPrivilegeSystemProfile        WbemPrivilegeEnum = 10
-	wbemPrivilegeSystemtime           WbemPrivilegeEnum = 11
-	wbemPrivilegeProfileSingleProcess WbemPrivilegeEnum = 12
-	wbemPrivilegeIncreaseBasePriority WbemPrivilegeEnum = 13
-	wbemPrivilegeCreatePagefile       WbemPrivilegeEnum = 14
-	wbemPrivilegeCreatePermanent      WbemPrivilegeEnum = 15
-	wbemPrivilegeBackup               WbemPrivilegeEnum = 16
-	wbemPrivilegeRestore              WbemPrivilegeEnum = 17
-	wbemPrivilegeShutdown             WbemPrivilegeEnum = 18
-	wbemPrivilegeDebug                WbemPrivilegeEnum = 19
-	wbemPrivilegeAudit                WbemPrivilegeEnum = 20
-	wbemPrivilegeSystemEnvironment    WbemPrivilegeEnum = 21
-	wbemPrivilegeChangeNotify         WbemPrivilegeEnum = 22
-	wbemPrivilegeRemoteShutdown       WbemPrivilegeEnum = 23
-	wbemPrivilegeUndock               WbemPrivilegeEnum = 24
-	wbemPrivilegeSyncAgent            WbemPrivilegeEnum = 25
-	wbemPrivilegeEnableDelegation     WbemPrivilegeEnum = 26
-	wbemPrivilegeManageVolume         WbemPrivilegeEnum = 27
+	WBEMPRIVILEGECREATETOKEN          WbemPrivilegeEnum = 1
+	WBEMPRIVILEGEPRIMARYTOKEN         WbemPrivilegeEnum = 2
+	WBEMPRIVILEGELOCKMEMORY           WbemPrivilegeEnum = 3
+	WBEMPRIVILEGEINCREASEQUOTA        WbemPrivilegeEnum = 4
+	WBEMPRIVILEGEMACHINEACCOUNT       WbemPrivilegeEnum = 5
+	WBEMPRIVILEGETCB                  WbemPrivilegeEnum = 6
+	WBEMPRIVILEGESECURITY             WbemPrivilegeEnum = 7
+	WBEMPRIVILEGETAKEOWNERSHIP        WbemPrivilegeEnum = 8
+	WBEMPRIVILEGELOADDRIVER           WbemPrivilegeEnum = 9
+	WBEMPRIVILEGESYSTEMPROFILE        WbemPrivilegeEnum = 10
+	WBEMPRIVILEGESYSTEMTIME           WbemPrivilegeEnum = 11
+	WBEMPRIVILEGEPROFILESINGLEPROCESS WbemPrivilegeEnum = 12
+	WBEMPRIVILEGEINCREASEBASEPRIORITY WbemPrivilegeEnum = 13
+	WBEMPRIVILEGECREATEPAGEFILE       WbemPrivilegeEnum = 14
+	WBEMPRIVILEGECREATEPERMANENT      WbemPrivilegeEnum = 15
+	WBEMPRIVILEGEBACKUP               WbemPrivilegeEnum = 16
+	WBEMPRIVILEGERESTORE              WbemPrivilegeEnum = 17
+	WBEMPRIVILEGESHUTDOWN             WbemPrivilegeEnum = 18
+	WBEMPRIVILEGEDEBUG                WbemPrivilegeEnum = 19
+	WBEMPRIVILEGEAUDIT                WbemPrivilegeEnum = 20
+	WBEMPRIVILEGESYSTEMENVIRONMENT    WbemPrivilegeEnum = 21
+	WBEMPRIVILEGECHANGENOTIFY         WbemPrivilegeEnum = 22
+	WBEMPRIVILEGEREMOTESHUTDOWN       WbemPrivilegeEnum = 23
+	WBEMPRIVILEGEUNDOCK               WbemPrivilegeEnum = 24
+	WBEMPRIVILEGESYNCAGENT            WbemPrivilegeEnum = 25
+	WBEMPRIVILEGEENABLEDELEGATION     WbemPrivilegeEnum = 26
+	WBEMPRIVILEGEMANAGEVOLUME         WbemPrivilegeEnum = 27
 )
 
 type WbemObjectTextFormatEnum int32
 
 const (
-	wbemObjectTextFormatCIMDTD20 WbemObjectTextFormatEnum = 1
-	wbemObjectTextFormatWMIDTD20 WbemObjectTextFormatEnum = 2
+	WBEMOBJECTTEXTFORMATCIMDTD20 WbemObjectTextFormatEnum = 1
+	WBEMOBJECTTEXTFORMATWMIDTD20 WbemObjectTextFormatEnum = 2
 )
 
 type WbemConnectOptionsEnum int32
 
 const (
-	wbemConnectFlagUseMaxWait WbemConnectOptionsEnum = 128
+	WBEMCONNECTFLAGUSEMAXWAIT WbemConnectOptionsEnum = 128
 )

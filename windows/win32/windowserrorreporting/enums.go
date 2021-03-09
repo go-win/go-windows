@@ -106,15 +106,15 @@ const (
 type EFaultRepRetVal int32
 
 const (
-	frrvOk                 EFaultRepRetVal = 0
-	frrvOkManifest         EFaultRepRetVal = 1
-	frrvOkQueued           EFaultRepRetVal = 2
-	frrvErr                EFaultRepRetVal = 3
-	frrvErrNoDW            EFaultRepRetVal = 4
-	frrvErrTimeout         EFaultRepRetVal = 5
-	frrvLaunchDebugger     EFaultRepRetVal = 6
-	frrvOkHeadless         EFaultRepRetVal = 7
-	frrvErrAnotherInstance EFaultRepRetVal = 8
-	frrvErrNoMemory        EFaultRepRetVal = 9
-	frrvErrDoubleFault     EFaultRepRetVal = 10
+	FRRVOK                 EFaultRepRetVal = 0
+	FRRVOKMANIFEST         EFaultRepRetVal = 1
+	FRRVOKQUEUED           EFaultRepRetVal = 2
+	FRRVERR                EFaultRepRetVal = 3
+	FRRVERRNODW            EFaultRepRetVal = 4
+	FRRVERRTIMEOUT         EFaultRepRetVal = 5
+	FRRVLAUNCHDEBUGGER     EFaultRepRetVal = 6
+	FRRVOKHEADLESS         EFaultRepRetVal = 7
+	FRRVERRANOTHERINSTANCE EFaultRepRetVal = 8
+	FRRVERRNOMEMORY        EFaultRepRetVal = 9
+	FRRVERRDOUBLEFAULT     EFaultRepRetVal = 10
 )

@@ -1284,12 +1284,12 @@ const (
 	DeviceStatusDataSetMax       DEVICE_INTERNAL_STATUS_DATA_SET = 5
 )
 
-type _DEVICEDUMP_COLLECTION_TYPE int32
+type DEVICEDUMP_COLLECTION_TYPE int32
 
 const (
-	TCCollectionBugCheck             _DEVICEDUMP_COLLECTION_TYPE = 1
-	TCCollectionApplicationRequested _DEVICEDUMP_COLLECTION_TYPE = 2
-	TCCollectionDeviceRequested      _DEVICEDUMP_COLLECTION_TYPE = 3
+	TCCollectionBugCheck             DEVICEDUMP_COLLECTION_TYPE = 1
+	TCCollectionApplicationRequested DEVICEDUMP_COLLECTION_TYPE = 2
+	TCCollectionDeviceRequested      DEVICEDUMP_COLLECTION_TYPE = 3
 )
 
 type STORAGE_POWERUP_REASON_TYPE int32
@@ -1595,38 +1595,38 @@ const (
 type EPrintPropertyType int32
 
 const (
-	kPropertyTypeString              EPrintPropertyType = 1
-	kPropertyTypeInt32               EPrintPropertyType = 2
-	kPropertyTypeInt64               EPrintPropertyType = 3
-	kPropertyTypeByte                EPrintPropertyType = 4
-	kPropertyTypeTime                EPrintPropertyType = 5
-	kPropertyTypeDevMode             EPrintPropertyType = 6
-	kPropertyTypeSD                  EPrintPropertyType = 7
-	kPropertyTypeNotificationReply   EPrintPropertyType = 8
-	kPropertyTypeNotificationOptions EPrintPropertyType = 9
-	kPropertyTypeBuffer              EPrintPropertyType = 10
+	KPROPERTYTYPESTRING              EPrintPropertyType = 1
+	KPROPERTYTYPEINT32               EPrintPropertyType = 2
+	KPROPERTYTYPEINT64               EPrintPropertyType = 3
+	KPROPERTYTYPEBYTE                EPrintPropertyType = 4
+	KPROPERTYTYPETIME                EPrintPropertyType = 5
+	KPROPERTYTYPEDEVMODE             EPrintPropertyType = 6
+	KPROPERTYTYPESD                  EPrintPropertyType = 7
+	KPROPERTYTYPENOTIFICATIONREPLY   EPrintPropertyType = 8
+	KPROPERTYTYPENOTIFICATIONOPTIONS EPrintPropertyType = 9
+	KPROPERTYTYPEBUFFER              EPrintPropertyType = 10
 )
 
 type EPrintXPSJobProgress int32
 
 const (
-	kAddingDocumentSequence EPrintXPSJobProgress = 0
-	kDocumentSequenceAdded  EPrintXPSJobProgress = 1
-	kAddingFixedDocument    EPrintXPSJobProgress = 2
-	kFixedDocumentAdded     EPrintXPSJobProgress = 3
-	kAddingFixedPage        EPrintXPSJobProgress = 4
-	kFixedPageAdded         EPrintXPSJobProgress = 5
-	kResourceAdded          EPrintXPSJobProgress = 6
-	kFontAdded              EPrintXPSJobProgress = 7
-	kImageAdded             EPrintXPSJobProgress = 8
-	kXpsDocumentCommitted   EPrintXPSJobProgress = 9
+	KADDINGDOCUMENTSEQUENCE EPrintXPSJobProgress = 0
+	KDOCUMENTSEQUENCEADDED  EPrintXPSJobProgress = 1
+	KADDINGFIXEDDOCUMENT    EPrintXPSJobProgress = 2
+	KFIXEDDOCUMENTADDED     EPrintXPSJobProgress = 3
+	KADDINGFIXEDPAGE        EPrintXPSJobProgress = 4
+	KFIXEDPAGEADDED         EPrintXPSJobProgress = 5
+	KRESOURCEADDED          EPrintXPSJobProgress = 6
+	KFONTADDED              EPrintXPSJobProgress = 7
+	KIMAGEADDED             EPrintXPSJobProgress = 8
+	KXPSDOCUMENTCOMMITTED   EPrintXPSJobProgress = 9
 )
 
 type EPrintXPSJobOperation int32
 
 const (
-	kJobProduction  EPrintXPSJobOperation = 1
-	kJobConsumption EPrintXPSJobOperation = 2
+	KJOBPRODUCTION  EPrintXPSJobOperation = 1
+	KJOBCONSUMPTION EPrintXPSJobOperation = 2
 )
 
 type PRINT_EXECUTION_CONTEXT int32

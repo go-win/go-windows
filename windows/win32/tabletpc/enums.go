@@ -26,19 +26,19 @@ const (
 	PROPERTY_UNITS_CANDELA     PROPERTY_UNITS = 16
 )
 
-type enumINKMETRIC_FLAGS int32
+type ENUMINKMETRIC_FLAGS int32
 
 const (
-	IMF_FONT_SELECTED_IN_HDC enumINKMETRIC_FLAGS = 1
-	IMF_ITALIC               enumINKMETRIC_FLAGS = 2
-	IMF_BOLD                 enumINKMETRIC_FLAGS = 4
+	IMF_FONT_SELECTED_IN_HDC ENUMINKMETRIC_FLAGS = 1
+	IMF_ITALIC               ENUMINKMETRIC_FLAGS = 2
+	IMF_BOLD                 ENUMINKMETRIC_FLAGS = 4
 )
 
-type enumGetCandidateFlags int32
+type ENUMGETCANDIDATEFLAGS int32
 
 const (
-	TCF_ALLOW_RECOGNITION enumGetCandidateFlags = 1
-	TCF_FORCE_RECOGNITION enumGetCandidateFlags = 2
+	TCF_ALLOW_RECOGNITION ENUMGETCANDIDATEFLAGS = 1
+	TCF_FORCE_RECOGNITION ENUMGETCANDIDATEFLAGS = 2
 )
 
 type InkSelectionConstants int32
@@ -1163,9 +1163,9 @@ const (
 type SelAlignmentConstants int32
 
 const (
-	rtfLeft   SelAlignmentConstants = 0
-	rtfRight  SelAlignmentConstants = 1
-	rtfCenter SelAlignmentConstants = 2
+	RTFLEFT   SelAlignmentConstants = 0
+	RTFRIGHT  SelAlignmentConstants = 1
+	RTFCENTER SelAlignmentConstants = 2
 )
 
 type DISPID_InkEdit int32
@@ -1261,24 +1261,24 @@ const (
 type AppearanceConstants int32
 
 const (
-	rtfFlat   AppearanceConstants = 0
-	rtfThreeD AppearanceConstants = 1
+	RTFFLAT   AppearanceConstants = 0
+	RTFTHREED AppearanceConstants = 1
 )
 
 type BorderStyleConstants int32
 
 const (
-	rtfNoBorder    BorderStyleConstants = 0
-	rtfFixedSingle BorderStyleConstants = 1
+	RTFNOBORDER    BorderStyleConstants = 0
+	RTFFIXEDSINGLE BorderStyleConstants = 1
 )
 
 type ScrollBarsConstants int32
 
 const (
-	rtfNone       ScrollBarsConstants = 0
-	rtfHorizontal ScrollBarsConstants = 1
-	rtfVertical   ScrollBarsConstants = 2
-	rtfBoth       ScrollBarsConstants = 3
+	RTFNONE       ScrollBarsConstants = 0
+	RTFHORIZONTAL ScrollBarsConstants = 1
+	RTFVERTICAL   ScrollBarsConstants = 2
+	RTFBOTH       ScrollBarsConstants = 3
 )
 
 type MICUIELEMENT int32
@@ -1383,9 +1383,9 @@ const (
 	ALT_BREAKS_FULL   ALT_BREAKS = 2
 )
 
-type enumRECO_TYPE int32
+type ENUMRECO_TYPE int32
 
 const (
-	RECO_TYPE_WSTRING enumRECO_TYPE = 0
-	RECO_TYPE_WCHAR   enumRECO_TYPE = 1
+	RECO_TYPE_WSTRING ENUMRECO_TYPE = 0
+	RECO_TYPE_WCHAR   ENUMRECO_TYPE = 1
 )

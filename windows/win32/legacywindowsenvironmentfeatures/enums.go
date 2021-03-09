@@ -4,22 +4,22 @@
 // Package legacywindowsenvironmentfeatures implements the Windows.Win32.LegacyWindowsEnvironmentFeatures namespace.
 package legacywindowsenvironmentfeatures
 
-type _ColumnSortOrder int32
+type ColumnSortOrder int32
 
 const (
-	SortOrder_Ascending  _ColumnSortOrder = 0
-	SortOrder_Descending _ColumnSortOrder = 1
+	SortOrder_Ascending  ColumnSortOrder = 0
+	SortOrder_Descending ColumnSortOrder = 1
 )
 
-type _reconcilef int32
+type RECONCILEF int32
 
 const (
-	RECONCILEF_MAYBOTHERUSER        _reconcilef = 1
-	RECONCILEF_FEEDBACKWINDOWVALID  _reconcilef = 2
-	RECONCILEF_NORESIDUESOK         _reconcilef = 4
-	RECONCILEF_OMITSELFRESIDUE      _reconcilef = 8
-	RECONCILEF_RESUMERECONCILIATION _reconcilef = 16
-	RECONCILEF_YOUMAYDOTHEUPDATES   _reconcilef = 32
-	RECONCILEF_ONLYYOUWERECHANGED   _reconcilef = 64
-	ALL_RECONCILE_FLAGS             _reconcilef = 127
+	RECONCILEF_MAYBOTHERUSER        RECONCILEF = 1
+	RECONCILEF_FEEDBACKWINDOWVALID  RECONCILEF = 2
+	RECONCILEF_NORESIDUESOK         RECONCILEF = 4
+	RECONCILEF_OMITSELFRESIDUE      RECONCILEF = 8
+	RECONCILEF_RESUMERECONCILIATION RECONCILEF = 16
+	RECONCILEF_YOUMAYDOTHEUPDATES   RECONCILEF = 32
+	RECONCILEF_ONLYYOUWERECHANGED   RECONCILEF = 64
+	ALL_RECONCILE_FLAGS             RECONCILEF = 127
 )

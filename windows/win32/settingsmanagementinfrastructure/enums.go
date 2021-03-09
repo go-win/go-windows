@@ -22,34 +22,34 @@ const (
 type WcmDataType int32
 
 const (
-	dataTypeByte      WcmDataType = 1
-	dataTypeSByte     WcmDataType = 2
-	dataTypeUInt16    WcmDataType = 3
-	dataTypeInt16     WcmDataType = 4
-	dataTypeUInt32    WcmDataType = 5
-	dataTypeInt32     WcmDataType = 6
-	dataTypeUInt64    WcmDataType = 7
-	dataTypeInt64     WcmDataType = 8
-	dataTypeBoolean   WcmDataType = 11
-	dataTypeString    WcmDataType = 12
-	dataTypeFlagArray WcmDataType = 32768
+	DATATYPEBYTE      WcmDataType = 1
+	DATATYPESBYTE     WcmDataType = 2
+	DATATYPEUINT16    WcmDataType = 3
+	DATATYPEINT16     WcmDataType = 4
+	DATATYPEUINT32    WcmDataType = 5
+	DATATYPEINT32     WcmDataType = 6
+	DATATYPEUINT64    WcmDataType = 7
+	DATATYPEINT64     WcmDataType = 8
+	DATATYPEBOOLEAN   WcmDataType = 11
+	DATATYPESTRING    WcmDataType = 12
+	DATATYPEFLAGARRAY WcmDataType = 32768
 )
 
 type WcmSettingType int32
 
 const (
-	settingTypeScalar  WcmSettingType = 1
-	settingTypeComplex WcmSettingType = 2
-	settingTypeList    WcmSettingType = 3
+	SETTINGTYPESCALAR  WcmSettingType = 1
+	SETTINGTYPECOMPLEX WcmSettingType = 2
+	SETTINGTYPELIST    WcmSettingType = 3
 )
 
 type WcmRestrictionFacets int32
 
 const (
-	restrictionFacetMaxLength    WcmRestrictionFacets = 1
-	restrictionFacetEnumeration  WcmRestrictionFacets = 2
-	restrictionFacetMaxInclusive WcmRestrictionFacets = 4
-	restrictionFacetMinInclusive WcmRestrictionFacets = 8
+	RESTRICTIONFACETMAXLENGTH    WcmRestrictionFacets = 1
+	RESTRICTIONFACETENUMERATION  WcmRestrictionFacets = 2
+	RESTRICTIONFACETMAXINCLUSIVE WcmRestrictionFacets = 4
+	RESTRICTIONFACETMININCLUSIVE WcmRestrictionFacets = 8
 )
 
 type WcmUserStatus int32

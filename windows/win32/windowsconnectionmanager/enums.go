@@ -7,24 +7,24 @@ package windowsconnectionmanager
 type WCM_PROPERTY int32
 
 const (
-	wcm_global_property_domain_policy          WCM_PROPERTY = 0
-	wcm_global_property_minimize_policy        WCM_PROPERTY = 1
-	wcm_global_property_roaming_policy         WCM_PROPERTY = 2
-	wcm_global_property_powermanagement_policy WCM_PROPERTY = 3
-	wcm_intf_property_connection_cost          WCM_PROPERTY = 4
-	wcm_intf_property_dataplan_status          WCM_PROPERTY = 5
-	wcm_intf_property_hotspot_profile          WCM_PROPERTY = 6
+	WCM_GLOBAL_PROPERTY_DOMAIN_POLICY          WCM_PROPERTY = 0
+	WCM_GLOBAL_PROPERTY_MINIMIZE_POLICY        WCM_PROPERTY = 1
+	WCM_GLOBAL_PROPERTY_ROAMING_POLICY         WCM_PROPERTY = 2
+	WCM_GLOBAL_PROPERTY_POWERMANAGEMENT_POLICY WCM_PROPERTY = 3
+	WCM_INTF_PROPERTY_CONNECTION_COST          WCM_PROPERTY = 4
+	WCM_INTF_PROPERTY_DATAPLAN_STATUS          WCM_PROPERTY = 5
+	WCM_INTF_PROPERTY_HOTSPOT_PROFILE          WCM_PROPERTY = 6
 )
 
 type WCM_MEDIA_TYPE int32
 
 const (
-	wcm_media_unknown  WCM_MEDIA_TYPE = 0
-	wcm_media_ethernet WCM_MEDIA_TYPE = 1
-	wcm_media_wlan     WCM_MEDIA_TYPE = 2
-	wcm_media_mbn      WCM_MEDIA_TYPE = 3
-	wcm_media_invalid  WCM_MEDIA_TYPE = 4
-	wcm_media_max      WCM_MEDIA_TYPE = 5
+	WCM_MEDIA_UNKNOWN  WCM_MEDIA_TYPE = 0
+	WCM_MEDIA_ETHERNET WCM_MEDIA_TYPE = 1
+	WCM_MEDIA_WLAN     WCM_MEDIA_TYPE = 2
+	WCM_MEDIA_MBN      WCM_MEDIA_TYPE = 3
+	WCM_MEDIA_INVALID  WCM_MEDIA_TYPE = 4
+	WCM_MEDIA_MAX      WCM_MEDIA_TYPE = 5
 )
 
 type WCM_CONNECTION_COST int32

@@ -12,42 +12,42 @@ const (
 	MMC_PROPACT_INITIALIZED MMC_PROPERTY_ACTION = 3
 )
 
-type _DocumentMode int32
+type DocumentMode int32
 
 const (
-	DocumentMode_Author   _DocumentMode = 0
-	DocumentMode_User     _DocumentMode = 1
-	DocumentMode_User_MDI _DocumentMode = 2
-	DocumentMode_User_SDI _DocumentMode = 3
+	DocumentMode_Author   DocumentMode = 0
+	DocumentMode_User     DocumentMode = 1
+	DocumentMode_User_MDI DocumentMode = 2
+	DocumentMode_User_SDI DocumentMode = 3
 )
 
-type _ListViewMode int32
+type ListViewMode int32
 
 const (
-	ListMode_Small_Icons _ListViewMode = 0
-	ListMode_Large_Icons _ListViewMode = 1
-	ListMode_List        _ListViewMode = 2
-	ListMode_Detail      _ListViewMode = 3
-	ListMode_Filtered    _ListViewMode = 4
+	ListMode_Small_Icons ListViewMode = 0
+	ListMode_Large_Icons ListViewMode = 1
+	ListMode_List        ListViewMode = 2
+	ListMode_Detail      ListViewMode = 3
+	ListMode_Filtered    ListViewMode = 4
 )
 
-type _ViewOptions int32
+type ViewOptions int32
 
 const (
-	ViewOption_Default          _ViewOptions = 0
-	ViewOption_ScopeTreeHidden  _ViewOptions = 1
-	ViewOption_NoToolBars       _ViewOptions = 2
-	ViewOption_NotPersistable   _ViewOptions = 4
-	ViewOption_ActionPaneHidden _ViewOptions = 8
+	ViewOption_Default          ViewOptions = 0
+	ViewOption_ScopeTreeHidden  ViewOptions = 1
+	ViewOption_NoToolBars       ViewOptions = 2
+	ViewOption_NotPersistable   ViewOptions = 4
+	ViewOption_ActionPaneHidden ViewOptions = 8
 )
 
-type _ExportListOptions int32
+type ExportListOptions int32
 
 const (
-	ExportListOptions_Default           _ExportListOptions = 0
-	ExportListOptions_Unicode           _ExportListOptions = 1
-	ExportListOptions_TabDelimited      _ExportListOptions = 2
-	ExportListOptions_SelectedItemsOnly _ExportListOptions = 4
+	ExportListOptions_Default           ExportListOptions = 0
+	ExportListOptions_Unicode           ExportListOptions = 1
+	ExportListOptions_TabDelimited      ExportListOptions = 2
+	ExportListOptions_SelectedItemsOnly ExportListOptions = 4
 )
 
 type MMC_RESULT_VIEW_STYLE int32
@@ -174,49 +174,49 @@ const (
 	CCT_UNINITIALIZED  DATA_OBJECT_TYPES = 65535
 )
 
-type __MIDL___MIDL_itf_mmc_0000_0006_0001 int32
+type MIDL___MIDL_itf_mmc_0000_0006_0001 int32
 
 const (
-	CCM_INSERTIONPOINTID_MASK_SPECIAL        __MIDL___MIDL_itf_mmc_0000_0006_0001 = -65536
-	CCM_INSERTIONPOINTID_MASK_SHARED         __MIDL___MIDL_itf_mmc_0000_0006_0001 = -2147483648
-	CCM_INSERTIONPOINTID_MASK_CREATE_PRIMARY __MIDL___MIDL_itf_mmc_0000_0006_0001 = 1073741824
-	CCM_INSERTIONPOINTID_MASK_ADD_PRIMARY    __MIDL___MIDL_itf_mmc_0000_0006_0001 = 536870912
-	CCM_INSERTIONPOINTID_MASK_ADD_3RDPARTY   __MIDL___MIDL_itf_mmc_0000_0006_0001 = 268435456
-	CCM_INSERTIONPOINTID_MASK_RESERVED       __MIDL___MIDL_itf_mmc_0000_0006_0001 = 268369920
-	CCM_INSERTIONPOINTID_MASK_FLAGINDEX      __MIDL___MIDL_itf_mmc_0000_0006_0001 = 31
-	CCM_INSERTIONPOINTID_PRIMARY_TOP         __MIDL___MIDL_itf_mmc_0000_0006_0001 = -1610612736
-	CCM_INSERTIONPOINTID_PRIMARY_NEW         __MIDL___MIDL_itf_mmc_0000_0006_0001 = -1610612735
-	CCM_INSERTIONPOINTID_PRIMARY_TASK        __MIDL___MIDL_itf_mmc_0000_0006_0001 = -1610612734
-	CCM_INSERTIONPOINTID_PRIMARY_VIEW        __MIDL___MIDL_itf_mmc_0000_0006_0001 = -1610612733
-	CCM_INSERTIONPOINTID_PRIMARY_HELP        __MIDL___MIDL_itf_mmc_0000_0006_0001 = -1610612732
-	CCM_INSERTIONPOINTID_3RDPARTY_NEW        __MIDL___MIDL_itf_mmc_0000_0006_0001 = -1879048191
-	CCM_INSERTIONPOINTID_3RDPARTY_TASK       __MIDL___MIDL_itf_mmc_0000_0006_0001 = -1879048190
-	CCM_INSERTIONPOINTID_ROOT_MENU           __MIDL___MIDL_itf_mmc_0000_0006_0001 = -2147483648
+	CCM_INSERTIONPOINTID_MASK_SPECIAL        MIDL___MIDL_itf_mmc_0000_0006_0001 = -65536
+	CCM_INSERTIONPOINTID_MASK_SHARED         MIDL___MIDL_itf_mmc_0000_0006_0001 = -2147483648
+	CCM_INSERTIONPOINTID_MASK_CREATE_PRIMARY MIDL___MIDL_itf_mmc_0000_0006_0001 = 1073741824
+	CCM_INSERTIONPOINTID_MASK_ADD_PRIMARY    MIDL___MIDL_itf_mmc_0000_0006_0001 = 536870912
+	CCM_INSERTIONPOINTID_MASK_ADD_3RDPARTY   MIDL___MIDL_itf_mmc_0000_0006_0001 = 268435456
+	CCM_INSERTIONPOINTID_MASK_RESERVED       MIDL___MIDL_itf_mmc_0000_0006_0001 = 268369920
+	CCM_INSERTIONPOINTID_MASK_FLAGINDEX      MIDL___MIDL_itf_mmc_0000_0006_0001 = 31
+	CCM_INSERTIONPOINTID_PRIMARY_TOP         MIDL___MIDL_itf_mmc_0000_0006_0001 = -1610612736
+	CCM_INSERTIONPOINTID_PRIMARY_NEW         MIDL___MIDL_itf_mmc_0000_0006_0001 = -1610612735
+	CCM_INSERTIONPOINTID_PRIMARY_TASK        MIDL___MIDL_itf_mmc_0000_0006_0001 = -1610612734
+	CCM_INSERTIONPOINTID_PRIMARY_VIEW        MIDL___MIDL_itf_mmc_0000_0006_0001 = -1610612733
+	CCM_INSERTIONPOINTID_PRIMARY_HELP        MIDL___MIDL_itf_mmc_0000_0006_0001 = -1610612732
+	CCM_INSERTIONPOINTID_3RDPARTY_NEW        MIDL___MIDL_itf_mmc_0000_0006_0001 = -1879048191
+	CCM_INSERTIONPOINTID_3RDPARTY_TASK       MIDL___MIDL_itf_mmc_0000_0006_0001 = -1879048190
+	CCM_INSERTIONPOINTID_ROOT_MENU           MIDL___MIDL_itf_mmc_0000_0006_0001 = -2147483648
 )
 
-type __MIDL___MIDL_itf_mmc_0000_0006_0002 int32
+type MIDL___MIDL_itf_mmc_0000_0006_0002 int32
 
 const (
-	CCM_INSERTIONALLOWED_TOP  __MIDL___MIDL_itf_mmc_0000_0006_0002 = 1
-	CCM_INSERTIONALLOWED_NEW  __MIDL___MIDL_itf_mmc_0000_0006_0002 = 2
-	CCM_INSERTIONALLOWED_TASK __MIDL___MIDL_itf_mmc_0000_0006_0002 = 4
-	CCM_INSERTIONALLOWED_VIEW __MIDL___MIDL_itf_mmc_0000_0006_0002 = 8
+	CCM_INSERTIONALLOWED_TOP  MIDL___MIDL_itf_mmc_0000_0006_0002 = 1
+	CCM_INSERTIONALLOWED_NEW  MIDL___MIDL_itf_mmc_0000_0006_0002 = 2
+	CCM_INSERTIONALLOWED_TASK MIDL___MIDL_itf_mmc_0000_0006_0002 = 4
+	CCM_INSERTIONALLOWED_VIEW MIDL___MIDL_itf_mmc_0000_0006_0002 = 8
 )
 
-type __MIDL___MIDL_itf_mmc_0000_0006_0003 int32
+type MIDL___MIDL_itf_mmc_0000_0006_0003 int32
 
 const (
-	CCM_COMMANDID_MASK_RESERVED __MIDL___MIDL_itf_mmc_0000_0006_0003 = -65536
+	CCM_COMMANDID_MASK_RESERVED MIDL___MIDL_itf_mmc_0000_0006_0003 = -65536
 )
 
-type __MIDL___MIDL_itf_mmc_0000_0006_0004 int32
+type MIDL___MIDL_itf_mmc_0000_0006_0004 int32
 
 const (
-	CCM_SPECIAL_SEPARATOR       __MIDL___MIDL_itf_mmc_0000_0006_0004 = 1
-	CCM_SPECIAL_SUBMENU         __MIDL___MIDL_itf_mmc_0000_0006_0004 = 2
-	CCM_SPECIAL_DEFAULT_ITEM    __MIDL___MIDL_itf_mmc_0000_0006_0004 = 4
-	CCM_SPECIAL_INSERTION_POINT __MIDL___MIDL_itf_mmc_0000_0006_0004 = 8
-	CCM_SPECIAL_TESTONLY        __MIDL___MIDL_itf_mmc_0000_0006_0004 = 16
+	CCM_SPECIAL_SEPARATOR       MIDL___MIDL_itf_mmc_0000_0006_0004 = 1
+	CCM_SPECIAL_SUBMENU         MIDL___MIDL_itf_mmc_0000_0006_0004 = 2
+	CCM_SPECIAL_DEFAULT_ITEM    MIDL___MIDL_itf_mmc_0000_0006_0004 = 4
+	CCM_SPECIAL_INSERTION_POINT MIDL___MIDL_itf_mmc_0000_0006_0004 = 8
+	CCM_SPECIAL_TESTONLY        MIDL___MIDL_itf_mmc_0000_0006_0004 = 16
 )
 
 type MMC_TASK_DISPLAY_TYPE int32

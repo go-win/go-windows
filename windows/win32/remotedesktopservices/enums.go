@@ -31,11 +31,11 @@ const (
 	AA_MAIN_SESSION_CLOSED   AAAccountingDataType = 3
 )
 
-type __MIDL___MIDL_itf_tsgpolicyengine_0000_0000_0004 int32
+type MIDL___MIDL_itf_tsgpolicyengine_0000_0000_0004 int32
 
 const (
-	SESSION_TIMEOUT_ACTION_DISCONNECT    __MIDL___MIDL_itf_tsgpolicyengine_0000_0000_0004 = 0
-	SESSION_TIMEOUT_ACTION_SILENT_REAUTH __MIDL___MIDL_itf_tsgpolicyengine_0000_0000_0004 = 1
+	SESSION_TIMEOUT_ACTION_DISCONNECT    MIDL___MIDL_itf_tsgpolicyengine_0000_0000_0004 = 0
+	SESSION_TIMEOUT_ACTION_SILENT_REAUTH MIDL___MIDL_itf_tsgpolicyengine_0000_0000_0004 = 1
 )
 
 type PolicyAttributeType int32
@@ -51,12 +51,12 @@ const (
 	AllowOnlySDRServers          PolicyAttributeType = 7
 )
 
-type __MIDL___MIDL_itf_tsgpolicyengine_0000_0000_0006 int32
+type MIDL___MIDL_itf_tsgpolicyengine_0000_0000_0006 int32
 
 const (
-	AA_UNTRUSTED                   __MIDL___MIDL_itf_tsgpolicyengine_0000_0000_0006 = 0
-	AA_TRUSTEDUSER_UNTRUSTEDCLIENT __MIDL___MIDL_itf_tsgpolicyengine_0000_0000_0006 = 1
-	AA_TRUSTEDUSER_TRUSTEDCLIENT   __MIDL___MIDL_itf_tsgpolicyengine_0000_0000_0006 = 2
+	AA_UNTRUSTED                   MIDL___MIDL_itf_tsgpolicyengine_0000_0000_0006 = 0
+	AA_TRUSTEDUSER_UNTRUSTEDCLIENT MIDL___MIDL_itf_tsgpolicyengine_0000_0000_0006 = 1
+	AA_TRUSTEDUSER_TRUSTEDCLIENT   MIDL___MIDL_itf_tsgpolicyengine_0000_0000_0006 = 2
 )
 
 type WTS_CONNECTSTATE_CLASS int32
@@ -480,12 +480,12 @@ const (
 	WRDS_SETTING_LEVEL_1       WRDS_SETTING_LEVEL = 1
 )
 
-type __MIDL_IRemoteDesktopClientSettings_0001 int32
+type MIDL_IRemoteDesktopClientSettings_0001 int32
 
 const (
-	PasswordEncodingUTF8    __MIDL_IRemoteDesktopClientSettings_0001 = 0
-	PasswordEncodingUTF16LE __MIDL_IRemoteDesktopClientSettings_0001 = 1
-	PasswordEncodingUTF16BE __MIDL_IRemoteDesktopClientSettings_0001 = 2
+	PasswordEncodingUTF8    MIDL_IRemoteDesktopClientSettings_0001 = 0
+	PasswordEncodingUTF16LE MIDL_IRemoteDesktopClientSettings_0001 = 1
+	PasswordEncodingUTF16BE MIDL_IRemoteDesktopClientSettings_0001 = 2
 )
 
 type RemoteActionType int32
@@ -512,15 +512,15 @@ const (
 	SnapshotFormatBmp  SnapshotFormatType = 2
 )
 
-type __MIDL_IRemoteDesktopClient_0001 int32
+type MIDL_IRemoteDesktopClient_0001 int32
 
 const (
-	KeyCombinationHome   __MIDL_IRemoteDesktopClient_0001 = 0
-	KeyCombinationLeft   __MIDL_IRemoteDesktopClient_0001 = 1
-	KeyCombinationUp     __MIDL_IRemoteDesktopClient_0001 = 2
-	KeyCombinationRight  __MIDL_IRemoteDesktopClient_0001 = 3
-	KeyCombinationDown   __MIDL_IRemoteDesktopClient_0001 = 4
-	KeyCombinationScroll __MIDL_IRemoteDesktopClient_0001 = 5
+	KeyCombinationHome   MIDL_IRemoteDesktopClient_0001 = 0
+	KeyCombinationLeft   MIDL_IRemoteDesktopClient_0001 = 1
+	KeyCombinationUp     MIDL_IRemoteDesktopClient_0001 = 2
+	KeyCombinationRight  MIDL_IRemoteDesktopClient_0001 = 3
+	KeyCombinationDown   MIDL_IRemoteDesktopClient_0001 = 4
+	KeyCombinationScroll MIDL_IRemoteDesktopClient_0001 = 5
 )
 
 type APO_BUFFER_FLAGS int32

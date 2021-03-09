@@ -56,3 +56,8 @@ func (f FieldFlags) Literal() bool {
 func (f FieldFlags) Static() bool {
 	return f&0b1_0000 != 0
 }
+
+// Special returns if the field is 'special.'
+func (f FieldFlags) Special() bool {
+	return f&0b0010_0000_0000 != 0
+}

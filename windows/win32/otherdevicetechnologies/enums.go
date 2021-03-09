@@ -41,56 +41,56 @@ const (
 	QCT_LAYERED  QueryCategoryType = 1
 )
 
-type __MIDL___MIDL_itf_wsdxml_0000_0000_0001 int32
+type MIDL___MIDL_itf_wsdxml_0000_0000_0001 int32
 
 const (
-	OpNone                  __MIDL___MIDL_itf_wsdxml_0000_0000_0001 = 0
-	OpEndOfTable            __MIDL___MIDL_itf_wsdxml_0000_0000_0001 = 1
-	OpBeginElement_         __MIDL___MIDL_itf_wsdxml_0000_0000_0001 = 2
-	OpBeginAnyElement       __MIDL___MIDL_itf_wsdxml_0000_0000_0001 = 3
-	OpEndElement            __MIDL___MIDL_itf_wsdxml_0000_0000_0001 = 4
-	OpElement_              __MIDL___MIDL_itf_wsdxml_0000_0000_0001 = 5
-	OpAnyElement            __MIDL___MIDL_itf_wsdxml_0000_0000_0001 = 6
-	OpAnyElements           __MIDL___MIDL_itf_wsdxml_0000_0000_0001 = 7
-	OpAnyText               __MIDL___MIDL_itf_wsdxml_0000_0000_0001 = 8
-	OpAttribute_            __MIDL___MIDL_itf_wsdxml_0000_0000_0001 = 9
-	OpBeginChoice           __MIDL___MIDL_itf_wsdxml_0000_0000_0001 = 10
-	OpEndChoice             __MIDL___MIDL_itf_wsdxml_0000_0000_0001 = 11
-	OpBeginSequence         __MIDL___MIDL_itf_wsdxml_0000_0000_0001 = 12
-	OpEndSequence           __MIDL___MIDL_itf_wsdxml_0000_0000_0001 = 13
-	OpBeginAll              __MIDL___MIDL_itf_wsdxml_0000_0000_0001 = 14
-	OpEndAll                __MIDL___MIDL_itf_wsdxml_0000_0000_0001 = 15
-	OpAnything              __MIDL___MIDL_itf_wsdxml_0000_0000_0001 = 16
-	OpAnyNumber             __MIDL___MIDL_itf_wsdxml_0000_0000_0001 = 17
-	OpOneOrMore             __MIDL___MIDL_itf_wsdxml_0000_0000_0001 = 18
-	OpOptional              __MIDL___MIDL_itf_wsdxml_0000_0000_0001 = 19
-	OpFormatBool_           __MIDL___MIDL_itf_wsdxml_0000_0000_0001 = 20
-	OpFormatInt8_           __MIDL___MIDL_itf_wsdxml_0000_0000_0001 = 21
-	OpFormatInt16_          __MIDL___MIDL_itf_wsdxml_0000_0000_0001 = 22
-	OpFormatInt32_          __MIDL___MIDL_itf_wsdxml_0000_0000_0001 = 23
-	OpFormatInt64_          __MIDL___MIDL_itf_wsdxml_0000_0000_0001 = 24
-	OpFormatUInt8_          __MIDL___MIDL_itf_wsdxml_0000_0000_0001 = 25
-	OpFormatUInt16_         __MIDL___MIDL_itf_wsdxml_0000_0000_0001 = 26
-	OpFormatUInt32_         __MIDL___MIDL_itf_wsdxml_0000_0000_0001 = 27
-	OpFormatUInt64_         __MIDL___MIDL_itf_wsdxml_0000_0000_0001 = 28
-	OpFormatUnicodeString_  __MIDL___MIDL_itf_wsdxml_0000_0000_0001 = 29
-	OpFormatDom_            __MIDL___MIDL_itf_wsdxml_0000_0000_0001 = 30
-	OpFormatStruct_         __MIDL___MIDL_itf_wsdxml_0000_0000_0001 = 31
-	OpFormatUri_            __MIDL___MIDL_itf_wsdxml_0000_0000_0001 = 32
-	OpFormatUuidUri_        __MIDL___MIDL_itf_wsdxml_0000_0000_0001 = 33
-	OpFormatName_           __MIDL___MIDL_itf_wsdxml_0000_0000_0001 = 34
-	OpFormatListInsertTail_ __MIDL___MIDL_itf_wsdxml_0000_0000_0001 = 35
-	OpFormatType_           __MIDL___MIDL_itf_wsdxml_0000_0000_0001 = 36
-	OpFormatDynamicType_    __MIDL___MIDL_itf_wsdxml_0000_0000_0001 = 37
-	OpFormatLookupType_     __MIDL___MIDL_itf_wsdxml_0000_0000_0001 = 38
-	OpFormatDuration_       __MIDL___MIDL_itf_wsdxml_0000_0000_0001 = 39
-	OpFormatDateTime_       __MIDL___MIDL_itf_wsdxml_0000_0000_0001 = 40
-	OpFormatFloat_          __MIDL___MIDL_itf_wsdxml_0000_0000_0001 = 41
-	OpFormatDouble_         __MIDL___MIDL_itf_wsdxml_0000_0000_0001 = 42
-	OpProcess_              __MIDL___MIDL_itf_wsdxml_0000_0000_0001 = 43
-	OpQualifiedAttribute_   __MIDL___MIDL_itf_wsdxml_0000_0000_0001 = 44
-	OpFormatXMLDeclaration_ __MIDL___MIDL_itf_wsdxml_0000_0000_0001 = 45
-	OpFormatMax             __MIDL___MIDL_itf_wsdxml_0000_0000_0001 = 46
+	OpNone                  MIDL___MIDL_itf_wsdxml_0000_0000_0001 = 0
+	OpEndOfTable            MIDL___MIDL_itf_wsdxml_0000_0000_0001 = 1
+	OpBeginElement_         MIDL___MIDL_itf_wsdxml_0000_0000_0001 = 2
+	OpBeginAnyElement       MIDL___MIDL_itf_wsdxml_0000_0000_0001 = 3
+	OpEndElement            MIDL___MIDL_itf_wsdxml_0000_0000_0001 = 4
+	OpElement_              MIDL___MIDL_itf_wsdxml_0000_0000_0001 = 5
+	OpAnyElement            MIDL___MIDL_itf_wsdxml_0000_0000_0001 = 6
+	OpAnyElements           MIDL___MIDL_itf_wsdxml_0000_0000_0001 = 7
+	OpAnyText               MIDL___MIDL_itf_wsdxml_0000_0000_0001 = 8
+	OpAttribute_            MIDL___MIDL_itf_wsdxml_0000_0000_0001 = 9
+	OpBeginChoice           MIDL___MIDL_itf_wsdxml_0000_0000_0001 = 10
+	OpEndChoice             MIDL___MIDL_itf_wsdxml_0000_0000_0001 = 11
+	OpBeginSequence         MIDL___MIDL_itf_wsdxml_0000_0000_0001 = 12
+	OpEndSequence           MIDL___MIDL_itf_wsdxml_0000_0000_0001 = 13
+	OpBeginAll              MIDL___MIDL_itf_wsdxml_0000_0000_0001 = 14
+	OpEndAll                MIDL___MIDL_itf_wsdxml_0000_0000_0001 = 15
+	OpAnything              MIDL___MIDL_itf_wsdxml_0000_0000_0001 = 16
+	OpAnyNumber             MIDL___MIDL_itf_wsdxml_0000_0000_0001 = 17
+	OpOneOrMore             MIDL___MIDL_itf_wsdxml_0000_0000_0001 = 18
+	OpOptional              MIDL___MIDL_itf_wsdxml_0000_0000_0001 = 19
+	OpFormatBool_           MIDL___MIDL_itf_wsdxml_0000_0000_0001 = 20
+	OpFormatInt8_           MIDL___MIDL_itf_wsdxml_0000_0000_0001 = 21
+	OpFormatInt16_          MIDL___MIDL_itf_wsdxml_0000_0000_0001 = 22
+	OpFormatInt32_          MIDL___MIDL_itf_wsdxml_0000_0000_0001 = 23
+	OpFormatInt64_          MIDL___MIDL_itf_wsdxml_0000_0000_0001 = 24
+	OpFormatUInt8_          MIDL___MIDL_itf_wsdxml_0000_0000_0001 = 25
+	OpFormatUInt16_         MIDL___MIDL_itf_wsdxml_0000_0000_0001 = 26
+	OpFormatUInt32_         MIDL___MIDL_itf_wsdxml_0000_0000_0001 = 27
+	OpFormatUInt64_         MIDL___MIDL_itf_wsdxml_0000_0000_0001 = 28
+	OpFormatUnicodeString_  MIDL___MIDL_itf_wsdxml_0000_0000_0001 = 29
+	OpFormatDom_            MIDL___MIDL_itf_wsdxml_0000_0000_0001 = 30
+	OpFormatStruct_         MIDL___MIDL_itf_wsdxml_0000_0000_0001 = 31
+	OpFormatUri_            MIDL___MIDL_itf_wsdxml_0000_0000_0001 = 32
+	OpFormatUuidUri_        MIDL___MIDL_itf_wsdxml_0000_0000_0001 = 33
+	OpFormatName_           MIDL___MIDL_itf_wsdxml_0000_0000_0001 = 34
+	OpFormatListInsertTail_ MIDL___MIDL_itf_wsdxml_0000_0000_0001 = 35
+	OpFormatType_           MIDL___MIDL_itf_wsdxml_0000_0000_0001 = 36
+	OpFormatDynamicType_    MIDL___MIDL_itf_wsdxml_0000_0000_0001 = 37
+	OpFormatLookupType_     MIDL___MIDL_itf_wsdxml_0000_0000_0001 = 38
+	OpFormatDuration_       MIDL___MIDL_itf_wsdxml_0000_0000_0001 = 39
+	OpFormatDateTime_       MIDL___MIDL_itf_wsdxml_0000_0000_0001 = 40
+	OpFormatFloat_          MIDL___MIDL_itf_wsdxml_0000_0000_0001 = 41
+	OpFormatDouble_         MIDL___MIDL_itf_wsdxml_0000_0000_0001 = 42
+	OpProcess_              MIDL___MIDL_itf_wsdxml_0000_0000_0001 = 43
+	OpQualifiedAttribute_   MIDL___MIDL_itf_wsdxml_0000_0000_0001 = 44
+	OpFormatXMLDeclaration_ MIDL___MIDL_itf_wsdxml_0000_0000_0001 = 45
+	OpFormatMax             MIDL___MIDL_itf_wsdxml_0000_0000_0001 = 46
 )
 
 type WSD_CONFIG_PARAM_TYPE int32

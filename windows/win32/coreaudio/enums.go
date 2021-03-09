@@ -926,12 +926,12 @@ const (
 	KS_TUNER_STRATEGY_DRIVER_TUNES    KS_TUNER_STRATEGY = 4
 )
 
-type _TunerDecoderLockType int32
+type TunerDecoderLockType int32
 
 const (
-	Tuner_LockType_None                      _TunerDecoderLockType = 0
-	Tuner_LockType_Within_Scan_Sensing_Range _TunerDecoderLockType = 1
-	Tuner_LockType_Locked                    _TunerDecoderLockType = 2
+	Tuner_LockType_None                      TunerDecoderLockType = 0
+	Tuner_LockType_Within_Scan_Sensing_Range TunerDecoderLockType = 1
+	Tuner_LockType_Locked                    TunerDecoderLockType = 2
 )
 
 type KSEVENT_TUNER int32
@@ -1475,58 +1475,58 @@ const (
 type EPcxConnectionType int32
 
 const (
-	eConnTypeUnknown               EPcxConnectionType = 0
-	eConnType3Point5mm             EPcxConnectionType = 1
-	eConnTypeQuarter               EPcxConnectionType = 2
-	eConnTypeAtapiInternal         EPcxConnectionType = 3
-	eConnTypeRCA                   EPcxConnectionType = 4
-	eConnTypeOptical               EPcxConnectionType = 5
-	eConnTypeOtherDigital          EPcxConnectionType = 6
-	eConnTypeOtherAnalog           EPcxConnectionType = 7
-	eConnTypeMultichannelAnalogDIN EPcxConnectionType = 8
-	eConnTypeXlrProfessional       EPcxConnectionType = 9
-	eConnTypeRJ11Modem             EPcxConnectionType = 10
-	eConnTypeCombination           EPcxConnectionType = 11
+	ECONNTYPEUNKNOWN               EPcxConnectionType = 0
+	ECONNTYPE3POINT5MM             EPcxConnectionType = 1
+	ECONNTYPEQUARTER               EPcxConnectionType = 2
+	ECONNTYPEATAPIINTERNAL         EPcxConnectionType = 3
+	ECONNTYPERCA                   EPcxConnectionType = 4
+	ECONNTYPEOPTICAL               EPcxConnectionType = 5
+	ECONNTYPEOTHERDIGITAL          EPcxConnectionType = 6
+	ECONNTYPEOTHERANALOG           EPcxConnectionType = 7
+	ECONNTYPEMULTICHANNELANALOGDIN EPcxConnectionType = 8
+	ECONNTYPEXLRPROFESSIONAL       EPcxConnectionType = 9
+	ECONNTYPERJ11MODEM             EPcxConnectionType = 10
+	ECONNTYPECOMBINATION           EPcxConnectionType = 11
 )
 
 type EPcxGeoLocation int32
 
 const (
-	eGeoLocRear                EPcxGeoLocation = 1
-	eGeoLocFront               EPcxGeoLocation = 2
-	eGeoLocLeft                EPcxGeoLocation = 3
-	eGeoLocRight               EPcxGeoLocation = 4
-	eGeoLocTop                 EPcxGeoLocation = 5
-	eGeoLocBottom              EPcxGeoLocation = 6
-	eGeoLocRearPanel           EPcxGeoLocation = 7
-	eGeoLocRiser               EPcxGeoLocation = 8
-	eGeoLocInsideMobileLid     EPcxGeoLocation = 9
-	eGeoLocDrivebay            EPcxGeoLocation = 10
-	eGeoLocHDMI                EPcxGeoLocation = 11
-	eGeoLocOutsideMobileLid    EPcxGeoLocation = 12
-	eGeoLocATAPI               EPcxGeoLocation = 13
-	eGeoLocNotApplicable       EPcxGeoLocation = 14
-	eGeoLocReserved6           EPcxGeoLocation = 15
+	EGEOLOCREAR                EPcxGeoLocation = 1
+	EGEOLOCFRONT               EPcxGeoLocation = 2
+	EGEOLOCLEFT                EPcxGeoLocation = 3
+	EGEOLOCRIGHT               EPcxGeoLocation = 4
+	EGEOLOCTOP                 EPcxGeoLocation = 5
+	EGEOLOCBOTTOM              EPcxGeoLocation = 6
+	EGEOLOCREARPANEL           EPcxGeoLocation = 7
+	EGEOLOCRISER               EPcxGeoLocation = 8
+	EGEOLOCINSIDEMOBILELID     EPcxGeoLocation = 9
+	EGEOLOCDRIVEBAY            EPcxGeoLocation = 10
+	EGEOLOCHDMI                EPcxGeoLocation = 11
+	EGEOLOCOUTSIDEMOBILELID    EPcxGeoLocation = 12
+	EGEOLOCATAPI               EPcxGeoLocation = 13
+	EGEOLOCNOTAPPLICABLE       EPcxGeoLocation = 14
+	EGEOLOCRESERVED6           EPcxGeoLocation = 15
 	EPcxGeoLocation_enum_count EPcxGeoLocation = 16
 )
 
 type EPcxGenLocation int32
 
 const (
-	eGenLocPrimaryBox          EPcxGenLocation = 0
-	eGenLocInternal            EPcxGenLocation = 1
-	eGenLocSeparate            EPcxGenLocation = 2
-	eGenLocOther               EPcxGenLocation = 3
+	EGENLOCPRIMARYBOX          EPcxGenLocation = 0
+	EGENLOCINTERNAL            EPcxGenLocation = 1
+	EGENLOCSEPARATE            EPcxGenLocation = 2
+	EGENLOCOTHER               EPcxGenLocation = 3
 	EPcxGenLocation_enum_count EPcxGenLocation = 4
 )
 
 type EPxcPortConnection int32
 
 const (
-	ePortConnJack                  EPxcPortConnection = 0
-	ePortConnIntegratedDevice      EPxcPortConnection = 1
-	ePortConnBothIntegratedAndJack EPxcPortConnection = 2
-	ePortConnUnknown               EPxcPortConnection = 3
+	EPORTCONNJACK                  EPxcPortConnection = 0
+	EPORTCONNINTEGRATEDDEVICE      EPxcPortConnection = 1
+	EPORTCONNBOTHINTEGRATEDANDJACK EPxcPortConnection = 2
+	EPORTCONNUNKNOWN               EPxcPortConnection = 3
 )
 
 type KSJACK_SINK_CONNECTIONTYPE int32
@@ -1603,12 +1603,12 @@ const (
 	KSPROPERTY_AUDIOMODULE_NOTIFICATION_DEVICE_ID KSPROPERTY_AUDIOMODULE = 3
 )
 
-type _AUDCLNT_BUFFERFLAGS int32
+type AUDCLNT_BUFFERFLAGS int32
 
 const (
-	AUDCLNT_BUFFERFLAGS_DATA_DISCONTINUITY _AUDCLNT_BUFFERFLAGS = 1
-	AUDCLNT_BUFFERFLAGS_SILENT             _AUDCLNT_BUFFERFLAGS = 2
-	AUDCLNT_BUFFERFLAGS_TIMESTAMP_ERROR    _AUDCLNT_BUFFERFLAGS = 4
+	AUDCLNT_BUFFERFLAGS_DATA_DISCONTINUITY AUDCLNT_BUFFERFLAGS = 1
+	AUDCLNT_BUFFERFLAGS_SILENT             AUDCLNT_BUFFERFLAGS = 2
+	AUDCLNT_BUFFERFLAGS_TIMESTAMP_ERROR    AUDCLNT_BUFFERFLAGS = 4
 )
 
 type AUDCLNT_STREAMOPTIONS int32
@@ -1691,18 +1691,18 @@ const (
 type EDataFlow int32
 
 const (
-	eRender              EDataFlow = 0
-	eCapture             EDataFlow = 1
-	eAll                 EDataFlow = 2
+	ERENDER              EDataFlow = 0
+	ECAPTURE             EDataFlow = 1
+	EALL                 EDataFlow = 2
 	EDataFlow_enum_count EDataFlow = 3
 )
 
 type ERole int32
 
 const (
-	eConsole         ERole = 0
-	eMultimedia      ERole = 1
-	eCommunications  ERole = 2
+	ECONSOLE         ERole = 0
+	EMULTIMEDIA      ERole = 1
+	ECOMMUNICATIONS  ERole = 2
 	ERole_enum_count ERole = 3
 )
 
@@ -1723,14 +1723,14 @@ const (
 	EndpointFormFactor_enum_count EndpointFormFactor = 11
 )
 
-type __MIDL___MIDL_itf_audioengineendpoint_0000_0000_0001 int32
+type MIDL___MIDL_itf_audioengineendpoint_0000_0000_0001 int32
 
 const (
-	eHostProcessConnector     __MIDL___MIDL_itf_audioengineendpoint_0000_0000_0001 = 0
-	eOffloadConnector         __MIDL___MIDL_itf_audioengineendpoint_0000_0000_0001 = 1
-	eLoopbackConnector        __MIDL___MIDL_itf_audioengineendpoint_0000_0000_0001 = 2
-	eKeywordDetectorConnector __MIDL___MIDL_itf_audioengineendpoint_0000_0000_0001 = 3
-	eConnectorCount           __MIDL___MIDL_itf_audioengineendpoint_0000_0000_0001 = 4
+	EHOSTPROCESSCONNECTOR     MIDL___MIDL_itf_audioengineendpoint_0000_0000_0001 = 0
+	EOFFLOADCONNECTOR         MIDL___MIDL_itf_audioengineendpoint_0000_0000_0001 = 1
+	ELOOPBACKCONNECTOR        MIDL___MIDL_itf_audioengineendpoint_0000_0000_0001 = 2
+	EKEYWORDDETECTORCONNECTOR MIDL___MIDL_itf_audioengineendpoint_0000_0000_0001 = 3
+	ECONNECTORCOUNT           MIDL___MIDL_itf_audioengineendpoint_0000_0000_0001 = 4
 )
 
 type DataFlow int32
